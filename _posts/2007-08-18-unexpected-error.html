@@ -1,0 +1,31 @@
+---
+layout: post
+status: publish
+published: true
+title: Unexpected Error
+author:
+  display_name: tartley
+  login: tartley
+  email: tartley@tartley.com
+  url: http://tartley.com
+author_login: tartley
+author_email: tartley@tartley.com
+author_url: http://tartley.com
+wordpress_id: 202
+wordpress_url: http://tartley.com/?p=202
+date: '2007-08-18 15:33:47 -0500'
+date_gmt: '2007-08-18 15:33:47 -0500'
+categories:
+- Journal
+- Software
+tags: []
+comments: []
+---
+<p>So I'm helping a friend create a small website. Casting around for lightweight tools, I remember that <a href='http://joelonsoftware.com/'>an intelligent and influential blogger</a>, much admired by me, has founded a software company which produces, amongst other things, <a href='http://www.fogcreek.com/CityDesk/'>City Desk, a web site creation tool</a>.</p>
+<p>Checking out their website, I am delighted to find there is a free-to-use version for small projects much like the one I am embarking on. I download it, install it, and fire it up eagerly. Just about the last thing I expected to see was this.<br />
+<br />
+<img src='http://tartley.com/wp-content/uploads/2007/08/citydesk-error1.png' alt='citydesk-error1.png' /><br />
+<br />
+<img src='http://tartley.com/wp-content/uploads/2007/08/citydesk-error2.png' alt='citydesk-error2.png' /></p>
+<p>Just goes to show, creating software which <i>just works</i> is a tough problem. If the likes of Joel can't figure it out, what hope do the rest of us have...?</p>
+<p><b>Update:</b> It looks like the problems are due to my Windows user account being limited privs. I perform installs and the like with elevated privs, using the brilliant <a href='http://blogs.msdn.com/aaron_margosis/archive/2004/07/24/193721.aspx'>MakeMeAdmin.cmd</a>. It looks like running CityDesk for the first time performs some install-related activities, such as setting up the Platform SDK, which require admin privs. Once this is done, subsequent runs can be done as a limited privs user with no problems.</p>

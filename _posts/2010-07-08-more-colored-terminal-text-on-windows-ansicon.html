@@ -1,0 +1,63 @@
+---
+layout: post
+status: publish
+published: true
+title: 'More Colored Terminal text on Windows: AnsiCon'
+author:
+  display_name: tartley
+  login: tartley
+  email: tartley@tartley.com
+  url: http://tartley.com
+author_login: tartley
+author_email: tartley@tartley.com
+author_url: http://tartley.com
+wordpress_id: 1108
+wordpress_url: http://tartley.com/?p=1108
+date: '2010-07-08 14:07:09 -0500'
+date_gmt: '2010-07-08 13:07:09 -0500'
+categories:
+- MSWin-dev
+tags: []
+comments:
+- id: 34791
+  author: Stu
+  author_email: stu.axon@gmail.com
+  author_url: http://stuartaxon.com
+  date: '2010-11-15 22:22:47 -0600'
+  date_gmt: '2010-11-15 22:22:47 -0600'
+  content: "I've been wanting this since forever (OK, since I switched to windows
+    2000), thanks !\r\n\r\n\r\nI'm also quite into using colour in my prompts and
+    did a post about it:\r\n\r\nhttp://www.stuartaxon.com/2008/08/21/making-windows-usable-colourisation/"
+---
+<p>A reminder for myself:</p>
+<p>ANSI escape characters don't work properly in Windows terminals:</p>
+<p>[caption id="attachment_1109" align="alignnone" width="588" caption="Before: Raw ANSI codes. Not nice."]<img class="size-full wp-image-1109  " title="ansicon00-before" src="http://tartley.com/wp-content/uploads/2010/07/ansicon00-before.png" alt="Before: Raw ANSI codes. Not nice." width="588" height="279" />[/caption]</p>
+<p>To make them work properly, use <a href="http://adoxa.110mb.com/ansicon/index.html">AnsiCon</a>. Unzip it somewhere permanent (eg. <code>%ProgramFiles%\ansicon</code>) and install it with:</p>
+<pre style="padding-left: 30px;">ansicon.exe -i
+</pre>
+<p>start a new terminal, and lo:</p>
+<p>[caption id="attachment_1110" align="alignnone" width="588" caption="After: Pretty."]<img class="size-full wp-image-1110" title="ansicon01-working" src="http://tartley.com/wp-content/uploads/2010/07/ansicon01-working.png" alt="After: Pretty." width="588" height="279" />[/caption]</p>
+<p>Fine tune the appearance of the programs generating the color, for example customise 'hg diff' by editing ~/.hgrc:</p>
+<pre style="padding-left: 30px;">[extensions]
+color =
+
+[color]
+status.modified = yellow bold
+status.unknown = white
+status.deleted = red_background white bold
+
+diff.deleted = red bold
+diff.inserted = green bold
+diff.file_a = white
+diff.file_b = white
+diff.diffline = white_background black
+diff.extended = yellow bold
+diff.hunk = underline black
+diff.changed = yellow bold</pre>
+<p>[caption id="attachment_1112" align="alignnone" width="588" caption="Fine-tuned"]<a href="http://tartley.com/wp-content/uploads/2010/07/ansicon02-tuned.png"><img class="size-full wp-image-1112" title="ansicon02-tuned" src="http://tartley.com/wp-content/uploads/2010/07/ansicon02-tuned.png" alt="Fine-tuned" width="588" height="279" /></a>[/caption]</p>
+<p>ANSI is correctly stripped out if the output of a program is not a terminal, so the colored output won't interfere with saving to files nor machine-parsing of the text:</p>
+<p>[caption id="attachment_1113" align="alignnone" width="588" caption="Filtered"]<img class="size-full wp-image-1113" title="ansicon03-filtered" src="http://tartley.com/wp-content/uploads/2010/07/ansicon03-filtered.png" alt="Filtered" width="588" height="279" />[/caption]</p>
+<p>Finally, insert some <a href="http://pueblo.sourceforge.net/doc/manual/ansi_color_codes.html">ANSI codes</a> into your <a href="http://ss64.com/nt/prompt.html">prompt</a>, by setting environment variable PROMPT:</p>
+<pre style="padding-left: 30px;">set PROMPT=$E[0;36m$P$_$E[36;1m$G$E[0m$S</pre>
+<p>[caption id="attachment_1117" align="alignnone" width="588" caption="Colored Prompt"]<img class="size-full wp-image-1117" title="ansicon04-prompt" src="http://tartley.com/wp-content/uploads/2010/07/ansicon04-prompt.png" alt="Colored Prompt" width="588" height="195" />[/caption]</p>
+<p><a href="http://tartley.com/?p=1062">Multiple</a> <a href="http://tartley.com/?p=863">posts</a> on colors and terminal text is perhaps a bit obsessive of me. I think I'm all done now.</p>

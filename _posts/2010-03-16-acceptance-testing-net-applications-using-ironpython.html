@@ -1,0 +1,544 @@
+---
+layout: post
+status: publish
+published: true
+title: Acceptance Testing .NET Applications using IronPython
+author:
+  display_name: tartley
+  login: tartley
+  email: tartley@tartley.com
+  url: http://tartley.com
+author_login: tartley
+author_email: tartley@tartley.com
+author_url: http://tartley.com
+wordpress_id: 1018
+wordpress_url: http://tartley.com/?p=1018
+date: '2010-03-16 12:13:15 -0500'
+date_gmt: '2010-03-16 12:13:15 -0500'
+categories:
+- Python
+- Testing
+- Software
+- MSWin-dev
+tags: []
+comments:
+- id: 26626
+  author: John Cavanaugh
+  author_email: cavanaughwww+misc@gmail.com
+  author_url: ''
+  date: '2010-03-16 15:34:33 -0500'
+  date_gmt: '2010-03-16 15:34:33 -0500'
+  content: "Great article.\r\n\r\nI am however very curious if you have examined the
+    new testing tools available in Visual Studio 2010?  Specifically the coded ui
+    tests.\r\n\r\nTo me that seemed to be a great place to utilize python, however
+    they only have C# &amp; VB.net as options.   Regardless the technology available
+    seems to be an excellent model for acceptance testing.\r\n\r\nMuch of my organization
+    will be moving the testing frameworks in vs2010 and I soo wish python was available.
+    \ ;-(\r\n\r\n--\r\nJohn Cavanaugh"
+- id: 26627
+  author: John Cavanaugh
+  author_email: cavanaughwww+misc@gmail.com
+  author_url: ''
+  date: '2010-03-16 15:54:29 -0500'
+  date_gmt: '2010-03-16 15:54:29 -0500'
+  content: "Here is a good link on the VS2010 testing tools descriptions.\r\n\r\nhttp://blogs.msdn.com/terryclancy/archive/2009/11/18/visual-studio-2010-test-tools-partner-integration-opportunities.aspx"
+- id: 26676
+  author: tartley
+  author_email: tartley@tartley.com
+  author_url: http://tartley.com
+  date: '2010-03-17 10:50:31 -0500'
+  date_gmt: '2010-03-17 10:50:31 -0500'
+  content: "Hey John,\r\n\r\nI hadn't looked at any of the Visual Studio testing stuff
+    before - thanks very much for that.\r\n\r\nI must confess I found it hard to understand
+    exactly what it all does from the linked page. I'm concerned that there's no mention
+    of TDD in all that verbiage. Hopefully on closer examination there are some nuggets
+    in there.\r\n\r\nMany thanks."
+- id: 28430
+  author: Lukas Cenovsky
+  author_email: cenovsky@bakalari.cz
+  author_url: http://gui-at.blogspot.com/
+  date: '2010-06-08 18:43:08 -0500'
+  date_gmt: '2010-06-08 17:43:08 -0500'
+  content: "Great article!\r\n\r\nI just wonder how do you deal with the fact you
+    cannot create more than one System.Windows.Application instance in the same AppDomain?\r\n\r\nAdding
+    a second test case to your example would result in System.InvalidOperationException."
+- id: 28675
+  author: tartley
+  author_email: tartley@tartley.com
+  author_url: http://tartley.com
+  date: '2010-06-15 14:47:19 -0500'
+  date_gmt: '2010-06-15 13:47:19 -0500'
+  content: "Hey Lukas,\r\n\r\nThanks for the comment. I must have overlooked something
+    then.\r\n\r\nWe have a framework here which I based this article on, which does
+    call Application.Run() and Application.Exit() for every test. So it is evidently
+    a surmountable problem.\r\n\r\nMaybe we start each new test in a new AppDomain
+    then? Let me root around and see..."
+- id: 28770
+  author: Lukas Cenovsky
+  author_email: cenovsky@bakalari.cz
+  author_url: http://gui-at.blogspot.com/
+  date: '2010-06-17 14:02:33 -0500'
+  date_gmt: '2010-06-17 13:02:33 -0500'
+  content: "Hi John,\r\nI know only about two possibilities:\r\n1) You create a new
+    AppDomain for each Application.Run()\r\n2) You use the Application as singleton
+    for all your tests.\r\n\r\nCurrently, I use number 2. But maybe I will change
+    it in future."
+---
+<blockquote>The following was originally published in the excellent <a href="http://pythonmagazine.com/">Python Magazine</a>. Thier contractual exclusivity period has now long expired, so here it comes again. Many thanks to my technical reviewer <a href="http://www.voidspace.org.uk/python/weblog/index.shtml">Michael Foord</a>, and to the editors <a href="http://rhodesmill.org/brandon/">Brandon Craig Rhodes</a> and <a href="http://www.doughellmann.com/">Doug Hellmann</a>, who patiently gave excellent and much needed guidance through its protracted gestation, and especially to all my co-workers at <a href="http://www.resolversystems.com/">Resolver Systems</a>, from whom I've learned so much.</p></blockquote>
+<h2>Acceptance Testing .NET Applications using IronPython</h2>
+<p>Unit tests demonstrate to developers that individual functions and classes work as expected. Acceptance tests are an orthogonal complement to this. They verify to everybody, including managers and clients, that features they understand and care about are completed and working correctly. They also prove that the system as a whole is correctly integrated and that no regressions have occurred.</p>
+<p>Resolver Systems is developing a .NET desktop spreadsheet application, <a href="http://www.resolversystems.com/products/resolver-one/">Resolver One</a>, for which we have accumulated an acceptance testing framework. This framework uses <a href="http://docs.python.org/library/unittest.html">Python's standard unittest module</a>, and is executed using <a href="http://www.codeplex.com/IronPython">IronPython</a>.</p>
+<p>While Resolver One is written in IronPython, this technique allows IronPython tests to interact with product code written in any .NET language.</p>
+<p>This article describes the principles of this IronPython acceptance testing framework, and demonstrates them by creating an acceptance test for a small sample C# GUI application.</p>
+<h2>Caveats</h2>
+<p>When testing products written in static .NET languages such as C#, some common testing practices like monkey-patching will be unavailable. Static language classes are not modifiable at runtime, not even from tests written in IronPython. Fortunately, this is less of a concern for acceptance testing than it is for unit testing - we want the tests to operate on the unmodified whole end-to-end system.</p>
+<p>Resolver One is currently 40k lines of IronPython. I would guess this is maybe equivalent to 60-80k lines of C#, demonstrating the viability of this approach for desktop applications of this size.</p>
+<p>Our approach requires source code modifications to the system under test (SUT.) In particular, the SUT must provide methods for the test to start and stop the application, and must provide public access to its forms and other GUI objects. This means that this methodology cannot be used to black-box test arbitrary compiled programs - it requires the SUT to be written with testing in mind.</p>
+<h2>Why Acceptance Test?</h2>
+<p>Unit tests call individual methods and functions of the SUT, and have a close correspondence with the internal design of the product. Acceptance tests, in contrast, invoke the program as a whole, just like a user would, and have a close correspondence with the product specification.</p>
+<p>[caption id="attachment_1019" align="alignnone" width="568" caption="Figure 1. Unit tests correspond to the SUT&#39;s internal design, but acceptance tests correspond to the specifications."]<a href="http://tartley.com/wp-content/uploads/2010/03/acceptance-vs-unit-tests.png"><img class="size-full wp-image-1019" title="acceptance-vs-unit-tests" src="http://tartley.com/wp-content/uploads/2010/03/acceptance-vs-unit-tests.png" alt="Acceptance vs unit tests" width="568" height="368" /></a>[/caption]</p>
+<p>Acceptance testing automates the expensive, time consuming, error-prone and soul-destroying process of using a team of human testers to fire up the application under test, and exhaustively interact with the user interface to verify the program behaves correctly. Traditionally, a single iteration of this process can take days or weeks for substantial applications. Automating the process can yield the same feedback - or better - in minutes or hours. This reduces costs and provides valuable, rapid feedback to both developers and project stakeholders.</p>
+<p>This is useful for assessing whether user-visible features are correctly implemented, for doing quick smoke tests to make sure recent changes haven't accidentally broken other features, or for systematic checking that new functionality works under various conditions, such as on different operating systems, or in various browsers. Acceptance tests can include stress testing, and continually running acceptance tests on an integration server can detect infrequent, intermittent bugs.</p>
+<p>Best of all, acceptance tests that are derived directly from the specification can prove to clients that the system does what the requirements ask. This can be invaluable when it comes to client sign-off on deliverables, especially if the client trusts this process due to having participated in the creation of the user-stories or acceptance tests themselves.</p>
+<p>Acceptance tests do not yield the same incidental benefits in terms of good code design as unit tests do. However, creating acceptance tests before the product code is implemented does allow developers to focus exclusively on the requirements from a user's point of view. In practice, this turns out to help immeasurably in defining the specifications, and in giving developers a solid understanding of them.</p>
+<h2>Acceptance Tests Should Derive From User Stories</h2>
+<p><em>User Stories</em> are a human-readable specification document that describes a short scenario, using the SUT to perform some actions that a real user cares about. User stories usually form the entire specification. Such documents should be informal yet precise, succinct and easy to understand. In ideal circumstances, your customer would collaborate with you in creating these documents.</p>
+<p>An example user story might look like this:</p>
+<ol class="arabic simple">
+<li>Alice starts WizBang. The window appears.</li>
+<li>She sees the three default list entries: 'one', 'two', 'three'. Nothing is selected.</li>
+<li>She clicks the 'AddButton'</li>
+<li>The 'Add Item' dialog appears</li>
+<li>She types an item name into the dialog and clicks OK</li>
+<li>The new item is at the end of the list, selected.</li>
+<li>She clicks the 'CloseButton'</li>
+<li>The application closes</li>
+</ol>
+<p>An acceptance test is an executable script that performs the actions described in the user story, and verifies the application responds as expected. To create an acceptance test, at Resolver Systems we paste the entire user story, as comments, into a new test method, on a class derived from Python's <code>unittest.TestCase</code>.</p>
+<pre lang="python">from unittest import main as run_test, TestCase
+
+class AT001_AddItems(TestCase):
+
+    def test_additems(self):
+        # 1. Alice starts WizBang. The window appears.
+        # 2. She sees the three default list entries:
+        #    'one', 'two', 'three'. Nothing is selected.
+        # 3. She clicks the 'AddButton'
+        # 4. The 'Add Item' dialog appears
+        # 5. She types an item name into the dialog and clicks OK
+        # 6. The new item is at the end of the list, selected.
+        # 7. She clicks the 'CloseButton'
+        # 8. The application closes
+        self.fail("test not finished")
+
+if __name__ == '__main__':
+    run_test()</pre>
+<p>The call to <code>fail()</code> at the end of this test is a good habit to develop. It stops unfinished tests like this one from passing, making them easy to accidentally overlook and be forgotten, invisible amongst a large collection of passing tests. When the test is complete, this fail can be removed.</p>
+<h2>Setting up IronPython</h2>
+<p>In order for IronPython to be able to import from <code>unittest</code> like this, a copy of the CPython standard library must be on <code>sys.path</code>. If you installed version 2+ of IronPython from the MSI installer, this is all taken care of automatically, using a copy of the standard library that is included with the install. Otherwise, you need to set this up manually, either by setting an environment variable:</p>
+<pre lang="dos">set IRONPYTHONPATH=C:\Python25\Lib
+</pre>
+<p>or by appending this directory to <code>sys.path</code> inside your IronPython install's <code>Lib\site.py</code> file:</p>
+<pre lang="python">import sys
+sys.path.append(r'C:\Python25\Lib')
+</pre>
+<p>Note that different versions of IronPython require different versions of the CPython standard library:</p>
+<ul class="simple">
+<li>IronPython 1.1: Python 2.4</li>
+<li>IronPython 2.0: Python 2.5</li>
+<li>IronPython 2.6: Python 2.6</li>
+</ul>
+<p>Once this is done, test it out by starting <code>ipy.exe</code>, and typing:</p>
+<pre lang="python">>>> import unittest
+</pre>
+<p>If this works without complaint, exit <em>ipy.exe</em>, and run the nascent acceptance test above, using the DOS command-line:</p>
+<pre lang="">> ipy.exe AT001_AddItems.py
+F
+======================================================================
+FAIL: test_add_address (__main__.AT001_AddItems)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "AT001_AddItems.py", line 11, in test_add_address
+    self.fail("test not finished")
+AssertionError: test not finished
+
+----------------------------------------------------------------------
+Ran 1 test in 0.141s
+
+FAILED (failures=1)
+</pre>
+<h2>About IronPython</h2>
+<p>IronPython is a .NET based reimplementation of the Python language. It combines the strength and elegance of Python as a language with the ability to directly call and interoperate with other .NET code. In daily use, I am continually surprised by how well this works. IronPython faithfully mimics CPython - there are almost no surprising differences between the two. Native Python types are mapped seamlessly and intuitively to equivalent .NET data types with an absolute minimum of fuss. For example, IronPython code can generally pass native Python types, like lists or dictionaries, to .NET functions or methods, instead of having to instantiate and populate .NET collection classes.</p>
+<p>To use a .NET library, your IronPython code first has to add a reference to the containing .NET <em>assembly</em>. An assembly is a physical chunk of code, usually contained in a DLL file. To add a reference, use the <code>clr</code> module, which is built-in to IronPython:</p>
+<pre lang="python">import clr
+clr.AddReference('System.Windows.Forms')
+</pre>
+<p>This <code>AddReference()</code> function behaves just the same regardless of whether you are referencing assemblies from the .NET standard library (as shown here), 3rd party DLLs, or your own .NET projects.</p>
+<p>Code within an assembly is contained within namespaces. For the .NET standard library, the assemblies are usually given the same name as the namespace they implement. This is the case here, so once the above assembly is referenced, we can import code from the <em>System.Windows.Forms</em> namespace just as if it was a Python module:</p>
+<pre lang="python">
+from System.Windows.Forms import Form
+form = Form()
+form.Show()
+</pre>
+<p>This will display an instance of the .NET form class on screen. Note that the form does not yet respond to events. For that, we will add a call to <code>Application.Run()</code>, discussed below.</p>
+<p>Note that our IronPython projects always contain an automatic reference to the <code>System</code> assembly, so anything implemented in there, such as the <code>System.Threading</code> namespace, can always be imported without having to explicitly add any references.</p>
+<p>Ostensibly, using .NET and IronPython limits the operations described in this whole article to Windows only. The Mono project should allow this acceptance testing technique to be used directly on other operating systems, but that has not been tried.</p>
+<h2>Implementing the Test</h2>
+<p>To implement the comments pasted into our acceptance test, three things must be done:</p>
+<p>Firstly, the test must invoke the SUT, once for every test method, in such a way that the test and the SUT then both run simultaneously.</p>
+<p>Secondly, while the test runs, it must be able to make assertions about the behaviour of the SUT. On the GUI, for example, the test must be able to read the state of the form and its controls, in order to assert that the correct text is displayed.</p>
+<p>Thirdly, the test must provide simulated input on each of the SUT's external interfaces, to stimulate the program into action. For example, then the test must drive the SUT by providing simulated button clicks or keyboard input.</p>
+<p>The method chosen to fulfil all three of these requirements is for the test to invoke the SUT in the same process, but on a new thread. Since IronPython is a .NET language, it can directly access the SUT's form and control objects, making assertions about the state of the controls that are visible to the user. It can also simulate user actions by calling methods and firing events on the SUT's GUI controls.</p>
+<p>For this acceptance testing technique to work, the start-up of the SUT must be structured so as to expose a few public members and objects that are monitored and manipulated by the test. For example, elements of the GUI must be public. This obviously makes the tests fairly invasive.</p>
+<p>We've justified this to ourselves at Resolver Systems by taking a pragmatic philosophy: These are the smallest set of changes to our application that we could find in order to make it testable. This technique has allowed us to create a set of working acceptance tests that wouldn't otherwise have existed.</p>
+<h2>The System Under Test</h2>
+<p>The public methods and objects required from our SUT are shown in the following minimal C# GUI application, called <em>WizBang</em>. This was created using the free Visual Studio Express Edition, but could easily be created using your own development tools of choice. At Resolver Systems, we prefer to create form layouts using Visual Studio's excellent GUI designing tool, and then inherit from these generated classes in other editors, such as Wing, Emacs or Vi.</p>
+<p>WizBang defines a couple of simple forms, <code>MainForm</code> and <code>AddItemForm</code>:</p>
+<p>[caption id="attachment_1034" align="alignnone" width="300" caption="Figure 2. WizBang&#39;s main form"]<a href="http://tartley.com/wp-content/uploads/2010/03/wizbangs-mainform.png"><img class="size-full wp-image-1034" title="wizbangs-mainform" src="http://tartley.com/wp-content/uploads/2010/03/wizbangs-mainform.png" alt="" width="300" height="283" /></a>[/caption]</p>
+<p>[caption id="attachment_1035" align="alignnone" width="472" caption="Figure 3. WizBang&#39;s add item form"]<a href="http://tartley.com/wp-content/uploads/2010/03/wizbangs-additemform.png"><img class="size-full wp-image-1035" title="wizbangs-additemform" src="http://tartley.com/wp-content/uploads/2010/03/wizbangs-additemform.png" alt="" width="472" height="82" /></a>[/caption]</p>
+<p>WizBang has a public class called <code>Program</code>, which provides public access to the application's forms, and handles the startup and shutdown of the application. During startup, it creates and shows an instance of the main form.</p>
+<pre lang="csharp">
+// C# scaffolding for the WizBang application.
+// Exposes public functions and GUI forms, for use by tests.
+using System;
+using System.Threading;
+using System.Windows.Forms;
+
+namespace WizBang
+{
+    public class AllForms
+    {
+        public static MainForm mainForm;
+        public static AddItemForm addItemForm;
+    }
+
+    public class Program
+    {
+        public ManualResetEvent eventloopReady =
+            new ManualResetEvent(false);
+
+        public void Start()
+        {
+            AllForms.mainForm = new MainForm();
+            AllForms.mainForm.Show();
+            eventloopReady.Set();
+            Application.Run();
+        }
+
+        public static void Stop()
+        {
+            Application.Exit();
+        }
+    }
+}
+</pre>
+<p><em>Program.cs</em> and its respective forms can be compiled to a .NET assembly, <em>WizBang.dll</em>. When the application is run normally by users, <code>Program.Start()</code> is called by a second Visual Studio project, <em>RunWizBang</em>, which exists simply to create a minimal Windows executable.</p>
+<p>To run WizBang during testing, the test code references the <em>WizBang.dll</em> assembly, and calls <code>Program.Start()</code> itself.</p>
+<p>Importantly, a new instance of the main form is created every time <code>Program.Start()</code> is called. This allows many successive tests to run, each with their own instance of the main form, so that state changes in one test do not affect subsequent tests. This is important - the application's state should be completely reset before the start of each test. Take particular care to do this right if your application has global state, such as class-level variables, singletons, or relies on external systems such as the file system, the registry or databases.</p>
+<p>After the main form is created and shown, <code>Application.Run()</code> is called. This is a .NET method which starts the main form's event loop, making the form responsive to events such as form moves and resizes, control clicks and keyboard presses.</p>
+<p>When the test is completed, it can call the public <code>Program.Stop()</code> method, which safely disposes of resources and unconditionally closes the application by calling <code>Application.Exit()</code>. This is a .NET method which closes all our forms and ends their event loops.</p>
+<p><code>Program.Stop()</code> should be the same method that your application calls when quitting, after any user confirmations have happened. The following handler on the main form's <em>Closed</em> event ensures this:</p>
+<pre lang="csharp">
+// C# event hander for the main form of the WizBang application
+private void MainForm_Closed(object sender, EventArgs e)
+{
+    Program.Stop();
+}
+</pre>
+<h2>Invoking the SUT on a New Thread</h2>
+<p>If the test calls <code>Program.Start()</code> directly, as described above, then the program will run, and the main form will be displayed and responsive, but the test will not work. The reason is that the call to <code>Application.Run()</code> is synchronous - it does not return until the program exits. The test will be blocked, waiting for the application's event loop to end.</p>
+<p>The test must invoke the SUT in such a way that the program and the test can run together in parallel. Invoking the SUT in a new process would be nice for the sake of decoupling one test from the next. For our approach, however, the SUT has to run in the same process, to give the test access to the SUT's public methods and objects.</p>
+<p><code>Program.Start()</code> therefore needs to be called on a new thread, created by the test. The program's event loop can proceed on the new thread, handling events to let the application run normally. Meanwhile, our test can proceed on the original thread, stimulating the GUI and watching the application's behaviour.</p>
+<p>This threading is the reason for the <code>ManualResetEvent</code> instance in <em>Program.cs</em>. Manual reset events are a .NET construct to facilitate synchronisation between threads. In this case, the SUT calls <code>Set()</code> in <code>Program.Start()</code>, to tell the test thread that the main form has been created and shown. The test can then start to make assertions about the state of the main form's controls, and trigger events to manipulate those controls.</p>
+<p>For many activities in IronPython, there is a choice of using the familiar Python libraries, or the .NET equivalents. Threads are no exception to this - we may use the Python <em>thread</em> or <em>threading</em> modules, or we may use .NET's <em>Threading</em> library.</p>
+<p>Incidentally, these threads differ from those in CPython in one important respect - there is no Global Interpreter Lock (GIL). The GIL is an implementation detail of the CPython interpreter. The threads created by .NET will run concurrently on multiple cores, no matter which library we use.</p>
+<p>We implement this in a new class <code>AcceptanceTest</code>, which sits between <code>AT001_AddItems</code> and <code>unittest.TestCase</code> in the inheritance hierarchy:</p>
+<p>[caption id="attachment_1039" align="alignnone" width="114" caption="Figure 4. Our test class inheritance hierarchy."]<a href="http://tartley.com/wp-content/uploads/2010/03/test-inheritance.png"><img src="http://tartley.com/wp-content/uploads/2010/03/test-inheritance.png" alt="" title="test-inheritance" width="114" height="190" class="size-full wp-image-1039" /></a>[/caption]</p>
+<p>On a real project, many <code>ATxxx</code> test classes would inherit from <code>AcceptanceTest</code>, which looks like this:</p>
+<pre lang="python">
+# reference .NET assemblies - requires IronPython
+import clr
+clr.AddReference('WizBang')
+
+# import from .NET namespaces - requires IronPython
+from System.Threading import ApartmentState, Thread, ThreadStart
+
+# import from the Python standard library
+from unittest import TestCase
+
+# import from the .NET namespace of the system under test
+from WizBang import Program
+
+class AcceptanceTest(TestCase):
+    """
+    Starts up the program under test (PUT) on a new thread at the start
+    of each test, and shut it down again after each test has run
+    """
+
+    def __init__(self, *args):
+        TestCase.__init__(self, *args)
+        self.program = None
+        self.eventloop = None
+
+    def setUp(self):
+        TestCase.setUp(self)
+        self.program = Program()
+        self.eventloop = Thread(ThreadStart(self.program.Start))
+        self.eventloop.Name = "eventloop"
+        self.eventloop.SetApartmentState(ApartmentState.STA)
+        self.eventloop.Start()
+        self.program.eventloopReady.WaitOne()
+
+    def tearDown(self):
+        self.program.Stop()
+        self.eventloop.Join()
+        TestCase.tearDown(self)
+</pre>
+<p>Python's unittest module will call AcceptanceTest's <code>setUp()</code> method before each test method is run, so this is an ideal place to create a new thread and invoke <code>Program.Start()</code> on it. The new thread is given a name, for ease of hypothetical future debugging. It must be set to a single threaded apartment state to prevent possible errors if your code calls any COM components, even indirectly.</p>
+<p>Once the new thread has been started, starting the WizBang application, <code>setUp()</code> waits for a signal from the application on the <code>ManualResetEvent eventloopReady</code>. This is used by the application to signal to the test that the main form is shown and its event loop is started. This prevents over-eager tests from attempting to access the main form before it is visible and responding to events.</p>
+<p>Similarly, <code>tearDown()</code> will be called by unittest after every test has completed. In this method, <code>Program.Stop()</code> is called to exit this instance of WizBang. <code>tearDown()</code> then waits for the SUT's event loop thread to end, by joining it. This is to ensure the next test is not affected in some way, by allowing it to start before this test has ended.</p>
+<p>This can all be tried out, by modifying <code>AT001_AddItems</code> to inherit from <code>AcceptanceTest</code> instead of <code>TestCase</code>, and adding a sleep in the body of the test method, before the fail:</p>
+<pre lang="python">
+from System.Threading import Thread
+from unittest import main as run_test
+from AcceptanceTest import AcceptanceTest
+
+class AT001_AddItems(AcceptanceTest):
+
+    def test_add_address(self):
+        # 1. Alice starts WizBang. The window appears.
+        # etc (not yet implimented)
+
+        Thread.Sleep(5000)
+        self.fail("test not finished")
+
+if __name__ == '__main__':
+    run_test()
+</pre>
+<p>Running this test now displays the SUT's form for the duration of the sleep, and during that time it is responsive to move and resize events. Unlike the last version, this test proceeds to execute while the form is visible, so at the end of the sleep, the test fails, with 'test not finished', and the SUT is ended, closing its form.</p>
+<p>Note that the sleep triggers a runtime warning from ipy.exe on stdout, about sleeping threads not pumping GUI events. This makes no difference here, but from now on, we'll do as this warning suggests and replace sleeps with calls to <code>Thread.CurrentThread.Join()</code>, which behaves the same as sleep, but continues to process any events that arrive while sleeping.</p>
+<p>Now that our acceptance test is properly starting and stopping the SUT, we are in a position to start making assertions about the state and behaviour of the main form.</p>
+<h2>Asserting Correct Behaviour</h2>
+<p>We can now start coding the requirements that have been pasted into our acceptance test as comments. We might be tempted to implement the first requirement of the acceptance test as follows:</p>
+<pre lang="python">
+import clr
+clr.AddReference('WizBang')
+from WizBang import AllForms
+
+# 1. Alice starts WizBang. The window appears.
+mainform = AllForms.mainform
+self.assertEquals(mainform.Visible, 'form should be visible')
+</pre>
+<p>On first glance, this appears to work - you can run this and this assert will pass. However, there is an insidious problem here, because it accesses properties of a .NET control from a thread other than the one it was created on. Such access can sometimes result in an <code>InvalidOperationException</code>, with a message along the lines of "Cross-thread operation not valid: Control 'mainform' accessed from a thread other than the thread it was created on." Worse, depending on circumstances, sometimes no exception is raised, but values are returned which may not be correctly synced to the current value of <code>mainform.Visible</code>.</p>
+<p>The proper way to access properties like this is to invoke such code on the control's own thread. All .NET controls, of which forms are a subclass, have an <code>Invoke()</code> method for just this purpose.</p>
+<p>Conceptually, <code>Invoke()</code> takes a callable, which is executed synchronously by passing it as an event to the control's event loop (or the event loop of its parent form). When the event loop processes this event, the passed callable is invoked on the event loop's thread - which can safely access the properties of its own controls. The return value from the callable is passed back by the event-handler, and then safely marshalled back to the invoking thread as the return value from <code>Invoke()</code>.</p>
+<p>In practice, the callable passed to Invoke needs to be wrapped in a <em>delegate</em>. Delegates are .NET's type-safe function pointers. An appropriate delegate can be constructed using the IronPython construct <code>CallTarget0</code>, which denotes a delegate taking zero arguments.</p>
+<p>The above sounds like quite a mouthful, and the code is correspondingly verbose:</p>
+<pre lang="python">
+import clr
+clr.AddReference('IronPython')
+from IronPython.Runtime.Calls import CallTarget0
+
+# 1. Alice starts WizBang. The window appears.
+getVisible = CallTarget0(lambda: mainform.Visible)
+self.assertTrue(mainform.Invoke(getVisible), 'form not visible')
+</pre>
+<p>Note that the location of <code>CallTarget0</code> was changed between IronPython versions 1 and 2. The location of the import will need to change for the above code to work on IronPython 1.</p>
+<p>Invoking on the control's own thread like this means that our callable (the <code>lambda: <span class="pre">mainform.Visible</span></code>) can safely access any of mainform's properties and methods.</p>
+<h2>More Concise Test Code</h2>
+<p>The cross-thread invoking described above will be used frequently throughout our acceptance tests, whenever the properties or methods of a control are accessed. Such code can be abbreviated slightly, by defining a method on <code>AcceptanceTest</code>, to help us invoke on the main form's thread:</p>
+<pre lang="python">
+def on_gui(self, target):
+    return self.program.mainform.Invoke(CallTarget0(target))
+</pre>
+<p>Which can be used to reduce the length of our assertion to:</p>
+<pre lang="python">
+# 1. Alice starts WizBang. The window appears.
+self.assertTrue(self.on_gui(lambda: mainform.Visible), 'form not visible')
+</pre>
+<p>Even so, wrapping access to each attribute individually like is still a little fiddly, especially if it is happening many times. To improve this, there is nothing to stop us wrapping larger callables instead. For example, consider the second user story requirement:</p>
+<pre lang="python">
+# 2. She sees the three default list entries:
+#    'one', 'two', 'three'. Nothing is selected.
+self.on_gui(self.assert_list_at_startup)
+</pre>
+<p>The function <code>assert_list_at_startup()</code>, shown below, can now have access to properties on all controls without using <code>Invoke()</code>, since it runs entirely on the GUI thread:</p>
+<pre lang="python">
+def assert_list_at_startup(self):
+    wizList = self.program.mainform.Controls['WizList']
+    self.assertEquals(wizList.SelectedIndex, -1,
+        'should be nothing selected')
+    self.assertEquals(wizList.Items[0], 'one', 'list[0] wrong')
+    self.assertEquals(wizList.Items[1], 'two', 'list[1] wrong')
+    self.assertEquals(wizList.Items[2], 'three', 'list[2] wrong')
+</pre>
+<p>If any of these assertions should fail, raised exceptions are correctly propagated back to our test thread. The only problem is that the stack trace displayed in the test output ends at <code>on_gui()</code>'s cross-thread invoke - i.e. it does not display the line within <code>assert_list_at_startup()</code> which failed. However such stack traces are accompanied by the error message from the failing assertion, so this is not usually a problem. If this turns out to be critical for your situation, it is possible to create your own cross-thread exception handler which fixes this, reconstituting the entire stack trace even across thread boundaries.</p>
+<p>Wrapping callables, as <code>on_gui()</code> does, is often usefully implemented as a decorator. This can be provided by our AcceptanceTest module:</p>
+<pre lang="python">
+def guithread(target):
+    def wrapper(*args, **kwargs):
+        test = args[0]
+        return test.on_gui(lambda: target(*args, **kwargs))
+    return wrapper
+</pre>
+<p>This decorator expects to be applied to methods on <code>AcceptanceTest</code>, so that it can call <code>.on_gui()</code> on this method's first parameter. if the decorated function is not a method on AcceptanceTest, the decorator will not work.</p>
+<p>Functions like <code>assert_list_at_startup()</code>, above, which make frequent access to properties of controls, can now be decorated:</p>
+<pre lang="python">
+@guithread
+def assert_list_at_startup(self):
+    wizList = self.program.mainform.Controls['WizList']
+    self.assertEquals(wizList.SelectedIndex, -1,
+    # etc
+</pre>
+<p>Such a decorated method can then be conveniently called by the acceptance test:</p>
+<pre lang="python">
+# 2. She sees the three default list entries:
+#    'one', 'two', 'three'. Nothing is selected.
+self.assert_list_at_startup()
+</pre>
+<p>It is tempting at this point to simply decorate our entire test method with <code>@guithread</code>, so that the whole thing can execute on the GUI thread and have unfettered access to the form's attributes and controls. However, this would not work since the test needs to surrender its use of the GUI thread from time to time, to allow the form to process all the events on its event loop. Without this, the form would be blocked, waiting for the test to finish, and would be unable to handle button clicks and other input. Amongst other things, this would prevent the form from reacting to the simulated user input that our test is about to provide.</p>
+<h2>Simulating User Button Clicks</h2>
+<p>The next part of our acceptance test requires that the test provides some input to the SUT, simulating the actions of a user:</p>
+<pre lang="python">
+# 3. She clicks the 'AddButton'
+</pre>
+<p>Buttons provide a method specifically to simulate being clicked, which our test can use. A small utility method on <code>AcceptanceTest</code> calls this on the GUI thread:</p>
+<pre lang="python">
+@guithread
+def click_button(self, form, buttonName):
+    form.Controls[buttonName].PerformClick()
+</pre>
+<p>This can be used in our acceptance test:</p>
+<pre lang="python">
+# 3. She clicks the 'AddButton'
+self.click_button(mainform, 'addButton')
+</pre>
+<p>Running the test will now correctly click the <em>add item</em> button. However, the Wizbang application does not yet have any button click handlers, so the button has no effect.</p>
+<p>Up until this point, all the assertions in <code>AT001_AddItems</code> have passed without us having to modify WizBang the application. This is because the conditions being tested were already set up correctly by the design-time properties of the main form, or by the application's scaffolding code in <code>WizBang.Program</code>.</p>
+<p>When using test-driven development (TDD), this is generally not the case, and in fact, this is not true for our next requirement, which tests that the <em>add item</em> button click caused the <em>add item</em> form to appear. Since this is not yet implemented, when the test is run, this assertion will fail:</p>
+<pre lang="python">
+# 4. The 'Add Item' dialog appears
+addItemForm = AllForms.addItemForm
+self.assertTrue(self.on_gui(lambda: addItemForm.Visible),
+    'additem form should be visible')
+</pre>
+<p>To make this requirement pass, the following click handler is attached to the <em>Add Item</em> button on WizBang's main form. We're going to skip unit tests for this article, but on a real project, this is the perfect time to create them - after the acceptance test, but before the implimentation. Once they are done, the handler to make them and the acceptance test both pass looks like this:</p>
+<pre lang="csharp">
+// C# click handler for the AddItem button on WizBang's main form
+private void AddButton_Click(object sender, EventArgs e)
+{
+    if (AllForms.addItemForm == null)
+        AllForms.addItemForm = new AddItemForm();
+    AllForms.addItemForm.Show();
+}
+</pre>
+<p>In a real application, this handler would need to be a little more robust, able to handle multiple clicks of the button, and forms which are disposed or already visible. However, this behaviour is not yet tested by our acceptance test, and therefore TDD conveniently suggests that for the moment, it should remain unimplemented.</p>
+<h2>Simulating User Keyboard Input</h2>
+<p>The next requirement asks that our test simulate the user typing into a TextBox control on the <em>add item</em> form. This can be trivially implemented using the techniques discussed thus far:</p>
+<pre lang="python">
+# 5. She types an item name into the dialog and clicks OK
+self.set_text(addItemForm.addItem, 'hello')
+self.click_button(addItemForm, 'okButton')
+self.assertFalse(
+    self.on_gui(lambda: addItemForm.Visible),
+    "additem form should close")
+</pre>
+<p>Where <code>set_text()</code> is a small helper function provided by <code>AcceptanceTest</code>:</p>
+<pre lang="python">
+@guithread
+def set_text(self, textbox, text):
+    textbox.Text = text
+</pre>
+<p>Running this test will successfully populate the TextBox with the word "hello". However, this is a fairly poor acceptance test. If the TextBox control did not have focus, then a real user would have to perform extra steps before being able to type into it. If the TextBox was not visible or enabled, then a user would not be able to type into it at all. Our test implementation, by simply setting the <code>Text</code> attribute, performs an end-run around many of the restrictions that real users would face, and hence is not a good test of the application's behaviour as a user would actually experience it.</p>
+<p>The simplest way to improve on this for the moment is to explicitly test for these conditions:</p>
+<pre lang="python">
+@guithread
+def set_text(self, textbox, text):
+    self.assertTrue(textbox.Visible, 'textbox should be visible')
+    self.assertTrue(textbox.Focused, 'textbox should have focus')
+    self.assertTrue(textbox.Enabled, 'textbox should be enabled')
+    textbox.Text = text
+</pre>
+<p>Running this test does actually reveal a genuine error - the <em>add item</em> form's textbox does not have focus. A real user, on running WizBang, would have to click or use the tab key to give the textbox focus, a step which our test has previously been able to obliviously skip. We would prefer that our user didn't have to do this either, so we add an <code>Activated</code> handler on the <code>AddItemForm</code>:</p>
+<pre lang="csharp">
+// C# handler for the add item form's Activated event
+private void AddItemForm_Activated(object sender, EventArgs e)
+{
+    addItem.Focus();
+}
+</pre>
+<p>This makes the acceptance test pass. Implementing the next test requirement is straightforward:</p>
+<pre lang="python">
+# 6. The new item is at the end of the list, selected.
+self.assert_list_after_add()
+</pre>
+<p>where:</p>
+<pre lang="python">
+@guithread
+def assert_list_after_add(self):
+    self.assertEquals(self.item_count(), 4, 'should be 4 items')
+    wizList = AllForms.mainForm.Controls['WizList']
+    self.assertEquals(wizList.Items[3], 'hello', 'list[3] wrong')
+    self.assertEquals(wizList.SelectedIndex, 3, '4th should be selected')
+</pre>
+<p>This is asserting that the text we typed into the <em>add item</em> form ("hello") is added to the end of the main form's list, and is selected. In order to make this pass, we need a click handler for the OK button on the <em>add item</em> form:</p>
+<pre lang="csharp">
+// C# handler for add item form's ok button
+private void okButton_Click(object sender, EventArgs e)
+{
+    ListBox wizList = AllForms.mainForm.WizList;
+    wizList.Items.Add(addItem.Text);
+    wizList.SelectedIndex = wizList.Items.Count - 1;
+    this.Close();
+}
+</pre>
+<p>Finally, the test closes down the application and ends:</p>
+<pre lang="python">
+# 7. She clicks the 'CloseButton'
+self.click_button(mainForm, 'closeButton')
+
+# 8. The application closes
+self.assertTrue(mainForm.IsDisposed, 'mainform should close')
+</pre>
+<p>Notice how access to <code>mainForm.IsDisposed</code> is not invoked on the GUI thread. By this point in the test, all being well, the main form has been closed, and its thread will be ended. Attempting to invoke on it will fail. Instead, we read this property directly.</p>
+<p>To make this pass, we add a simple button click hander to the main form's <em>Close</em> button:</p>
+<pre lang="csharp">
+// C# handler for click event on main form's close button
+private void CloseButton_Click(object sender, EventArgs e)
+{
+    this.Close();
+}
+</pre>
+<h2>Simulating Mouse and Keyboard Events</h2>
+<p>Directly calling controls' methods and setting their properties, as described above, can be problematic, since the controls will not behave precisely as they would when in use by a real user. Our assertions above that controls being manipulated are currently visible, enabled and focussed are a partial solution to this problem.</p>
+<p>However, there are many other possible ways in which our tests could unintentionally get the SUT to behave in ways that are different from the behaviour a real user would see. For example, a textbox could have a custom keypress handler, which performs input validation of some kind. Such a handler would not be invoked when our test simply sets the <code>.Text</code> property of the control, as we do above.</p>
+<p>In a worst case scenario, acceptance tests could pass even though the application was completely unusable by a real user.</p>
+<p>To combat this, the approach taken at Resolver Systems is to stimulate controls by generating fake Win32 mouse and keyboard events. This drives the application by, for example, actually moving the mouse cursor over a button, then issuing a mouse click event. Windows itself then fires the button click event, which ends up calling the click event handlers.</p>
+<p>This approach guarantees that our acceptance tests are only able to perform the same actions that a human user would be able to, and is more of a true 'end-to-end' test - which seems like a good principle for acceptance tests to aim for in general.</p>
+<p>Simulating user input in this way, however, is not without drawbacks.</p>
+<p>The acceptance test framework sends low level mouse events, using the win32 function <code>SendInput()</code>, from the Windows user32.dll. Calling win32 functions from IronPython like this requires creating a C# assembly, in which we expose <code>SendInput()</code>, and more than a dozen similar functions, by declaring them as follows:</p>
+<pre lang="csharp">
+using System.Runtime.InteropServices;
+
+namespace UnmanagedCode
+{
+    // extensive type declarations for type 'Input' go here
+
+    public class User32
+    {
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern int SendInput(
+            int nInputs, ref Input pInputs, int cbSize);
+    }
+}
+</pre>
+<p>It turns out that populating the large <code>Input</code> data structure to be passed to this function takes another 50 lines of code. Similar scaffolding is required to support keyboard events. This is a substantial extra layer of complexity - albeit one that has proven reliable and stable since it was created.</p>
+<p>Having said that, the acceptance tests written this way are not completely reliable in operation - developers (or office cleaners) moving the mouse or leaning on the keyboard can interfere with the running tests. Sometimes, due simply to race conditions, the GUI does not respond as quickly as the test script expects, causing spurious failures. While issues such as these can be accounted for, for example by waiting for events or for conditions before allowing tests to proceed, this still causes a significant level of false positives in our test failures, as new tests 'bed down' and we gradually discover and compensate for their intermittent failure modes.</p>
+<p>Finally, it is probable that our tests run more slowly than they would if they invoked event handlers directly. To some extent this is mitigated by a distributed test runner, which splits any given test suite across all idle desktop machines in the office. However, there are many tests, some of which are stress tests, and running our full acceptance test suite still takes at least a couple of hours. Having it run faster would always be beneficial.</p>
+<p>Because both speed and reliability might be improved to some extent by reducing our use of keyboard and mouse events, it would be advisable to at least consider trying the simpler techniques described earlier in this article, before attempting to generate mouse and keyboard events like this.</p>
+<h2>Conclusion</h2>
+<p>We've seen how to construct an IronPython acceptance test for an application written in C#.</p>
+<p>Despite the pitfalls described in the last section, we're very happy with acceptance testing of our .NET desktop application at Resolver Systems. It has proven to be eminently feasible, and of great value to us. In addition to the well-known benefits of unit-testing, acceptance testing provides an orthogonal layer of information about the system-under-test.</p>
+<p>Most directly, it gives concrete, rapid feedback on the completion and robustness of features at a level that managers care about and users understand. Also, it provides thorough smoke tests to check that recent changes have not broken existing functionality. Perhaps most important of all, however, acceptance tests provide a method to precisely specify detailed requirements which can be easily created by users, are intimately understood by developers, are provably met, and are trivially traceable through to the final phases of the project.</p>
+<p>Given acceptance tests such as those described in this article, test-driven development then provides developers with the ability to navigate from requirements through to working code that provably fulfils the specification, using a series of small, discrete and well-understood steps. This gives projects practical tools with which to make rapid progress, to avoid major risks, and to meaningfully measure the project's current status and velocity.</p>
+<p>Readers who are interested in using IronPython, for testing or for other purposes, should check out <a href="http://www.ironpythoninaction.com/">IronPython in Action</a>, a pragmatic and densely informative new book by Michael Foord, which caters to both Python and .NET developers.</p>

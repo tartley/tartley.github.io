@@ -1,0 +1,76 @@
+---
+layout: post
+status: publish
+published: true
+title: Comparing methods of deploying Python applications
+author:
+  display_name: tartley
+  login: tartley
+  email: tartley@tartley.com
+  url: http://tartley.com
+author_login: tartley
+author_email: tartley@tartley.com
+author_url: http://tartley.com
+wordpress_id: 878
+wordpress_url: http://tartley.com/?p=878
+date: '2009-11-12 12:18:19 -0600'
+date_gmt: '2009-11-12 12:18:19 -0600'
+categories:
+- Python
+tags: []
+comments:
+- id: 24327
+  author: Richard Jones
+  author_email: r1chardj0n3s@gmail.com
+  author_url: ''
+  date: '2009-11-13 00:35:30 -0600'
+  date_gmt: '2009-11-13 00:35:30 -0600'
+  content: Bring on Bootstrap!!!
+- id: 24333
+  author: tartley
+  author_email: tartley@tartley.com
+  author_url: http://tartley.com
+  date: '2009-11-13 09:17:57 -0600'
+  date_gmt: '2009-11-13 09:17:57 -0600'
+  content: "Yah, bootstrap seems like the best solution - but obviously it's not trivial.
+    It would have to test if any of the currently installed interpreters are of a
+    suitable version, and if not, download and install one, side by side with existing
+    ones, and make sure your program gets run with that version, but all other python
+    programs remain unaffected.\r\n\r\nI know on Windows there's a list of installed
+    interpreters in the registry. Is there an equivalent on other platforms?"
+- id: 24334
+  author: tartley
+  author_email: tartley@tartley.com
+  author_url: http://tartley.com
+  date: '2009-11-13 09:19:47 -0600'
+  date_gmt: '2009-11-13 09:19:47 -0600'
+  content: Actually, come to think of it, now that I describe what 'bootstrap' would
+    have to do, it seems like it's crying out for a robust version of 'pychoose' that
+    I created the other day. I didn't realise these two itches of mine were so intimately
+    overlapping.
+- id: 24335
+  author: tartley
+  author_email: tartley@tartley.com
+  author_url: http://tartley.com
+  date: '2009-11-13 09:20:39 -0600'
+  date_gmt: '2009-11-13 09:20:39 -0600'
+  content: Perhaps if I create a dead simple version of Bootstrap, which doesn't worry
+    about what version of Python your script needs, then maybe I could interest people
+    in trying to help me improve it. Hmmm.
+- id: 24336
+  author: tartley
+  author_email: tartley@tartley.com
+  author_url: http://tartley.com
+  date: '2009-11-13 09:44:19 -0600'
+  date_gmt: '2009-11-13 09:44:19 -0600'
+  content: "Hmm. That's not going to work, exactly as stated. At the very least, each
+    application would need to maintain it's own virtualenv, to avoid clobbering versions
+    of libraries needed by other applications.\r\n\r\nTo do it right is going to be
+    a bunch of work."
+---
+<p>I had <a href="http://tartley.com/?p=843">a cry</a> last month about deploying a Python application to end-users being more fiddly and difficult than I expected it to be. I'm talking about py2exe, Freeze, and their ilk.</p>
+<p>As a quick follow-up, I recently <a href="http://groups.google.com/group/comp.lang.python/browse_thread/thread/5abb44388a28ce25/8ce490b3587719e4?lnk=gst&amp;q=directory+python+installed&amp;pli=1">posted to comp.lang.python</a> about a spreadsheet I've made, comparing comparing the solutions I've found thus far:</p>
+<p><a href="http://spreadsheets.google.com/pub?key=tZ42hjaRunvkObFq0bKxVdg&amp;output=html">http://spreadsheets.google.com/pub?key=tZ42hjaRunvkObFq0bKxVdg&amp;output=html</a></p>
+<p>Each column represents a method of distributing a Python application to an end-user without them having to worry about what Python is or whether they have an appropriate version of it installed. 'Bundle' represents manually bundling an interpreter with your application. 'Bootstrap' represents a sort of fanciful vision of manually creating a compiled installer which downloads and installs an interpreter if required, before running your Python application on it. The other columns represent the various splendid projects like py2exe which perform the bundling process for you.</p>
+<p>Each row represents a reason to choose between them. By my criteria, which are no doubt idiosyncratic, cx_freeze or maybe PyInstaller are starting to look like good contenders for future projects.</p>
+<p>Obviously feedback about any wrong-headedness on my part is appreciated.</p>

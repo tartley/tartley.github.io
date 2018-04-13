@@ -1,0 +1,63 @@
+---
+layout: post
+status: publish
+published: true
+title: Understanding git rebase so it sticks
+author:
+  display_name: tartley
+  login: tartley
+  email: tartley@tartley.com
+  url: http://tartley.com
+author_login: tartley
+author_email: tartley@tartley.com
+author_url: http://tartley.com
+wordpress_id: 1579
+wordpress_url: http://tartley.com/?p=1579
+date: '2014-02-07 10:28:37 -0600'
+date_gmt: '2014-02-07 10:28:37 -0600'
+categories:
+- Software
+- Git
+tags: []
+comments: []
+---
+<p>I endlessly misremember how to use git rebase. That ends today. Here are my notes to help me remember.</p>
+<p>Rebase is traditionally documented as:</p>
+<pre lang="bash">git rebase [--onto newbase] [upstream [branch]]</pre>
+<p>This is confusing for several reasons. A slight improvement is to rename the args:</p>
+<pre lang="bash">git rebase [--onto target] [exclude [include]]</pre>
+<p>Where:</p>
+<ul>
+<li><code>include</code> is the tip of the branch to be transplanted. If omitted, it defaults to the current branch.</li>
+<li><code>exclude</code> excludes all its ancestors from being transplanted. Hence the transplanted branch will have its tip at <code>include</code>, and its base at the common ancestor of <code>include</code> and <code>exclude</code>. If <code>--onto</code> isn't specified, <code>exclude</code> is also used as the destination for the transplant.</li>
+<li><code>target</code> is the place to transplant the branch to. If not specified, it defaults to the value of <code>exclude</code>.</li>
+</ul>
+<p>Hence, a simple before and after:</p>
+<pre>
+o---o---o---o---o---<b>o</b> exclude
+     \
+      1---2---<b>3</b> current branch
+                or include</pre>
+<pre lang="bash">git rebase exclude [include]</pre>
+<pre>                exclude
+                v
+o---o---o---o---<b>o</b>---1---2---<b>3</b> current branch
+                              or include</pre>
+<p>See how the commits to be transplanted start at <code>include</code> and go back to the common ancestor of that and <code>exclude</code>. Since <code>--onto</code> isn't specified, <code>exclude</code> is also used as the transplant destination.</p>
+<p>Or a more complex one:</p>
+<pre>                 
+ o---o---o---o---<b>o</b> target
+      \
+       o---o---<b>o</b> exclude
+            \
+             1---<b>2</b> current branch
+                   or include</pre>
+<pre lang="bash">git rebase --onto target exclude [include]</pre>
+<pre>                target
+                v
+o---o---o---o---<b>o</b>---1---<b>2</b> current branch
+     \                    or include
+      o---o---<b>o</b>
+              ^
+              exclude</pre>
+<p>Again, the commits to be transplanted are defined by <code>include</code> and <code>exclude</code>, but this time a separate destination is specified using <code>--onto</code>.</p>
