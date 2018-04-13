@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Convert all entries in _posts from HTML to Markdown.
+# This is a one-shot operation, you shouldn't ever need to run this again.
+
+for f in _posts/*.html
+do
+    bin/convert_post $f
+done
+

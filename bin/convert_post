@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+# Entries in _posts were originally exported from Wordpress using jekyll-import,
+# which left them as html posts with YAML data prepended.
+#
+# This script converts each post from HTML to Markdown, since that's what
+# I plan to use to write future posts, so they are all consistent.
+
+echo "Processing $1"
+
+base=${1//.html/}
+
+# split .html into an empty file, a .yaml and an .htm
+csplit \
+    --prefix="$base." \
+    --suppress-matched \
+    -q \
+    "$base.html" \
+    '/---/' '{1}'
+rm $base.00 # empty file
+mv $base.01 $base.yaml
+mv $base.02 $base.htm
+rm $base.html
+
+# Set metadata author=tartley
+python3 -c "
+import yaml
+with open(\"$base.yaml\", 'r') as stream:
+    data = yaml.load(stream)
+data['author'] = 'tartley'
+with open(\"$base.yaml\", 'w') as stream:
+    stream.write(yaml.dump(data, explicit_start=True, explicit_end=True))
+"
+
+# convert html to markdown
+pandoc --from html --to markdown $base.htm -o $base.content
+rm $base.htm
+
+# concat yaml and content into '.md'
+cat $base.yaml $base.content >$base.md
+rm $base.yaml $base.content
+
