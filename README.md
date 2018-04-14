@@ -46,3 +46,8 @@ And fails because I need an ssh tunnel to access the mysql instance:
 
 (leave open for as long as needed)
 
+## Choose new theme on github
+
+and I need to install that theme locally to preview:
+
+    
