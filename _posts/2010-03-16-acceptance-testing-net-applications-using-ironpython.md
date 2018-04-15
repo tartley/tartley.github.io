@@ -219,9 +219,7 @@ taken care of automatically, using a copy of the standard library that
 is included with the install. Otherwise, you need to set this up
 manually, either by setting an environment variable:
 
-``` {lang="dos"}
-set IRONPYTHONPATH=C:\Python25\Lib
-```
+    set IRONPYTHONPATH=C:\Python25\Lib
 
 or by appending this directory to `sys.path` inside your IronPython
 install's `Lib\site.py` file:
@@ -241,13 +239,13 @@ the CPython standard library:
 Once this is done, test it out by starting `ipy.exe`, and typing:
 
 ``` python
->>> import unittest
+> import unittest
 ```
 
 If this works without complaint, exit *ipy.exe*, and run the nascent
 acceptance test above, using the DOS command-line:
 
-``` {lang=""}
+``` shell_session
 > ipy.exe AT001_AddItems.py
 F
 ======================================================================
@@ -377,7 +375,7 @@ access to the application's forms, and handles the startup and shutdown
 of the application. During startup, it creates and shows an instance of
 the main form.
 
-``` {lang="csharp"}
+``` csharp
 // C# scaffolding for the WizBang application.
 // Exposes public functions and GUI forms, for use by tests.
 using System;
@@ -445,7 +443,7 @@ which closes all our forms and ends their event loops.
 when quitting, after any user confirmations have happened. The following
 handler on the main form's *Closed* event ensures this:
 
-``` {lang="csharp"}
+``` csharp
 // C# event hander for the main form of the WizBang application
 private void MainForm_Closed(object sender, EventArgs e)
 {
@@ -503,7 +501,8 @@ On a real project, many `ATxxx` test classes would inherit from
 `AcceptanceTest`, which looks like this:
 
 ``` python
-# reference .NET assemblies - requires IronPython
+# Python acceptance test base class
+# References .NET assemblies - requires IronPython
 import clr
 clr.AddReference('WizBang')
 
@@ -830,7 +829,7 @@ time to create them - after the acceptance test, but before the
 implimentation. Once they are done, the handler to make them and the
 acceptance test both pass looks like this:
 
-``` {lang="csharp"}
+``` csharp
 // C# click handler for the AddItem button on WizBang's main form
 private void AddButton_Click(object sender, EventArgs e)
 {
@@ -900,7 +899,7 @@ which our test has previously been able to obliviously skip. We would
 prefer that our user didn't have to do this either, so we add an
 `Activated` handler on the `AddItemForm`:
 
-``` {lang="csharp"}
+``` csharp
 // C# handler for the add item form's Activated event
 private void AddItemForm_Activated(object sender, EventArgs e)
 {
@@ -932,7 +931,7 @@ This is asserting that the text we typed into the *add item* form
 In order to make this pass, we need a click handler for the OK button on
 the *add item* form:
 
-``` {lang="csharp"}
+``` csharp
 // C# handler for add item form's ok button
 private void okButton_Click(object sender, EventArgs e)
 {
@@ -961,7 +960,7 @@ will fail. Instead, we read this property directly.
 To make this pass, we add a simple button click hander to the main
 form's *Close* button:
 
-``` {lang="csharp"}
+``` csharp
 // C# handler for click event on main form's close button
 private void CloseButton_Click(object sender, EventArgs e)
 {
@@ -1007,7 +1006,7 @@ functions from IronPython like this requires creating a C\# assembly, in
 which we expose `SendInput()`, and more than a dozen similar functions,
 by declaring them as follows:
 
-``` {lang="csharp"}
+``` csharp
 using System.Runtime.InteropServices;
 
 namespace UnmanagedCode
