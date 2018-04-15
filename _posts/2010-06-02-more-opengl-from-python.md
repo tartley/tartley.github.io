@@ -72,7 +72,7 @@ expressiveness of Python can really shine.
 I started with a quick Shape class, to model the vertices and faces of
 an arbitrary polyhedra (3D shapes with flat faces and straight edges):
 
-``` {lang="python"}
+``` python
 Position = namedtuple('Position', 'x y z')
 
 class Shape(object):
@@ -88,7 +88,7 @@ attributes is just a 4 element tuple: (r, g, b, alpha). This class can
 now be instantiated by factory functions to form particular 3D shapes,
 such as red cubes or blue tetrahedrons:
 
-``` {lang="python"}
+``` python
 def Cube(edge, color):
     verts = [
         (-edge/2, -edge/2, -edge/2),
@@ -121,7 +121,7 @@ Finally, we have a renderer, whose 'draw' method is invoked by our
 window draw event. This iterates through all items in our world that
 have a Glyph attribute, drawing each of them:
 
-``` {lang="python"}
+``` python
 def draw(self, items):
     for item in items:
         gl.glPushMatrix()
@@ -144,7 +144,7 @@ def draw(self, items):
 So we add a couple of interpenetrated Cube() shaped items into our
 world:
 
-``` {lang="python"}
+``` python
     white = (1, 1, 1, 1)
     red = (1, 0, 0, 1)
 
@@ -175,7 +175,7 @@ that contains several Shapes, and exposes 'vertices' and 'faces'
 attributes just like a regular Shape, which aggregate the geometry of
 all their subordinate Shapes.
 
-``` {lang="python"}
+``` python
 class CompositeShape(object):
 
     def __init__(self):
@@ -236,7 +236,7 @@ face, so that it can figure out how how strongly each face is
 illuminated. So our Glyph needs to start generating an array of normals
 for each vertex.
 
-``` {lang="python"}
+``` python
 def get_normal(face, vertices):
     v0 = vertices[face[0]]
     v1 = vertices[face[1]]

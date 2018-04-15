@@ -177,7 +177,7 @@ into my own code.
 
 I started with this ugly little lump:
 
-``` {lang="Python"}
+``` python
 def convert(self, params):
     action = params[0]
     if action == 'M':
@@ -209,7 +209,7 @@ In this case, I chose to make them methods of the current class.
 Standalone functions (outside the class, without a '*self*' parameter)
 would also work, if they didn't need access to shared state.
 
-``` {lang="Python"}
+``` python
     def onMove(self, params):
         x, y = self.get_point(params)
         self.current_path = [(x, y)]
@@ -238,7 +238,7 @@ note that I've pulled the logic out of each branch of the
 Second, I define a dictionary which maps action characters to one of the
 new handler functions:
 
-``` {lang="Python"}
+``` python
     def convert(self):
         lookup = {
             'M': self.onMove,
@@ -255,14 +255,14 @@ they would not need any '*self*.' qualifier here.
 Third, use the dictionary to lookup the function we want to call, and
 then call the returned function:
 
-``` {lang="Python"}
+``` python
         handler = lookup[action]
         handler(params)
 ```
 
 These two lines can be tidily combined into one:
 
-``` {lang="Python"}
+``` python
         loopup[action](params)
 ```
 
@@ -285,7 +285,7 @@ correspond to this case. We're really talking about the case when the
 most explicit and readable way to handle this case is to modify the
 above line of code:
 
-``` {lang="Python"}
+``` python
         if action in lookup:
             lookup[action](params)
         else:
@@ -300,7 +300,7 @@ remaining dead certain you aren't introducing new bugs.)
 
 Let's take a look at the final code all together:
 
-``` {lang="Python"}
+``` python
     def convert(self, params):
         lookup = {
             'M': self.onMove,
@@ -342,7 +342,7 @@ my mind, but hopefully someone finds it useful.
 single one contains something of real merit. I feel compelled to rummage
 through for a sort-of best of breed conclusion based on all of them...
 
-``` {lang="Python"}
+``` python
     lookup = {
         'M': self.on_move,
         'L': self.on_line,

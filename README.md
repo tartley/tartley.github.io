@@ -52,18 +52,23 @@ And fails because I need an ssh tunnel to access the mysql instance:
 * images
 * delete all the thumbnail images before committing?
 
+* syntax highlighting
+
 * Can we preserve old post urls?
     Post prefix data includes wordpress id
 
-* syntax highlighting
+* links between posts should be relative
+* search for remaining references to 'tartley.com/...'
+* search for remaining references to 'wp-content'
+* search for remaining references to 'uploads'
 
 * html entities in post titles
     * on index
-    * in posts
+    * in posts?
 
-* post categories in post
+* show post categories in post
 
-* post categories in home
+* show post categories in home
 
 * about
 
@@ -89,6 +94,9 @@ And fails because I need an ssh tunnel to access the mysql instance:
   letsencrypt:
   Figure out how to use certbot with my webfaction account
   ie. what webserver does it use?
+
+* Display old comments?
+* suggest a place to leave new comments? In the post template?
 
 # Done ########################################################################
 

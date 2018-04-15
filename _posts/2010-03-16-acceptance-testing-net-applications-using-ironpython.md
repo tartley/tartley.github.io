@@ -182,7 +182,7 @@ expected. To create an acceptance test, at Resolver Systems we paste the
 entire user story, as comments, into a new test method, on a class
 derived from Python's `unittest.TestCase`.
 
-``` {lang="python"}
+``` python
 from unittest import main as run_test, TestCase
 
 class AT001_AddItems(TestCase):
@@ -226,7 +226,7 @@ set IRONPYTHONPATH=C:\Python25\Lib
 or by appending this directory to `sys.path` inside your IronPython
 install's `Lib\site.py` file:
 
-``` {lang="python"}
+``` python
 import sys
 sys.path.append(r'C:\Python25\Lib')
 ```
@@ -240,7 +240,7 @@ the CPython standard library:
 
 Once this is done, test it out by starting `ipy.exe`, and typing:
 
-``` {lang="python"}
+``` python
 >>> import unittest
 ```
 
@@ -283,7 +283,7 @@ to the containing .NET *assembly*. An assembly is a physical chunk of
 code, usually contained in a DLL file. To add a reference, use the `clr`
 module, which is built-in to IronPython:
 
-``` {lang="python"}
+``` python
 import clr
 clr.AddReference('System.Windows.Forms')
 ```
@@ -298,7 +298,7 @@ namespace they implement. This is the case here, so once the above
 assembly is referenced, we can import code from the
 *System.Windows.Forms* namespace just as if it was a Python module:
 
-``` {lang="python"}
+``` python
 from System.Windows.Forms import Form
 form = Form()
 form.Show()
@@ -502,7 +502,7 @@ We implement this in a new class `AcceptanceTest`, which sits between
 On a real project, many `ATxxx` test classes would inherit from
 `AcceptanceTest`, which looks like this:
 
-``` {lang="python"}
+``` python
 # reference .NET assemblies - requires IronPython
 import clr
 clr.AddReference('WizBang')
@@ -567,7 +567,7 @@ This can all be tried out, by modifying `AT001_AddItems` to inherit from
 `AcceptanceTest` instead of `TestCase`, and adding a sleep in the body
 of the test method, before the fail:
 
-``` {lang="python"}
+``` python
 from System.Threading import Thread
 from unittest import main as run_test
 from AcceptanceTest import AcceptanceTest
@@ -609,7 +609,7 @@ We can now start coding the requirements that have been pasted into our
 acceptance test as comments. We might be tempted to implement the first
 requirement of the acceptance test as follows:
 
-``` {lang="python"}
+``` python
 import clr
 clr.AddReference('WizBang')
 from WizBang import AllForms
@@ -651,7 +651,7 @@ appropriate delegate can be constructed using the IronPython construct
 The above sounds like quite a mouthful, and the code is correspondingly
 verbose:
 
-``` {lang="python"}
+``` python
 import clr
 clr.AddReference('IronPython')
 from IronPython.Runtime.Calls import CallTarget0
@@ -678,14 +678,14 @@ control are accessed. Such code can be abbreviated slightly, by defining
 a method on `AcceptanceTest`, to help us invoke on the main form's
 thread:
 
-``` {lang="python"}
+``` python
 def on_gui(self, target):
     return self.program.mainform.Invoke(CallTarget0(target))
 ```
 
 Which can be used to reduce the length of our assertion to:
 
-``` {lang="python"}
+``` python
 # 1. Alice starts WizBang. The window appears.
 self.assertTrue(self.on_gui(lambda: mainform.Visible), 'form not visible')
 ```
@@ -695,7 +695,7 @@ little fiddly, especially if it is happening many times. To improve
 this, there is nothing to stop us wrapping larger callables instead. For
 example, consider the second user story requirement:
 
-``` {lang="python"}
+``` python
 # 2. She sees the three default list entries:
 #    'one', 'two', 'three'. Nothing is selected.
 self.on_gui(self.assert_list_at_startup)
@@ -705,7 +705,7 @@ The function `assert_list_at_startup()`, shown below, can now have
 access to properties on all controls without using `Invoke()`, since it
 runs entirely on the GUI thread:
 
-``` {lang="python"}
+``` python
 def assert_list_at_startup(self):
     wizList = self.program.mainform.Controls['WizList']
     self.assertEquals(wizList.SelectedIndex, -1,
@@ -729,7 +729,7 @@ across thread boundaries.
 Wrapping callables, as `on_gui()` does, is often usefully implemented as
 a decorator. This can be provided by our AcceptanceTest module:
 
-``` {lang="python"}
+``` python
 def guithread(target):
     def wrapper(*args, **kwargs):
         test = args[0]
@@ -745,7 +745,7 @@ not work.
 Functions like `assert_list_at_startup()`, above, which make frequent
 access to properties of controls, can now be decorated:
 
-``` {lang="python"}
+``` python
 @guithread
 def assert_list_at_startup(self):
     wizList = self.program.mainform.Controls['WizList']
@@ -756,7 +756,7 @@ def assert_list_at_startup(self):
 Such a decorated method can then be conveniently called by the
 acceptance test:
 
-``` {lang="python"}
+``` python
 # 2. She sees the three default list entries:
 #    'one', 'two', 'three'. Nothing is selected.
 self.assert_list_at_startup()
@@ -779,7 +779,7 @@ Simulating User Button Clicks
 The next part of our acceptance test requires that the test provides
 some input to the SUT, simulating the actions of a user:
 
-``` {lang="python"}
+``` python
 # 3. She clicks the 'AddButton'
 ```
 
@@ -787,7 +787,7 @@ Buttons provide a method specifically to simulate being clicked, which
 our test can use. A small utility method on `AcceptanceTest` calls this
 on the GUI thread:
 
-``` {lang="python"}
+``` python
 @guithread
 def click_button(self, form, buttonName):
     form.Controls[buttonName].PerformClick()
@@ -795,7 +795,7 @@ def click_button(self, form, buttonName):
 
 This can be used in our acceptance test:
 
-``` {lang="python"}
+``` python
 # 3. She clicks the 'AddButton'
 self.click_button(mainform, 'addButton')
 ```
@@ -816,7 +816,7 @@ tests that the *add item* button click caused the *add item* form to
 appear. Since this is not yet implemented, when the test is run, this
 assertion will fail:
 
-``` {lang="python"}
+``` python
 # 4. The 'Add Item' dialog appears
 addItemForm = AllForms.addItemForm
 self.assertTrue(self.on_gui(lambda: addItemForm.Visible),
@@ -853,7 +853,7 @@ The next requirement asks that our test simulate the user typing into a
 TextBox control on the *add item* form. This can be trivially
 implemented using the techniques discussed thus far:
 
-``` {lang="python"}
+``` python
 # 5. She types an item name into the dialog and clicks OK
 self.set_text(addItemForm.addItem, 'hello')
 self.click_button(addItemForm, 'okButton')
@@ -865,7 +865,7 @@ self.assertFalse(
 Where `set_text()` is a small helper function provided by
 `AcceptanceTest`:
 
-``` {lang="python"}
+``` python
 @guithread
 def set_text(self, textbox, text):
     textbox.Text = text
@@ -884,7 +884,7 @@ actually experience it.
 The simplest way to improve on this for the moment is to explicitly test
 for these conditions:
 
-``` {lang="python"}
+``` python
 @guithread
 def set_text(self, textbox, text):
     self.assertTrue(textbox.Visible, 'textbox should be visible')
@@ -911,14 +911,14 @@ private void AddItemForm_Activated(object sender, EventArgs e)
 This makes the acceptance test pass. Implementing the next test
 requirement is straightforward:
 
-``` {lang="python"}
+``` python
 # 6. The new item is at the end of the list, selected.
 self.assert_list_after_add()
 ```
 
 where:
 
-``` {lang="python"}
+``` python
 @guithread
 def assert_list_after_add(self):
     self.assertEquals(self.item_count(), 4, 'should be 4 items')
@@ -945,7 +945,7 @@ private void okButton_Click(object sender, EventArgs e)
 
 Finally, the test closes down the application and ends:
 
-``` {lang="python"}
+``` python
 # 7. She clicks the 'CloseButton'
 self.click_button(mainForm, 'closeButton')
 

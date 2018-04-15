@@ -114,7 +114,7 @@ Using MultiShape, we can now easily compose groups of our basic Shapes.
 A new factory function composes a bunch of cubes into the same
 MultiShape:
 
-``` {lang="python"}
+``` python
 def CubeCorners(edge, color1, color2):
     multi = MultiShape()
     multi.add(
@@ -133,7 +133,7 @@ def CubeCorners(edge, color1, color2):
 
 Another new factory function, *RingOf:*
 
-``` {lang="python"}
+``` python
 def RingOf(child, radius, number):
     multi = MultiShape()
     angle = 0
@@ -166,7 +166,7 @@ in this context I'm counting as a success.
 If we can compose basic shapes into rings, we can also compose rings
 into... um... *tri-axis-rings*:
 
-``` {lang="python"}
+``` python
 def TriRing(edge, radius, number, colors):
     multi = MultiShape()
     ring = RingOf(Cube(edge, colors), radius, number)
@@ -203,7 +203,7 @@ frame.
 
 How about an alternative, the RgbCubeCluster:
 
-``` {lang="python"}
+``` python
 def RgbCubeCluster(edge, cluster_edge, cube_count):
     cluster = MultiShape()
     for _ in xrange(cube_count):

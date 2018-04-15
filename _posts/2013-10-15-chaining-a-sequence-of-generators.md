@@ -68,7 +68,7 @@ This results in the outer level of my code calling one generator after
 another, terminating in something that consumes the rows, pulling data
 one row at a time through each of the generators:
 
-``` {lang="python"}
+``` python
 inputRows = read()
 parsedRows = parse(inputRows)
 processedRows = process(parsedRows)
@@ -78,7 +78,7 @@ output(outputRows)
 
 where each called function except the last is actually a generator, e.g:
 
-``` {lang="python"}
+``` python
 def parse(rows):
     for row in rows:
         yield int(row)
@@ -94,7 +94,7 @@ intermediate
 variables](http://www.refactoring.com/catalog/replaceTempWithQuery.html),
 which results in:
 
-``` {lang="python"}
+``` python
 output( format_( process( parse( read() ) ) ) )
 ```
 
@@ -106,7 +106,7 @@ I've had this idea in my head to create a decorator for generators which
 allows one to chain them in an intuitive order, possibly using some
 unconventional notation such as:
 
-``` {lang="python"}
+``` python
 read() | parse | process | format_ | output
 ```
 
@@ -120,7 +120,7 @@ Luckily, before embarking on that, I realised today I've been
 over-complicating the whole thing. There's no need for decorators, nor
 for the cute '|' syntax. I just need a plain old function:
 
-``` {lang="python"}
+``` python
 def link(source, *transforms):
     args = source
     for transform in transforms:
@@ -139,7 +139,7 @@ If the final item in the sequence passed to 'link' is a generator, then
 this returns a generator which is the composite of all the ones passed
 in:
 
-``` {lang="python"}
+``` python
 for item in link(read(), parse, process, format_):
     print item
 ```
@@ -148,7 +148,7 @@ Or if the final item passed to 'link' is a regular function, which
 consumes the preceding generators, then calling 'link' will invoke the
 generators, i.e. the following is the same as the above 'for' loop:
 
-``` {lang="python"}
+``` python
 link(read(), parse, process, format_, output)
 ```
 

@@ -42,7 +42,7 @@ wordpress_url: http://tartley.com/?p=594
 I want a Python unittest.assertAlmostEquals that compares numbers to N
 significant figures, instead of N decimal places.
 
-``` {lang="python"}
+``` python
 >>> test.assertAlmostEquals(1e-8, 5e-14)
 >>>
 ```
@@ -59,7 +59,7 @@ The code and a unittest for it are below. One of the tests currently
 fails, due to floating-point inaccuracy problems. I'll have to look at
 it some more. Isn't this problem already solved somewhere?
 
-``` {lang="python"}
+``` python
 import math
 import unittest
 
@@ -115,7 +115,7 @@ class TestCase(unittest.TestCase):
 
 And a test:
 
-``` {lang="python"}
+``` python
 import unittest
 
 from TestCase import TestCase
