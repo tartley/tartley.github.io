@@ -46,29 +46,32 @@ And fails because I need an ssh tunnel to access the mysql instance:
 
 (leave open for as long as needed)
 
-## Choose new theme on github
-
-and I need to install that theme locally to preview
-
 
 # TODO ########################################################################
 
-* change theme Cayman blog?
-
-* post exerpt in home
-
-* post categories in post
-
-* post categories in home
-
 * images
+* delete all the thumbnail images before committing?
 
 * Can we preserve old post urls?
     Post prefix data includes wordpress id
 
 * syntax highlighting
 
-* site title / header / footer / about
+* html entities in post titles
+    * on index
+    * in posts
+
+* post categories in post
+
+* post categories in home
+
+* about
+
+* site header
+  much smaller
+  remove the 'view on github'
+
+* footer
 
 * labouriously check all posts
 
@@ -110,3 +113,9 @@ and I need to install that theme locally to preview
 * do i need to do over the html to md conversion setting explicit_end='---' ?
 
 * check those unicode chars in old titles
+
+* change theme Cayman blog?
+
+* post exerpt in home
+
+* site description has a visible <br> in it
