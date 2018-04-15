@@ -85,7 +85,7 @@ directory.
 
 Open up MacVim, and check out the built-in Python version:
 
-``` {lang="vim"}
+```
 :python import sys; print sys.version
 2.7.1 (r271:86882M, Nov 30 2010, 10:35:34)
 ```

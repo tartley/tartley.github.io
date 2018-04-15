@@ -96,7 +96,7 @@ opposed to 'toolname.py' or even 'python toolname.py'. So I wrap my
 Python script 'toolname.py' with a new file, 'toolname.bat', living in
 the same directory:
 
-``` {lang="dos"}
+```
 :: first run our tool
 python "%~dp0%~n0.py" %*
 
@@ -114,7 +114,7 @@ new batch file to the temp directory, containing all the 'set' commands
 which will replace the hardcoded 'set THIS=THAT' in the above script.
 Then we call that new temporary bat file from here:
 
-``` {lang="dos"}
+```
 :: first run our tool
 python "%~dp0%~n0.py" %*
 
@@ -132,7 +132,7 @@ One solution I've seen used is to remember the exit value from
 toolname.py, and then use the DOS exit command to propagate this value
 out to our caller:
 
-``` {lang="dos"}
+```
 :: first run our tool
 python "%~dp0%~n0.py" %*
 set EXITVAL=%ERRORLEVEL%
@@ -166,7 +166,7 @@ equal to the exit value of the last process the script invokes. So
 instead of exit, simply find a process that will exit with the value you
 need, and invoke it as the final command in your batch script:
 
-``` {lang="dos"}
+```
 :: first run our tool
 python "%~dp0%~n0.py"; %*
 set EXITVAL=%ERRORLEVEL%
@@ -180,4 +180,4 @@ python -c "import sys; sys.exit(%EXITVAL%)"
 
 Bingo. I now have a Python process that can modify the environment of
 its invoking shell, and propagates the correct exit value out of the
-wrapping DOS script. \[Short bow. Applause. Roses. etc.\]
+wrapping DOS script. [Short bow. Applause. Roses. etc.]

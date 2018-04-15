@@ -237,8 +237,8 @@ $ notepad myprog.c
 
 Enter and save the following minimal program:
 
-``` {lang="cpp"}
-#include 
+``` cpp
+#include <stdio.h>
 
 int main(int argc, char ** argv)
 {
@@ -334,7 +334,7 @@ ten-second job:
 ``` shell_session
 $ for SOURCE in *.c;
 > do
-> gcc $SOURCE -o ${SOURCE%.c};
+>   gcc $SOURCE -o ${SOURCE%.c};
 > done
 ```
 
