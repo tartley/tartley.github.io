@@ -69,7 +69,7 @@ will need to be created or updated whenever you make significant
 changes. Either get used to manually running the following command a
 lot:
 
-``` {lang="bash"}
+``` bash
 ctags -R .
 ```
 
@@ -103,7 +103,7 @@ to inconveniently pop up, rather than just jumping to the tag you want.
 
 To fix this, create a \~/.ctags file:
 
-``` {lang="bash"}
+``` bash
 --python-kinds=-iv
 --exclude=build
 --exclude=dist

@@ -18,7 +18,7 @@ wordpress_url: http://tartley.com/?p=1615
 
 Bash:
 
-``` {lang="bash"}
+``` bash
 #!/usr/bin/env bash
 
 # Directs audio input (e.g. mic) to audio output (e.g. speakers),

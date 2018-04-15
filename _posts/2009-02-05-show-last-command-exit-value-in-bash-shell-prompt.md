@@ -28,24 +28,19 @@ wordpress_url: http://tartley.com/?p=657
 
 Stick something like this in your .bashrc file:
 
-``` {lang="bash"}
-# set PS1, last exit code if != 0, and PWD, with colors
-PRE='\[
+``` bash
+# display red exit value if it isn't zero
+PROMPT_COMMAND='EXITVAL=$?; '$PROMPT_COMMAND
+GET_EXITVAL='$(if [[ $EXITVAL != 0 ]]; then echo -n "\[\e[37;41;01m\] $EXITVAL \[\e[0m\] "; fi)'
+export PS1="$GET_EXITVAL$PS1"
 ```
-
-33\[' POST='m\\\]' COL\_LASTEXIT="\${PRE}01;41;37\${POST}" \# last
-command exit value COL\_PWD="\${PRE}00;01;36\${POST}" \# current
-directory COL\_DEFAULT="\${PRE}00\${POST}" \# back to default colors
-export PS1="\$COL\_LASTEXIT\\\${?\#0}\$COL\_PWD
-\\w\$COL\_DEFAULT\\n\\\\\$ "
 
 Command exit values other than zero are displayed in the subsequent
 prompt:
 
-\[caption id="attachment\_658" align="alignnone" width="442"
-caption="Check out the little red '1'"\]![Check out the little red
-'1'](/assets/2009/02/last-exit-value.png "last-exit-value"){.size-full
-.wp-image-658 width="442" height="229"}\[/caption\]
+![Check out the little red '1'](/assets/2009/02/last-exit-value.png)
+
+(see the little red '1').
 
 It's the
 

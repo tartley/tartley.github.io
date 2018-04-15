@@ -45,7 +45,7 @@ that working on the Windows operating system, the transition is a lot
 smoother. Simply first install Cygwin, cd to the root of your
 repository, and then:
 
-``` {lang="bash"}
+``` bash
 find . -name .svn -exec rm -fr {} \;
 hg init
 hg add .

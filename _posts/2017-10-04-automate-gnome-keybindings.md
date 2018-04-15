@@ -30,7 +30,7 @@ Warning: This:
     calendar and notifications window, which shadows my 'toggle window
     maximize vertically'.
 
-``` {lang="bash"}
+``` bash
 #!/usr/bin/env bash
 
 kb='org.gnome.desktop.wm.keybindings'

@@ -52,7 +52,21 @@ And fails because I need an ssh tunnel to access the mysql instance:
 * images
 * delete all the thumbnail images before committing?
 
-* syntax highlighting
+* syntax highlighting: fix language markup
+
+    ``` {lang="X"}
+
+    is there rouge support for DOS/CMD ?
+
+    check 'bash' instances to see if they should be 'shell_command' or whatever it is
+
+    ``` {other...}
+
+    plain indented
+
+    bare ```
+
+* syntax highlighting in solarized
 
 * Can we preserve old post urls?
     Post prefix data includes wordpress id

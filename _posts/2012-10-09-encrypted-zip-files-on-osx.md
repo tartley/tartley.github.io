@@ -80,7 +80,7 @@ I failed to find an existing app which would do all this (although I had
 no trouble on Linux or even on Windows.) Hence, resorting to good old
 Bash:
 
-``` {lang="bash"}
+``` bash
 #!/bin/bash
 
 ZIPDIR="$HOME/docs/org"

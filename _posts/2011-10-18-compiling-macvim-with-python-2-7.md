@@ -57,7 +57,7 @@ rest of the file from being parsed.
 The solution is to compile your own MacVim, using Python 2.7 instead of
 the system Python. The following commands got MacVim compiled for me:
 
-``` {lang="bash"}
+``` bash
 #!/bin/bash
 git clone git://github.com/b4winckler/macvim.git
 cd macvim/src

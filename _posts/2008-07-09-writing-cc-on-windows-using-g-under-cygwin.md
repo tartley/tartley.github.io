@@ -182,7 +182,7 @@ Notepad will work fine for the moment. Download Textpad for Windows if
 you want something a little more useful without being intimidating. Use
 something like Vi or Emacs if you are already familiar with them.
 
-Click \[Next\] when you're done. Setup downloads and installs the
+Click [Next] when you're done. Setup downloads and installs the
 selected packages.
 
 ### Run Cygwin
@@ -191,17 +191,15 @@ Double click the Cygwin icon on your desktop. You should get an
 uninspiring DOS-like text terminal in a window. Type the command 'ls',
 which lists the files in the current directory. From now on I'll show
 commands you should type in `monospace`, preceded by a dollar sign,
-possibly followed by [blue text]{style="color: #3366ff;"} showing the
-expected output of the command, like this:
+possibly followed by expected output of the command, like this:
 
-    $ ls
-    My Pictures My eBooks My Music
+``` shell_session
+$ ls
+My Pictures My eBooks My Music
+```
 
 With any luck, you should recognise the files listed as those residing
-in your My Documents directory. The yellow tilda (\~) above your
-dollar-sign prompt is a symbol that is used to indicate that you are
-currently looking at your home directory, which is the Unix way of
-saying My Documents.
+in your My Documents directory.
 
 I don't know how much/little Unix or Linux you know, so I'm going to
 explain that as little as possible for now, and just press on with what
@@ -213,8 +211,10 @@ Create a new directory within 'My Documents', where our C programs will
 live. You can use Linux commands if you know them, or use your Windows
 Explorer thing. I'm going to use Linux commands:
 
-    $ mkdir cprogs
-    $ cd cprogs
+``` shell_session
+$ mkdir cprogs
+$ cd cprogs
+```
 
 (The 'cd' changes directory into the new 'cprogs' directory. Note that
 the yellow '\~' above your dollar prompt has changed into a yellow
@@ -224,12 +224,16 @@ nothing - our new directory is empty.)
 Next we want to create our c source file. If you installed vi or emacs
 as part of the cygwin setup, then you can use these here:
 
-    $ vi myprog.c
+``` shell_session
+$ vi myprog.c
+```
 
 Otherwise, you can just use notepad, or any other windows text editor.
 You can invoke it from the command line if you wish.
 
-    $ notepad myprog.c
+``` shell_session
+$ notepad myprog.c
+```
 
 Enter and save the following minimal program:
 
@@ -249,7 +253,7 @@ to finish before it lets you type anything else. Save and quit notepad
 (now you can type again) and then run it once more, appending an
 ampersand at the end of the command:
 
-``` {.prettyprint}
+``` shell_session
 $ notepad myprog.c &
 ```
 
@@ -263,7 +267,7 @@ program.
 To compile the program, we invoke the gcc program that we installed as
 part of cygwin setup:
 
-``` {.prettyprint}
+``` shell_session
 $ gcc myprog.c -o myprog
 ```
 
@@ -275,14 +279,16 @@ return. If the compile command produces no error messages, nor any other
 kind of response, then the compilation has been successful. You can
 verify this:
 
-    $ ls myprog.c myprog.exe
+``` shell_session
+$ ls myprog.c myprog.exe
+```
 
 (Note: on a real Unix/Linux box, the program would have no '.exe'
 extension. It would simply be called 'myprog'.)
 
 And to run your new program:
 
-``` {.prettyprint}
+``` shell_session
 $ ./myprog
 Hello World
 ```
@@ -311,8 +317,8 @@ regardless of the type of work or what project they are working on.
 
 The command-line is often frowned upon by developers more familiar with
 a GUI way of working, who tend to assume that such an ancient interface
-represents a cruder way of working. In actual fact, the reverse is true
-- a GUI is good for providing guidance to novice users, but ultimately
+represents a cruder way of working. In actual fact, the reverse is true.
+A GUI is good for providing guidance to novice users, but ultimately
 proves limited and inflexible. One can only use a GUI application for
 exactly the uses the original developer envisaged. With a well-designed
 command-line, the user is faced with a steeper learning curve, but is
@@ -321,11 +327,11 @@ then free to combine programs in novel and constructive ways.
 For example, suppose we had 100 C programs to compile (not so
 far-fetched if these are actually libraries or plug-ins.) In many IDE
 GUI environments, the user would have no choice but to spend all
-afternoon loading each program in turn and clicking the \[compile\]
+afternoon loading each program in turn and clicking the [compile]
 button. Knowing a little command line magic, however, makes it a
 ten-second job:
 
-``` {lang="bash"}
+``` shell_session
 $ for SOURCE in *.c;
 > do
 > gcc $SOURCE -o ${SOURCE%.c};

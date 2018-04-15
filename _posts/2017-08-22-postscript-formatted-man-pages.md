@@ -44,7 +44,7 @@ an empty pdf document. We restore \`+o pipefail\` again at the end.
 
 Then, from the command line:
 
-``` {lang="bash"}
+``` bash
 $ psman tr
 ```
 

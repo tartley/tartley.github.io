@@ -21,14 +21,14 @@ my notes to help me remember.
 
 Rebase is traditionally documented as:
 
-``` {lang="bash"}
+``` bash
 git rebase [--onto newbase] [upstream [branch]]
 ```
 
 This is confusing for several reasons. A slight improvement is to rename
 the args:
 
-``` {lang="bash"}
+``` bash
 git rebase [--onto target] [exclude [include]]
 ```
 
@@ -51,7 +51,7 @@ Hence, a simple before and after:
           1---2---3 current branch
                     or include
 
-``` {lang="bash"}
+``` bash
 git rebase exclude [include]
 ```
 
@@ -74,7 +74,7 @@ Or a more complex one:
                  1---2 current branch
                        or include
 
-``` {lang="bash"}
+``` bash
 git rebase --onto target exclude [include]
 ```
 
