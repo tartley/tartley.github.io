@@ -17,7 +17,7 @@ wordpress_url: http://tartley.com/?p=201
 ---
 
 [![Flower. Hand.
-Ring.](http://tartley.com/wp-content/uploads/2007/08/20070801064.jpg){.alignleft}](http://picasaweb.google.co.uk/tartley/Engaged){.floatleft}...she
+Ring.](/assets/2007/08/20070801064.jpg){.alignleft}](http://picasaweb.google.co.uk/tartley/Engaged){.floatleft}...she
 said yes!\
 [Pics on Picasa here.](http://picasaweb.google.co.uk/tartley/Engaged)
 

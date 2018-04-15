@@ -364,7 +364,7 @@ The resulting executables are bulked out by including the interpreter
 with each one. This is not a suitable technique for including a bunch of
 lightweight command-line executables to augment your shell -something
 which, otherwise, you would think Python should be *absolutely ideal*
-for. IÂ  guess in some circumstances you could work around this somewhat
+for. I guess in some circumstances you could work around this somewhat
 by using an svn-style 'one executable, many commands' interface,
 although this isn't always suitable.
 

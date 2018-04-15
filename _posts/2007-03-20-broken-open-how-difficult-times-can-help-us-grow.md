@@ -17,7 +17,7 @@ wordpress_url: http://tartley.com/?p=63
 ---
 
 [![Broken
-Open](http://tartley.com/wp-content/uploads/2007/03/broken-open.thumbnail.jpg){.alignleft}](http://tartley.com/wp-content/uploads/2007/03/broken-open.jpg "Broken Open"){.introimg}*by
+Open](/assets/2007/03/broken-open.thumbnail.jpg){.alignleft}](http://tartley.com/wp-content/uploads/2007/03/broken-open.jpg "Broken Open"){.introimg}*by
 Elizabeth Lesser*\
 2004\
 [Amazon](http://www.amazon.com/Broken-Open-Elizabeth-Lesser/dp/1844135616/)

@@ -33,7 +33,7 @@ wordpress_url: http://tartley.com/?p=53
 
 Announcing the first draft of our white paper, [The Case For Forward
 Error
-Correction](http://tartley.com/wp-content/uploads/2007/03/caseforforwarderrorcorrection-v113-16mar2007.pdf "The Case For Forward Error Correction.pdf")
+Correction](/assets/2007/03/caseforforwarderrorcorrection-v113-16mar2007.pdf "The Case For Forward Error Correction.pdf")
 (PDF), outlining many of the revolutionary technical features which we
 leverage in our current project. I'll be submitting it for presentation
 at the proceedings of the British Computing Society, and at the ACM

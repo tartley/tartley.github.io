@@ -39,7 +39,7 @@ and Rails guru, who I had the pleasure to discover is also a really nice
 and interesting guy.
 
 ![Chad Fowler speaks - people
-listen.](http://tartley.com/wp-content/uploads/2008/03/audience.jpg)
+listen.](/assets/2008/03/audience.jpg)
 
 The festival is organised by a large group, including former Resolver
 legends Jan and [Konrad](http://konryd.blogspot.com/), and covers a

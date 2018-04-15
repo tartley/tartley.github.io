@@ -172,9 +172,7 @@ which branches are represented as n-dimensional membranes, mapping the
 spatial loci of successive commits onto the projected manifold of each
 cloned repository.
 
-![Branches as
-n-branes](http://tartley.com/wp-content/uploads/2010/12/I1546manifold.png "I1546manifold"){.size-full
-.wp-image-1269 .aligncenter width="570" height="450"}
+![Branches as n-branes](/assets/2010/12/I1546manifold.png "I1546manifold")
 
 **Update:** There is, of course, a [fabulously insightful
 commentary](http://www.reddit.com/r/programming/comments/embdf/git_complicated_of_course_not_commits_map_to/)
@@ -183,7 +181,4 @@ on reddit.
 **Update:** Thanks folks. You've made my usual one or two hundred daily
 visitors look kinda paltry:
 
-[![spike in daily traffic
-graph](http://tartley.com/wp-content/uploads/2010/12/daily-traffic.png "daily-traffic"){.alignnone
-.size-full .wp-image-1287 width="435"
-height="231"}](http://tartley.com/wp-content/uploads/2010/12/daily-traffic.png)
+![spike in daily traffic graph](/assets/2010/12/daily-traffic.png "daily-traffic")

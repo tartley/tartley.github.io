@@ -65,7 +65,7 @@ free. We embrace piracy as inevitable, and use it as a promotional tool.
 This is difficult. It is counter-intuitive, grounded as we all are in
 the scarcity economy of the physical world. It requires us to change our
 attitudes and outlook and behaviour. Sometimes we fail. We are still
-figuring out the realities of our markets in a post-internet world.Â 
+figuring out the realities of our markets in a post-internet world.
 But *goddammit* we are trying and sometimes we try things and they work.
 The software business is more diverse and thriving than it ever has been
 - despite all our work being just as freely copyable (and freely copied)

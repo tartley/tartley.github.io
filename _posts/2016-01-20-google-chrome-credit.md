@@ -19,8 +19,6 @@ wordpress_url: http://tartley.com/?p=1655
 I just noticed: Open Chrome, go to <chrome://credits/>, search in page,
 'show licence', and:
 
-[![chrome-credit](http://tartley.com/wp-content/uploads/2016/01/chrome-credit.png){.alignleft
-.size-full .wp-image-1656 width="598"
-height="112"}](http://tartley.com/wp-content/uploads/2016/01/chrome-credit.png)
+[![chrome-credit](/assets/2016/01/chrome-credit.png)](/assets/2016/01/chrome-credit.png)
 
 Which is nice. Not bad for a dirty weekend hack.

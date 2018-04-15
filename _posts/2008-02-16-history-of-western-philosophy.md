@@ -55,7 +55,7 @@ wordpress_id: 194
 wordpress_url: http://tartley.com/?p=194
 ---
 
-![historyofwesternphilosophy.jpg](http://tartley.com/wp-content/uploads/2007/07/historyofwesternphilosophy.jpg){.alignleft
+![historyofwesternphilosophy.jpg](/assets/2007/07/historyofwesternphilosophy.jpg){.alignleft
 .floatleft}**(1946) by Bertrand Russel.**
 
 I've clearly been putting off this post for *months*, no doubt
@@ -84,7 +84,7 @@ brought with it an increment of my understanding as to why I feel this
 way.
 
 [![Platoâ€™s greatest finest
-hour](http://tartley.com/wp-content/uploads/2008/02/platos-greatest-hour.gif)](http://www.ashersarlin.com/archives/2005/01/oh_come_on_plat.php)
+hour](/assets/2008/02/platos-greatest-hour.gif)](http://www.ashersarlin.com/archives/2005/01/oh_come_on_plat.php)
 
 It may be all very well for me to sit here nitpicking from atop the
 cumulative results of thousands of years of hindsight, but my shrill,

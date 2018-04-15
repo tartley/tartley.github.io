@@ -206,8 +206,8 @@ create the first vertex at (0, 0), and then lay all the following
 vertices in a ring around it.
 
 ![Seven
-vertices](http://tartley.com/wp-content/uploads/2008/02/points5.png)![Five
-triangles](http://tartley.com/wp-content/uploads/2008/02/fan5.png)
+vertices](/assets/2008/02/points5.png)![Five
+triangles](/assets/2008/02/fan5.png)
 
 I've shown vertex 6 lying adjacent to vertex 1, just to make them both
 visible, but in actuality they are coincident. Rendering these N
@@ -276,7 +276,7 @@ With other minor tweaks to give a new background color, running this
 with 3 shards per Entity produces quite a pleasing effect:
 
 ![3 shards per
-entity](http://tartley.com/wp-content/uploads/2008/02/screenshot-3.png)
+entity](/assets/2008/02/screenshot-3.png)
 
 At 30fps, we can still manage 85 entities, and we're now rendering a fan
 of three shards for each one, so we've tripled our throughput to **225
@@ -286,7 +286,7 @@ fans to maintain 30fps:
 
   ---------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   per fan:   7 shards                                                                                                                                                               20 shards                                                                                                                                                                  400 shards                                                                                                                                                                     1,200 shards                                                                                                                                                                       12,000 shards
-             [![7 shards](http://tartley.com/wp-content/uploads/2008/02/7shards85ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/7shards85ents.png "7 shards")   [![20 shards](http://tartley.com/wp-content/uploads/2008/02/20shards85ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/20shards85ents.png "20 shards")   [![400 shards](http://tartley.com/wp-content/uploads/2008/02/400shards68ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/400shards68ents.png "400 shards")   [![1200 shards](http://tartley.com/wp-content/uploads/2008/02/1200shards48ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/1200shards48ents.png "1200 shards")   [![12000 shards](http://tartley.com/wp-content/uploads/2008/02/12000shards10ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/12000shards10ents.png "12000 shards")
+             [![7 shards](/assets/2008/02/7shards85ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/7shards85ents.png "7 shards")   [![20 shards](http://tartley.com/wp-content/uploads/2008/02/20shards85ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/20shards85ents.png "20 shards")   [![400 shards](http://tartley.com/wp-content/uploads/2008/02/400shards68ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/400shards68ents.png "400 shards")   [![1200 shards](http://tartley.com/wp-content/uploads/2008/02/1200shards48ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/1200shards48ents.png "1200 shards")   [![12000 shards](http://tartley.com/wp-content/uploads/2008/02/12000shards10ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/12000shards10ents.png "12000 shards")
   ---------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Above about 200 shards per fan, the shards start getting so thin that
@@ -340,6 +340,6 @@ with 100 triangles, at 30fps. See comments below.
 ### Download the source
 
 [![Python
-file](http://tartley.com/wp-content/uploads/2008/02/doc-python.png)gameloop2.py.zip](http://tartley.com/wp-content/uploads/2008/02/gameloop2py.zip "gameloop2.py.zip")
+file](/assets/2008/02/doc-python.png)gameloop2.py.zip](http://tartley.com/wp-content/uploads/2008/02/gameloop2py.zip "gameloop2.py.zip")
 
 

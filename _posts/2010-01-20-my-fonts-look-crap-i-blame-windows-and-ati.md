@@ -40,15 +40,7 @@ do you do?
 Here's the poster-boy for programmer-friendly fonts, your friend and
 mine, everyone loves him, **Inconsolata**:
 
-(**Update:** Wordpress evidently has some javascript or CSS trickery
-that squashes these images horizonally if your browser is narrow, to
-make them fit in the window. Since I'm banging on about microscopic
-differences between microscopic fonts, you'll need to click each images
-to view them at precisely 100%)
-
-[![inconsolata-11](http://tartley.com/wp-content/uploads/2010/01/inconsolata-11.png "inconsolata-11"){.size-full
-.wp-image-960 .alignnone width="616"
-height="335"}](http://tartley.com/wp-content/uploads/2010/01/inconsolata-11.png)
+[![inconsolata-11](/assets/2010/01/inconsolata-11.png "inconsolata-11")](/assets/2010/01/inconsolata-11.png)
 
 I don't know about you, but to me that looks unutterably crap. Wonky and
 irregular. On the right of the orange line is what it looks like with
@@ -57,9 +49,7 @@ unless I figure out how, Inconsolata can fuck right off.
 
 So then I fire up the trusty fallback, **Consolas**:
 
-[![consolas-10](http://tartley.com/wp-content/uploads/2010/01/consolas-10.png "consolas-10"){.alignnone
-.size-full .wp-image-961 width="616"
-height="335"}](http://tartley.com/wp-content/uploads/2010/01/consolas-10.png)
+[![consolas-10](/assets/2010/01/consolas-10.png "consolas-10")](/assets/2010/01/consolas-10.png)
 
 This is better, certainly, but the letters look cramped. For the number
 of visible lines in a window that size, the letters are awful small.
@@ -69,9 +59,7 @@ case distinctly worse.
 So I continue peering at a succession of monospaced idiocy, eventually
 ending up on **DejaVu Sans Mono**:
 
-[![deja-vu-sans-mono-9](http://tartley.com/wp-content/uploads/2010/01/deja-vu-sans-mono-9.png "deja-vu-sans-mono-9"){.alignnone
-.size-full .wp-image-962 width="616"
-height="331"}](http://tartley.com/wp-content/uploads/2010/01/deja-vu-sans-mono-9.png)
+[![deja-vu-sans-mono-9](/assets/2010/01/deja-vu-sans-mono-9.png "deja-vu-sans-mono-9")](/assets/2010/01/deja-vu-sans-mono-9.png)
 
 This still isn't perfect, but it's the best I can find. Note that it
 bears out my impression of Consolas being cramped - even though the
@@ -89,10 +77,7 @@ especially to be viewed at small sizes? Oooh, now that's actually not a
 bad idea: How about those Android fonts everyone's banging on about?
 **Droid Sans Mono:**
 
-**[![droid-sans-mono-10](http://tartley.com/wp-content/uploads/2010/01/droid-sans-mono-101.png "droid-sans-mono-10"){.alignnone
-.size-full .wp-image-964 width="616"
-height="331"}](http://tartley.com/wp-content/uploads/2010/01/droid-sans-mono-101.png)\
-**
+[![droid-sans-mono-10](/assets/2010/01/droid-sans-mono-101.png "droid-sans-mono-10")](/assets/2010/01/droid-sans-mono-101.png)
 
 This isn't bad, but does contain all the old 'zero vs upper-case O' and
 'one versus lower-case L' ambiguities. I think I'll stick with DejaVu
@@ -105,20 +90,14 @@ bitmap fonts (unless you want to do without extended characters) so they
 won't scale. Nevertheless, here's how some representative fonts from
 there look. First up, **Proggy Clean slashed zero:**
 
-[![proggy-clean-sz
-font](http://tartley.com/wp-content/uploads/2010/01/proggy-clean-sz.png "proggy-clean-sz"){.alignnone
-.size-full .wp-image-994 width="616"
-height="325"}](http://tartley.com/wp-content/uploads/2010/01/proggy-clean-sz.png)
+[![proggy-clean-sz font](/assets/2010/01/proggy-clean-sz.png "proggy-clean-sz")](/assets/2010/01/proggy-clean-sz.png)
 
 I love the crisp clarity of a pixel-perfect bitmap font with no scaling
 or anti-aliasing. On the downside, I have a feeling that the characters'
 shapes aren't quite as well-formed and beautiful as *DejaVu*. Not sure
 whether or not this would bug me. Next up, **Proggy Opti:**
 
-[![proggy-opti
-font](http://tartley.com/wp-content/uploads/2010/01/proggy-opti.png "proggy-opti"){.alignnone
-.size-full .wp-image-995 width="616"
-height="331"}](http://tartley.com/wp-content/uploads/2010/01/proggy-opti.png)
+[![proggy-opti font](/assets/2010/01/proggy-opti.png "proggy-opti")](/assets/2010/01/proggy-opti.png)
 
 Color me impressed. *Opti* still has the wonderful pixel-perfect clarity
 of *Proggy Clean*, and manages to fit four extra lines of text into the
@@ -129,4 +108,7 @@ try, the letters start to become a little distorted and indistinct. I
 might well give Opti a spin for a few days, see how it wears on me.
 Thanks for the suggestion Gerry!
 
-![](file:///C:/DOCUME%7E1/jhartley/LOCALS%7E1/Temp/moz-screenshot.png)
+**Update:** Nowadays I use [Dina](https://github.com/ProgrammingFonts/ProgrammingFonts/tree/master/Dina),
+a monospaced bitmap font created by some obsessive with a penchant for
+microscopic fonts. It's absolutely perfect.
+

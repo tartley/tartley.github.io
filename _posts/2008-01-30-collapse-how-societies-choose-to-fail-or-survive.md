@@ -29,7 +29,7 @@ wordpress_id: 237
 wordpress_url: http://tartley.com/?p=237
 ---
 
-![collapse.jpg](http://tartley.com/wp-content/uploads/2008/01/collapse.jpg "collapse.jpg"){.alignleft
+![collapse.jpg](/assets/2008/01/collapse.jpg "collapse.jpg"){.alignleft
 .floatleft}
 
 *by Jared Diamond*

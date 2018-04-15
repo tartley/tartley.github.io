@@ -78,16 +78,9 @@ Once installed, you could fiddle around with the settings endlessly, or
 just copy my console.xml config to your home directory, after which
 running Console should look something like the following:
 
-\[caption id="" align="alignnone" width="46"
-caption="console.xml"\][![console.xml (config for
-Console)](http://tartley.com/wp-includes/images/crystal/text.png "text.png"){width="46"
-height="60"}](http://tartley.com/wp-content/uploads/2009/10/console.xml)\[/caption\]
+[![console.xml (config for Console)](/assets/images/crystal/text.png)](/assets/2009/10/console.xml)
 
-\[caption id="attachment\_868" align="alignnone" width="588"
-caption="Console: It doesn't look like much"\]![Console: It doesn't look
-like
-much](http://tartley.com/wp-content/uploads/2009/10/mswindows-command-prompt.png "mswindows-command-prompt"){.size-full
-.wp-image-868 width="588" height="279"}\[/caption\]
+![Console: It doesn't look like much](/assets/2009/10/mswindows-command-prompt.png "mswindows-command-prompt")
 
 Console provides a few superficial benefits that prove to be
 indispensable in everyday use:

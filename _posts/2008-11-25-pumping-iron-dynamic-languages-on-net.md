@@ -238,7 +238,7 @@ evaluation of new source code, by which I mean '*eval*'. All the Lisp
 guys yawning at the back, because they've been doing this for *fifty
 years* now. And anyone who knows a Lisp-like language swears blind that
 this is one of the most powerful of programming techniques. But
-mainstream languages today just don't do it -Â  and it's mainly just for
+mainstream languages today just don't do it - and it's mainly just for
 the sorts of reasons we outlined earlier.
 
 So, we've deferred all these things until runtime. And it leads to this

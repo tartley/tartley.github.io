@@ -16,8 +16,8 @@ wordpress_id: 132
 wordpress_url: http://tartley.com/?p=132
 ---
 
-![regentsparkopenairtheatre.jpg](http://tartley.com/wp-content/uploads/2007/06/regentsparkopenairtheatre.jpg)\
-![kitson.jpg](http://tartley.com/wp-content/uploads/2007/06/kitson.jpg){.alignleft
+![regentsparkopenairtheatre.jpg](/assets/2007/06/regentsparkopenairtheatre.jpg)\
+![kitson.jpg](/assets/2007/06/kitson.jpg){.alignleft
 .floatleft}\
 Daniel's usual brand of heartfelt, bittersweet, dorky, whimsically
 playful stand-up, in the delightful environs of Regent's Park Open Air

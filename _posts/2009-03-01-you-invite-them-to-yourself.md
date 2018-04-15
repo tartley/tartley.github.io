@@ -18,7 +18,7 @@ wordpress_url: http://tartley.com/?p=685
 
 \[caption id="attachment\_686" align="alignnone" width="501"
 caption="Cover Art"\][![Cover
-Art](http://tartley.com/wp-content/uploads/2009/03/cover.jpg "Cover - You Invite Them To Yourself"){.size-full
+Art](/assets/2009/03/cover.jpg "Cover - You Invite Them To Yourself"){.size-full
 .wp-image-686 width="501"
 height="499"}](http://www.facebook.com/photo.php?pid=2212211&id=589628893)\[/caption\]
 

@@ -33,7 +33,7 @@ wordpress_url: http://tartley.com/?p=227
 ---
 
 ![Naked
-Wii](http://tartley.com/wp-content/uploads/2008/01/wii.jpg){.alignleft
+Wii](/assets/2008/01/wii.jpg){.alignleft
 .floatleft}Over Christmas a friend was looking for somewhere with Wii's
 in stock. I saw a local *Game* outlet had some, but I discovered they
 only had them bundled with three or more (rubbish) games, for an extra

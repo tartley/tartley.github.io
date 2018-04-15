@@ -57,12 +57,7 @@ mine gitka, for 'all branches':
     # run gitk, displaying all existing branches
     for b in "`git branch`"; do echo "$b"; done | tr -d "*" | xargs gitk
 
-\[caption id="attachment\_1291" align="alignnone" width="394"
-caption="Gitk displaying all branches, not just the current ('master' in
-bold)"\]![Gitk displaying all branches, not just the current ('master'
-in
-bold)](http://tartley.com/wp-content/uploads/2010/12/gitk-all-branches.png "gitk-all-branches"){.size-full
-.wp-image-1291 width="394" height="276"}\[/caption\]
+![Gitk displaying all branches, not just the current ('master' in bold)](/assets/2010/12/gitk-all-branches.png "gitk-all-branches")
 
 This works on Windows too, if you save it as 'gitka.sh', and have Cygwin
 installed and associate the .sh filename extension with the Cygwin Bash

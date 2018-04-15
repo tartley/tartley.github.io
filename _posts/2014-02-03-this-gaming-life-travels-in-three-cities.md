@@ -16,10 +16,7 @@ wordpress_id: 1563
 wordpress_url: http://tartley.com/?p=1563
 ---
 
-![gaminglife](http://tartley.com/wp-content/uploads/2014/02/gaminglife.jpg){.size-full
-.wp-image-1564 .alignleft width="322" height="503"}
-
- 
+![gaminglife](/assets/2014/02/gaminglife.jpg)
 
 *by Jim Rossignol* (2009)
 

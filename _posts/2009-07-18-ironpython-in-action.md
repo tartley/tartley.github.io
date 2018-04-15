@@ -58,7 +58,7 @@ great. (Except for Christian's chapters... Joke!)
 Having spent some years working with .NET, and with a series of
 intriguing personal experiments in Python under my belt, I originally
 approached IronPython some years ago with a modicum of trepidation. I
-feared thatÂ  the weld between the two would be intrusively visible,
+feared that the weld between the two would be intrusively visible,
 forming distracting differences from regular Python. I feared for the
 execution environment, the data types, and perhaps even the syntax
 itself.
@@ -72,7 +72,7 @@ the world, including the substantial and highly capable .NET standard
 libraries themselves.
 
 IronPython is, to some extent, a niche implementation of a niche
-language.Â  However, its position seems to potentially be one of
+language. However, its position seems to potentially be one of
 importance and strength. Not only does it allow Python programmers to
 use .NET libraries - and does so admirably, but it also allows the
 existing legions of .NET programmers to be introduced to the joys of
@@ -83,7 +83,7 @@ magnitude more popular than Python, this could turn out to be an
 important source of future Python adoption.
 
 This book is aimed to satisfy programmers coming from both the Python
-and the .NET worlds, and in this it seems to succeed.Â  It starts with
+and the .NET worlds, and in this it seems to succeed. It starts with
 quick overviews of concepts from each: 30 pages about Python as a
 language, and 17 pages about .NET as an environment (data types, events,
 delegates, Windows Forms, etc) - just enough to get everyone up to speed
@@ -99,7 +99,7 @@ throughout. Straight after the opening sections, we dive right in with
 another rapid-fire chapter, demonstrating common IronPython techniques
 by writing a non-trivial application. Woven around this ongoing example,
 the chapter discusses many immediately important topics, including duck
-typing,Â  Python protocols, MVC, using Windows Forms to build a GUI, tab
+typing, Python protocols, MVC, using Windows Forms to build a GUI, tab
 pages, dialogs, menus, toolbars, images, saving text files, .NET
 Streams, text file encodings, Python exceptions and lambda functions.
 These diverse topics are covered rapidly but thoroughly, giving the
@@ -114,7 +114,7 @@ some idea of the topics which are explored in depth:
     use of functions as first-class objects, and higher-order functions
     (functions that take other functions as arguments and return
     modified versions.) and of course decorators. These are shown in
-    use, appropriately paired up with the .NETÂ  XmlWriter and XmlReader
+    use, appropriately paired up with the .NET XmlWriter and XmlReader
     classes, demonstrating event driven parsing of XML.
 -   *Properties, dialogs and Visual Studio* - Python properties, .NET
     dialogs, and using IronPython in Visual Studio. This sounds like a

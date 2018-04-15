@@ -64,4 +64,5 @@ down and weep and go and live on an island somewhere.
 
 And then - my ray of hope - every so often you find things like this...
 
-![Paranoia](http://tartley.com/wp-content/uploads/2008/02/paranoia.jpg)
+![Paranoia](/assets/2008/02/paranoia.jpg)
+

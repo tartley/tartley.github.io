@@ -48,13 +48,13 @@ software engineers and scholars of every discipline.
 I am referring, firstly, to the shameful take-down requests issued to
 Ke-Sen Huang, and subsequent conditions imposed over his meticulously
 assembled pages of links to SIGGRAPH and other academic computer
-graphics papers.\
+graphics papers.
 <http://kesen.huang.googlepages.com>
 
 The second act is the recent official comment from the ACM on the White
 House's public feedback to expanding open access to scientific papers.
 This comment is to the effect that the ACM resists the move towards
-making scientific papers available to all.\
+making scientific papers available to all.
 <http://blog.ostp.gov/2009/12/10/policy-forum-on-public-access-to-federally-funded-research-implementation/comment-page-3/#comments>
 
 Both these actions bore the signature of the ACM's Bernard Rous, who has
@@ -68,7 +68,7 @@ Mr Rous perhaps needs reminding that the ACM's has \*no such\*
 legitimate interest here. The Association's entire existence is soley
 contingent upon the benefit that it provides to its members. These
 actions seem to me to be in flagrant violation of the ACM's own Code of
-Ethics (http://www.acm.org/about/code-of-ethics) and worse, it seems to
+Ethics (<http://www.acm.org/about/code-of-ethics>) and worse, it seems to
 be contrary to the ACM's entire charter and purpose.
 
 I have no doubt the ACM performs many valuable services which incur
@@ -88,7 +88,7 @@ changed from the illustrious body it once was, into a force for ill,
 pissing in the well of knowledge, to be actively opposed by
 professional, moral software engineers everywhere.
 
-The background to this issue is most clearly expressed here:\
+The background to this issue is most clearly expressed here:
 <http://www.realtimerendering.com/blog/us-gov-requests-feedback-on-open-access-acm-gets-it-wrong-again/>
 
 I would urge others to boycott any further membership payments to the
@@ -96,5 +96,5 @@ ACM until this is satisfactorily resolved.
 
 Sincerely,
 
-Jonathan Hartley\
+Jonathan Hartley<br />
 Software Engineer

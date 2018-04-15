@@ -35,7 +35,7 @@ store samples of your pet's DNA, so that in the event of their death,
 you can replace them with a newer, younger clone.
 
 [![Preserving your
-pets](http://tartley.com/wp-content/uploads/2008/02/preserving-your-pets.jpg)](http://www.viagen.com/en/our-services/preserving-your-pets/ "Preserving your pets")
+pets](/assets/2008/02/preserving-your-pets.jpg)](http://www.viagen.com/en/our-services/preserving-your-pets/ "Preserving your pets")
 
 Apart from the fact it's a gimmick ripoff (\$1,500 to store my pets DNA?
 That's quite a freezer they must have there, and the hypothetical

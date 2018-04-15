@@ -17,7 +17,7 @@ wordpress_url: http://tartley.com/?p=190
 ---
 
 ![â€œItâ€™s gonna be
-OK.â€](http://tartley.com/wp-content/uploads/2007/07/starbuck.jpg){.alignleft
+OK.â€](/assets/2007/07/starbuck.jpg){.alignleft
 .floatleft}That's the new "reimagined" version, Dad. I don't really *do*
 television, and for 2006, downloads of Battlestar was pretty much the
 only exception. It's edgy and well-written, and it leaves me

@@ -16,7 +16,7 @@ wordpress_id: 310
 wordpress_url: http://tartley.com/?p=310
 ---
 
-![caption](http://tartley.com/wp-content/uploads/2008/05/phantom-hourglass.jpg "Legend of Zelda : The Phantom Hourglass"){.alignleft
+![caption](/assets/2008/05/phantom-hourglass.jpg "Legend of Zelda : The Phantom Hourglass"){.alignleft
 .size-full .wp-image-341 width="322" height="482"}
 
 **Nintendo, 2008**
@@ -50,7 +50,7 @@ entirely absent.
 Such niggles are few and far between, though. Time for another go of the
 newfangled rating system.
 
-Rating:Â  Place yourself somewhere between...
+Rating: Place yourself somewhere between...
 
 10/10 if you're into a deftly executed handheld riff on the Zelda
 series, beautifully integrated with the affordances and sensibilities of

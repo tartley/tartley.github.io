@@ -16,9 +16,9 @@ wordpress_id: 370
 wordpress_url: http://tartley.com/?p=370
 ---
 
-[![](http://tartley.com/wp-content/uploads/2008/08/hackers__painters2.jpg "hackers and painters"){.alignleft
+[![](/assets/2008/08/hackers__painters2.jpg "hackers and painters"){.alignleft
 .size-full .wp-image-371 width="307"
-height="475"}](http://tartley.com/wp-content/uploads/2008/08/hackers__painters2.jpg)**by
+height="475"}](/assets/2008/08/hackers__painters2.jpg)**by
 Paul Graham**, 2004.**\
 **
 

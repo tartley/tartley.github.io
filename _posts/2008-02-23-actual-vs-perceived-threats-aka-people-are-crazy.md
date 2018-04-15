@@ -60,7 +60,7 @@ wordpress_url: http://tartley.com/?p=284
 ---
 
 ![Actual vs Perceived
-threats](http://tartley.com/wp-content/uploads/2008/02/0aelecrtromshjoi9.jpg){.floatleft}[](http://www.susannahertrich.com/html/humansanimals.html)
+threats](/assets/2008/02/0aelecrtromshjoi9.jpg){.floatleft}[](http://www.susannahertrich.com/html/humansanimals.html)
 
 [Susanna
 Hertrich](http://www.susannahertrich.com/html/humansanimals.html) has an

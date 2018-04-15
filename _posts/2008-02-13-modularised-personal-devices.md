@@ -61,7 +61,7 @@ wordpress_url: http://tartley.com/?p=261
 ---
 
 ![One man
-band](http://tartley.com/wp-content/uploads/2008/02/onemanband.jpg){.alignleft
+band](/assets/2008/02/onemanband.jpg){.alignleft
 .floatleft}So [LC](http://lindsaycampbell.tumblr.com/post/26210504),
 [Nixta](http://nixtarolls.nixta.com/post/26188403) and
 [Aaron](http://www.aaronsdayoff.com/2008/02/modular-phone-answer-to-all-of-our.html)

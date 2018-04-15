@@ -36,7 +36,7 @@ wordpress_url: http://tartley.com/?p=258
 ---
 
 [![Someone Comes to Town, Someone Leaves
-Town](http://tartley.com/wp-content/uploads/2008/02/someone-comes-to-town.jpg){.alignleft}](http://www.amazon.co.uk/Someone-Comes-Town-Leaves/dp/0765312808 "Someone Comes to Town, Someone Leaves Town"){.floatleft}**by
+Town](/assets/2008/02/someone-comes-to-town.jpg){.alignleft}](http://www.amazon.co.uk/Someone-Comes-Town-Leaves/dp/0765312808 "Someone Comes to Town, Someone Leaves Town"){.floatleft}**by
 Cory Doctorow**
 
 I just don't know about this one. I really wanted to like it. It starts

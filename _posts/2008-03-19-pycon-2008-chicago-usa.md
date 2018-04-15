@@ -58,7 +58,7 @@ wordpress_url: http://tartley.com/?p=312
 ---
 
 ![PyCon USA
-2008](http://tartley.com/wp-content/uploads/2008/03/pyconusa2008.jpg){.floatleft}
+2008](/assets/2008/03/pyconusa2008.jpg){.floatleft}
 
 PyCon 2008 has been absolutely amazing this week. The talks I've seen
 and the people I've met have been a real inspiration, and my head is
@@ -77,14 +77,14 @@ grab them here in a couple of formats:
 
 -   The slides as Open Office (tuned for Linux fonts, but more-or-less
     fine on Windows):\
-    [TddBrooksSilverBullet.zip](http://tartley.com/wp-content/uploads/2008/03/tddbrookssilverbullet.zip "TddBrooksSilverBullet.zip (103kb)")
+    [TddBrooksSilverBullet.zip](/assets/2008/03/tddbrookssilverbullet.zip "TddBrooksSilverBullet.zip (103kb)")
     (103kb)
 -   The slides as PDF (fonts 100% good for everyone, but I think the
     various animations are gone:)\
-    [TddBrooksSilverBullet.pdf](http://tartley.com/wp-content/uploads/2008/03/tddbrookssilverbullet.pdf "TddBrooksSilverBullet.pdf (162kb)")
+    [TddBrooksSilverBullet.pdf](/assets/2008/03/tddbrookssilverbullet.pdf "TddBrooksSilverBullet.pdf (162kb)")
     (162kb)
 -   The accompanying source code:\
-    [TddBrooksSilverBullet-src.zip](http://tartley.com/wp-content/uploads/2008/03/tddbrookssilverbullet-src.zip "TddBrooksSilverBullet-src.zip (536kb)")
+    [TddBrooksSilverBullet-src.zip](/assets/2008/03/tddbrookssilverbullet-src.zip "TddBrooksSilverBullet-src.zip (536kb)")
     (536kb)
 
 If anyone has any outstanding thoughts or questions about the talk, I

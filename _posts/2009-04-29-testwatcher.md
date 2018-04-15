@@ -58,16 +58,16 @@ F.F
 FAIL: testThat (__main__.TestWatcherTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-Â  File "example_test.py", line 12, in testThat
-Â Â Â  self.assertEquals(0, randint(0, 10))
+  File "example_test.py", line 12, in testThat
+    self.assertEquals(0, randint(0, 10))
 AssertionError: 0 != 4
 
 ======================================================================
 FAIL: testThis (__main__.TestWatcherTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-Â  File "example_test.py", line 9, in testThis
-Â Â Â  self.assertEquals('one', object())
+  File "example_test.py", line 9, in testThis
+    self.assertEquals('one', object())
 AssertionError: 'one' != d24460>
 
 ----------------------------------------------------------------------

@@ -42,40 +42,33 @@ with a checkbox checked by default
 To create the checkbox and control whether it is set you must use the
 following properties in your **Product** section:
 
-\[xml\]
+``` xml
+Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT"
+Value="Launch the cool program"
+Id="WIXUI_EXITDIALOGOPTIONALCHECKBOX"
+Value="1"
+```
 
-Id="WIXUI\_EXITDIALOGOPTIONALCHECKBOXTEXT"\
-Value="Launch the cool program" /&gt;\
-Id="WIXUI\_EXITDIALOGOPTIONALCHECKBOX"\
-Value="1" /&gt;
-
-\[/xml\]
-
-The value of **WIXUI\_EXITDIALOGOPTIONALCHECKBOX** controls the
+The value of `WIXUI_EXITDIALOGOPTIONALCHECKBOX` controls the
 checkboxes checkedness.
 
 You then need a custom action to do some launching:
 
-\[xml\]
-
-\
-Id="LaunchApplication"\
-BinaryKey="WixCA"\
-DllEntry="WixShellExec"\
-Impersonate="yes" /&gt;
-
-\[/xml\]
+``` xml
+Id="LaunchApplication"
+BinaryKey="WixCA"
+DllEntry="WixShellExec"
+Impersonate="yes"
+```
 
 and some UI wiring in the **UI** element under the **Product** element
 to get you custom action called.
 
-\[xml\]
-
-Control="Finish"\
-Event="DoAction"\
+``` xml
+Control="Finish"
+Event="DoAction"
 Value="LaunchApplication"&gt;WIXUI\_EXITDIALOGOPTIONALCHECKBOX = 1 and
 NOT Installed
-
-\[/xml\]
+```
 
 Huzzah - you now may have a working installer.

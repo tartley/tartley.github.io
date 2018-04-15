@@ -56,12 +56,10 @@ like [pyglet](http://pyglet.org/) and [Cocos](http://cocos2d.org/), by
 someone who really knows what he's doing. Also, it's nice to have
 something visible to show after a morning's work:
 
-\[caption id="attachment\_1138" align="alignnone" width="744"
-caption="My asteroids"\]![My asteroids. Michael your idea of making
-engine thrust always visible was exactly what I needed to help me
-capture the
-screenshot.](http://tartley.com/wp-content/uploads/2010/07/intro-to-game-programming.jpg "intro-to-game-programming"){.size-full
-.wp-image-1138 width="744" height="489"}\[/caption\]
+![My asteroids.](/assets/2010/07/intro-to-game-programming.jpg)
+
+(Michael your idea of making engine thrust always visible was exactly what I
+needed to help me capture the screenshot.)
 
 The code is based very heavily on samples that Richard provided and
 talked us through in great detail, so although I now understand it

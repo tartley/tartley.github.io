@@ -17,9 +17,9 @@ wordpress_url: http://tartley.com/?p=324
 ---
 
 [![Just
-Married!](http://tartley.com/wp-content/uploads/2008/05/wed-225x300.jpg "Just Married!"){.alignleft
+Married!](/assets/2008/05/wed-225x300.jpg "Just Married!"){.alignleft
 .size-medium .wp-image-327 width="225"
-height="300"}](http://tartley.com/wp-content/uploads/2008/05/wed.jpg)At
+height="300"}](/assets/2008/05/wed.jpg)At
 the end of March, Susan and I exchanged rings, vows, signatures and
 thumbprints on a beach near to Tulum, Mexico, with eighty-five of our
 families and friends, plus 'TriPawd', the beach's resident three-legged

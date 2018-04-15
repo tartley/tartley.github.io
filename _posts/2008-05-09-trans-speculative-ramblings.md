@@ -20,7 +20,7 @@ If you're not a wild-eyed loon, you're unlikely to appreciate this post.
 Bear with me a moment, while I establish some context.
 
 ![Cory
-Doctorow](http://tartley.com/wp-content/uploads/2007/07/cory-doctorow.thumbnail.jpg){.alignleft}So
+Doctorow](/assets/2007/07/cory-doctorow.thumbnail.jpg){.alignleft}So
 [here's the esteemed Cory Doctorow](http://www.craphound.com/). His
 recent[\*](#note1) post at Locus, [The Progressive Apocalypse and Other
 Futurismic
@@ -61,7 +61,7 @@ foresight to have had their state vector preserved, at any rate.
 Still with me? Singularity = Judgement Day. Got it? Ok.
 
 [![George
-Dvorsky](http://tartley.com/wp-content/uploads/2007/07/georgedvorsky.jpg)](http://sentientdevelopments.blogspot.com){.alignleft}Then,
+Dvorsky](/assets/2007/07/georgedvorsky.jpg)](http://sentientdevelopments.blogspot.com){.alignleft}Then,
 over here, we have [George
 Dvorsky](http://sentientdevelopments.blogspot.com), who
 recently[\*](#note1) referenced an old post of his, [Our non-arbitrary

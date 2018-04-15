@@ -134,8 +134,7 @@ Step two, install from the 'packages' dir:
 
 *(The above syntax works on pip 1.3, released yesterday. Docs for older
 versions of pip claim to support this, but in practice, for pip 1.2,
-I've had to use
-"`--find-links=file://$PWD/packages`{style="font-style: inherit;"}")*
+I've had to use "`--find-links=file://$PWD/packages`")*
 
 Step 2 works even if PyPI is unreachable. It works even if some of your
 dependencies are self-hosted by the authors, and that website is

@@ -16,7 +16,7 @@ wordpress_id: 5
 wordpress_url: http://tartley.com/?p=5
 ---
 
-![Cover](http://tartley.com/wp-content/uploads/2007/02/short-history-of-nearly-everything.jpg){.alignleft}*by
+![Cover](/assets/2007/02/short-history-of-nearly-everything.jpg){.alignleft}*by
 Bill Bryson.*\
 2003.\
 [Amazon](http://www.amazon.co.uk/Short-History-Nearly-Everything/dp/0552997048)

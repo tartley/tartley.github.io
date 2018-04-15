@@ -17,7 +17,7 @@ wordpress_url: http://tartley.com/?p=188
 ---
 
 ![The Straight
-Story](http://tartley.com/wp-content/uploads/2007/07/thestraightstory.jpg){.alignleft
+Story](/assets/2007/07/thestraightstory.jpg){.alignleft
 .floatright}*by David Lynch* (1999)\
 [on amazon.co.uk](http://imdb.com/title/tt0166896/)
 

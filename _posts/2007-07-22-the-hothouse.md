@@ -17,7 +17,7 @@ wordpress_url: http://tartley.com/?p=193
 ---
 
 ![The
-Hothouse](http://tartley.com/wp-content/uploads/2007/07/hothouse.jpg){.alignleft
+Hothouse](/assets/2007/07/hothouse.jpg){.alignleft
 .floatright} *by Harold Pinter* (1958)\
 directed by Ian Rickson,\
 at the National Theatre's Lyttelton theatre.

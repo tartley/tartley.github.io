@@ -11,8 +11,8 @@ comments:
     \ trumps usability yet again.", date: '2007-02-28 13:44:10 -0600', date_gmt: '2007-02-28
     13:44:10 -0600', id: 16}
 - {author: Tartley, author_email: tartley@tartley.com, author_url: 'http://tartley.com',
-  content: '<a class="introimg" href=''http://tartley.com/wp-content/uploads/2007/03/banana.jpg''
-    title=''Doing the penguin'' rel="nofollow"><img src=''http://tartley.com/wp-content/uploads/2007/03/banana.thumbnail.jpg''
+  content: '<a class="introimg" href=''/assets/2007/03/banana.jpg''
+    title=''Doing the penguin'' rel="nofollow"><img src=''/assets/2007/03/banana.thumbnail.jpg''
     alt=''Doing the penguin'' /></a>Since I had no idea what "the penguin" was, Xtian
     kindly offered to demonstrate, as illustrated here. I consider myself trumped
     by aesthetic.', date: '2007-03-19 23:32:31 -0500', date_gmt: '2007-03-19 23:32:31

@@ -20,7 +20,7 @@ wordpress_url: http://tartley.com/?p=180
 ---
 
 ![Slaughterhouse 5,
-cover](http://tartley.com/wp-content/uploads/2007/07/slaughterhouse5.jpg){.alignleft
+cover](/assets/2007/07/slaughterhouse5.jpg){.alignleft
 .floatleft}\
 *by Kurt Vonnegut* (1969)\
 [on

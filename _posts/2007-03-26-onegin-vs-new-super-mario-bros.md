@@ -20,21 +20,21 @@ wordpress_id: 69
 wordpress_url: http://tartley.com/?p=69
 ---
 
-[[![Onegin](http://tartley.com/wp-content/uploads/2007/03/onegin.thumbnail.jpg)](http://tartley.com/wp-content/uploads/2007/03/onegin.jpg "Onegin")\
+[[![Onegin](/assets/2007/03/onegin.thumbnail.jpg)](http://tartley.com/wp-content/uploads/2007/03/onegin.jpg "Onegin")\
 **Onegin**\
 *Company:* [The Royal Ballet](http://info.royaloperahouse.org/Home/)\
 *Music:* Pyotr Il'yich Tchaikovsky\
 *Choreography & libretto:* John Cranko]{style="float:left;"}
 
 [[![New Super Mario
-Bros.](http://tartley.com/wp-content/uploads/2007/03/new-super-mario-bros.thumbnail.jpg)](http://tartley.com/wp-content/uploads/2007/03/new-super-mario-bros.jpg "New Super Mario Bros.")\
+Bros.](/assets/2007/03/new-super-mario-bros.thumbnail.jpg)](http://tartley.com/wp-content/uploads/2007/03/new-super-mario-bros.jpg "New Super Mario Bros.")\
 **New Super Mario Brothers**\
 *Format:*Nintendo DS\
 *Developer:*Nintendo\
 *Released:* 2006]{style="float:right; text-align:right;"}
 
 [\
-![vs1.jpg](http://tartley.com/wp-content/uploads/2007/03/vs1.jpg)\
+![vs1.jpg](/assets/2007/03/vs1.jpg)\
 ]{style="margin-top:2em;"}
 
 **Introduction**
@@ -47,7 +47,7 @@ post.\
 
 **History**
 
-[![nes\_super\_mario\_bros.png](http://tartley.com/wp-content/uploads/2007/03/nes_super_mario_bros.png)\
+[![nes\_super\_mario\_bros.png](/assets/2007/03/nes_super_mario_bros.png)\
 Pushkin's original novel, seen here\
 in the English
 translation.]{style="float:left; margin-right:1em; margin-bottom:1em; font-size:0.9em; line-height:1.4em;"}
@@ -63,7 +63,7 @@ this that is now playing at the Royal Opera House in London's Covent
 Garden.
 
 [![Super Mario Bros. on the
-NES](http://tartley.com/wp-content/uploads/2007/03/eugeneonegin-book.jpg)\
+NES](/assets/2007/03/eugeneonegin-book.jpg)\
 Super Mario Bros. on the
 NES]{style="float:right; margin-left:1em; margin-bottom:1em; font-size:0.9em; line-height:1.4em;"}
 
@@ -86,7 +86,7 @@ certainly the most influential, videogame series of all time.
 **Form**
 
 [![Flawlessly timed triple jumps result in extra
-height](http://tartley.com/wp-content/uploads/2007/03/jump.jpg)\
+height](/assets/2007/03/jump.jpg)\
 Flawlessly timed triple jumps\
 result in extra
 height]{style="float:left; margin-right:1em; margin-bottom:1em; font-size:0.9em; line-height:1.4em;"}
@@ -114,7 +114,7 @@ Both works have in common the attempt to convey a narrative without the
 aid of verbiage, with significant difficulties encountered in each case.
 
 [![Dumb, as in
-mime.](http://tartley.com/wp-content/uploads/2007/03/_1703471_onegin_150a.jpg)\
+mime.](/assets/2007/03/_1703471_onegin_150a.jpg)\
 Dumb, as in
 mime.]{style="float:left; margin-right:1em; margin-bottom:1em; font-size:0.9em; line-height:1.4em;"}
 
@@ -133,7 +133,7 @@ considered to be in need of supplementing with a written synopsis in the
 program.
 
 [![Disrupting the narrative
-direction.](http://tartley.com/wp-content/uploads/2007/03/newsupermario.jpg)\
+direction.](/assets/2007/03/newsupermario.jpg)\
 Disrupting the narrative
 direction.]{style="float:right; margin-left:1em; margin-bottom:1em; font-size:0.9em; line-height:1.4em;"}
 

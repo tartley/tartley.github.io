@@ -18,7 +18,7 @@ wordpress_url: http://www.tartley.com/?p=214
 
 \[caption id="attachment\_641" align="alignleft" width="300"
 caption="Fight or flight?"\]![Fight or
-flight?](http://tartley.com/wp-content/uploads/2009/01/sotc4-300x225.jpg "Shadow of the Colossus"){.size-medium
+flight?](/assets/2009/01/sotc4-300x225.jpg "Shadow of the Colossus"){.size-medium
 .wp-image-641 width="300" height="225"}\[/caption\]
 
 **PS2, Team ICO, 2005.**

@@ -36,7 +36,7 @@ stubs.](http://www.martinfowler.com/articles/mocksArentStubs.html)
 <div style="float:left; width:325px; font-size:0.75em;">
 
 ![Mock classes used in unit tests as
-stubs.](http://tartley.com/wp-content/uploads/2007/04/mocks-arent-stubs.png)Class
+stubs.](/assets/2007/04/mocks-arent-stubs.png)Class
 under test, shown on the left in use by release software, and on the
 right in a test environment, using stubbed out mock helper classes.
 

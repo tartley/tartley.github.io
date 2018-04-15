@@ -34,9 +34,7 @@ Since the competition, I've been polishing and refactoring for my own
 edification in odd hours here and there, and I'm pleased to declare that
 process finished. Behold, Sinister Ducks 1.0.2:
 
-![Sinister Ducks
-1.0.2](http://brokenspell.googlecode.com/svn/trunk/docs/screenshots/screenshot-final-1.0.2.jpg "Sinister Ducks 1.0.2"){.alignnone
-width="1030" height="793"}
+![Sinister Ducks 1.0.2](https://raw.githubusercontent.com/tartley/sinister-ducks/master/docs/screenshots/screenshot-final-1.0.2.jpg "Sinister Ducks 1.0.2")
 
 Things I added since the competition include:
 

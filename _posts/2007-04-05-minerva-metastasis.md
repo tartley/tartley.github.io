@@ -20,9 +20,9 @@ wordpress_url: http://tartley.com/?p=81
 ---
 
 [![Title
-screen](http://tartley.com/wp-content/uploads/2007/04/metastasis_1_background0000.jpg){.alignnone
+screen](/assets/2007/04/metastasis_1_background0000.jpg){.alignnone
 width="655"
-height="439"}](http://tartley.com/wp-content/uploads/2007/04/metastasis_1_background0000.jpg "Title screen")**by
+height="439"}](/assets/2007/04/metastasis_1_background0000.jpg "Title screen")**by
 Adam Foster**\
 PC, Mod of Half-Life 2\
 2006
@@ -37,9 +37,9 @@ invasion of Earth. It has been three years in the making, and it's
 *bloody brilliant*.
 
 [![Beach
-head](http://tartley.com/wp-content/uploads/2007/04/metastasis_10004.jpg){.alignnone
+head](/assets/2007/04/metastasis_10004.jpg){.alignnone
 width="612"
-height="477"}](http://tartley.com/wp-content/uploads/2007/04/metastasis_10004.jpg "Beach head")
+height="477"}](/assets/2007/04/metastasis_10004.jpg "Beach head")
 
 The baseline HL2 gameplay is not changed one iota. Metastasis eschews
 the normal stock-in-trade of the mod scene, introducing no new enemies,
@@ -54,9 +54,9 @@ misinform and manipulate, drawing upon the best of various [alternate
 reality game](http://en.wikipedia.org/wiki/Alternate_reality_game)
 influences.
 
-[![Shoreline](http://tartley.com/wp-content/uploads/2007/04/metastasis_10012.jpg){.alignnone
+[![Shoreline](/assets/2007/04/metastasis_10012.jpg){.alignnone
 width="618"
-height="481"}](http://tartley.com/wp-content/uploads/2007/04/metastasis_10012.jpg "Shoreline")
+height="481"}](/assets/2007/04/metastasis_10012.jpg "Shoreline")
 
 The game opens with your character dumped unceremoniously out of a
 helicopter by forces unknown, onto a beach under hostile fire. Running
@@ -73,9 +73,9 @@ might investigate a small island, and its role in the Combine's
 occupation.
 
 [![Down the rabbit
-hole](http://tartley.com/wp-content/uploads/2007/04/metastasis_20021.jpg){.alignnone
+hole](/assets/2007/04/metastasis_20021.jpg){.alignnone
 width="606"
-height="469"}](http://tartley.com/wp-content/uploads/2007/04/metastasis_20021.jpg "Down the rabbit hole")
+height="469"}](/assets/2007/04/metastasis_20021.jpg "Down the rabbit hole")
 
 The island plays host to the usual menagerie of HL2 critters, and
 visible at its centre is a mysterious plasma discharge, which Minerva

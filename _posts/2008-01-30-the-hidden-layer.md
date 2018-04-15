@@ -22,7 +22,7 @@ wordpress_url: http://tartley.com/?p=241
 ---
 
 ![The Hidden
-Layer](http://tartley.com/wp-content/uploads/2008/01/the-hidden-layerjpy.jpg){.alignleft
+Layer](/assets/2008/01/the-hidden-layerjpy.jpg){.alignleft
 .floatleft}
 
 *by Chris Nordberg*

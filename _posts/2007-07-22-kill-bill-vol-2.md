@@ -17,7 +17,7 @@ wordpress_url: http://tartley.com/?p=184
 ---
 
 ![Kill Bill Vol
-2](http://tartley.com/wp-content/uploads/2007/07/killbill.jpg){.alignleft
+2](/assets/2007/07/killbill.jpg){.alignleft
 .floatright}*by Quentin Tarantino* (2004)\
 [on imdb](http://imdb.com/title/tt0378194/)
 

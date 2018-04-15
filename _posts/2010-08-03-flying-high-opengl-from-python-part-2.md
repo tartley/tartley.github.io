@@ -39,14 +39,13 @@ wordpress_url: http://tartley.com/?p=1207
 *This is second in a series of articles about algorithmically generating
 geometry to drive OpenGL from Python.*
 
-*[&lt;&lt; Back to part 1](http://tartley.com/?p=1142)\
-*
+[*&lt;&lt; Back to part 1*](http://tartley.com/?p=1142)
 
 *Last time we got as far as creating some instances of our super-simple
 Shape class, and having Glyph and Render classes convert those to arrays
 for OpenGL and render them. This time, we start using that
-infrastructure to create some more interesting geometries, which means*
-*there's less code, and more pretty pictures.*
+infrastructure to create some more interesting geometries, which means
+there's less code, and more pretty pictures.*
 
 ------------------------------------------------------------------------
 
@@ -56,7 +55,7 @@ infrastructure to create some more interesting geometries, which means*
 In order to create more complex shapes by composing instances of
 existing ones, we need a simple composite shape:
 
-``` {lang="python"}
+``` python
 class MultiShape(object):
 
     def __init__(self):
@@ -90,7 +89,7 @@ face\_colors. Here is how MultiShape provides a sequence of vertices, by
 chaining the vertices of all its children, each vertex transformed by
 the matrix of the relevant child shape:
 
-``` {lang="python"}
+``` python
 @property
 def vertices(self):
     return (
@@ -130,12 +129,7 @@ def CubeCorners(edge, color1, color2):
     return multi
 ```
 
-\[caption id="attachment\_1212" align="alignnone" width="840" caption="A
-cluster of cubes, rendered in one glDrawElements call"\][![A cluster of
-cubes, rendered in one glDrawElements
-call](http://tartley.com/wp-content/uploads/2010/07/screen-cube-cluster2.png "A cluster of cubes, rendered in one glDrawElements call"){.size-full
-.wp-image-1212 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/07/screen-cube-cluster2.png)\[/caption\]
+![A cluster of cubes, rendered in one glDrawElements call](/assets/2010/07/screen-cube-cluster2.png "A cluster of cubes, rendered in one glDrawElements call")
 
 Another new factory function, *RingOf:*
 
@@ -153,25 +147,21 @@ def RingOf(child, radius, number):
     return multi
 ```
 
-returns copies of a given child shape, arranged in a ring:
+returns copies of a given child shape, arranged in a ring, such as this
+ring of cubes:
 
-\[caption id="attachment\_1211" align="alignnone" width="840" caption="A
-ring of cubes"\][![A ring of
-cubes](http://tartley.com/wp-content/uploads/2010/07/screen-ring1.png "A ring of cubes"){.size-full
-.wp-image-1211 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/07/screen-ring1.png)\[/caption\]
+![A ring of cubes](/assets/2010/07/screen-ring1.png)
 
-\[caption id="attachment\_1213" align="alignnone" width="840" caption="A
-ring of truncated cubes"\][![A ring of truncated
-cubes](http://tartley.com/wp-content/uploads/2010/07/screen-ring2.png "A ring of truncated cubes"){.size-full
-.wp-image-1213 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/07/screen-ring2.png)\[/caption\]
+A ring of truncated cubes:
 
-\[caption id="attachment\_1215" align="alignnone" width="840" caption="A
-ring of interpenetrated tetrahedrons"\][![A ring of interpenetrated
-tetrahedrons](http://tartley.com/wp-content/uploads/2010/07/screen-ring3.png "A ring of interpenetrated tetrahedrons. This is just starting to look a bit like a thorny geometric mushie trip, which in this context I'm counting as a success."){.size-full
-.wp-image-1215 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/07/screen-ring3.png)\[/caption\]
+![A ring of truncated cubes](/assets/2010/07/screen-ring2.png)
+
+A ring of interpenetrated tetrahedrons:
+
+![A ring of interpenetrated tetrahedrons](/assets/2010/07/screen-ring3.png)
+
+This is just starting to look a bit like a thorny geometric mushie trip, which
+in this context I'm counting as a success.
 
 If we can compose basic shapes into rings, we can also compose rings
 into... um... *tri-axis-rings*:
@@ -186,33 +176,23 @@ def TriRing(edge, radius, number, colors):
     return multi
 ```
 
-\[caption id="attachment\_1216" align="alignnone" width="840"
-caption="Tri-axis rings"\][![Tri-axis
-rings](http://tartley.com/wp-content/uploads/2010/07/screen-tri-ring.png "Tri-axis rings. If you look carefully, you can make out some depth-buffer fighting where the three rings intersect, but I'm moving to fast to worry about that now."){.size-full
-.wp-image-1216 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/07/screen-tri-ring.png)\[/caption\]
+If you look carefully, you can make out some depth-buffer fighting where the
+three rings intersect, but I'm moving too fast to worry about that now.
+
+![Tri-axis rings](/assets/2010/07/screen-tri-ring.png)
 
 Because we're drawing each MultiShape using a single iteration of the
 Render.draw() loop, we've massively reduced the overhead in drawing each
 Shape, so we can easily add all of these at once into the world at
 60fps, although it does form a bit of a visual cacophony:
 
-\[caption id="attachment\_1217" align="alignnone" width="840"
-caption="All the rings, plus some other stuff"\][![All the rings, plus
-some other
-stuff](http://tartley.com/wp-content/uploads/2010/07/screen-all-rings-etc.png "All the rings, plus some other stuff"){.size-full
-.wp-image-1217 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/07/screen-all-rings-etc.png)\[/caption\]
+![All the rings, plus some other stuff](/assets/2010/07/screen-all-rings-etc.png)
 
 I wonder how much stuff we can add into a MultiShape before it starts to
 affect the framerate? Let's investigate... How about a spherical glob of
 red blood cubes:
 
-\[caption id="attachment\_1238" align="alignnone" width="840" caption="A
-glob of red blood cubes"\][![A glob of red blood
-cubes](http://tartley.com/wp-content/uploads/2010/08/screen-glob-red-cubes2.png "A glob of red blood cubes"){.size-full
-.wp-image-1238 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/08/screen-glob-red-cubes2.png)\[/caption\]
+![A glob of red blood cubes](/assets/2010/08/screen-glob-red-cubes2.png)
 
 It turns out I can get about 14,000 cubes (168,000 triangles)
 [\[1\]](#update) into a single MultiShape like this before the framerate
@@ -243,33 +223,23 @@ def RgbCubeCluster(edge, cluster_edge, cube_count):
 This creates a cluster of cubes, each one colored by its position in RGB
 space.
 
-\[caption id="attachment\_1218" align="alignnone" width="840"
-caption="An RGB cube cluster"\][![An RGB cube
-cluster](http://tartley.com/wp-content/uploads/2010/07/screen-rgb-cluster.png "An RGB cube cluster"){.size-full
-.wp-image-1218 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/07/screen-rgb-cluster.png)\[/caption\]
+![An RGB cube cluster](/assets/2010/07/screen-rgb-cluster.png)
 
 We still have enough *oomph* left over to dive the camera right into the
 midst of the RgbCubeCluster and reveal that all the previous stuff is
 still in the world too:
 
-\[caption id="attachment\_1221" align="alignnone" width="840"
-caption="Whirling machinery at the center of an RgbCluster"\][![Whirling
-machinery at the center of an
-RgbCluster](http://tartley.com/wp-content/uploads/2010/08/screen-rgbcluster-and-everything.png "Whirling machinery at the center of an RgbCluster"){.size-full
-.wp-image-1221 width="840"
-height="672"}](http://tartley.com/wp-content/uploads/2010/08/screen-rgbcluster-and-everything.png)\[/caption\]
+![Whirling machinery at the center of an RgbCluster](/assets/2010/08/screen-rgbcluster-and-everything.png)
 
 **Recursively Generated Geometry**
 ----------------------------------
 
 Can we make any more interesting recursively-defined geometry? The first
-thing I thought ofÂ  (no doubt this has been done many times before) was
-the 3D equivalent of a [Koch
-curve](http://en.wikipedia.org/wiki/Koch_curve): Take a tetrahedron, and
-for each face, embed a new, smaller tetrahedron sticking out of it.
-Recursively repeat this for each of the new smaller triangles that have
-been formed.
+thing I thought of (no doubt this has been done many times before) was
+the 3D equivalent of a [Koch curve](http://en.wikipedia.org/wiki/Koch_curve):
+Take a tetrahedron, and for each face, embed a new, smaller tetrahedron
+sticking out of it. Recursively repeat this for each of the new smaller
+triangles that have been formed.
 
 The first time I coded this, successive iterations literally replaced
 every new surface triangle that was formed by the process, with an
@@ -280,9 +250,7 @@ a period of contemplation, I realised this was the correct geometric
 result. The reason for it can be seen in this Wikimedia diagram of the
 first three iterations of forming a Koch surface:
 
-[![](http://tartley.com/wp-content/uploads/2010/08/Koch_surface_0_through_3.png "Koch_surface_0_through_3"){.alignnone
-.size-full .wp-image-1224 width="600"
-height="219"}](http://tartley.com/wp-content/uploads/2010/08/Koch_surface_0_through_3.png)
+![](/assets/2010/08/Koch_surface_0_through_3.png)
 
 The first iteration replaces every triangle by sticking a new
 tetrahedron out of it - exactly as I had done for every face of my
@@ -299,20 +267,12 @@ newly-formed smaller tetrahedrons, rather than replacing every
 triangular surface, and the result is this more pleasing snowflake
 shape.
 
-\[caption id="attachment\_1223" align="alignnone" width="840" caption="A
-Koch tetrahedron"\][![A Koch
-tetrahedron](http://tartley.com/wp-content/uploads/2010/08/screen-koch-tetra.png "A Koch tetrahedron"){.size-full
-.wp-image-1223 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/08/screen-koch-tetra.png)\[/caption\]
+![A Koch tetrahedron](/assets/2010/08/screen-koch-tetra.png)
 
 This algorithm is about 60 lines of code. A similar operation can be
 done on a cube, by poking a new, smaller cube out of each of its faces:
 
-\[caption id="attachment\_1225" align="alignnone" width="840" caption="A
-Koch cube"\][![A Koch
-cube](http://tartley.com/wp-content/uploads/2010/08/screen-koch-cube.png "A Koch cube"){.size-full
-.wp-image-1225 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/08/screen-koch-cube.png)\[/caption\]
+![A Koch cube](/assets/2010/08/screen-koch-cube.png)
 
 The deeper red parts are the original cube and the early generations of
 children. The lighter yellow parts are the later generations.
@@ -324,12 +284,7 @@ do it justice, but the full stately geometry becomes wonderfully
 apparent when it's in motion. The *tetrix*, aka the [Sierpinski
 tetrahedron](http://en.wikipedia.org/wiki/Sierpinski_triangle):
 
-\[caption id="attachment\_1226" align="alignnone" width="840"
-caption="The tetrix, aka Sierpinski Tetrahedron"\][![The tetrix, aka
-Siepinski
-Tetrahedron](http://tartley.com/wp-content/uploads/2010/08/screen-sierpinski.png "The tetrix, aka Siepinski Tetrahedron"){.size-full
-.wp-image-1226 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/08/screen-sierpinski.png)\[/caption\]
+![The tetrix, aka Siepinski Tetrahedron](/assets/2010/08/screen-sierpinski.png)
 
 **Odds and Ends**
 -----------------
@@ -351,7 +306,7 @@ little which wasn't strictly necessary.
 
 I was initially a little disappointed by the performance at rendering
 many independently positioned and oriented objects, but now it's picked
-up (see footnote [\[1\]](#update)), it's perfectly acceptable: a little
+up (see footnote [1]) and is now perfectly acceptable: a little
 over 450 separately moving cubes at 60fps. The OpenGL bindings in
 PyOpenGL wisely choose to prefer correctness and robustness over
 performance by default, so as a result, calling OpenGL from Python is
@@ -369,7 +324,7 @@ of the code in that loop, by actually compiling it to C, but in doing
 so, it would eliminate the Python / C boundary performance penalties,
 and this is something I'm excited to try out in the near future.
 
-[\[1\]]{#update} **Update:** A couple of hours after hitting publish on
+[1] **Update:** A couple of hours after hitting publish on
 this, I discover that switching from the PyOpenGL bindings to those
 built into pyglet gives me two to four times the frame rate, for zero
 code change except the imports. Clearly I don't understand how to get
@@ -377,5 +332,6 @@ the best performance out of PyOpenGL. I've been back and updated the
 performance stats in this post, and hope to make another post about this
 at some point when I understand what I was doing wrong.
 
-*The demonstrated* *code* *is available via Mercurial, from
-<http://code.google.com/p/flyinghigh-opengl-from-python>*
+*The demonstrated* *code* *is available at
+<https://github.com/tartley/gloopy>*
+

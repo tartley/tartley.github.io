@@ -19,7 +19,7 @@ wordpress_url: http://tartley.com/?p=136
 <div class="floatleft">
 
 [![12 Books That Changed The
-World](http://tartley.com/wp-content/uploads/2007/06/12books-that-changed-the-world.jpg){.alignleft}](http://www.amazon.co.uk/12-Books-That-Changed-World/dp/0340839821 "12 Books That Changed The World")
+World](/assets/2007/06/12books-that-changed-the-world.jpg){.alignleft}](http://www.amazon.co.uk/12-Books-That-Changed-World/dp/0340839821 "12 Books That Changed The World")
 
 </div>
 

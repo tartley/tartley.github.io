@@ -16,7 +16,7 @@ wordpress_id: 342
 wordpress_url: http://tartley.com/?p=342
 ---
 
-[![](http://tartley.com/wp-content/uploads/2008/05/portable-jung.jpg "The Portable Jung"){.alignleft
+[![](/assets/2008/05/portable-jung.jpg "The Portable Jung"){.alignleft
 .size-full .wp-image-343 width="156"
 height="240"}](http://www.amazon.co.uk/Portable-Jung-Viking-Library/dp/0140150706)**Carl
 G. Jung (Author),\

@@ -17,7 +17,7 @@ wordpress_url: http://tartley.com/?p=68
 ---
 
 [![Rogue economist
-indeed.](http://tartley.com/wp-content/uploads/2007/03/freakonomics.thumbnail.jpg){.alignleft}](http://tartley.com/wp-content/uploads/2007/03/freakonomics.jpg "Rogue economist indeed."){.introimg}*by
+indeed.](/assets/2007/03/freakonomics.thumbnail.jpg){.alignleft}](http://tartley.com/wp-content/uploads/2007/03/freakonomics.jpg "Rogue economist indeed."){.introimg}*by
 Steven D. Levitt and Stephen J. Dubner*\
 2005\
 [Amazon](http://www.amazon.co.uk/Freakonomics-Economist-Explores-Hidden-Everything/dp/0141019018/)

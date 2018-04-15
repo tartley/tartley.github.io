@@ -38,8 +38,9 @@ wordpress_url: http://tartley.com/?p=1317
 The usual solution to typing non-US characters on a US keyboard in
 Windows is to hold left-alt, then type on the numeric keypad:
 
-£ Left-alt + 0163\
-€ Left-alt + 0128
+£   Left-alt + 0163
+
+€   Left-alt + 0128
 
 This is a pain on my (otherwise fabulous) Thinkpad laptop, because the
 numeric keypad is accessed by holding the blue 'Fn' key while you tap
@@ -54,8 +55,9 @@ Kingdom)" for me.) OK all the dialogs, restart your applications.
 
 Now you can simply type:
 
-£  Right-alt + Shift + 4\
-€  Right-alt + 5
+£   Right-alt + Shift + 4
+
+€   Right-alt + 5
 
 The downside of this solution is that the "UnitedStates-International"
 keyboard setting adds a bunch of other features, including 'dead-keys',
@@ -70,7 +72,7 @@ My end result is an MSI with which I can install a new keyboard layout,
 which is exactly like 'US', but with the addition of £ on the key
 right-alt + 3:
 
-[windows-US-keyboard-layout-with-pound-on-right-alt-3](http://tartley.com/wp-content/uploads/2011/07/windows-US-keyboard-layout-with-pound-on-right-alt-3.zip)
+[windows-US-keyboard-layout-with-pound-on-right-alt-3](/assets/2011/07/windows-US-keyboard-layout-with-pound-on-right-alt-3.zip)
 
 The source .klc file is in there, so you could add your own tweaks on
 top of that.

@@ -90,10 +90,7 @@ On top of this, I've been refining the layout of the museum building,
 starting with the two-storey entrance hall, complete with a balcony
 running round it:
 
-[![sketch of museum's two-storey main entrance
-hall](http://tartley.com/wp-content/uploads/2010/02/w02-sketch-entrance.jpg "w02-sketch-entrance"){.alignnone
-.size-full .wp-image-1003 width="623"
-height="416"}](http://tartley.com/wp-content/uploads/2010/02/w02-sketch-entrance.jpg)
+![sketch of museum's two-storey main entrance hall](/assets/2010/02/w02-sketch-entrance.jpg)
 
 Plus, I've been planning the possible routes a thief might take to get
 from one room to another. Generally, the conventional paths - in through
@@ -101,17 +98,14 @@ the main entrance and up the stairs and down the corridor - will be
 blocked by guards. So the player has to clamber up the outside of the
 building, explore the roof, dangle from a rope, pick a lock, find a key
 in the janitor's quarters, which opens all the windows, and ledges
-outside a couple of windows lead somewhere interesting, etc.Â  I don't
+outside a couple of windows lead somewhere interesting, etc. I don't
 want it to turn into a key fetch quest, but at the same time, I don't
 want the player to be able to simply waltz all through the whole
 building. I've tried to engineer a single interesting primary route
 through the building, with the possibility of a few minor variations so
 players feel like they can exercise some freedom and decision making.
 
-[![sketch of ground
-floor](http://tartley.com/wp-content/uploads/2010/02/w02-sketch-ground-floor.jpg "w02-sketch-ground-floor"){.alignnone
-.size-full .wp-image-1005 width="669"
-height="444"}](http://tartley.com/wp-content/uploads/2010/02/w02-sketch-ground-floor.jpg)
+![sketch of ground floor](/assets/2010/02/w02-sketch-ground-floor.jpg)
 
 Having done all that, I'm now quite happy that my plans are sufficient
 to produce a small but adequate level. I'll aim to get that complete,
@@ -123,18 +117,12 @@ differentiate the floors and ceilings from the walls. Here you can see
 the view from the main entrance, looking into the two-storey entrance
 hall, with the balcony around it visible up on the next level:
 
-[![main entraince with
-floorboards](http://tartley.com/wp-content/uploads/2010/02/w02-main-entrance.jpg "w02-main-entrance"){.alignnone
-.size-full .wp-image-1006 width="640"
-height="480"}](http://tartley.com/wp-content/uploads/2010/02/w02-main-entrance.jpg)
+![main entraince with floorboards](/assets/2010/02/w02-main-entrance.jpg)
 
 And the view while approaching the top of the stairs, looking down over
 the balcony. There will be a railing when it's done:
 
-[![Approaching the top of the
-stairs](http://tartley.com/wp-content/uploads/2010/02/w02-top-of-stairs-balcony.jpg "w02-top-of-stairs-balcony"){.alignnone
-.size-full .wp-image-1007 width="640"
-height="480"}](http://tartley.com/wp-content/uploads/2010/02/w02-top-of-stairs-balcony.jpg)
+![Approaching the top of the stairs](/assets/2010/02/w02-top-of-stairs-balcony.jpg)
 
 Thanks heaps to Qolelis for a comment with a tip about textures on
 stairways, to rotate the texture 90 degrees on each stair's vertical

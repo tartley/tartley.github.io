@@ -198,7 +198,7 @@ offenders for their first 'two strikes') are intended to stop almost
 everyone from illegally downloading, without any need for actual
 disconnections to take place.
 
-Obviously I regard that as a grave misjudgement.Â  But I had a lot of
+Obviously I regard that as a grave misjudgement. But I had a lot of
 ground to cover, so I left this issue at that. I still feel that even if
 disconnection were only applied to a small number of people (which seems
 unlikely, from my perspective), it is still true that this would affect
@@ -214,7 +214,7 @@ legally murky, but it is clearly morally justifiable. To any external
 observer, this looks indistinguishable from illegal download. An
 observer cannot tell whether a particular download is illegal or not
 just by looking at the bits going down the wire - it requires more
-context than that.Â  It requires the observer to know which CDs I have
+context than that. It requires the observer to know which CDs I have
 bought, and to what use I intend to put the proceeds (is it subject to
 fair use exemptions, etc?) Therefore, along with many illegal
 downloaders, the system proposed in the bill will also catch many

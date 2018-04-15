@@ -24,8 +24,7 @@ wordpress_id: 1557
 wordpress_url: http://tartley.com/?p=1557
 ---
 
-![object-oriented-sofware-engineering](http://tartley.com/wp-content/uploads/2014/02/object-oriented-sofware-engineering.jpg){.size-full
-.wp-image-1558 .alignleft width="260" height="374"}
+![object-oriented-sofware-engineering](/assets/2014/02/object-oriented-sofware-engineering.jpg)
 
 *by Ivar Jacobsen* (1992, 4th revision)
 

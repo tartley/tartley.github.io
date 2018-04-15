@@ -26,7 +26,7 @@ wordpress_url: http://tartley.com/?p=222
 ---
 
 ![Free
-Culture](http://tartley.com/wp-content/uploads/2008/02/free-culture.jpg){.alignleft
+Culture](/assets/2008/02/free-culture.jpg){.alignleft
 .floatleft}**by Lawrence Lessig, 2004.**
 
 Accessible, entertaining, rich with historical perspective, and cuts

@@ -36,7 +36,7 @@ wordpress_url: http://tartley.com/?p=349
 ---
 
 [![screenshot Sole Scion
-v1.0](http://tartley.com/wp-content/uploads/2008/06/screenshot-sole-scion-v10.png "screenshot-sole-scion-v10"){.alignleft
+v1.0](/assets/2008/06/screenshot-sole-scion-v10.png "screenshot-sole-scion-v10"){.alignleft
 .size-full .wp-image-350 width="500"
 height="388"}](http://code.google.com/p/sole-scion)
 

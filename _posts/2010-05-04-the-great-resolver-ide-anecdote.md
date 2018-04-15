@@ -108,9 +108,7 @@ learning anything other than how to drive an IDE, and the restrictions
 become blinkers, crippling their scope and abilities. The IDE is a
 cage... for your *mind*.
 
-[![](http://tartley.com/wp-content/uploads/2010/05/matrix_morpheus_red_blue_pill.jpg "matrix_morpheus_red_blue_pill"){.alignnone
-.size-full .wp-image-1076 width="399"
-height="209"}](http://tartley.com/wp-content/uploads/2010/05/matrix_morpheus_red_blue_pill.jpg)
+![](/assets/2010/05/matrix_morpheus_red_blue_pill.jpg)
 
 The outliers are worth noting: We still use Visual Studio on rare
 occasions, for the lovely built-in GUI designer. The irrepressible

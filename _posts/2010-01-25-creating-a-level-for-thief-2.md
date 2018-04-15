@@ -108,9 +108,7 @@ slightly improved engine and editor.) I chose this for three reasons:
 Having finished the tutorials, this weekend I broke ground on creating
 my own level, or 'fan-mission' (FM), in the parlance:
 
-[![Designing a Thief2 Level in
-DromEd](../wp-content/uploads/2010/01/dromed-sm.png "dromed-sm"){width="643"
-height="502"}](../wp-content/uploads/2010/01/dromed-sm.png)
+![Designing a Thief2 Level in DromEd](/assets/2010/01/dromed-sm.png)
 
 I'm using the DromEd Toolkit, which is DromEd with some third-party
 patches and bugfixes applied to it. My first impressions with DromEd are
@@ -137,20 +135,15 @@ basic geometry to form a stocky museum building. Here you can just about
 make out a hole in the brick facade that will form the front entrance.
 This is not the entrance that the player will likely be using:
 
-[![](http://tartley.com/wp-content/uploads/2010/01/front-entrance.jpg "front-entrance"){.alignnone
-.size-full .wp-image-991 width="640"
-height="480"}](http://tartley.com/wp-content/uploads/2010/01/front-entrance.jpg)
+![](/assets/2010/01/front-entrance.jpg)
 
 This is all very crude thus far - with repeating textures on large
 surfaces, and plain uniform lighting. There are a complete set of mostly
 rectangular ground-floor rooms, with interconnecting doorways. The
 highlight of my modelling to date is this stairway leading up to the
-(otherwise nonexistant) next floor.\
-[[****]{style="font-family: verdana,arial,helvetica,sans-serif; font-size: xx-small;"}]{style="font-family: verdana,arial,helvetica,sans-serif;"}
+(otherwise nonexistant) next floor.
 
-[![](http://tartley.com/wp-content/uploads/2010/01/stairway.jpg "stairway"){.alignnone
-.size-full .wp-image-992 width="640"
-height="480"}](http://tartley.com/wp-content/uploads/2010/01/stairway.jpg)
+![](/assets/2010/01/stairway.jpg)
 
 I'm not so happy with the wood texture I chose - I'll go back and look
 for something more uniform. But I am happy with the way the stairs flair

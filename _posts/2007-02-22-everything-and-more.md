@@ -28,9 +28,9 @@ wordpress_url: http://tartley.com/?p=12
 ---
 
 *[![Cover: Everything and
-More](http://tartley.com/wp-content/uploads/2007/02/everything-and-more.jpg){.size-full
+More](/assets/2007/02/everything-and-more.jpg){.size-full
 .wp-image-14 .alignleft width="123"
-height="200"}](http://tartley.com/wp-content/uploads/2007/02/everything-and-more.jpg)by
+height="200"}](/assets/2007/02/everything-and-more.jpg)by
 David Foster Wallace\
 *2003.\
 [Amazon](http://www.amazon.co.uk/Everything-More-Compact-History-Infinity/dp/0753818825)
@@ -55,7 +55,7 @@ SE Australia.
 
 *\[2\]* See *(a)* below.
 
-**Â§1a.** It is probably appropriate, when writing about a book such as
+**§1a.** It is probably appropriate, when writing about a book such as
 this, to describe my own mathematical background, which is that I have a
 ten-year-old B.Sc in Physics and Electronics, following which I spent a
 couple of years using stuff like Fourier and digital domain
@@ -74,7 +74,7 @@ lecture by Prof. "chaos theory" Mandelbrot across town instead.
 *\[4\]* Beyond the basics, that is. Obviously I could still limp through
 some fundamentals.
 
-**Â§2a.** So, the first thing to relate is that Mr. Wallace's
+**§2a.** So, the first thing to relate is that Mr. Wallace's
 descriptions of the nature of, and relationships between, all the
 *transfinites*\*\* brought me genuinely thrilling moments of
 heart-racing excitement and revelatory wonder - not once, but several
@@ -107,7 +107,7 @@ from which they arguably never really recovered.
 \*\*\* viz. the *rationals*.
 
 > **The negatives**\
-> **Â§2b.** However, there is one other factor about the book which
+> **§2b.** However, there is one other factor about the book which
 > *(B)* I should probably mention, and that is that I have never, in all
 > my life, read a document of any description which was as poorly
 > organised, as haphazardly ordered, and ridiculously and unnecessarily
@@ -124,7 +124,7 @@ from which they arguably never really recovered.
 
 *(B)* in the interests of fairness
 
-**Â§3.** So there you have it. YMMV. I'm am glad I read it, but god I
+**§3.** So there you have it. YMMV. I'm am glad I read it, but god I
 found it hard work - not because the math was hard to follow, just
 simply because the shambolic prose annoyed the living snot out of me. If
 you have a potential interest in the subject matter, and the style of

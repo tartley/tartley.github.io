@@ -44,20 +44,15 @@ understanding of it.
 
 To elaborate, as I understand it, the issue is caused by the bilinear
 interpolation between the RGBA of your transparent pixels, and your icon
-texture color, e.g:
+texture color. For example, for various transparencies of purple on top of 
+a blue background:
 
-<div style="background-color: #0088ff; padding: 0.5em;">
+| <span style="background-color: #0088ff; padding: 1em;">![](/assets/2010/01/opaque-purple.png "opaque-purple")</span> **icon** (1, 0, 1, 1) fully opaque purple
+| <span style="background-color: #0088ff; padding: 1em;">![](/assets/2010/01/halfwhite-purple.png "halfwhite-purple")</span> **interpolation** (1, 0.5, 1, 0.5) half-transparent whitish-purple
+| <span style="background-color: #0088ff; padding: 1em;">![](/assets/2010/01/transparent-white.png "transparent-white")</span> **background** (1, 1, 1, 0) fully transparent white
 
-![](http://tartley.com/wp-content/uploads/2010/01/opaque-purple.png "opaque-purple"){.alignnone
-.size-full .wp-image-947 width="16" height="16"} **icon** (1, 0, 1, 1) -
-fully opaque purple\
-![](http://tartley.com/wp-content/uploads/2010/01/halfwhite-purple.png "halfwhite-purple"){.alignnone
-.size-full .wp-image-948 width="16" height="16"} **interpolation** (1,
-0.5, 1, 0.5) - half-transparent whitish-purple\
-![](../wp-content/uploads/2010/01/transparent-white.png "transparent-white"){width="16"
-height="16"} **background** (1,Â  1, 1, 0) - fully transparent white
-
-</div>
+(_Update: I think some CSS nuance has been lost in a website migration. On
+quick glance, this doesn't seem to look like I expect it to, any more._)
 
 The intermediate color isn't actually very close to white, but in
 contrast to the pure purple it abuts against, it's significantly paler,
@@ -73,19 +68,9 @@ common - change your transparent pixels to be the same color as whatever
 colors they abut against. The background pixels are now
 fully-transparent purple, giving us:
 
-<div style="background-color: #0088ff; padding: 0.5em;">
-
-![](http://tartley.com/wp-content/uploads/2010/01/opaque-purple.png "opaque-purple"){.alignnone
-.size-full .wp-image-947 width="16" height="16"} **icon** (1, 0, 1, 1) -
-fully opaque purple\
-![](http://tartley.com/wp-content/uploads/2010/01/halftransparent-purple.png "halftransparent-purple"){.alignnone
-.size-full .wp-image-949 width="16" height="16"} **interpolation** (1,
-0, 1, 0.5) - half-transparent purple\
-![](http://tartley.com/wp-content/uploads/2010/01/transparent-purple.png "transparent-purple"){.alignnone
-.size-full .wp-image-950 width="16" height="16"} **background** (1, 0,
-1, 1) - fully transparent purple
-
-</div>
+| <span style="background-color: #0088ff; padding: 1em;">![](/assets/2010/01/opaque-purple.png "opaque-purple")</span> **icon** (1, 0, 1, 1) fully opaque purple
+| <span style="background-color: #0088ff; padding: 1em;">![](/assets/2010/01/halftransparent-purple.png "halftransparent-purple")</span> **interpolation** (1, 0, 1, 0.5) half-transparent whitish-purple
+| <span style="background-color: #0088ff; padding: 1em;">![](/assets/2010/01/transparent-white.png "transparent-purple")</span> **background** (1, 0, 1, 0) fully transparent purple
 
 So now the interpolation ends up being half-transparent pure purple.
 This eliminates the white halo artefact, as demonstrated in the video.
@@ -96,9 +81,9 @@ demonstrated in the video helps to automate this.
 The alternative solution, is to modify the RGBA values in the texture,
 by pre-multiplying the RGB values by the A value. ie:
 
-R = R \* A\
-G = G \* A\
-B = B \* A
+    R = R * A
+    G = G * A
+    B = B * A
 
 (where all values range from 0.0 to 1.0)
 
@@ -111,11 +96,11 @@ To use these alternate RGBA values in a texture, we have to display them
 on screen using a different OpenGL blending mode. We switch from using
 the traditional:
 
-dest = src\*alpha + dest\*(1-alpha)
+    dest = src * alpha + dest * (1 - alpha)
 
 to using this instead:
 
-dest = src + dest\*(1-alpha)
+    dest = src + dest * (1 - alpha)
 
 Note how the difference between the two is that the src is no longer
 multiplied by the src alpha during blend. This is no longer required,
@@ -125,12 +110,14 @@ texture itself.
 Storing RGBA values in this format is known as *light-opacity RGBA,* and
 it gives us a new interpretation of the meaning of the RGBA values.
 Previously, the RGB told us the color of the texture's pixel, but did
-not tell us how much this color would be used to affect the destination
-- we have to look at the alpha to determine that. Now, using the new
+not tell us how much this color would be used to affect the destination.
+We have to look at the alpha to determine that.
+
+Now, using the new
 blending mode, we can interpret the RGB values to literally mean how
 much R and G and B is added to the destination. Similarly, the A value
 is now only used to diminish whatever existing color is currently at the
-destination.Â  It is not used to scale the source RGB before applying it
+destination. It is not used to scale the source RGB before applying it
 to the destination. The A value can now be interpreted to mean 'what
 proportion of the existing destination color is visible through the
 overwritten source color'.
@@ -148,24 +135,14 @@ interpolation process, resulting in the same RGBA values as would have
 been calculated before, but now we have a different interpretation of
 what those values mean:
 
-<div style="background-color: #0088ff; padding: 0.5em;">
-
-![](http://tartley.com/wp-content/uploads/2010/01/opaque-purple.png "opaque-purple"){.alignnone
-.size-full .wp-image-947 width="16" height="16"} **icon** (1, 0, 1, 1) -
-pure purple that fully overwrites the previous color\
-![](http://tartley.com/wp-content/uploads/2010/01/halftransparent-purple.png "halftransparent-purple"){.alignnone
-.size-full .wp-image-949 width="16" height="16"} **interpolation** (0.5,
-0, 0.5, 0.5) - half-bright purple mixed with 50% of the previous
-destination color\
-![](../wp-content/uploads/2010/01/transparent-white.png "transparent-white"){width="16"
-height="16"} **background** (0, 0, 0, 0) - fully transparent (no color)
-
-</div>
+| <span style="background-color: #0088ff; padding: 1em;">![](/assets/2010/01/opaque-purple.png "opaque-purple")</span> **icon** (1, 0, 1, 1) - pure purple that fully overwrites the previous color
+| <span style="background-color: #0088ff; padding: 1em;">![](/assets/2010/01/halftransparent-purple.png "halftransparent-purple")</span> **interpolation** (0.5, 0, 0.5, 0.5) - half-bright purple mixed with 50% of the prev dest color
+| <span style="background-color: #0088ff; padding: 1em;">![](/assets/2010/01/transparent-white.png "transparent-white")</span> **background** (0, 0, 0, 0) - fully transparent (no color)
 
 The interpolated color is now blended with the previous destination
 color using the new OpenGL blend mode:
 
-dest = src + dest\*(1-alpha)
+    dest = src + dest * (1 - alpha)
 
 The existing destination color is scaled by (1 - alpha), ie, is reduced
 to half intensity, and then the RGB from our interpolated texture (0.5,

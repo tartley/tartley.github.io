@@ -81,15 +81,11 @@ My mapping of ANSI conventions to the equivalent Win32 calls is far from
 perfect. Currently it has the following results. ANSI codes under Ubuntu
 on gnome-terminal:
 
-[![](http://tartley.com/wp-content/uploads/2010/04/screenshot-ubuntu-gnometerminal.png "screenshot-ubuntu-gnometerminal"){.alignnone
-.size-full .wp-image-1063 width="657"
-height="366"}](http://tartley.com/wp-content/uploads/2010/04/screenshot-ubuntu-gnometerminal.png)
+![](/assets/2010/04/screenshot-ubuntu-gnometerminal.png)
 
 and the exact same ANSI codes printed on Windows under Colorama:
 
-[![](http://tartley.com/wp-content/uploads/2010/04/screenshot-winxp-console2.png "screenshot-winxp-console2"){.alignnone
-.size-full .wp-image-1064 width="588"
-height="252"}](http://tartley.com/wp-content/uploads/2010/04/screenshot-winxp-console2.png)
+![](/assets/2010/04/screenshot-winxp-console2.png)
 
 **Update:** I previously wrote here about discrepancies between the two,
 which have since been fixed. The only outstanding issue is that colorama

@@ -23,7 +23,7 @@ wordpress_url: http://tartley.com/?p=44
 ---
 
 ![Portrait of the
-Club](http://tartley.com/wp-content/uploads/2007/03/theclub-2-3-lg.jpg)
+Club](/assets/2007/03/theclub-2-3-lg.jpg)
 
 Dinner last night spent under the [beady
 eye](http://en.wikipedia.org/wiki/Image:Whistler-painter.jpg) of painter

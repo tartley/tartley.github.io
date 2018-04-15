@@ -16,9 +16,9 @@ wordpress_id: 372
 wordpress_url: http://tartley.com/?p=372
 ---
 
-**[![](http://tartley.com/wp-content/uploads/2008/08/breakfast-of-champions.jpg "breakfast-of-champions"){.alignleft
+**[![](/assets/2008/08/breakfast-of-champions.jpg "breakfast-of-champions"){.alignleft
 .size-full .wp-image-373 width="314"
-height="475"}](http://tartley.com/wp-content/uploads/2008/08/breakfast-of-champions.jpg)by
+height="475"}](/assets/2008/08/breakfast-of-champions.jpg)by
 Kurt Vonnegut**, 1973.
 
 I've always loved Vonnegut (who doesn't?) but I'd avoided this since

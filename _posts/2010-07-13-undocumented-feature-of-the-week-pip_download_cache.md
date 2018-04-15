@@ -81,7 +81,7 @@ It has a marvellous undocumented feature. Set the environment variable
 PIP\_DOWNLOAD\_CACHE to prevent re-downloading the same packages
 repeatedly when setting up environments on the same machine:
 
-``` {style="padding-left: 30px;"}
+```
 > set | grep PIP
 PIP_DOWNLOAD_CACHE=C:\Documents and Settings\jhartley\.pip_download_cache
 

@@ -17,7 +17,7 @@ wordpress_url: http://tartley.com/?p=59
 ---
 
 ![The Flight of the
-Horse](http://tartley.com/wp-content/uploads/2007/03/the_flight_of_the_horse_f.jpeg){.alignleft}*by
+Horse](/assets/2007/03/the_flight_of_the_horse_f.jpeg){.alignleft}*by
 Larry Niven*\
 First published: 1969-1973\
 [Amazon](http://www.amazon.co.uk/Flight-Horse-Larry-Niven/dp/1857238419).

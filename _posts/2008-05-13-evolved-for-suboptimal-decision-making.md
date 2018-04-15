@@ -30,9 +30,9 @@ wordpress_id: 338
 wordpress_url: http://tartley.com/?p=338
 ---
 
-[![](http://tartley.com/wp-content/uploads/2008/05/prisoners-dilemma.jpg "prisoners dilemma"){.alignleft
+[![](/assets/2008/05/prisoners-dilemma.jpg "prisoners dilemma"){.alignleft
 .size-full .wp-image-339 width="250"
-height="159"}](http://tartley.com/wp-content/uploads/2008/05/prisoners-dilemma.jpg)I
+height="159"}](/assets/2008/05/prisoners-dilemma.jpg)I
 \*should\* be searching out and evaluating Python geometry libraries.
 But I keep getting these niggling impulses to start hammering out my own
 vector, polygon and quaternion classes. Possibly in C. Ohdear.

@@ -21,10 +21,9 @@ wordpress_id: 1492
 wordpress_url: http://tartley.com/?p=1492
 ---
 
-[![brief-interviews-with-hideous-men](http://tartley.com/wp-content/uploads/2014/01/brief-interviews-with-hideous-men.jpg){.alignleft
-.size-full .wp-image-1499 width="230"
-height="230"}](http://tartley.com/wp-content/uploads/2014/01/brief-interviews-with-hideous-men.jpg)*by
-David Foster Wallace* (1999)
+![brief-interviews-with-hideous-men](/assets/2014/01/brief-interviews-with-hideous-men.jpg)
+
+*by David Foster Wallace (1999)*
 
 A collection of creative essays, varying from playful to unflinchingly
 uncomfortable, shot through with Wallace's typical humour and

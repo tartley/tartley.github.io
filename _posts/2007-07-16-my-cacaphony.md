@@ -43,7 +43,7 @@ it!
 <div class="floatleft">
 
 [![MIDI
-icon](http://tartley.com/wp-content/uploads/2007/07/midifile.jpg)](http://tartley.com/wp-content/uploads/2007/07/07-06-28-beautiful-brown-eyes.mid "Beautiful Brown Eyes, 2007-06-28")\
+icon](/assets/2007/07/midifile.jpg)](http://tartley.com/wp-content/uploads/2007/07/07-06-28-beautiful-brown-eyes.mid "Beautiful Brown Eyes, 2007-06-28")\
 28 Jun
 
 </div>
@@ -56,7 +56,7 @@ reading the music and so the timing's a bit better.
 <div class="floatleft">
 
 [![MIDI
-icon](http://tartley.com/wp-content/uploads/2007/07/midifile.jpg)](http://tartley.com/wp-content/uploads/2007/07/07-07-16-alpine-melody.mid "Alpine Melody, 2007-07-16")\
+icon](/assets/2007/07/midifile.jpg)](http://tartley.com/wp-content/uploads/2007/07/07-07-16-alpine-melody.mid "Alpine Melody, 2007-07-16")\
 16 Jul
 
 </div>
@@ -73,7 +73,7 @@ will get better with practice.
 <div class="floatleft">
 
 [![MIDI
-icon](http://tartley.com/wp-content/uploads/2007/07/midifile.jpg)](http://tartley.com/wp-content/uploads/2007/07/07-07-16-tetris-terrible-struggle.mid "Tetris, 2007-07-16")\
+icon](/assets/2007/07/midifile.jpg)](http://tartley.com/wp-content/uploads/2007/07/07-07-16-tetris-terrible-struggle.mid "Tetris, 2007-07-16")\
 16 Jul
 
 </div>
@@ -81,7 +81,7 @@ icon](http://tartley.com/wp-content/uploads/2007/07/midifile.jpg)](http://tartle
 <div class="floatleft">
 
 [![MIDI
-icon](http://tartley.com/wp-content/uploads/2007/07/midifile.jpg)](http://tartley.com/wp-content/uploads/2007/07/tetris-07-07-21-better.mid "Tetris, 2007-07-21")\
+icon](/assets/2007/07/midifile.jpg)](http://tartley.com/wp-content/uploads/2007/07/tetris-07-07-21-better.mid "Tetris, 2007-07-21")\
 21 Jul
 
 </div>

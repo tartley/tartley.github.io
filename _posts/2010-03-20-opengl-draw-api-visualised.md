@@ -59,12 +59,7 @@ To help me grok and remember the OpenGL 3.3 draw API, I drew them in a
 diagram. I hope this will help me see at a glance what I can and can't
 achieve with each function call.
 
-\[caption id="attachment\_1052" align="alignnone" width="691"
-caption="OpenGL 3.3 array draw calls"\][![OpenGL array draw calls:
-glArrayElement; glDrawArrays; glMultiDrawArrays; glDrawElements;
-glMultiDrawElements](http://tartley.com/wp-content/uploads/2010/03/opengl-draw-calls.png "opengl-draw-calls"){.size-full
-.wp-image-1052 width="691"
-height="972"}](http://tartley.com/wp-content/uploads/2010/03/opengl-draw-calls.png)\[/caption\]
+![OpenGL array draw calls](/assets/2010/03/opengl-draw-calls.png)
 
 I haven't annotated any of the parameter types. These days I tend to be
 calling these functions from Python, so generally only care about the

@@ -17,7 +17,7 @@ wordpress_url: http://tartley.com/?p=256
 ---
 
 [![I am
-Legend](http://tartley.com/wp-content/uploads/2008/02/i-am-legend.jpg){.alignleft
+Legend](/assets/2008/02/i-am-legend.jpg){.alignleft
 .floatleft}](http://www.imdb.com/title/tt0480249/ "I am Legend")**Directed
 by Francis Lawrence.**
 

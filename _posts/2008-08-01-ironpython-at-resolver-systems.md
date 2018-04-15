@@ -24,9 +24,9 @@ wordpress_url: http://tartley.com/?p=360
 ---
 
 [![Resolver Systems
-logo](http://tartley.com/wp-content/uploads/2008/08/resolversystems-logo-web.png "resolversystems-logo-web"){.alignleft
+logo](/assets/2008/08/resolversystems-logo-web.png "resolversystems-logo-web"){.alignleft
 .size-full
-.wp-image-361}](http://tartley.com/wp-content/uploads/2008/08/resolversystems-logo-web.png)I
+.wp-image-361}](/assets/2008/08/resolversystems-logo-web.png)I
 wrote a little blurb about why we at Resolver Systems like Python, and
 specifically IronPython. It's up on Pythonology.org's "Python success
 Stories" section, and will also propagate to wingware.com and

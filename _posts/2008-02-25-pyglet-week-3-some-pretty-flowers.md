@@ -111,17 +111,17 @@ just a bunch of minor tweaks.
     call). I won't be relying on this trick in future, but for now, on
     my machine at least, it looks like this:
 
-![flowers1](http://tartley.com/wp-content/uploads/2008/02/screenshot-flowers1.jpg)
+![flowers1](/assets/2008/02/screenshot-flowers1.jpg)
 
-![flowers2](http://tartley.com/wp-content/uploads/2008/02/screenshot-flowers2.jpg)
+![flowers2](/assets/2008/02/screenshot-flowers2.jpg)
 
-![flowers3](http://tartley.com/wp-content/uploads/2008/02/screenshot-flowers3.jpg)
+![flowers3](/assets/2008/02/screenshot-flowers3.jpg)
 
-![flowers4](http://tartley.com/wp-content/uploads/2008/02/screenshot-flowers4.jpg)
+![flowers4](/assets/2008/02/screenshot-flowers4.jpg)
 
-![flowers5](http://tartley.com/wp-content/uploads/2008/02/screenshot-flowers5.jpg)
+![flowers5](/assets/2008/02/screenshot-flowers5.jpg)
 
-![flowers6](http://tartley.com/wp-content/uploads/2008/02/screenshot-flowers6.jpg)
+![flowers6](/assets/2008/02/screenshot-flowers6.jpg)
 
 [gameloop2c-flowers.py![Python
-file](http://tartley.com/wp-content/uploads/2008/02/doc-python.png)](http://tartley.com/wp-content/uploads/2008/02/gameloop2c-flowerspy.zip "gameloop2c-flowers.py")
+file](/assets/2008/02/doc-python.png)](http://tartley.com/wp-content/uploads/2008/02/gameloop2c-flowerspy.zip "gameloop2c-flowers.py")

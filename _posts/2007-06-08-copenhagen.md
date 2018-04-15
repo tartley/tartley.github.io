@@ -17,7 +17,7 @@ wordpress_url: http://tartley.com/?p=124
 ---
 
 [![Flag of
-Denmark](http://tartley.com/wp-content/uploads/2007/06/flagofdenmark.png){.alignleft
+Denmark](/assets/2007/06/flagofdenmark.png){.alignleft
 .floatleft}]{}Spent last weekend in lovely Copenhagen, courtesy of our
 native guide, Susan's friend Rasmus. The ever genial Witt Mathot, and
 his sidekick Mike, were also in town giving some GIS Server training

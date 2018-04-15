@@ -45,7 +45,7 @@ wordpress_id: 307
 wordpress_url: http://tartley.com/?p=307
 ---
 
-![UnRecommend](http://tartley.com/wp-content/uploads/2008/03/linkedin.png)
+![UnRecommend](/assets/2008/03/linkedin.png)
 
 We've all known this for a long time, but I don't remember anyone
 actually saying it out loud: Have you ever noticed how it's always the

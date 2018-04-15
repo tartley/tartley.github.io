@@ -66,8 +66,7 @@ wordpress_id: 1247
 wordpress_url: http://tartley.com/?p=1247
 ---
 
-*In which I once again indulge my obscure command-line fetish.\
-*
+*In which I once again indulge my obscure command-line fetish.*
 
 I often spend hours of my day cycling through:
 
@@ -77,7 +76,7 @@ I often spend hours of my day cycling through:
     unit tests.
 
 Oh frabjous day, the grinding manual labour of the last of these three
-steps can now be banished forever, courtesy of *rerun*, a command line
+steps can now be banished forever, courtesy of `rerun`, a command line
 Python script that re-runs a given command whenever it detects changes
 to any of the files in the current directory, or its subdirectories.
 
@@ -85,13 +84,13 @@ to any of the files in the current directory, or its subdirectories.
 Ubuntu.
 
 For example: I had previously bound f6 in Vim to 'run the current file's
-unit tests.' Now I've bound shift-f6 to '***rerun*** the current file's
-unit tests in a new console window.' This pops up a new window showing
+unit tests. Now I've bound shift-f6 to `rerun` the current file's
+unit tests in a new console window. This pops up a new window showing
 the test results. I then continue editing in Vim, and whenever I hit
 save, the unit tests are re-run in the other window. All the while the
 focus stays on my editor. It's really sweet!
 
-Thanks for the original idea goes to to the bash command 'watch', and an
+Thanks for the original idea goes to to the bash command `watch`, and an
 old (now offline) blog post by Jeff Winkler.
 
 <https://bitbucket.org/tartley/rerun>

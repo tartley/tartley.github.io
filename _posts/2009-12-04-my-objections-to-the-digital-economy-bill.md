@@ -75,7 +75,8 @@ at the expense of other, more important ones, then I'd really love to
 hear about it. The last thing I want is for some stupid part of my
 argument to undermine the other parts of it.
 
-**The Digital Economy Bill**\
+**The Digital Economy Bill**
+
 <http://www.publications.parliament.uk/pa/ld200910/ldbills/001/10001.i-ii.html>
 
 I want to clarify at the outset that I absolutely support the importance
@@ -83,9 +84,9 @@ of copyright law, its enforcement, and give my full support to the
 expectation of artists to be remunerated in a market-driven manner. I do
 not want the following arguments to be confused with those which suggest
 that copyright should be abolished, or everything online should be
-free.\
-*\
-(This bit is my attempt to establish some credibility and rapport. In
+free.
+
+*(This bit is my attempt to establish some credibility and rapport. In
 reality, I think copyright, although sound in principle, is sorely in
 need of substantial revision, namely it should be much shorter in
 duration, should have larger and more explicit exceptions, and should
@@ -195,7 +196,7 @@ is not the only action that is chilled by the Bill's presumption of
 guilt.
 
 *TODO, this section is weak, and represents what I think is the most
-important problem.Â  At the very least, more compelling examples are
+important problem. At the very least, more compelling examples are
 needed here*
 
 Artists exchanging material while collaborating on a project, or or
@@ -263,12 +264,12 @@ data:
 <http://labs.timesonline.co.uk/blog/2009/11/12/do-music-artists-do-better-in-a-world-with-illegal-file-sharing/>
 
 This suggests that since 2004, recorded music incomes in the UK have
-fallen by some Â£326M. Whether this is due to illegal downloading is not
+fallen by some £326M. Whether this is due to illegal downloading is not
 known - presumably it is partly due to that, and partly due to other
 factors, such as the music industry putting out fewer records in recent
 years. However, the same figures also show that over the same period,
 income from live music and merchandising have risen by the larger amount
-of Â£373M. The industry as a whole is around Â£47M better off, and as a
+of £373M. The industry as a whole is around £47M better off, and as a
 bonus, the proportion of this income which is paid directly to artists
 has risen dramatically, since artists make more money from live shows
 than from recorded music sales.

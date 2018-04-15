@@ -17,7 +17,7 @@ wordpress_url: http://tartley.com/?p=244
 ---
 
 ![The Hacker
-Crackdown](http://tartley.com/wp-content/uploads/2008/01/hacker-crackdown.jpg){.alignleft
+Crackdown](/assets/2008/01/hacker-crackdown.jpg){.alignleft
 .floatleft}**by Bruce Sterling, [read aloud by Cory
 Doctorow](http://www.archive.org/search.php?query=hacker%20crackdown%20AND%20mediatype%3Aaudio%20AND%20collection%3Aopensource_audio)**
 

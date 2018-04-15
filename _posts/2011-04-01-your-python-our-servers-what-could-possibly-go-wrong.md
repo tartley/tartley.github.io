@@ -97,10 +97,7 @@ running our user's arbitrary Python in a sandbox across our grid - so
 we'd only need to strip the spreadsheet-UI off to expose this
 functionality to end-users.
 
-[![Python in the
-browser](http://tartley.com/wp-content/uploads/2011/04/python-in-browser.png "Python in the browser"){.alignnone
-.size-full .wp-image-1308 width="687"
-height="487"}](http://tartley.com/wp-content/uploads/2011/04/python-in-browser.png)
+[![Python in the browser](/assets/2011/04/python-in-browser.png "Python in the browser")](/assets/2011/04/python-in-browser.png)
 
 Your console state is persistant - so you could start some
 investigation, or a long-running statement, then log off, and then

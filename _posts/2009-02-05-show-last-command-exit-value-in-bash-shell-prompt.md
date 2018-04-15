@@ -44,7 +44,7 @@ prompt:
 
 \[caption id="attachment\_658" align="alignnone" width="442"
 caption="Check out the little red '1'"\]![Check out the little red
-'1'](http://tartley.com/wp-content/uploads/2009/02/last-exit-value.png "last-exit-value"){.size-full
+'1'](/assets/2009/02/last-exit-value.png "last-exit-value"){.size-full
 .wp-image-658 width="442" height="229"}\[/caption\]
 
 It's the

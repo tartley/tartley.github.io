@@ -36,7 +36,7 @@ wordpress_url: http://tartley.com/?p=309
 ---
 
 ![Lions for
-Lambs](http://tartley.com/wp-content/uploads/2008/03/lions-for-lambs.jpg){.floatleft}
+Lambs](/assets/2008/03/lions-for-lambs.jpg){.floatleft}
 
 It got a right drubbing critically, and was a box-office failure, but I
 found it powerful and compelling. It may not be crafted with the

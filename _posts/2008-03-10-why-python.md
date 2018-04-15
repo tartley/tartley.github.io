@@ -16,7 +16,7 @@ wordpress_id: 302
 wordpress_url: http://tartley.com/?p=302
 ---
 
-![Python](http://tartley.com/wp-content/uploads/2008/03/python.png){.alignleft
+![Python](/assets/2008/03/python.png){.alignleft
 .floatleft}A friend who is a doctor is considering learning Python as
 his first programming language, to do some processing on some research
 data. He asked me to give him the 30 second elevator pitch for Python,

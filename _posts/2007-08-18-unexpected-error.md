@@ -27,9 +27,9 @@ free-to-use version for small projects much like the one I am embarking
 on. I download it, install it, and fire it up eagerly. Just about the
 last thing I expected to see was this.\
 \
-![citydesk-error1.png](http://tartley.com/wp-content/uploads/2007/08/citydesk-error1.png)\
+![citydesk-error1.png](/assets/2007/08/citydesk-error1.png)\
 \
-![citydesk-error2.png](http://tartley.com/wp-content/uploads/2007/08/citydesk-error2.png)
+![citydesk-error2.png](/assets/2007/08/citydesk-error2.png)
 
 Just goes to show, creating software which *just works* is a tough
 problem. If the likes of Joel can't figure it out, what hope do the rest

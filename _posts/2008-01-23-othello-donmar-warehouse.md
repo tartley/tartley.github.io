@@ -24,7 +24,7 @@ wordpress_url: http://tartley.com/?p=235
 ---
 
 ![Chiwetel Ejiofor's
-Othello](http://tartley.com/wp-content/uploads/2008/01/othello372.jpg){.floatleft
+Othello](/assets/2008/01/othello372.jpg){.floatleft
 .alignnone width="372" height="192"}
 
 Another of my occasional theatre trips inspired by [the

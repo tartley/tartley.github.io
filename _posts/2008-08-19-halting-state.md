@@ -16,9 +16,9 @@ wordpress_id: 368
 wordpress_url: http://tartley.com/?p=368
 ---
 
-[![](http://tartley.com/wp-content/uploads/2008/08/halting-state.jpg "halting-state"){.alignleft
+[![](/assets/2008/08/halting-state.jpg "halting-state"){.alignleft
 .size-full .wp-image-369 width="177"
-height="249"}](http://tartley.com/wp-content/uploads/2008/08/halting-state.jpg)**by
+height="249"}](/assets/2008/08/halting-state.jpg)**by
 Charles Stross**, 2007.
 
 It's a tale of corporate shenanigans, online virtual reality computer
@@ -34,7 +34,7 @@ realities all seem too intrusive and out of place.
 
 The premise oscillates between nauseating and preposterous, as an
 in-game robbery of virtual items gradually tips off its investigators
-thatÂ  someone, somewhere, has got their hands on some heavy-duty
+that someone, somewhere, has got their hands on some heavy-duty
 decryption keys with which far more sinister acts are being perpetrated.
 Before it's done, there is a scene where the software engineer caught in
 the middle of it all has to play a swords-and-sorcery online computer

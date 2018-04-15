@@ -16,12 +16,9 @@ wordpress_id: 1547
 wordpress_url: http://tartley.com/?p=1547
 ---
 
-*[![domaindrivendesign](http://tartley.com/wp-content/uploads/2014/01/domaindrivendesign.jpg){.size-full
-.wp-image-1548 .alignleft width="250"
-height="331"}](http://tartley.com/wp-content/uploads/2014/01/domaindrivendesign.jpg)by
-Eric Evans (2004)\
-[on
-Amazon](http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215)*
+[![domaindrivendesign](/assets/2014/01/domaindrivendesign.jpg)](/assets/2014/01/domaindrivendesign.jpg)
+
+*by Eric Evans (2004)* [on Amazon](http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215)
 
 It's a big, dense book -- possibly the most important of the technical
 books I've read in a flurry over the last few months, catching up after
@@ -106,6 +103,8 @@ in a very small set of books I've flagged to re-read in a couple of
 years. It's top of my list for 'books to bring in and talk about at
 work'.
 
-Rating:\
-10/10 if you're a programmer, or work with programmers.\
+Rating:
+
+10/10 if you're a programmer, or work with programmers.
+
 0/10 if you're not, or don't.

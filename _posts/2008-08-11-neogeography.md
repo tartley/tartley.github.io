@@ -19,9 +19,9 @@ wordpress_id: 362
 wordpress_url: http://tartley.com/?p=362
 ---
 
-[![](http://tartley.com/wp-content/uploads/2008/08/co-to-ca-road-trip-map.png "co-to-ca-road-trip-map"){.alignnone
+[![](/assets/2008/08/co-to-ca-road-trip-map.png "co-to-ca-road-trip-map"){.alignnone
 .size-full .wp-image-364 width="500"
-height="324"}](http://tartley.com/wp-content/uploads/2008/08/co-to-ca-road-trip-map.png)
+height="324"}](/assets/2008/08/co-to-ca-road-trip-map.png)
 
 Over the summer I've been keeping a geographic journal of some of our
 recent adventures:

@@ -19,7 +19,7 @@ wordpress_url: http://tartley.com/?p=1683
 `man` and its `troff` formatting can be asked to produce postscript
 output. Define a Bash function, e.g. in your .bashrc:
 
-``` {lang="bash" escaped="true"}
+```
 function psman () {
     SLUG=$(echo $@ | tr ' ' '-')
     FNAME="/tmp/man-$SLUG.pdf"
@@ -50,8 +50,6 @@ $ psman tr
 
 produces
 
-[![](http://tartley.com/wp-content/uploads/2017/08/pman-tr.png){.alignnone
-.wp-image-1684 .size-full width="973"
-height="491"}](http://tartley.com/wp-content/uploads/2017/08/pman-tr.png)
+[![](/assets/2017/08/pman-tr.png)](/assets/2017/08/pman-tr.png)
 
  

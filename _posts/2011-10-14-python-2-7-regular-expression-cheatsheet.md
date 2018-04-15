@@ -56,6 +56,4 @@ Get a nice PDF out:
 cheatsheet](https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf)
 (click this link or the image for the most up-to-date PDF from github.)
 
-[![](http://tartley.com/wp-content/uploads/2011/10/Python-regular-expression-cheatsheet-0.3.0.png "Python regular expression cheatsheet 0.3.3"){.alignnone
-.size-full .wp-image-1363 width="795"
-height="948"}](https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf)
+[![](/assets/2011/10/Python-regular-expression-cheatsheet-0.3.0.png "Python regular expression cheatsheet 0.3.3")](https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf)

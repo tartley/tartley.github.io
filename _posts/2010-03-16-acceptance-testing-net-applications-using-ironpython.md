@@ -121,13 +121,7 @@ close correspondence with the internal design of the product. Acceptance
 tests, in contrast, invoke the program as a whole, just like a user
 would, and have a close correspondence with the product specification.
 
-\[caption id="attachment\_1019" align="alignnone" width="568"
-caption="Figure 1. Unit tests correspond to the SUT's internal design,
-but acceptance tests correspond to the specifications."\][![Acceptance
-vs unit
-tests](http://tartley.com/wp-content/uploads/2010/03/acceptance-vs-unit-tests.png "acceptance-vs-unit-tests"){.size-full
-.wp-image-1019 width="568"
-height="368"}](http://tartley.com/wp-content/uploads/2010/03/acceptance-vs-unit-tests.png)\[/caption\]
+![Acceptance vs unit tests](/assets/2010/03/acceptance-vs-unit-tests.png)
 
 Acceptance testing automates the expensive, time consuming, error-prone
 and soul-destroying process of using a team of human testers to fire up
@@ -374,17 +368,9 @@ classes in other editors, such as Wing, Emacs or Vi.
 
 WizBang defines a couple of simple forms, `MainForm` and `AddItemForm`:
 
-\[caption id="attachment\_1034" align="alignnone" width="300"
-caption="Figure 2. WizBang's main
-form"\][![](http://tartley.com/wp-content/uploads/2010/03/wizbangs-mainform.png "wizbangs-mainform"){.size-full
-.wp-image-1034 width="300"
-height="283"}](http://tartley.com/wp-content/uploads/2010/03/wizbangs-mainform.png)\[/caption\]
+![](/assets/2010/03/wizbangs-mainform.png)
 
-\[caption id="attachment\_1035" align="alignnone" width="472"
-caption="Figure 3. WizBang's add item
-form"\][![](http://tartley.com/wp-content/uploads/2010/03/wizbangs-additemform.png "wizbangs-additemform"){.size-full
-.wp-image-1035 width="472"
-height="82"}](http://tartley.com/wp-content/uploads/2010/03/wizbangs-additemform.png)\[/caption\]
+![](/assets/2010/03/wizbangs-additemform.png)
 
 WizBang has a public class called `Program`, which provides public
 access to the application's forms, and handles the startup and shutdown
@@ -511,11 +497,7 @@ library we use.
 We implement this in a new class `AcceptanceTest`, which sits between
 `AT001_AddItems` and `unittest.TestCase` in the inheritance hierarchy:
 
-\[caption id="attachment\_1039" align="alignnone" width="114"
-caption="Figure 4. Our test class inheritance
-hierarchy."\][![](http://tartley.com/wp-content/uploads/2010/03/test-inheritance.png "test-inheritance"){.size-full
-.wp-image-1039 width="114"
-height="190"}](http://tartley.com/wp-content/uploads/2010/03/test-inheritance.png)\[/caption\]
+![](/assets/2010/03/test-inheritance.png)
 
 On a real project, many `ATxxx` test classes would inherit from
 `AcceptanceTest`, which looks like this:

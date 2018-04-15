@@ -26,7 +26,7 @@ wordpress_url: http://tartley.com/?p=60
 ---
 
 [![Testing Extreme
-Programming](http://tartley.com/wp-content/uploads/2007/03/testing-extreme-programming.thumbnail.jpg){.alignleft}](http://tartley.com/wp-content/uploads/2007/03/testing-extreme-programming.jpg "Testing Extreme Programming")*by
+Programming](/assets/2007/03/testing-extreme-programming.thumbnail.jpg){.alignleft}](http://tartley.com/wp-content/uploads/2007/03/testing-extreme-programming.jpg "Testing Extreme Programming")*by
 Lisa Crispin & Trip House.*\
 2003.\
 [Amazon](http://www.amazon.com/Testing-Extreme-Programming-Lisa-Crispin/dp/0321113551/).

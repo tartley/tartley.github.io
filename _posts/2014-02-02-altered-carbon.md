@@ -26,9 +26,9 @@ wordpress_id: 1554
 wordpress_url: http://tartley.com/?p=1554
 ---
 
-![richard-morgan-altered-carbon](http://tartley.com/wp-content/uploads/2014/02/richard-morgan-altered-carbon.jpg){.size-full
-.wp-image-1555 .alignleft width="200" height="307"}*by Richard Morgan*
-(2001)
+![richard-morgan-altered-carbon](/assets/2014/02/richard-morgan-altered-carbon.jpg)
+
+*by Richard Morgan* (2001)
 
 A romp through a hyperviolent cyberpunk future through the eyes of a
 character reluctantly press-ganged into the role of detective in a story

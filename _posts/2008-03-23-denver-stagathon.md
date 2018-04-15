@@ -21,7 +21,7 @@ wordpress_url: http://tartley.com/?p=318
 ---
 
 ![Nun of your
-business](http://tartley.com/wp-content/uploads/2008/03/nun-of-your-business.jpg){.floatleft}[Some
+business](/assets/2008/03/nun-of-your-business.jpg){.floatleft}[Some
 blurry photos are
 up](http://picasaweb.google.co.uk/tartley/20080320Denver) of an
 absolutely brilliant stag event in Denver, starting with an afternoon of
@@ -48,4 +48,4 @@ cowbell](http://www.aaronsdayoff.com/2008/03/jbs-bachelor-partypub-crawl.html).
 of battle, but a rigourous statistical analysis reveals that team UK
 absolutely dominated the laser quest:
 
-[![LQ](http://tartley.com/wp-content/uploads/2008/03/lq.png)](http://tartley.com/wp-content/uploads/2008/03/lqods.zip "LQ")
+[![LQ](/assets/2008/03/lq.png)](http://tartley.com/wp-content/uploads/2008/03/lqods.zip "LQ")

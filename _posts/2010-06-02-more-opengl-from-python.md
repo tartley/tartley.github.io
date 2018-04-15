@@ -162,9 +162,7 @@ world:
 
 and running the program renders them:
 
-[![](http://tartley.com/wp-content/uploads/2010/06/two-cubes.png "two-cubes"){.alignnone
-.size-full .wp-image-1087 width="617"
-height="483"}](http://tartley.com/wp-content/uploads/2010/06/two-cubes.png)
+![](/assets/2010/06/two-cubes.png)
 
 The flat shading is because we have no lighting yet. That gets fixed
 soon.
@@ -206,16 +204,12 @@ CubeCluster, consisting of many randomly-positioned small cubes, each
 one colored by its position in (r, g, b) space. These are surrounded by
 a sprinkling of black cubes, a large translucent cube-shaped skin:
 
-[![](http://tartley.com/wp-content/uploads/2010/06/cube-cluster-01-overview.png "cube-cluster-01-overview"){.alignnone
-.size-full .wp-image-1089 width="640"
-height="512"}](http://tartley.com/wp-content/uploads/2010/06/cube-cluster-01-overview.png)
+![](/assets/2010/06/cube-cluster-01-overview.png)
 
 and buried deep at the centre of the CubeCluster is some sort of
 mysterious structure:
 
-[![](http://tartley.com/wp-content/uploads/2010/06/cube-cluster-01-center.png "cube-cluster-01-center"){.alignnone
-.size-full .wp-image-1090 width="640"
-height="512"}](http://tartley.com/wp-content/uploads/2010/06/cube-cluster-01-center.png)
+![](/assets/2010/06/cube-cluster-01-center.png)
 
 So using this code, I get 60fps on modest hardware (my 2005 end-of-line
 Thinkpad T60, an ATI Radeon X1400) while rendering either:
@@ -268,9 +262,7 @@ positions, colors and indices, since vertices can no longer be shared
 between different faces of a cube, because a single vertex position now
 requires a different normal for each face.
 
-[![](http://tartley.com/wp-content/uploads/2010/06/basic-lighting.jpg "basic-lighting"){.alignnone
-.size-full .wp-image-1095 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/06/basic-lighting.jpg)
+![](/assets/2010/06/basic-lighting.jpg)
 
 Generating normals made me think more about when I should or should not
 be using indexed vertex arrays, as opposed to simple contiguous arrays

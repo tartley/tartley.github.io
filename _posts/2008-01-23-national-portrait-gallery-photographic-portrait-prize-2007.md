@@ -27,7 +27,7 @@ wordpress_id: 233
 wordpress_url: http://tartley.com/?p=233
 ---
 
-![Sophia](http://tartley.com/wp-content/uploads/2008/01/pppsophia.jpg){.alignleft
+![Sophia](/assets/2008/01/pppsophia.jpg){.alignleft
 .floatleft}A special highlight, as is so often the case, is the image
 featured in the exhibition's promotions, *Sophia* (left), by Billy &
 Hells, one in a series of photographs that emulates the type of lighting

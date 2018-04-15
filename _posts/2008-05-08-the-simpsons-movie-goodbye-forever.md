@@ -51,7 +51,7 @@ wordpress_url: http://tartley.com/?p=300
 ---
 
 ![The Simpsons
-Movie](http://tartley.com/wp-content/uploads/2008/05/simpsonsmovie.jpg "simpsonsmovie"){.alignleft
+Movie](/assets/2008/05/simpsonsmovie.jpg "simpsonsmovie"){.alignleft
 .size-full .wp-image-332 width="235" height="304"}There is, of course,
 no point whatsoever in me posting a belated review of the Simpsons
 Movie, which I and everyone else gleefully watched many months ago now.

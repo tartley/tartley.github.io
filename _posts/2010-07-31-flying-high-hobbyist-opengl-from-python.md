@@ -108,8 +108,8 @@ whole team of hard-working volunteers, especially John Pinner & Richard
 Taylor, who gave so much time and effort to make EuroPython in the UK
 brilliant once again.*
 
-*The demonstrated* *code* *is available via Mercurial, from
-<http://code.google.com/p/flyinghigh-opengl-from-python>*
+*The demonstrated* *code* *is available at
+<https://github.com/tartley/gloopy>*
 
 ------------------------------------------------------------------------
 
@@ -144,19 +144,13 @@ styles out of technical necessity. As is often the case, these
 restrictions resulted in a diverse blossoming of creative ideas,
 producing an enormous set of distinctive visual styles and experiences.
 
-\[caption id="attachment\_1148" align="alignnone" width="640"
-caption="Non-photo-realistic Quake"\]![Non-photo-realistic
-Quake](http://tartley.com/wp-content/uploads/2010/07/nprquake.jpg "Non-photo-realistic Quake"){.size-full
-.wp-image-1148 width="640" height="480"}\[/caption\]
+![Non-photo-realistic Quake](/assets/2010/07/nprquake.jpg)
 
 Crucially, the most successful and memorable examples of these were
 projects that found ways to work in harmony with the restrictions of the
 medium, rather than attempting to gloss over them.
 
-\[caption id="attachment\_1150" align="alignnone" width="640"
-caption="Rez HD"\]![Rez
-HD](http://tartley.com/wp-content/uploads/2010/07/RezHDA.jpg "Rez HD"){.size-full
-.wp-image-1150 width="640" height="359"}\[/caption\]
+![Rez HD](/assets/2010/07/RezHDA.jpg)
 
 Advances in computing power and technique provide modern games and
 applications with a far wider range of options in how to present
@@ -167,10 +161,7 @@ highly stylised look, when appropriately chosen, can create a vastly
 more striking and memorable artistic experiences. This is true in movies
 and all kinds of art.
 
-\[caption id="attachment\_1153" align="alignnone" width="640"
-caption="Waking Life"\]![Waking
-Life](http://tartley.com/wp-content/uploads/2010/07/wakinglife1.jpg "Waking Life"){.size-full
-.wp-image-1153 width="640" height="386"}\[/caption\]
+![Waking Life](/assets/2010/07/wakinglife1.jpg)
 
 As an amateur graphics programmer, I don't have large resources nor much
 experience to throw at the problem, so my options and my abilities are
@@ -179,9 +170,7 @@ to create things that are both strikingly beautiful and highly
 functional, either by working with the restrictions of the medium, or by
 finding creative ways to exploit or extend them.
 
-\[caption id="attachment\_1151" align="alignnone" width="640"
-caption="Love"\]![Love](http://tartley.com/wp-content/uploads/2010/07/love.jpg "Love"){.size-full
-.wp-image-1151 width="640" height="274"}\[/caption\]
+![Love](/assets/2010/07/love.jpg)
 
 In particular, the kind of minimal, clean-lined aesthetic that amateur
 OpenGL programs take on by default are useful for their crisp precision,
@@ -191,7 +180,7 @@ colour.
 
 \[caption id="attachment\_1147" align="alignnone" width="640"
 caption="Tron Legacy"\]![Tron
-Legacy](http://tartley.com/wp-content/uploads/2010/07/tron.jpg "Tron Legacy"){.size-full
+Legacy](/assets/2010/07/tron.jpg "Tron Legacy"){.size-full
 .wp-image-1147 width="640" height="264"}\[/caption\]
 
 I wish more professional game developers had an incentive to aim for
@@ -214,11 +203,7 @@ I'm assuming we already have a minimal OpenGL application, that:
 This results in a blank screen, at 60fps. Here's a screenshot, so you
 can see exactly what it's doing:
 
-\[caption id="attachment\_1156" align="alignnone" width="840" caption="A
-blank screen"\][![A blank
-screen](http://tartley.com/wp-content/uploads/2010/07/blank1-1024x640.png "A blank screen"){.size-large
-.wp-image-1156 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/07/blank1.png)\[/caption\]
+![A blank screen](/assets/2010/07/blank1-1024x640.png)
 
 I'm using pyglet & PyOpenGL for this, but this isn't important. Any
 framework that provides the above abilities, such as PyGame, along with
@@ -238,11 +223,7 @@ geometry, and then a Glyph class that converts these geometries into
 arrays for OpenGL. Finally these arrays get passed into a Render class,
 which simply calls glDrawElements to render them.
 
-\[caption id="attachment\_1158" align="alignnone" width="492"
-caption="Our Goal"\][![Our
-Goal](http://tartley.com/wp-content/uploads/2010/07/fun-stuff.png "Our Goal"){.size-full
-.wp-image-1158 width="492"
-height="246"}](http://tartley.com/wp-content/uploads/2010/07/fun-stuff.png)\[/caption\]
+![Our Goal](/assets/2010/07/fun-stuff.png)
 
 Once the above infrastructure is in place, we can have some fun
 generating interesting shapes to make pretty pictures with. The
@@ -281,10 +262,7 @@ To demonstrate how classes Shape, Glyph and Render hang together, let's
 examine an even simpler example, a yellow triangle joined to a red
 square:
 
-\[caption id="attachment\_1159" align="alignnone" width="300"
-caption="Red Triangle & Yellow Square"\]![Red Triangle & Yellow
-Square](http://tartley.com/wp-content/uploads/2010/07/triangle-square.png "Red Triangle & Yellow Square"){.size-full
-.wp-image-1159 width="300" height="265"}\[/caption\]
+![Red Triangle & Yellow Square](/assets/2010/07/triangle-square.png)
 
 You can see this geometry features five vertices (v0 to v4), which are
 used by the two faces. This might be represented by an instance of
@@ -328,11 +306,7 @@ To generate glvertices, we need to dereference the indices in
 Shape.faces, to produce a new list of vertices, rearranged into the
 order they are going to be drawn:
 
-\[caption id="attachment\_1164" align="alignnone" width="457"
-caption="Step 1. Dereference indices"\][![Step 1. Dereference
-indices](http://tartley.com/wp-content/uploads/2010/07/dereference-indices.png "Step 1. Dereference indices"){.size-full
-.wp-image-1164 width="457"
-height="316"}](http://tartley.com/wp-content/uploads/2010/07/dereference-indices.png)\[/caption\]
+![Step 1. Dereference indices](/assets/2010/07/dereference-indices.png)
 
 The most visible aspect of this change is that the vertices are
 re-ordered, such that the indices now simply read '0, 1, 2, 3, 4, 5...'.
@@ -386,11 +360,7 @@ The second job Glyph has to do is create a ctypes indices array, which
 is derived from the Shape's faces. In doing this, it has to break the
 Shape's faces down into individual triangles.
 
-\[caption id="attachment\_1165" align="alignnone" width="577"
-caption="Step 2. Tessellate indices"\][![Step 2. Tessellate
-indices](http://tartley.com/wp-content/uploads/2010/07/tessellate-indices.png "Step 2. Tessellate indices"){.size-full
-.wp-image-1165 width="577"
-height="316"}](http://tartley.com/wp-content/uploads/2010/07/tessellate-indices.png)\[/caption\]
+![Step 2. Tessellate indices](/assets/2010/07/tessellate-indices.png)
 
 The vertex list is unchanged by this step, and the first face - the
 triangle - is also unchanged. The second face, the square, has been
@@ -420,11 +390,7 @@ def tessellate(face):
 We again use a generator, to simply join up the face's first vertex with
 all the other vertices, like this:
 
-\[caption id="attachment\_1166" align="alignnone" width="446"
-caption="Tessellation of convex faces"\][![Tessellation of convex
-faces](http://tartley.com/wp-content/uploads/2010/07/tessellation.png "Tessellation of convex faces"){.size-full
-.wp-image-1166 width="446"
-height="197"}](http://tartley.com/wp-content/uploads/2010/07/tessellation.png)\[/caption\]
+![Tessellation of convex faces](/assets/2010/07/tessellation.png)
 
 Now we have our tessellate function, Glyph can now create the glindices
 array in much the same way as it generated the glvertices. I wasn't
@@ -501,11 +467,7 @@ class Render(object):
 This is canonical OpenGL render code, so I'm not going to dissect it,
 but now we get some actual visible output:
 
-\[caption id="attachment\_1168" align="alignnone" width="840"
-caption="Red triangle, yellow square"\][![Red triangle, yellow
-square](http://tartley.com/wp-content/uploads/2010/07/screen-triangle-square.png "Red triangle, yellow square"){.size-full
-.wp-image-1168 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/07/screen-triangle-square.png)\[/caption\]
+![Red triangle, yellow square](/assets/2010/07/screen-triangle-square.png)
 
 Hooray! \\o/ We can move our camera position around, and view this 3D
 object from different angles.
@@ -536,29 +498,25 @@ def Tetrahedron(edge, face_colors=None):
     return Shape(vertices, faces, face_colors)
 ```
 
-Which produces:
+Which produces a tetrahedron:
 
-\[caption id="attachment\_1176" align="alignnone" width="840" caption="A
-tetrahedron"\][![A
-tetrahedron](http://tartley.com/wp-content/uploads/2010/07/screen-tetrahedron.png "A tetrahedron"){.size-full
-.wp-image-1176 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/07/screen-tetrahedron.png)\[/caption\]
+![A tetrahedron](/assets/2010/07/screen-tetrahedron.png)
 
 Then a cube factory:
 
 ``` {lang="python"}
 def Cube(edge, face_colors=None):
-    e2 = edge / 2
-    verts = list(itertools.product(*repeat([-e2, +e2], 3)))
-    faces = [
-        [0, 1, 3, 2], # left
-        [4, 6, 7, 5], # right
-        [7, 3, 1, 5], # front
-        [0, 2, 6, 4], # back
-        [3, 7, 6, 2], # top
-        [1, 0, 4, 5], # bottom
+    e2 = edge / 2
+    verts = list(itertools.product(*repeat([-e2, +e2], 3)))
+    faces = [
+        [0, 1, 3, 2], # left
+        [4, 6, 7, 5], # right
+        [7, 3, 1, 5], # front
+        [0, 2, 6, 4], # back
+        [3, 7, 6, 2], # top
+        [1, 0, 4, 5], # bottom
     ]
-    return Shape(verts, faces, face_colors)
+    return Shape(verts, faces, face_colors)
 ```
 
 The six faces are quite evident, but the use of *itertools.product* to
@@ -576,45 +534,25 @@ Just to spell it out in longhand:
 So there are the eight vertices of the cube, and that gets us the
 following:
 
-\[caption id="attachment\_1177" align="alignnone" width="840" caption="A
-cube"\][![A
-cube](http://tartley.com/wp-content/uploads/2010/07/screen-cube.png "A cube"){.size-full
-.wp-image-1177 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/07/screen-cube.png)\[/caption\]
+![A cube](/assets/2010/07/screen-cube.png)
 
 We can add a few more vertices and faces, to make ourselves a truncated
 cube:
 
-\[caption id="attachment\_1187" align="alignnone" width="840" caption="A
-truncated cube"\][![A truncated
-cube](http://tartley.com/wp-content/uploads/2010/07/screen-truncated-cube.png "A truncated cube"){.size-full
-.wp-image-1187 width="840"
-height="672"}](http://tartley.com/wp-content/uploads/2010/07/screen-truncated-cube.png)\[/caption\]
+![A truncated cube](/assets/2010/07/screen-truncated-cube.png)
 
 Once we've got truncated cubes, we might as well add one last face to
 form the entrance:
 
-\[caption id="attachment\_1188" align="alignnone" width="840" caption="A
-truncated cube with entrance"\][![A truncated cube with
-entrance](http://tartley.com/wp-content/uploads/2010/07/screen-space-station.png "A truncated cube with entrance: This is a reference to the space stations from the 1984 computer game 'Elite'."){.size-full
-.wp-image-1188 width="840"
-height="672"}](http://tartley.com/wp-content/uploads/2010/07/screen-space-station.png)\[/caption\]
+![A truncated cube with entrance](/assets/2010/07/screen-space-station.png)
 
 There's nothing to stop us adding several of these shapes into the world
 at once, but since we haven't yet moved any of them away from the
 origin, they just sit there, embedded within one another:
 
-\[caption id="attachment\_1196" align="alignnone" width="840" caption="A
-cube and tetrahedron interpenetrate"\][![A cube and tetrahedron
-interpenetrate](http://tartley.com/wp-content/uploads/2010/07/screen-cube-tetra.png "A cube and tetrahedron interpenetrate"){.size-full
-.wp-image-1196 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/07/screen-cube-tetra.png)\[/caption\]
+![A cube and tetrahedron interpenetrate](/assets/2010/07/screen-cube-tetra.png)
 
-\[caption id="attachment\_1197" align="alignnone" width="840" caption="A
-truncated cube with two tetrahedrons"\][![A truncated cube with two
-tetrahedrons](http://tartley.com/wp-content/uploads/2010/07/screen-trunccube-two-tetras.png "A truncated cube with two tetrahedrons"){.size-full
-.wp-image-1197 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/07/screen-trunccube-two-tetras.png)\[/caption\]
+![A truncated cube with two tetrahedrons](/assets/2010/07/screen-trunccube-two-tetras.png)
 
 **Moving objects around**
 -------------------------
@@ -694,12 +632,7 @@ item's orientation as time goes by.
 With these all in place, we can now add many Shapes to the world, each
 moving and rotating independently:
 
-\[caption id="attachment\_1199" align="alignnone" width="840"
-caption="Several independently positioned and oriented
-shapes"\][![Several independantly positioned and oriented
-shapes](http://tartley.com/wp-content/uploads/2010/07/screen-several-shapes.png "Several independantly positioned and oriented shapes"){.size-full
-.wp-image-1199 width="840"
-height="525"}](http://tartley.com/wp-content/uploads/2010/07/screen-several-shapes.png)\[/caption\]
+![Several independantly positioned and oriented shapes](/assets/2010/07/screen-several-shapes.png)
 
 **Next week: Composite Shapes...**
 ----------------------------------

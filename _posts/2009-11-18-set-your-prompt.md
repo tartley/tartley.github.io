@@ -32,8 +32,7 @@ wordpress_url: http://tartley.com/?p=863
 It's a tiny detail, but the default command-line prompt (on both Windows
 and Unix) drives me nuts.
 
-![mswin-command-prompt1](http://tartley.com/wp-content/uploads/2009/11/mswin-command-prompt1.png "mswin-command-prompt1"){.alignnone
-.size-full .wp-image-911 width="588" height="297"}
+![mswin-command-prompt1](/assets/2009/11/mswin-command-prompt1.png "mswin-command-prompt1")
 
 See how my cursor is way over on the right. So every command you ever
 type gets immediately split over two lines.
@@ -52,8 +51,7 @@ The dollar codes are expanded into:
 -   \$G - greater than
 -   \$S - space
 
-![mswin-command-prompt2](http://tartley.com/wp-content/uploads/2009/11/mswin-command-prompt2.png "mswin-command-prompt2"){.alignnone
-.size-full .wp-image-912 width="588" height="297"}
+![mswin-command-prompt2](/assets/2009/11/mswin-command-prompt2.png "mswin-command-prompt2")
 
 There, isn't that better? There are a bunch of other special dollar
 codes, that are described

@@ -51,7 +51,7 @@ wordpress_id: 217
 wordpress_url: http://tartley.com/?p=217
 ---
 
-![iphone.jpg](http://tartley.com/wp-content/uploads/2007/12/iphone.jpg){.alignleft
+![iphone.jpg](/assets/2007/12/iphone.jpg){.alignleft
 .floatleft}I read through this to assess the iPhone (many thanks to the
 generosity and resourcefulness of a certain [Mr
 Smithson](http://amoral.org/)) as an eBook reader, and found it

@@ -84,7 +84,7 @@ wordpress_url: http://tartley.com/?p=250
 ---
 
 ![Pyglet
-logo](http://tartley.com/wp-content/uploads/2008/02/pyglet_logo.png){.alignleft
+logo](/assets/2008/02/pyglet_logo.png){.alignleft
 .floatleft}[pyglet](http://www.pyglet.org) is a cross-platform library
 that exposes Python bindings for OpenGL, and also provides a bunch of
 functionality layered on top of that, such as displaying text and
@@ -298,7 +298,7 @@ class Hud(object):
 ### The Payoff
 
 ![Gameloop
-screenshot](http://tartley.com/wp-content/uploads/2008/02/gameloop-screenshot.png)
+screenshot](/assets/2008/02/gameloop-screenshot.png)
 
 This is reasonably pleasing for a first stab. It runs at 60 frames per
 second, adding a new triangle to the screen every 0.25 seconds, and
@@ -314,4 +314,4 @@ Throughput...](http://tartley.com/?p=264)**
 ### Download the source
 
 [![Python
-file](http://tartley.com/wp-content/uploads/2008/02/doc-python.png)gameloop.py.zip](http://tartley.com/wp-content/uploads/2008/02/gamelooppy.zip "gameloop.py.zip")
+file](/assets/2008/02/doc-python.png)gameloop.py.zip](http://tartley.com/wp-content/uploads/2008/02/gamelooppy.zip "gameloop.py.zip")
