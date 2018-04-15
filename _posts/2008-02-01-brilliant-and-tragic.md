@@ -36,7 +36,6 @@ tags: []
 title: Brilliant and Tragic
 wordpress_id: 247
 wordpress_url: http://tartley.com/?p=247
-...
 ---
 
 Susan was on the phone to the phone company the other day. She couldn't

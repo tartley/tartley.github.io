@@ -50,7 +50,6 @@ tags: []
 title: '''Go to Definition'' in Vim for Python using Ctags, Done Right'
 wordpress_id: 1277
 wordpress_url: http://tartley.com/?p=1277
-...
 ---
 
 How to set up and configure Vim to use tags for Python development so

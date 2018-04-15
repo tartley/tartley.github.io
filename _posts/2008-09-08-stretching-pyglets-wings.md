@@ -78,7 +78,6 @@ tags: []
 title: Stretching pyglet's Wings
 wordpress_id: 378
 wordpress_url: http://www.tartley.com/?p=378
-...
 ---
 
 ![](http://www.tartley.com/wp-content/uploads/2008/09/pacman.png "pacman"){.alignleft

@@ -14,7 +14,6 @@ tags: []
 title: Webfaction hosting
 wordpress_id: 148
 wordpress_url: http://tartley.webfactional.com/?p=148
-...
 ---
 
 [![WebFaction - hosting for an agile

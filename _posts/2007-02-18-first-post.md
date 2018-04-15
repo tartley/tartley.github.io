@@ -37,7 +37,6 @@ tags: []
 title: First Post!
 wordpress_id: 3
 wordpress_url: http://tartley.com/?p=3
-...
 ---
 
 *Tartley.com* relaunched all over an unsuspecting, with a

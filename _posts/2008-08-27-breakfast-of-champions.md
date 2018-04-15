@@ -14,7 +14,6 @@ tags: []
 title: Breakfast of Champions
 wordpress_id: 372
 wordpress_url: http://tartley.com/?p=372
-...
 ---
 
 **[![](http://tartley.com/wp-content/uploads/2008/08/breakfast-of-champions.jpg "breakfast-of-champions"){.alignleft

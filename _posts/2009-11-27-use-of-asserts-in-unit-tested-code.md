@@ -44,7 +44,6 @@ tags: []
 title: Use of Asserts in Unit-Tested Code
 wordpress_id: 916
 wordpress_url: http://tartley.com/?p=916
-...
 ---
 
 I pretty much abandoned the use of asserts in production code once I was

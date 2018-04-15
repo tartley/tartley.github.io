@@ -14,7 +14,6 @@ tags: []
 title: Thoughts on Nylas' "How We Deploy Code"
 wordpress_id: 1623
 wordpress_url: http://tartley.com/?p=1623
-...
 ---
 
 Some thoughts on [Nylas' post "How We Deploy

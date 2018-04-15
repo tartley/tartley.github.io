@@ -69,7 +69,6 @@ tags: []
 title: 'Undocumented feature of the week: $PIP_DOWNLOAD_CACHE'
 wordpress_id: 1133
 wordpress_url: http://tartley.com/?p=1133
-...
 ---
 
 Use Python? You should be using

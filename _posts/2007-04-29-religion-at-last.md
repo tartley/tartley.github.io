@@ -17,7 +17,6 @@ tags: []
 title: Religion, at last.
 wordpress_id: 96
 wordpress_url: http://tartley.com/?p=96
-...
 ---
 
 Rohan and I finally understood the movie [The

@@ -14,7 +14,6 @@ tags: []
 title: Google Chrome Credit
 wordpress_id: 1655
 wordpress_url: http://tartley.com/?p=1655
-...
 ---
 
 I just noticed: Open Chrome, go to <chrome://credits/>, search in page,

@@ -18,7 +18,6 @@ tags: []
 title: Sinister Redux
 wordpress_id: 956
 wordpress_url: http://tartley.com/?p=956
-...
 ---
 
 A few months ago, [Glenn](http://millenniumhand.co.uk/) and

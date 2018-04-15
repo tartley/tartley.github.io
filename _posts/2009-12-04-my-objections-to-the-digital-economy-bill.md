@@ -62,7 +62,6 @@ tags: []
 title: My objections to the Digital Economy Bill
 wordpress_id: 924
 wordpress_url: http://tartley.com/?p=924
-...
 ---
 
 This is pretty much a riff on what I posted yesterday, only this is my

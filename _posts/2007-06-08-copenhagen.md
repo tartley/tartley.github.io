@@ -14,7 +14,6 @@ tags: []
 title: Copenhagen
 wordpress_id: 124
 wordpress_url: http://tartley.com/?p=124
-...
 ---
 
 [![Flag of

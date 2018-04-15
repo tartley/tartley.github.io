@@ -17,7 +17,6 @@ tags: []
 title: 'Minerva: Metastasis'
 wordpress_id: 81
 wordpress_url: http://tartley.com/?p=81
-...
 ---
 
 [![Title

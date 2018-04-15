@@ -31,7 +31,6 @@ tags: []
 title: Envisioning Information
 wordpress_id: 732
 wordpress_url: http://www.tartley.com/?p=732
-...
 ---
 
 \[caption id="attachment\_733" align="alignleft"

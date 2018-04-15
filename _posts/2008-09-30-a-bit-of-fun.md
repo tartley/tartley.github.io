@@ -27,7 +27,6 @@ tags: []
 title: lang.name, lang.desc for lang in self.languages
 wordpress_id: 391
 wordpress_url: http://www.tartley.com/?p=391
-...
 ---
 
 [Unnofficial meme](http://jtauber.com/blog/) from the [Unofficial Planet

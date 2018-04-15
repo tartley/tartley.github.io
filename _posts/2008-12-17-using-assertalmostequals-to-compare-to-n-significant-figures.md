@@ -37,7 +37,6 @@ tags: []
 title: Using assertAlmostEquals to compare to N Significant Figures
 wordpress_id: 594
 wordpress_url: http://tartley.com/?p=594
-...
 ---
 
 I want a Python unittest.assertAlmostEquals that compares numbers to N

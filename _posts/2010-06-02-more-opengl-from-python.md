@@ -58,7 +58,6 @@ tags: []
 title: More OpenGL from Python
 wordpress_id: 1081
 wordpress_url: http://tartley.com/?p=1081
-...
 ---
 
 My talk, *Flying High : Hobbyist OpenGL from Python*, was accepted for

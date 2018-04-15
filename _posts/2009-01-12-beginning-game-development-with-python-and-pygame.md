@@ -14,7 +14,6 @@ tags: []
 title: Beginning Game Development With Python and PyGame
 wordpress_id: 620
 wordpress_url: http://tartley.com/?p=620
-...
 ---
 
 ![beginning-game-development-with-python-and-pygame](http://tartley.com/wp-content/uploads/2009/01/beginning-game-development-with-python-and-pygame.jpg "beginning-game-development-with-python-and-pygame"){.alignleft

@@ -14,7 +14,6 @@ tags: []
 title: Understanding git rebase so it sticks
 wordpress_id: 1579
 wordpress_url: http://tartley.com/?p=1579
-...
 ---
 
 I endlessly misremember how to use git rebase. That ends today. Here are

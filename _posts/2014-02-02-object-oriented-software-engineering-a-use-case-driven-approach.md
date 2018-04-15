@@ -22,7 +22,6 @@ tags: []
 title: 'Object-Oriented Software Engineering : A Use Case Driven Approach'
 wordpress_id: 1557
 wordpress_url: http://tartley.com/?p=1557
-...
 ---
 
 ![object-oriented-sofware-engineering](http://tartley.com/wp-content/uploads/2014/02/object-oriented-sofware-engineering.jpg){.size-full

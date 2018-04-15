@@ -21,7 +21,6 @@ tags: []
 title: '[SOLVED]UK Digital Economy Bill'
 wordpress_id: 918
 wordpress_url: http://tartley.com/?p=918
-...
 ---
 
 So my splendid talented intelligent handsome friend Robert (who is also

@@ -29,7 +29,6 @@ tags: []
 title: A Case for Forward Error Correction
 wordpress_id: 53
 wordpress_url: http://tartley.com/?p=53
-...
 ---
 
 Announcing the first draft of our white paper, [The Case For Forward

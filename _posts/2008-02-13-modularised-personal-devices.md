@@ -58,7 +58,6 @@ tags: []
 title: Modularised Personal Devices
 wordpress_id: 261
 wordpress_url: http://tartley.com/?p=261
-...
 ---
 
 ![One man

@@ -14,7 +14,6 @@ tags: [game, videogame, nintendo, ds, review]
 title: 'Legend of Zelda : The Phantom Hourglass'
 wordpress_id: 310
 wordpress_url: http://tartley.com/?p=310
-...
 ---
 
 ![caption](http://tartley.com/wp-content/uploads/2008/05/phantom-hourglass.jpg "Legend of Zelda : The Phantom Hourglass"){.alignleft

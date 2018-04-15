@@ -59,7 +59,6 @@ tags: []
 title: 'Django testing 201 : Acceptance Tests vs Unit Tests'
 wordpress_id: 1337
 wordpress_url: http://tartley.com/?p=1337
-...
 ---
 
 I'm finding that our Django project's tests fall into an uncomfortable

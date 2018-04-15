@@ -33,7 +33,6 @@ tags: []
 title: '&pound; key in Windows on a US laptop keyboard, done right.'
 wordpress_id: 1317
 wordpress_url: http://tartley.com/?p=1317
-...
 ---
 
 The usual solution to typing non-US characters on a US keyboard in

@@ -14,7 +14,6 @@ tags: []
 title: The History Boys
 wordpress_id: 16
 wordpress_url: http://tartley.com/?p=16
-...
 ---
 
 Writer: Alan Bennett\

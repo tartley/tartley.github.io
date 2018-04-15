@@ -43,7 +43,6 @@ tags: []
 title: The Long Overdue LinkedIn Backlash
 wordpress_id: 307
 wordpress_url: http://tartley.com/?p=307
-...
 ---
 
 ![UnRecommend](http://tartley.com/wp-content/uploads/2008/03/linkedin.png)

@@ -64,7 +64,6 @@ tags: []
 title: Creating a Level for Thief 2
 wordpress_id: 958
 wordpress_url: http://tartley.com/?p=958
-...
 ---
 
 After [Sinister Ducks](http://tartley.com/?p=956), my [videogame

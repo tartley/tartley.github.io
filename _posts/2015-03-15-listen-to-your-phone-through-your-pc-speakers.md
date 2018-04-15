@@ -14,7 +14,6 @@ tags: []
 title: Listen to your phone through your PC speakers
 wordpress_id: 1615
 wordpress_url: http://tartley.com/?p=1615
-...
 ---
 
 Bash:

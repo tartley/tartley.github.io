@@ -24,7 +24,6 @@ tags: []
 title: Show last command exit value in Bash shell prompt
 wordpress_id: 657
 wordpress_url: http://tartley.com/?p=657
-...
 ---
 
 Stick something like this in your .bashrc file:

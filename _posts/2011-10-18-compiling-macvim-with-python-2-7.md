@@ -42,7 +42,6 @@ tags: []
 title: Compiling MacVim with Python 2.7
 wordpress_id: 1355
 wordpress_url: http://tartley.com/?p=1355
-...
 ---
 
 I love the brilliant Vim plugin

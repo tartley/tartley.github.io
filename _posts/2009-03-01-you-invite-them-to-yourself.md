@@ -14,7 +14,6 @@ tags: []
 title: You Invite Them To Yourself
 wordpress_id: 685
 wordpress_url: http://tartley.com/?p=685
-...
 ---
 
 \[caption id="attachment\_686" align="alignnone" width="501"

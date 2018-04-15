@@ -101,7 +101,6 @@ tags: []
 title: 'Letter to my Member of European Parliament : Proposed Copyright Extension'
 wordpress_id: 717
 wordpress_url: http://www.tartley.com/?p=717
-...
 ---
 
 Thursday 19 March 2009

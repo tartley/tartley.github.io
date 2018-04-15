@@ -14,7 +14,6 @@ tags: []
 title: 'Broken Open: How Difficult Times Can Help Us Grow'
 wordpress_id: 63
 wordpress_url: http://tartley.com/?p=63
-...
 ---
 
 [![Broken

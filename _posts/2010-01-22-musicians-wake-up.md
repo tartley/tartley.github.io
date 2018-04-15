@@ -36,7 +36,6 @@ tags: []
 title: 'Musicians : wake up!'
 wordpress_id: 980
 wordpress_url: http://tartley.com/?p=980
-...
 ---
 
 I left this as a comment [somewhere

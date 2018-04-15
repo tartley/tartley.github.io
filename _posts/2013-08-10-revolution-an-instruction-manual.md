@@ -14,7 +14,6 @@ tags: []
 title: 'Revolution: An Instruction Manual'
 wordpress_id: 1458
 wordpress_url: http://tartley.com/?p=1458
-...
 ---
 
 When you have a government that operates without limits, who proclaims

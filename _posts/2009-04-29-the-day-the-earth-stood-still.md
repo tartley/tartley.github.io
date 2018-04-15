@@ -14,7 +14,6 @@ tags: []
 title: The Day The Earth Stood Still
 wordpress_id: 751
 wordpress_url: http://www.tartley.com/?p=751
-...
 ---
 
 <div>

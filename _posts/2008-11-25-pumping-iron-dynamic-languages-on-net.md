@@ -20,7 +20,6 @@ tags: []
 title: 'Pumping Iron : Dynamic Languages on .Net'
 wordpress_id: 456
 wordpress_url: http://www.tartley.com/?p=456
-...
 ---
 
 [![](http://www.tartley.com/wp-content/uploads/2008/11/oredev-banner.jpg "oredev-banner"){.alignnone

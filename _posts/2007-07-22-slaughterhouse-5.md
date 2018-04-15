@@ -17,7 +17,6 @@ tags: []
 title: Slaughterhouse 5
 wordpress_id: 180
 wordpress_url: http://tartley.com/?p=180
-...
 ---
 
 ![Slaughterhouse 5,

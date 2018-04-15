@@ -28,7 +28,6 @@ tags: []
 title: Evolved for suboptimal decision making?
 wordpress_id: 338
 wordpress_url: http://tartley.com/?p=338
-...
 ---
 
 [![](http://tartley.com/wp-content/uploads/2008/05/prisoners-dilemma.jpg "prisoners dilemma"){.alignleft

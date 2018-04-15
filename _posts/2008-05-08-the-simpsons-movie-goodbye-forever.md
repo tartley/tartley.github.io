@@ -48,7 +48,6 @@ tags: []
 title: The Simpsons Movie / Goodbye Forever
 wordpress_id: 300
 wordpress_url: http://tartley.com/?p=300
-...
 ---
 
 ![The Simpsons

@@ -73,7 +73,6 @@ title: 'MSWindows Programming : Propogating child process exit values out of .ba
   scripts'
 wordpress_id: 966
 wordpress_url: http://tartley.com/?p=966
-...
 ---
 
 "God *dammit*. Why won't you just DO what I WANT you hopeless pile of

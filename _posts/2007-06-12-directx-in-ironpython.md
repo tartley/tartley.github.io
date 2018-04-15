@@ -25,7 +25,6 @@ tags: []
 title: DirectX in IronPython
 wordpress_id: 141
 wordpress_url: http://tartley.com/?p=141
-...
 ---
 
 ![pyopengl-screen01.jpg](http://tartley.com/wp-content/uploads/2007/06/pyopengl-screen01.jpg){.floatleft}

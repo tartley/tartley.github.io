@@ -27,7 +27,6 @@ tags: []
 title: Set your Prompt
 wordpress_id: 863
 wordpress_url: http://tartley.com/?p=863
-...
 ---
 
 It's a tiny detail, but the default command-line prompt (on both Windows

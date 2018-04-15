@@ -22,7 +22,6 @@ tags: []
 title: Rosencrantz and Guildenstern Are Dead
 wordpress_id: 181
 wordpress_url: http://tartley.com/?p=181
-...
 ---
 
 [![Rosencrantz & Guildenstern Are

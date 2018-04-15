@@ -37,7 +37,6 @@ tags: []
 title: OpenGL Programming Guide, 6th ed.
 wordpress_id: 423
 wordpress_url: http://www.tartley.com/?p=423
-...
 ---
 
 ![](http://www.tartley.com/wp-content/uploads/2008/10/opengl-programming-guide.jpg "opengl-programming-guide"){.alignleft

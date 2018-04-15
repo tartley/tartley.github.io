@@ -14,7 +14,6 @@ tags: []
 title: Howto bundle binary dependancies with py2exe, et al.
 wordpress_id: 997
 wordpress_url: http://tartley.com/?p=997
-...
 ---
 
 Hey. I notice that

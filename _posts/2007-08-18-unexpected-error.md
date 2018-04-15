@@ -14,7 +14,6 @@ tags: []
 title: Unexpected Error
 wordpress_id: 202
 wordpress_url: http://tartley.com/?p=202
-...
 ---
 
 So I'm helping a friend create a small website. Casting around for

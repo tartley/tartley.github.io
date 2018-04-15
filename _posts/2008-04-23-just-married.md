@@ -14,7 +14,6 @@ tags: []
 title: Just Married!
 wordpress_id: 324
 wordpress_url: http://tartley.com/?p=324
-...
 ---
 
 [![Just

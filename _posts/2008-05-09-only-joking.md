@@ -14,7 +14,6 @@ tags: []
 title: Only Joking!
 wordpress_id: 334
 wordpress_url: http://tartley.com/?p=334
-...
 ---
 
 I haven't really stopped reading everyone else's posts. Cold turkey?

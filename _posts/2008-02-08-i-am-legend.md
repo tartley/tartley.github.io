@@ -14,7 +14,6 @@ tags: []
 title: I am Legend
 wordpress_id: 256
 wordpress_url: http://tartley.com/?p=256
-...
 ---
 
 [![I am

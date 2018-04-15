@@ -14,7 +14,6 @@ tags: []
 title: Children of Men
 wordpress_id: 87
 wordpress_url: http://tartley.com/?p=87
-...
 ---
 
 [![Children of

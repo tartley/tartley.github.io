@@ -153,7 +153,6 @@ tags: []
 title: A Guide to GIT using spatial analogies
 wordpress_id: 1267
 wordpress_url: http://tartley.com/?p=1267
-...
 ---
 
 Some developers find Git takes a little getting used to, claiming that

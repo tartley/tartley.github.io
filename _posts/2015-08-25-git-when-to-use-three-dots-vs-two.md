@@ -24,7 +24,6 @@ tags: []
 title: 'Git: When to use three dots vs two'
 wordpress_id: 1638
 wordpress_url: http://tartley.com/?p=1638
-...
 ---
 
 I endlessly misremember when to use '...' in git versus '..'. That ends

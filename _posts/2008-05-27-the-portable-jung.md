@@ -14,7 +14,6 @@ tags: []
 title: The Portable Jung
 wordpress_id: 342
 wordpress_url: http://tartley.com/?p=342
-...
 ---
 
 [![](http://tartley.com/wp-content/uploads/2008/05/portable-jung.jpg "The Portable Jung"){.alignleft

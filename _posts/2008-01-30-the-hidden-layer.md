@@ -19,7 +19,6 @@ tags: []
 title: The Hidden Layer
 wordpress_id: 241
 wordpress_url: http://tartley.com/?p=241
-...
 ---
 
 ![The Hidden

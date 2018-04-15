@@ -18,7 +18,6 @@ tags: []
 title: Denver stagathon
 wordpress_id: 318
 wordpress_url: http://tartley.com/?p=318
-...
 ---
 
 ![Nun of your

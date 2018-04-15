@@ -21,7 +21,6 @@ tags: []
 title: 'Othello : Donmar Warehouse'
 wordpress_id: 235
 wordpress_url: http://tartley.com/?p=235
-...
 ---
 
 ![Chiwetel Ejiofor's

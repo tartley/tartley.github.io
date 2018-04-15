@@ -14,7 +14,6 @@ tags: []
 title: The Doors of Perception
 wordpress_id: 521
 wordpress_url: http://www.tartley.com/?p=521
-...
 ---
 
 ![](http://www.tartley.com/wp-content/uploads/2008/11/doors-of-perception.jpg "doors-of-perception"){.alignleft

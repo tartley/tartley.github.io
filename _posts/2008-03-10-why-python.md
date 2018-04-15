@@ -14,7 +14,6 @@ tags: []
 title: Why Python?
 wordpress_id: 302
 wordpress_url: http://tartley.com/?p=302
-...
 ---
 
 ![Python](http://tartley.com/wp-content/uploads/2008/03/python.png){.alignleft

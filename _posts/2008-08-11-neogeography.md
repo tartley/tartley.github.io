@@ -17,7 +17,6 @@ tags: []
 title: Neogeography
 wordpress_id: 362
 wordpress_url: http://tartley.com/?p=362
-...
 ---
 
 [![](http://tartley.com/wp-content/uploads/2008/08/co-to-ca-road-trip-map.png "co-to-ca-road-trip-map"){.alignnone

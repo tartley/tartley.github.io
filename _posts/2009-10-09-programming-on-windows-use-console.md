@@ -40,7 +40,6 @@ tags: []
 title: 'Programming on Windows : Use Console'
 wordpress_id: 852
 wordpress_url: http://www.tartley.com/?p=852
-...
 ---
 
 Developing software on Microsoft Windows is a bloody awful experience

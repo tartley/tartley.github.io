@@ -19,7 +19,6 @@ tags: []
 title: Expert Python Programming
 wordpress_id: 609
 wordpress_url: http://tartley.com/?p=609
-...
 ---
 
 **[![expert-python-programming](http://tartley.com/wp-content/uploads/2009/01/expert-python-programming.jpg "expert-python-programming"){.alignleft

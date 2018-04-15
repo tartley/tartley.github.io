@@ -14,7 +14,6 @@ tags: []
 title: The Straight Story
 wordpress_id: 188
 wordpress_url: http://tartley.com/?p=188
-...
 ---
 
 ![The Straight

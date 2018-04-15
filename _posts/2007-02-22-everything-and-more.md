@@ -25,7 +25,6 @@ tags: []
 title: 'Everything and More: A compact history of &infin;'
 wordpress_id: 12
 wordpress_url: http://tartley.com/?p=12
-...
 ---
 
 *[![Cover: Everything and

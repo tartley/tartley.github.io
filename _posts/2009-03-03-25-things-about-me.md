@@ -28,7 +28,6 @@ tags: []
 title: 25 Things About Me
 wordpress_id: 669
 wordpress_url: http://tartley.com/?p=669
-...
 ---
 
 [Facebook meme](http://www.facebook.com/note.php?note_id=55945718188)

@@ -34,7 +34,6 @@ tags: []
 title: Python 2.7 regular expression cheatsheet
 wordpress_id: 1349
 wordpress_url: http://tartley.com/?p=1349
-...
 ---
 
 Couldn't find one of these, so I whipped one up.

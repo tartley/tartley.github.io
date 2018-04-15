@@ -42,7 +42,6 @@ tags: []
 title: Python port of Modern 3D Graphics using OpenGL tutorial
 wordpress_id: 1312
 wordpress_url: http://tartley.com/?p=1312
-...
 ---
 
 To my knowledge, there are three online OpenGL tutorials which stand

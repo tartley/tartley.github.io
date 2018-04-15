@@ -43,7 +43,6 @@ tags: []
 title: My own competency
 wordpress_id: 1059
 wordpress_url: http://tartley.com/?p=1059
-...
 ---
 
 My single degree was in Electronics and Physics, so although that

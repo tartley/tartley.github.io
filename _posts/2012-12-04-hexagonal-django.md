@@ -147,7 +147,6 @@ tags: []
 title: Hexagonal Django
 wordpress_id: 1404
 wordpress_url: http://tartley.com/?p=1404
-...
 ---
 
 The last few weeks I've been thinking about the architectural pattern

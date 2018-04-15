@@ -30,7 +30,6 @@ tags: []
 title: Studencki Festiwal Informatyczny 2008
 wordpress_id: 305
 wordpress_url: http://tartley.com/?p=305
-...
 ---
 
 I had the good fortune to attend the [Academic IT

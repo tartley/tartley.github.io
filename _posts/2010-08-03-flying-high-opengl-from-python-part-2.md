@@ -34,7 +34,6 @@ tags: []
 title: 'Flying High: OpenGL from Python, Part 2'
 wordpress_id: 1207
 wordpress_url: http://tartley.com/?p=1207
-...
 ---
 
 *This is second in a series of articles about algorithmically generating

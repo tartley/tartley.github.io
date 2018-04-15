@@ -14,7 +14,6 @@ tags: []
 title: Halting State
 wordpress_id: 368
 wordpress_url: http://tartley.com/?p=368
-...
 ---
 
 [![](http://tartley.com/wp-content/uploads/2008/08/halting-state.jpg "halting-state"){.alignleft

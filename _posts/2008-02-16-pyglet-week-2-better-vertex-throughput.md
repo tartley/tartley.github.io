@@ -180,7 +180,6 @@ tags: []
 title: 'pyglet week 2: Better Vertex Throughput'
 wordpress_id: 264
 wordpress_url: http://tartley.com/?p=264
-...
 ---
 
 In last week's [2D Graphics With pyglet and

@@ -51,7 +51,6 @@ tags: []
 title: Acceptance testing a pyglet application
 wordpress_id: 353
 wordpress_url: http://www.tartley.com/?p=353
-...
 ---
 
 I've been trying to create a simple acceptance test for a

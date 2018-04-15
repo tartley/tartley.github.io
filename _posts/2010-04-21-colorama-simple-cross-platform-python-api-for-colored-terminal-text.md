@@ -55,7 +55,6 @@ tags: []
 title: 'colorama: Simple cross-platform Python API for colored terminal text'
 wordpress_id: 1062
 wordpress_url: http://tartley.com/?p=1062
-...
 ---
 
 Announcing new Python package, colorama:[\

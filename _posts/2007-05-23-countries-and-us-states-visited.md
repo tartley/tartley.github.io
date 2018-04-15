@@ -38,7 +38,6 @@ tags: []
 title: Countries and US States visited
 wordpress_id: 107
 wordpress_url: http://tartley.com/?p=107
-...
 ---
 
 The old tartley.com used to have one of these, so here's a quickie

@@ -60,7 +60,6 @@ tags: []
 title: OpenID works!
 wordpress_id: 386
 wordpress_url: http://www.tartley.com/?p=386
-...
 ---
 
 ![](http://www.tartley.com/wp-content/uploads/2008/09/openid.jpeg "openid"){.alignleft

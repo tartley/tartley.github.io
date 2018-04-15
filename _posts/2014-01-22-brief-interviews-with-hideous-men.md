@@ -19,7 +19,6 @@ tags: []
 title: Brief Interviews with Hideous Men
 wordpress_id: 1492
 wordpress_url: http://tartley.com/?p=1492
-...
 ---
 
 [![brief-interviews-with-hideous-men](http://tartley.com/wp-content/uploads/2014/01/brief-interviews-with-hideous-men.jpg){.alignleft

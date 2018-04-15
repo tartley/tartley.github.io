@@ -58,7 +58,6 @@ tags: []
 title: Chaining a sequence of generators
 wordpress_id: 1471
 wordpress_url: http://tartley.com/?p=1471
-...
 ---
 
 I often gravitate towards solutions using a series of chained

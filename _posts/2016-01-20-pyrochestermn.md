@@ -14,7 +14,6 @@ tags: []
 title: PyRochesterMN
 wordpress_id: 1651
 wordpress_url: http://tartley.com/?p=1651
-...
 ---
 
 Announcing the world's newest Python User Group, PyRochesterMN, based in

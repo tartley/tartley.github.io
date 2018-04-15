@@ -33,7 +33,6 @@ tags: []
 title: Someone Comes to Town, Someone Leaves Town
 wordpress_id: 258
 wordpress_url: http://tartley.com/?p=258
-...
 ---
 
 [![Someone Comes to Town, Someone Leaves

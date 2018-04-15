@@ -20,7 +20,6 @@ tags: []
 title: When Google Maps goes bad...
 wordpress_id: 251
 wordpress_url: http://tartley.com/?p=251
-...
 ---
 
 Had me cackling all over the office. Bloody brilliant.

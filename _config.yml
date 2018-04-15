@@ -25,7 +25,8 @@ github_username: tartley
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme:
+remote_theme: lorepirri/cayman-blog
 plugins:
   - jekyll-feed
 

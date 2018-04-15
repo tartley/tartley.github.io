@@ -24,7 +24,6 @@ tags: []
 title: I am such a child
 wordpress_id: 1126
 wordpress_url: http://tartley.com/?p=1126
-...
 ---
 
 Dear Julio,

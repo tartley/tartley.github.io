@@ -19,7 +19,6 @@ tags: []
 title: 'More Colored Terminal text on Windows: AnsiCon'
 wordpress_id: 1108
 wordpress_url: http://tartley.com/?p=1108
-...
 ---
 
 A reminder for myself:

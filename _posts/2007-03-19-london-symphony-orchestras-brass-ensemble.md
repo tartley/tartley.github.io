@@ -14,7 +14,6 @@ tags: []
 title: London Symphony Orchestra's Brass Ensemble
 wordpress_id: 56
 wordpress_url: http://tartley.com/?p=56
-...
 ---
 
 The LSO is enjoying a sustained peak of success, and is apparently

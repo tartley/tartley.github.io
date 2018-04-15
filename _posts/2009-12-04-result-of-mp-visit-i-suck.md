@@ -156,7 +156,6 @@ tags: []
 title: Result of MP visit - I suck
 wordpress_id: 934
 wordpress_url: http://tartley.com/?p=934
-...
 ---
 
 So earlier tonight I turned up at the monthly 'surgery' of my MP, Frank

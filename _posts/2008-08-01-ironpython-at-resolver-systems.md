@@ -21,7 +21,6 @@ tags: []
 title: IronPython at Resolver Systems
 wordpress_id: 360
 wordpress_url: http://tartley.com/?p=360
-...
 ---
 
 [![Resolver Systems

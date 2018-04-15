@@ -28,7 +28,6 @@ tags: []
 title: Opengl Shading Language
 wordpress_id: 761
 wordpress_url: http://www.tartley.com/?p=761
-...
 ---
 
 \[caption id="attachment\_762" align="alignleft" width="183"\][![OpenGL

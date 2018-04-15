@@ -53,7 +53,6 @@ tags: []
 title: Acceptance Testing .NET Applications using IronPython
 wordpress_id: 1018
 wordpress_url: http://tartley.com/?p=1018
-...
 ---
 
 > The following was originally published in the excellent [Python

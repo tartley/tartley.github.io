@@ -36,7 +36,6 @@ tags: []
 title: Testwatcher
 wordpress_id: 755
 wordpress_url: http://www.tartley.com/?p=755
-...
 ---
 
 [Sometimes when programming I like to leave unit tests running

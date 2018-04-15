@@ -32,7 +32,6 @@ tags: []
 title: My Fonts Look Crap. I blame Windows and ATI.
 wordpress_id: 959
 wordpress_url: http://tartley.com/?p=959
-...
 ---
 
 I know, I *know*. But I use Windows for 8 hours a day at work. So what

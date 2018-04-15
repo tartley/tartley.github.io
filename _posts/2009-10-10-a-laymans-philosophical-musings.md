@@ -100,7 +100,6 @@ tags: []
 title: A Layman's Philosophical Musings
 wordpress_id: 874
 wordpress_url: http://tartley.com/?p=874
-...
 ---
 
 A quick response to to polymath Chris DeLeon's thoughtful post

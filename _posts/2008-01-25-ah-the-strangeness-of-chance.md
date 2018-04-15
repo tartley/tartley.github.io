@@ -17,7 +17,6 @@ tags: []
 title: Ah... the strangeness of chance
 wordpress_id: 238
 wordpress_url: http://tartley.com/?p=238
-...
 ---
 
 Milk and cookies. Browser cookies to be precise. Not nutty or

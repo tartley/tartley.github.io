@@ -14,7 +14,6 @@ tags: []
 title: Shadow of the Colossus
 wordpress_id: 214
 wordpress_url: http://www.tartley.com/?p=214
-...
 ---
 
 \[caption id="attachment\_641" align="alignleft" width="300"

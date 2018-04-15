@@ -33,7 +33,6 @@ tags: [game, Python, 2d, rigid body, physics, Graphics, chipmunk, pymunk, pyglet
 title: 'Sole Scion project v0.1 : A 2D rigid-body Python game'
 wordpress_id: 349
 wordpress_url: http://tartley.com/?p=349
-...
 ---
 
 [![screenshot Sole Scion

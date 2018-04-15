@@ -53,7 +53,6 @@ tags: []
 title: History of Western Philosophy
 wordpress_id: 194
 wordpress_url: http://tartley.com/?p=194
-...
 ---
 
 ![historyofwesternphilosophy.jpg](http://tartley.com/wp-content/uploads/2007/07/historyofwesternphilosophy.jpg){.alignleft

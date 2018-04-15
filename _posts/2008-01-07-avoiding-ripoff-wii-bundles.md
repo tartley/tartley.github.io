@@ -30,7 +30,6 @@ tags: []
 title: Avoiding Ripoff Wii Bundles
 wordpress_id: 227
 wordpress_url: http://tartley.com/?p=227
-...
 ---
 
 ![Naked

@@ -14,7 +14,6 @@ tags: []
 title: On Estimates
 wordpress_id: 787
 wordpress_url: http://www.tartley.com/?p=787
-...
 ---
 
 There is a lot of room for miscommunication about estimates, as people

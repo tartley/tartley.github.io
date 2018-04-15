@@ -14,7 +14,6 @@ tags: []
 title: GoDaddy sucks
 wordpress_id: 4
 wordpress_url: http://tartley.com/?p=4
-...
 ---
 
 In the 36 hours since embarking upon this ill-considered plan to

@@ -33,7 +33,6 @@ tags: []
 title: The ACM is pissing in the well
 wordpress_id: 940
 wordpress_url: http://tartley.com/?p=940
-...
 ---
 
 An open letter I have sent to the ACM.

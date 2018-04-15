@@ -48,7 +48,6 @@ tags: []
 title: Lappy sketch lives!
 wordpress_id: 248
 wordpress_url: http://tartley.com/?p=248
-...
 ---
 
 [![Lappy](http://tartley.com/wp-content/uploads/2008/02/lappy.thumbnail.jpg){.alignleft}](http://tartley.com/?attachment_id=249 "Lappy"){.floatleft}My

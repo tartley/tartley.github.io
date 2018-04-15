@@ -91,7 +91,6 @@ tags: []
 title: 'pyglet week 3 : <i>Some Pretty Flowers</i>'
 wordpress_id: 285
 wordpress_url: http://tartley.com/?p=285
-...
 ---
 
 This is just a refinement of [last week's

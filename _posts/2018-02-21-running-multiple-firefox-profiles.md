@@ -14,9 +14,7 @@ tags: []
 title: Running Multiple Firefox Profiles on Linux
 wordpress_id: 1712
 wordpress_url: http://tartley.com/?p=1712
-...
 ---
-
 I recently switched from Chrome to Firefox. It's so *fast*, and easier
 to trust that Mozilla has my privacy and interests at heart than Google
 does.

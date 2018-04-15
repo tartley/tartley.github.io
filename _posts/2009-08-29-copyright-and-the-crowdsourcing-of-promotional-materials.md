@@ -14,7 +14,6 @@ tags: []
 title: Copyright and the crowdsourcing of promotional materials
 wordpress_id: 828
 wordpress_url: http://www.tartley.com/?p=828
-...
 ---
 
 There was [a

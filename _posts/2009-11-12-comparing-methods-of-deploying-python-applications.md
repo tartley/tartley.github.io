@@ -43,7 +43,6 @@ tags: []
 title: Comparing methods of deploying Python applications
 wordpress_id: 878
 wordpress_url: http://tartley.com/?p=878
-...
 ---
 
 I had [a cry](http://tartley.com/?p=843) last month about deploying a

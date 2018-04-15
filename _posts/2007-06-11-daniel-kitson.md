@@ -14,7 +14,6 @@ tags: []
 title: Daniel Kitson
 wordpress_id: 132
 wordpress_url: http://tartley.com/?p=132
-...
 ---
 
 ![regentsparkopenairtheatre.jpg](http://tartley.com/wp-content/uploads/2007/06/regentsparkopenairtheatre.jpg)\

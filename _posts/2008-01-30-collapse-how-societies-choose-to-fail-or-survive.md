@@ -27,7 +27,6 @@ tags: []
 title: 'Collapse: How Societies Choose to Fail or Survive'
 wordpress_id: 237
 wordpress_url: http://tartley.com/?p=237
-...
 ---
 
 ![collapse.jpg](http://tartley.com/wp-content/uploads/2008/01/collapse.jpg "collapse.jpg"){.alignleft

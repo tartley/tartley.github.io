@@ -22,7 +22,6 @@ tags: []
 title: The Future of Twitter
 wordpress_id: 712
 wordpress_url: http://www.tartley.com/?p=712
-...
 ---
 
 An unpolished quickie : I'm typing over a dinner plate.

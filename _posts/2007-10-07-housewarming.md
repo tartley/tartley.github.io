@@ -20,7 +20,6 @@ tags: []
 title: Housewarming
 wordpress_id: 212
 wordpress_url: http://www.tartley.com/?p=212
-...
 ---
 
 Consider yourself invited.

@@ -21,7 +21,6 @@ tags: []
 title: Do a bit of helping out at EuroPython
 wordpress_id: 776
 wordpress_url: http://www.tartley.com/?p=776
-...
 ---
 
 Are you a [Python](http://python.org) geek?

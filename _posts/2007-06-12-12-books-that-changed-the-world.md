@@ -14,7 +14,6 @@ tags: []
 title: 12 Books That Changed The World
 wordpress_id: 136
 wordpress_url: http://tartley.com/?p=136
-...
 ---
 
 <div class="floatleft">

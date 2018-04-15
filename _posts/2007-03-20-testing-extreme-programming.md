@@ -23,7 +23,6 @@ tags: []
 title: Testing Extreme Programming
 wordpress_id: 60
 wordpress_url: http://tartley.com/?p=60
-...
 ---
 
 [![Testing Extreme

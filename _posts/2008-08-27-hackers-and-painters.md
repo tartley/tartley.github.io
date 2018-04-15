@@ -14,7 +14,6 @@ tags: []
 title: Hackers and Painters
 wordpress_id: 370
 wordpress_url: http://tartley.com/?p=370
-...
 ---
 
 [![](http://tartley.com/wp-content/uploads/2008/08/hackers__painters2.jpg "hackers and painters"){.alignleft

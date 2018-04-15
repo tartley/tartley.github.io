@@ -14,7 +14,6 @@ tags: []
 title: Northern Exposure
 wordpress_id: 198
 wordpress_url: http://tartley.com/?p=198
-...
 ---
 
 [Rufus comments](http://howithappened.com/2007/07/pitmatic.html) on

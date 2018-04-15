@@ -14,7 +14,6 @@ tags: []
 title: 'This Gaming Life: Travels in Three Cities'
 wordpress_id: 1563
 wordpress_url: http://tartley.com/?p=1563
-...
 ---
 
 ![gaminglife](http://tartley.com/wp-content/uploads/2014/02/gaminglife.jpg){.size-full

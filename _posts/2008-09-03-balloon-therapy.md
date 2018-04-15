@@ -14,7 +14,6 @@ tags: []
 title: Balloon Therapy
 wordpress_id: 376
 wordpress_url: http://www.tartley.com/?p=376
-...
 ---
 
 ![](http://www.tartley.com/wp-content/uploads/2008/09/balloon.jpg "balloon"){.alignleft

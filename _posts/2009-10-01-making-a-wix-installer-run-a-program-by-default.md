@@ -31,7 +31,6 @@ tags: []
 title: Making a wix installer run a program by default
 wordpress_id: 847
 wordpress_url: http://www.tartley.com/?p=847
-...
 ---
 
 ***Guest post by my least favourite colleague, Tom.***

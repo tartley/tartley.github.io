@@ -31,7 +31,6 @@ tags: []
 title: p56 from <the nearest book>
 wordpress_id: 446
 wordpress_url: http://www.tartley.com/?p=446
-...
 ---
 
 Meme from [unnofficial planet Python:](http://www.planetpython.org/)

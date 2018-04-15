@@ -116,7 +116,6 @@ tags: []
 title: 'pip install : Lightspeed and Bulletproof'
 wordpress_id: 1423
 wordpress_url: http://tartley.com/?p=1423
-...
 ---
 
 I saw a post about [speeding up the Python packaging command "pip

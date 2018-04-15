@@ -20,7 +20,6 @@ tags: []
 title: My Cacophony
 wordpress_id: 164
 wordpress_url: http://tartley.com/?p=164
-...
 ---
 
 Google Calendar tells me that I've now had 8 piano lessons with the

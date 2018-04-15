@@ -22,7 +22,6 @@ tags: []
 title: Random Wallpaper for Linux Gnome Desktop
 wordpress_id: 278
 wordpress_url: http://tartley.com/?p=278
-...
 ---
 
 ![Desktop

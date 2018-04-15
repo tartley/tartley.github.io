@@ -14,7 +14,6 @@ tags: []
 title: Automate Gnome keybindings
 wordpress_id: 1701
 wordpress_url: http://tartley.com/?p=1701
-...
 ---
 
 Sick of manual GUI twiddling to fix inconsistent keybindings on various

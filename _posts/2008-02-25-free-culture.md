@@ -23,7 +23,6 @@ tags: []
 title: Free Culture
 wordpress_id: 222
 wordpress_url: http://tartley.com/?p=222
-...
 ---
 
 ![Free

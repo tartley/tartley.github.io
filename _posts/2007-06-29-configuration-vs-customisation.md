@@ -14,7 +14,6 @@ tags: []
 title: Configuration vs Customisation
 wordpress_id: 153
 wordpress_url: http://tartley.com/?p=153
-...
 ---
 
 I loved a [recent

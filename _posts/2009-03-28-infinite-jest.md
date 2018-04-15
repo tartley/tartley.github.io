@@ -32,7 +32,6 @@ tags: []
 title: Infinite Jest
 wordpress_id: 665
 wordpress_url: http://tartley.com/?p=665
-...
 ---
 
 \[caption id="attachment\_666" align="alignleft"

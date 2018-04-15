@@ -23,7 +23,6 @@ tags: []
 title: 'Perl: parody of itself'
 wordpress_id: 197
 wordpress_url: http://tartley.com/?p=197
-...
 ---
 <div style="background: #fff; padding:1em;">
 

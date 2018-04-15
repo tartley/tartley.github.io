@@ -49,7 +49,6 @@ tags: []
 title: Benjamin Franklin's Autobiography
 wordpress_id: 217
 wordpress_url: http://tartley.com/?p=217
-...
 ---
 
 ![iphone.jpg](http://tartley.com/wp-content/uploads/2007/12/iphone.jpg){.alignleft

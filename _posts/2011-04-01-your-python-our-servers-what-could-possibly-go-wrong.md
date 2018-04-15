@@ -83,7 +83,6 @@ tags: []
 title: 'Your Python, Our Servers : What could possibly go wrong?'
 wordpress_id: 1306
 wordpress_url: http://tartley.com/?p=1306
-...
 ---
 
 We've been brainstorming for products to build. What do you think of

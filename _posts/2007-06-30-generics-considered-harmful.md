@@ -64,7 +64,6 @@ tags: []
 title: Generics Considered Harmful
 wordpress_id: 154
 wordpress_url: http://tartley.com/?p=154
-...
 ---
 
 Ken Arnold posted about the [problems with

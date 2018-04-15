@@ -64,7 +64,6 @@ tags: []
 title: Rerun unit tests whenever files update
 wordpress_id: 1247
 wordpress_url: http://tartley.com/?p=1247
-...
 ---
 
 *In which I once again indulge my obscure command-line fetish.\

@@ -24,7 +24,6 @@ tags: []
 title: A Science-Fiction Omnibus
 wordpress_id: 578
 wordpress_url: http://www.tartley.com/?p=578
-...
 ---
 
 ![a-science-fiction-omnibus](http://www.tartley.com/wp-content/uploads/2008/12/a-science-fiction-omnibus.jpg "a-science-fiction-omnibus"){.alignleft

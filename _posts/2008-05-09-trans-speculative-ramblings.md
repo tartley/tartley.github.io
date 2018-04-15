@@ -14,7 +14,6 @@ tags: []
 title: Trans-Speculative Ramblings
 wordpress_id: 162
 wordpress_url: http://tartley.com/?p=162
-...
 ---
 
 If you're not a wild-eyed loon, you're unlikely to appreciate this post.

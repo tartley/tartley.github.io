@@ -14,7 +14,6 @@ tags: []
 title: City at the End of Time
 wordpress_id: 408
 wordpress_url: http://www.tartley.com/?p=408
-...
 ---
 
 ![city-at-the-end-of-time](http://www.tartley.com/wp-content/uploads/2008/12/city-at-the-end-of-time.jpg "city-at-the-end-of-time"){.alignleft

@@ -53,7 +53,6 @@ tags: []
 title: OpenGL Draw API Visualised
 wordpress_id: 1045
 wordpress_url: http://tartley.com/?p=1045
-...
 ---
 
 To help me grok and remember the OpenGL 3.3 draw API, I drew them in a

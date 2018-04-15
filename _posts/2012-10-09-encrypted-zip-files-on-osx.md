@@ -58,7 +58,6 @@ tags: []
 title: Encrypted zip files on OSX
 wordpress_id: 1392
 wordpress_url: http://tartley.com/?p=1392
-...
 ---
 
 My passwords and other miscellany are in a plain text file within an

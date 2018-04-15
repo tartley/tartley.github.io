@@ -81,7 +81,6 @@ tags: []
 title: 2D Graphics With pyglet and OpenGL
 wordpress_id: 250
 wordpress_url: http://tartley.com/?p=250
-...
 ---
 
 ![Pyglet

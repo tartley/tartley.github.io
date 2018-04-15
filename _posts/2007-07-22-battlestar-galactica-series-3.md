@@ -14,7 +14,6 @@ tags: []
 title: 'Battlestar Galactica: Series 3'
 wordpress_id: 190
 wordpress_url: http://tartley.com/?p=190
-...
 ---
 
 ![â€œItâ€™s gonna be

@@ -32,7 +32,6 @@ tags: []
 title: Launch Gitk displaying all branches
 wordpress_id: 1290
 wordpress_url: http://tartley.com/?p=1290
-...
 ---
 
 **Update:** All of the below is made totally redundant by simply using

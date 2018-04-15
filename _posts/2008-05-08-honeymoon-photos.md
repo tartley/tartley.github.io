@@ -18,7 +18,6 @@ tags: []
 title: Honeymoon photos
 wordpress_id: 333
 wordpress_url: http://tartley.com/?p=333
-...
 ---
 
 Some honeymoon photos are online:

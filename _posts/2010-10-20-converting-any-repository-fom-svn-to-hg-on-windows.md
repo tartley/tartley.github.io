@@ -36,7 +36,6 @@ tags: []
 title: Converting any repository from Svn to Hg on Windows
 wordpress_id: 1252
 wordpress_url: http://tartley.com/?p=1252
-...
 ---
 
 There's been a lot of

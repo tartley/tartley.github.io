@@ -20,7 +20,6 @@ tags: []
 title: The Deluded Ramblings of a Rather Odd Person
 wordpress_id: 73
 wordpress_url: http://tartley.com/?p=73
-...
 ---
 
 Hello everybody - I think you are all lovely. Would you like to come for

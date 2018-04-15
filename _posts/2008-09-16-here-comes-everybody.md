@@ -14,7 +14,6 @@ tags: []
 title: Here Comes Everybody
 wordpress_id: 380
 wordpress_url: http://www.tartley.com/?p=380
-...
 ---
 
 \[caption id="attachment\_381" align="alignleft" width="300"

@@ -19,7 +19,6 @@ tags: []
 title: The Fountain
 wordpress_id: 39
 wordpress_url: http://tartley.com/?p=39
-...
 ---
 
 [![Tommy the 25th century spacefaring guru prepares for the ultimate

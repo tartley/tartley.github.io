@@ -25,7 +25,6 @@ tags: []
 title: National Portrait Gallery Photographic Portrait Prize 2007
 wordpress_id: 233
 wordpress_url: http://tartley.com/?p=233
-...
 ---
 
 ![Sophia](http://tartley.com/wp-content/uploads/2008/01/pppsophia.jpg){.alignleft

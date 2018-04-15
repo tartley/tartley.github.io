@@ -14,7 +14,6 @@ tags: []
 title: 'Rhythmbox plugin: "Announce"'
 wordpress_id: 1663
 wordpress_url: http://tartley.com/?p=1663
-...
 ---
 
 I use the Linux music player "Rhythmbox". This morning I wrote a plugin

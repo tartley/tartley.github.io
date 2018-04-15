@@ -14,7 +14,6 @@ tags: []
 title: Where you gonna be?
 wordpress_id: 317
 wordpress_url: http://tartley.com/?p=317
-...
 ---
 
 []{.floatleft}[[](http://www.vimeo.com/796747/l:embed_796747)]{.floatleft}

@@ -57,7 +57,6 @@ tags: []
 title: Actual vs Perceived threats (aka People are Crazy)
 wordpress_id: 284
 wordpress_url: http://tartley.com/?p=284
-...
 ---
 
 ![Actual vs Perceived

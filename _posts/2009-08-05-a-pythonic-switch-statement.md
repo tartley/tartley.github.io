@@ -163,7 +163,6 @@ tags: []
 title: A Pythonic 'switch' statement
 wordpress_id: 805
 wordpress_url: http://www.tartley.com/?p=805
-...
 ---
 
 I've recently had the pleasure of providing some assistance to my lovely

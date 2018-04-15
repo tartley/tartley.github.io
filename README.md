@@ -48,6 +48,65 @@ And fails because I need an ssh tunnel to access the mysql instance:
 
 ## Choose new theme on github
 
-and I need to install that theme locally to preview:
+and I need to install that theme locally to preview
 
-    
+
+# TODO ########################################################################
+
+* change theme Cayman blog?
+
+* post exerpt in home
+
+* post categories in post
+
+* post categories in home
+
+* images
+
+* Can we preserve old post urls?
+    Post prefix data includes wordpress id
+
+* syntax highlighting
+
+* site title / header / footer / about
+
+* labouriously check all posts
+
+* Point domain name to the new github pages site.
+
+* Migrate ancient backed-up tartley.com content to github pages
+
+* Drop webfaction?
+  Are there other services of theirs that I need?
+  * email
+  Do any of my secondary sites need to stay up?
+  Grab the content for secondary sites.
+
+* https:
+  letsencrypt:
+  Figure out how to use certbot with my webfaction account
+  ie. what webserver does it use?
+
+# Done ########################################################################
+
+* backup
+
+* What static site generator should I use?
+    Jekyl
+
+* Can I host somewhere free, like github?
+    Yes, github pages
+    which has special support for jekyll
+
+* Can that go behind tartley.com?
+    Yes, with suitable domain config
+
+* Create a visible Jekyll site
+
+* Migrate wordpress content into github pages
+
+* Convert html posts into .md
+
+* do i need to do over the html to md conversion setting explicit_end='---' ?
+
+* check those unicode chars in old titles

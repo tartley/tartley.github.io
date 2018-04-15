@@ -29,7 +29,6 @@ tags: []
 title: WordPress providing categorised RSS feeds
 wordpress_id: 42
 wordpress_url: http://tartley.com/?p=42
-...
 ---
 
 Apologies in advance to the [London Python](http://londonpython.org.uk/)

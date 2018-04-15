@@ -45,7 +45,6 @@ tags: []
 title: Loving EuroPython Tutorials
 wordpress_id: 1137
 wordpress_url: http://tartley.com/?p=1137
-...
 ---
 
 I've been loving the two days of tutorials preceding the EuroPython

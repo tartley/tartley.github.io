@@ -18,7 +18,6 @@ tags: []
 title: 'London Geek Night : Game Dev'
 wordpress_id: 451
 wordpress_url: http://www.tartley.com/?p=451
-...
 ---
 
 Last night was Game Dev night at the London Geek meet in the

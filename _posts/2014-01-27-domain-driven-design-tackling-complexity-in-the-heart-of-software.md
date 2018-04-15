@@ -14,7 +14,6 @@ tags: []
 title: 'Domain Driven Design: Tackling Complexity in the Heart of Software'
 wordpress_id: 1547
 wordpress_url: http://tartley.com/?p=1547
-...
 ---
 
 *[![domaindrivendesign](http://tartley.com/wp-content/uploads/2014/01/domaindrivendesign.jpg){.size-full

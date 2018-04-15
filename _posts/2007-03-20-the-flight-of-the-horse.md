@@ -14,7 +14,6 @@ tags: []
 title: The Flight of the Horse
 wordpress_id: 59
 wordpress_url: http://tartley.com/?p=59
-...
 ---
 
 ![The Flight of the

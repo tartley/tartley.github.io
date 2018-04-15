@@ -304,7 +304,6 @@ tags: []
 title: Python Deployment Sucks
 wordpress_id: 843
 wordpress_url: http://www.tartley.com/?p=843
-...
 ---
 
 I don't want to whinge just for the sake of whinging. But I think it's

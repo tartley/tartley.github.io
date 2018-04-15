@@ -55,7 +55,6 @@ tags: []
 title: PyCon 2008, Chicago, USA
 wordpress_id: 312
 wordpress_url: http://tartley.com/?p=312
-...
 ---
 
 ![PyCon USA

@@ -33,7 +33,6 @@ tags: []
 title: Lions for Lambs
 wordpress_id: 309
 wordpress_url: http://tartley.com/?p=309
-...
 ---
 
 ![Lions for

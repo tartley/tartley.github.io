@@ -111,7 +111,6 @@ tags: []
 title: Writing C/C++ on Windows using g++ under Cygwin
 wordpress_id: 358
 wordpress_url: http://www.tartley.com/?p=358
-...
 ---
 
 I wrote this ages ago, for the benefit of a Windows user who wanted

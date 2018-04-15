@@ -14,7 +14,6 @@ tags: []
 title: The Hothouse
 wordpress_id: 193
 wordpress_url: http://tartley.com/?p=193
-...
 ---
 
 ![The

@@ -20,7 +20,6 @@ tags: []
 title: Quote from Tim Bray
 wordpress_id: 1016
 wordpress_url: http://tartley.com/?p=1016
-...
 ---
 
 > The iPhone vision of the mobile Internet's future omits controversy,

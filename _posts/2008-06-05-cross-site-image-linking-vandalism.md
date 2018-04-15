@@ -17,7 +17,6 @@ tags: [gumby, Web, image, linking, vandalism]
 title: Cross-site image linking vandalism
 wordpress_id: 344
 wordpress_url: http://tartley.com/?p=344
-...
 ---
 
 ![New Super Mario Brothers... or is

@@ -14,7 +14,6 @@ tags: []
 title: For anyone who doesn't know yet...
 wordpress_id: 201
 wordpress_url: http://tartley.com/?p=201
-...
 ---
 
 [![Flower. Hand.

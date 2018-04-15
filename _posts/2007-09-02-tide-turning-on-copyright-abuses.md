@@ -14,7 +14,6 @@ tags: []
 title: Tide Turning on Copyright Abuses?
 wordpress_id: 205
 wordpress_url: http://www.tartley.com/?p=205
-...
 ---
 
 ![movie copyright

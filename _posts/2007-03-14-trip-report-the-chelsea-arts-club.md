@@ -20,7 +20,6 @@ tags: []
 title: 'Trip Report: The Chelsea Arts Club'
 wordpress_id: 44
 wordpress_url: http://tartley.com/?p=44
-...
 ---
 
 ![Portrait of the

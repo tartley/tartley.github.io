@@ -26,7 +26,6 @@ tags: []
 title: Fallacious Affordance
 wordpress_id: 6
 wordpress_url: http://tartley.com/?p=6
-...
 ---
 
 Extensive research this week has confirmed a truth that I can no longer

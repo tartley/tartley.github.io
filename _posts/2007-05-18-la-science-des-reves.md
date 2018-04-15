@@ -14,7 +14,6 @@ tags: []
 title: La Science des R&ecirc;ves
 wordpress_id: 103
 wordpress_url: http://tartley.com/?p=103
-...
 ---
 
 [![Giant

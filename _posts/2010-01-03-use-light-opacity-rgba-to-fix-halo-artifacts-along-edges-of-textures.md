@@ -14,7 +14,6 @@ tags: []
 title: Use light-opacity RGBA to fix halo artifacts along edges of textures
 wordpress_id: 945
 wordpress_url: http://tartley.com/?p=945
-...
 ---
 
 This is a quick post in response to the Vimeo video post [Getting Rid of

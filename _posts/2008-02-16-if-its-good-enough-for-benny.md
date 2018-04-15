@@ -27,7 +27,6 @@ tags: []
 title: If it's good enough for Benny...
 wordpress_id: 275
 wordpress_url: http://tartley.com/?p=275
-...
 ---
 
 [These

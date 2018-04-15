@@ -77,7 +77,6 @@ tags: []
 title: 'Thief Level : Week 2'
 wordpress_id: 1002
 wordpress_url: http://tartley.com/?p=1002
-...
 ---
 
 This week I spent a little while considering the backstory of the level,

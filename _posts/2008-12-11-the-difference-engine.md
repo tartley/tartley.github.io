@@ -14,7 +14,6 @@ tags: []
 title: The Difference Engine
 wordpress_id: 567
 wordpress_url: http://www.tartley.com/?p=567
-...
 ---
 
 ![differenceengine](http://www.tartley.com/wp-content/uploads/2008/12/differenceengine.jpg "differenceengine"){.alignleft

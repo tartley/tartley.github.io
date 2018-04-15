@@ -14,7 +14,6 @@ tags: []
 title: We'll parallelise your long-running test suite on EC2
 wordpress_id: 1310
 wordpress_url: http://tartley.com/?p=1310
-...
 ---
 
 Another brainstorming project idea:

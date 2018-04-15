@@ -14,7 +14,6 @@ tags: []
 title: Kill Bill (Vol 2)
 wordpress_id: 184
 wordpress_url: http://tartley.com/?p=184
-...
 ---
 
 ![Kill Bill Vol

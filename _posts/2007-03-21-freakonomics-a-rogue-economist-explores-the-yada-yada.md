@@ -14,7 +14,6 @@ tags: []
 title: 'Freakonomics: A Rogue Economist Explores the yada yada'
 wordpress_id: 68
 wordpress_url: http://tartley.com/?p=68
-...
 ---
 
 [![Rogue economist

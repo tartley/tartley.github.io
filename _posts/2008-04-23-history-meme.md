@@ -14,7 +14,6 @@ tags: []
 title: History meme
 wordpress_id: 323
 wordpress_url: http://tartley.com/?p=323
-...
 ---
 
     $ history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}' | sort -rn | head

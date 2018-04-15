@@ -18,7 +18,6 @@ tags: []
 title: Onegin vs New Super Mario Bros
 wordpress_id: 69
 wordpress_url: http://tartley.com/?p=69
-...
 ---
 
 [[![Onegin](http://tartley.com/wp-content/uploads/2007/03/onegin.thumbnail.jpg)](http://tartley.com/wp-content/uploads/2007/03/onegin.jpg "Onegin")\

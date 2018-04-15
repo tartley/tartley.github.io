@@ -18,7 +18,6 @@ tags: []
 title: 'Beautiful Code : <i>Leading Programmers Explain How They Think</i>'
 wordpress_id: 280
 wordpress_url: http://tartley.com/?p=280
-...
 ---
 
 ![Beautiful

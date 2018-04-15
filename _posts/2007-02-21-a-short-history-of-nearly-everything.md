@@ -14,7 +14,6 @@ tags: []
 title: A Short History Of Nearly Everything
 wordpress_id: 5
 wordpress_url: http://tartley.com/?p=5
-...
 ---
 
 ![Cover](http://tartley.com/wp-content/uploads/2007/02/short-history-of-nearly-everything.jpg){.alignleft}*by

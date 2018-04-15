@@ -14,7 +14,6 @@ tags: []
 title: Postscript formatted man pages
 wordpress_id: 1683
 wordpress_url: http://tartley.com/?p=1683
-...
 ---
 
 `man` and its `troff` formatting can be asked to produce postscript

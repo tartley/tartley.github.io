@@ -14,7 +14,6 @@ tags: []
 title: Patent This
 wordpress_id: 213
 wordpress_url: http://www.tartley.com/?p=213
-...
 ---
 
 ...in order to maximise the advertising value, the device prevents

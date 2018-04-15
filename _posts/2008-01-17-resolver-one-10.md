@@ -21,7 +21,6 @@ tags: []
 title: Resolver One 1.0
 wordpress_id: 231
 wordpress_url: http://tartley.com/?p=231
-...
 ---
 
 [![Resolver](http://tartley.com/wp-content/uploads/2008/01/resolver.jpg){.alignleft}](http://www.resolversystems.com/news/?p=36 "Resolver"){.floatleft}Our

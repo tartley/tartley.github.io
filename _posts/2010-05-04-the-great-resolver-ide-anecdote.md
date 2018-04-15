@@ -48,7 +48,6 @@ tags: []
 title: The Great Resolver IDE Anecdote
 wordpress_id: 1070
 wordpress_url: http://tartley.com/?p=1070
-...
 ---
 
 Found myself telling this story yet again, so I figured I should just

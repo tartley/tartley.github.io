@@ -14,7 +14,6 @@ tags: []
 title: 'Snow Report: Ride Colorado'
 wordpress_id: 46
 wordpress_url: http://tartley.com/?p=46
-...
 ---
 
 Back from an exhilarating week in shiny Colorado, where Susan and I

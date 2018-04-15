@@ -14,7 +14,6 @@ tags: []
 title: 'The Hacker Crackdown : Law and Disorder on the Electronic Frontier'
 wordpress_id: 244
 wordpress_url: http://tartley.com/?p=244
-...
 ---
 
 ![The Hacker

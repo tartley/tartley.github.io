@@ -21,7 +21,6 @@ tags: []
 title: 'Micro ISV : From Vision to Reality'
 wordpress_id: 351
 wordpress_url: http://tartley.com/?p=351
-...
 ---
 
 ![front

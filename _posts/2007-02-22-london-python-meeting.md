@@ -27,7 +27,6 @@ tags: []
 title: London Python meetup
 wordpress_id: 13
 wordpress_url: http://tartley.com/?p=13
-...
 ---
 
 Another great London [Python](http://www.python.org/) meetup in the

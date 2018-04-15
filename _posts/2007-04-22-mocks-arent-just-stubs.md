@@ -14,7 +14,6 @@ tags: []
 title: Mocks Aren't (Just) Stubs
 wordpress_id: 88
 wordpress_url: http://tartley.com/?p=88
-...
 ---
 
 My exposure to test-driven software development at Resolver Systems has

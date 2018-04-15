@@ -114,7 +114,6 @@ tags: []
 title: 'PyChoose: Switch between installed versions of Python'
 wordpress_id: 883
 wordpress_url: http://tartley.com/?p=883
-...
 ---
 
 You can switch between different installed versions of Python by simply

@@ -14,7 +14,6 @@ tags: []
 title: The Man Who Knew Too Much
 wordpress_id: 366
 wordpress_url: http://tartley.com/?p=366
-...
 ---
 
 [![](http://tartley.com/wp-content/uploads/2008/08/the-man-who-knew-too-much.jpg "the-man-who-knew-too-much"){.alignleft

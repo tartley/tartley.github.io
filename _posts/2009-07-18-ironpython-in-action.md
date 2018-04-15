@@ -42,7 +42,6 @@ tags: []
 title: IronPython in Action
 wordpress_id: 790
 wordpress_url: http://www.tartley.com/?p=790
-...
 ---
 
 [![ironpython-in-action](http://www.tartley.com/wp-content/uploads/2009/07/ironpython-in-action.jpg "ironpython-in-action"){.alignleft

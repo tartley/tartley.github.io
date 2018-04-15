@@ -30,7 +30,6 @@ tags: []
 title: Home media center
 wordpress_id: 825
 wordpress_url: http://www.tartley.com/?p=825
-...
 ---
 
 I just bought a [NetGear ReadyNas

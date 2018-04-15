@@ -71,7 +71,6 @@ tags: []
 title: Disastrous UK Government IT Projects
 wordpress_id: 229
 wordpress_url: http://tartley.com/?p=229
-...
 ---
 
 I recently penned the following for my local

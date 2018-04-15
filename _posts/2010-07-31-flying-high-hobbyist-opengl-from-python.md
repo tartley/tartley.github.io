@@ -98,7 +98,6 @@ tags: []
 title: 'Flying High: Hobbyist OpenGL from Python'
 wordpress_id: 1142
 wordpress_url: http://tartley.com/?p=1142
-...
 ---
 
 *This is a transcript-from-memory (what I wish I'd said) of the talk I
