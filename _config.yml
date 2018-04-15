@@ -17,16 +17,18 @@ title: tartley.com
 email: tartley@tartley.com
 description: >- # this means to ignore newlines until "baseurl:"
     It has been said that creating a website devoted to oneself is the greatest
-    act of hubris. <br />Welcome aboard!
+    act of hubris. Welcome aboard!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://tartley.github.io" # the base hostname & protocol for your site
 twitter_username: tartley
 github_username: tartley
 
+github:
+    is_project_page: false
+
 # Build settings
 markdown: kramdown
-theme:
-remote_theme: lorepirri/cayman-blog
+theme: minima
 plugins:
   - jekyll-feed
 
