@@ -74,7 +74,7 @@ threading. Instead, it takes a list of test conditions (as lambdas), and
 uses pyglet's own clock and scheduler to request a callback to a test
 function - `try_condition()` - on every frame:
 
-``` {.prettyprint}
+``` python
     def try_condition(self, dt):
         if self.condition():
             self.next_condition()
@@ -97,7 +97,7 @@ error.
 Here is the rest of the class, which sets up the scheduled calls to
 `try_condition()`.
 
-``` {.prettyprint}
+``` python
 from unittest import TestCase
 from pyglet import app, clock
 
@@ -118,7 +118,7 @@ conditions left, then the test has entirely passed and it requests the
 application to terminate, by setting the pyglet member `window.has_exit`
 to `True`.
 
-``` {.prettyprint}
+``` python
     def next_condition(self):
         if len(self.conditions) > 0:
             self.condition = self.conditions.pop(0)
@@ -150,7 +150,7 @@ won't return until the application exits, either when one of the
 conditions times out and raises an assertion error, or else when all
 conditions have passed and the test framework sets `window.has_exit`.
 
-``` {.prettyprint}
+``` python
 from testutils.testcase import run_test
 from acceptance_test import AcceptanceTest
 from sole_scion import main

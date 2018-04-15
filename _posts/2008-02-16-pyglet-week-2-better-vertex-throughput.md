@@ -222,7 +222,7 @@ vertex list using the following new static member on class Entity. Note
 that I have coined the term *shard* to describe the individual triangles
 rendered by class Entity:
 
-``` {.prettyprint}
+``` python
 class Entity(object):
 
     numShards = 5
@@ -257,7 +257,7 @@ instance (not shown).
 This vertex and color arrays can then be rendered as a triangle fan
 using the following Entity.draw() method:
 
-``` {.prettyprint}
+``` python
     def draw(self):
         glLoadIdentity()
         glTranslatef(self.pos.x, self.pos.y, 0)

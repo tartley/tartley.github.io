@@ -51,8 +51,8 @@ output very similar to watch, but is cross-platform, and features not
 just inverse text, but *yellow* inverse text. Woo-hoo!\
 ]{style="color: #000000;"}
 
-``` {style="background: #000; color: #ddd;"}
-python example_test.py
+``` shell_session
+$ python example_test.py
 F.F
 ======================================================================
 FAIL: testThat (__main__.TestWatcherTest)

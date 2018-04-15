@@ -126,7 +126,7 @@ camera, followed by a 'hudProjection', for drawing things that should be
 drawn in the style of a 'heads-up display', ie. always aligned with the
 screen, like text messages and frames-per-second (fps) counters.
 
-``` {.prettyprint}
+``` python
 class App(object):
 
     def __init__(self):
@@ -167,7 +167,7 @@ amount dependent on its size.
 Drawing the world merely clears the output buffer, resets the modelview
 matrix, and then asks each Entity to draw itself.
 
-``` {.prettyprint}
+``` python
 class World(object):
 
     def __init__(self):
@@ -204,7 +204,7 @@ It also knows how to draw itself, using a series of OpenGL calls. For
 now, I just draw a triangle for each entity, pointing along its
 orientation.
 
-``` {.prettyprint}
+``` python
 class Entity(object):
 
     def __init__(self, id, size, x, y, rot):
@@ -241,7 +241,7 @@ Note that the widthRatio calculated in worldProjection() will do an
 integer division by default. To fix it, I imported real division (ie.
 `from __future__ import division`)
 
-``` {.prettyprint}
+``` python
 class Camera(object):
 
     def __init__(self, win, zoom=1.0):
@@ -272,7 +272,7 @@ is worth noting that pyglet handles text like this smartly, rasterising
 the Text object to a bitmap when it is first created, and then rapidly
 drawing that to the screen using a textured quad in the draw() method.
 
-``` {.prettyprint}
+``` python
 class Hud(object):
 
     def __init__(self, win):
