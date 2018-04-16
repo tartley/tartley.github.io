@@ -16,12 +16,10 @@ wordpress_id: 317
 wordpress_url: http://tartley.com/?p=317
 ---
 
-[]{.floatleft}[[](http://www.vimeo.com/796747/l:embed_796747)]{.floatleft}
-
 [[Google Earth and
 whereyougonnabe](http://www.vimeo.com/796747/l:embed_796747) from [Peter
 Batty](http://www.vimeo.com/user365144/l:embed_796747) on
-[Vimeo](http://vimeo.com/l:embed_796747)]{.floatleft}
+[Vimeo](http://vimeo.com/l:embed_796747)]
 
 Peter Batty has a funky screencast of his incipient social networking
 slash geolocation application, [Where You Gonna

@@ -16,11 +16,9 @@ wordpress_id: 370
 wordpress_url: http://tartley.com/?p=370
 ---
 
-[![](/assets/2008/08/hackers__painters2.jpg "hackers and painters"){.alignleft
-.size-full .wp-image-371 width="307"
-height="475"}](/assets/2008/08/hackers__painters2.jpg)**by
-Paul Graham**, 2004.**\
-**
+[![](/assets/2008/08/hackers__painters2.jpg "hackers and painters")](/assets/2008/08/hackers__painters2.jpg)
+
+_by Paul Graham, 2004._
 
 I'd already stumbled across many of the [individual
 essays](http://www.paulgraham.com/articles.html)that this is comprised
@@ -31,5 +29,4 @@ quality, but generally they are extremely engaging. I only regret having
 to grab them in dead-tree format since I lost my iPhone. Ohdeary.
 
 Rating: 8/10 - a brilliant read
-
 

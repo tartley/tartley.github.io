@@ -64,32 +64,30 @@ form our whole cultural milieu, have been prised from our fingers, by
 gradually increasing legal boundaries, such that none of us as
 individuals, owns it any more.
 
-[Copyright used to be of limited scope. It was designed to prevent the
+Copyright used to be of limited scope. It was designed to prevent the
 wholesale appropriation of creative works such as books, which were
 being copied and republished and sold by third parties unconnected with
 the author. This is a fairly obnoxious behaviour, and one I'm prepared
 to condemn, and I accept that introducing copyright to prevent it seems
-like a good idea.]{}
+like a good idea.
 
-[However, since the 1970's the scope of what copyright is applicable to
+However, since the 1970's the scope of what copyright is applicable to
 has expanded and expanded, way beyond its original remit. Instead of
 being triggered by the commercial activity of a large book
 (re)publishing entity, it is now triggered and invoked by the tiniest of
 non-commercial personal behaviours, not just publishing books, but
 giving a song to a friend, or drawing a comic for your blog in your
 bedroom that incorporates the distinctive likeness of a character you
-like.\
-]{}
+like.
 
-[Things that used to be common and socially acceptable (eg. giving an
+Things that used to be common and socially acceptable (eg. giving an
 album you like to a friend) are now clearly illegal and can get you sued
 for your life savings plus draconian life-changing conditions. We can no
 longer give the songs we like to our friends. We can't post parts of our
 culture on YouTube. We can't put it on our blogs, or use it in any way
 we feel like. We have been unwillingly converted into pure consumers of
 culture, instead of participants. We have been robbed of something we
-used to have.\
-]{}
+used to have.
 
 I strongly agree with Banksy, who feels that if any corporate image or
 logo or advert is shoved into my face in a public space (e.g.
