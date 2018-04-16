@@ -16,7 +16,7 @@ wordpress_id: 374
 wordpress_url: http://www.tartley.com/?p=374
 ---
 
-![](http://www.tartley.com/wp-content/uploads/2008/09/catcher-in-the-rye.jpg "catcher-in-the-rye"){.alignleft
+![](/assets/2008/09/catcher-in-the-rye.jpg "catcher-in-the-rye"){.alignleft
 .size-full .wp-image-375 width="200" height="279"}**by Jerome D.
 Salinger**, 1951
 

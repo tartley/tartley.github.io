@@ -16,7 +16,7 @@ wordpress_id: 567
 wordpress_url: http://www.tartley.com/?p=567
 ---
 
-![differenceengine](http://www.tartley.com/wp-content/uploads/2008/12/differenceengine.jpg "differenceengine"){.alignleft
+![differenceengine](/assets/2008/12/differenceengine.jpg "differenceengine"){.alignleft
 .size-full .wp-image-568 width="188" height="318"}
 
 **by William Gibson and Bruce Sterling (1990)\

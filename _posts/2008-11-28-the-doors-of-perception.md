@@ -16,7 +16,7 @@ wordpress_id: 521
 wordpress_url: http://www.tartley.com/?p=521
 ---
 
-![](http://www.tartley.com/wp-content/uploads/2008/11/doors-of-perception.jpg "doors-of-perception"){.alignleft
+![](/assets/2008/11/doors-of-perception.jpg "doors-of-perception"){.alignleft
 .size-full .wp-image-558 width="200" height="304"}**by Aldus Huxley
 (1954)\
 **

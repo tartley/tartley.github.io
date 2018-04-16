@@ -26,7 +26,7 @@ wordpress_id: 578
 wordpress_url: http://www.tartley.com/?p=578
 ---
 
-![a-science-fiction-omnibus](http://www.tartley.com/wp-content/uploads/2008/12/a-science-fiction-omnibus.jpg "a-science-fiction-omnibus"){.alignleft
+![a-science-fiction-omnibus](/assets/2008/12/a-science-fiction-omnibus.jpg "a-science-fiction-omnibus"){.alignleft
 .size-full .wp-image-579 width="134" height="196"}
 
 **Editor: Brian Aldiss (2007)\

@@ -32,7 +32,7 @@ wordpress_url: http://www.tartley.com/?p=761
 
 \[caption id="attachment\_762" align="alignleft" width="183"\][![OpenGL
 Shading Language
-cover](http://www.tartley.com/wp-content/uploads/2009/05/opengl-shading-language.jpg "opengl-shading-language"){.size-full
+cover](/assets/2009/05/opengl-shading-language.jpg "opengl-shading-language"){.size-full
 .wp-image-762 width="183"
 height="238"}](http://www.amazon.co.uk/Opengl-Shading-Language-Randi-Rost/dp/0321334892)
 OpenGL Shading Language cover\[/caption\]

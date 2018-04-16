@@ -17,7 +17,7 @@ wordpress_url: http://www.tartley.com/?p=205
 ---
 
 ![movie copyright
-warning](http://www.tartley.com/wp-content/uploads/2007/09/movie-copyright-warning.jpg){.alignleft
+warning](/assets/2007/09/movie-copyright-warning.jpg){.alignleft
 .floatleft}As reported on [Groklaw - Complaint Filed by CCIA with FTC Re
 Fair Use](http://www.groklaw.net/article.php?story=20070831145639691), a
 conglomerate of computer, technology and communication companies are

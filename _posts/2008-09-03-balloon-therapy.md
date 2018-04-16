@@ -16,7 +16,7 @@ wordpress_id: 376
 wordpress_url: http://www.tartley.com/?p=376
 ---
 
-![](http://www.tartley.com/wp-content/uploads/2008/09/balloon.jpg "balloon"){.alignleft
+![](/assets/2008/09/balloon.jpg "balloon"){.alignleft
 .size-full .wp-image-377 width="270" height="360"}**by Ivan Idso**, 2007
 ish.
 

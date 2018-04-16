@@ -35,7 +35,7 @@ wordpress_url: http://www.tartley.com/?p=732
 
 \[caption id="attachment\_733" align="alignleft"
 width="229"\]![Envisioning Information
-cover](http://www.tartley.com/wp-content/uploads/2009/04/envisioning_information.gif "Envisioning Information"){.size-full
+cover](/assets/2009/04/envisioning_information.gif "Envisioning Information"){.size-full
 .wp-image-733 width="229" height="288"} Envisioning Information
 cover\[/caption\]
 

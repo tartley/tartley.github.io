@@ -18,7 +18,7 @@ wordpress_url: http://www.tartley.com/?p=380
 
 \[caption id="attachment\_381" align="alignleft" width="300"
 caption="Here Comes Everybody, by Clay Shirky"\]![Front
-Cover](http://www.tartley.com/wp-content/uploads/2008/09/herecomeeverybody.jpg "Here Comes Everybody"){.size-full
+Cover](/assets/2008/09/herecomeeverybody.jpg "Here Comes Everybody"){.size-full
 .wp-image-381 width="300" height="473"}\[/caption\]
 
 **by Clay Shirky**, 2008.

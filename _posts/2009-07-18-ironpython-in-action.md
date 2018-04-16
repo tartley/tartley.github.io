@@ -44,7 +44,7 @@ wordpress_id: 790
 wordpress_url: http://www.tartley.com/?p=790
 ---
 
-[![ironpython-in-action](http://www.tartley.com/wp-content/uploads/2009/07/ironpython-in-action.jpg "ironpython-in-action"){.alignleft
+[![ironpython-in-action](/assets/2009/07/ironpython-in-action.jpg "ironpython-in-action"){.alignleft
 .size-full .wp-image-792 width="192"
 height="240"}](http://www.amazon.co.uk/IronPython-Action-Michael-Foord/dp/1933988339)*by
 Michael Foord and Christian Muirhead\

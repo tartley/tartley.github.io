@@ -24,4 +24,4 @@ wordpress_url: http://www.tartley.com/?p=212
 
 Consider yourself invited.
 
-![2007-10-12-camden.jpg](http://www.tartley.com/wp-content/uploads/2007/10/2007-10-12-camden.jpg)
+![2007-10-12-camden.jpg](/assets/2007/10/2007-10-12-camden.jpg)

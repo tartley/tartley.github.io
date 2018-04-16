@@ -80,7 +80,7 @@ wordpress_id: 378
 wordpress_url: http://www.tartley.com/?p=378
 ---
 
-![](http://www.tartley.com/wp-content/uploads/2008/09/pacman.png "pacman"){.alignleft
+![](/assets/2008/09/pacman.png "pacman"){.alignleft
 .size-full .wp-image-379 width="500" height="312"}
 
 I'm excited to be giving a talk at PyCon UK next weekend about creating

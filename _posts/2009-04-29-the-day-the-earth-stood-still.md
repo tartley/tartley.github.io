@@ -19,11 +19,11 @@ wordpress_url: http://www.tartley.com/?p=751
 <div>
 
 \[caption id="attachment\_753" align="alignleft" width="268"
-caption="2008"\]![2008](http://www.tartley.com/wp-content/uploads/2009/04/day-the-earth-stood-still-2008.jpg "day-the-earth-stood-still-2008"){.size-full
+caption="2008"\]![2008](/assets/2009/04/day-the-earth-stood-still-2008.jpg "day-the-earth-stood-still-2008"){.size-full
 .wp-image-753 width="268" height="400"}\[/caption\]
 
 \[caption id="attachment\_752" align="alignleft" width="271"
-caption="1951"\]![1951](http://www.tartley.com/wp-content/uploads/2009/04/day-the-earth-stood-still-1951.jpg "day-the-earth-stood-still-1951"){.size-full
+caption="1951"\]![1951](/assets/2009/04/day-the-earth-stood-still-1951.jpg "day-the-earth-stood-still-1951"){.size-full
 .wp-image-752 width="271" height="399"}\[/caption\]
 
 </div>
