@@ -16,10 +16,9 @@ wordpress_id: 372
 wordpress_url: http://tartley.com/?p=372
 ---
 
-**[![](/assets/2008/08/breakfast-of-champions.jpg "breakfast-of-champions"){.alignleft
-.size-full .wp-image-373 width="314"
-height="475"}](/assets/2008/08/breakfast-of-champions.jpg)by
-Kurt Vonnegut**, 1973.
+![](/assets/2008/08/breakfast-of-champions.jpg)
+
+*by Kurt Vonnegut*, 1973.
 
 I've always loved Vonnegut (who doesn't?) but I'd avoided this since
 seeing the [painful 1999 movie](http://www.imdb.com/title/tt0120618/)

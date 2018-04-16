@@ -62,8 +62,9 @@ wordpress_id: 386
 wordpress_url: http://www.tartley.com/?p=386
 ---
 
-![](/assets/2008/09/openid.jpeg "openid"){.alignleft
-.size-full .wp-image-387 width="107" height="105"}I've always been
+![](/assets/2008/09/openid.jpeg)
+
+I've always been
 intrigued by [OpenID](http://openid.net), while simultaneously being
 repulsed by the identifiers that I thought users were forced to adopt.
 Seeing one too many strings like:

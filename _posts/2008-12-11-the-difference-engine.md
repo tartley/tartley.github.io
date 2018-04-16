@@ -16,46 +16,38 @@ wordpress_id: 567
 wordpress_url: http://www.tartley.com/?p=567
 ---
 
-![differenceengine](/assets/2008/12/differenceengine.jpg "differenceengine"){.alignleft
-.size-full .wp-image-568 width="188" height="318"}
+![differenceengine](/assets/2008/12/differenceengine.jpg)
 
-**by William Gibson and Bruce Sterling (1990)\
-**
+*by William Gibson and Bruce Sterling, 1990*
 
 A quick re-read, inspired by a recent visit to [the Science
 Museum](http://www.sciencemuseum.org.uk/), where we were enthralled by
 our meanderings around various astonishing artifacts:
 
--   The rickety-looking [Apollo
-    10](http://en.wikipedia.org/wiki/Apollo_10) capsule, charred from
-    re-entry, having journeyed to within 9 miles of the moon and back
-    again.
+- The rickety-looking [Apollo
+  10](http://en.wikipedia.org/wiki/Apollo_10) capsule, charred from
+  re-entry, having journeyed to within 9 miles of the moon and back
+  again.
 
-<!-- -->
+- [Stevenson's
+  Rocket](http://en.wikipedia.org/wiki/Stephenson%27s_Rocket), not, as
+  I had previously understood, the first steam-powered railway
+  locomotive, just a revolutionary improvement in design, capable of
+  the unheard-of speed of 29 miles an hour.
 
--   [Stevenson's
-    Rocket](http://en.wikipedia.org/wiki/Stephenson%27s_Rocket), not, as
-    I had previously understood, the first steam-powered railway
-    locomotive, just a revolutionary improvement in design, capable of
-    the unheard-of speed of 29 miles an hour.
+- Watson and Crick's original 6-foot mechano model of the double-helix
+  structure of a [DNA molecule](http://en.wikipedia.org/wiki/DNA) (or
+  at least the original bits of it, re-assembled at Kings around
+  1990), constructed between LSD fuelled revelry and Sunday
+  afternoons' quiet boozing pondering the meaning of life. Not a bad
+  lifestyle, it has to be said.
 
-<!-- -->
-
--   Watson and Crick's original 6-foot mechano model of the double-helix
-    structure of a [DNA molecule](http://en.wikipedia.org/wiki/DNA) (or
-    at least the original bits of it, re-assembled at Kings around
-    1990), constructed between LSD fuelled revelry and Sunday
-    afternoons' quiet boozing pondering the meaning of life. Not a bad
-    lifestyle, it has to be said.
-
-<!-- -->
-
--   Charles Babbage's Difference Engine number 1, or at least remnants
-    of it. This is the arithmetic precursor to his subsequent, and more
-    ambitious, analytical engine, the conception of which was a precient
-    stroke of genius, the world's first programmable computer. Lacking
-    electronics, it was implemented in a purely mechanical manner, a 40
-    year labour of which he pursued until his death.
+- Charles Babbage's Difference Engine number 1, or at least remnants
+  of it. This is the arithmetic precursor to his subsequent, and more
+  ambitious, analytical engine, the conception of which was a precient
+  stroke of genius, the world's first programmable computer. Lacking
+  electronics, it was implemented in a purely mechanical manner, a 40
+  year labour of which he pursued until his death.
 
 I was surprised to learn that the failing of the device was not, as I
 had previously heard, due to the inadequate manufacturing tolerances of

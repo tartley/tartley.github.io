@@ -16,8 +16,9 @@ wordpress_id: 620
 wordpress_url: http://tartley.com/?p=620
 ---
 
-![beginning-game-development-with-python-and-pygame](/assets/2009/01/beginning-game-development-with-python-and-pygame.jpg "beginning-game-development-with-python-and-pygame"){.alignleft
-.size-full .wp-image-622 width="156" height="207"}**by Will McGugan**
+![](/assets/2009/01/beginning-game-development-with-python-and-pygame.jpg)
+
+*by Will McGugan*
 
 Introduces Python, PyGame and game development ideas from the ground up,
 in a really pleasant writing style which is both unintimidating, clear

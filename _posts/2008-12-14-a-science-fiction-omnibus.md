@@ -26,11 +26,9 @@ wordpress_id: 578
 wordpress_url: http://www.tartley.com/?p=578
 ---
 
-![a-science-fiction-omnibus](/assets/2008/12/a-science-fiction-omnibus.jpg "a-science-fiction-omnibus"){.alignleft
-.size-full .wp-image-579 width="134" height="196"}
+![a-science-fiction-omnibus](/assets/2008/12/a-science-fiction-omnibus.jpg "a-science-fiction-omnibus")
 
-**Editor: Brian Aldiss (2007)\
-**
+*Editor: Brian Aldiss, 2007*
 
 A collection of short stories from 1941 to 2006. Most of my favourites
 in here are ones I've already read before: Asimov's *Nightfall*, Bear's

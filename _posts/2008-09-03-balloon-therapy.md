@@ -16,9 +16,9 @@ wordpress_id: 376
 wordpress_url: http://www.tartley.com/?p=376
 ---
 
-![](/assets/2008/09/balloon.jpg "balloon"){.alignleft
-.size-full .wp-image-377 width="270" height="360"}**by Ivan Idso**, 2007
-ish.
+![](/assets/2008/09/balloon.jpg)
+
+*by Ivan Idso*, 2007.
 
 A disclaimer, to begin - the author is my new-to-me brother in law, so I
 got a copy at cost, inscribed 'soft aardvarks' (I think), and a few

@@ -44,16 +44,14 @@ wordpress_id: 790
 wordpress_url: http://www.tartley.com/?p=790
 ---
 
-[![ironpython-in-action](/assets/2009/07/ironpython-in-action.jpg "ironpython-in-action"){.alignleft
-.size-full .wp-image-792 width="192"
-height="240"}](http://www.amazon.co.uk/IronPython-Action-Michael-Foord/dp/1933988339)*by
-Michael Foord and Christian Muirhead\
-*
+[![ironpython-in-action](/assets/2009/07/ironpython-in-action.jpg "ironpython-in-action")](http://www.amazon.co.uk/IronPython-Action-Michael-Foord/dp/1933988339)
+
+_by Michael Foord and Christian Muirhead_
 
 Disclaimer: I'm friends with both the authors and was sent a freebie
 review copy by the publisher, so I'm bound to be breathlessly gushing in
 this review. Fortunately, that's easy to do, because the book really is
-great. (Except for Christian's chapters... Joke!)
+great. (Except for Christian's chapters... _Joke!_)
 
 Having spent some years working with .NET, and with a series of
 intriguing personal experiments in Python under my belt, I originally
@@ -159,7 +157,7 @@ detailed, but I'm going to start skimming through them somewhat. They
 cover the interactions of IronPython with more advanced .NET topics such
 as:
 
--   *Windows Presentation Foundation (WPF) and IronPython* ** - WPF is
+-   *Windows Presentation Foundation (WPF) and IronPython* - WPF is
     the DirectX user interface library that is a successor to Windows
     Forms. This includes XAML, an XML dialect for describing user
     interfaces, decoupling their implementation from application logic.
@@ -187,8 +185,8 @@ as:
 
 Alright, that's it! There are appendices:
 
--   *A whirlwind tour of C\#* - in case anyone wants more guidance while
-    looking at some of the C\# code or concepts that are discussed
+-   *A whirlwind tour of C#* - in case anyone wants more guidance while
+    looking at some of the C# code or concepts that are discussed
     throughout the book.
 -   *Python magic methods* - a description of *all* the Python magic
     double-underscore methods, which is a fabulous resource, one which l

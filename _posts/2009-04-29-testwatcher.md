@@ -38,18 +38,17 @@ wordpress_id: 755
 wordpress_url: http://www.tartley.com/?p=755
 ---
 
-[Sometimes when programming I like to leave unit tests running
+Sometimes when programming I like to leave unit tests running
 repeatedly in one window while editing the code and tests in another.
 The bash command `watch` is useful for this, and can highlight the
 differences between one invocation and the next in
-inverse.]{style="color: #000000;"}
+inverse.
 
-[I wanted a version of `watch` for use on Windows, so I whipped up a
+I wanted a version of `watch` for use on Windows, so I whipped up a
 quick Python script,
 [testwatcher](http://code.google.com/p/testwatcher/), which produces
 output very similar to watch, but is cross-platform, and features not
-just inverse text, but *yellow* inverse text. Woo-hoo!\
-]{style="color: #000000;"}
+just inverse text, but *yellow* inverse text. Woo-hoo!
 
 ``` shell_session
 $ python example_test.py

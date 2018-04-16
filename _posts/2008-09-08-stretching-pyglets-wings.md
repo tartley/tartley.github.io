@@ -80,8 +80,7 @@ wordpress_id: 378
 wordpress_url: http://www.tartley.com/?p=378
 ---
 
-![](/assets/2008/09/pacman.png "pacman"){.alignleft
-.size-full .wp-image-379 width="500" height="312"}
+![](/assets/2008/09/pacman.png)
 
 I'm excited to be giving a talk at PyCon UK next weekend about creating
 OpenGL programs in Python, using the graphics and games library

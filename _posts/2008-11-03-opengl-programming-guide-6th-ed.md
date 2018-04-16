@@ -39,8 +39,9 @@ wordpress_id: 423
 wordpress_url: http://www.tartley.com/?p=423
 ---
 
-![](/assets/2008/10/opengl-programming-guide.jpg "opengl-programming-guide"){.alignleft
-.size-full .wp-image-424 width="185" height="240"}Written by none other
+![](/assets/2008/10/opengl-programming-guide.jpg "opengl-programming-guide")
+
+Written by none other
 than the OpenGL architecture review board themselves, this is the de
 facto starting point for anyone learning how to write programs to draw
 computer graphics using the OpenGL graphics API. As such, the entire

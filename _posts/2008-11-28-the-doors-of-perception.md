@@ -16,10 +16,9 @@ wordpress_id: 521
 wordpress_url: http://www.tartley.com/?p=521
 ---
 
-![](/assets/2008/11/doors-of-perception.jpg "doors-of-perception"){.alignleft
-.size-full .wp-image-558 width="200" height="304"}**by Aldus Huxley
-(1954)\
-**
+![](/assets/2008/11/doors-of-perception.jpg "doors-of-perception")
+
+*by Aldus Huxley, 1954*
 
 *"...draperies are living hieroglyphs that stand in some peculiarly
 expressive way for the unfathomable mystery of pure being. More even

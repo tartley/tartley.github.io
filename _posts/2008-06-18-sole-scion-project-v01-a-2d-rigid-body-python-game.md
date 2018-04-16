@@ -35,10 +35,8 @@ wordpress_id: 349
 wordpress_url: http://tartley.com/?p=349
 ---
 
-[![screenshot Sole Scion
-v1.0](/assets/2008/06/screenshot-sole-scion-v10.png "screenshot-sole-scion-v10"){.alignleft
-.size-full .wp-image-350 width="500"
-height="388"}](http://code.google.com/p/sole-scion)
+![screenshot Sole Scion
+v1.0](/assets/2008/06/screenshot-sole-scion-v10.png)
 
 [Everyone](http://sethgodin.typepad.com/seths_blog/2008/06/is-it-worthy.html)
 today is [abuzz](http://www.codinghorror.com/blog/archives/001134.html)

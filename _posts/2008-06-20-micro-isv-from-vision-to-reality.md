@@ -23,9 +23,9 @@ wordpress_id: 351
 wordpress_url: http://tartley.com/?p=351
 ---
 
-![front
-cover](/assets/2008/06/screenshot-micro-isv-from-vision-to-reality-google-book-search-mozilla-firefox.png "Micro ISV From Vision to Reality"){.alignleft
-.size-full .wp-image-352 width="300" height="355"}**by Bob Walsh**
+![](/assets/2008/06/screenshot-micro-isv-from-vision-to-reality-google-book-search-mozilla-firefox.png)
+
+*by Bob Walsh*
 
 Finally got around to plucking this off the shelf, and yes it's an
 interesting grab-bag of things to think about, and case studies of

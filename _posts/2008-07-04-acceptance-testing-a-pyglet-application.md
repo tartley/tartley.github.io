@@ -54,7 +54,7 @@ wordpress_url: http://www.tartley.com/?p=353
 ---
 
 I've been trying to create a simple acceptance test for a
-[pyglet](http://pyglet.org/)application. A thorough suite of acceptance
+[pyglet](http://pyglet.org/) application. A thorough suite of acceptance
 tests, verifying the correctness of all the shapes drawn to the screen
 by OpenGL, sounds like far more work than I want to do. But a couple of
 simple acceptance tests would be valuable, to check out basic things:

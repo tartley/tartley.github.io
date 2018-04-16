@@ -19,19 +19,15 @@ wordpress_id: 362
 wordpress_url: http://tartley.com/?p=362
 ---
 
-[![](/assets/2008/08/co-to-ca-road-trip-map.png "co-to-ca-road-trip-map"){.alignnone
-.size-full .wp-image-364 width="500"
-height="324"}](/assets/2008/08/co-to-ca-road-trip-map.png)
+![](/assets/2008/08/co-to-ca-road-trip-map.png "co-to-ca-road-trip-map")
 
 Over the summer I've been keeping a geographic journal of some of our
 recent adventures:
 
--   [The Minnesota
-    project](http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=114555587615190768594.00044fcb05ec0c0be2012&ll=45.540084,-93.44283&spn=5.809675,14.282227&z=7)
-    : our summer in Blooming Prairie
--   [CO to
-    CA](http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=114555587615190768594.000453372a3a9329df229&ll=37.431251,-110.786133&spn=13.158173,28.564453&t=h&z=6)
-    : our summer roadtrip
+- [The Minnesota project](http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=114555587615190768594.00044fcb05ec0c0be2012&ll=45.540084,-93.44283&spn=5.809675,14.282227&z=7)
+  : our summer in Blooming Prairie
+- [CO to CA](http://maps.google.com/maps/ms?ie=UTF8&hl=en&msa=0&msid=114555587615190768594.000453372a3a9329df229&ll=37.431251,-110.786133&spn=13.158173,28.564453&t=h&z=6)
+  : our summer roadtrip
 
 It's an amusing journalling project for me, but as an exercise in
 neogeography (the distainful term Geographic Information System pros use

@@ -50,9 +50,9 @@ wordpress_id: 300
 wordpress_url: http://tartley.com/?p=300
 ---
 
-![The Simpsons
-Movie](/assets/2008/05/simpsonsmovie.jpg "simpsonsmovie"){.alignleft
-.size-full .wp-image-332 width="235" height="304"}There is, of course,
+![The Simpsons Movie](/assets/2008/05/simpsonsmovie.jpg)
+
+There is, of course,
 no point whatsoever in me posting a belated review of the Simpsons
 Movie, which I and everyone else gleefully watched many months ago now.
 To the now long abandoned discussions of its merit I have absolutely

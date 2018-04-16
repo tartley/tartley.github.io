@@ -277,6 +277,6 @@ You have to tag the person who tagged you. If I tagged you, it's because
 I want to know more about you (and/or I think you might go to the
 trouble).
 
-(To do this, go to â€œnotesâ€? under tabs on your profile page, paste
+(To do this, go to 'notes' under tabs on your profile page, paste
 these instructions in the body of the note, type your 25 random things,
 tag 25 people (in the right hand corner of the app) then click publish.)

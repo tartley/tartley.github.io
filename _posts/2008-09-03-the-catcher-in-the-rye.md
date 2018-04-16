@@ -16,11 +16,11 @@ wordpress_id: 374
 wordpress_url: http://www.tartley.com/?p=374
 ---
 
-![](/assets/2008/09/catcher-in-the-rye.jpg "catcher-in-the-rye"){.alignleft
-.size-full .wp-image-375 width="200" height="279"}**by Jerome D.
-Salinger**, 1951
+![](/assets/2008/09/catcher-in-the-rye.jpg)
 
-"Of course, people make such a fuss over it, they really do. You ask
+*by Jerome D. Salinger*, 1951.
+
+Of course, people make such a fuss over it, they really do. You ask
 anyone. It's that Salinger's fault. He never listens to anyone.
 Sometimes I think he only writes it because he knows it gets on peoples
 goat. Writing about some crazy kid. I mean, I say he's crazy because

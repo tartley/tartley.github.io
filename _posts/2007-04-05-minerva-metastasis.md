@@ -19,13 +19,11 @@ wordpress_id: 81
 wordpress_url: http://tartley.com/?p=81
 ---
 
-[![Title
-screen](/assets/2007/04/metastasis_1_background0000.jpg){.alignnone
-width="655"
-height="439"}](/assets/2007/04/metastasis_1_background0000.jpg "Title screen")**by
-Adam Foster**\
-PC, Mod of Half-Life 2\
-2006
+[![Title screen](/assets/2007/04/metastasis_1_background0000.jpg)](/assets/2007/04/metastasis_1_background0000.jpg)
+
+*by Adam Foster*, 2006.
+
+PC, Mod of Half-Life 2
 
 So the digital ink is barely dry on my assertions that videogames have
 problems telling a story, when what should fall into my lap but one of

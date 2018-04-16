@@ -21,7 +21,7 @@ wordpress_url: http://tartley.com/?p=370
 _by Paul Graham, 2004._
 
 I'd already stumbled across many of the [individual
-essays](http://www.paulgraham.com/articles.html)that this is comprised
+essays](http://www.paulgraham.com/articles.html) that this is comprised
 of, but it was still hugely entertaining and educational to discover
 some of Graham's essays that I hadn't read yet. He covers a wide variety
 of topics, and inevitably for such a collection, the components vary in

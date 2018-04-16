@@ -16,11 +16,7 @@ wordpress_id: 685
 wordpress_url: http://tartley.com/?p=685
 ---
 
-\[caption id="attachment\_686" align="alignnone" width="501"
-caption="Cover Art"\][![Cover
-Art](/assets/2009/03/cover.jpg "Cover - You Invite Them To Yourself"){.size-full
-.wp-image-686 width="501"
-height="499"}](http://www.facebook.com/photo.php?pid=2212211&id=589628893)\[/caption\]
+[![Cover Art](/assets/2009/03/cover.jpg)](http://www.facebook.com/photo.php?pid=2212211&id=589628893)
 
 Me and the other Pillai's are very happy to announce that the album is
 finally done. This is the culmination of what turned out to be over two

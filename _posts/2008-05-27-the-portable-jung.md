@@ -16,12 +16,9 @@ wordpress_id: 342
 wordpress_url: http://tartley.com/?p=342
 ---
 
-[![](/assets/2008/05/portable-jung.jpg "The Portable Jung"){.alignleft
-.size-full .wp-image-343 width="156"
-height="240"}](http://www.amazon.co.uk/Portable-Jung-Viking-Library/dp/0140150706)**Carl
-G. Jung (Author),\
-Joseph Campbell (Editor),\
-R. F. C. Hull (Translator)**
+[![](/assets/2008/05/portable-jung.jpg "The Portable Jung")](http://www.amazon.co.uk/Portable-Jung-Viking-Library/dp/0140150706)
+
+*Carl G. Jung (Author), Joseph Campbell (Editor), R. F. C. Hull (Translator)*
 
 I didn't quite know what to make of Jung when KT first handed me this
 collection of his essays, many moons ago. Some sort of 19th-century

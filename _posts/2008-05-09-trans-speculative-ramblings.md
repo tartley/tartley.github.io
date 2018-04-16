@@ -19,10 +19,10 @@ wordpress_url: http://tartley.com/?p=162
 If you're not a wild-eyed loon, you're unlikely to appreciate this post.
 Bear with me a moment, while I establish some context.
 
-![Cory
-Doctorow](/assets/2007/07/cory-doctorow.thumbnail.jpg){.alignleft}So
-[here's the esteemed Cory Doctorow](http://www.craphound.com/). His
-recent[\*](#note1) post at Locus, [The Progressive Apocalypse and Other
+![Cory Doctorow](/assets/2007/07/cory-doctorow.thumbnail.jpg)
+
+So [here's the esteemed Cory Doctorow](http://www.craphound.com/). His
+recent[\*1] post at Locus, [The Progressive Apocalypse and Other
 Futurismic
 Delights](http://www.locusmag.com/Features/2007/07/cory-doctorow-progressive-apocalypse.html),
 outlines the parallels between the progressive Enlightenment ideals of
@@ -61,10 +61,11 @@ foresight to have had their state vector preserved, at any rate.
 Still with me? Singularity = Judgement Day. Got it? Ok.
 
 [![George
-Dvorsky](/assets/2007/07/georgedvorsky.jpg)](http://sentientdevelopments.blogspot.com){.alignleft}Then,
-over here, we have [George
-Dvorsky](http://sentientdevelopments.blogspot.com), who
-recently[\*](#note1) referenced an old post of his, [Our non-arbitrary
+Dvorsky](/assets/2007/07/georgedvorsky.jpg)](http://sentientdevelopments.blogspot.com)
+
+Then, over here, we have
+[George Dvorsky](http://sentientdevelopments.blogspot.com),
+who recently[\*1] referenced an old post of his, [Our non-arbitrary
 universe](http://sentientdevelopments.blogspot.com/2006/03/our-non-arbitrary-universe.html),
 in which he talks about possible explanations for the extraordinarily
 unlikely state we find the universe to be in, while attempting to steer
@@ -100,6 +101,8 @@ part in the reproduction of its host universe. Perhaps if intelligent
 life deliberately causes its host universe to replicate. Who wouldn't
 want to become God, once we'd figured out how to spawn realities at
 right-angles to... er... reality?
+
+. . .
 
 Now, I'd like to take a moment here to catch our breath. I'm well aware
 that we're out on a limb of speculation that is extended so far beyond
@@ -160,6 +163,6 @@ Rosenbaum](http://www.strangehorizons.com/2006/20060904/house-f.shtml),
 but it would make for a smashing short science fiction story, don't you
 think?
 
-[(\* note: I wrote most of this months ago, but never got around to
+(Note \*1: I wrote most of this months ago, but never got around to
 hitting 'Post', so forgive the no-longer accurate references to 'recent'
-events.)]{#note1}
+events.)

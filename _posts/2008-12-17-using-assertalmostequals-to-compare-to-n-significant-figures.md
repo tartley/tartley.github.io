@@ -43,8 +43,7 @@ I want a Python unittest.assertAlmostEquals that compares numbers to N
 significant figures, instead of N decimal places.
 
 ``` python
->>> test.assertAlmostEquals(1e-8, 5e-14)
->>>
+test.assertAlmostEquals(1e-8, 5e-14) # passes
 ```
 
 Even though these two numbers differ by a factor of 5 million, when

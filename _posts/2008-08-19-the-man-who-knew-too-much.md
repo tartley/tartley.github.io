@@ -16,10 +16,9 @@ wordpress_id: 366
 wordpress_url: http://tartley.com/?p=366
 ---
 
-[![](/assets/2008/08/the-man-who-knew-too-much.jpg "the-man-who-knew-too-much"){.alignleft
-.size-full .wp-image-367 width="156"
-height="238"}](/assets/2008/08/the-man-who-knew-too-much.jpg)**by
-David Leavitt**, 2006.
+![](/assets/2008/08/the-man-who-knew-too-much.jpg)
+
+*by David Leavitt*, 2006.
 
 An impulse buy, and it was good but not great. The barbaric treatment
 Turing received over being gay seems to be the thing that initially

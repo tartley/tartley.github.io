@@ -30,12 +30,7 @@ wordpress_id: 761
 wordpress_url: http://www.tartley.com/?p=761
 ---
 
-\[caption id="attachment\_762" align="alignleft" width="183"\][![OpenGL
-Shading Language
-cover](/assets/2009/05/opengl-shading-language.jpg "opengl-shading-language"){.size-full
-.wp-image-762 width="183"
-height="238"}](http://www.amazon.co.uk/Opengl-Shading-Language-Randi-Rost/dp/0321334892)
-OpenGL Shading Language cover\[/caption\]
+[![OpenGL Shading Language cover](/assets/2009/05/opengl-shading-language.jpg)](http://www.amazon.co.uk/Opengl-Shading-Language-Randi-Rost/dp/0321334892)
 
 *by Randi J. Rost.*
 
@@ -76,7 +71,7 @@ help (thanks ATI.) Eventually I realised that the 'built-in' noise
 functions which are part of the OpenGL shader language are simply not
 implemented by the vast majority of graphics card manufacturers - you
 have to roll your own. Which is not a major deal-breaker, but what
-\*is\* disappointing is that the OpenGL Shader Language book makes
+*is* disappointing is that the OpenGL Shader Language book makes
 absolutely no mention of this in any of the chapters plural in which it
 lovingly describes the built-in noise functions, along with their
 characteristics and uses. Perhaps I spoke too soon when praising the

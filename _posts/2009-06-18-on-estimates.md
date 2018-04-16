@@ -19,21 +19,13 @@ wordpress_url: http://www.tartley.com/?p=787
 There is a lot of room for miscommunication about estimates, as people
 have a startling tendency to think wishfully that the sentence:
 
-<div>
-
 > I estimate that, if I really understand the problem, it is about 50%
 > likely that we will be done in five weeks (if no one bothers us during
 > that time).
 
-</div>
-
 really means:
 
-<div>
-
 > I promise to have it all done five weeks from now.
-
-</div>
 
 from [How to be a
 Programmer](https://braydie.gitbooks.io/how-to-be-a-programmer/content/en/),

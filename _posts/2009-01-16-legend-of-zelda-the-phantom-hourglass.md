@@ -16,10 +16,9 @@ wordpress_id: 310
 wordpress_url: http://tartley.com/?p=310
 ---
 
-![caption](/assets/2008/05/phantom-hourglass.jpg "Legend of Zelda : The Phantom Hourglass"){.alignleft
-.size-full .wp-image-341 width="322" height="482"}
+![](/assets/2008/05/phantom-hourglass.jpg)
 
-**Nintendo, 2008**
+*Nintendo, 2008*
 
 Nintendo spin off a *fourteenth* iteration of the familiar and
 oh-so-beloved franchise. I'd only previously played the

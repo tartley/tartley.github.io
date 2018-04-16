@@ -16,9 +16,9 @@ wordpress_id: 408
 wordpress_url: http://www.tartley.com/?p=408
 ---
 
-![city-at-the-end-of-time](/assets/2008/12/city-at-the-end-of-time.jpg "city-at-the-end-of-time"){.alignleft
-.size-full .wp-image-574 width="216" height="308"}**by Greg Bear (2008)\
-**
+![city-at-the-end-of-time](/assets/2008/12/city-at-the-end-of-time.jpg)
+
+*by Greg Bear, 2008*
 
 Smashing, but not life changing. Another great ripping yarn. I find
 myself with less and less patience for such a thing of late, and I'm not

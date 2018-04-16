@@ -16,10 +16,9 @@ wordpress_id: 368
 wordpress_url: http://tartley.com/?p=368
 ---
 
-[![](/assets/2008/08/halting-state.jpg "halting-state"){.alignleft
-.size-full .wp-image-369 width="177"
-height="249"}](/assets/2008/08/halting-state.jpg)**by
-Charles Stross**, 2007.
+[![](/assets/2008/08/halting-state.jpg "halting-state")](/assets/2008/08/halting-state.jpg)
+
+*by Charles Stross*, 2007.
 
 It's a tale of corporate shenanigans, online virtual reality computer
 gaming, scams, police on the beat, software contractors, and political

@@ -16,12 +16,9 @@ wordpress_id: 380
 wordpress_url: http://www.tartley.com/?p=380
 ---
 
-\[caption id="attachment\_381" align="alignleft" width="300"
-caption="Here Comes Everybody, by Clay Shirky"\]![Front
-Cover](/assets/2008/09/herecomeeverybody.jpg "Here Comes Everybody"){.size-full
-.wp-image-381 width="300" height="473"}\[/caption\]
+![Front Cover](/assets/2008/09/herecomeeverybody.jpg)
 
-**by Clay Shirky**, 2008.
+*by Clay Shirky*, 2008.
 
 Shirky has thrown a few beautiful and insightful essays over the wall
 the last few months. He is the guy who penned the '[Gin, Television and

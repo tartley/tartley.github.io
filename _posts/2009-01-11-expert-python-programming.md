@@ -21,16 +21,16 @@ wordpress_id: 609
 wordpress_url: http://tartley.com/?p=609
 ---
 
-**[![expert-python-programming](/assets/2009/01/expert-python-programming.jpg "expert-python-programming"){.alignleft
-.size-full .wp-image-612 width="194"
-height="240"}](http://www.packtpub.com/expert-python-programming/book)by
-Tarek ZiadÃ©** ([about the book on Pack's
-website](http://www.packtpub.com/expert-python-programming/book))
+[![expert-python-programming](/assets/2009/01/expert-python-programming.jpg "expert-python-programming")](http://www.packtpub.com/expert-python-programming/book)
+
+
+*by Tarek Ziadé*, 2008. ([on Packt](http://www.packtpub.com/expert-python-programming/book))
 
 *Publisher [Packt](http://www.packtpub.com/) were nice enough to send me
 a copy of this, so I'm completely biased. Fortunately for everyone, I
-really liked it. But I have to say that. But I really did!\
-*
+really liked it. But I have to say that. But I really did!*
+
+. . .
 
 I've been using [Python](http://python.org/) for a couple of years now,
 but only on a [single project](http://resolversystems.com/), so while

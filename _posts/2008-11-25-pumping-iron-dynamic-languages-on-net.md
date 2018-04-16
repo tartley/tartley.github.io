@@ -22,24 +22,22 @@ wordpress_id: 456
 wordpress_url: http://www.tartley.com/?p=456
 ---
 
-[![](/assets/2008/11/oredev-banner.jpg "oredev-banner"){.alignnone
-.size-full .wp-image-458 width="999"
-height="110"}](http://www.oredev.org)
+[![](/assets/2008/11/oredev-banner.jpg "oredev-banner")](http://www.oredev.org)
 
-This is the talk I gave at the [[Øredev
+This is the talk I gave at the [Øredev
 conference](http://www.oredev.org) last week in Malmö, Sweden. I was
 stepping in to speak for [Harry Pierson of
 Microsoft](http://www.devhawk.net), and although I mixed in content to
 make it my own, all the credit for the best bits and the overall gist of
 it belongs to Harry, while any errors and oversights are entirely my
-own.]{.mainheader}
+own.
 
 This isn't a transcript (I don't think the videos are online yet) - this
 is from my memory and my notes, what I imagine I said, together with any
 notes and digressions that I wish I'd remembered at the time, historical
 revisionist that I am.
 
-**Update:** Now I come to hit \[publish\] and read this through, it
+**Update:** Now I come to hit [publish] and read this through, it
 obviously draws heavily on Steve Yegge's monumental [Dynamic Languages
 Strike
 Back](http://steve-yegge.blogspot.com/2008/05/dynamic-languages-strike-back.html)
@@ -51,9 +49,7 @@ creative commons. Thanks for the inspiration, Steve.
 online](http://www.dotnet-tv.com/2009/07/20/pumping-iron-dynamic-languages-on-net/).
 This text version is better.
 
-[![](/assets/2008/11/slide01-pumping-iron.png "slide01-pumping-iron"){.size-full
-.wp-image-463 .alignnone width="523"
-height="383"}](/assets/2008/11/slide01-pumping-iron.png)
+[![](/assets/2008/11/slide01-pumping-iron.png "slide01-pumping-iron")](/assets/2008/11/slide01-pumping-iron.png)
 
 Before we begin, how about a quick show of hands to see where people are
 coming from. How many people in the audience are already heavy users of
@@ -64,8 +60,7 @@ all? *\[no hands go up\]* And so does that mean... people who have done
 a small amount of dynamic language programming? *\[just about
 everybody's hand goes up\]*. Alright, well that's pretty clear.
 
-![](/assets/2008/11/slide02-hands.png "slide02-hands"){.alignnone
-.size-full .wp-image-465 width="522" height="381"}
+![](/assets/2008/11/slide02-hands.png "slide02-hands")
 
 Alright. So one of the main themes we'll be looking at is why dynamic
 languages are such a minority like that. Clearly if I'd asked who is a
@@ -80,8 +75,7 @@ to expose a lot of developers to them who previously wouldn't have
 picked them up, so we'll be looking at whether you should care, and why
 you might consider using these languages for future projects.
 
-![](/assets/2008/11/slide02-why-the-fear.png "slide02-why-the-fear"){.alignnone
-.size-full .wp-image-466 width="521" height="384"}
+![](/assets/2008/11/slide02-why-the-fear.png "slide02-why-the-fear")
 
 So why are dynamic languages unpopular? Well if you ask developers, one
 of the first things they will say is that dynamic languages are really
@@ -129,8 +123,7 @@ Just don't sabotage your project by building in wide-ranging unintuitive
 side-effects. Which is simply a normal design rule of thumb that you'd
 use anyway, right? That's all you need.
 
-![](/assets/2008/11/slide03-what-are-they-not.png "slide03-what-are-they-not"){.alignnone
-.size-full .wp-image-468 width="521" height="384"}
+![](/assets/2008/11/slide03-what-are-they-not.png "slide03-what-are-they-not")
 
 Alright, so before we get into all that, a quick look at what makes a
 language dynamic. Note that it's not an all-or-nothing thing. Static
@@ -149,8 +142,7 @@ another. That is one prominent example of something a dynamic language
 allows you to do, but there are several other very important facets of
 being a dynamic language.
 
-![](/assets/2008/11/slide04-dynamic-languages-are.png "slide04-dynamic-languages-are"){.alignnone
-.size-full .wp-image-469 width="525" height="383"}
+![](/assets/2008/11/slide04-dynamic-languages-are.png "slide04-dynamic-languages-are")
 
 Alright, so what are these features that make a language dynamic? Well
 Wikipedia's definition is a high-level language that defers a bunch of
@@ -251,8 +243,7 @@ operations can actually change, be changed by your code, as it executes.
 So this leads to all sorts of interesting and elegant ways to write
 programs.
 
-![](/assets/2008/11/slide05-omgwtf.png "slide05-omgwtf"){.alignnone
-.size-full .wp-image-475 width="524" height="383"}
+![](/assets/2008/11/slide05-omgwtf.png "slide05-omgwtf")
 
 So, the first reaction everyone has to these interesting and elegant new
 ways to write programs is to imagine all the awful things you could do.
@@ -267,15 +258,13 @@ any system. Why would we want to let go of one of our most fundamental
 safety aids, compilation checks? Shouldn't we be looking for ways to
 introduce *more* safety, not less?
 
-![](/assets/2008/11/slide06-less-safety-sometimes-good.jpg "slide06-less-safety-sometimes-good"){.alignnone
-.size-full .wp-image-477 width="523" height="383"}
+![](/assets/2008/11/slide06-less-safety-sometimes-good.jpg "slide06-less-safety-sometimes-good")
 
 And the answer is: not necessarily. Especially if these new freedoms,
 and the loss of type safety are not the huge problems that everyone
 assumes they are.
 
-![](/assets/2008/11/slide07-what-does-type-safety-buy.png "slide07-what-does-type-safety-buy"){.alignnone
-.size-full .wp-image-478 width="519" height="383"}
+![](/assets/2008/11/slide07-what-does-type-safety-buy.png "slide07-what-does-type-safety-buy")
 
 So let's examine what we're really talking about losing when we have no
 compile-time type checks. As we've noted, type safety really does catch
@@ -325,9 +314,7 @@ number, in stack trace that happens the second you run your application.
 In short, the actual cost of losing type safety is, surprisingly,
 actually negligible in practice.
 
-[![](/assets/2008/11/slide08-money-quote.png "slide08-money-quote"){.alignnone
-.size-full .wp-image-480 width="523"
-height="384"}](/assets/2008/11/slide08-money-quote.png)
+[![](/assets/2008/11/slide08-money-quote.png "slide08-money-quote")](/assets/2008/11/slide08-money-quote.png)
 
 People find this hard to accept. It surprised me. So much effort is
 expended maintaining type safety, it's such a pervasive feature of
@@ -374,15 +361,13 @@ code, you're not supposed to ever look at it. But my point is that for
 any real schema this code would be enormous, hundreds or thousands of
 lines. So it's a big deal, a big heavyweight process, to do all this.
 
-![](/assets/2008/11/slide09-linq.png "slide09-linq"){.alignnone
-.size-full .wp-image-482 width="522" height="384"}
+![](/assets/2008/11/slide09-linq.png "slide09-linq")
 
 It's such a common problem, because providing types that match your
 schema turns out to be dead handy. Everyone has their own solutions to
 it. And the Ruby on Rails guys, they have their own version of this.
 
-![](/assets/2008/11/slide10-rails-class-to-db.png "slide10-rails-class-to-db"){.alignnone
-.size-full .wp-image-483 width="523" height="383"}
+![](/assets/2008/11/slide10-rails-class-to-db.png "slide10-rails-class-to-db")
 
 And it's just that. You inherit from this `ActiveRecord` class. And that
 base class, it doesn't do anything clever or magic. It's just a regular
@@ -402,8 +387,7 @@ it's completely general, and it's implemented in 12 lines. I assure you
 that the parts of LINQ which provide the equivalent functionality are
 not implemented in 12 lines.
 
-![](/assets/2008/11/slide11-generics.png "slide11-generics"){.alignnone
-.size-full .wp-image-484 width="524" height="383"}
+![](/assets/2008/11/slide11-generics.png "slide11-generics")
 
 Generics are another example. So, generics are AWESOME, everybody knows
 this. I remember when I was primarily a C++ jockey, and generics are
@@ -456,8 +440,7 @@ So these are examples of where static typing gets in the way of
 productivity, and produces brittle code, that is not amenable to uses
 beyond those directly envisaged by the original creator.
 
-![](/assets/2008/11/slide12-what-happens-when-we-let-go.png "slide12-what-happens-when-we-let-go"){.alignnone
-.size-full .wp-image-485 width="523" height="384"}
+![](/assets/2008/11/slide12-what-happens-when-we-let-go.png "slide12-what-happens-when-we-let-go")
 
 So what happens when we let go? Well, Gilad is a smart guy. Obviously he
 knows that all these languages are Turing complete, and famously, you
@@ -489,8 +472,7 @@ While other languages would make those same tasks orders of magnitude
 harder and uglier - obfuscating the implementation by the reams of
 scaffolding required to enable the approach.
 
-![](/assets/2008/11/slide13-pause-for-breath.png "slide13-pause-for-breath"){.alignnone
-.size-full .wp-image-493 width="523" height="383"}
+![](/assets/2008/11/slide13-pause-for-breath.png "slide13-pause-for-breath")
 
 So I've been making some bold claims, and I've gotten in a few
 dismissive digs. It's worth a calibration point here, to acknowledge
@@ -502,8 +484,7 @@ languages have been under-represented, and are far more applicable and
 useful than they are given credit for. They need a cheering squad. And
 today, that's me.
 
-![](/assets/2008/11/slide14-resolver-one.png "slide14-resolver-one"){.alignnone
-.size-full .wp-image-495 width="523" height="384"}
+![](/assets/2008/11/slide14-resolver-one.png "slide14-resolver-one")
 
 So, I've talked about a lot of generalities. Let's get specific. People
 say you can't build large systems with dynamic languages. Here is one.
@@ -555,8 +536,7 @@ techniques that the software industry has been refining for decades:
 Functional decomposition, object orientation, 3rd party libraries,
 source code control, and the like.
 
-![](/assets/2008/11/slide15-hello-world-csharp.png "slide15-hello-world-csharp"){.alignnone
-.size-full .wp-image-496 width="524" height="384"}
+![](/assets/2008/11/slide15-hello-world-csharp.png "slide15-hello-world-csharp")
 
 So how can I justify the claim that X lines of code in a dynamic
 language provide more functionality that the same number of lines in
@@ -567,8 +547,7 @@ To take a simple but illustrative example, I'm sure you've seen this
 before. Compare and contrast 'hello world' in C\#, with the same thing
 in Python:
 
-![](/assets/2008/11/slide16-hello-world-python.png "slide16-hello-world-python"){.alignnone
-.size-full .wp-image-497 width="523" height="383"}
+![](/assets/2008/11/slide16-hello-world-python.png "slide16-hello-world-python")
 
 It's important to notice that the huge reduction in visual complexity
 and clutter is not a fluke of this particular example - this is entirely
@@ -589,8 +568,7 @@ Python - on the contrary, these sorts of things are present if required,
 and for normal usage they just work automatically, without being
 intrusive.
 
-![](/assets/2008/11/slide17-dl-tend-to-be.png "slide17-dl-tend-to-be"){.alignnone
-.size-full .wp-image-499 width="523" height="384"}
+![](/assets/2008/11/slide17-dl-tend-to-be.png "slide17-dl-tend-to-be")
 
 So this clean, minimal syntax is coupled with a language which is
 actually extremely powerful and expressive - much more so than static
@@ -600,8 +578,7 @@ techniques, in case you do something that isn't type safe. The
 flexibility and permissiveness of dynamic languages makes them able to
 handle approaches that wouldn't otherwise be possible.
 
-![](/assets/2008/11/slide18-aspect-oriented-programming.png "slide18-aspect-oriented-programming"){.alignnone
-.size-full .wp-image-500 width="524" height="383"}
+![](/assets/2008/11/slide18-aspect-oriented-programming.png "slide18-aspect-oriented-programming")
 
 Here's an example of how this flexibility and expressiveness helps.
 Aspect oriented programming just means not mixing several different
@@ -609,16 +586,14 @@ concerns into the same bit of code. The archetypal example of this is
 something like logging. If your application has logging, the code for
 that tends to spread all around the code base if left unchecked.
 
-![](/assets/2008/11/slide20-logging-initial-highlight.png "slide20-logging-initial-highlight"){.alignnone
-.size-full .wp-image-502 width="525" height="383"}
+![](/assets/2008/11/slide20-logging-initial-highlight.png "slide20-logging-initial-highlight")
 
 You can see that we're only really calling three functions here, the
 'do\_' functions on the highlighted lines, but this naive implementation
 of the logging and timing code has bloated it out, masking the true
 intent of the code.
 
-![](/assets/2008/11/slide21-logging-decorator.png "slide21-logging-decorator"){.alignnone
-.size-full .wp-image-503 width="522" height="382"}
+![](/assets/2008/11/slide21-logging-decorator.png "slide21-logging-decorator")
 
 So, one alternative implementation is to *decorate* the functions that
 need logging. This is done using this '@' syntax. Importantly, the
@@ -636,8 +611,7 @@ return a new function, which calls do\_loading, but which also does
 other things before and after the function call. Things like the timer
 and logging code:
 
-![](/assets/2008/11/slide22-logging-implement-decorator.png "slide22-logging-implement-decorator"){.alignnone
-.size-full .wp-image-504 width="524" height="384"}
+![](/assets/2008/11/slide22-logging-implement-decorator.png "slide22-logging-implement-decorator")
 
 Here it is. 'timed\_op' creates a new function, and returns that
 function. It's this inner function, 'time\_and\_log\_func', that gets
@@ -648,8 +622,7 @@ parameter.
 
 So with these in place, our original code simplifies down to:
 
-![](/assets/2008/11/slide23-logging-calling-code.png "slide23-logging-calling-code"){.alignnone
-.size-full .wp-image-505 width="522" height="384"}
+![](/assets/2008/11/slide23-logging-calling-code.png "slide23-logging-calling-code")
 
 This code is not just much clearer than the original. It is literally
 unchanged from how it would look if no logging were taking place. We
@@ -657,16 +630,14 @@ have entirely separated the concerns of logging from the functionality
 being logged. Very cool in this simple example. Unbelievably useful in
 the context of a large project.
 
-![](/assets/2008/11/slide24-metapogramming.png "slide24-metapogramming"){.alignnone
-.size-full .wp-image-506 width="524" height="384"}
+![](/assets/2008/11/slide24-metapogramming.png "slide24-metapogramming")
 
 Another example of the expressibility of dynamic languages is
 meta-programming. Code that writes new code. For example, we can
 generate new classes at runtime, and then use them exactly as though
 they had been part of the program's original source code.
 
-![](/assets/2008/11/slide25-deserialise-xml.png "slide25-deserialise-xml"){.alignnone
-.size-full .wp-image-507 width="524" height="384"}
+![](/assets/2008/11/slide25-deserialise-xml.png "slide25-deserialise-xml")
 
 This is the XML deserialiser I promised earlier. Passed an XML node, it
 makes a call to 'type', on the third line of the function, to create a
@@ -695,8 +666,7 @@ So when we're done, the return value is an object hierarchy
 corresponding to our XML document, with attributes on each object,
 corresponding to the data contained in each XML tag.
 
-![](/assets/2008/11/slide26-first-class-dotnet-citizens.png "slide26-first-class-dotnet-citizens"){.alignnone
-.size-full .wp-image-508 width="523" height="384"}
+![](/assets/2008/11/slide26-first-class-dotnet-citizens.png "slide26-first-class-dotnet-citizens")
 
 So, these sorts of interesting features are going to be available to
 .Net developers in the form of IronPython and IronRuby. These languages
@@ -705,8 +675,7 @@ terms of interoperability and Visual Studio support. Michael Foord has a
 bunch of [extremely cool demos about using Silverlight from
 IronPython](http://www.voidspace.org.uk/ironpython/silverlight/index.shtml).
 
-![](/assets/2008/11/slide27-embeddable.png "slide27-embeddable"){.alignnone
-.size-full .wp-image-511 width="524" height="383"}
+![](/assets/2008/11/slide27-embeddable.png "slide27-embeddable")
 
 I mentioned earlier how Resolver was using IronPython as an embedded
 scripting language. This is all it takes to do that, just a few
@@ -720,23 +689,20 @@ instance of the python engine instead, so that your scripting is
 isolated from your running application, which is what Resolver does,
 obviously.
 
-![](/assets/2008/11/slide28-extendable.png "slide28-extendable"){.alignnone
-.size-full .wp-image-512 width="522" height="382"}
+![](/assets/2008/11/slide28-extendable.png "slide28-extendable")
 
 It's possible to call into libraries for Python which are written in C.
 This is fairly common, in fact, a fair number of Python's standard
 libraries are implemented this way, as are some 3rd party libraries.
 
-![](/assets/2008/11/slide29-extending-cpython-in-c.png "slide29-extending-cpython-in-c"){.alignnone
-.size-full .wp-image-513 width="523" height="384"}
+![](/assets/2008/11/slide29-extending-cpython-in-c.png "slide29-extending-cpython-in-c")
 
 The problem with it is that it ain't pretty. It requires a significant
 amount of boilerplate C code so that your library exposes the correct
 sort if interface to be callable from Python. This is one area that
 IronPython scores heavily over regular CPython:
 
-![](/assets/2008/11/slide30-extending-ironpython-in-csharp-300x220.png "slide30-extending-ironpython-in-csharp"){.alignnone
-.size-medium .wp-image-514 width="300" height="220"}
+![](/assets/2008/11/slide30-extending-ironpython-in-csharp.png "slide30-extending-ironpython-in-csharp")
 
 The interoperability of .Net means you can write regular old C\#, with
 no boilerplate, and simply call into it directly. This is obviously very
@@ -750,7 +716,7 @@ slow. Well, it turns out that isn't the whole story.
 We've all seen these benchmarks where Python is 10 or even 100 times
 slower than Java or C\#. And Ruby is even slower. On the face of it,
 this seems pretty incontrovertible. The problem with benchmarks like
-this though, is that they often only address the performance of
+this though, is that they often only address the performance o
 languages operating on small, well-understood algorithms. And the
 conclusion from benchmarks like this - that dynamic languages are slow
 in this sort of circumstance - is absolutely true. You're never going to
@@ -821,8 +787,7 @@ dynamic languages do not suffer from poor performance on large projects
 remotely as much as benchmarks suggest they might. In fact, the little
 experience we have suggests they might actually even be better.
 
-![](/assets/2008/11/slide31-performance-gilad.png "slide31-performance-gilad"){.alignnone
-.size-full .wp-image-515 width="523" height="384"}
+![](/assets/2008/11/slide31-performance-gilad.png "slide31-performance-gilad")
 
 There's more. It turns out that there are lots of things we can do to
 optimise the performance of dynamic languages, which nobody has ever
@@ -851,8 +816,7 @@ discovering that there are a whole host of things you can do to optimise
 dynamic languages. They are just very, very different things than you
 would do for static languages.
 
-![](/assets/2008/11/slide33-performance-improvements.png "slide33-performance-improvements"){.alignnone
-.size-full .wp-image-527 width="524" height="384"}
+![](/assets/2008/11/slide33-performance-improvements.png "slide33-performance-improvements")
 
 So the upshot of that is that people are only just beginning to realise
 that there is plenty of low-hanging fruit when it comes to optimisation,
@@ -889,8 +853,7 @@ going to keep getting better and better as time goes on.
 
 Alright, what's left?
 
-![](/assets/2008/11/slide34-ide-and-tools.png "slide34-ide-and-tools"){.alignnone
-.size-full .wp-image-529 width="527" height="384"}
+![](/assets/2008/11/slide34-ide-and-tools.png "slide34-ide-and-tools")
 
 So, it turns out a very similar discussion needs to be had about the
 traditional weakness of tools for dynamic languages. Everyone thinks
@@ -924,16 +887,14 @@ doesn't work on that yet, so you could pitch in and get that wired up,
 or whatever else your environment is, presumably, and make a lot of
 people very happy.
 
-![](/assets/2008/11/slide35-roadmap2.png "slide35-roadmap2"){.alignnone
-.size-full .wp-image-533 width="533" height="348"}
+![](/assets/2008/11/slide35-roadmap2.png "slide35-roadmap2")
 
 So, hopefully this morning I've given you some reasons to be curious
 about IronPython, and the forthcoming IronRuby, and maybe even some of
 the other dynamic languages too. You can see what the future looks like,
 and I don't just mean this slide, right?
 
-![](/assets/2008/11/slide36-thankyou.png "slide36-thankyou"){.alignnone
-.size-full .wp-image-534 width="525" height="385"}
+![](/assets/2008/11/slide36-thankyou.png "slide36-thankyou")
 
 Ok, I think we're done. Thanks very much for listening, Are there any
 questions?

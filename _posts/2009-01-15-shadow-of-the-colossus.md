@@ -16,12 +16,9 @@ wordpress_id: 214
 wordpress_url: http://www.tartley.com/?p=214
 ---
 
-\[caption id="attachment\_641" align="alignleft" width="300"
-caption="Fight or flight?"\]![Fight or
-flight?](/assets/2009/01/sotc4-300x225.jpg "Shadow of the Colossus"){.size-medium
-.wp-image-641 width="300" height="225"}\[/caption\]
+![](/assets/2009/01/sotc4-300x225.jpg "Fight or flight?")
 
-**PS2, Team ICO, 2005.**
+*PS2, Team ICO, 2005.*
 
 As is common for a title released in the autumn years of a console's
 lifetime, the programmers at Team ICO have mastered the PS2 hardware,

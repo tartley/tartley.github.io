@@ -34,12 +34,9 @@ wordpress_id: 665
 wordpress_url: http://tartley.com/?p=665
 ---
 
-\[caption id="attachment\_666" align="alignleft"
-width="150"\]![Inifinite
-Jest](/assets/2009/02/infinitejest.jpg "Infinite Jest"){.size-full
-.wp-image-666 width="150" height="228"} Infinite Jest\[/caption\]
+![Inifinite Jest](/assets/2009/02/infinitejest.jpg)
 
-**by David Foster Wallace**
+*by David Foster Wallace*
 
 I've had such a diverse set of reactions to this, and how could I not?
 The writing is bold and idiosyncratic throughout. The novel's story is

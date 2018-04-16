@@ -187,17 +187,18 @@ the expense of artists and of the rest of society.
 With all my gratitude and respect for the work you and your fellow MEPs
 have done and will continue to do to resolve these issues,
 
-Yours sincerely,\
+Yours sincerely,
+
 Jonathan Hartley
 
 \*1 See this February 2009 Harvard paper which notes:
 
-"An attempt to determine the impact of legal changes on entry into
-composing is inconclusive. The paper shows, however, that a golden age
-of musical composition nevertheless occurred in nations that
-lackedcopyright protection for musical works."
+> "An attempt to determine the impact of legal changes on entry into
+> composing is inconclusive. The paper shows, however, that a golden age
+> of musical composition nevertheless occurred in nations that
+> lackedcopyright protection for musical works."
 
-<http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1336802>\
+<http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1336802>
 The paper is summarised persuasively in an online news article here:
 
 <http://www.techdirt.com/articles/20090308/1022324034.shtml>

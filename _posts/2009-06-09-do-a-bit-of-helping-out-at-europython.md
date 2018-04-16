@@ -70,11 +70,11 @@ WARMTH of a deftly-cupped microphone.
 (\*anyone cutting the power on Sir Tony will be duly ejected from the
 premises)
 
-Responsibilities are described in loving detail here:\
+Responsibilities are described in loving detail here:
 <http://wiki.europython.eu/SessionTeam>
 
 Please think about it, and if you fancy it, sign up soon (on the wiki
 page above) because we're currently all a-flutter wondering how the heck
-we're going to manage this.  :-)
+we're going to manage this. :-)
 
 Thanks!
