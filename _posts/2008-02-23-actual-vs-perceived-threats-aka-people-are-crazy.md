@@ -59,8 +59,7 @@ wordpress_id: 284
 wordpress_url: http://tartley.com/?p=284
 ---
 
-![Actual vs Perceived
-threats](/assets/2008/02/0aelecrtromshjoi9.jpg){.floatleft}[](http://www.susannahertrich.com/html/humansanimals.html)
+[![Actual vs Perceived threats](/assets/2008/02/0aelecrtromshjoi9.jpg)](http://www.susannahertrich.com/html/humansanimals.html)
 
 [Susanna
 Hertrich](http://www.susannahertrich.com/html/humansanimals.html) has an

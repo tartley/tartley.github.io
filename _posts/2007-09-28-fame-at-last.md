@@ -16,7 +16,7 @@ wordpress_id: 209
 wordpress_url: http://www.tartley.com/?p=209
 ---
 
-[![billborg.gif](/assets/2007/09/billborg.gif){.alignleft}](http://slashdot.org/articles/07/09/28/1518246.shtml "billborg.gif"){.floatleft}Article
+[![billborg.gif](/assets/2007/09/billborg.gif)](http://slashdot.org/articles/07/09/28/1518246.shtml "billborg.gif") Article
 about [Resolver on
 Slashdot](http://slashdot.org/articles/07/09/28/1518246.shtml)'s front
 page today. Lifetime ambition: Check!

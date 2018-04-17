@@ -33,14 +33,9 @@ he mentioned. One of the best essays I found was Martin Fowler's piece,
 entitled [mock objects aren't
 stubs.](http://www.martinfowler.com/articles/mocksArentStubs.html)
 
-<div style="float:left; width:325px; font-size:0.75em;">
-
-![Mock classes used in unit tests as
-stubs.](/assets/2007/04/mocks-arent-stubs.png)Class
-under test, shown on the left in use by release software, and on the
-right in a test environment, using stubbed out mock helper classes.
-
-</div>
+![Mock classes used in unit tests as stubs.](/assets/2007/04/mocks-arent-stubs.png)
+*Class UnderTest, shown on the left in use by release software, and on the
+right in a test environment, using stubbed out mock helper classes.*
 
 Clearly, the idea of a generic mock object class isn't a brand-new one,
 and Martin's essay describes several such utilities that have been

@@ -19,7 +19,7 @@ wordpress_id: 81
 wordpress_url: http://tartley.com/?p=81
 ---
 
-[![Title screen](/assets/2007/04/metastasis_1_background0000.jpg)](/assets/2007/04/metastasis_1_background0000.jpg)
+![Title screen](/assets/2007/04/metastasis_1_background0000.jpg)]
 
 *by Adam Foster*, 2006.
 
@@ -34,10 +34,7 @@ the HL2 universe, a new thread in the tale of the alien Combine's
 invasion of Earth. It has been three years in the making, and it's
 *bloody brilliant*.
 
-[![Beach
-head](/assets/2007/04/metastasis_10004.jpg){.alignnone
-width="612"
-height="477"}](/assets/2007/04/metastasis_10004.jpg "Beach head")
+![](/assets/2007/04/metastasis_10004.jpg)
 
 The baseline HL2 gameplay is not changed one iota. Metastasis eschews
 the normal stock-in-trade of the mod scene, introducing no new enemies,
@@ -52,9 +49,7 @@ misinform and manipulate, drawing upon the best of various [alternate
 reality game](http://en.wikipedia.org/wiki/Alternate_reality_game)
 influences.
 
-[![Shoreline](/assets/2007/04/metastasis_10012.jpg){.alignnone
-width="618"
-height="481"}](/assets/2007/04/metastasis_10012.jpg "Shoreline")
+![Shoreline](/assets/2007/04/metastasis_10012.jpg)
 
 The game opens with your character dumped unceremoniously out of a
 helicopter by forces unknown, onto a beach under hostile fire. Running
@@ -70,10 +65,7 @@ tool, your experiences relayed back to her remote location, that she
 might investigate a small island, and its role in the Combine's
 occupation.
 
-[![Down the rabbit
-hole](/assets/2007/04/metastasis_20021.jpg){.alignnone
-width="606"
-height="469"}](/assets/2007/04/metastasis_20021.jpg "Down the rabbit hole")
+![Down the rabbit hole](/assets/2007/04/metastasis_20021.jpg)
 
 The island plays host to the usual menagerie of HL2 critters, and
 visible at its centre is a mysterious plasma discharge, which Minerva
@@ -90,7 +82,7 @@ single night. But it's managed with such finesse, extending the
 backstory of HL2 in bold new directions, building upon what was
 indubitably the greatest PC game of 2005, possibly of all time, with
 such verve and imagination that I have to agree with a Metastasis forum
-posting: It might just be \*whisper it\* better than the source.
+posting: It might just be (*whisper it*) better than the source.
 
-Rating: 10/10\
+Rating: 10/10.
 Bring on the third and final instalment, due later this month...

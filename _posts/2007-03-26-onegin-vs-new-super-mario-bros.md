@@ -20,22 +20,12 @@ wordpress_id: 69
 wordpress_url: http://tartley.com/?p=69
 ---
 
-[[![Onegin](/assets/2007/03/onegin.thumbnail.jpg)](http://tartley.com/wp-content/uploads/2007/03/onegin.jpg "Onegin")\
-**Onegin**\
-*Company:* [The Royal Ballet](http://info.royaloperahouse.org/Home/)\
-*Music:* Pyotr Il'yich Tchaikovsky\
-*Choreography & libretto:* John Cranko]{style="float:left;"}
-
-[[![New Super Mario
-Bros.](/assets/2007/03/new-super-mario-bros.thumbnail.jpg)](http://tartley.com/wp-content/uploads/2007/03/new-super-mario-bros.jpg "New Super Mario Bros.")\
-**New Super Mario Brothers**\
-*Format:*Nintendo DS\
-*Developer:*Nintendo\
-*Released:* 2006]{style="float:right; text-align:right;"}
-
-[\
-![vs1.jpg](/assets/2007/03/vs1.jpg)\
-]{style="margin-top:2em;"}
+|---------------------------------------------------------------------:| |:--------------------------------------------------------------------:
+| ![](/assets/2007/03/onegin.thumbnail.jpg)                            | |![](/assets/2007/03/new-super-mario-bros.thumbnail.jpg)
+| **Onegin**                                                           | |**New Super Mario Brothers**
+| *Company:* [The Royal Ballet](http://info.royaloperahouse.org/Home/).| ![](/assets/2007/03/vs1.jpg) |*Developer:* Nintendo
+| *Music:* Pyotr Il'yich Tchaikovsky.                                  | |*Format:* Nintendo DS
+| *Choreography & libretto:* John Cranko                               | |*Released:* 2006
 
 **Introduction**
 
@@ -47,10 +37,8 @@ post.\
 
 **History**
 
-[![nes\_super\_mario\_bros.png](/assets/2007/03/nes_super_mario_bros.png)\
-Pushkin's original novel, seen here\
-in the English
-translation.]{style="float:left; margin-right:1em; margin-bottom:1em; font-size:0.9em; line-height:1.4em;"}
+![](/assets/2007/03/nes_super_mario_bros.png)
+*Pushkin's original novel, seen here in the English translation.*
 
 The story of Onegin derives from a Russian novel-in-verse, *Eugene
 Onegin* written by Aleksandr Pushkin over the period from 1823 to 1837.
@@ -62,10 +50,8 @@ as a ballet by Cranko in 1965, and it is Stolze's 2007 arrangement of
 this that is now playing at the Royal Opera House in London's Covent
 Garden.
 
-[![Super Mario Bros. on the
-NES](/assets/2007/03/eugeneonegin-book.jpg)\
-Super Mario Bros. on the
-NES]{style="float:right; margin-left:1em; margin-bottom:1em; font-size:0.9em; line-height:1.4em;"}
+![](/assets/2007/03/eugeneonegin-book.jpg)
+*Super Mario Bros. on the NES*
 
 New Super Mario Bros, similarly, represents the culmination of a
 venerated franchise. The character of Mario first appeared as a nameless
@@ -85,11 +71,8 @@ certainly the most influential, videogame series of all time.
 
 **Form**
 
-[![Flawlessly timed triple jumps result in extra
-height](/assets/2007/03/jump.jpg)\
-Flawlessly timed triple jumps\
-result in extra
-height]{style="float:left; margin-right:1em; margin-bottom:1em; font-size:0.9em; line-height:1.4em;"}
+![](/assets/2007/03/jump.jpg)
+*Flawlessly timed triple jumps result in extra height.*
 
 Like so many other DS outings, New Super Mario Bros. is very much a
 return to form for the champion platformer. It makes solid, competent
@@ -113,10 +96,8 @@ and sophisticated woman, introduces her husband, Prince Gremin.
 Both works have in common the attempt to convey a narrative without the
 aid of verbiage, with significant difficulties encountered in each case.
 
-[![Dumb, as in
-mime.](/assets/2007/03/_1703471_onegin_150a.jpg)\
-Dumb, as in
-mime.]{style="float:left; margin-right:1em; margin-bottom:1em; font-size:0.9em; line-height:1.4em;"}
+![](/assets/2007/03/1703471_onegin_150a.jpg)
+*Dumb, as in mime.*
 
 Ballet suffers from an inexpressiveness in this regard, insomuch as the
 tools at the dancer's disposal are not capable of depicting much in the
@@ -132,10 +113,8 @@ the same formulaic stories over and over again - and even these are
 considered to be in need of supplementing with a written synopsis in the
 program.
 
-[![Disrupting the narrative
-direction.](/assets/2007/03/newsupermario.jpg)\
-Disrupting the narrative
-direction.]{style="float:right; margin-left:1em; margin-bottom:1em; font-size:0.9em; line-height:1.4em;"}
+![](/assets/2007/03/newsupermario.jpg)
+*Disrupting the narrative direction.*
 
 Similarly, videogames revolve around the participation of the player,
 who thus has the means to disrupt any narrative direction or pacing
@@ -147,7 +126,7 @@ repertoire of in-game action. New Super Mario Bros. sidesteps these
 difficulties by eschewing all but the most perfunctory storyline, aside
 from a grown-up nod to the sordid realities behind Bowser's recurrent
 princess kidnapping, hinted at by Bowser Jr. labouring under the
-impression than Princess Peach may be his Mother.
+impression than Princess Peach may be his mother.
 
 **Overall Impressions**
 
@@ -156,12 +135,10 @@ entry in representing the best that the mainstream of their respective
 fields have to offer. Two marvellous, vigorous and thoroughly enjoyable
 outings.
 
-[\
-**Onegin**\
-Rating 8/10\
-An education]{style="float:left;"}
+**Onegin**
+Rating 8/10.
+An education.
 
-[\
-**New Super Mario Bros.**\
-Rating: 9/10\
-A triumph]{style="float:right; text-align:right;"}
+**New Super Mario Bros.**
+Rating: 9/10.
+A triumph.

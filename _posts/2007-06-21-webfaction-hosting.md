@@ -16,8 +16,9 @@ wordpress_id: 148
 wordpress_url: http://tartley.webfactional.com/?p=148
 ---
 
-[![WebFaction - hosting for an agile
-web.](http://tartley.webfactional.com/wp-content/uploads/2007/06/webfaction.thumbnail.png){.alignleft}](http://www.webfaction.com/ "WebFaction - hosting for an agile web."){.floatleft}If
+[![WebFaction - hosting for an agile web.](/assets/2007/06/webfaction.thumbnail.png)](http://www.webfaction.com/ "WebFaction - hosting for an agile web.")
+
+If
 you can see this post, then tartley.com successfully switched to
 [WebFaction](http://www.webfaction.com/ "WebFaction - hosting for an agile web.")
 for our hosting, thanks to the resounding recommendations of Michael,

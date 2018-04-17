@@ -27,7 +27,7 @@ wordpress_id: 141
 wordpress_url: http://tartley.com/?p=141
 ---
 
-![pyopengl-screen01.jpg](/assets/2007/06/pyopengl-screen01.jpg){.floatleft}
+![pyopengl-screen01.jpg](/assets/2007/06/pyopengl-screen01.jpg)
 
 I've always preferred the open standards and cross-platform philosophy
 of OpenGL over DirectX. In recent years though, development of OpenGL

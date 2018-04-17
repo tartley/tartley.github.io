@@ -19,12 +19,10 @@ wordpress_id: 180
 wordpress_url: http://tartley.com/?p=180
 ---
 
-![Slaughterhouse 5,
-cover](/assets/2007/07/slaughterhouse5.jpg){.alignleft
-.floatleft}\
-*by Kurt Vonnegut* (1969)\
-[on
-amazon.co.uk](http://www.amazon.co.uk/Slaughterhouse-5-Kurt-Vonnegut/dp/0099800209).
+![Slaughterhouse 5, cover](/assets/2007/07/slaughterhouse5.jpg)
+
+*by Kurt Vonnegut*, 1969.
+[on amazon.co.uk](http://www.amazon.co.uk/Slaughterhouse-5-Kurt-Vonnegut/dp/0099800209).
 
 I'm falling way behind in my avowed intention to write up all the books
 and movies I'm subjected to. Primarily for my own benefit, rather than

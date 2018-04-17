@@ -16,9 +16,9 @@ wordpress_id: 184
 wordpress_url: http://tartley.com/?p=184
 ---
 
-![Kill Bill Vol
-2](/assets/2007/07/killbill.jpg){.alignleft
-.floatright}*by Quentin Tarantino* (2004)\
+![Kill Bill Vol 2](/assets/2007/07/killbill.jpg)
+
+*by Quentin Tarantino* (2004)
 [on imdb](http://imdb.com/title/tt0378194/)
 
 Speaking of not having read Hamlet, did you see that awful Tarantino

@@ -16,7 +16,7 @@ wordpress_id: 1547
 wordpress_url: http://tartley.com/?p=1547
 ---
 
-[![domaindrivendesign](/assets/2014/01/domaindrivendesign.jpg)](/assets/2014/01/domaindrivendesign.jpg)
+![domaindrivendesign](/assets/2014/01/domaindrivendesign.jpg)
 
 *by Eric Evans (2004)* [on Amazon](http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215)
 

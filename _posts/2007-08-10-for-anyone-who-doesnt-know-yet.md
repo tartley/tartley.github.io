@@ -16,9 +16,10 @@ wordpress_id: 201
 wordpress_url: http://tartley.com/?p=201
 ---
 
-[![Flower. Hand.
-Ring.](/assets/2007/08/20070801064.jpg){.alignleft}](http://picasaweb.google.co.uk/tartley/Engaged){.floatleft}...she
-said yes!\
+[![Flower. Hand. Ring.](/assets/2007/08/20070801064.jpg)](http://picasaweb.google.co.uk/tartley/Engaged)
+
+...she said yes!
+
 [Pics on Picasa here.](http://picasaweb.google.co.uk/tartley/Engaged)
 
 

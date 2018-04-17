@@ -282,49 +282,31 @@ At 30fps, we can still manage 85 entities, and we're now rendering a fan
 of three shards for each one, so we've tripled our throughput to **225
 triangles** per frame. I suspect it can get better though. Let's try
 cranking up the number of shards per fan, while reducing the number of
-fans to maintain 30fps:
+fans to maintain 30fps.
 
-  ---------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  per fan:   7 shards                                                                                                                                                               20 shards                                                                                                                                                                  400 shards                                                                                                                                                                     1,200 shards                                                                                                                                                                       12,000 shards
-             [![7 shards](/assets/2008/02/7shards85ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/7shards85ents.png "7 shards")   [![20 shards](http://tartley.com/wp-content/uploads/2008/02/20shards85ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/20shards85ents.png "20 shards")   [![400 shards](http://tartley.com/wp-content/uploads/2008/02/400shards68ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/400shards68ents.png "400 shards")   [![1200 shards](http://tartley.com/wp-content/uploads/2008/02/1200shards48ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/1200shards48ents.png "1200 shards")   [![12000 shards](http://tartley.com/wp-content/uploads/2008/02/12000shards10ents.thumbnail.png)](http://tartley.com/wp-content/uploads/2008/02/12000shards10ents.png "12000 shards")
-  ---------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Shards per entity | Entities at 30fps | Triangles per frame
+  -----------------:|------------------:|-------------------:
+  3                 | 85                | 225
+  [![7 shards](/assets/2008/02/7shards85ents.thumbnail.png)](/assets/2008/02/7shards85ents.png) 7                 | 85                | 595
+  [![20 shards](/assets/2008/02/20shards85ents.thumbnail.png)](/assets/2008/02/20shards85ents.png) 20                | 85                | 1,700
+  100               | 82                | 8,200
+  [![400 shards](/assets/2008/02/400shards68ents.thumbnail.png)](/assets/2008/02/400shards68ents.png) 400               | 68                | 27,200
+  [![1200 shards](/assets/2008/02/1200shards48ents.thumbnail.png)](/assets/2008/02/1200shards48ents.png)1,200             | 48                | 57,600
+  1,800             | 39                | 70,200
+  3,000             | 29                | 87,000
+  6,000             | 17                | 102,000
+  [![](/assets/2008/02/12000shards10ents.thumbnail.png)](/assets/2008/02/12000shards10ents.png) 12,000 | 10                | 120,000
+  100,000           | 1                 | 100,000
 
 Above about 200 shards per fan, the shards start getting so thin that
 they produce moire effects, and above 10,000 there's some crazy white
 artifact starts happening in the middle of the fans. But nevertheless,
-the times taken to render these frames show a strong trend:
-
-  -------------------------------------
-  Shards\      Entities\   Triangles\
-  per entity   at 30fps    per frame
-  ------------ ----------- ------------
-  3            85          225
-
-  7            85          595
-
-  20           85          1,700
-
-  100          82          8,200
-
-  400          68          27,200
-
-  1,200        48          57,600
-
-  1,800        39          70,200
-
-  3,000        29          87,000
-
-  6,000        17          102,000
-
-  12,000       10          120,000
-
-  100,000      1           100,000
-  -------------------------------------
+the times taken to render these frames show a strong trend.
 
 Fewer fans, each with more shards, results in much higher triangle
 throughput - up to **120,000 triangles** per frame. Although it's
-exciting to see such high figures, I'd almost rather it wasn't the case
-- I'd prefer to create a game with more independent entities wandering
+exciting to see such high figures, I'd almost rather it wasn't the case.
+I'd prefer to create a game with more independent entities wandering
 around, regardless of how little graphical detail they could be adorned
 with. But there you have it, blame John Carmack. Anyhow, it's clear that
 we can deliver sufficient graphical grunt to put together *some sort* of

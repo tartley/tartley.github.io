@@ -27,8 +27,9 @@ wordpress_id: 233
 wordpress_url: http://tartley.com/?p=233
 ---
 
-![Sophia](/assets/2008/01/pppsophia.jpg){.alignleft
-.floatleft}A special highlight, as is so often the case, is the image
+![Sophia](/assets/2008/01/pppsophia.jpg)
+
+A special highlight, as is so often the case, is the image
 featured in the exhibition's promotions, *Sophia* (left), by Billy &
 Hells, one in a series of photographs that emulates the type of lighting
 effects favoured by Dutch golden age painters.

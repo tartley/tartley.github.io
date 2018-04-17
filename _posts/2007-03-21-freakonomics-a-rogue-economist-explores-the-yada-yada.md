@@ -16,11 +16,9 @@ wordpress_id: 68
 wordpress_url: http://tartley.com/?p=68
 ---
 
-[![Rogue economist
-indeed.](/assets/2007/03/freakonomics.thumbnail.jpg){.alignleft}](http://tartley.com/wp-content/uploads/2007/03/freakonomics.jpg "Rogue economist indeed."){.introimg}*by
-Steven D. Levitt and Stephen J. Dubner*\
-2005\
-[Amazon](http://www.amazon.co.uk/Freakonomics-Economist-Explores-Hidden-Everything/dp/0141019018/)
+![](/assets/2007/03/freakonomics.jpg "Rogue economist indeed.")
+
+*by Steven D. Levitt and Stephen J. Dubner*, 2005. [On Amazon.co.uk](http://www.amazon.co.uk/Freakonomics-Economist-Explores-Hidden-Everything/dp/0141019018/).
 
 It was a bit of a phenomenon when it first came out, and I'm well known
 for my curmudgeonly resistance to popular phenomena, so forgive me for
@@ -40,5 +38,4 @@ to patiently explain that 'correlation is not causation!', and then
 illustrate it with pages of examples, and you'll see why I quickly lost
 patience.
 
-Rating: 4/10.\
-Would have been great had it been 1/4 the length.
+Rating: 4/10. Would have been great had it been 1/4 the length.

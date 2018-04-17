@@ -50,7 +50,8 @@ wordpress_id: 248
 wordpress_url: http://tartley.com/?p=248
 ---
 
-[![Lappy](/assets/2008/02/lappy.thumbnail.jpg){.alignleft}](http://tartley.com/?attachment_id=249 "Lappy"){.floatleft}My
-lappy sketch lives! on [Kamil's blog
+[![Lappy](/assets/2008/02/lappy.thumbnail.jpg)](http://tartley.com/?attachment_id=249 "Lappy")
+
+My lappy sketch lives! on [Kamil's blog
 title](http://blog.kamil.dworakowski.name/). Har! That was an easy post.
 No thinking required.

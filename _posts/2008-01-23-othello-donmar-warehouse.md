@@ -23,9 +23,7 @@ wordpress_id: 235
 wordpress_url: http://tartley.com/?p=235
 ---
 
-![Chiwetel Ejiofor's
-Othello](/assets/2008/01/othello372.jpg){.floatleft
-.alignnone width="372" height="192"}
+![Chiwetel Ejiofor's Othello](/assets/2008/01/othello372.jpg)
 
 Another of my occasional theatre trips inspired by [the
 Libster](http://libbypenn.com), and jolly lovely it was too. Being a bit

@@ -16,22 +16,18 @@ wordpress_id: 87
 wordpress_url: http://tartley.com/?p=87
 ---
 
-[![Children of
-Men](/assets/2007/04/children-of-men.jpg)](http://imdb.com/title/tt0206634/ "Children of Men"){.introimg}
+![Children of Men](/assets/2007/04/children-of-men.jpg)]
 
-Director: Alfonso Cuarón**\
-**Writer: Alfonso Cuarón, et al\
-Starring: Clive Owen, Michael Caine, Julianne Moore.\
-2006.\
-Based on a novel by P.D. James
+*Director: Alfonso Cuarón.
+Writer: Alfonso Cuarón, et al.
+Starring: Clive Owen, Michael Caine, Julianne Moore.
+2006.
+Based on a novel by P.D. James.*
 
-[![Internet Movie
-Database](/assets/2007/03/imdb.png)](http://imdb.com/title/tt0206634/)
+[![Internet Movie Database](/assets/2007/03/imdb.png)](http://imdb.com/title/tt0206634/)
 *No children. No future. No hope.*
 
-[![children-of-men2.jpg](/assets/2007/04/children-of-men2.jpg){.alignnone
-width="569"
-height="384"}](/assets/2007/04/children-of-men2.jpg "children-of-men2.jpg")
+![](/assets/2007/04/children-of-men2.jpg)]
 
 A dystopian near-future Britain depicted with a realism that is both
 heartbreaking and horrifying, and directed with a relentless yet
@@ -44,25 +40,22 @@ animated Orwellian public information displays warn that it is a
 criminal offence to aid the flood of illegal refugees arriving from
 mainland Europe.
 
-[![children-of-men3.jpg](/assets/2007/04/children-of-men3.jpg){.alignnone
-width="577"
-height="369"}](/assets/2007/04/children-of-men3.jpg "children-of-men3.jpg"){.introimg}
+![](/assets/2007/04/children-of-men3.jpg)]
 
 The cast are incredible all round, particularly Clive Owen's tired and
 reluctant hero, a powerfully understated performance that captivates for
 every second of the movie. Michael Caine's aging hippy, which he based
 on John Lennon, is an absolute scene-stealing delight.
 
-[![children-of-men4.jpg](/assets/2007/04/children-of-men4.jpg){.alignnone
-width="580"
-height="388"}](/assets/2007/04/children-of-men4.jpg "children-of-men4.jpg")But
-it's the cinematography that is the real star, gripping and compelling
+![](/assets/2007/04/children-of-men4.jpg)
+
+But it's the cinematography that is the real star, gripping and compelling
 throughout, every scene lent a terrible beauty. Several minutes-long
 handheld camera shots demonstrate fearsome logistical preparations
 behind the camera, providing some battle scenes that are as intense,
 immersive and terrifying as those from Saving Private Ryan, without
 needing the gore.
 
-Rating: 9/10\
+Rating: 9/10.
 A stunning film, compelling and emotionally harrowing, only falling
 short of a magic '10' by virtue of lacking a real life-changing message.

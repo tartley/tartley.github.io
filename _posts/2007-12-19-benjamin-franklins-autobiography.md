@@ -51,8 +51,9 @@ wordpress_id: 217
 wordpress_url: http://tartley.com/?p=217
 ---
 
-![iphone.jpg](/assets/2007/12/iphone.jpg){.alignleft
-.floatleft}I read through this to assess the iPhone (many thanks to the
+![iphone.jpg](/assets/2007/12/iphone.jpg)
+
+I read through this to assess the iPhone (many thanks to the
 generosity and resourcefulness of a certain [Mr
 Smithson](http://amoral.org/)) as an eBook reader, and found it
 surprisingly good - certainly the best device I've tried to date,

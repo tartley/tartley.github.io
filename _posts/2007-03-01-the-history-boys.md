@@ -16,9 +16,9 @@ wordpress_id: 16
 wordpress_url: http://tartley.com/?p=16
 ---
 
-Writer: Alan Bennett\
-Director: Nicholas Hytner\
-Theatre: Wyndham's
+*Writer: Alan Bennett.
+Director: Nicholas Hytner.
+Theatre: Wyndham's.*
 
 After a lengthy run at the National Theatre, and then a national tour,
 this production marks the play's return to the West End, enlivened by a

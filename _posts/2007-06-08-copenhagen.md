@@ -16,9 +16,9 @@ wordpress_id: 124
 wordpress_url: http://tartley.com/?p=124
 ---
 
-[![Flag of
-Denmark](/assets/2007/06/flagofdenmark.png){.alignleft
-.floatleft}]{}Spent last weekend in lovely Copenhagen, courtesy of our
+![Flag of Denmark](/assets/2007/06/flagofdenmark.png)
+
+Spent last weekend in lovely Copenhagen, courtesy of our
 native guide, Susan's friend Rasmus. The ever genial Witt Mathot, and
 his sidekick Mike, were also in town giving some GIS Server training
 course. Consequently I spent Monday sickasadog. Quite possibly I will

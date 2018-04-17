@@ -16,16 +16,10 @@ wordpress_id: 136
 wordpress_url: http://tartley.com/?p=136
 ---
 
-<div class="floatleft">
+![12 Books That Changed The World](/assets/2007/06/12books-that-changed-the-world.jpg)
 
-[![12 Books That Changed The
-World](/assets/2007/06/12books-that-changed-the-world.jpg){.alignleft}](http://www.amazon.co.uk/12-Books-That-Changed-World/dp/0340839821 "12 Books That Changed The World")
-
-</div>
-
-*by Melvyn Bragg*\
-2006\
-[Amazon](http://www.amazon.co.uk/12-Books-That-Changed-World/dp/0340839821).
+*by Melvyn Bragg*, 2006.
+[On Amazon.co.uk](http://www.amazon.co.uk/12-Books-That-Changed-World/dp/0340839821).
 
 A brilliant assembly of potted snippets of history, ideal for someone
 like myself with scarcely a glimmer of an education. By cunning omission
@@ -34,10 +28,6 @@ books, but is able to manipulate the list such that it is all about 12
 *British* books, a move I heartily approve of. Apparently written to
 accompany some television series, I neither knew nor cared. For the
 record, his selection is below:
-
-<div style="clear: left;">
-
-</div>
 
 -   *Principia Mathematica* by Isaac Newton, 1687. "Will always have a
     pre-eminance above all the other works of human genius."
@@ -81,6 +71,8 @@ record, his selection is below:
     fiction, religious texts aside, can match the cultural influence and
     endearing effect on our language that this body of work has had.
 
-Rating:\
-9/10 if you know nothing, like what I do.\
+Rating:
+
+9/10 if you know nothing, like what I do.
+
 5/10 if you've already read all the entries in his list, like I haven't.

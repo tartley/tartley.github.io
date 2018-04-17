@@ -28,8 +28,8 @@ SPOILERS. Big time.
 
 > foun-tain *noun*.
 >
-> 1.  a spring or source of water; the source or head of a stream.
-> 2.  the source or origin of anything. The beginning. *Genesis*.
+> 1.  A spring or source of water; the source or head of a stream.
+> 2.  The source or origin of anything. The beginning. *Genesis*.
 
 She finally taught him that they get reborn. That's why she wasn't
 afraid of dying any more. That's why the two of them meet over and over
@@ -51,18 +51,18 @@ figure it out for himself, at the proper time. He has to die in the
 heart of the nebula, that his ashes might seed the tree of life into
 blossoming anew in the fires of a new creation.
 
-> "What do you think about that?" She asks him.\
-> "About what?"\
-> "About death as a creative act."
+| "What do you think about that?" She asks him.
+| "About what?"
+| "About death as a creative act."
 
 Izzy and Tom will be reborn in this new universe, too, many times down
 the centuries of history. They will live an infinite number of lives
 together. Forever. So long as he finds his way to the end of all things,
 to renew the cycle.
 
-> "Finish it." She told him.\
-> "I'm trying. I don't know how." He replies.\
-> "You do. You will."
+| "Finish it." She told him.
+| "I'm trying. I don't know how." He replies.
+| "You do. You will."
 
 He is Adam, who sustained his unnaturally extended life to the year 2500
 by subsisting on of the tree of life. She is his Eve, who partook of the
@@ -104,3 +104,7 @@ the page, judiciously snipped from
 from the corresponding entry on
 [thesaurus.com](http://thesaurus.reference.com/browse/fountain), and
 couldn't resist various wording improvements.
+
+**Update 2018:** The director has stated unambiguously that the above
+is all wrong.
+

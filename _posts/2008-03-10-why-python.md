@@ -54,8 +54,8 @@ the moment. Proponents would say that the entire history of programming
 has been a gradual migration towards progressively more dynamic
 languages. Dynamic languages, amongst other things, allow you to write
 programs that modify themselves when they run. Instead of simply writing
-a function yourself, you can instead write a function which **\*creates
-a second function\***, and then call this second function, which will do
+a function yourself, you can instead write a function which *creates
+a second function*, and then call this second function, which will do
 the thing you want done. This, and other sorts of brain-bending
 meta-programming, seem a little abstract at first, but sometimes allow
 some tremendous conceptual ju-jitsu, allowing very small amounts of code
@@ -63,7 +63,7 @@ to achieve enormous things.
 
 Secondly, Python's dynamism facilitates a programming style known as
 test driven development, of which I am big fan. The idea is that for
-every bit of code you write, you **\*also\*** write a test, which
+every bit of code you write, you *also* write a test, which
 verifies that your code is doing the right thing. It isn't immediately
 obvious that this is necessarily a very useful thing to do, but in
 practice it reaps tremendous benefits. I evangelise about it often,
@@ -90,12 +90,12 @@ development. But Ruby is not compellingly better than Python. They are
 more similar than they are different, and form healthy rivals.
 
 There are other languages that are better than Python at particular
-things, but none, in my opinion, are better than it for **\*most\***
+things, but none, in my opinion, are better than it for *most*
 things.
 
 Something like C++ is better for sheer speed of program execution, or
 for addressing the low-level bits and bytes that make up the electronics
-of your computer. But it takes **\*years\*** to master C++. It's a
+of your computer. But it takes *years* to master C++. It's a
 hard-core programmers language. I spent seven years living and breathing
 it, and feel qualified to say that its practitioners can be slightly
 masochistic about its inaccessible superiority. Even once mastered, it

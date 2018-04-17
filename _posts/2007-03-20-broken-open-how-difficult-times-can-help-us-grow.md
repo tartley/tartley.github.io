@@ -16,11 +16,10 @@ wordpress_id: 63
 wordpress_url: http://tartley.com/?p=63
 ---
 
-[![Broken
-Open](/assets/2007/03/broken-open.thumbnail.jpg){.alignleft}](http://tartley.com/wp-content/uploads/2007/03/broken-open.jpg "Broken Open"){.introimg}*by
-Elizabeth Lesser*\
-2004\
-[Amazon](http://www.amazon.com/Broken-Open-Elizabeth-Lesser/dp/1844135616/)
+![Broken Open](/assets/2007/03/broken-open.thumbnail.jpg)
+
+*by Elizabeth Lesser,* 2004.
+[On Amazon.com](http://www.amazon.com/Broken-Open-Elizabeth-Lesser/dp/1844135616/)
 
 It's the sort of nancy self-help psychobabble that would normally earn a
 derisive snort from my direction, but the onset of middle-age is

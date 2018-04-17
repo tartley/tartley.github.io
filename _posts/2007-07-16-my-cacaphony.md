@@ -40,26 +40,16 @@ exercise my ability to read music, albeit at the cost of sounding much
 less polished for the time being. That's my excuse and I'm sticking to
 it!
 
-<div class="floatleft">
-
-[![MIDI
-icon](/assets/2007/07/midifile.jpg)](http://tartley.com/wp-content/uploads/2007/07/07-06-28-beautiful-brown-eyes.mid "Beautiful Brown Eyes, 2007-06-28")\
+[![MIDI icon](/assets/2007/07/midifile.jpg)](/assets/2007/07/07-06-28-beautiful-brown-eyes.mid "Beautiful Brown Eyes, 2007-06-28")
 28 Jun
-
-</div>
 
 #### Alpine Melody
 
 Next up, an even simpler tune, which means I have less difficulty
 reading the music and so the timing's a bit better.
 
-<div class="floatleft">
-
-[![MIDI
-icon](/assets/2007/07/midifile.jpg)](http://tartley.com/wp-content/uploads/2007/07/07-07-16-alpine-melody.mid "Alpine Melody, 2007-07-16")\
+[![MIDI icon](/assets/2007/07/midifile.jpg)](/assets/2007/07/07-07-16-alpine-melody.mid "Alpine Melody, 2007-07-16")
 16 Jul
-
-</div>
 
 #### Tetris
 
@@ -70,22 +60,9 @@ broader pitch range than anything I've done before, so I can scarcely
 place my fingers on the right keys, never mind in time. Hopefully this
 will get better with practice.
 
-<div class="floatleft">
-
-[![MIDI
-icon](/assets/2007/07/midifile.jpg)](http://tartley.com/wp-content/uploads/2007/07/07-07-16-tetris-terrible-struggle.mid "Tetris, 2007-07-16")\
+[![MIDI icon](/assets/2007/07/midifile.jpg)](/assets/2007/07/07-07-16-tetris-terrible-struggle.mid "Tetris, 2007-07-16")
 16 Jul
 
-</div>
-
-<div class="floatleft">
-
-[![MIDI
-icon](/assets/2007/07/midifile.jpg)](http://tartley.com/wp-content/uploads/2007/07/tetris-07-07-21-better.mid "Tetris, 2007-07-21")\
+[![MIDI icon](/assets/2007/07/midifile.jpg)](/assets/2007/07/tetris-07-07-21-better.mid "Tetris, 2007-07-21")
 21 Jul
 
-</div>
-
-<div style="clear:both;">
-
-</div>

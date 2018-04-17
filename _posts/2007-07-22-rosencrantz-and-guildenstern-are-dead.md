@@ -24,9 +24,10 @@ wordpress_id: 181
 wordpress_url: http://tartley.com/?p=181
 ---
 
-[![Rosencrantz & Guildenstern Are
-Dead](/assets/2007/07/rosencrantzandguildenstern.jpg){.alignleft}](http://imdb.com/title/tt0100519/)
-*by Tom Stoppard* (1990)
+![Rosencrantz & Guildenstern Are Dead](/assets/2007/07/rosencrantzandguildenstern.jpg)
+
+*by Tom Stoppard*, 1990.
+[On IMDB](http://imdb.com/title/tt0100519/)
 
 I just can't decide how I feel about this. Part brilliant, part awful,
 my most bipolar experience since [Everything and

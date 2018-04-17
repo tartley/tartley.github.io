@@ -16,16 +16,15 @@ wordpress_id: 256
 wordpress_url: http://tartley.com/?p=256
 ---
 
-[![I am
-Legend](/assets/2008/02/i-am-legend.jpg){.alignleft
-.floatleft}](http://www.imdb.com/title/tt0480249/ "I am Legend")**Directed
-by Francis Lawrence.**
+[![I am Legend](/assets/2008/02/i-am-legend.jpg)](http://www.imdb.com/title/tt0480249/ "I am Legend")
 
-**Summary**\
+*Directed by Francis Lawrence.*
+
+**Summary**
 This is going to be one of those reviews where someone reads the book
 and then sees the movie and doesn't like it very much.
 
-**Details**\
+**Details**
 I read *Robinson Crusoe* for the first time when I was about 30. It
 forms such a prominent thread within our cultural milieu that I expected
 it to be a pinnacle of literature, well-written and evocative. For me,

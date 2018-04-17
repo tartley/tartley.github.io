@@ -22,20 +22,18 @@ layout: post
 published: true
 status: publish
 tags: []
-title: 'Everything and More: A compact history of &infin;'
+title: 'Everything and More: A compact history of ∞'
 wordpress_id: 12
 wordpress_url: http://tartley.com/?p=12
 ---
 
-*[![Cover: Everything and
-More](/assets/2007/02/everything-and-more.jpg){.size-full
-.wp-image-14 .alignleft width="123"
-height="200"}](/assets/2007/02/everything-and-more.jpg)by
-David Foster Wallace\
-*2003.\
-[Amazon](http://www.amazon.co.uk/Everything-More-Compact-History-Infinity/dp/0753818825)
+![Cover: Everything and More](/assets/2007/02/everything-and-more.jpg)
 
-**Short and Unnecessary Foreword**\
+*by David Foster Wallace.* 2003.
+[On Amazon.co.uk](http://www.amazon.co.uk/Everything-More-Compact-History-Infinity/dp/0753818825)
+
+**Short and Unnecessary Foreword**
+
 Before I describe the book I should like to set the scene, as it were,
 by describing how it was recommended to me in glowing terms by my new
 friend, viz. Xtian*\[1\]*, whom I hold in high regard w.r.t. both
@@ -106,7 +104,8 @@ from which they arguably never really recovered.
 
 \*\*\* viz. the *rationals*.
 
-> **The negatives**\
+> **The negatives**
+>
 > **§2b.** However, there is one other factor about the book which
 > *(B)* I should probably mention, and that is that I have never, in all
 > my life, read a document of any description which was as poorly
@@ -119,7 +118,8 @@ from which they arguably never really recovered.
 > draft abandoned on a park bench, heavily marked with red biro as the
 > result of several furious exchanges with an increasingly antagonistic
 > publisher. And reading an entire paperback of this idiocy almost drove
-> me *(a)* BATSHIT SCREAMING INSANE.\
+> me BATSHIT SCREAMING INSANE.
+>
 > **End of the negatives**
 
 *(B)* in the interests of fairness

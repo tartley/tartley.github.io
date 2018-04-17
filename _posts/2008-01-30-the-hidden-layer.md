@@ -21,9 +21,7 @@ wordpress_id: 241
 wordpress_url: http://tartley.com/?p=241
 ---
 
-![The Hidden
-Layer](/assets/2008/01/the-hidden-layerjpy.jpg){.alignleft
-.floatleft}
+![The Hidden Layer](/assets/2008/01/the-hidden-layerjpy.jpg)
 
 *by Chris Nordberg*
 
@@ -47,4 +45,4 @@ Rating: 2/10 - Feels like I wrote it.
 
 **Update**: For years afterwards, I've felt guilty about this scathing
 review, mortified by the idea that the author has read it and was
-genuinely upset.
+genuinely upset. I'm so sorry! It's me, it's not you.

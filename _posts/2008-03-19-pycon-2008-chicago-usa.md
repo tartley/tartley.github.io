@@ -57,8 +57,7 @@ wordpress_id: 312
 wordpress_url: http://tartley.com/?p=312
 ---
 
-![PyCon USA
-2008](/assets/2008/03/pyconusa2008.jpg){.floatleft}
+![PyCon USA 2008](/assets/2008/03/pyconusa2008.jpg)
 
 PyCon 2008 has been absolutely amazing this week. The talks I've seen
 and the people I've met have been a real inspiration, and my head is
@@ -76,21 +75,22 @@ To the people who have been asking for my humble talk slides, you can
 grab them here in a couple of formats:
 
 -   The slides as Open Office (tuned for Linux fonts, but more-or-less
-    fine on Windows):\
+    fine on Windows):
     [TddBrooksSilverBullet.zip](/assets/2008/03/tddbrookssilverbullet.zip "TddBrooksSilverBullet.zip (103kb)")
     (103kb)
 -   The slides as PDF (fonts 100% good for everyone, but I think the
-    various animations are gone:)\
+    various animations are gone:)
     [TddBrooksSilverBullet.pdf](/assets/2008/03/tddbrookssilverbullet.pdf "TddBrooksSilverBullet.pdf (162kb)")
     (162kb)
--   The accompanying source code:\
+-   The accompanying source code:
     [TddBrooksSilverBullet-src.zip](/assets/2008/03/tddbrookssilverbullet-src.zip "TddBrooksSilverBullet-src.zip (536kb)")
     (536kb)
 
 If anyone has any outstanding thoughts or questions about the talk, I
 always love to chat, so please feel free to email me,
-tartley@tartley.com (gosh I love love love
-[http://spamarrest.com](http://spamarest.com).)
+tartley at the domain tartley.com (gosh I love love love
+[http://spamarrest.com](http://spamarest.com).) (**Update:** email
+obfuscated - spamarrest is no more.)
 
 **Update:** There are
 [photos!](http://picasaweb.google.co.uk/tartley/20080313PyCon)

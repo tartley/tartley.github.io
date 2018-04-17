@@ -32,9 +32,9 @@ wordpress_id: 227
 wordpress_url: http://tartley.com/?p=227
 ---
 
-![Naked
-Wii](/assets/2008/01/wii.jpg){.alignleft
-.floatleft}Over Christmas a friend was looking for somewhere with Wii's
+![Naked Wii](/assets/2008/01/wii.jpg)
+
+Over Christmas a friend was looking for somewhere with Wii's
 in stock. I saw a local *Game* outlet had some, but I discovered they
 only had them bundled with three or more (rubbish) games, for an extra
 eighty quid over the RRP. Twice I returned, to find the same.

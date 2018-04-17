@@ -25,11 +25,9 @@ wordpress_id: 60
 wordpress_url: http://tartley.com/?p=60
 ---
 
-[![Testing Extreme
-Programming](/assets/2007/03/testing-extreme-programming.thumbnail.jpg){.alignleft}](http://tartley.com/wp-content/uploads/2007/03/testing-extreme-programming.jpg "Testing Extreme Programming")*by
-Lisa Crispin & Trip House.*\
-2003.\
-[Amazon](http://www.amazon.com/Testing-Extreme-Programming-Lisa-Crispin/dp/0321113551/).
+![Testing Extreme Programming](/assets/2007/03/testing-extreme-programming.thumbnail.jpg)
+
+*by Lisa Crispin & Trip House.* 2003. [On Amazon](http://www.amazon.com/Testing-Extreme-Programming-Lisa-Crispin/dp/0321113551/).
 
 I grabbed this hoping that it might be the authoritative reference that
 its position in the 'Xtreme Programming' series suggests, and it does
@@ -62,6 +60,6 @@ In short, there was nothing in here that we aren't already doing at
 [Resolver](http://resolversystems.com/). Boy am I grateful to be working
 with these guys. :)
 
-Rating:\
-9/10 if you don't know how to do test-driven development.\
+Rating:
+9/10 if you don't know how to do test-driven development.
 3/10 if you're already doing it.

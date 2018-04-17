@@ -21,8 +21,9 @@ wordpress_url: http://tartley.com/?p=280
 ---
 
 ![Beautiful
-Code](/assets/2008/02/beautiful-code.jpg){.alignleft
-.floatleft}**33 essays, edited by Andy Oram**
+Code](/assets/2008/02/beautiful-code.jpg)
+
+*33 essays, edited by Andy Oram*
 
 I was wondering how to explain why I didn't like this book as much as I
 thought I would - possibly as much as I thought I *ought* to. Thirty-odd

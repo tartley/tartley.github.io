@@ -55,8 +55,9 @@ wordpress_id: 194
 wordpress_url: http://tartley.com/?p=194
 ---
 
-![historyofwesternphilosophy.jpg](/assets/2007/07/historyofwesternphilosophy.jpg){.alignleft
-.floatleft}**(1946) by Bertrand Russel.**
+![historyofwesternphilosophy.jpg](/assets/2007/07/historyofwesternphilosophy.jpg)
+
+*by Bertrand Russel, 1946.*
 
 I've clearly been putting off this post for *months*, no doubt
 intimidated by my assumption that my review would have to be as weighty
@@ -96,8 +97,8 @@ The raising of the intellect above the concerns of mere empiricism, as
 typified by the schools of Descartes and Plato, seems to be completely
 undermined by the apparently overlooked fact that there is no objective
 way of apprising the workings of 'pure reason.' The human mind, of
-course, is not capable of 'pure reason' - if there even is such a thing
-- and is equally incapable of recognising its presence or absence in any
+course, is not capable of 'pure reason', if there even is such a thing,
+and is equally incapable of recognising its presence or absence in any
 given supposition. As a result, all exercises in deduction are extremely
 fallible, and this should come as no surprise to anyone who has ever
 forgotten or misjudged something. Just because the mind is not well
@@ -166,3 +167,4 @@ any knowledge of which ones are meaningful, and which ones are purely
 fanciful. It may be great fun, but it's masturbation.
 
 Rating: 8/10: The box with which to call me *philistine* is below:
+

@@ -16,10 +16,9 @@ wordpress_id: 188
 wordpress_url: http://tartley.com/?p=188
 ---
 
-![The Straight
-Story](/assets/2007/07/thestraightstory.jpg){.alignleft
-.floatright}*by David Lynch* (1999)\
-[on amazon.co.uk](http://imdb.com/title/tt0166896/)
+![The Straight Story](/assets/2007/07/thestraightstory.jpg)
+
+*by David Lynch* (1999) [on amazon.co.uk](http://imdb.com/title/tt0166896/)
 
 Aw, heck, I dunno. It's kinda down to Earth and charming, but also plain
 and slow-moving. And sure, that was deliberate, it wanted to tell a

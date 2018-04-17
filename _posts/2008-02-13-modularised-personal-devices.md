@@ -60,9 +60,9 @@ wordpress_id: 261
 wordpress_url: http://tartley.com/?p=261
 ---
 
-![One man
-band](/assets/2008/02/onemanband.jpg){.alignleft
-.floatleft}So [LC](http://lindsaycampbell.tumblr.com/post/26210504),
+![One man band](/assets/2008/02/onemanband.jpg)
+
+So [LC](http://lindsaycampbell.tumblr.com/post/26210504),
 [Nixta](http://nixtarolls.nixta.com/post/26188403) and
 [Aaron](http://www.aaronsdayoff.com/2008/02/modular-phone-answer-to-all-of-our.html)
 all like the Modu modular phone idea. A tiny cheap phone for evenings

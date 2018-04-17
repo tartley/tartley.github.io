@@ -20,10 +20,11 @@ wordpress_id: 318
 wordpress_url: http://tartley.com/?p=318
 ---
 
-![Nun of your
-business](/assets/2008/03/nun-of-your-business.jpg){.floatleft}[Some
-blurry photos are
-up](http://picasaweb.google.co.uk/tartley/20080320Denver) of an
+![](/assets/2008/03/nun-of-your-business.jpg)
+*Nun of your business*
+
+[Some blurry photos are up](http://picasaweb.google.co.uk/tartley/20080320Denver)
+of an
 absolutely brilliant stag event in Denver, starting with an afternoon of
 UK vs rest-of-the-world tomfoolery, which included the most laughing
 I've done in ages. After a brilliant curry and singstar-style action at
@@ -38,9 +39,10 @@ So brilliant to see everyone. Luv ya! Mean it!
 
 Some much better photos by people with steadier hands and real cameras:
 
-[Natalie](http://talia73.multiply.com/photos/album/64/JBs_Colfax_Crawl_-_He_tried_but_didnt_escape...)
-(registration needed)\
-[Aaron](http://www.flickr.com/photos/aaronindenver/sets/72157604216510883/).
+* [Natalie](http://talia73.multiply.com/photos/album/64/JBs_Colfax_Crawl_-_He_tried_but_didnt_escape...)
+  (registration needed)
+* [Aaron](http://www.flickr.com/photos/aaronindenver/sets/72157604216510883/)
+
 **Update:** Oh god, there's a [video of the
 cowbell](http://www.aaronsdayoff.com/2008/03/jbs-bachelor-partypub-crawl.html).
 

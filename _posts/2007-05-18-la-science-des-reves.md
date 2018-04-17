@@ -16,17 +16,14 @@ wordpress_id: 103
 wordpress_url: http://tartley.com/?p=103
 ---
 
-[![Giant
-hands](/assets/2007/05/thescienceofsleep1.jpg){.alignnone
-width="360"
-height="234"}](http://imdb.com/title/tt0354899/ "Giant hands")****
+[![Giant hands](/assets/2007/05/thescienceofsleep1.jpg)](http://imdb.com/title/tt0354899/ "Giant hands")
 
-**Director: Michel Gondry**\
-Writer: Michel Gondry\
-Starring: Gael García Bernal, Charlotte Gainsbourg\
-(aka: The Science of Sleep)*\
-*[![Internet Movie
-Database](/assets/2007/05/imdb.png)](http://imdb.com/title/tt0354899/)
+*aka: The Science of Sleep.
+Director: Michel Gondry.
+Writer: Michel Gondry.
+Starring: Gael García Bernal, Charlotte Gainsbourg.*
+
+[![Internet Movie Database](/assets/2007/05/imdb.png)](http://imdb.com/title/tt0354899/)
 
 *Close your eyes. Open your heart.*
 
@@ -40,5 +37,5 @@ or subtle motives were unclear to me. I feel mean saying this, because
 there were endearingly whimsical touches throughout, but if there was a
 point, I missed it.
 
-Rating: 4/10\
+Rating: 4/10.
 Barmy.

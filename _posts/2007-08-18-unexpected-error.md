@@ -25,10 +25,10 @@ site creation tool](http://www.fogcreek.com/CityDesk/).
 Checking out their website, I am delighted to find there is a
 free-to-use version for small projects much like the one I am embarking
 on. I download it, install it, and fire it up eagerly. Just about the
-last thing I expected to see was this.\
-\
+last thing I expected to see was this.
+
 ![citydesk-error1.png](/assets/2007/08/citydesk-error1.png)\
-\
+
 ![citydesk-error2.png](/assets/2007/08/citydesk-error2.png)
 
 Just goes to show, creating software which *just works* is a tough

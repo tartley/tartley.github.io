@@ -23,8 +23,9 @@ wordpress_id: 231
 wordpress_url: http://tartley.com/?p=231
 ---
 
-[![Resolver](/assets/2008/01/resolver.jpg){.alignleft}](http://www.resolversystems.com/news/?p=36 "Resolver"){.floatleft}Our
-feisty little start-up bears fruit. The
+[![Resolver](/assets/2008/01/resolver.jpg)](http://www.resolversystems.com/news/?p=36 "Resolver")
+
+Our feisty little start-up bears fruit. The
 [announcement](http://www.prweb.com/releases/2008/01/prweb631801.htm)
 ranks fourth on a Google News search for 'spreadsheet', and [the
 downloads](http://www.resolversystems.com/get-it/) are streaming out.

@@ -16,10 +16,9 @@ wordpress_id: 244
 wordpress_url: http://tartley.com/?p=244
 ---
 
-![The Hacker
-Crackdown](/assets/2008/01/hacker-crackdown.jpg){.alignleft
-.floatleft}**by Bruce Sterling, [read aloud by Cory
-Doctorow](http://www.archive.org/search.php?query=hacker%20crackdown%20AND%20mediatype%3Aaudio%20AND%20collection%3Aopensource_audio)**
+![The Hacker Crackdown](/assets/2008/01/hacker-crackdown.jpg)
+
+*by Bruce Sterling, [read aloud by Cory Doctorow](http://www.archive.org/search.php?query=hacker%20crackdown%20AND%20mediatype%3Aaudio%20AND%20collection%3Aopensource_audio)*
 
 Only the second audiobook I've bothered to listen to, and it seems to
 work very well, especially when commuting, since you can continue

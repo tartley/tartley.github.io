@@ -83,9 +83,9 @@ wordpress_id: 250
 wordpress_url: http://tartley.com/?p=250
 ---
 
-![Pyglet
-logo](/assets/2008/02/pyglet_logo.png){.alignleft
-.floatleft}[pyglet](http://www.pyglet.org) is a cross-platform library
+<img align="left" src="/assets/2008/02/pyglet_logo.png" />
+
+[pyglet](http://www.pyglet.org) is a cross-platform library
 that exposes Python bindings for OpenGL, and also provides a bunch of
 functionality layered on top of that, such as displaying text and
 images, mouse and keyboard events, and playing multimedia. I'd
@@ -97,7 +97,6 @@ code](http://www.pyglet.org/doc/programming_guide/writing_a_pyglet_application.h
 and was impressed enough to want to try it out with some of my own code,
 so I knocked together the following elementary 2D graphics demo.
 
-\
 Of particular note - it's a deliberate design goal of pyglet that it
 needs no other dependencies. After installing it, the following script
 'just worked' on both my home Linux lappy and my work Windows desktop,

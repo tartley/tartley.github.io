@@ -16,9 +16,9 @@ wordpress_id: 132
 wordpress_url: http://tartley.com/?p=132
 ---
 
-![regentsparkopenairtheatre.jpg](/assets/2007/06/regentsparkopenairtheatre.jpg)\
-![kitson.jpg](/assets/2007/06/kitson.jpg){.alignleft
-.floatleft}\
+![regentsparkopenairtheatre.jpg](/assets/2007/06/regentsparkopenairtheatre.jpg)
+![kitson.jpg](/assets/2007/06/kitson.jpg)
+
 Daniel's usual brand of heartfelt, bittersweet, dorky, whimsically
 playful stand-up, in the delightful environs of Regent's Park Open Air
 Theatre, with the Junior Penns & co, and Hallie visiting from Minnesota.

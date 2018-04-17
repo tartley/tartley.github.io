@@ -35,9 +35,9 @@ wordpress_id: 258
 wordpress_url: http://tartley.com/?p=258
 ---
 
-[![Someone Comes to Town, Someone Leaves
-Town](/assets/2008/02/someone-comes-to-town.jpg){.alignleft}](http://www.amazon.co.uk/Someone-Comes-Town-Leaves/dp/0765312808 "Someone Comes to Town, Someone Leaves Town"){.floatleft}**by
-Cory Doctorow**
+[![Someone Comes to Town, Someone Leaves Town](/assets/2008/02/someone-comes-to-town.jpg)](http://www.amazon.co.uk/Someone-Comes-Town-Leaves/dp/0765312808 "Someone Comes to Town, Someone Leaves Town")
+
+*by Cory Doctorow*
 
 I just don't know about this one. I really wanted to like it. It starts
 out with an interesting, down-to-earth story about a guy establishing

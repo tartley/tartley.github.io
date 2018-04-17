@@ -83,8 +83,8 @@ article](http://www.guardian.co.uk/technology/2008/jan/04/computing.politics?gus
 referenced on this list a couple of days back. I just wanted to share a
 brief perspective of that, in case it's useful or interesting for anyone
 contemplating the possible woes of the Government's national ID card and
-database projects...\
-\
+database projects...
+
 The consultants on projects like this have tailored their behaviour to
 maximise profits in the environment they find themselves in. That is to
 be expected - so long as they operate within the law they can be neither

@@ -21,18 +21,17 @@ wordpress_id: 39
 wordpress_url: http://tartley.com/?p=39
 ---
 
-[![Tommy the 25th century spacefaring guru prepares for the ultimate
-lesson in personal
-mortality.](/assets/2007/03/the-fountain.jpg){width="483"
-height="272"}](/assets/2007/03/the-fountain.jpg "Tommy prepares for the ultimate lesson in personal mortality.")
+![](/assets/2007/03/the-fountain.jpg)
 
-Director: Darren Aronofsky\
-Writing: Darren Aronofsky\
-Starring: Hugh Jackman, Rachel Weisz.\
-2006.
+*Tommy prepares for the ultimate lesson in personal mortality.*
 
-[![Internet Movie
-Database](/assets/2007/03/imdb.png)](http://imdb.com/title/tt0414993/)
+*Director: Darren Aronofsky.
+Writing: Darren Aronofsky.
+Starring: Hugh Jackman, Rachel Weisz.
+2006.*
+
+[![Internet Movie Database](/assets/2007/03/imdb.png)](http://imdb.com/title/tt0414993/)
+
 *What if you could live forever?*
 
 Writer and Director Darren Aronofsky has a fierce and original talent,
@@ -43,7 +42,6 @@ caught dozing my way through an aeroplane flight one sunny afternoon, I
 was somewhat blindsided by this millennia-spanning story of love, death
 and rebirth.
 
-\
 The thing is, it doesn't feel like Aronofsky's previous titles. It does
 feel a lot like other audacious, wildly sentimental tales, such as
 Crowe's *Vanilla Sky*, or Soderbergh's *Solaris*. Doubtless it will
