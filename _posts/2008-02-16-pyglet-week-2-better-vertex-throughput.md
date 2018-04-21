@@ -287,15 +287,15 @@ fans to maintain 30fps.
   Shards per entity | Entities at 30fps | Triangles per frame
   -----------------:|------------------:|-------------------:
   3                 | 85                | 225
-  [![7 shards](/assets/2008/02/7shards85ents.thumbnail.png)](/assets/2008/02/7shards85ents.png) 7                 | 85                | 595
-  [![20 shards](/assets/2008/02/20shards85ents.thumbnail.png)](/assets/2008/02/20shards85ents.png) 20                | 85                | 1,700
+  [![7 shards](/assets/2008/02/7shards85ents.small.png)](/assets/2008/02/7shards85ents.png) 7                 | 85                | 595
+  [![20 shards](/assets/2008/02/20shards85ents.small.png)](/assets/2008/02/20shards85ents.png) 20                | 85                | 1,700
   100               | 82                | 8,200
-  [![400 shards](/assets/2008/02/400shards68ents.thumbnail.png)](/assets/2008/02/400shards68ents.png) 400               | 68                | 27,200
-  [![1200 shards](/assets/2008/02/1200shards48ents.thumbnail.png)](/assets/2008/02/1200shards48ents.png)1,200             | 48                | 57,600
+  [![400 shards](/assets/2008/02/400shards68ents.small.png)](/assets/2008/02/400shards68ents.png) 400               | 68                | 27,200
+  [![1200 shards](/assets/2008/02/1200shards48ents.small.png)](/assets/2008/02/1200shards48ents.png)1,200             | 48                | 57,600
   1,800             | 39                | 70,200
   3,000             | 29                | 87,000
   6,000             | 17                | 102,000
-  [![](/assets/2008/02/12000shards10ents.thumbnail.png)](/assets/2008/02/12000shards10ents.png) 12,000 | 10                | 120,000
+  [![](/assets/2008/02/12000shards10ents.small.png)](/assets/2008/02/12000shards10ents.png) 12,000 | 10                | 120,000
   100,000           | 1                 | 100,000
 
 Above about 200 shards per fan, the shards start getting so thin that

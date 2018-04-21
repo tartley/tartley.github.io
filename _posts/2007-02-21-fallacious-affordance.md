@@ -34,3 +34,4 @@ to open from the *other* end. Apparently monkeys all know this, unfooled
 by the fallacious affordance of the fruit's beguiling stalk nubbin. Let
 us rejoice in the rediscovery of this ancient knowledge, lost to
 humanity for generations beyond measure.
+
