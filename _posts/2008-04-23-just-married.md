@@ -17,7 +17,7 @@ wordpress_url: http://tartley.com/?p=324
 ---
 
 [![Just
-Married!](/assets/2008/05/wed-225x300.jpg "Just Married!")](/assets/2008/05/wed.jpg)
+Married!](/assets/2008/05/wed.jpg "Just Married!")](/assets/2008/05/wed.jpg)
 
 At
 the end of March, Susan and I exchanged rings, vows, signatures and

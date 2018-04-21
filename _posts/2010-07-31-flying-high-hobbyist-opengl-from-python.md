@@ -200,7 +200,7 @@ I'm assuming we already have a minimal OpenGL application, that:
 This results in a blank screen, at 60fps. Here's a screenshot, so you
 can see exactly what it's doing:
 
-![A blank screen](/assets/2010/07/blank1-1024x640.png)
+![A blank screen](/assets/2010/07/blank1.png)
 
 I'm using pyglet & PyOpenGL for this, but this isn't important. Any
 framework that provides the above abilities, such as PyGame, along with
