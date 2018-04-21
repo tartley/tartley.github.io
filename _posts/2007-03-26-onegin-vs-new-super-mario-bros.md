@@ -21,7 +21,7 @@ wordpress_url: http://tartley.com/?p=69
 ---
 
 |---------------------------------------------------------------------:| |:--------------------------------------------------------------------:
-| ![](/assets/2007/03/onegin.thumbnail.jpg)                            | |![](/assets/2007/03/new-super-mario-bros.thumbnail.jpg)
+| ![](/assets/2007/03/onegin.jpg)                                      | |![](/assets/2007/03/new-super-mario-bros.jpg)
 | **Onegin**                                                           | |**New Super Mario Brothers**
 | *Company:* [The Royal Ballet](http://info.royaloperahouse.org/Home/).| ![](/assets/2007/03/vs1.jpg) |*Developer:* Nintendo
 | *Music:* Pyotr Il'yich Tchaikovsky.                                  | |*Format:* Nintendo DS

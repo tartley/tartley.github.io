@@ -19,7 +19,7 @@ wordpress_url: http://tartley.com/?p=162
 If you're not a wild-eyed loon, you're unlikely to appreciate this post.
 Bear with me a moment, while I establish some context.
 
-![Cory Doctorow](/assets/2007/07/cory-doctorow.thumbnail.jpg)
+![Cory Doctorow](/assets/2007/07/cory-doctorow.jpg)
 
 So [here's the esteemed Cory Doctorow](http://www.craphound.com/). His
 recent[\*1] post at Locus, [The Progressive Apocalypse and Other

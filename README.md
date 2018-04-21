@@ -49,8 +49,19 @@ And fails because I need an ssh tunnel to access the mysql instance:
 
 # TODO ########################################################################
 
-* images
 * delete all the thumbnail images before committing?
+
+* **by ...**
+
+* I&#8217;d
+
+* â€™ -> '
+* â€ -> "
+* â€œ -> " ???
+* Ã© -> é
+* Ã« -> ë
+
+* Grp '\$' _posts
 
 * syntax highlighting: fix language markup
 
@@ -65,6 +76,10 @@ And fails because I need an ssh tunnel to access the mysql instance:
     plain indented
 
     bare ```
+
+* comments
+
+* Links to picasa
 
 * syntax highlighting in solarized
 
@@ -141,3 +156,5 @@ And fails because I need an ssh tunnel to access the mysql instance:
 * post exerpt in home
 
 * site description has a visible <br> in it
+
+* images

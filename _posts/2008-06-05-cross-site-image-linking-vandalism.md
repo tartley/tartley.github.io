@@ -19,7 +19,7 @@ wordpress_id: 344
 wordpress_url: http://tartley.com/?p=344
 ---
 
-![New Super Mario Brothers... or is it?](/assets/2007/03/new-super-mario-bros.jpg)
+![New Super Mario Brothers... or is it?](/assets/2007/03/new-super-mario-bros2.jpg)
 
 It never gets old. Thank you for the giggles, [Video Game
 Freedom](http://vgfreedom.blogspot.com/2008/06/podcast-review-new-super-mario-bros.html).
