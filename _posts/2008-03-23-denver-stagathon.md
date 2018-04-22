@@ -50,4 +50,4 @@ cowbell](http://www.aaronsdayoff.com/2008/03/jbs-bachelor-partypub-crawl.html).
 of battle, but a rigourous statistical analysis reveals that team UK
 absolutely dominated the laser quest:
 
-[![LQ](/assets/2008/03/lq.png)](http://tartley.com/wp-content/uploads/2008/03/lqods.zip "LQ")
+[![LQ](/assets/2008/03/lq.png)](/assets/2008/03/lqods.zip "LQ")

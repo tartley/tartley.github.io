@@ -32,4 +32,4 @@ directory (defined at the start of the file) and use it as your Gnome
 desktop wallpaper. Put it in your session startup programs to get a new
 desktop each time you login. Coolio.
 
-[![Python file](/assets/2008/02/doc-python.png)desktop-random.py.zip](http://tartley.com/wp-content/uploads/2011/03/desktop-random.py_.zip)
+[![Python file](/assets/2008/02/doc-python.png)desktop-random.py.zip](/assets/2011/03/desktop-random.py_.zip)

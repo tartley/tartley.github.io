@@ -313,4 +313,4 @@ Throughput...](http://tartley.com/?p=264)**
 ### Download the source
 
 [![Python
-file](/assets/2008/02/doc-python.png)gameloop.py.zip](http://tartley.com/wp-content/uploads/2008/02/gamelooppy.zip "gameloop.py.zip")
+file](/assets/2008/02/doc-python.png)gameloop.py.zip](/assets/2008/02/gamelooppy.zip "gameloop.py.zip")

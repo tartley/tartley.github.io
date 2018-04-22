@@ -124,4 +124,4 @@ just a bunch of minor tweaks.
 ![flowers6](/assets/2008/02/screenshot-flowers6.jpg)
 
 [gameloop2c-flowers.py![Python
-file](/assets/2008/02/doc-python.png)](http://tartley.com/wp-content/uploads/2008/02/gameloop2c-flowerspy.zip "gameloop2c-flowers.py")
+file](/assets/2008/02/doc-python.png)](/assets/2008/02/gameloop2c-flowerspy.zip "gameloop2c-flowers.py")

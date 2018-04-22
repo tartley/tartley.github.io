@@ -322,6 +322,6 @@ with 100 triangles, at 30fps. See comments below.
 ### Download the source
 
 [![Python
-file](/assets/2008/02/doc-python.png)gameloop2.py.zip](http://tartley.com/wp-content/uploads/2008/02/gameloop2py.zip "gameloop2.py.zip")
+file](/assets/2008/02/doc-python.png)gameloop2.py.zip](/assets/2008/02/gameloop2py.zip "gameloop2.py.zip")
 
 
