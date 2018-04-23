@@ -75,10 +75,11 @@ poorly-named 'Console' project from SourceForge:
 <https://sourceforge.net/projects/console/>
 
 Once installed, you could fiddle around with the settings endlessly, or
-just copy my console.xml config to your home directory, after which
-running Console should look something like the following:
+just copy my console.xml config to your home directory:
 
-[![console.xml (config for Console)](/assets/images/crystal/text.png)](/assets/2009/10/console.xml)
+[![console.xml (config for Console)](/assets/2009/10/xml-icon.png)console.xml](/assets/2009/10/console.xml)
+
+after which Console should look something like:
 
 ![Console: It doesn't look like much](/assets/2009/10/mswindows-command-prompt.png "mswindows-command-prompt")
 
