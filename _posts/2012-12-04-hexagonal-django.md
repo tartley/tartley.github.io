@@ -149,7 +149,7 @@ wordpress_id: 1404
 wordpress_url: http://tartley.com/?p=1404
 ---
 
-The last few weeks I've been thinking about the architectural pattern
+The last few weeks I've been thinking about the architectural pattern
 known as [Clean, Onion, Hexagonal, or
 Ports'n'Adaptors](http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html).
 I'm curious if many people are applying it in the Django world.
@@ -181,7 +181,7 @@ Also, you can easily switch out your external system interfaces, such as
 persistence, to use another RDBMS, another ORM, a NoSQL store, or an
 in-memory version for testing Since the core of your application doesn't
 have any dependency on these components, it is oblivious to the
-change. The business logic, because it doesn't depend on Django, is no
+change. The business logic, because it doesn't depend on Django, is no
 longer riddled with Django's convenient ORM database access.
 
 Same thing goes for switching out your web framework, or calling the

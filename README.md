@@ -49,10 +49,7 @@ And fails because I need an ssh tunnel to access the mysql instance:
 
 # TODO ########################################################################
 
-* syntax highlighting: fix language markup
-    plain indented
-
-*  
+*   
 
 * comments
 
@@ -159,3 +156,4 @@ And fails because I need an ssh tunnel to access the mysql instance:
     check 'bash' instances to see if they should be 'shell_command' or whatever it is
     ``` {other...}
     bare ```
+    plain indented

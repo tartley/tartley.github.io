@@ -90,25 +90,25 @@ such as red cubes or blue tetrahedrons:
 
 ``` python
 def Cube(edge, color):
-    verts = [
+    verts = [
         (-edge/2, -edge/2, -edge/2),
         (-edge/2, -edge/2, +edge/2),
-        (-edge/2, +edge/2, -edge/2),
-        (-edge/2, +edge/2, +edge/2),
-        (+edge/2, -edge/2, -edge/2),
-        (+edge/2, -edge/2, +edge/2),
+        (-edge/2, +edge/2, -edge/2),
+        (-edge/2, +edge/2, +edge/2),
+        (+edge/2, -edge/2, -edge/2),
+        (+edge/2, -edge/2, +edge/2),
         (+edge/2, +edge/2, -edge/2),
         (+edge/2, +edge/2, +edge/2),
-    ]
+    ]
     faces = [
         [0, 1, 3, 2], # left
-        [4, 6, 7, 5], # right
-        [7, 3, 1, 5], # front
-        [0, 2, 6, 4], # back
-        [3, 7, 6, 2], # top
-        [1, 0, 4, 5], # bottom
+        [4, 6, 7, 5], # right
+        [7, 3, 1, 5], # front
+        [0, 2, 6, 4], # back
+        [3, 7, 6, 2], # top
+        [1, 0, 4, 5], # bottom
     ]
-    return Shape(verts, faces, color)
+    return Shape(verts, faces, color)
 ```
 
 A class called 'Glyph' will convert a Shape instance into the set of

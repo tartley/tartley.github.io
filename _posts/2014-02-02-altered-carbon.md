@@ -32,7 +32,7 @@ wordpress_url: http://tartley.com/?p=1554
 
 A romp through a hyperviolent cyberpunk future through the eyes of a
 character reluctantly press-ganged into the role of detective in a story
-woven around personality uploads, swaps, and backups. Thoroughly enjoyed
+woven around personality uploads, swaps, and backups. Thoroughly enjoyed
 it, but it was never going to be life-changing.
 
 10/10 if you're looking to kick back on the couch with tea, cake, and

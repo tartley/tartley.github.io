@@ -16,7 +16,7 @@ wordpress_id: 1683
 wordpress_url: http://tartley.com/?p=1683
 ---
 
-`man` and its `troff` formatting can be asked to produce postscript
+`man` and its `troff` formatting can be asked to produce postscript
 output. Define a Bash function, e.g. in your .bashrc:
 
 ``` bash
@@ -52,4 +52,4 @@ produces
 
 [![](/assets/2017/08/pman-tr.png)](/assets/2017/08/pman-tr.png)
 
- 
+ 

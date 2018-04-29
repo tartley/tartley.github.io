@@ -36,7 +36,7 @@ hexagonal or clean architectures.
 
 However it's created, the terminology and notation used in the class
 diagram (or it's equivalent) should be well understood by individuals on
-both side of the tech/business divide. In the past I think I've made the
+both side of the tech/business divide. In the past I think I've made the
 mistake of believing that only developers needed to understand it, and
 therefore the model only needed to be expressed in code.
 
@@ -94,7 +94,7 @@ To counter-balance this idealistic hand-waving, the next section dives
 right into some specific design practices which embody these ideas.
 These are valuable and insightful, stock-in-trade, such as
 distinguishing between entity and value types. But many of the ideas
-were completely new to me, such as the concept of *aggregates*, which
+were completely new to me, such as the concept of *aggregates*, which
 define subsets of the domain model which are always atomically retrieved
 from (or updated in) a data store.
 

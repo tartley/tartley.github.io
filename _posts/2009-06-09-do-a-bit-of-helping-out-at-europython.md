@@ -32,7 +32,7 @@ community and industry heavyweights. This year we've got [Professor Sir
 Tony Hoare](http://en.wikipedia.org/wiki/Tony_Hoare) (that's the creator
 of [quicksort](http://en.wikipedia.org/wiki/Quicksort) to you, amongst a
 venerable lifetime's worth of other
-things); [](http://blogs.msdn.com/hugunin/) [Cory
+things); [](http://blogs.msdn.com/hugunin/) [Cory
 Doctorow](http://craphound.com/) (everyone's favourite science-fiction
 author, blogger and all-round geek activist), [Bruce
 Eckel](http://www.mindviewinc.com/Index.php) (author and renowned
