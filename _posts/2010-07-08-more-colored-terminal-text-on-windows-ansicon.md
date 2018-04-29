@@ -42,7 +42,7 @@ start a new terminal, and lo:
 Fine tune the appearance of the programs generating the color, for
 example customise 'hg diff' by editing \~/.hgrc:
 
-```
+``` yaml
 [extensions]
 color =
 

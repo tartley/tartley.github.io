@@ -75,7 +75,7 @@ ctags -R .
 
 or bind it to a key in your \~/.vimrc:
 
-```
+``` vim
 map  :!start /min ctags -R .
 ```
 
@@ -126,7 +126,7 @@ to the property.
 
 To fix this, add this to your .vimrc:
 
-```
+``` vim
 " go to defn of tag under the cursor
 fun! MatchCaseTag()
     let ic = &ic

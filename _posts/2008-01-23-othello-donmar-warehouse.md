@@ -41,7 +41,7 @@ Nevertheless, McGregor's Shakespearean debut seemed to me to be a
 compelling performance.
 
 I enjoyed the director's use of light and shadow to represent various
-locations, as well as the acoustics, which augmented several of Iagoâ€™s
+locations, as well as the acoustics, which augmented several of Iago's
 scheming monologues with an imperceptible bass rumble, which gradually
 rose to a ominous distant roaring, as though the engines of his inner
 demons were fit to burst through the walls. I also fancy I caught

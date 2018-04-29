@@ -7,9 +7,9 @@ categories: [Python, Graphics, Presentations, GameDev]
 comments:
 - {author: Couchsurfer&acirc;&euro;&trade;s guide to Europython&Acirc;&nbsp;(Teil&Acirc;&nbsp;3)
     | Spielend programmieren Blog, author_email: '', author_url: 'http://spielendprogrammieren.wordpress.com/2010/07/31/couchsurfer%e2%80%99s-guide-to-europython-teil-3/',
-  content: '[...] Nat&Atilde;&frac14;rlich waren auch andere Vortr&Atilde;&curren;ge
-    sehr gut, z.B. J. Hartely&#8217;s Vortrag &Atilde;&frac14;ber OPEN-GL und Python.
-    [...]', date: '2010-07-31 22:18:10 -0500', date_gmt: '2010-07-31 21:18:10 -0500',
+  content: "[...] Nat&Atilde;&frac14;rlich waren auch andere Vortr&Atilde;&curren;ge
+    sehr gut, z.B. J. Hartley's Vortrag &Atilde;&frac14;ber OPEN-GL und Python.
+    [...]", date: '2010-07-31 22:18:10 -0500', date_gmt: '2010-07-31 21:18:10 -0500',
   id: 30906}
 - {author: Eric Pavey, author_email: warpcat@sbcglobal.net, author_url: 'http://www.akeric.com',
   content: 'What a great post.  I have yet to delve into OpenGL via Python (I dabble
@@ -40,9 +40,9 @@ comments:
     \ resulting code might be useful to release publicly. Thanks for the prod.", date: '2010-08-19
     12:58:17 -0500', date_gmt: '2010-08-19 11:58:17 -0500', id: 31843}
 - {author: Crosshatch shaders | Learning WebGL, author_email: '', author_url: 'http://learningwebgl.com/blog/?p=2858',
-  content: '[...] never got round to posting. Most of the WebGL stuff in my tutorials
+  content: "[...] never got round to posting. Most of the WebGL stuff in my tutorials
     aims at something like realism; this post by my friend and colleague Jonathan
-    Hartley persuaded me that there&#8217;s much more to creating [...]', date: '2010-12-10
+    Hartley persuaded me that there's much more to creating [...]", date: '2010-12-10
     14:18:07 -0600', date_gmt: '2010-12-10 14:18:07 -0600', id: 35702}
 - {author: max, author_email: maxmetallika@gmail.com, author_url: 'http://praveenmax.wordpress.com',
   content: 'Very nice post.Could you tell me which is better and easy for opengl programming

@@ -84,8 +84,7 @@ shores of mud. However, this gratifying exercise in belittlement also
 brought with it an increment of my understanding as to why I feel this
 way.
 
-[![Platoâ€™s greatest finest
-hour](/assets/2008/02/platos-greatest-hour.gif)](http://www.ashersarlin.com/archives/2005/01/oh_come_on_plat.php)
+[![Plato's greatest finest hour](/assets/2008/02/platos-greatest-hour.gif)](http://www.ashersarlin.com/archives/2005/01/oh_come_on_plat.php)
 
 It may be all very well for me to sit here nitpicking from atop the
 cumulative results of thousands of years of hindsight, but my shrill,

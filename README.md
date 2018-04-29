@@ -49,20 +49,6 @@ And fails because I need an ssh tunnel to access the mysql instance:
 
 # TODO ########################################################################
 
-* delete all the thumbnail images before committing?
-
-* **by ...**
-
-* I&#8217;d
-
-* â€™ -> '
-* â€ -> "
-* â€œ -> " ???
-* Ã© -> é
-* Ã« -> ë
-
-* Grp '\$' _posts
-
 * syntax highlighting: fix language markup
 
     ``` {lang="X"}
@@ -76,6 +62,8 @@ And fails because I need an ssh tunnel to access the mysql instance:
     plain indented
 
     bare ```
+
+*  
 
 * comments
 
@@ -158,3 +146,20 @@ And fails because I need an ssh tunnel to access the mysql instance:
 * site description has a visible <br> in it
 
 * images
+
+* delete all the thumbnail images before committing?
+
+* tartley.github.io fwds to tartley.com, how do I make it stop
+* tartley.github.io/POST gives a 404. What is the proper form of POST?
+    - magically fixed themselves. Presumably adding the root url config
+      to the github project affects some dns or other forwarding mechanism
+      at github.io, and changes to this took a while (days!) to propagate.
+
+* **by ...**
+
+* I&#8217;d
+* â€™ -> '
+* â€ -> "
+* â€œ -> " ???
+* Ã© -> é
+* Ã« -> ë

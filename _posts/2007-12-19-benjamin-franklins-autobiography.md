@@ -30,14 +30,14 @@ comments:
     in an <i>if you can''t beat ''em</i> sort of way.', date: '2008-01-10 14:16:39
     -0600', date_gmt: '2008-01-10 14:16:39 -0600', id: 5900}
 - {author: 'tartley.com &raquo; Someone Comes to Town, Someone Leaves Town', author_email: '',
-  author_url: 'http://tartley.com/?p=258', content: '[...] I just don&#8217;t know
+  author_url: 'http://tartley.com/?p=258', content: '[...] I just don&apostrophe;t know
     about this one. I really wanted to like it. It starts out with an interesting
     but mundane tale about a guy establishing himself in a new neighbourhood, peppered
     with disconcerting non-literal sounding references to his family, such as the
-    cliffs and caves of his Father, the mountain. By the time I&#8217;d really gotten
+    cliffs and caves of his Father, the mountain. By the time I&apostrophe;d really gotten
     on board with this fantastic side of the emerging story, the scene changes were
     occurring so swiftly between paragraphs that I began to wonder whether they text
-    hadn&#8217;t got jumbled up somewhere between Cory&#8217;s word processor and
+    hadn&apostrophe;t got jumbled up somewhere between Cory&apostrophe;s word processor and
     my screen. [...]', date: '2008-02-08 01:01:41 -0600', date_gmt: '2008-02-08 01:01:41
     -0600', id: 7653}
 date: 2007-12-19 09:23:29 -0600

@@ -122,10 +122,10 @@ for the cute '|' syntax. I just need a plain old function:
 
 ``` python
 def link(source, *transforms):
-    args = source
-    for transform in transforms:
-        args = transform(args)
-    return args
+    args = source
+    for transform in transforms:
+        args = transform(args)
+    return args
 ```
 
 **Update**: This code has been improved thanks to suggestions in the

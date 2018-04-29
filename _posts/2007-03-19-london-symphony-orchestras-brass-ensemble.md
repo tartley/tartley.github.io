@@ -38,7 +38,7 @@ was subjected as nothing short of startling.
 The ten-strong array of trumpets, trombones and tuba played a selection
 to showcase their respective talents, with a zest and levity that I am
 informed is their usual stock in trade, including Paul Archibald's brass
-arrangement of Prokofiev's Ten Pieces for Piano, Op 12; Saint-SaÃ«ns'
+arrangement of Prokofiev's Ten Pieces for Piano, Op 12; Saint-Saëns'
 Carnival of the Animals; Debussy's Keyboard Pieces; James Maynard's
 Zoology and Gershwin's Porgy and Bess.
 
