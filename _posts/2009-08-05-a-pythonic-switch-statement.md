@@ -210,25 +210,25 @@ Standalone functions (outside the class, without a '*self*' parameter)
 would also work, if they didn't need access to shared state.
 
 ``` python
-    def onMove(self, params):
-        x, y = self.get_point(params)
-        self.current_path = [(x, y)]
+def onMove(self, params):
+    x, y = self.get_point(params)
+    self.current_path = [(x, y)]
 
-    def onLine(self, params):
-        x, y = self.get_point(params)
-        self.current_path.append((x, y))
+def onLine(self, params):
+    x, y = self.get_point(params)
+    self.current_path.append((x, y))
 
-    def onClose(self, params):
-        if self.current_path[0] == self.current_path[-1]:
-            self.current_path = self.current_path[:-1]
-        if len(self.current_path) < 3:
-            raise ParseError('loop needs 3 or more verts')
-        self.loops.append(self.current_path)
-        self.current_path = None
+def onClose(self, params):
+    if self.current_path[0] == self.current_path[-1]:
+        self.current_path = self.current_path[:-1]
+    if len(self.current_path) < 3:
+        raise ParseError('loop needs 3 or more verts')
+    self.loops.append(self.current_path)
+    self.current_path = None
 
-    def onBadCommand(self, action):
-        msg = 'unsupported svg path command: %s' % (action,)
-        raise ParseError(msg)
+def onBadCommand(self, action):
+    msg = 'unsupported svg path command: %s' % (action,)
+    raise ParseError(msg)
 ```
 
 Again, don't worry too much about what these functions actually do. Just
@@ -239,13 +239,13 @@ Second, I define a dictionary which maps action characters to one of the
 new handler functions:
 
 ``` python
-    def convert(self):
-        lookup = {
-            'M': self.onMove,
-            'L': self.onLine,
-            'Z': self.onClose,
-            'z': self.onClose,
-        }
+def convert(self):
+    lookup = {
+        'M': self.onMove,
+        'L': self.onLine,
+        'Z': self.onClose,
+        'z': self.onClose,
+    }
 ```
 
 Notice how the methods are bound to self, so they operate on the current
@@ -256,14 +256,14 @@ Third, use the dictionary to lookup the function we want to call, and
 then call the returned function:
 
 ``` python
-        handler = lookup[action]
-        handler(params)
+handler = lookup[action]
+handler(params)
 ```
 
 These two lines can be tidily combined into one:
 
 ``` python
-        loopup[action](params)
+loopup[action](params)
 ```
 
 Note that this is pleasantly succinct, but still very explicit about
@@ -286,10 +286,10 @@ most explicit and readable way to handle this case is to modify the
 above line of code:
 
 ``` python
-        if action in lookup:
-            lookup[action](params)
-        else:
-            self.onBadCommand(action)
+if action in lookup:
+    lookup[action](params)
+else:
+    self.onBadCommand(action)
 ```
 
 Saving these changes, running the tests shows it behaves identically to
@@ -301,18 +301,18 @@ remaining dead certain you aren't introducing new bugs.)
 Let's take a look at the final code all together:
 
 ``` python
-    def convert(self, params):
-        lookup = {
-            'M': self.onMove,
-            'L': self.onLine,
-            'Z': self.onClose,
-            'z': self.onClose,
-        }
-        action = params[0]
-        if action in lookup:
-            lookup[action](params)
-        else:
-            self.onBadCommand(action)
+def convert(self, params):
+    lookup = {
+        'M': self.onMove,
+        'L': self.onLine,
+        'Z': self.onClose,
+        'z': self.onClose,
+    }
+    action = params[0]
+    if action in lookup:
+        lookup[action](params)
+    else:
+        self.onBadCommand(action)
 ```
 
 Including the new handler functions, this is considerably longer than
@@ -343,21 +343,21 @@ single one contains something of real merit. I feel compelled to rummage
 through for a sort-of best of breed conclusion based on all of them...
 
 ``` python
-    lookup = {
-        'M': self.on_move,
-        'L': self.on_line,
-        'Z': self.on_close,
-        'z': self.on_close,
-    }
+lookup = {
+    'M': self.on_move,
+    'L': self.on_line,
+    'Z': self.on_close,
+    'z': self.on_close,
+}
 
-    def convert(self, params):
-        action = params[0]
-        handler = self.lookup.get(action, self.on_bad_command)
-        handler(params)
+def convert(self, params):
+    action = params[0]
+    handler = self.lookup.get(action, self.on_bad_command)
+    handler(params)
 
-    # or alternatively
-    def convert(self, params):
-        self.lookup.get(params[0], self.on_bad_command)(params)
+# or alternatively
+def convert(self, params):
+    self.lookup.get(params[0], self.on_bad_command)(params)
 ```
 
 I marginally prefer the first version - the second alternative is a

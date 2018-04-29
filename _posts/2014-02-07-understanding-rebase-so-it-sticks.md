@@ -46,19 +46,23 @@ Where:
 
 Hence, a simple before and after:
 
-    o---o---o---o---o---o exclude
-         \
-          1---2---3 current branch
-                    or include
+```
+o---o---o---o---o---o exclude
+     \
+      1---2---3 current branch
+                or include
+```
 
 ``` bash
 git rebase exclude [include]
 ```
 
-                    exclude
-                    v
-    o---o---o---o---o---1---2---3 current branch
-                                  or include
+```
+                exclude
+                v
+o---o---o---o---o---1---2---3 current branch
+                              or include
+```
 
 See how the commits to be transplanted start at `include` and go back to
 the common ancestor of that and `exclude`. Since `--onto` isn't
@@ -66,18 +70,20 @@ specified, `exclude` is also used as the transplant destination.
 
 Or a more complex one:
 
-                     
-     o---o---o---o---o target
-          \
-           o---o---o exclude
-                \
-                 1---2 current branch
-                       or include
+```
+ o---o---o---o---o target
+      \
+       o---o---o exclude
+            \
+             1---2 current branch
+                   or include
+```
 
 ``` bash
 git rebase --onto target exclude [include]
 ```
 
+```
                     target
                     v
     o---o---o---o---o---1---2 current branch
@@ -85,6 +91,7 @@ git rebase --onto target exclude [include]
           o---o---o
                   ^
                   exclude
+```
 
 Again, the commits to be transplanted are defined by `include` and
 `exclude`, but this time a separate destination is specified using

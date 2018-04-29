@@ -30,7 +30,7 @@ layout: post
 published: true
 status: publish
 tags: []
-title: '&pound; key in Windows on a US laptop keyboard, done right.'
+title: '£ key in Windows on a US laptop keyboard, done right.'
 wordpress_id: 1317
 wordpress_url: http://tartley.com/?p=1317
 ---

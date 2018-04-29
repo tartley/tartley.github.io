@@ -258,18 +258,18 @@ This vertex and color arrays can then be rendered as a triangle fan
 using the following Entity.draw() method:
 
 ``` python
-    def draw(self):
-        glLoadIdentity()
-        glTranslatef(self.pos.x, self.pos.y, 0)
-        glRotatef(self.pos.rot, 0, 0, 1)
-        glScalef(self.size, self.size, 1)
+def draw(self):
+    glLoadIdentity()
+    glTranslatef(self.pos.x, self.pos.y, 0)
+    glRotatef(self.pos.rot, 0, 0, 1)
+    glScalef(self.size, self.size, 1)
 
-        glEnableClientState(GL_VERTEX_ARRAY)
-        glEnableClientState(GL_COLOR_ARRAY)
-        glVertexPointer(2, GL_FLOAT, 0, Entity.vertsGl)
-        glColorPointer(4, GL_FLOAT, 0, self.colorsGl)
+    glEnableClientState(GL_VERTEX_ARRAY)
+    glEnableClientState(GL_COLOR_ARRAY)
+    glVertexPointer(2, GL_FLOAT, 0, Entity.vertsGl)
+    glColorPointer(4, GL_FLOAT, 0, self.colorsGl)
 
-        glDrawArrays(GL_TRIANGLE_FAN, 0, len(self.vertsGl) // 2)
+    glDrawArrays(GL_TRIANGLE_FAN, 0, len(self.vertsGl) // 2)
 ```
 
 With other minor tweaks to give a new background color, running this

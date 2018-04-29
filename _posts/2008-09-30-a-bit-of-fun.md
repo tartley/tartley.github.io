@@ -91,6 +91,10 @@ have known:
 -   **Python**, including **IronPython** (Python as a dot Net language.)
     Nirvana at last. Apart from BASH, it's the only entry on the list
     that I still use frequently and gleefully today.
+-   **GLSL**, for hobbyist graphics and games.
+-   **Scheme** to the extent that I worked through SICP, twice.
+-   **Go**, for a new service in IBM Cloud.
+-   **PHP**, to maintain an old service in IBM Cloud. Two PR's thus far.
 
 I find my lack of **LISP** and its derivatives disturbing. And last year
 I recall entertaining fantasies of learning **D**, to see if I could use

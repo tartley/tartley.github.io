@@ -48,38 +48,37 @@ can't use a slower connection (eg. bluetooth) to drive a faster usage
 (eg. blu-ray quality movies). Centre column is the data rate in megabits
 per second (Mb/s):
 
-    EDGE mobile phone    0.23
-                         0.3  cd audio
-    bluetooth1           0.7
-                         1.3  minimal video
-    bluetooth2           2.1
-    wifi 802.11b         4.5
-                         5.0  dvd mpeg-2 quality
-    ADSL1                8.0
-    ethernet 10baseT    10
-    USB1                12
-                        15  hdtv video (from 8 to 15)
-    ADSL2+              24*
-    cable modem         30
-                        40 blu-ray disc
-    wifi 802.11g        54
-    firewire800 act     65
-    ethernet 100baseT  100*
-    PCI                133
-    USB2 actual        240
-    firewire 400 theo  400
-    USB2 theoretical   480
-    wifi 802.11n       600
-    firewire 800 theo  800
-    Seagate Barracuda  960*
-    ethernet gigabit 1,000
-    SATA-150 theo    1,500
-    SATA-300 theo    3,000
+```
+EDGE mobile phone    0.23
+                     0.3  cd audio
+bluetooth1           0.7
+                     1.3  minimal video
+bluetooth2           2.1
+wifi 802.11b         4.5
+                     5.0  dvd mpeg-2 quality
+ADSL1                8.0
+ethernet 10baseT    10
+USB1                12
+                    15  hdtv video (from 8 to 15)
+ADSL2+              24*
+cable modem         30
+                    40 blu-ray disc
+wifi 802.11g        54
+firewire800 act     65
+ethernet 100baseT  100*
+PCI                133
+USB2 actual        240
+firewire 400 theo  400
+USB2 theoretical   480
+wifi 802.11n       600
+firewire 800 theo  800
+Seagate Barracuda  960*
+ethernet gigabit 1,000
+SATA-150 theo    1,500
+SATA-300 theo    3,000
 
-    blue = network
-    green = internet
-    red = hard drive connection
-    * = my setup
+* = my setup
+```
 
 I'm assuming that I don't have gigabit ethernet, because I've never paid
 it any attention in the past. Judging from the above, my 100BaseT should

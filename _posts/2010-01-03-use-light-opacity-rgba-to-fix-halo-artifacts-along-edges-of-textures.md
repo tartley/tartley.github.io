@@ -81,9 +81,11 @@ demonstrated in the video helps to automate this.
 The alternative solution, is to modify the RGBA values in the texture,
 by pre-multiplying the RGB values by the A value. ie:
 
-    R = R * A
-    G = G * A
-    B = B * A
+```
+R = R * A
+G = G * A
+B = B * A
+```
 
 (where all values range from 0.0 to 1.0)
 
@@ -96,11 +98,15 @@ To use these alternate RGBA values in a texture, we have to display them
 on screen using a different OpenGL blending mode. We switch from using
 the traditional:
 
-    dest = src * alpha + dest * (1 - alpha)
+``` glsl
+dest = src * alpha + dest * (1 - alpha)
+```
 
 to using this instead:
 
-    dest = src + dest * (1 - alpha)
+``` glsl
+dest = src + dest * (1 - alpha)
+```
 
 Note how the difference between the two is that the src is no longer
 multiplied by the src alpha during blend. This is no longer required,
@@ -142,7 +148,9 @@ what those values mean:
 The interpolated color is now blended with the previous destination
 color using the new OpenGL blend mode:
 
-    dest = src + dest * (1 - alpha)
+``` glsl
+dest = src + dest * (1 - alpha)
+```
 
 The existing destination color is scaled by (1 - alpha), ie, is reduced
 to half intensity, and then the RGB from our interpolated texture (0.5,

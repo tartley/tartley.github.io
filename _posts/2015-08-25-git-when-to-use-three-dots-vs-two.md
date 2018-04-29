@@ -31,49 +31,55 @@ today:
 
 To see the commits or diffs introduced by a branch:
 
-         f
-        +●  m           git log m..f
-         |  ○
-        +●  |           git diff m...f
-          \ ○
-           \|
-            ○
+     f
+    +●  m           git log m..f
+     |  ○
+    +●  |           git diff m...f
+      \ ○
+       \|
+        ○
 
 To see the commits or diffs between the tip of one branch and another:
 
-         f              git log m...f
-        +●  m           All commits look the same,
-         |  ●-          unless you use --left-right, which
-        +●  |           shows where each commit comes from.
-          \ ●-
-           \|           git diff m..f
-            ○           '-' commits are shown inverted,
-                         i.e. additions as deletions.
+     f              git log m...f
+    +●  m           All commits look the same,
+     |  ●-          unless you use --left-right, which
+    +●  |           shows where each commit comes from.
+      \ ●-
+       \|           git diff m..f
+        ○           '-' commits are shown inverted,
+                     i.e. additions as deletions.
 
 To see the commits from 'f' back to the beginning of time:
 
-         f
-        +●  m           git log f
-         |  ○
-        +●  |           (diffs back to start of time are just
-          \ ○            the contents of the working tree)
-           \|
-           +●
-            |
-           +●
+     f
+    +●  m           git log f
+     |  ○
+    +●  |           (diffs back to start of time are just
+      \ ○            the contents of the working tree)
+       \|
+       +●
+        |
+       +●
 
 Throughout, omitted branchname defaults to current HEAD, i.e:
 
-        git diff m..f
+``` bash
+git diff m..f
+```
 
 is the same as
 
-        git checkout m
-        git diff ..f
+``` bash
+git checkout m
+git diff ..f
+```
 
 or
 
-        git checkout f
-        git diff m..
+``` bash
+git checkout f
+git diff m..
+```
 
 Is there a word for unicode ascii art?

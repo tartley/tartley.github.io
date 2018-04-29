@@ -145,19 +145,19 @@ So we add a couple of interpenetrated Cube() shaped items into our
 world:
 
 ``` python
-    white = (1, 1, 1, 1)
-    red = (1, 0, 0, 1)
+white = (1, 1, 1, 1)
+red = (1, 0, 0, 1)
 
-    world.add( GameItem(
-        position=Position(0, 0, 0),
-        shape=Cube(2, white),
-        glyph=Glyph(),
-    ))
-    world.add( GameItem(
-        position=Position(1, 1, 0),
-        shape=Cube(1, red),
-        glyph=Glyph(),
-    ))
+world.add( GameItem(
+    position=Position(0, 0, 0),
+    shape=Cube(2, white),
+    glyph=Glyph(),
+))
+world.add( GameItem(
+    position=Position(1, 1, 0),
+    shape=Cube(1, red),
+    glyph=Glyph(),
+))
 ```
 
 and running the program renders them:

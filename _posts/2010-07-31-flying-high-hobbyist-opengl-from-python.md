@@ -190,12 +190,12 @@ minority of projects which do this which form my inspiration.
 
 I'm assuming we already have a minimal OpenGL application, that:
 
--   Opens a window
--   Provides an OpenGL context for us to render to
--   Sets appropriate 3D projection matrix
--   Sets the initial modelview matrix state based on the position and
-    orientation of a 'camera' object
--   Calls our empty 'draw' function once per monitor refresh.
+- Opens a window
+- Provides an OpenGL context for us to render to
+- Sets appropriate 3D projection matrix
+- Sets the initial modelview matrix state based on the position and
+  orientation of a 'camera' object
+- Calls our empty 'draw' function once per monitor refresh.
 
 This results in a blank screen, at 60fps. Here's a screenshot, so you
 can see exactly what it's doing:

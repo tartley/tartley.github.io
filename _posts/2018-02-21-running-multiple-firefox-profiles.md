@@ -31,35 +31,39 @@ Open Firefox and find the directories your profiles live by browsing to
 Substitute those directories into this firefox.desktop file, where I've
 marked 'XXX':
 
-    # Gnome3 .desktop file for Firefox with multiple profiles
-    [Desktop Entry]
-    Version=1.0
-    Name=Firefox
-    Comment=Browse the web
-    GenericName=Web Browser
-    Keywords=Internet;WWW;Browser;Web;Explorer
-    Type=Application
-    Exec=firefox --no-remote %u
-    Terminal=false
-    X-MultipleArgs=false
-    Icon=firefox
-    Categories=GNOME;GTK;Network;WebBrowser;
-    Actions=home;work
-    MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;
-    StartupNotify=true
+```
+# Gnome3 .desktop file for Firefox with multiple profiles
+[Desktop Entry]
+Version=1.0
+Name=Firefox
+Comment=Browse the web
+GenericName=Web Browser
+Keywords=Internet;WWW;Browser;Web;Explorer
+Type=Application
+Exec=firefox --no-remote %u
+Terminal=false
+X-MultipleArgs=false
+Icon=firefox
+Categories=GNOME;GTK;Network;WebBrowser;
+Actions=home;work
+MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;
+StartupNotify=true
 
-    [Desktop Action home]
-    Name=Firefox (home)
-    Exec=firefox --profile .mozilla/firefox/XXX --no-remote %u
+[Desktop Action home]
+Name=Firefox (home)
+Exec=firefox --profile .mozilla/firefox/XXX --no-remote %u
 
-    [Desktop Action work]
-    Name=Firefox (work)
-    Exec=firefox --profile .mozilla/firefox/XXX --no-remote %u
+[Desktop Action work]
+Name=Firefox (work)
+Exec=firefox --profile .mozilla/firefox/XXX --no-remote %u
+```
 
 Save the above as firefox.desktop and install using:
 
-    $ desktop-file-validate firefox.desktop
-    $ desktop-file-install --dir=.local/share/applications firefox.desktop
+``` shell_session
+$ desktop-file-validate firefox.desktop
+$ desktop-file-install --dir=.local/share/applications firefox.desktop
+```
 
 This results in a Firefox icon in your applications menu that defaults
 to whichever profile you mark as default in the ProfileManager, but
