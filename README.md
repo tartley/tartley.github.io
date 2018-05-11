@@ -1,3 +1,71 @@
+# TODO
+
+tartley.com ANAME record
+    A record must point at IP address, which may vary
+    ALIAS not supported by name.com I think
+    Done
+    When DNS propagated, these should give same IP:
+        dig tartley.com +noall +answer
+        dig tartley.github.io +noall +answer
+
+www.tartley.com -> tartley.github.io
+    subdomains are configured with a DNS 'CNAME' record
+    Done. When propagated, see:
+        dig www.example.com +nostats +nocomments +nocmd
+    Should look like example at:
+    https://help.github.com/articles/setting-up-a-www-subdomain/
+
+Problems?
+Try removing and re-adding github repo custom domain.
+
+* https:
+  letsencrypt:
+  Figure out how to use certbot with my webfaction account
+  ie. what webserver does it use?
+
+* test incoming emails work
+* finish copying emails to name.com host
+    * why do contents of 'sent' in two accounts look different?
+    * what are all the '4:23pm' entries about?
+* delete webfaction host from thunderbird
+* check whether this messes up any account symlink in ~/.thunderbird
+
+Secondary sites:
+* email webfaction: files in their latest warning have not changed since 2008
+  Is this likely to be a false positive?
+* contact secondary site owners, telling them what's going on
+* delete 'infected files' ?
+* export secondary site contents
+
+* Can we preserve old post urls?
+  Post prefix data includes wordpress id
+
+* links between posts should be relative
+* search for remaining references to 'tartley.com/...'
+* search for remaining references to 'wp-content'
+* search for remaining references to 'uploads'
+
+* Drop webfaction?
+
+* about
+
+* footer
+
+* comments
+* suggest a place to leave new comments? In the post template?
+
+* Links to picasa
+
+* syntax highlighting in solarized
+
+* show post categories in post
+
+* show post categories in home
+
+* Migrate ancient backed-up tartley.com content to github pages ?
+
+# Done ########################################################################
+
 # tartley.com Jekyll site
 
 ## Initial Jekyll site steup
@@ -46,62 +114,6 @@ And fails because I need an ssh tunnel to access the mysql instance:
 
 (leave open for as long as needed)
 
-
-# TODO ########################################################################
-
-*   
-
-* comments
-
-* Links to picasa
-
-* syntax highlighting in solarized
-
-* Can we preserve old post urls?
-    Post prefix data includes wordpress id
-
-* links between posts should be relative
-* search for remaining references to 'tartley.com/...'
-* search for remaining references to 'wp-content'
-* search for remaining references to 'uploads'
-
-* html entities in post titles
-    * on index
-    * in posts?
-
-* show post categories in post
-
-* show post categories in home
-
-* about
-
-* site header
-  much smaller
-  remove the 'view on github'
-
-* footer
-
-* labouriously check all posts
-
-* Point domain name to the new github pages site.
-
-* Migrate ancient backed-up tartley.com content to github pages
-
-* Drop webfaction?
-  Are there other services of theirs that I need?
-  * email
-  Do any of my secondary sites need to stay up?
-  Grab the content for secondary sites.
-
-* https:
-  letsencrypt:
-  Figure out how to use certbot with my webfaction account
-  ie. what webserver does it use?
-
-* Display old comments?
-* suggest a place to leave new comments? In the post template?
-
-# Done ########################################################################
 
 * backup
 
@@ -157,3 +169,31 @@ And fails because I need an ssh tunnel to access the mysql instance:
     ``` {other...}
     bare ```
     plain indented
+
+*   
+
+Using a CNAME to point tartley.com -> anything else will break email.
+Because CNAME makes one domain inherit all DNS records from another,
+including MX (email) records.
+
+Using a HTTP redirect will display the github.io url in the browser
+
+Solution is to use github.io custom domains. Go read...
+
+* email: figure out how to handle it when webfaction no longer hosts my domain
+  name.com has some "email forwarding" service, can I use that?
+
+* html entities in post titles
+    * on index
+    * in posts?
+
+name.com domain name provider
+name.com email hosting
+name.com nameservers
+name.com dns records:
+    ANAME     tartley.com -> tartley.github.io
+    CNAME www.tartley.com -> tartley.github.io
+
+tartley.github.io configured with subdomain www.tartley.com
+github will forward from tartley.com -> www.tartley.com
+
