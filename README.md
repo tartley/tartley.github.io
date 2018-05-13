@@ -1,32 +1,10 @@
 # TODO
 
-tartley.com ANAME record
-    A record must point at IP address, which may vary
-    ALIAS not supported by name.com I think
-    Done
-    When DNS propagated, these should give same IP:
-        dig tartley.com +noall +answer
-        dig tartley.github.io +noall +answer
+* Can we preserve old post urls?
+  Post prefix data includes wordpress id
 
-www.tartley.com -> tartley.github.io
-    subdomains are configured with a DNS 'CNAME' record
-    Done. When propagated, see:
-        dig www.example.com +nostats +nocomments +nocmd
-    Should look like example at:
-    https://help.github.com/articles/setting-up-a-www-subdomain/
-
-Problems?
-Try removing and re-adding github repo custom domain.
-
-* https:
-  letsencrypt:
-  Figure out how to use certbot with my webfaction account
-  ie. what webserver does it use?
-
-* test incoming emails work
 * finish copying emails to name.com host
-    * why do contents of 'sent' in two accounts look different?
-    * what are all the '4:23pm' entries about?
+    How to create 'Archive' folders on name.com hosting?
 * delete webfaction host from thunderbird
 * check whether this messes up any account symlink in ~/.thunderbird
 
@@ -36,16 +14,12 @@ Secondary sites:
 * contact secondary site owners, telling them what's going on
 * delete 'infected files' ?
 * export secondary site contents
-
-* Can we preserve old post urls?
-  Post prefix data includes wordpress id
+* Drop webfaction?
 
 * links between posts should be relative
 * search for remaining references to 'tartley.com/...'
 * search for remaining references to 'wp-content'
 * search for remaining references to 'uploads'
-
-* Drop webfaction?
 
 * about
 
@@ -196,4 +170,29 @@ name.com dns records:
 
 tartley.github.io configured with subdomain www.tartley.com
 github will forward from tartley.com -> www.tartley.com
+
+tartley.com ANAME record
+    A record must point at IP address, which may vary
+    ALIAS not supported by name.com I think
+    Done
+    When DNS propagated, these should give same IP:
+        dig tartley.com +noall +answer
+        dig tartley.github.io +noall +answer
+
+www.tartley.com -> tartley.github.io
+    subdomains are configured with a DNS 'CNAME' record
+    Done. When propagated, see:
+        dig www.example.com +nostats +nocomments +nocmd
+    Should look like example at:
+    https://help.github.com/articles/setting-up-a-www-subdomain/
+
+* test incoming emails work
+
+* https:
+  letsencrypt:
+    all handled automatically, thanks github!
+  * await cert gen
+
+enforce https: ie. http://tartley.com fwds to https://www.tartley.com
+  * await DNS prop
 
