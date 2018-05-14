@@ -1,7 +1,6 @@
 # TODO
 
-* Can we preserve old post urls?
-  Post prefix data includes wordpress id
+* about
 
 * finish copying emails to name.com host
     How to create 'Archive' folders on name.com hosting?
@@ -16,25 +15,29 @@ Secondary sites:
 * export secondary site contents
 * Drop webfaction?
 
+* footer
+
 * links between posts should be relative
 * search for remaining references to 'tartley.com/...'
 * search for remaining references to 'wp-content'
 * search for remaining references to 'uploads'
-
-* about
-
-* footer
+* Links to picasa
 
 * comments
 * suggest a place to leave new comments? In the post template?
 
-* Links to picasa
-
 * syntax highlighting in solarized
 
+* following features need a theme fork?
+
 * show post categories in post
+    * show post date after title?
 
 * show post categories in home
+
+* make sure 404 page helps people find what they were looking for
+    link to home
+    links to categories?
 
 * Migrate ancient backed-up tartley.com content to github pages ?
 
@@ -195,4 +198,10 @@ www.tartley.com -> tartley.github.io
 
 enforce https: ie. http://tartley.com fwds to https://www.tartley.com
   * await DNS prop
+
+* Can we preserve old post urls?
+  Post prefix data includes wordpress id
+    but no, because my old URLs used a GET param,
+    and my new site is static, so cannot dynamically do anything in reaction
+    to parameters.
 
