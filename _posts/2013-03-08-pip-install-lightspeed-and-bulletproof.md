@@ -126,11 +126,16 @@ packages. For my situation, a better tactic is this.
 Step one: Download all your project's dependencies into a local
 'packages' dir, but don't install them yet:
 
-`mkdir packages pip install --download=packages -r requirements.txt`
+```shell
+mkdir packages
+pip install --download=packages -r requirements.txt
+```
 
 Step two, install from the 'packages' dir:
 
-`pip install --no-index --find-links=packages -r requirements.txt`
+```shell
+pip install --no-index --find-links=packages -r requirements.txt
+```
 
 *(The above syntax works on pip 1.3, released yesterday. Docs for older
 versions of pip claim to support this, but in practice, for pip 1.2,
