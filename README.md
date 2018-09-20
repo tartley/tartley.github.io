@@ -1,34 +1,27 @@
 # TODO
 
-* about
-
-* finish copying emails to name.com host
-    How to create 'Archive' folders on name.com hosting?
-* delete webfaction host from thunderbird
-* check whether this messes up any account symlink in ~/.thunderbird
-
-Secondary sites:
-* email webfaction: files in their latest warning have not changed since 2008
-  Is this likely to be a false positive?
-* contact secondary site owners, telling them what's going on
-* delete 'infected files' ?
-* export secondary site contents
-* Drop webfaction?
-
-* footer
-
 * links between posts should be relative
 * search for remaining references to 'tartley.com/...'
 * search for remaining references to 'wp-content'
 * search for remaining references to 'uploads'
 * Links to picasa
 
+* favicon?
+
+* finish copying emails to name.com host
+    How to create 'Archive' folders on name.com hosting?
+* delete webfaction host from thunderbird
+* check whether this messes up any account symlink in ~/.thunderbird
+
 * comments
+* links to #comments exist
 * suggest a place to leave new comments? In the post template?
 
 * syntax highlighting in solarized
 
 * following features need a theme fork?
+
+* footer
 
 * show post categories in post
     * show post date after title?
@@ -38,6 +31,14 @@ Secondary sites:
 * make sure 404 page helps people find what they were looking for
     link to home
     links to categories?
+
+Secondary sites:
+* email webfaction: files in their latest warning have not changed since 2008
+  Is this likely to be a false positive?
+* contact secondary site owners, telling them what's going on
+* delete 'infected files' ?
+* export secondary site contents
+* Drop webfaction?
 
 * Migrate ancient backed-up tartley.com content to github pages ?
 
@@ -204,4 +205,6 @@ enforce https: ie. http://tartley.com fwds to https://www.tartley.com
     but no, because my old URLs used a GET param,
     and my new site is static, so cannot dynamically do anything in reaction
     to parameters.
+
+* about
 

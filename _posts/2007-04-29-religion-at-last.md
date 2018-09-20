@@ -20,7 +20,7 @@ wordpress_url: http://tartley.com/?p=96
 ---
 
 Rohan and I finally understood the movie [The
-Fountain](http://tartley.com/?p=39) last night. I say finally - Rohan
+Fountain](the-fountain) last night. I say finally - Rohan
 has only ever seen the first and last 15 minutes (oh, how apt!) It's
 fair to say it blew our minds.
 

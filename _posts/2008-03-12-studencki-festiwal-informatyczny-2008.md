@@ -56,4 +56,4 @@ today.
 **Update:** There's
 [photos](http://picasaweb.google.co.uk/tartley/20080307StudenckiFestiwalInformatyczny),
 and the talk slides are finally online, [over here
-somewhere...](http://tartley.com/?p=312)
+somewhere...](/pycon-2008-chicago-usa)

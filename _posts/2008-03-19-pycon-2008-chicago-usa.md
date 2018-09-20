@@ -42,7 +42,7 @@ comments:
   date: '2008-04-11 06:15:39 -0500', date_gmt: '2008-04-11 06:15:39 -0500', id: 10087}
 - {author: Tartley, author_email: tartley@tartley.com, author_url: 'http://tartley.com',
   content: "Hey Daniel.\r\nI'm guessing your comment is in response to <a href=\"\
-    http://tartley.com/?p=248#comments\" rel=\"nofollow\">all this</a>. Thanks for\
+    /diet-guru#comments\" rel=\"nofollow\">all this</a>. Thanks for\
     \ the sanity. If people really cared about the issue, they'd do what they could\
     \ to make their point of view understood, instead of just bitching people out.",
   date: '2008-04-23 12:18:00 -0500', date_gmt: '2008-04-23 12:18:00 -0500', id: 10575}

@@ -66,7 +66,7 @@ wordpress_id: 958
 wordpress_url: http://tartley.com/?p=958
 ---
 
-After [Sinister Ducks](http://tartley.com/?p=956), my [videogame
+After [Sinister Ducks](/sinister-redux), my [videogame
 creation mentor](http://www.gamedevlessons.com/) suggested that I create
 a mod for an existing game, in order to distance myself a little from
 the programming aspects of creating a game, and instead spend a little

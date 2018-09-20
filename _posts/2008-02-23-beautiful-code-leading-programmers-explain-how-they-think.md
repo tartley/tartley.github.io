@@ -15,7 +15,7 @@ layout: post
 published: true
 status: publish
 tags: []
-title: 'Beautiful Code : <i>Leading Programmers Explain How They Think</i>'
+title: 'Beautiful Code : Leading Programmers Explain How They Think'
 wordpress_id: 280
 wordpress_url: http://tartley.com/?p=280
 ---

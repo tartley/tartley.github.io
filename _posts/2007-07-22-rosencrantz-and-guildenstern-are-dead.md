@@ -31,6 +31,6 @@ wordpress_url: http://tartley.com/?p=181
 
 I just can't decide how I feel about this. Part brilliant, part awful,
 my most bipolar experience since [Everything and
-More](http://tartley.com/?p=12). I guess I should 'fess up that I've
+More](/everything-and-more). I guess I should 'fess up that I've
 never actually seen or read Hamlet, either, which obviously can't help.
 Oh deary. er... 5/10.

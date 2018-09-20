@@ -53,7 +53,7 @@ full of packages. Point pip at it using
 'packages' directory could be checked into your project's repo, so that
 once you've checked a project out, you have everything you need to
 deploy to local VMs, even with no network connection at all. I wrote
-about this [a while ago](http://tartley.com/?p=1423).
+about this [a while ago](/pip-install-lightspeed-and-bulletproof).
 
 **&gt;&gt; Building your code separately on each host will cause
 consistency issues**
