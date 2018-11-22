@@ -28,7 +28,7 @@ github:
 
 # Build settings
 markdown: kramdown
-remote_theme: jekyll-whiteglass
+theme: minima
 plugins:
   - jekyll-feed
 
