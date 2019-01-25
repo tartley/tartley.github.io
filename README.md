@@ -8,6 +8,8 @@
 
 * favicon?
 
+* What's that github auth error about on starting local server?
+
 * finish copying emails to name.com host
     How to create 'Archive' folders on name.com hosting?
 * delete webfaction host from thunderbird
@@ -32,13 +34,8 @@
     link to home
     links to categories?
 
-Secondary sites:
-* email webfaction: files in their latest warning have not changed since 2008
-  Is this likely to be a false positive?
-* contact secondary site owners, telling them what's going on
-* delete 'infected files' ?
-* export secondary site contents
-* Drop webfaction?
+* RSS feed?
+* Category based RSS feeds? (esp 'python')
 
 * Migrate ancient backed-up tartley.com content to github pages ?
 
@@ -207,4 +204,12 @@ enforce https: ie. http://tartley.com fwds to https://www.tartley.com
     to parameters.
 
 * about
+
+Secondary sites:
+* email webfaction: files in their latest warning have not changed since 2008
+  Is this likely to be a false positive?
+* contact secondary site owners, telling them what's going on
+* delete 'infected files' ?
+* export secondary site contents
+* Drop webfaction?
 
