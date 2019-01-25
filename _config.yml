@@ -34,6 +34,9 @@ plugins:
 
 permalink: /:title
 
+# Show posts even if their date is in the future
+future: true
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
