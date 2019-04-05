@@ -43,7 +43,7 @@ gsettings set $kb switch-applications-backward "[]"
 
 # Window maximize toggle, super-up
 gsettings set $kb maximize "[]"
-gsettings set $kb toggle-maximized "['Up']
+gsettings set $kb toggle-maximized "['Up']"
 
 # Window maximize vertically toggle, super-v
 gsettings set $kb maximize-vertically "['v']"
