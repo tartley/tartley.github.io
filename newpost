@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function usage {
-    echo "newpost TITLE" >&2
+    echo "newpost <slug>" >&2
 }
 
 if [ $# != 1 ]; then
