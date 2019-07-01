@@ -20,7 +20,7 @@ title="$(tr '-' ' ' <<< ${slug^})."
 
 # create new post
 dest="_posts/$(date +%Y-%m-%d)-$slug.md"
-cp "newpost-template.md" "$dest"
+cp "_templates/newpost" "$dest"
 sed -ri "s/\{date\}/$(date -Iseconds)/" "$dest"
 sed -ri "s/\{title\}/$title/" "$dest"
 
