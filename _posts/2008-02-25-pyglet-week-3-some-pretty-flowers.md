@@ -88,13 +88,13 @@ layout: post
 published: true
 status: publish
 tags: []
-title: 'pyglet week 3 : <i>Some Pretty Flowers</i>'
+title: 'pyglet week 3 : Some Pretty Flowers'
 wordpress_id: 285
 wordpress_url: http://tartley.com/?p=285
 ---
 
 This is just a refinement of [last week's
-script](http://tartley.com/?p=264). No massively significant changes,
+script](/pyglet-week-2-better-vertex-throughput). No massively significant changes,
 just a bunch of minor tweaks.
 
 -   The fans are replaced with slightly prettier flowers, with separate

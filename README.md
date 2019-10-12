@@ -1,7 +1,13 @@
+# Documenation
+
+See Makefile, & 'newpost' script.
+
 # TODO
 
-* links between posts should be relative
-* search for remaining references to 'tartley.com/...'
+* Why is there a README, Makefile, etc in site directory?
+  looks like they are copied from root on site serving
+  or generation. :-/
+
 * search for remaining references to 'wp-content'
 * search for remaining references to 'uploads'
 * Links to picasa
@@ -10,34 +16,27 @@
 
 * What's that github auth error about on starting local server?
 
-* finish copying emails to name.com host
-    How to create 'Archive' folders on name.com hosting?
-* delete webfaction host from thunderbird
-* check whether this messes up any account symlink in ~/.thunderbird
-
 * comments
 * links to #comments exist
 * suggest a place to leave new comments? In the post template?
 
 * syntax highlighting in solarized
 
-* following features need a theme fork?
+* Embed ancient backed up tartley.com content, and link to it.
 
-* footer
+## Theme changes
 
+* choosing another theme that provides the following.
+  Otherwise, will need to fork the current theme. :-/
+
+* TOC show post date *after* title instead of before
+
+* TOC: show post categories
+* click on a category to show all posts in that category.
 * show post categories in post
-    * show post date after title?
-
-* show post categories in home
-
-* make sure 404 page helps people find what they were looking for
-    link to home
-    links to categories?
 
 * RSS feed?
 * Category based RSS feeds? (esp 'python')
-
-* Migrate ancient backed-up tartley.com content to github pages ?
 
 # Done ########################################################################
 

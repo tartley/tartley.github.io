@@ -182,9 +182,8 @@ wordpress_id: 264
 wordpress_url: http://tartley.com/?p=264
 ---
 
-In last week's [2D Graphics With pyglet and
-OpenGL](http://tartley.com/?p=250), I used the
-[pyglet](http://www.pyglet.org/) library to produce some OpenGL
+In last week's [2D Graphics With pyglet and OpenGL](/2d-graphics-with-pyglet-and-opengl),
+I used the [pyglet](http://www.pyglet.org/) library to produce some OpenGL
 triangles on the screen, from my rough-and-ready Python code. This week,
 I want to try to boost the throughput, to get some idea of how complex a
 scene we can realistically render from Python, while still maintaining a
