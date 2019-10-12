@@ -23,7 +23,7 @@ wordpress_url: http://tartley.com/?p=318
 ![](/assets/2008/03/nun-of-your-business.jpg)
 *Nun of your business*
 
-[Some blurry photos are up](http://picasaweb.google.co.uk/tartley/20080320Denver)
+[Some blurry photos are up](https://photos.google.com/album/AF1QipM04-dGG9h_wCxE57Ut2zg9k7VsxEf-O2hAzWvr)
 of an
 absolutely brilliant stag event in Denver, starting with an afternoon of
 UK vs rest-of-the-world tomfoolery, which included the most laughing

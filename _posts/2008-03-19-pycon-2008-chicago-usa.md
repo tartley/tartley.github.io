@@ -93,4 +93,5 @@ tartley at the domain tartley.com (gosh I love love love
 obfuscated - spamarrest is no more.)
 
 **Update:** There are
-[photos!](http://picasaweb.google.co.uk/tartley/20080313PyCon)
+[photos!](https://photos.google.com/album/AF1QipMEYX-NIkv5JxXxabBdEBLkF9mwxMrXFCHEQlt_)
+

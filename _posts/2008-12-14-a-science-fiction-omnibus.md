@@ -12,8 +12,7 @@ comments:
 - {author: tartley, author_email: tartley@tartley.com, author_url: 'http://tartley.com',
   content: 'Thanks Alex, I was indeed wondering about that. I''ve got it in my Amazon
     cart as we speak. Considering getting "Little, Big" first, since it is less intimidatingly
-    ginormous. But my stack of <a href="http://picasaweb.google.co.uk/lh/photo/LXQYgE1hNH2_Xcs1oyJTOg?feat=directlink"
-    rel="nofollow">unread books</a> is currently blocking any new acquisitions.',
+    ginormous. But my stack of unread books</a> is currently blocking any new acquisitions.',
   date: '2009-01-03 22:32:03 -0600', date_gmt: '2009-01-03 22:32:03 -0600', id: 19010}
 date: 2008-12-14 17:32:47 -0600
 date_gmt: 2008-12-14 17:32:47 -0600
@@ -79,3 +78,4 @@ otherwise.
 **Update:** A Great Work of Time is available as a stand-alone 75 page
 book on Amazon Kindle for £2.99, and Calibre with the DeDRM plugin will
 convert this into an epub which can be read on any device.
+

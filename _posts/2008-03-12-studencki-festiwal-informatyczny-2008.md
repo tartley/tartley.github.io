@@ -54,6 +54,6 @@ and I'll publish my own updated Test-Driven Development talk here later
 today.
 
 **Update:** There's
-[photos](http://picasaweb.google.co.uk/tartley/20080307StudenckiFestiwalInformatyczny),
+[photos](https://photos.google.com/album/AF1QipNHkP3miUANDRPKVsCJAsO-SbWjU2vOMn1fhgAw)
 and the talk slides are finally online, [over here
 somewhere...](/pycon-2008-chicago-usa)

@@ -11,15 +11,15 @@ layout: post
 published: true
 status: publish
 tags: []
-title: For anyone who doesn't know yet...
+title: She said yes!
 wordpress_id: 201
 wordpress_url: http://tartley.com/?p=201
 ---
 
-[![Flower. Hand. Ring.](/assets/2007/08/20070801064.jpg)](http://picasaweb.google.co.uk/tartley/Engaged)
+[![Flower. Hand. Ring.](/assets/2007/08/20070801064.jpg)](https://photos.google.com/album/AF1QipMgLVUFtV3bPbFN05OU1-9l3_4DCmJ5DLtW6rO6)
 
 ...she said yes!
 
-[Pics on Picasa here.](http://picasaweb.google.co.uk/tartley/Engaged)
+[Pics here.](https://photos.google.com/album/AF1QipMgLVUFtV3bPbFN05OU1-9l3_4DCmJ5DLtW6rO6)
 
 

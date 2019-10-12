@@ -4,12 +4,6 @@ See Makefile, & 'newpost' script.
 
 # TODO
 
-* Why is there a README, Makefile, etc in site directory?
-  looks like they are copied from root on site serving
-  or generation. :-/
-
-* search for remaining references to 'wp-content'
-* search for remaining references to 'uploads'
 * Links to picasa
 
 * favicon?
@@ -211,4 +205,12 @@ Secondary sites:
 * delete 'infected files' ?
 * export secondary site contents
 * Drop webfaction?
+
+* links between posts should be relative
+  so they work in dev and prod.
+* search for remaining references to 'tartley.com/...'
+
+* Why is there a README, Makefile, etc in site directory?
+  looks like they are copied from root on site serving
+  or generation. :-/
 

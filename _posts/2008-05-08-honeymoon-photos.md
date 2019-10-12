@@ -22,18 +22,13 @@ wordpress_url: http://tartley.com/?p=333
 
 Some honeymoon photos are online:
 
--   [Journey to
-    Tikal](http://picasaweb.google.co.uk/tartley/20080401cJourneyToTikal) (10)
--   [Dawn tour of Mayan
-    ruins](http://picasaweb.google.co.uk/tartley/20080402TikalDawn)
-    (57!)
--   [Hike up VolcÃ¡n San
-    Pedro](http://picasaweb.google.co.uk/tartley/20080405VolcanSanPedro) (45)
+- [Journey to Tikal](https://photos.google.com/album/AF1QipNdpyLpG4OxnmmOm4IJgE4TfnFshCIMMY_lGu6vh)
+- [Dawn tour of Mayan ruins](https://photos.google.com/album/AF1QipNSFJm_uHAdIvPtmDtOLI1J26u9QPcWJvoTHimK)
+- [Hike up Volcán San Pedro](https://photos.google.com/album/AF1QipMna0ZW7KfPoEGV_0qY9eKQGjjnheZD7fQBuGBS)
 
 Also some old ones, working through the backlog of pre online album
 photos:
 
--   [Visit JB's
-    family](http://picasaweb.google.co.uk/tartley/20060928VisitJBsFamily) (6)
+- [Visit JB's family](https://photos.google.com/album/AF1QipNXeuPyr90ZOVb3RIrzhHCb3405YWKja3qnkts7h)
 
 Peace.
