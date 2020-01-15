@@ -4,13 +4,9 @@ See Makefile, & 'newpost' script.
 
 # TODO
 
-* Links to picasa
-
 * favicon?
 
-* What's that github auth error about on starting local server?
-
-* comments
+* comments - display existing.
 * links to #comments exist
 * suggest a place to leave new comments? In the post template?
 
