@@ -16,8 +16,6 @@ wordpress_id: 1615
 wordpress_url: http://tartley.com/?p=1615
 ---
 
-Bash:
-
 ``` bash
 #!/usr/bin/env bash
 

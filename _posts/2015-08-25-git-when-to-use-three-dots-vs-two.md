@@ -62,24 +62,26 @@ To see the commits from 'f' back to the beginning of time:
         |
        +●
 
-Throughout, omitted branchname defaults to current HEAD, i.e:
+Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
+above that you almost always want:
 
 ``` bash
-git diff m..f
+git diff m...f
 ```
 
 is the same as
 
 ``` bash
-git checkout m
-git diff ..f
+git checkout f
+git diff m...
 ```
 
 or
 
 ``` bash
-git checkout f
-git diff m..
+git checkout m
+git diff ...f
 ```
 
 Is there a word for unicode ascii art?
+

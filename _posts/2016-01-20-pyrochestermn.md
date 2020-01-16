@@ -19,4 +19,11 @@ wordpress_url: http://tartley.com/?p=1651
 Announcing the world's newest Python User Group, PyRochesterMN, based in
 Rochester, Minnesota, USA.
 
-<http://www.meetup.com/PyRochesterMN>
+**Update:** We've had a couple of name & hosting changes since:
+
+~~<http://www.meetup.com/PyRochesterMN>~~
+
+~~<http://www.meetup.com/RochesTech>~~
+
+<https://www.reddit.com/r/rochestertech/>
+
