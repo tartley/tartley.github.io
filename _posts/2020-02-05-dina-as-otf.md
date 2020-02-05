@@ -9,10 +9,10 @@ layout: post
 published: true
 status: publish
 tags: []
-title: Dina font as an OFT.
+title: Dina font as an OTF.
 ---
 
-The Dina font, converted to oft format: [Dina-v2.93-oft.tar.gz](/assets/2020/Dina-v2.93-otf.tar.gz)
+The Dina font, converted to an OpenType Font (.otf): [Dina-v2.93-otf.tar.gz](/assets/2020/Dina-v2.93-otf.tar.gz)
 
 I produced it because Linux font rendering component *Pango* has
 [intentionally dropped rendering of bitmap fonts](https://gitlab.gnome.org/GNOME/pango/issues/386#note_570411),
