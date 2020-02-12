@@ -12,13 +12,14 @@ source "https://rubygems.org"
 # gem "jekyll", "~> 3.7.3"
 
 # This is the default theme for new Jekyll sites.
-gem "minima", "~> 2.0"
+gem 'minima', '~> 2.0'
 
 # To upgrade, run `bundle update github-pages`.
-gem "github-pages", group: :jekyll_plugins
+gem 'github-pages', group: :jekyll_plugins
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
+  gem 'jekyll-feed', '~> 0.6'
+  gem 'jemoji'
 end
 
 # Commented out because Windows.
