@@ -12,20 +12,27 @@ tags: []
 title: Dina font as an OTF.
 ---
 
-The Dina font, converted to an OpenType Font (.otf): [Dina-v2.93-otf.tar.gz](/assets/2020/Dina-v2.93-otf.tar.gz)
+The Dina font, converted to an OpenType Font (.otf) :gift: :package: [:gift: :package: Dina-v2.93-otf.tar.gz](/assets/2020/Dina-v2.93-otf.tar.gz)
 
-Since
-[Pango v1.44 dropped support for naive bitmap fonts](https://gitlab.gnome.org/GNOME/pango/issues/386),
-Linux users (eg. from Ubuntu 20.04, *Focal* onwards) have to convert them into
-a format that will display, ie. a vector format that allows embedded bitmaps.
-(Not a conversion of the bitmap into an outline, losing the advantages of tiny,
-crisp, bitmaps.)
+<center>~~~</center>
 
-# The conversion process
+[Pango dropped support for naive bitmap fonts](https://gitlab.gnome.org/GNOME/pango/issues/386)
+in v1.44 -- ie. from Ubuntu 20.04, *Focal*, onwards.
 
-For many fonts, this will all be automated or done for you by packagers or font
-authors. Here's how I've managed it for my
+So all bitmap fonts need to be converted into a format that will render,
+ie. a vector format such as OpenType that allows bitmaps to be embedded.
+(Not a conversion of the bitmap into an outline, losing the advantages of
+the crisp, tiny bitmaps.)
+
+For most bitmap fonts, this conversion will be done for you, by packagers
+or font authors.
+
+But you'll need to do the conversion yourself for any peripheral fonts that
+you love, but your distribution doesn't.
+Here's how I've managed it for my
 [beloved Dina](http://www.dcmembers.com/jibsen/download/61/).
+
+## The conversion process
 
 Good luck!
 
@@ -85,6 +92,10 @@ or at least filing an issue there to try and get some help.
 * `fc-cache -f`
 
 ## The result
+
+I know, it doesn't look like much. But just you try and show me a vector font
+that is half as crisp and clear at this size, much less at the *three sizes
+smaller than this* that Dina provides.
 
 ![](/assets/2020/terminal-dina-ll.png)
 
