@@ -12,9 +12,9 @@ tags: []
 title: Dina font as an OTF.
 ---
 
-The Dina font, converted to an OpenType Font (.otf) :gift: :package: [:gift: :package: Dina-v2.93-otf.tar.gz](/assets/2020/Dina-v2.93-otf.tar.gz)
+The Dina font, converted to an OpenType Font:
 
-<center>~~~</center>
+[:package: Dina-v2.93-otf.tar.gz](/assets/2020/Dina-v2.93-otf.tar.gz)
 
 [Pango dropped support for naive bitmap fonts](https://gitlab.gnome.org/GNOME/pango/issues/386)
 in v1.44 -- ie. from Ubuntu 20.04, *Focal*, onwards.
@@ -27,14 +27,9 @@ the crisp, tiny bitmaps.)
 For most bitmap fonts, this conversion will be done for you, by packagers
 or font authors.
 
-But you'll need to do the conversion yourself for any peripheral fonts that
-you love, but your distribution doesn't.
-Here's how I've managed it for my
+But you'll need to do it yourself for any peripheral fonts that you love
+more than your distribution does. Here's how I did it for my
 [beloved Dina](http://www.dcmembers.com/jibsen/download/61/).
-
-## The conversion process
-
-Good luck!
 
 ## 1. Identify the font file.
 
