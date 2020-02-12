@@ -14,31 +14,77 @@ title: Dina font as an OTF.
 
 The Dina font, converted to an OpenType Font (.otf): [Dina-v2.93-otf.tar.gz](/assets/2020/Dina-v2.93-otf.tar.gz)
 
-I produced it because Linux font rendering component *Pango* has
-[intentionally dropped rendering of bitmap fonts](https://gitlab.gnome.org/GNOME/pango/issues/386#note_570411),
-in v1.44.
+Since
+[Pango v1.44 dropped support for naive bitmap fonts](https://gitlab.gnome.org/GNOME/pango/issues/386),
+Linux users (eg. from Ubuntu 20.04, *Focal* onwards) have to convert them into
+a format that will display, ie. a vector format that allows embedded bitmaps.
+(Not a conversion of the bitmap into an outline, losing the advantages of tiny,
+crisp, bitmaps.)
 
-This version of Pango will be in the next Ubuntu release (20.04, "Focal"). 
-To continue using bitmap fonts such as
-[my beloved Dina](http://www.dcmembers.com/jibsen/download/61/),
-one needs to repackage them as an open type font (.otf),
-which Pango will render, and is capable of containing embedded bitmaps.
-The process is described here,
-[using fontforge to convert the font file](https://gitlab.gnome.org/GNOME/pango/issues/386#note_570411).
+# The conversion process
 
-There are a couple of gotchas:
+For many fonts, this will all be automated or done for you by packagers or font
+authors. Here's how I've managed it for my
+[beloved Dina](http://www.dcmembers.com/jibsen/download/61/).
 
-* For me, the resulting font is invisible in font selection dialogs. But once
-  selected, by clicking around blindly, then it displays fine in applications
-  (ie. gnome-terminal.)
-* Changing font size in gnome-terminal using Ctrl-+ only cycles over three
-  of the bitmap's four defined sizes. I don't know why. But all sizes are
-  available, if you select a size explicitly.
-* Changing font size in gnome-terminal to one which the bitmap doesn't support
-  results in a blank terminal window, rather than falling back to another font.
-  :-/
+Good luck!
 
-Other tools described in that thread, such as command line `fonttosfnt`,
-produce errors on Dina BDFs, or else badly flawed output from the .fon
-files, such as losing all size variations.
+## 1. Identify the font file.
+
+    fc-list | grep Dina
+
+## 2. Convert.
+
+Use either command line tools, or fontforge.
+
+### 2.1 Using fontforge
+
+A GUI tool.
+
+1. Open up fontforge, paste the font path in.
+
+2. File / generate fonts.
+
+3. Select:
+
+   * Left dropdown: "OpenType (CFF)"
+   * Right dropdown: "In TTF/OTF"
+   * Generate
+
+The results have some problems. I'm using it in gnome-terminal:
+
+* People converting other fonts report issues with ugly gaps between
+  characters. But I don't see that, perhaps because it's a monospace font?
+* The converted font is invisible in font selection dialogs, making it look
+  like the process did not work. But once selected, by clicking around blindly,
+  then the font displays fine in applications.
+* Using a font size which is not defined in the font displays a blank terminal,
+  instead of falling back to some other font.
+* Using ctrl-+/- to select font sizes cycles through three of the four
+  defined sizes. I don't know why it skips one. But all four are useable if
+  you explicitly select a size.
+
+## 2.2 Using command-line tools
+
+The process is described at
+https://fedoraproject.org/wiki/BitmapFontConversion.
+
+Ubuntu's released version of fonttosfnt (1.0.4) produces unusable results:
+* Only the 1st and 2nd smallest font sizes are preserved.
+* In the 2nd smallest size, all variations are too bold, so that 'bold'
+  variations look 'double-bold'. (Italics looks really ugly too, this may
+  just be a result of the enboldening.)
+
+TODO: Consider trying the latest fonttosfnt (1.1.0)
+https://gitlab.freedesktop.org/xorg/app/fonttosfnt
+or at least filing an issue there to try and get some help.
+
+## 3. Install
+
+* Copy to `~/.local/share/fonts` (or `~/.fonts`, right?)
+* `fc-cache -f`
+
+## The result
+
+![](/assets/2020/terminal-dina-ll.png)
 
