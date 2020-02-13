@@ -88,9 +88,15 @@ or at least filing an issue there to try and get some help.
 
 ## The result
 
-I know, it doesn't look like much. But just you try and show me a vector font
-that is half as crisp and clear at this size, much less at the *three sizes
-smaller than this* that Dina provides.
+I know, it doesn't look like much.
+But compare it with a regular vector font,
+which is blurry and inconsistant and hard to read at these sizes.
 
-![](/assets/2020/terminal-dina-ll.png)
+| ![](/assets/2020/terminal-dina-small-ll.png)
+|:--:|
+| Dina, crisp and clear and lovely. |
+
+| ![](/assets/2020/terminal-ubuntumono-small-ll.png)
+|:--:|
+|Ubuntu Mono, the *best* of the vector fonts I could find for this.
 
