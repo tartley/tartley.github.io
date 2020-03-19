@@ -16,11 +16,11 @@ wordpress_id: 148
 wordpress_url: http://tartley.webfactional.com/?p=148
 ---
 
-[![WebFaction - hosting for an agile web.](/assets/2007/06/webfaction.png)](http://www.webfaction.com/ "WebFaction - hosting for an agile web.")
+[![WebFaction - hosting for an agile web.](/assets/2007/06/webfaction.png)](https://www.webfaction.com/ "WebFaction - hosting for an agile web.")
 
 If
 you can see this post, then tartley.com successfully switched to
-[WebFaction](http://www.webfaction.com/ "WebFaction - hosting for an agile web.")
+[WebFaction](https://www.webfaction.com/ "WebFaction - hosting for an agile web.")
 for our hosting, thanks to the resounding recommendations of Michael,
 and the genial-but-highly-competent aura emanating from the big cheese,
 Remi Delon. Shell access, Linux environment, open-source friendly,
