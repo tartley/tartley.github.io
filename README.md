@@ -2,6 +2,8 @@
 
 See Makefile, & 'newpost' script.
 
+Commands in the Makefile tweak the path and won't work standalone!
+
 # TODO
 
 * favicon?
