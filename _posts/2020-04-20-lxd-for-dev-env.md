@@ -100,12 +100,9 @@ Create file `/etc/systemd/network/lxd.network`:
     Name=lxdbr0
 
     [Network]
+    Address=IPADDR/24
     DNS=IPADDR
     Domains=~lxd
-
-    [Address]
-    Address=IPADDR/24
-    Gateway=IPADDR
 
 Where IPADDR is the lxdbr0 IPv4 address.
 
