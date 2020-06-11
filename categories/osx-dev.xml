@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about OSX-dev)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/osx-dev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley@tartley.com"&gt;Jonathan Hartley&lt;/a&gt; &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"&gt;tartley.com&lt;/span&gt; by &lt;a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL"&gt;Jonathan Hartley&lt;/a&gt; is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.</copyright><lastBuildDate>Thu, 11 Jun 2020 19:39:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Encrypted zip files on OSX</title><link>https://www.tartley.com/posts/2012/10/9/encrypted-zip-files-on-osx.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;My passwords and other miscellany are in a plain text file within an
+encrypted zip. Since starting to use OSX I've been looking for a way to
+access my passwords such that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I get prompted for the decryption password.&lt;/li&gt;
+&lt;li&gt;The file gets unzipped, but not in the same directory, because
+    that's synced to Dropbox, so would send my plaintext passwords to
+    them every time I accessed them. Maybe to /tmp?&lt;/li&gt;
+&lt;li&gt;The plaintext file within the zip is opened in \$EDITOR.&lt;/li&gt;
+&lt;li&gt;Wait for me to close \$EDITOR, then remove my plaintext passwords
+    from the filesystem.&lt;/li&gt;
+&lt;li&gt;Before deleting the passwords, check if I've updated them. If so,
+    put the new updated version back into the original zip file.&lt;/li&gt;
+&lt;li&gt;Don't forget to keep the updated zip file encrypted, using the same
+    password as before, without prompting for it again.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I failed to find an existing app which would do all this (although I had
+no trouble on Linux or even on Windows.) Hence, resorting to good old
+Bash:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class="nv"&gt;ZIPDIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$HOME&lt;/span&gt;&lt;span class="s2"&gt;/docs/org"&lt;/span&gt;
+
+&lt;span class="nb"&gt;read&lt;/span&gt; -s -p &lt;span class="s2"&gt;"Password:"&lt;/span&gt; key
+
+&lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;$ZIPDIR&lt;/span&gt;
+unzip -P &lt;span class="nv"&gt;$key&lt;/span&gt; passwords.zip passwords.txt -d &lt;span class="nv"&gt;$TMPDIR&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="nv"&gt;$?&lt;/span&gt; !&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+    &lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;fi&lt;/span&gt;
+
+&lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$TMPDIR&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+touch passwords.datestamp
+&lt;span class="nv"&gt;$EDITOR&lt;/span&gt; passwords.txt
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; passwords.txt -nt passwords.datestamp &lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+    zip -P &lt;span class="nv"&gt;$key&lt;/span&gt; -r &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$ZIPDIR&lt;/span&gt;&lt;span class="s2"&gt;/passwords.zip"&lt;/span&gt; passwords.txt
+&lt;span class="k"&gt;fi&lt;/span&gt;
+
+rm passwords.txt
+rm passwords.datestamp
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;I don't expect this to be watertight, but seems good enough for today.
+I'm happy to hear suggestions.&lt;/p&gt;&lt;/div&gt;</description><category>OSX-dev</category><guid>https://www.tartley.com/posts/2012/10/9/encrypted-zip-files-on-osx.html</guid><pubDate>Tue, 09 Oct 2012 15:17:07 GMT</pubDate></item><item><title>Compiling MacVim with Python 2.7</title><link>https://www.tartley.com/posts/2011/10/18/compiling-macvim-with-python-2-7.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I love the brilliant Vim plugin
+&lt;a href="http://www.vim.org/scripts/script.php?script_id=2441"&gt;pyflakes-vim&lt;/a&gt;,
+which highlights errors &amp;amp; warnings, and since I got a MacBook for work,
+I've been using MacVim a lot.&lt;/p&gt;
+&lt;p&gt;This combination has a problem, that MacVim uses the OSX system default
+Python 2.6, so pyflakes is unable to handle Python 2.7 syntax, such as
+set literals. These are marked as a syntax errors, which prevents the
+rest of the file from being parsed.&lt;/p&gt;
+&lt;p&gt;The solution is to compile your own MacVim, using Python 2.7 instead of
+the system Python. The following commands got MacVim compiled for me:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+git clone git://github.com/b4winckler/macvim.git
+&lt;span class="nb"&gt;cd&lt;/span&gt; macvim/src
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;LDFLAGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;-L/usr/lib
+./configure &lt;span class="se"&gt;\&lt;/span&gt;
+    --with-features&lt;span class="o"&gt;=&lt;/span&gt;huge &lt;span class="se"&gt;\&lt;/span&gt;
+    --enable-rubyinterp &lt;span class="se"&gt;\&lt;/span&gt;
+    --enable-perlinterp &lt;span class="se"&gt;\&lt;/span&gt;
+    --enable-cscope &lt;span class="se"&gt;\&lt;/span&gt;
+    --enable-pythoninterp &lt;span class="se"&gt;\&lt;/span&gt;
+    --with-python-config-dir&lt;span class="o"&gt;=&lt;/span&gt;/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config
+make
+open MacVim/build/Release
+&lt;span class="nb"&gt;echo&lt;/span&gt; Drag MacVim.app to your Applications directory
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Without the LDFLAGS setting, I was missing some symbols at link. The
+--with-python-config-dir entry came from typing 'which python' to find
+where my Python 2.7 install lives, and modifying that result to find its
+'config' directory (whatever that is) near to the binary.&lt;/p&gt;
+&lt;p&gt;As indicated, install by dragging the resulting
+macvim/src/MacVim/build/Release/MacVim.app into your Applications
+directory.&lt;/p&gt;
+&lt;p&gt;Open up MacVim, and check out the built-in Python version:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
+&lt;span class="mf"&gt;2.7&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r271&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;86882&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Nov&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="mi"&gt;2010&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;35&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;34&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;And files with set literals are now correctly parsed for errors.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This only works if the Python 2.7 is your default 'python'
+executable. Otherwise, or if you get "ImportError: No module named
+site"?, see Richard's comments below.&lt;/p&gt;&lt;/div&gt;</description><category>OSX-dev</category><category>Python</category><category>Vim</category><guid>https://www.tartley.com/posts/2011/10/18/compiling-macvim-with-python-2-7.html</guid><pubDate>Tue, 18 Oct 2011 17:25:03 GMT</pubDate></item></channel></rss>

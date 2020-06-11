@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about TODO)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/cat_todo.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley@tartley.com"&gt;Jonathan Hartley&lt;/a&gt; &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"&gt;tartley.com&lt;/span&gt; by &lt;a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL"&gt;Jonathan Hartley&lt;/a&gt; is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.</copyright><lastBuildDate>Thu, 11 Jun 2020 19:39:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Vonnegut on software development teams.</title><link>https://www.tartley.com/posts/2019/6/30/vonnegut-on-software-development-teams.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;So here's a thing. Spotted this in some of Kurt Vonnegut's personal
+correspondence, talking about an instructor of his named Slotkin:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What Slotkin said was this: no man who achieved greatness in the arts operated
+by himself; he was top man in a group of like-minded individuals. This works
+out fine for the cubists, and Slotkin had plenty of good evidence for its
+applying to Goethe, Thoreau, Hemingway, and just about anybody you care to
+name.&lt;/p&gt;
+&lt;p&gt;If this isn't 100% true, it's true enough to be interesting—and maybe helpful.&lt;/p&gt;
+&lt;p&gt;The school gives a man, Slotkin said, the fantastic amount of guts it takes to
+add to culture. It gives him morale, esprit de corps, the resources of many
+brains, and—maybe most important—one-sidedness with assurance.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Reminds me powerfully of my growing impressions of the environment a person
+needs to be in in order to do great things in software. There is no doubt some
+effectiveness in assembling great individuals to create a great team.&lt;/p&gt;
+&lt;p&gt;But in my personal experience, there is a whole lot &lt;em&gt;more&lt;/em&gt; value in creating a
+great team by instilling the right values, and then watching the members
+visibly level each other up, producing a succession of great individuals,
+and only subsequently attracting more of the same.&lt;/p&gt;&lt;/div&gt;</description><category>TODO</category><guid>https://www.tartley.com/posts/2019/6/30/vonnegut-on-software-development-teams.html</guid><pubDate>Mon, 01 Jul 2019 02:28:04 GMT</pubDate></item></channel></rss>

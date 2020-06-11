@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about Graphics)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/cat_graphics.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley@tartley.com"&gt;Jonathan Hartley&lt;/a&gt; &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"&gt;tartley.com&lt;/span&gt; by &lt;a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL"&gt;Jonathan Hartley&lt;/a&gt; is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.</copyright><lastBuildDate>Thu, 11 Jun 2020 19:39:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Use light-opacity RGBA to fix halo artifacts along edges of textures</title><link>https://www.tartley.com/posts/2010/1/3/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This is a quick post in response to the Vimeo video post &lt;a href="http://vimeo.com/8444889"&gt;Getting Rid of
+White Halos in Transparent Textures&lt;/a&gt; by
+FlashBang Studios (creators of the awesome &lt;a href="http://blurst.com/raptor-safari/"&gt;Offroad Velociraptor
+Safari&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Thanks to FlashBang for the video - the fix you describe, and the
+plugins you use to achieve it, are good to know about. If I'm
+interpreting the cause of the white haloes you describe correctly, then
+your fix applies to more than just Unity development.&lt;/p&gt;
+&lt;p&gt;Also, you might want to know that there is an alternative solution to
+this problem. This alternative solution requires small code changes, and
+is possibly slightly trickier to get your head around, but possibly has
+a small advantage in that it requires no ongoing effort by the artists
+(e.g. applying and undoing plugin actions to color transparent pixels)
+once in place. I don't use Unity, so this might not apply in that
+environment, but just in case, here goes:&lt;/p&gt;
+&lt;p&gt;The alternative solution is to save textures using &lt;em&gt;light-opacity RGBA&lt;/em&gt;
+(a.k.a. &lt;em&gt;pre-multiplied alpha&lt;/em&gt;), and then blend them in the engine using
+a more appropriate OpenGL blending mode. I learned about this from
+&lt;a href="http://http://groups.google.com/group/pyglet-users/tree/browse_frm/thread/7647b57bdec45235/60d2c57881b873e1?rnum=11&amp;amp;q=premultiplied+alpha&amp;amp;_done=%2Fgroup%2Fpyglet-users%2Fbrowse_frm%2Fthread%2F7647b57bdec45235%3Ftvc%3D1%26q%3Dpremultiplied%2Balpha%26#doc_bb176dcbd759ea4c"&gt;Brian Fisher's post on the pylget
+forums&lt;/a&gt;.
+I aim to paraphrase his explanation of it here in order to cement my own
+understanding of it.&lt;/p&gt;
+&lt;p&gt;To elaborate, as I understand it, the issue is caused by the bilinear
+interpolation between the RGBA of your transparent pixels, and your icon
+texture color. For example, for various transparencies of purple on top of 
+a blue background:&lt;/p&gt;
+&lt;p&gt;| &lt;span style="background-color: #0088ff; padding: 1em;"&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/opaque-purple.png" title="opaque-purple"&gt;&lt;/span&gt; &lt;strong&gt;icon&lt;/strong&gt; (1, 0, 1, 1) fully opaque purple
+| &lt;span style="background-color: #0088ff; padding: 1em;"&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/halfwhite-purple.png" title="halfwhite-purple"&gt;&lt;/span&gt; &lt;strong&gt;interpolation&lt;/strong&gt; (1, 0.5, 1, 0.5) half-transparent whitish-purple
+| &lt;span style="background-color: #0088ff; padding: 1em;"&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/transparent-white.png" title="transparent-white"&gt;&lt;/span&gt; &lt;strong&gt;background&lt;/strong&gt; (1, 1, 1, 0) fully transparent white&lt;/p&gt;
+&lt;p&gt;(&lt;em&gt;Update: I think some CSS nuance has been lost in a website migration. On
+quick glance, this doesn't seem to look like I expect it to, any more.&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;The intermediate color isn't actually very close to white, but in
+contrast to the pure purple it abuts against, it's significantly paler,
+and causes the 'white looking halo' effect around the edge of the purple
+icons, as shown in the video.&lt;/p&gt;
+&lt;p&gt;Note that changing the color of the transparent pixels, from white to
+black for example, does not fix the problem - it just changes the color
+of the haloes from white to black.&lt;/p&gt;
+&lt;p&gt;The video shows how to fix this, using a technique that I infer is very
+common - change your transparent pixels to be the same color as whatever
+colors they abut against. The background pixels are now
+fully-transparent purple, giving us:&lt;/p&gt;
+&lt;p&gt;| &lt;span style="background-color: #0088ff; padding: 1em;"&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/opaque-purple.png" title="opaque-purple"&gt;&lt;/span&gt; &lt;strong&gt;icon&lt;/strong&gt; (1, 0, 1, 1) fully opaque purple
+| &lt;span style="background-color: #0088ff; padding: 1em;"&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/halftransparent-purple.png" title="halftransparent-purple"&gt;&lt;/span&gt; &lt;strong&gt;interpolation&lt;/strong&gt; (1, 0, 1, 0.5) half-transparent whitish-purple
+| &lt;span style="background-color: #0088ff; padding: 1em;"&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/transparent-white.png" title="transparent-purple"&gt;&lt;/span&gt; &lt;strong&gt;background&lt;/strong&gt; (1, 0, 1, 0) fully transparent purple&lt;/p&gt;
+&lt;p&gt;So now the interpolation ends up being half-transparent pure purple.
+This eliminates the white halo artefact, as demonstrated in the video.
+The only minor downside is that the artist has to make sure the
+transparent pixels are saved with the correct RGB values, and the plugin
+demonstrated in the video helps to automate this.&lt;/p&gt;
+&lt;p&gt;The alternative solution, is to modify the RGBA values in the texture,
+by pre-multiplying the RGB values by the A value. ie:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;R = R * A&lt;/span&gt;
+&lt;span class="err"&gt;G = G * A&lt;/span&gt;
+&lt;span class="err"&gt;B = B * A&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;(where all values range from 0.0 to 1.0)&lt;/p&gt;
+&lt;p&gt;This can either be done in the saved texture file (eg. 3d Studio Max
+writes TGA files this way.) Or, if you'd rather continue to use standard
+RGBA values in your saved texture files, then your application could do
+this transformation when loading image files from disk.&lt;/p&gt;
+&lt;p&gt;To use these alternate RGBA values in a texture, we have to display them
+on screen using a different OpenGL blending mode. We switch from using
+the traditional:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;dest&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;src&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;dest&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;to using this instead:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;dest&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;src&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;dest&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Note how the difference between the two is that the src is no longer
+multiplied by the src alpha during blend. This is no longer required,
+because we have already done this multiplication in the RGBA of the src
+texture itself.&lt;/p&gt;
+&lt;p&gt;Storing RGBA values in this format is known as &lt;em&gt;light-opacity RGBA,&lt;/em&gt; and
+it gives us a new interpretation of the meaning of the RGBA values.
+Previously, the RGB told us the color of the texture's pixel, but did
+not tell us how much this color would be used to affect the destination.
+We have to look at the alpha to determine that.&lt;/p&gt;
+&lt;p&gt;Now, using the new
+blending mode, we can interpret the RGB values to literally mean how
+much R and G and B is added to the destination. Similarly, the A value
+is now only used to diminish whatever existing color is currently at the
+destination. It is not used to scale the source RGB before applying it
+to the destination. The A value can now be interpreted to mean 'what
+proportion of the existing destination color is visible through the
+overwritten source color'.&lt;/p&gt;
+&lt;p&gt;This implies that for pixels to be fully transparent, ie to have no
+effect on the destination, they must have an RGB of 0. So we must always
+use (0, 0, 0, 0) to represent fully transparent pixels. Note how with
+the new interpretation of RGBA, these are not 'black' transparent
+pixels, they are literally 'no-color' transparent pixels. This obviously
+has a neat logical correposondance to what 'pure transparency' really
+means.&lt;/p&gt;
+&lt;p&gt;The pixels around the edge of the purple icon still get the same
+interpolation process, resulting in the same RGBA values as would have
+been calculated before, but now we have a different interpretation of
+what those values mean:&lt;/p&gt;
+&lt;p&gt;| &lt;span style="background-color: #0088ff; padding: 1em;"&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/opaque-purple.png" title="opaque-purple"&gt;&lt;/span&gt; &lt;strong&gt;icon&lt;/strong&gt; (1, 0, 1, 1) - pure purple that fully overwrites the previous color
+| &lt;span style="background-color: #0088ff; padding: 1em;"&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/halftransparent-purple.png" title="halftransparent-purple"&gt;&lt;/span&gt; &lt;strong&gt;interpolation&lt;/strong&gt; (0.5, 0, 0.5, 0.5) - half-bright purple mixed with 50% of the prev dest color
+| &lt;span style="background-color: #0088ff; padding: 1em;"&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/transparent-white.png" title="transparent-white"&gt;&lt;/span&gt; &lt;strong&gt;background&lt;/strong&gt; (0, 0, 0, 0) - fully transparent (no color)&lt;/p&gt;
+&lt;p&gt;The interpolated color is now blended with the previous destination
+color using the new OpenGL blend mode:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;dest&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;src&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;dest&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;The existing destination color is scaled by (1 - alpha), ie, is reduced
+to half intensity, and then the RGB from our interpolated texture (0.5,
+0, 0.5) is added to it. This results in a half-transparent purple - even
+though the transparent pixels in our texture had no purple at all in
+them. This results in a perfect blend between the transparent and pure
+purple colors. No haloes are visible.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: It crosses my mind to mention that the halo artefacts will
+be visible whenever textures are scaled, rotated, or positioned using
+sub-pixel co-ordinates. If you only ever display unrotated textures, at
+integer pixel co-ords, and at normal size, then you won't run into this
+problem. Since the icons on the radar on FlashBang's video don't seem to
+be scaled or rotated, maybe they could sidestep the problem by just
+displaying the icons at integer pixel co-ordinates? I don't really know
+anything about how their code works though, so I might be talking
+nonsense here.&lt;/p&gt;&lt;/div&gt;</description><category>Graphics</category><guid>https://www.tartley.com/posts/2010/1/3/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures.html</guid><pubDate>Sun, 03 Jan 2010 21:33:10 GMT</pubDate></item></channel></rss>

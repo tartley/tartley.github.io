@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about physics)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/physics.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley@tartley.com"&gt;Jonathan Hartley&lt;/a&gt; &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"&gt;tartley.com&lt;/span&gt; by &lt;a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL"&gt;Jonathan Hartley&lt;/a&gt; is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.</copyright><lastBuildDate>Thu, 11 Jun 2020 19:39:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Sole Scion project v0.1 : A 2D rigid-body Python game</title><link>https://www.tartley.com/posts/2008/6/18/sole-scion-project-v01-a-2d-rigid-body-python-game.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="screenshot Sole Scion
+v1.0" src="https://www.tartley.com/files/2008/06/screenshot-sole-scion-v10.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://sethgodin.typepad.com/seths_blog/2008/06/is-it-worthy.html"&gt;Everyone&lt;/a&gt;
+today is &lt;a href="http://www.codinghorror.com/blog/archives/001134.html"&gt;abuzz&lt;/a&gt;
+with the 'release early, release often' sentiment, so I've decided to
+get in the spirit and upload the first iteration of 'Sole Scion', my
+summertime sabbatical game project.&lt;/p&gt;
+&lt;p&gt;Version 0.1 merely bounces some circles off an inclined plane
+(pictured.) I aim to transform this into a 2D graphical adventure game,
+in which I hope emergent fun will take place, once I populate the world
+with enough twisty corridors, uniquely-shaped objects that need slotting
+into the right places, and judicious instances of ornery fauna to
+contend with.&lt;/p&gt;
+&lt;p&gt;It's written in Python, using
+&lt;a href="http://wiki.slembcke.net/main/published/Chipmunk"&gt;Chipmunk&lt;/a&gt; for rigid
+body Newtonian dynamics, with Python bindings using
+&lt;a href="http://code.google.com/p/pymunk/"&gt;Pymunk&lt;/a&gt;. Rendering, gameloop, sounds,
+etc are handled by &lt;a href="http://pyglet.org"&gt;pyglet&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://code.google.com/p/sole-scion"&gt;Sole Scion is hosted on Google
+Code&lt;/a&gt;, with Subversion read-access
+and a source code tarball, including the redistributables for the above
+dependencies, should anyone be curious. It has a &lt;a href="http://www.opensource.org/licenses/bsd-license.php"&gt;New BSD
+License&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Feedback, thoughts and ideas, very welcome.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: I've only run it on Linux, but reportedly it also works on
+Windows. Thanks Xtian!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; It also reportedly works under PyPy, provided you install
+the 'functools' module. Thanks Maciej!&lt;/p&gt;&lt;/div&gt;</description><category>2d</category><category>chipmunk</category><category>game</category><category>Graphics</category><category>physics</category><category>pyglet</category><category>pymunk</category><category>Python</category><category>rigid body</category><guid>https://www.tartley.com/posts/2008/6/18/sole-scion-project-v01-a-2d-rigid-body-python-game.html</guid><pubDate>Wed, 18 Jun 2008 11:37:17 GMT</pubDate></item></channel></rss>

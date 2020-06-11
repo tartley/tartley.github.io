@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tartley.com (old posts, page 21) | tartley.com</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
+<link rel="canonical" href="https://www.tartley.com/index-21.html">
+<link rel="prev" href="index-22.html" type="text/html">
+<link rel="next" href="index-20.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="archive.html">Archive</a>
+                </li>
+<li>
+<a href="categories/">Tags</a>
+                </li>
+<li>
+<a href="rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+    
+    
+<div class="postindex">
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2013/10/15/chaining-a-sequence-of-generators.html" class="u-url">Chaining a sequence of generators</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2013/10/15/chaining-a-sequence-of-generators.html" rel="bookmark">
+            <time class="published dt-published" datetime="2013-10-15T15:09:54-05:00" itemprop="datePublished" title="2013-10-15 15:09">2013-10-15 15:09</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>I often gravitate towards solutions using a series of chained
+generators, in the style of David Beazley's '<a href="http://www.dabeaz.com/generators-uk/">Generator Tricks for
+Systems Programmers</a>.'</p>
+<p>This results in the outer level of my code calling one generator after
+another, terminating in something that consumes the rows, pulling data
+one row at a time through each of the generators:</p>
+<pre class="code literal-block"><span></span><code><span class="n">inputRows</span> <span class="o">=</span> <span class="n">read</span><span class="p">()</span>
+<span class="n">parsedRows</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">inputRows</span><span class="p">)</span>
+<span class="n">processedRows</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="n">parsedRows</span><span class="p">)</span>
+<span class="n">outputRows</span> <span class="o">=</span> <span class="n">format_</span><span class="p">(</span><span class="n">processedRows</span><span class="p">)</span>
+<span class="n">output</span><span class="p">(</span><span class="n">outputRows</span><span class="p">)</span>
+</code></pre>
+
+
+<p>where each called function except the last is actually a generator, e.g:</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</code></pre>
+
+
+<p>This is great. But my itch is that the top level code above is a bit
+wordy, given that what it does is so simple. The reader has to check
+each temporary variable quite carefully to be sure it's doing the right
+thing.</p>
+<p>Fowler's 'Refactoring' describes circumstances when <a href="http://www.refactoring.com/catalog/replaceTempWithQuery.html">it's good to remove
+intermediate
+variables</a>,
+which results in:</p>
+<pre class="code literal-block"><span></span><code><span class="n">output</span><span class="p">(</span> <span class="n">format_</span><span class="p">(</span> <span class="n">process</span><span class="p">(</span> <span class="n">parse</span><span class="p">(</span> <span class="n">read</span><span class="p">()</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+</code></pre>
+
+
+<p>This is certainly less wordy, and expresses what's happening very
+directly, but it annoys some of my colleagues that the called functions
+are listed in reverse order from what one might intuitively expect.</p>
+<p>I've had this idea in my head to create a decorator for generators which
+allows one to chain them in an intuitive order, possibly using some
+unconventional notation such as:</p>
+<pre class="code literal-block"><span></span><code><span class="n">read</span><span class="p">()</span> <span class="o">|</span> <span class="n">parse</span> <span class="o">|</span> <span class="n">process</span> <span class="o">|</span> <span class="n">format_</span> <span class="o">|</span> <span class="n">output</span>
+</code></pre>
+
+
+<p>where 'parse', et al, are now decorated with '@chainable' or somesuch,
+which returns an instance of a class that stores the wrapped generator,
+and overrides __or__ to do its magic. Maybe 'read' doesn't need to
+be invoked manually there at the start of the chain. I haven't really
+thought this through.</p>
+<p>Luckily, before embarking on that, I realised today I've been
+over-complicating the whole thing. There's no need for decorators, nor
+for the cute '|' syntax. I just need a plain old function:</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">link</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="o">*</span><span class="n">transforms</span><span class="p">):</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">source</span>
+    <span class="k">for</span> <span class="n">transform</span> <span class="ow">in</span> <span class="n">transforms</span><span class="p">:</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">args</span>
+</code></pre>
+
+
+<p><strong>Update</strong>: This code has been improved thanks to suggestions in the
+comments from Daniel Pope (eliminate the 'first' variable) and Xtian
+(take an iterable rather than a callable for the source.)</p>
+<p>This assumes the first item passed to link is an iterable, and each
+subsequent item is a generator that takes the result of the item before.</p>
+<p>If the final item in the sequence passed to 'link' is a generator, then
+this returns a generator which is the composite of all the ones passed
+in:</p>
+<pre class="code literal-block"><span></span><code><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">link</span><span class="p">(</span><span class="n">read</span><span class="p">(),</span> <span class="n">parse</span><span class="p">,</span> <span class="n">process</span><span class="p">,</span> <span class="n">format_</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="n">item</span>
+</code></pre>
+
+
+<p>Or if the final item passed to 'link' is a regular function, which
+consumes the preceding generators, then calling 'link' will invoke the
+generators, i.e. the following is the same as the above 'for' loop:</p>
+<pre class="code literal-block"><span></span><code><span class="n">link</span><span class="p">(</span><span class="n">read</span><span class="p">(),</span> <span class="n">parse</span><span class="p">,</span> <span class="n">process</span><span class="p">,</span> <span class="n">format_</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+</code></pre>
+
+
+<p>There's some rough edges, such as determining what to do if different
+generators require other args. Presumably 'partial' could help here. But
+in general, 'link' only needs to be written once, and I'm liking it.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2013/8/10/revolution-an-instruction-manual.html" class="u-url">Revolution: An Instruction Manual</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2013/8/10/revolution-an-instruction-manual.html" rel="bookmark">
+            <time class="published dt-published" datetime="2013-08-10T11:50:36-05:00" itemprop="datePublished" title="2013-08-10 11:50">2013-08-10 11:50</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>When you have a government that operates without limits, who proclaims
+the right to arrest, torture and kill anyone, anywhere, with no
+warrants, no trial, no due process...</p>
+<p>When you have a government that militarizes the police and grants the
+armed forces the power to operate with impunity within your own borders
+and beyond. A government that views you, the people, as the enemy, and
+treats you as such...</p>
+<p>When you have a government that lies to you takes you into wars of
+aggression, toppling country after country, killing hundreds of
+thousands of innocent civilians, and sending your sons and daughters and
+your fathers and your brothers home in flag draped coffins, or
+disfigured and broken in mind and body, their lives destroyed in wars
+that serve only to line the pockets of a unelected cartel of bankers and
+corporations...</p>
+<p>When you have all of this right in front of you, so blatant, so clear,
+you shouldn't have to be convinced that both parties in this political
+puppet show are owned and operated by the same interests. You shouldn't
+have to be convinced that these overrated corporate popularity contests
+that some call elections are distractions that will achieve nothing.
+With this understood, you shouldn't have to be convinced that the system
+you are living under must be brought to a halt.</p>
+<p><a href="http://stormcloudsgathering.com/revolution-an-instruction-manual">Read
+on...</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2013/3/8/pip-install-lightspeed-and-bulletproof.html" class="u-url">pip install : Lightspeed and Bulletproof</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2013/3/8/pip-install-lightspeed-and-bulletproof.html" rel="bookmark">
+            <time class="published dt-published" datetime="2013-03-08T09:29:09-06:00" itemprop="datePublished" title="2013-03-08 09:29">2013-03-08 09:29</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>I saw a post about <a href="http://www.scottisheyes.com/how-to-fix-slow-pip-install">speeding up the Python packaging command "pip
+install"</a>, by
+specifying more responsive mirrors for querying and downloading
+packages. For my situation, a better tactic is this.</p>
+<p>Step one: Download all your project's dependencies into a local
+'packages' dir, but don't install them yet:</p>
+<pre class="code literal-block"><span></span><code>mkdir packages
+pip install --download<span class="o">=</span>packages -r requirements.txt
+</code></pre>
+
+
+<p>Step two, install from the 'packages' dir:</p>
+<pre class="code literal-block"><span></span><code>pip install --no-index --find-links<span class="o">=</span>packages -r requirements.txt
+</code></pre>
+
+
+<p><em>(The above syntax works on pip 1.3, released yesterday. Docs for older
+versions of pip claim to support this, but in practice, for pip 1.2,
+I've had to use "<code>--find-links=file://$PWD/packages</code>")</em></p>
+<p>Step 2 works even if PyPI is unreachable. It works even if some of your
+dependencies are self-hosted by the authors, and that website is
+unreachable. It works even if the version you have pinned of one of your
+dependencies has been deleted by the author (some packages do this
+routinely after security updates.) It works even if you have no network
+connection at all. In short, it makes creation of your virtualenv
+bulletproof.</p>
+<p>As a nice side effect, it runs really fast, because it isn't downloading
+the packages across the internet, nor is it attempting to scan a remote
+index to check for matching or newer versions of each package. This is
+much quicker than just using a Pip download cache, especially for large
+projects with many dependencies which only change occasionally.</p>
+<p>At <a href="http://rangespan.com">Rangespan</a>, we check the 'packages' directory
+into source control, so that once you've checked out a project's repo,
+you have everything you need to deploy locally and run, even if you have
+no network. You might choose to treat 'packages' as ephemeral.</p>
+<p>It was pointed out to me recently by
+<a href="https://twitter.com/jezdez">@jezdez</a>, Pip maintainer, this usage
+pattern has now been <a href="http://www.pip-installer.org/en/latest/cookbook.html#fast-local-installs">explicitly called out in the
+documentation</a>,
+which was substantially reorganised and improved with the recent 1.3
+release.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2012/12/4/hexagonal-django.html" class="u-url">Hexagonal Django</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2012/12/4/hexagonal-django.html" rel="bookmark">
+            <time class="published dt-published" datetime="2012-12-04T14:42:01-06:00" itemprop="datePublished" title="2012-12-04 14:42">2012-12-04 14:42</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>The last few weeks I've been thinking about the architectural pattern
+known as <a href="http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean, Onion, Hexagonal, or
+Ports'n'Adaptors</a>.
+I'm curious if many people are applying it in the Django world.</p>
+<p>The premise is for your core application entity classes and business
+rules to be plain old objects, with no dependencies. In particular, they
+are not dependent on the interfaces between your application and
+external systems, such as your persistence mechanism, or your web
+framework. Instead, external interface components depend upon your core
+business objects. This essentially moves the database from the 'bottom'
+layer of the old traditional 'three layer architecture', to form a part
+of the topmost layer - a sibling with the 'UI.'</p>
+<p>For inbound messages (e.g handling a web request) this is
+straightforward - Django calls your view code which calls your business
+layer, but keep your business layer separate from your Django code, so
+it is stand-alone and unit-testable. For outbound messages, such as then
+rendering the web page in response, it's slightly more complicated: Your
+business logic must pass the result (typically a pure data structure)
+back to your web-aware code, but without your business logic depending
+on the web-aware component. This requires an inversion of control.</p>
+<p>That way, all your business logic can easily be tested in unit tests,
+with no mocking required. You still need some end-to-end tests to verify
+integration, but you shouldn't need to involve your UI or database in
+testing every detail of your business logic.</p>
+<p>Also, you can easily switch out your external system interfaces, such as
+persistence, to use another RDBMS, another ORM, a NoSQL store, or an
+in-memory version for testing Since the core of your application doesn't
+have any dependency on these components, it is oblivious to the
+change. The business logic, because it doesn't depend on Django, is no
+longer riddled with Django's convenient ORM database access.</p>
+<p>Same thing goes for switching out your web framework, or calling the
+same logic from web UI or web API calls. And again, for switching out
+your UI: add a command line application, or a console UI. The core
+application logic is unaffected, and your new interface components
+contain only the code that is specific to that interface's concerns.</p>
+<p>Another side effect is that your web framework, if you're using one,
+becomes a peripheral detail which depends upon your core application,
+rather than the other way round. Your Django project would become a
+subdirectory of your project, rather than dominating your project
+directory structure. Since the business logic formerly contained within
+it is now elsewhere (in your core business objects) the Django project
+is now very thin. Views, for example, are delegations to single
+business-layer functions. The Django project now contains just the
+web-oriented aspects of your project, as it should.</p>
+<p>These ideas all seem like relatively straightforward software
+engineering, and I feel a bit foolish for not having been aware of them
+all these years. I console myself that I'm not alone.</p>
+<p>UncleBob's Ruby Midwest keynote "<a href="posts/2012/12/4/%20http:/www.confreaks.com/videos/759-rubymidwest2011-keynote-architecture-the-lost-years">Architecture - The Lost
+Years</a>"
+attributes one source of this idea to Ivar Jacobsen's 1994 book <a href="posts/2012/12/4/%20http:/www.amazon.co.uk/Object-oriented-Software-Engineering-Approach-Press/dp/0201544350">Object
+Oriented Software Engineering : A Use Case Driven
+Approach</a>
+(2nd-hand hardbacks cheap on Amazon.)</p>
+<p>I see a few people applying these ideas to Rails, but are many people
+out there doing this in Django? I plan to refactor a small vertical
+slice of our monster Django app into this style, to try and prove the
+idea for myself.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2012/10/9/encrypted-zip-files-on-osx.html" class="u-url">Encrypted zip files on OSX</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2012/10/9/encrypted-zip-files-on-osx.html" rel="bookmark">
+            <time class="published dt-published" datetime="2012-10-09T10:17:07-05:00" itemprop="datePublished" title="2012-10-09 10:17">2012-10-09 10:17</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>My passwords and other miscellany are in a plain text file within an
+encrypted zip. Since starting to use OSX I've been looking for a way to
+access my passwords such that:</p>
+<ul>
+<li>I get prompted for the decryption password.</li>
+<li>The file gets unzipped, but not in the same directory, because
+    that's synced to Dropbox, so would send my plaintext passwords to
+    them every time I accessed them. Maybe to /tmp?</li>
+<li>The plaintext file within the zip is opened in \$EDITOR.</li>
+<li>Wait for me to close \$EDITOR, then remove my plaintext passwords
+    from the filesystem.</li>
+<li>Before deleting the passwords, check if I've updated them. If so,
+    put the new updated version back into the original zip file.</li>
+<li>Don't forget to keep the updated zip file encrypted, using the same
+    password as before, without prompting for it again.</li>
+</ul>
+<p>I failed to find an existing app which would do all this (although I had
+no trouble on Linux or even on Windows.) Hence, resorting to good old
+Bash:</p>
+<pre class="code literal-block"><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nv">ZIPDIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/docs/org"</span>
+
+<span class="nb">read</span> -s -p <span class="s2">"Password:"</span> key
+
+<span class="nb">cd</span> <span class="nv">$ZIPDIR</span>
+unzip -P <span class="nv">$key</span> passwords.zip passwords.txt -d <span class="nv">$TMPDIR</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$?</span> !<span class="o">=</span> <span class="m">0</span> <span class="o">]]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="nb">cd</span> <span class="s2">"</span><span class="nv">$TMPDIR</span><span class="s2">"</span>
+touch passwords.datestamp
+<span class="nv">$EDITOR</span> passwords.txt
+<span class="k">if</span> <span class="o">[[</span> passwords.txt -nt passwords.datestamp <span class="o">]]</span> <span class="p">;</span> <span class="k">then</span>
+    zip -P <span class="nv">$key</span> -r <span class="s2">"</span><span class="nv">$ZIPDIR</span><span class="s2">/passwords.zip"</span> passwords.txt
+<span class="k">fi</span>
+
+rm passwords.txt
+rm passwords.datestamp
+</code></pre>
+
+
+<p>I don't expect this to be watertight, but seems good enough for today.
+I'm happy to hear suggestions.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2011/10/18/compiling-macvim-with-python-2-7.html" class="u-url">Compiling MacVim with Python 2.7</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2011/10/18/compiling-macvim-with-python-2-7.html" rel="bookmark">
+            <time class="published dt-published" datetime="2011-10-18T12:25:03-05:00" itemprop="datePublished" title="2011-10-18 12:25">2011-10-18 12:25</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>I love the brilliant Vim plugin
+<a href="http://www.vim.org/scripts/script.php?script_id=2441">pyflakes-vim</a>,
+which highlights errors &amp; warnings, and since I got a MacBook for work,
+I've been using MacVim a lot.</p>
+<p>This combination has a problem, that MacVim uses the OSX system default
+Python 2.6, so pyflakes is unable to handle Python 2.7 syntax, such as
+set literals. These are marked as a syntax errors, which prevents the
+rest of the file from being parsed.</p>
+<p>The solution is to compile your own MacVim, using Python 2.7 instead of
+the system Python. The following commands got MacVim compiled for me:</p>
+<pre class="code literal-block"><span></span><code><span class="ch">#!/bin/bash</span>
+git clone git://github.com/b4winckler/macvim.git
+<span class="nb">cd</span> macvim/src
+<span class="nb">export</span> <span class="nv">LDFLAGS</span><span class="o">=</span>-L/usr/lib
+./configure <span class="se">\</span>
+    --with-features<span class="o">=</span>huge <span class="se">\</span>
+    --enable-rubyinterp <span class="se">\</span>
+    --enable-perlinterp <span class="se">\</span>
+    --enable-cscope <span class="se">\</span>
+    --enable-pythoninterp <span class="se">\</span>
+    --with-python-config-dir<span class="o">=</span>/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config
+make
+open MacVim/build/Release
+<span class="nb">echo</span> Drag MacVim.app to your Applications directory
+</code></pre>
+
+
+<p>Without the LDFLAGS setting, I was missing some symbols at link. The
+--with-python-config-dir entry came from typing 'which python' to find
+where my Python 2.7 install lives, and modifying that result to find its
+'config' directory (whatever that is) near to the binary.</p>
+<p>As indicated, install by dragging the resulting
+macvim/src/MacVim/build/Release/MacVim.app into your Applications
+directory.</p>
+<p>Open up MacVim, and check out the built-in Python version:</p>
+<pre class="code literal-block"><span></span><code><span class="p">:</span><span class="n">python</span> <span class="kn">import</span> <span class="nn">sys</span><span class="p">;</span> <span class="k">print</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span>
+<span class="mf">2.7</span><span class="o">.</span><span class="mi">1</span> <span class="p">(</span><span class="n">r271</span><span class="p">:</span><span class="mi">86882</span><span class="n">M</span><span class="p">,</span> <span class="n">Nov</span> <span class="mi">30</span> <span class="mi">2010</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">34</span><span class="p">)</span>
+</code></pre>
+
+
+<p>And files with set literals are now correctly parsed for errors.</p>
+<p><strong>Update:</strong> This only works if the Python 2.7 is your default 'python'
+executable. Otherwise, or if you get "ImportError: No module named
+site"?, see Richard's comments below.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2011/10/14/python-2-7-regular-expression-cheatsheet.html" class="u-url">Python 2.7 regular expression cheatsheet</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2011/10/14/python-2-7-regular-expression-cheatsheet.html" rel="bookmark">
+            <time class="published dt-published" datetime="2011-10-14T11:20:11-05:00" itemprop="datePublished" title="2011-10-14 11:20">2011-10-14 11:20</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Couldn't find one of these, so I whipped one up.</p>
+<p>Bit of restructured text:</p>
+<p><a href="https://github.com/tartley/python-regex-cheatsheet/blob/master/cheatsheet.rst">https://github.com/tartley/python-regex-cheatsheet/blob/master/cheatsheet.rst</a></p>
+<p>Install some Python packages:</p>
+<p><a href="https://github.com/tartley/python-regex-cheatsheet/blob/master/requirements.txt">https://github.com/tartley/python-regex-cheatsheet/blob/master/requirements.txt</a></p>
+<p>Invoke rst2pdf:</p>
+<p><a href="https://github.com/tartley/python-regex-cheatsheet/blob/master/Makefile">https://github.com/tartley/python-regex-cheatsheet/blob/master/Makefile</a></p>
+<p>Get a nice PDF out:</p>
+<p><a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf">Python 2.7 regular expression
+cheatsheet</a>
+(click this link or the image for the most up-to-date PDF from github.)</p>
+<p><a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf"><img alt="" src="files/2011/10/Python-regular-expression-cheatsheet-0.3.0.png" title="Python regular expression cheatsheet 0.3.3"></a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2011/7/14/django-testing-201-acceptance-tests-vs-unit-tests.html" class="u-url">Django testing 201 : Acceptance Tests vs Unit Tests</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2011/7/14/django-testing-201-acceptance-tests-vs-unit-tests.html" rel="bookmark">
+            <time class="published dt-published" datetime="2011-07-14T16:19:43-05:00" itemprop="datePublished" title="2011-07-14 16:19">2011-07-14 16:19</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>I'm finding that our Django project's tests fall into an uncomfortable
+middle-ground, halfway between end-to-end acceptance tests and proper
+unit tests. As such they don't exhibit the best qualities of either. I'd
+like to fix this.</p>
+<p>We're testing our Django application in what I believe is the canonical
+way, as described by the <a href="https://docs.djangoproject.com/en/dev/topics/testing/">excellent
+documentation</a>.
+We have a half-dozen Django applications, with a mixture of
+<code>unittest.TestCase</code> and <code>django.test.TestCase</code> subclasses in each
+application's tests.py module. They generally use fixtures or the Django
+ORM to set up data for the test, then invoke the function-under-test,
+and then make assertions about return values or side-effects, often
+using the ORM again to assert about the new state of the database.</p>
+<h3>Not an Acceptance Test</h3>
+<p>Such a test doesn't provide the primary benefit of an acceptance test,
+namely proof that the application actually works, because it isn't quite
+end-to-end enough. Instead of calling methods-under-test, we should be
+using the Django testing client to make HTTP requests to our web
+services, and maybe incorporating Selenium tests to drive our web UI.
+This change is a lot of work, but at least the path forward seems clear.</p>
+<p>However, an additional problem is that acceptance tests ought to be
+associated with features that are visible to an end user. A single user
+story might involve calls to several views, potentially spread across
+different Django apps. Because of this, I don't think it's appropriate
+for an acceptance test to live within a single Django app's directory.</p>
+<h3>Not a Unit Test</h3>
+<p>On the other hand, our existing tests are also not proper unit tests.
+They hit the (test) database and the filesystem, and they currently
+don't do any mocking out of expensive or complicated function calls. As
+a result, they are slow to run, and will only get slower as we ramp up
+our feature set and our test coverage. This is a cardinal sin for unit
+tests, and it discourages developers from running the tests frequently
+enough. In addition, tests like this often require extensive setup of
+test data, and are therefore hard to write, so it's very
+labour-intensive to provide adequate test coverage.</p>
+<h3>My Solution</h3>
+<p><strong>1) I've created a top-level acceptancetests directory.</strong> Most of our
+current tests will be moved into this directory, because they are closer
+to acceptance tests than unit tests, and will gradually be modified to
+be more end-to-end.</p>
+<p>These acceptance tests need to be run by the Django testrunner, since
+they rely on lots of things that it does, such as creating the test
+database and rolling back after each test method. However, the Django
+testrunner won't find these tests unless I make 'acceptancetests' a new
+Django application, and import all acceptance test classes into its
+tests.py. I'm considering doing this, but for the moment I have another
+solution, which I'll describe in a moment.</p>
+<p>We also need to be able to create unit tests for all of our code,
+regardless of whether that code is within a Django model, or somewhere
+else in a Django app, or in another top-level directory that isn't a
+Django app. Such unit tests should live in a 'tests' package right next
+to the code they test. I'm puzzled as to why Django's testrunner doesn't
+look for unit tests throughout the project and just run them all, along
+with the Django-specific tests.</p>
+<p><strong>2) My solution to this is to augment the Django test runner</strong>, by
+inheriting from it. My test runner, instead of just looking for tests in
+each app's models.py and tests.py, looks for subclasses of
+unittest.TestCase in every module throughout the whole project. Setting
+Django's settings.TEST_RUNNER causes this custom test runner to be used
+by 'manage.py test'. Thanks to the Django contributors for this
+flexibility!</p>
+<p>So the new test runner finds and runs all the tests which the default
+Django runner runs, and it also finds our unit tests from all over the
+project, and it also includes our new top-level 'acceptancetests'
+directory. This is great!</p>
+<p>One surprise is that the number of tests which get run has actually
+decreased. On closer inspection, this is because the standard Django
+test runner includes all the tests for every Django app, and this
+includes not just my project's apps, but also the built-in and
+middleware Django apps. We are no longer running these tests. Is this
+important? I'm not sure: After all, we are not modifying the code in
+django.contrib, so I don't expect these tests to start failing. On the
+other hand, maybe those tests help to demonstrate that our Django
+settings are not broken?</p>
+<h3>An appeal for sanity</h3>
+<p>My solutions seem to work, but I'm suspicious that I'm swimming against
+the current, because I haven't found much discussion about these issues,
+so maybe I'm just well off the beaten path. Have many other people
+already written a similar extension to Django's test runner? If so,
+where are they all? If not, why not? How else is everyone running their
+Django project tests in locations other than models.py or tests.py? Or
+do they not have tests outside these locations? If not, why not? I'd
+love to hear about it if I'm doing it wrong, or if there's an easier
+approach.</p>
+<p><strong>Update:</strong> My <a href="http://rangespan.com/">fabulous employer</a> has given
+permission to release the test runner as open source:</p>
+<p><a href="https://github.com/rangespan/django-alltestsrunner">https://github.com/rangespan/django-alltestsrunner</a></p>
+<p><strong>Update2:</strong> I like this post's numeric ID (check the URL)</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2011/7/10/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right.html" class="u-url">£ key in Windows on a US laptop keyboard, done right.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2011/7/10/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right.html" rel="bookmark">
+            <time class="published dt-published" datetime="2011-07-10T13:06:34-05:00" itemprop="datePublished" title="2011-07-10 13:06">2011-07-10 13:06</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>The usual solution to typing non-US characters on a US keyboard in
+Windows is to hold left-alt, then type on the numeric keypad:</p>
+<p>£   Left-alt + 0163</p>
+<p>€   Left-alt + 0128</p>
+<p>This is a pain on my (otherwise fabulous) Thinkpad laptop, because the
+numeric keypad is accessed by holding the blue 'Fn' key while you tap
+ScrLk, to toggle numeric keypad mode, and then doing the same again
+afterwards to turn it off.</p>
+<p>One inadequate alternative (on WindowsXP, YMMV) is to go into control
+panel; Regional and Language Options; Languages; Details; Settings. Add
+a new keyboard configuration, "United States-International", which
+should be grouped under your existing language ("English (United
+Kingdom)" for me.) OK all the dialogs, restart your applications.</p>
+<p>Now you can simply type:</p>
+<p>£   Right-alt + Shift + 4</p>
+<p>€   Right-alt + 5</p>
+<p>The downside of this solution is that the "UnitedStates-International"
+keyboard setting adds a bunch of other features, including 'dead-keys',
+whereby quotes and other punctuation are used to add accents to letters,
+which is overly intrusive if, like me, you hardly ever use accents.</p>
+<p>Ultimate solution then, define your own personal keyboard layout.
+Download the Microsoft Keyboard Layout Creator from here:
+<a href="http://msdn.microsoft.com/en-us/goglobal/bb964665">http://msdn.microsoft.com/en-us/goglobal/bb964665</a>.</p>
+<p>My end result is an MSI with which I can install a new keyboard layout,
+which is exactly like 'US', but with the addition of £ on the key
+right-alt + 3:</p>
+<p><a href="files/2011/07/windows-US-keyboard-layout-with-pound-on-right-alt-3.zip">windows-US-keyboard-layout-with-pound-on-right-alt-3</a></p>
+<p>The source .klc file is in there, so you could add your own tweaks on
+top of that.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2011/4/20/python-port-of-modern-3d-graphics-using-opengl-tutorial.html" class="u-url">Python port of Modern 3D Graphics using OpenGL tutorial</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2011/4/20/python-port-of-modern-3d-graphics-using-opengl-tutorial.html" rel="bookmark">
+            <time class="published dt-published" datetime="2011-04-20T14:23:54-05:00" itemprop="datePublished" title="2011-04-20 14:23">2011-04-20 14:23</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>To my knowledge, there are three online OpenGL tutorials which stand
+head and shoulders above the rest:</p>
+<ul>
+<li>
+<a href="http://www.arcsynthesis.org/gltut/index.html">Learning Modern 3D Graphics Programming Through
+    OpenGL</a> (C)</li>
+<li>
+<a href="http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html">An intro to modern
+    OpenGL</a> (C)</li>
+<li>
+<a href="http://learningwebgl.com/blog/?category_name=lessons">Learning
+    WebGL</a>
+    (Javascript)</li>
+</ul>
+<p>I recently started porting the first of these from C to Python.</p>
+<p><a href="https://bitbucket.org/tartley/gltutpy">https://bitbucket.org/tartley/gltutpy</a></p>
+<p>This is primarily for my own benefit, and I've only done the first two
+chapters thus far, but others may find some use in seeing the
+translation. If anyone else is interested enough to want to contribute,
+drop me a line and I'll happily grant commit rights.</p>
+</div>
+    </div>
+    </article>
+</div>
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="index-22.html" rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-20.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2020         <a href="mailto:tartley@tartley.com">Jonathan Hartley</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">tartley.com</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL">Jonathan Hartley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+            
+        </footer>
+</div>
+</div>
+
+            <script src="assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

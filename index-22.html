@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tartley.com (old posts, page 22) | tartley.com</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
+<link rel="canonical" href="https://www.tartley.com/index-22.html">
+<link rel="prev" href="index-23.html" type="text/html">
+<link rel="next" href="index-21.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="archive.html">Archive</a>
+                </li>
+<li>
+<a href="categories/">Tags</a>
+                </li>
+<li>
+<a href="rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+    
+    
+<div class="postindex">
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2016/1/20/pyrochestermn.html" class="u-url">PyRochesterMN</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2016/1/20/pyrochestermn.html" rel="bookmark">
+            <time class="published dt-published" datetime="2016-01-20T21:01:27-06:00" itemprop="datePublished" title="2016-01-20 21:01">2016-01-20 21:01</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Announcing the world's newest Python User Group, PyRochesterMN, based in
+Rochester, Minnesota, USA.</p>
+<p><strong>Update:</strong> We've had a couple of name &amp; hosting changes since:</p>
+<p><del><a href="http://www.meetup.com/PyRochesterMN">http://www.meetup.com/PyRochesterMN</a></del></p>
+<p><del><a href="http://www.meetup.com/RochesTech">http://www.meetup.com/RochesTech</a></del></p>
+<p><a href="https://www.reddit.com/r/rochestertech/">https://www.reddit.com/r/rochestertech/</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2015/8/25/git-when-to-use-three-dots-vs-two.html" class="u-url">Git: When to use three dots vs two</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2015/8/25/git-when-to-use-three-dots-vs-two.html" rel="bookmark">
+            <time class="published dt-published" datetime="2015-08-25T11:51:30-05:00" itemprop="datePublished" title="2015-08-25 11:51">2015-08-25 11:51</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>I endlessly misremember when to use '...' in git versus '..'. That ends
+today:</p>
+<p>To see the commits or diffs introduced by a branch (the filled circles ●):</p>
+<pre class="code literal-block"><span></span><code>     f
+    +●  m           git log m..f
+     |  ○
+    +●  |           git diff m...f
+      \ ○
+       \|
+        ○
+</code></pre>
+
+
+<p>To see the commits or diffs between the tip of one branch and another:</p>
+<pre class="code literal-block"><span></span><code>     f              git log m...f
+    +●  m           All commits look the same,
+     |  ●-          unless you use --left-right, which
+    +●  |           shows where each commit comes from.
+      \ ●-
+       \|           git diff m..f
+        ○           '-' commits are shown inverted,
+                     i.e. additions as deletions.
+</code></pre>
+
+
+<p>To see the commits from 'f' back to the beginning of time:</p>
+<pre class="code literal-block"><span></span><code>     f
+    +●  m           git log f
+     |  ○
+    +●  |           (diffs back to start of time are just
+      \ ○            the contents of the working tree)
+       \|
+       +●
+        |
+       +●
+</code></pre>
+
+
+<p>Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
+above that you almost always want:</p>
+<pre class="code literal-block"><span></span><code>git diff m...f
+</code></pre>
+
+
+<p>is the same as</p>
+<pre class="code literal-block"><span></span><code>git checkout f
+git diff m...
+</code></pre>
+
+
+<p>or</p>
+<pre class="code literal-block"><span></span><code>git checkout m
+git diff ...f
+</code></pre>
+
+
+<p>Is there a word for unicode ascii art?</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code.html" class="u-url">Thoughts on Nylas' "How We Deploy Code"</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code.html" rel="bookmark">
+            <time class="published dt-published" datetime="2015-07-21T19:06:02-05:00" itemprop="datePublished" title="2015-07-21 19:06">2015-07-21 19:06</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Some thoughts on <a href="https://nylas.com/blog/packaging-deploying-python">Nylas' post "How We Deploy
+Code."</a></p>
+<p>The goals of making deployment consistent, reliable and fast are very
+laudable, and the conclusion involving creating Debian packages is just
+great. But in the spirit of geek nitpicking, I can't help but think the
+justifications given are misguided, and overlook a simpler solution.</p>
+<p><strong>&gt;&gt; pip does not offer a "revert deploy" strategy</strong></p>
+<p>Yes it does. Throw away the virtualenv and create a new one using the
+requirements.txt from an earlier release. This might be slow, but you
+can both speed it up (see below), and you can keep old versioned
+virtualenvs around, as a cache of the output of this slow step, so that
+reverts (the time when you really want deploys to go quickly) require
+only a couple of symlinks.</p>
+<p><strong>Update:</strong> Oooh, and I just had an idea. You could version virtualenvs
+using a hash of the requirements, so that deploys which do not change
+dependencies can share the same virtualenv. I've never tried that - it
+might work?!?!</p>
+<p><strong>&gt;&gt; Installing dependencies with pip can make deploys painfully
+slow</strong></p>
+<p>This is true. But it's not the final word on the matter.</p>
+<p>Firstly, don't grab the dependencies you're installing from PyPI. Have a
+local cache of them. That speeds up the install tremendously, not just
+because no download takes place, but also because no trawling of PyPI
+and author sites for possible alternate versions takes place. Some
+people use a local PyPI instance, but I like simply using a directory
+full of packages. Point pip at it using
+'<code>pip install --no-index --find-links=packages -r requirements</code>'. The
+'packages' directory could be checked into your project's repo, so that
+once you've checked a project out, you have everything you need to
+deploy to local VMs, even with no network connection at all. I wrote
+about this <a href="pip-install-lightspeed-and-bulletproof">a while ago</a>.</p>
+<p><strong>&gt;&gt; Building your code separately on each host will cause
+consistency issues</strong></p>
+<p>So don't install dependencies using source packages, use wheels instead.
+Then any slow or unreliable build step is done once, when you create the
+packages directory, while deployment is now reliable and requires no
+development tools on the production server such as compilers, headers,
+etc.</p>
+<p><strong>Update:</strong> As a bonus, this will again substantially speed up the
+creation of your virtualenv when deploying.</p>
+<p><strong>&gt;&gt; Deploys will fail if the PyPI or your git server are down</strong></p>
+<p>PyPI outages (or a package author deleting their package, which happens
+routinely) are not a problem if you're deploying from a local source of
+packages.</p>
+<p>I agree that application code deployment shouldn't be done using a 'git
+pull'. Accessibility to GitHub shouldn't be a single point of failure,
+and the fewer development tools needed on production servers the better.
+So export the code from git into a tar file when you cut a release, and
+then push it out using scp at deploy time.</p>
+<p>Having said all that, there are still advantages to having your whole
+app and its dependencies handled by a single mechanism like Debian
+packages, rather than more bug-prone ad-hoc scripts and Ansible config.
+So I'm not at all against the final conclusions of the Nylas article.
+(Hugs to you folks at Nylas!)</p>
+<p>Dashed this out in ten minutes between daycare pickup and dinner being
+ready. Apologies for the inevitable shoddyness.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2015/3/15/listen-to-your-phone-through-your-pc-speakers.html" class="u-url">Listen to your phone through your PC speakers</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2015/3/15/listen-to-your-phone-through-your-pc-speakers.html" rel="bookmark">
+            <time class="published dt-published" datetime="2015-03-15T10:50:09-05:00" itemprop="datePublished" title="2015-03-15 10:50">2015-03-15 10:50</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <pre class="code literal-block"><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="c1"># Directs audio input (e.g. mic) to audio output (e.g. speakers),</span>
+<span class="c1"># then sleeps forever. Stops audio redirection when it is killed.</span>
+<span class="c1"># So, for example, plug your phone into the PC's mic, run 'listen',</span>
+<span class="c1"># and listen to phone audio through your computer's speakers.</span>
+<span class="c1">#</span>
+<span class="c1"># Requires:</span>
+<span class="c1"># sudo apt-get install pactl # Ubuntu</span>
+
+<span class="nb">set</span> -e
+
+<span class="nv">module</span><span class="o">=</span><span class="k">$(</span>pactl load-module module-loopback<span class="k">)</span>
+
+<span class="k">function</span> cleanup <span class="o">{</span>
+    pactl unload-module <span class="nv">$module</span>
+<span class="o">}</span>
+
+<span class="nb">trap</span> cleanup EXIT
+
+sleep infinity
+</code></pre>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2014/2/7/understanding-rebase-so-it-sticks.html" class="u-url">Understanding git rebase so it sticks</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2014/2/7/understanding-rebase-so-it-sticks.html" rel="bookmark">
+            <time class="published dt-published" datetime="2014-02-07T10:28:37-06:00" itemprop="datePublished" title="2014-02-07 10:28">2014-02-07 10:28</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>I endlessly misremember how to use git rebase. That ends today. Here are
+my notes to help me remember.</p>
+<p>Rebase is traditionally documented as:</p>
+<pre class="code literal-block"><span></span><code>git rebase <span class="o">[</span>--onto newbase<span class="o">]</span> <span class="o">[</span>upstream <span class="o">[</span>branch<span class="o">]]</span>
+</code></pre>
+
+
+<p>This is confusing for several reasons. A slight improvement is to rename
+the args:</p>
+<pre class="code literal-block"><span></span><code>git rebase <span class="o">[</span>--onto target<span class="o">]</span> <span class="o">[</span>exclude <span class="o">[</span>include<span class="o">]]</span>
+</code></pre>
+
+
+<p>Where:</p>
+<ul>
+<li>
+<code>include</code> is the tip of the branch to be transplanted. If omitted,
+    it defaults to the current branch.</li>
+<li>
+<code>exclude</code> excludes all its ancestors from being transplanted. Hence
+    the transplanted branch will have its tip at <code>include</code>, and its base
+    at the common ancestor of <code>include</code> and <code>exclude</code>. If <code>--onto</code> isn't
+    specified, <code>exclude</code> is also used as the destination for the
+    transplant.</li>
+<li>
+<code>target</code> is the place to transplant the branch to. If not specified,
+    it defaults to the value of <code>exclude</code>.</li>
+</ul>
+<p>Hence, a simple before and after:</p>
+<pre class="code literal-block"><span></span><code>o---o---o---o---o---o exclude
+     \
+      1---2---3 current branch
+                or include
+</code></pre>
+
+
+<pre class="code literal-block"><span></span><code>git rebase exclude <span class="o">[</span>include<span class="o">]</span>
+</code></pre>
+
+
+<pre class="code literal-block"><span></span><code>                exclude
+                v
+o---o---o---o---o---1---2---3 current branch
+                              or include
+</code></pre>
+
+
+<p>See how the commits to be transplanted start at <code>include</code> and go back to
+the common ancestor of that and <code>exclude</code>. Since <code>--onto</code> isn't
+specified, <code>exclude</code> is also used as the transplant destination.</p>
+<p>Or a more complex one:</p>
+<pre class="code literal-block"><span></span><code> o---o---o---o---o target
+      \
+       o---o---o exclude
+            \
+             1---2 current branch
+                   or include
+</code></pre>
+
+
+<pre class="code literal-block"><span></span><code>git rebase --onto target exclude <span class="o">[</span>include<span class="o">]</span>
+</code></pre>
+
+
+<pre class="code literal-block"><span></span><code>                    target
+                    v
+    o---o---o---o---o---1---2 current branch
+         \                    or include
+          o---o---o
+                  ^
+                  exclude
+</code></pre>
+
+
+<p>Again, the commits to be transplanted are defined by <code>include</code> and
+<code>exclude</code>, but this time a separate destination is specified using
+<code>--onto</code>.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2014/2/3/this-gaming-life-travels-in-three-cities.html" class="u-url">This Gaming Life: Travels in Three Cities</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2014/2/3/this-gaming-life-travels-in-three-cities.html" rel="bookmark">
+            <time class="published dt-published" datetime="2014-02-03T20:31:29-06:00" itemprop="datePublished" title="2014-02-03 20:31">2014-02-03 20:31</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><img alt="gaminglife" src="files/2014/02/gaminglife.jpg"></p>
+<p><em>by Jim Rossignol</em> (2009)</p>
+<p>A gorgeous insider's look at videogaming culture, by an author who,
+after an unfulfilling stint as a financial journalist, has built his
+life around games.</p>
+<p>Broken into sections corresponding with the author's experiences in
+London, Seoul and Reykjavik, it's thoughtful and manages to sidestep the
+patronising oversimplifications of mainstream media's gaming coverage.</p>
+<p>From <em>Tetris</em> and <em>Elite</em> to <em>Okami</em> and <em>Shadow of the Collossus</em>,
+stopping along the way to examine the modding and indie scenes, the
+massively multiplayer intricacies of <em>EVE Online</em>, and the insane
+heights of Korean real-time strategy matches. He knows the best <em>Prince
+of</em> <em>Persia</em> was <em>Sands of Time</em>, by a country mile. He's one of us. I
+felt welcomed to his world. Join us - we'll be on the sofa.</p>
+<p>Rating:</p>
+<p>10/10 if you understand that games have the potential to become the
+dominant art form of the 21st century.</p>
+<p>0/10 if it's just for kids, innit?</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2014/2/2/object-oriented-software-engineering-a-use-case-driven-approach.html" class="u-url">Object-Oriented Software Engineering : A Use Case Driven Approach</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2014/2/2/object-oriented-software-engineering-a-use-case-driven-approach.html" rel="bookmark">
+            <time class="published dt-published" datetime="2014-02-02T14:26:43-06:00" itemprop="datePublished" title="2014-02-02 14:26">2014-02-02 14:26</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><img alt="object-oriented-sofware-engineering" src="files/2014/02/object-oriented-sofware-engineering.jpg"></p>
+<p><em>by Ivar Jacobsen</em> (1992, 4th revision)</p>
+<p>You might wonder if there's anything left to say about
+object-orientation that hasn't already been discussed to death. I was
+led to this 1992 book by Uncle Bob's talk "<a href="http://www.youtube.com/watch?v=WpkDN78P884">Architecture: The Lost
+Years</a>." In it Bob posits
+that in the 1990s, just as people like Ivar were completing their
+20-year journey of figuring out some fairly optimal ways to do
+object-orientation, along came the disruptive influence of the web,
+which turned everyone's priorities, methodologies and designs upside
+down. In the resulting stampede, some highly practical ideas have been
+lost, both in terms of design and process. This has substantially
+watered down OO's ability to deliver on its promises of reuse and
+maintainability. It has stranded a whole generation of applications with
+distorted architectures, inside-out designs, and less maintainable code.</p>
+<p>Aspects of these historical approaches do survive, such as the
+prominence Agile gives to use-cases as a way to concretely tie together
+requirements, design, testing, and acceptance. But some equally powerful
+ideas, such as appropriate ways to manage dependencies within an
+application, have seen relatively little use, and are only now being
+rediscovered in guises such as the clean and hexagonal architectures.</p>
+<p>Ivar's book can certainly lay claim to being one of the earliest
+published sources to lay out these ideas, and he does so with a style
+that is convincingly thoughtful. This is the work of an intelligent man,
+honed and refined over many years of practice. The omission of modern
+testing techniques are the only thing that substantially dates the
+content. Otherwise I found it exciting, insightful and revolutionary. It
+seems naive to claim that this book describes the One True Architecture
+which is applicable to all systems. But it certainly seems very widely
+applicable, and has deeply affected my thinking on all projects larger
+than a couple of weeks' work.</p>
+<p>The book also discusses software development methodology in an
+intriguingly meta way, constructing an object-oriented model of the
+process itself. Each software development team or organisation
+represents a particular implementation of this model. Parallels with the
+execution of software are drawn, with the output of one part of the
+process, e.g. design work, having to produce results that conform to the
+expectations of the downstream process, such as implementation. In this
+way, sections of the process can be removed and replaced by compatible
+alternatives, to better suit the application domain and the organisation
+within which the project is embedded. These ideas seem less immediately
+applicable and actionable. Maybe that's just my personal circumstance.
+Perhaps they are more applicable to larger projects, which I avoid these
+days.</p>
+<p>Rating:</p>
+<p>10/10 if you're going to enjoy 500 pages of software design principles
+and case studies.</p>
+<p>0/10 if you're not.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2014/2/2/altered-carbon.html" class="u-url">Altered Carbon</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2014/2/2/altered-carbon.html" rel="bookmark">
+            <time class="published dt-published" datetime="2014-02-02T12:59:43-06:00" itemprop="datePublished" title="2014-02-02 12:59">2014-02-02 12:59</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><img alt="richard-morgan-altered-carbon" src="files/2014/02/richard-morgan-altered-carbon.jpg"></p>
+<p><em>by Richard Morgan</em> (2001)</p>
+<p>A romp through a hyperviolent cyberpunk future through the eyes of a
+character reluctantly press-ganged into the role of detective in a story
+woven around personality uploads, swaps, and backups. Thoroughly enjoyed
+it, but it was never going to be life-changing.</p>
+<p>10/10 if you're looking to kick back on the couch with tea, cake, and
+some exciting SF.</p>
+<p>0/10 if you're not.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2014/1/27/domain-driven-design-tackling-complexity-in-the-heart-of-software.html" class="u-url">Domain Driven Design: Tackling Complexity in the Heart of Software</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2014/1/27/domain-driven-design-tackling-complexity-in-the-heart-of-software.html" rel="bookmark">
+            <time class="published dt-published" datetime="2014-01-27T11:05:53-06:00" itemprop="datePublished" title="2014-01-27 11:05">2014-01-27 11:05</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><img alt="domaindrivendesign" src="files/2014/01/domaindrivendesign.jpg"></p>
+<p><em>by Eric Evans (2004)</em> <a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215">on Amazon</a></p>
+<p>It's a big, dense book -- possibly the most important of the technical
+books I've read in a flurry over the last few months, catching up after
+recovering a modicum of sanity in our lives after our kid's first year.
+I finish it feeling changed, invigorated, and given new direction.</p>
+<p>At its core is a simple idea, which sounds neither new nor revolutionary
+on the surface. Software projects, Evans maintains, should work closely
+with business experts to create and maintain a domain model. The model
+might be expressed as a class diagram of core business concerns, and
+should also correspond directly to a body of code modelling these
+business entities. This forms a set of core business entities which are
+clearly analogous to things like the core enterprise entities of the
+hexagonal or clean architectures.</p>
+<p>However it's created, the terminology and notation used in the class
+diagram (or it's equivalent) should be well understood by individuals on
+both side of the tech/business divide. In the past I think I've made the
+mistake of believing that only developers needed to understand it, and
+therefore the model only needed to be expressed in code.</p>
+<p>This model should be displayed prominently, referred to continually, and
+in a healthy project should very directly correspond to the specialised
+language that evolves within the organisation. Where the team's language
+doesn't match the model - for example, your business experts' use of
+plurals betrays that the cardinality of relationships are modelled
+wrongly, then the model - and the underlying code - should be
+aggressively refactored to match reality.</p>
+<p>Evans makes a persuasive case that the appropriate management of this
+complexity at the heart of your software will be a major influence on
+the success of the project. To be fair, this is a viewpoint that I
+already believed in, so I was a sucker for all of this. Without an
+appropriate approach to these central design concerns, over time
+developers will find they are no longer able to understand the code
+thoroughly enough to be able to modify or extend it easily, unless they
+deliberately or inadvertently use design-breaking hacks like redundancy
+or mislocated chunks of code. This forms a vicious cycle of technical
+debt accrual, and creates an upper limit on the size or complexity which
+can be achieved by any project before productivity begins to slump.
+Other metrics like reliability then also suffer.</p>
+<p>To counter this, conquering these central design issues requires a
+pro-active and multi-pronged effort. Firstly, the existing design must
+be understood by all parties. In order for this to remain true, the
+design needs to be kept up to date and be easily understood by new team
+members. The code must be kept directly in sync with the model, and kept
+understandable - inappropriate dependencies must be ruthlessly pruned.
+Simultaneously, the "correct" design must be discovered iteratively,
+throughout the life of the project, and this can only be done by
+encouraging continual conversations between developers and business
+folks to discuss the potential inadequacies of the current design and
+possible alternatives.</p>
+<p>When managed correctly, this lends an agility and suppleness to project.
+Developers find it easy to integrate subsequent parts of code because
+they 'fit naturally' into the existing design, and when the design is
+found wanting, it's relatively easy to modify it to incorporate new
+concerns.</p>
+<p>There are times when I've struggled to convey the message about how the
+resulting trade off works between time spent refactoring versus time
+saved over the long term. Evans describes this in an interesting way.
+Instead of trying to model team productivity by applying a multiplier to
+describe drag caused by technical debt, he simply contrasts the normal
+way projects slow down as they become larger and more complex, with a
+project that instead <em>speeds up</em> over time, as developers, unhindered by
+a cycle of technical debt, are instead empowered by the creation of
+powerful and expressive abstractions, which can then be relatively
+easily reconfigured into unanticipated configurations.</p>
+<p>To counter-balance this idealistic hand-waving, the next section dives
+right into some specific design practices which embody these ideas.
+These are valuable and insightful, stock-in-trade, such as
+distinguishing between entity and value types. But many of the ideas
+were completely new to me, such as the concept of <em>aggregates</em>, which
+define subsets of the domain model which are always atomically retrieved
+from (or updated in) a data store.</p>
+<p>In short, I really loved this book. It stretched and inspired me. It's
+in a very small set of books I've flagged to re-read in a couple of
+years. It's top of my list for 'books to bring in and talk about at
+work'.</p>
+<p>Rating:</p>
+<p>10/10 if you're a programmer, or work with programmers.</p>
+<p>0/10 if you're not, or don't.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2014/1/22/brief-interviews-with-hideous-men.html" class="u-url">Brief Interviews with Hideous Men</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2014/1/22/brief-interviews-with-hideous-men.html" rel="bookmark">
+            <time class="published dt-published" datetime="2014-01-22T20:51:51-06:00" itemprop="datePublished" title="2014-01-22 20:51">2014-01-22 20:51</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><img alt="brief-interviews-with-hideous-men" src="files/2014/01/brief-interviews-with-hideous-men.jpg"></p>
+<p><em>by David Foster Wallace (1999)</em></p>
+<p>A collection of creative essays, varying from playful to unflinchingly
+uncomfortable, shot through with Wallace's typical humour and
+introspection.</p>
+<p>I've tended to love and hate his <a href="infinite-jest">other</a>
+<a href="everything-and-more">writing</a> in equal measure, but with such
+ferocity that I unreservedly place him amongst my very favourite
+authors. There wasn't even much for me to hate in this one, relatively
+lacking as it is in labyrinthine footnotes.</p>
+<p>A couple of the essays left me cold (<em>Tri-Stan: I Sold Sissee Nar to
+Ecko</em> springs to mind), but most of them I found thoroughly engaging and
+thought provoking. I'm tempted to read up on those that seemed most
+challenging to me (<em>Church Not Made With Hands</em>, say), and give them
+another try.</p>
+<p>It's been a while. Rating:</p>
+<p>0/10 if you don't want to delve deeply into sometimes uncomfortable
+subjects, such as depression, unconventional sex acts, and rape.</p>
+<p>10/10 if you like to be stretched, or at least stirred around, in
+interesting directions.</p>
+</div>
+    </div>
+    </article>
+</div>
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="index-23.html" rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-21.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2020         <a href="mailto:tartley@tartley.com">Jonathan Hartley</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">tartley.com</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL">Jonathan Hartley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+            
+        </footer>
+</div>
+</div>
+
+            <script src="assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

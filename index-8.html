@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tartley.com (old posts, page 8) | tartley.com</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
+<link rel="canonical" href="https://www.tartley.com/index-8.html">
+<link rel="prev" href="index-9.html" type="text/html">
+<link rel="next" href="index-7.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="archive.html">Archive</a>
+                </li>
+<li>
+<a href="categories/">Tags</a>
+                </li>
+<li>
+<a href="rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+    
+    
+<div class="postindex">
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2008/2/16/pyglet-week-2-better-vertex-throughput.html" class="u-url">pyglet week 2: Better Vertex Throughput</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2008/2/16/pyglet-week-2-better-vertex-throughput.html" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-16T04:24:33-06:00" itemprop="datePublished" title="2008-02-16 04:24">2008-02-16 04:24</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>In last week's <a href="2d-graphics-with-pyglet-and-opengl">2D Graphics With pyglet and OpenGL</a>,
+I used the <a href="http://www.pyglet.org/">pyglet</a> library to produce some OpenGL
+triangles on the screen, from my rough-and-ready Python code. This week,
+I want to try to boost the throughput, to get some idea of how complex a
+scene we can realistically render from Python, while still maintaining a
+decent frame rate.</p>
+<p>I was a little optimistic in my assessment of how fast last week's code
+was running. When I come to measure it carefully, I find that displaying
+just <strong>85 triangles</strong> will bring the framerate down to a minimally
+acceptable <strong>30fps</strong>. This is on my lappy - a Thinkpad T60, with a dual
+1.6GHz cores, only one of which is busy, and an ATI Radeon Mobility
+X1400 running at 1680x1050. The framerate seems fairly independent of
+what size the triangles are, and of whether blend is enabled to make
+them translucent.</p>
+<p>So what can we do to improve this? I suspect that an easy win would be
+to replace each entity's single triangle with a collection of triangles,
+specified by an array of vertices. To assemble the vertex list, we
+create the first vertex at (0, 0), and then lay all the following
+vertices in a ring around it.</p>
+<p><img alt="Seven
+vertices" src="files/2008/02/points5.png"><img alt="Five
+triangles" src="files/2008/02/fan5.png"></p>
+<p>I've shown vertex 6 lying adjacent to vertex 1, just to make them both
+visible, but in actuality they are coincident. Rendering these N
+vertices using glDrawArray() can produce N-2 triangles in the best case.
+All these vertices are shunted to the graphics card, translated,
+rotated, scaled and rendered in hardware, all without our code having to
+do any extra work, and hopefully without any significant performance
+penalty.</p>
+<p>Starting with the code from last week, I modify it to generate the
+vertex list using the following new static member on class Entity. Note
+that I have coined the term <em>shard</em> to describe the individual triangles
+rendered by class Entity:</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Entity</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="n">numShards</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">vertsGl</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_generateVerts</span><span class="p">():</span>
+        <span class="n">verts</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Entity</span><span class="o">.</span><span class="n">numShards</span><span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">bearing</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">/</span> <span class="n">Entity</span><span class="o">.</span><span class="n">numShards</span>
+            <span class="n">radius</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">bearing</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">Position</span><span class="o">.</span><span class="n">CoordsFromPolar</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">bearing</span><span class="p">)</span>
+            <span class="n">verts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">verts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+        <span class="n">Entity</span><span class="o">.</span><span class="n">vertsGl</span> <span class="o">=</span> <span class="p">(</span><span class="n">GLfloat</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">verts</span><span class="p">))(</span><span class="o">*</span><span class="n">verts</span><span class="p">)</span>
+
+<span class="n">Entity</span><span class="o">.</span><span class="n">_generateVerts</span><span class="p">()</span>
+</code></pre>
+
+
+<p>The for-loop simply creates the list of vertex co-ordinates, as
+illustrated above. The cryptic-looking penultimate line converts that
+list into an array of GLfloats, as provided by ctypes, and stores that
+array on a class level attribute, Entity.vertsGl. The final line then
+calls this member function as soon as the class is defined, creating our
+vertex array at program startup. We also create a similar array of
+colors, which will be used to color each vertex, but since I want each
+fan drawn in a different set of colors, this is done in
+Entity.__init__(), and the resulting arrays are stored on the
+instance (not shown).</p>
+<p>This vertex and color arrays can then be rendered as a triangle fan
+using the following Entity.draw() method:</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">glLoadIdentity</span><span class="p">()</span>
+    <span class="n">glTranslatef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">glRotatef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">rot</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">glScalef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">glEnableClientState</span><span class="p">(</span><span class="n">GL_VERTEX_ARRAY</span><span class="p">)</span>
+    <span class="n">glEnableClientState</span><span class="p">(</span><span class="n">GL_COLOR_ARRAY</span><span class="p">)</span>
+    <span class="n">glVertexPointer</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">GL_FLOAT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Entity</span><span class="o">.</span><span class="n">vertsGl</span><span class="p">)</span>
+    <span class="n">glColorPointer</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">GL_FLOAT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">colorsGl</span><span class="p">)</span>
+
+    <span class="n">glDrawArrays</span><span class="p">(</span><span class="n">GL_TRIANGLE_FAN</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vertsGl</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre>
+
+
+<p>With other minor tweaks to give a new background color, running this
+with 3 shards per Entity produces quite a pleasing effect:</p>
+<p><img alt="3 shards per
+entity" src="files/2008/02/screenshot-3.png"></p>
+<p>At 30fps, we can still manage 85 entities, and we're now rendering a fan
+of three shards for each one, so we've tripled our throughput to <strong>225
+triangles</strong> per frame. I suspect it can get better though. Let's try
+cranking up the number of shards per fan, while reducing the number of
+fans to maintain 30fps.</p>
+<table>
+<thead><tr>
+<th align="right">Shards per entity</th>
+<th align="right">Entities at 30fps</th>
+<th align="right">Triangles per frame</th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="right">3</td>
+<td align="right">85</td>
+<td align="right">225</td>
+</tr>
+<tr>
+<td align="right">
+<a href="files/2008/02/7shards85ents.png"><img alt="7 shards" src="files/2008/02/7shards85ents.small.png"></a> 7</td>
+<td align="right">85</td>
+<td align="right">595</td>
+</tr>
+<tr>
+<td align="right">
+<a href="files/2008/02/20shards85ents.png"><img alt="20 shards" src="files/2008/02/20shards85ents.small.png"></a> 20</td>
+<td align="right">85</td>
+<td align="right">1,700</td>
+</tr>
+<tr>
+<td align="right">100</td>
+<td align="right">82</td>
+<td align="right">8,200</td>
+</tr>
+<tr>
+<td align="right">
+<a href="files/2008/02/400shards68ents.png"><img alt="400 shards" src="files/2008/02/400shards68ents.small.png"></a> 400</td>
+<td align="right">68</td>
+<td align="right">27,200</td>
+</tr>
+<tr>
+<td align="right">
+<a href="files/2008/02/1200shards48ents.png"><img alt="1200 shards" src="files/2008/02/1200shards48ents.small.png"></a>1,200</td>
+<td align="right">48</td>
+<td align="right">57,600</td>
+</tr>
+<tr>
+<td align="right">1,800</td>
+<td align="right">39</td>
+<td align="right">70,200</td>
+</tr>
+<tr>
+<td align="right">3,000</td>
+<td align="right">29</td>
+<td align="right">87,000</td>
+</tr>
+<tr>
+<td align="right">6,000</td>
+<td align="right">17</td>
+<td align="right">102,000</td>
+</tr>
+<tr>
+<td align="right">
+<a href="files/2008/02/12000shards10ents.png"><img alt="" src="files/2008/02/12000shards10ents.small.png"></a> 12,000</td>
+<td align="right">10</td>
+<td align="right">120,000</td>
+</tr>
+<tr>
+<td align="right">100,000</td>
+<td align="right">1</td>
+<td align="right">100,000</td>
+</tr>
+</tbody>
+</table>
+<p>Above about 200 shards per fan, the shards start getting so thin that
+they produce moire effects, and above 10,000 there's some crazy white
+artifact starts happening in the middle of the fans. But nevertheless,
+the times taken to render these frames show a strong trend.</p>
+<p>Fewer fans, each with more shards, results in much higher triangle
+throughput - up to <strong>120,000 triangles</strong> per frame. Although it's
+exciting to see such high figures, I'd almost rather it wasn't the case.
+I'd prefer to create a game with more independent entities wandering
+around, regardless of how little graphical detail they could be adorned
+with. But there you have it, blame John Carmack. Anyhow, it's clear that
+we can deliver sufficient graphical grunt to put together <em>some sort</em> of
+game. Next time I hope to make a start on putting all these triangles to
+good use.</p>
+<p><strong>Update:</strong> For a 500% performance boost when running under Linux,
+invoke Python with the -O flag. I can now get 500 fans on screen, each
+with 100 triangles, at 30fps. See comments below.</p>
+<p><strong>On to <a href="http://tartley.com/?p=285">Part 3 - Some Pretty Flowers...</a></strong></p>
+<h4>Download the source</h4>
+<p><a href="files/2008/02/gameloop2py.zip" title="gameloop2.py.zip"><img alt="Python
+file" src="files/2008/02/doc-python.png">gameloop2.py.zip</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2008/2/13/modularised-personal-devices.html" class="u-url">Modularised Personal Devices</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2008/2/13/modularised-personal-devices.html" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-13T14:18:10-06:00" itemprop="datePublished" title="2008-02-13 14:18">2008-02-13 14:18</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><img alt="One man band" src="files/2008/02/onemanband.jpg"></p>
+<p>So <a href="http://lindsaycampbell.tumblr.com/post/26210504">LC</a>,
+<a href="http://nixtarolls.nixta.com/post/26188403">Nixta</a> and
+<a href="http://www.aaronsdayoff.com/2008/02/modular-phone-answer-to-all-of-our.html">Aaron</a>
+all like the Modu modular phone idea. A tiny cheap phone for evenings
+out, which slips into its super-blackberry exoskeleton for when you need
+to get hardcore about your comms.</p>
+<p>Sounds great. I can't help but feel it's the first tiny step towards
+'modular personal hardware' concept I've been banging on about for
+years. Think about what's good about this mobu phone, and turn it up to
+11:</p>
+<p>Your phone should be simply a transmitter and receiver. No screen. No
+keypad. No memory. It just makes phone calls, *nothing* else. Dirt
+cheap.</p>
+<p>Your mp3 player likewise. No screen. No buttons. It just plays mp3s and
+produces an audio stream. Dirt cheap.</p>
+<p>All those devices never come out of your pocket. If you want to interact
+with them, you carry ONE screen, ONE keypad control, or whatever. These
+connect to any of your carried devices, allowing you to control them.</p>
+<p>If you're the sort of person who likes a nice screen, then you buy
+*one* nice screen. No need to also buy a nice screen on your phone and
+one for your mp3 player and one for your camera, etc etc etc. Same goes
+for any aspect of any component device, audio, control keypad, or
+storage, or whatever.</p>
+<p>Storage is an illustrative example. Each device has almost no on board
+storage. Instead, they co-operate to share a single, central bank of
+storage, also in your pocket. So instead of carrying X gigabytes in each
+device (like now), you pool all that and carry 5X, shared between all
+your devices. So each device could still use X gigabytes each, if that
+was required. But now you also have the option to choose to allocate
+masses of storage to one single device, for example take four or five
+times more video than usual, and other devices can just get by with less
+memory for time being.</p>
+<p>I'm tired of buying overpriced devices that bundle in a dozen mediochre
+implementations of stuff which all my other devices already do. It
+dilutes competition between hardware providers by forcing all devices to
+include a lowest common denominator *everything*. Christ, we *have*
+to put in a fancy graphical user interface and an mp3 player in every
+phone these days, so everyone puts in crappy ones, just barely adequate.
+And so when you choose a phone, you are stuck with all the other crap
+that your phone manufacturer decided to bundle with it. Unbundling this
+functionality would allow greater competition between device
+manufacturers. Users could pick and choose components that suit them.</p>
+<p>Obviously, many users couldn't be bothered to mix and match, but for
+them, resellers could assemble pre-selected configurations. No biggie.
+Competition would still be enhanced, by the resellers choosing the best
+available component devices. And everything would cost 1/4 what it costs
+now.</p>
+<p>It's the Unix philosophy applied to hardware. Small, sharp, incredibly
+powerful tools, that each do *one* thing incredibly well, and lean on
+each other to get things done. This gives users fantastic power to
+recombine them in manifold creative ways, unanticipated by the original
+hardware designers.</p>
+<p>Welcome to my pipe dream. Everyone I've mentioned it to has called me an
+idjut. Your turn.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2008/2/8/someone-comes-to-town-someone-leaves-town.html" class="u-url">Someone Comes to Town, Someone Leaves Town</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2008/2/8/someone-comes-to-town-someone-leaves-town.html" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-08T01:01:37-06:00" itemprop="datePublished" title="2008-02-08 01:01">2008-02-08 01:01</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><a href="http://www.amazon.co.uk/Someone-Comes-Town-Leaves/dp/0765312808" title="Someone Comes to Town, Someone Leaves Town"><img alt="Someone Comes to Town, Someone Leaves Town" src="files/2008/02/someone-comes-to-town.jpg"></a></p>
+<p><em>by Cory Doctorow</em></p>
+<p>I just don't know about this one. I really wanted to like it. It starts
+out with an interesting, down-to-earth story about a guy establishing
+himself in a new neighbourhood, setting up an open wireless mesh net
+across the neighbourhood, back in a day when this was still a <em>really
+cool idea</em>. This tale is then peppered with disconcerting non-literal
+sounding references to his family, such as the cliffs and caves of his
+Father, the mountain. By the time I'd really gotten on board with this
+fantastic side of the emerging story, the scene changes were occurring
+so swiftly between paragraphs that I began to wonder whether the text
+hadn't got jumbled up somewhere between Cory's word processor and <a href="http://tartley.com/?p=217">my
+screen</a>.</p>
+<p>Perhaps I embarked upon it too casually. It was certainly engaging, but
+by the last few pages I began to suspect that threads of the plot had
+eluded me. For example, I had entertained the idea that the fantasy
+elements of the story were actually the product of the main character's
+stated intention to write a book, which is otherwise only mentioned in
+passing here and there. However, the fantasy is woven extremely tightly
+together with the realistic aspects of the story, such that I can't
+discern any clear boundary to distinguish between the two. So I'm left
+wondering if parts of the book didn't actually happen, and if so, which
+parts? I should have anticipated someone like <a href="http://craphound.com">Mr
+Doctorow</a> would have to be a terrific smarty-pants
+in the narrative department, and I doubtless should have paid more
+attention along the way.</p>
+<p>Rating: 6/10 - One to revisit, maybe, if I like his other stuff.</p>
+<p><strong>Update 12th Feb:</strong> Coincidentally, I just read a short story by Cory,
+<em>I Row-boat</em>, which despite the awful titular pun, I really liked.
+However, I've read a bunch of discussion about <em>Someone Comes to
+Town...</em>, and I don't seem to have missed much that anyone else has been
+getting out of it. So while I'm looking forward to other stuff by him,
+I'm sticking by my low rating for this.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2008/2/8/i-am-legend.html" class="u-url">I am Legend</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2008/2/8/i-am-legend.html" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-08T00:45:21-06:00" itemprop="datePublished" title="2008-02-08 00:45">2008-02-08 00:45</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><a href="http://www.imdb.com/title/tt0480249/" title="I am Legend"><img alt="I am Legend" src="files/2008/02/i-am-legend.jpg"></a></p>
+<p><em>Directed by Francis Lawrence.</em></p>
+<p><strong>Summary</strong>
+This is going to be one of those reviews where someone reads the book
+and then sees the movie and doesn't like it very much.</p>
+<p><strong>Details</strong>
+I read <em>Robinson Crusoe</em> for the first time when I was about 30. It
+forms such a prominent thread within our cultural milieu that I expected
+it to be a pinnacle of literature, well-written and evocative. For me,
+however, it was nothing of the sort. It seemed to have been lazily
+dashed off by a nitwit aristocrat who'd never faced a single day of
+hardship in his life, with no thought at all given to the physical and
+psychological trials someone in Crusoe's predicament would suffer.</p>
+<p>Only weeks later, I read Richard Matheson's novel <em>I am Legend</em>, and
+unexpectedly found it to be nigh on exactly the study of loneliness and
+despair that I had expected <em>Crusoe</em> would be. The portrayal of frantic
+days spent repairing the fortifications, alternating with horrific
+sleepless nights spent indoors, listening to <em>them</em> trying to get in, is
+as dense an atmosphere of desperation as I think I've ever been party
+to.</p>
+<p>So it was with conflicting pangs of emotion that I first heard about the
+movie. In many ways the movie's strength is simply the inevitable
+reaction one has to the depiction of a desolate New York City. Will
+Smith's character is now a world-class scientist, bent on reversing the
+ravages of the zombie/vampire plague single-handed, working from his
+Hollywood-style basement laboratory. The novel's pivotal ending - from
+which the title is derived - is utterly transformed into something
+rather jolly and upbeat. Even the signs of him fraying around the edges
+under the strain have been sanitised - he talks to mannequins, rather
+than drinking himself into oblivion. It's <em>Robinson Crusoe</em> all over
+again.</p>
+<p>Rating: 5/10 - not great.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2008/2/6/2d-graphics-with-pyglet-and-opengl.html" class="u-url">2D Graphics With pyglet and OpenGL</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2008/2/6/2d-graphics-with-pyglet-and-opengl.html" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-06T00:57:58-06:00" itemprop="datePublished" title="2008-02-06 00:57">2008-02-06 00:57</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><img align="left" src="files/2008/02/pyglet_logo.png"></p>
+<p><a href="http://www.pyglet.org">pyglet</a> is a cross-platform library
+that exposes Python bindings for OpenGL, and also provides a bunch of
+functionality layered on top of that, such as displaying text and
+images, mouse and keyboard events, and playing multimedia. I'd
+characterise it as a leaner alternative to
+<a href="http://www.pygame.org">PyGame</a>.</p>
+<p>I worked my way through <a href="http://www.pyglet.org/doc/programming_guide/writing_a_pyglet_application.html">pyglet's introductory example
+code</a>,
+and was impressed enough to want to try it out with some of my own code,
+so I knocked together the following elementary 2D graphics demo.</p>
+<p>Of particular note - it's a deliberate design goal of pyglet that it
+needs no other dependencies. After installing it, the following script
+'just worked' on both my home Linux lappy and my work Windows desktop,
+and adopts sensible default behaviour across multiple monitors. Also,
+the resulting code is cleaner and less verbose than equivalent demos
+I've created in the past using PyGame.</p>
+<h4>App class (the controller)</h4>
+<p>The App(lication) class creates our other objects, and then runs the
+main animation loop. The window and clock modules are pyglet's -
+everything else will be our own classes:</p>
+<ul>
+<li>World class manages a collection of in-game entities. The
+    world.tick() method updates the position or orientation of these
+    entities.</li>
+<li>Camera class initialises OpenGL and defines projections that map
+    from our in-world co-ordinates to pixels on-screen.</li>
+<li>Hud class defines text we draw on the screen overlaid on top of the
+    world, such as a frames-per-second (fps) counter.</li>
+</ul>
+<p>Note how in the main loop, we ask our camera class to set two different
+projections - one 'worldProjection', after which we draw in-game
+entities which are offset and rotated depending on the position of the
+camera, followed by a 'hudProjection', for drawing things that should be
+drawn in the style of a 'heads-up display', ie. always aligned with the
+screen, like text messages and frames-per-second (fps) counters.</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">App</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">world</span> <span class="o">=</span> <span class="n">World</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">win</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">(</span><span class="n">fullscreen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">vsync</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">camera</span> <span class="o">=</span> <span class="n">Camera</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mf">100.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hud</span> <span class="o">=</span> <span class="n">Hud</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="p">)</span>
+        <span class="n">clock</span><span class="o">.</span><span class="n">set_fps_limit</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">mainLoop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">has_exit</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">dispatch_events</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">tick</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">worldProjection</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">world</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">hudProjection</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hud</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+            <span class="n">clock</span><span class="o">.</span><span class="n">tick</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">App</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">mainLoop</span><span class="p">()</span>
+</code></pre>
+
+
+<h4>World class (the model)</h4>
+<p>The world class is just a container for a collection of in-game
+Entities. It uses pyglet's clock.schedule_interval() method to spawn a
+new Entity object at a random location every 0.25 seconds.</p>
+<p>Every time world.tick() is called, we simply rotate each Entity by an
+amount dependent on its size.</p>
+<p>Drawing the world merely clears the output buffer, resets the modelview
+matrix, and then asks each Entity to draw itself.</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">World</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ents</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nextEntId</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spawn</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">spawnEntity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dt</span><span class="p">):</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">)</span>
+        <span class="n">rot</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">360.0</span><span class="p">)</span>
+        <span class="n">ent</span> <span class="o">=</span> <span class="n">Entity</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nextEntId</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">rot</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ents</span><span class="p">[</span><span class="n">ent</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">ent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nextEntId</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">ent</span>
+
+    <span class="k">def</span> <span class="nf">tick</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ents</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">ent</span><span class="o">.</span><span class="n">rot</span> <span class="o">+=</span> <span class="mf">10.0</span> <span class="o">/</span> <span class="n">ent</span><span class="o">.</span><span class="n">size</span>
+
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">glClear</span><span class="p">(</span><span class="n">GL_COLOR_BUFFER_BIT</span><span class="p">)</span>
+        <span class="n">glMatrixMode</span><span class="p">(</span><span class="n">GL_MODELVIEW</span><span class="p">);</span>
+        <span class="n">glLoadIdentity</span><span class="p">();</span>
+        <span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ents</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">ent</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</code></pre>
+
+
+<h4>Entity class</h4>
+<p>Each entity knows its own location, orientation and size in world-space.
+It also knows how to draw itself, using a series of OpenGL calls. For
+now, I just draw a triangle for each entity, pointing along its
+orientation.</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Entity</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">rot</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rot</span> <span class="o">=</span> <span class="n">rot</span>
+
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">glLoadIdentity</span><span class="p">()</span>
+        <span class="n">glTranslatef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">glRotatef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rot</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">glScalef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+        <span class="n">glBegin</span><span class="p">(</span><span class="n">GL_TRIANGLES</span><span class="p">)</span>
+        <span class="n">glColor4f</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">glVertex2f</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">glColor4f</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+        <span class="n">glVertex2f</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">glColor4f</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+        <span class="n">glVertex2f</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">glEnd</span><span class="p">()</span>
+</code></pre>
+
+
+<h4>Camera class (the view)</h4>
+<p>The camera class sets the OpenGL projections required to either draw
+in-game entities, or else HUD-style on-screen displays. In future
+enhancements, the camera's worldProjection mode will not just look at
+worldspace co-ordinates (0, 0), but will be able to roam around the
+world, and rotate.</p>
+<p>Note that the widthRatio calculated in worldProjection() will do an
+integer division by default. To fix it, I imported real division (ie.
+<code>from __future__ import division</code>)</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Camera</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">win</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">win</span> <span class="o">=</span> <span class="n">win</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">zoom</span> <span class="o">=</span> <span class="n">zoom</span>
+
+    <span class="k">def</span> <span class="nf">worldProjection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">glMatrixMode</span><span class="p">(</span><span class="n">GL_PROJECTION</span><span class="p">)</span>
+        <span class="n">glLoadIdentity</span><span class="p">()</span>
+        <span class="n">widthRatio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">height</span>
+        <span class="n">gluOrtho2D</span><span class="p">(</span>
+            <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">zoom</span> <span class="o">*</span> <span class="n">widthRatio</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">zoom</span> <span class="o">*</span> <span class="n">widthRatio</span><span class="p">,</span>
+            <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">zoom</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">zoom</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">hudProjection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">glMatrixMode</span><span class="p">(</span><span class="n">GL_PROJECTION</span><span class="p">)</span>
+        <span class="n">glLoadIdentity</span><span class="p">()</span>
+        <span class="n">gluOrtho2D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+</code></pre>
+
+
+<h4>Hud class (also part of the view)</h4>
+<p>The Hud class initialises the text string 'Hello, World!', and creates
+an fps counter. The draw() method renders both these to the screen. It
+is worth noting that pyglet handles text like this smartly, rasterising
+the Text object to a bitmap when it is first created, and then rapidly
+drawing that to the screen using a textured quad in the draw() method.</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Hud</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">win</span><span class="p">):</span>
+        <span class="n">helv</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'Helvetica'</span><span class="p">,</span> <span class="n">win</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mf">15.0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span>
+            <span class="n">helv</span><span class="p">,</span>
+            <span class="s1">'Hello, World!'</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">win</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">win</span><span class="o">.</span><span class="n">height</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="n">halign</span><span class="o">=</span><span class="n">font</span><span class="o">.</span><span class="n">Text</span><span class="o">.</span><span class="n">CENTER</span><span class="p">,</span>
+            <span class="n">valign</span><span class="o">=</span><span class="n">font</span><span class="o">.</span><span class="n">Text</span><span class="o">.</span><span class="n">CENTER</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fps</span> <span class="o">=</span> <span class="n">clock</span><span class="o">.</span><span class="n">ClockDisplay</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">glMatrixMode</span><span class="p">(</span><span class="n">GL_MODELVIEW</span><span class="p">);</span>
+        <span class="n">glLoadIdentity</span><span class="p">();</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fps</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</code></pre>
+
+
+<h4>The Payoff</h4>
+<p><img alt="Gameloop
+screenshot" src="files/2008/02/gameloop-screenshot.png"></p>
+<p>This is reasonably pleasing for a first stab. It runs at 60 frames per
+second, adding a new triangle to the screen every 0.25 seconds, and
+rotating them all gently. After about 100 triangles, it starts to slow
+down, but there are lots of things we can do to optimise it yet. In
+particular, I'm hoping that <em>each</em> triangle could be replaced by a
+complex geometry without any slowdow, by passing arrays of vertices to
+OpenGL, none of which need be touched by our code at all.</p>
+<p><strong>On to <a href="http://tartley.com/?p=264">Part 2: Better Vertex
+Throughput...</a></strong></p>
+<h4>Download the source</h4>
+<p><a href="files/2008/02/gamelooppy.zip" title="gameloop.py.zip"><img alt="Python
+file" src="files/2008/02/doc-python.png">gameloop.py.zip</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2008/2/5/lappy-sketch-lives.html" class="u-url">Lappy sketch lives!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2008/2/5/lappy-sketch-lives.html" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-05T13:13:02-06:00" itemprop="datePublished" title="2008-02-05 13:13">2008-02-05 13:13</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><img alt="Lappy" src="files/2008/02/lappy.jpg"></p>
+<p>My lappy sketch lives! on <a href="http://blog.kamil.dworakowski.name/">Kamil's blog
+title</a>. Har! That was an easy post.
+No thinking required.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2008/2/2/the-hacker-crackdown-law-and-disorder-on-the-electronic-frontier.html" class="u-url">The Hacker Crackdown : Law and Disorder on the Electronic Frontier</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2008/2/2/the-hacker-crackdown-law-and-disorder-on-the-electronic-frontier.html" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-02T16:15:49-06:00" itemprop="datePublished" title="2008-02-02 16:15">2008-02-02 16:15</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><img alt="The Hacker Crackdown" src="files/2008/01/hacker-crackdown.jpg"></p>
+<p><em>by Bruce Sterling, <a href="http://www.archive.org/search.php?query=hacker%20crackdown%20AND%20mediatype%3Aaudio%20AND%20collection%3Aopensource_audio">read aloud by Cory Doctorow</a></em></p>
+<p>Only the second audiobook I've bothered to listen to, and it seems to
+work very well, especially when commuting, since you can continue
+listening without interruption while leaving the tube and walking. (It's
+taken me 36 years to figure this out? Genius.)</p>
+<p>Cory does a fine job of reading, and I'm grateful to him for bringing
+this important book to my attention. When he describes reading it on
+it's publication in 1994 as 'life changing', I can understand why. It
+describes the clash of cultures resulting from American law
+enforcement's attempts to crack down on the hackers, crackers and
+phreaks of the nascent cyberpunk underworld of the early '90s. Many of
+the underlying issues have even more relevance today. Can taking a copy
+of digital information be equated with stealing, given that the original
+owner still retains their original copy? Or is it more analogous to
+attempting to overhear a conversation which the speakers would rather
+wasn't overheard? While some hackers have real criminal intent, there
+are a significant proportion with a very strong ethic to do no harm, who
+view their tinkering as merely the exploration of an online frontier,
+filled with challenges and puzzles, and rewards of rich hordes of
+information - the dispersal of which is not just a god-given right, but
+actually a moral responsibility.</p>
+<p>When law enforcement agencies went after this crowd with a heavy-handed
+and indiscriminate approach, teenagers still living with their parents
+ended up in court facing years in prison, colossal fines and legal fees,
+in some instances simply for simply republishing a document that was
+already in widespread circulation. Innocents had tens of thousands of
+dollars worth of computers seized and never returned, even though no
+charges were ever filed against them. The resulting backlash formed the
+beginnings of the Electronic Frontier Foundation, a philanthropic
+organization devoted to defending the rights of individuals in the
+online realm.</p>
+<p>This whole tale is laced with many entertaining insights into the quirks
+and motives of the colorful individuals involved, and this makes the
+whole thing an enjoyable romp through a serious topic.</p>
+<p>Rating: 8/10 - I only wish I'd read it ten years ago</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2008/2/1/brilliant-and-tragic.html" class="u-url">Brilliant and Tragic</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2008/2/1/brilliant-and-tragic.html" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-01T11:48:39-06:00" itemprop="datePublished" title="2008-02-01 11:48">2008-02-01 11:48</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Susan was on the phone to the phone company the other day. She couldn't
+verify her identity as the account holder, because the phone service in
+question was actually bought by me, as a gift. Because of this, the CSR
+declined to give her any information, not even publically available
+stuff like their customer service phone number. When gently quizzed
+about the rationale behind that, the CSR responded with a newspeak-laden
+pitch about the heightened-security society in which we live. It was
+like that moment in Fight Club, when Norton suddenly realises "Ah! I
+geddit! You're a <em>moron</em>."</p>
+<p>Unfortunately, our society consists of CSRs like this. They are <a href="http://www.imdb.com/title/tt0137523/quotes">the
+people we depend on</a>. They
+cook our meals, they haul our trash, they connect our calls, they drive
+our ambulances. They guard us while we sleep.</p>
+<p>And they are being <em>brainwashed</em> by the current climate of terrorist
+hysteria, Kafka-esque security checks, idiotic travel restrictions, the
+<a href="http://arstechnica.com/news.ars/post/20080131-tsa-blog-smackdown-explain-to-me-about-bomb-juice.html">TSA's Constitution-free
+zone</a>,
+into believing that a security state (and an <a href="http://www.schneier.com/blog/archives/2008/01/tsa_misses_the.html">ineffectual
+one</a>,
+at that) is a good and desirable thing. It just makes me want to break
+down and weep and go and live on an island somewhere.</p>
+<p>And then - my ray of hope - every so often you find things like this...</p>
+<p><img alt="Paranoia" src="files/2008/02/paranoia.jpg"></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2008/1/30/the-hidden-layer.html" class="u-url">The Hidden Layer</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2008/1/30/the-hidden-layer.html" rel="bookmark">
+            <time class="published dt-published" datetime="2008-01-30T11:47:37-06:00" itemprop="datePublished" title="2008-01-30 11:47">2008-01-30 11:47</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><img alt="The Hidden Layer" src="files/2008/01/the-hidden-layerjpy.jpg"></p>
+<p><em>by Chris Nordberg</em></p>
+<p>Another iPhone read, selected because it's one of the handful of books
+downloadable through the community resources accessed by my hacked
+phone's built-in installer. This lack of discernment on my part was a
+bit of a mistake, because I didn't like this one much. It feels so much
+like a young author's first writing that I want to be encouraging, but
+that's patronising, so I shall force myself to be a little mean.</p>
+<p>The story introduces a couple of potentially interesting ideas, but they
+don't really have sufficient depth to really make the read compelling,
+as I was constantly distracted by foolish characters who are impressed
+by the most superficial of things, with child-like attitudes to sex, and
+descriptions of corporate operations and politics as though imagined by
+someone who has never actually seen them in operation. It all just feels
+hopelessly naive. By the time it gets into ruthless killers and
+Machiavellian masterminds, the author is out of his range.</p>
+<p>Rating: 2/10 - Feels like I wrote it.</p>
+<p><strong>Update</strong>: For years afterwards, I've felt guilty about this scathing
+review, mortified by the idea that the author has read it and was
+genuinely upset. I'm so sorry! It's me, it's not you.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2008/1/30/collapse-how-societies-choose-to-fail-or-survive.html" class="u-url">Collapse: How Societies Choose to Fail or Survive</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/2008/1/30/collapse-how-societies-choose-to-fail-or-survive.html" rel="bookmark">
+            <time class="published dt-published" datetime="2008-01-30T11:22:00-06:00" itemprop="datePublished" title="2008-01-30 11:22">2008-01-30 11:22</time></a>
+            </p>
+                <p class="commentline">        
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><img alt="collapse.jpg" src="files/2008/01/collapse.jpg" title="collapse.jpg"></p>
+<p><em>by Jared Diamond</em></p>
+<p>A brilliant tome from the same bloke who penned <em>Guns, Germs and Steel</em>.
+This time he examines the flip side of the equation - what
+characteristics cause civilisations to fail? From the statues of Easter
+Island to the Mayan Ruins, the world is replete with the abandoned
+relics of cultures that collapsed. Diamond examines seven examples of
+societies whose members all died or dispersed, sometimes over a period
+of just a few years, leaving their hauntingly abandoned habitats,
+looking for the common factors which lead to their demise. The
+implications for our own culture are serious. Do we have more in common
+with these failed civilisations, or with the ones that exhibited
+long-term stability? Will our own skyscrapers one day stand as
+hauntingly abandoned monuments amongst jungle or desert? It's a serious
+message, and the immediate conclusion looks a little grim, as our rabid
+consumerism and resource consumption is anything but steady-state.
+However, Diamond finds a silver lining, presenting his conclusions as a
+message of hope. We are the first civilisation to have a global reach,
+and to have knowledge of ancient societies that have gone before, so
+while the stakes are higher than ever, so is our ability to forsee the
+consequences of our actions, and to change our course before it's too
+late.</p>
+<p>Rating: 8/10 - a fascinating and important read.</p>
+</div>
+    </div>
+    </article>
+</div>
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="index-9.html" rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-7.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2020         <a href="mailto:tartley@tartley.com">Jonathan Hartley</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">tartley.com</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL">Jonathan Hartley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+            
+        </footer>
+</div>
+</div>
+
+            <script src="assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flying High: OpenGL from Python, Part 2 | tartley.com</title>
+<link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../../rss.xml">
+<link rel="canonical" href="https://www.tartley.com/posts/2010/8/3/flying-high-opengl-from-python-part-2.html">
+<!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
+<link rel="prev" href="../../7/31/flying-high-hobbyist-opengl-from-python.html" title="Flying High: Hobbyist OpenGL from Python" type="text/html">
+<link rel="next" href="../../10/15/rerun-unit-tests-whenever-files-update.html" title="Rerun unit tests whenever files update" type="text/html">
+<meta property="og:site_name" content="tartley.com">
+<meta property="og:title" content="Flying High: OpenGL from Python, Part 2">
+<meta property="og:url" content="https://www.tartley.com/posts/2010/8/3/flying-high-opengl-from-python-part-2.html">
+<meta property="og:description" content="This is second in a series of articles about algorithmically generating
+geometry to drive OpenGL from Python.
+&lt;&lt; Back to part 1
+Last time we got as far as creating some instances of our super-simple
+S">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2010-08-03T10:04:43-05:00">
+<meta property="article:tag" content="GameDev">
+<meta property="article:tag" content="Graphics">
+<meta property="article:tag" content="Presentations">
+<meta property="article:tag" content="Python">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="flying-high-opengl-from-python-part-2.md" id="sourcelink">Source</a>
+    </li>
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Flying High: OpenGL from Python, Part 2</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="#" rel="bookmark">
+            <time class="published dt-published" datetime="2010-08-03T10:04:43-05:00" itemprop="datePublished" title="2010-08-03 10:04">2010-08-03 10:04</time></a>
+            </p>
+                <p class="commentline">        
+
+                    </p>
+<p class="sourceline"><a href="flying-high-opengl-from-python-part-2.md" class="sourcelink">Source</a></p>
+
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p><em>This is second in a series of articles about algorithmically generating
+geometry to drive OpenGL from Python.</em></p>
+<p><a href="../../../../flying-high-hobbyist-opengl-from-python"><em>&lt;&lt; Back to part 1</em></a></p>
+<p><em>Last time we got as far as creating some instances of our super-simple
+Shape class, and having Glyph and Render classes convert those to arrays
+for OpenGL and render them. This time, we start using that
+infrastructure to create some more interesting geometries, which means
+there's less code, and more pretty pictures.</em></p>
+<hr>
+<h3><strong>Composite Shapes</strong></h3>
+<p>In order to create more complex shapes by composing instances of
+existing ones, we need a simple composite shape:</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">MultiShape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">matrices</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">matrices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Matrix</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">orientation</span><span class="p">))</span>
+</code></pre>
+
+
+<p>A MultiShape contains a list of child Shapes, and a matrix for each
+child, indicating the child's position and orientation relative to the
+MultiShape's front-and-center.</p>
+<p>This is probably as good a point as any to confess that for the purposes
+of this demo, I ended up writing my own Matrix class, along with my own
+Orientation class. Even my Vec3, which earlier I showed you defined as a
+named tuple, gradually started to sprout some methods, until it became a
+fully-formed custom vector class. This was pretty silly - it easily
+doubled the size of my code-base, and while it felt like rewarding and
+productive work, it was actually a waste of time. With hindsight, I
+should have predicted this would happen, and started out using an
+existing library for things like this, such as Euclid or Numpy. Way it
+goes.</p>
+<p>Anyhow, if a Multishape is going to be usable wherever a Shape is
+currently used, it needs to provide the same interface, which luckily is
+very simple - it just needs to provide iterables of vertices, faces and
+face_colors. Here is how MultiShape provides a sequence of vertices, by
+chaining the vertices of all its children, each vertex transformed by
+the matrix of the relevant child shape:</p>
+<pre class="code literal-block"><span></span><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">vertices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">matrix</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">vertex</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">child</span><span class="p">,</span> <span class="n">matrix</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrices</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">vertex</span> <span class="ow">in</span> <span class="n">child</span><span class="o">.</span><span class="n">vertices</span>
+    <span class="p">)</span>
+</code></pre>
+
+
+<p>There is an inefficiency to this. When MultiShapes are nested, I'm
+transforming each vertex once for every branch in the tree. It would be
+cheaper to just multiply the matrices of nested MultiShapes, and then
+have the top-level MultiShape apply the resulting transforms to the
+vertices of each of its children. However, we're only performing this
+work at application start-up, not every frame, so I'm choosing to eat it
+for the sake of simple-as-possible code.</p>
+<p>Similar properties are defined on MultiShape to provide sequences of
+face indices and face_colors, by aggregating those of its children.</p>
+<p>Using MultiShape, we can now easily compose groups of our basic Shapes.
+A new factory function composes a bunch of cubes into the same
+MultiShape:</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">CubeCorners</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">color1</span><span class="p">,</span> <span class="n">color2</span><span class="p">):</span>
+    <span class="n">multi</span> <span class="o">=</span> <span class="n">MultiShape</span><span class="p">()</span>
+    <span class="n">multi</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+        <span class="n">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">repeat</span><span class="p">(</span><span class="n">color1</span><span class="p">)),</span>
+        <span class="n">position</span><span class="o">=</span><span class="n">Origin</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">product</span><span class="p">(</span><span class="o">*</span><span class="n">repeat</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">))):</span>
+        <span class="n">multi</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+            <span class="n">Cube</span><span class="p">(</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">repeat</span><span class="p">(</span><span class="n">color2</span><span class="p">)),</span>
+            <span class="n">position</span><span class="o">=</span><span class="n">Vec3</span><span class="p">(</span><span class="o">*</span><span class="n">pos</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">edge</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">multi</span>
+</code></pre>
+
+
+<p><img alt="A cluster of cubes, rendered in one glDrawElements call" src="../../../../files/2010/07/screen-cube-cluster2.png" title="A cluster of cubes, rendered in one glDrawElements call"></p>
+<p>Another new factory function, <em>RingOf:</em></p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">RingOf</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+    <span class="n">multi</span> <span class="o">=</span> <span class="n">MultiShape</span><span class="p">()</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">orientation</span> <span class="o">=</span> <span class="n">Orientation</span><span class="p">()</span>
+    <span class="n">delta_angle</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">/</span> <span class="n">number</span>
+    <span class="k">while</span> <span class="n">angle</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span><span class="p">:</span>
+        <span class="n">angle</span> <span class="o">+=</span> <span class="n">delta_angle</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">),</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">angle</span><span class="p">))</span>
+        <span class="n">orientation</span><span class="o">.</span><span class="n">pitch</span><span class="p">(</span><span class="n">delta_angle</span><span class="p">)</span>
+        <span class="n">multi</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">orientation</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">multi</span>
+</code></pre>
+
+
+<p>returns copies of a given child shape, arranged in a ring, such as this
+ring of cubes:</p>
+<p><img alt="A ring of cubes" src="../../../../files/2010/07/screen-ring1.png"></p>
+<p>A ring of truncated cubes:</p>
+<p><img alt="A ring of truncated cubes" src="../../../../files/2010/07/screen-ring2.png"></p>
+<p>A ring of interpenetrated tetrahedrons:</p>
+<p><img alt="A ring of interpenetrated tetrahedrons" src="../../../../files/2010/07/screen-ring3.png"></p>
+<p>This is just starting to look a bit like a thorny geometric mushie trip, which
+in this context I'm counting as a success.</p>
+<p>If we can compose basic shapes into rings, we can also compose rings
+into... um... <em>tri-axis-rings</em>:</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">TriRing</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">colors</span><span class="p">):</span>
+    <span class="n">multi</span> <span class="o">=</span> <span class="n">MultiShape</span><span class="p">()</span>
+    <span class="n">ring</span> <span class="o">=</span> <span class="n">RingOf</span><span class="p">(</span><span class="n">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">colors</span><span class="p">),</span> <span class="n">radius</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+    <span class="n">multi</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ring</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="n">Orientation</span><span class="p">(</span><span class="n">XAxis</span><span class="p">))</span>
+    <span class="n">multi</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ring</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="n">Orientation</span><span class="p">(</span><span class="n">YAxis</span><span class="p">))</span>
+    <span class="n">multi</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ring</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="n">Orientation</span><span class="p">(</span><span class="n">ZAxis</span><span class="p">,</span> <span class="n">XAxis</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">multi</span>
+</code></pre>
+
+
+<p>If you look carefully, you can make out some depth-buffer fighting where the
+three rings intersect, but I'm moving too fast to worry about that now.</p>
+<p><img alt="Tri-axis rings" src="../../../../files/2010/07/screen-tri-ring.png"></p>
+<p>Because we're drawing each MultiShape using a single iteration of the
+Render.draw() loop, we've massively reduced the overhead in drawing each
+Shape, so we can easily add all of these at once into the world at
+60fps, although it does form a bit of a visual cacophony:</p>
+<p><img alt="All the rings, plus some other stuff" src="../../../../files/2010/07/screen-all-rings-etc.png"></p>
+<p>I wonder how much stuff we can add into a MultiShape before it starts to
+affect the framerate? Let's investigate... How about a spherical glob of
+red blood cubes:</p>
+<p><img alt="A glob of red blood cubes" src="../../../../files/2010/08/screen-glob-red-cubes2.png"></p>
+<p>It turns out I can get about 14,000 cubes (168,000 triangles)
+<a href="flying-high-opengl-from-python-part-2.html#update">[1]</a> into a single MultiShape like this before the framerate
+starts to drop. I'm still rendering these as regular ctypes arrays, not
+OpenGL vertex buffers (I don't think my hardware supports that), so all
+the geometry is being sent needlessly over the bus to the GPU every
+frame.</p>
+<p>How about an alternative, the RgbCubeCluster:</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">RgbCubeCluster</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">cluster_edge</span><span class="p">,</span> <span class="n">cube_count</span><span class="p">):</span>
+    <span class="n">cluster</span> <span class="o">=</span> <span class="n">MultiShape</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="n">cube_count</span><span class="p">):</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">Random</span><span class="p">()</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">(</span>
+            <span class="n">color</span><span class="o">.</span><span class="n">r</span> <span class="o">-</span> <span class="mi">128</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">.</span><span class="n">g</span> <span class="o">-</span> <span class="mi">128</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">.</span><span class="n">b</span> <span class="o">-</span> <span class="mi">128</span><span class="p">,</span>
+        <span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">cluster_edge</span> <span class="o">/</span> <span class="mi">256</span><span class="p">)</span>
+        <span class="n">cluster</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
+            <span class="n">shape</span><span class="o">=</span><span class="n">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">repeat</span><span class="p">(</span><span class="n">color</span><span class="p">)),</span>
+            <span class="n">position</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">cluster</span>
+</code></pre>
+
+
+<p>This creates a cluster of cubes, each one colored by its position in RGB
+space.</p>
+<p><img alt="An RGB cube cluster" src="../../../../files/2010/07/screen-rgb-cluster.png"></p>
+<p>We still have enough <em>oomph</em> left over to dive the camera right into the
+midst of the RgbCubeCluster and reveal that all the previous stuff is
+still in the world too:</p>
+<p><img alt="Whirling machinery at the center of an RgbCluster" src="../../../../files/2010/08/screen-rgbcluster-and-everything.png"></p>
+<h3><strong>Recursively Generated Geometry</strong></h3>
+<p>Can we make any more interesting recursively-defined geometry? The first
+thing I thought of (no doubt this has been done many times before) was
+the 3D equivalent of a <a href="http://en.wikipedia.org/wiki/Koch_curve">Koch curve</a>:
+Take a tetrahedron, and for each face, embed a new, smaller tetrahedron
+sticking out of it. Recursively repeat this for each of the new smaller
+triangles that have been formed.</p>
+<p>The first time I coded this, successive iterations literally replaced
+every new surface triangle that was formed by the process, with an
+arbitrary break after eight or so iterations. I was quite surprised by
+the result, which turned out to look like a slightly corrugated cube. At
+first I naturally assumed that a bug in my code was the cause, but after
+a period of contemplation, I realised this was the correct geometric
+result. The reason for it can be seen in this Wikimedia diagram of the
+first three iterations of forming a Koch surface:</p>
+<p><img alt="" src="../../../../files/2010/08/Koch_surface_0_through_3.png"></p>
+<p>The first iteration replaces every triangle by sticking a new
+tetrahedron out of it - exactly as I had done for every face of my
+original. The next iteration sticks smaller tetrahedrons onto every new
+surface, and the edges of these new, smaller tetrahedrons all line up
+with each other, to form long, contiguous straight seams in the
+resulting shape. By the third iteration (the final one shown here) the
+end result is becoming apparent. Each successive iteration merely
+reduces the size of the ridges - the overall shape of the surface is
+unchanged.</p>
+<p>I modified my algorithm to only replace the triangular faces of the
+newly-formed smaller tetrahedrons, rather than replacing every
+triangular surface, and the result is this more pleasing snowflake
+shape.</p>
+<p><img alt="A Koch tetrahedron" src="../../../../files/2010/08/screen-koch-tetra.png"></p>
+<p>This algorithm is about 60 lines of code. A similar operation can be
+done on a cube, by poking a new, smaller cube out of each of its faces:</p>
+<p><img alt="A Koch cube" src="../../../../files/2010/08/screen-koch-cube.png"></p>
+<p>The deeper red parts are the original cube and the early generations of
+children. The lighter yellow parts are the later generations.</p>
+<p>The final and best example in this section was supplied by Oscar
+Lindberg, who was interested enough on my old blog post about this to
+download the code and produce some shapes of his own. Screenshots can't
+do it justice, but the full stately geometry becomes wonderfully
+apparent when it's in motion. The <em>tetrix</em>, aka the <a href="http://en.wikipedia.org/wiki/Sierpinski_triangle">Sierpinski
+tetrahedron</a>:</p>
+<p><img alt="The tetrix, aka Siepinski Tetrahedron" src="../../../../files/2010/08/screen-sierpinski.png"></p>
+<h3><strong>Odds and Ends</strong></h3>
+<p>That's about all I've got to show you. Overall I'm really pleased by
+this, and excited to do some more of the same going forward.</p>
+<p>You may have noticed I've cheated a little in the demo / screenshots -
+some of them show clear evidence of the rudimentary lighting shader I
+added (e.g. topmost faces are slightly lighter in color than other
+faces.) It would be simple enough to fake this, by providing slightly
+varying colors for each face of our shapes, but for those of you looking
+at the code: I didn't do that. Instead, I had Glyph generate arrays of
+surface normals, which is done by Glyph.get_glnormals(), which works
+pretty much just like all the other Glyph methods we examined in part 1.
+I was getting tired of explaining how Glyph worked, so I figured you
+were probably getting tired of it too, and wouldn't mind if I skipped a
+little which wasn't strictly necessary.</p>
+<p>I was initially a little disappointed by the performance at rendering
+many independently positioned and oriented objects, but now it's picked
+up (see footnote [1]) and is now perfectly acceptable: a little
+over 450 separately moving cubes at 60fps. The OpenGL bindings in
+PyOpenGL wisely choose to prefer correctness and robustness over
+performance by default, so as a result, calling OpenGL from Python is
+not fast out of the box. The <a href="http://pyopengl.sourceforge.net/documentation/">PyOpenGL
+documentation</a> suggests
+many ways in which this performance can be regained once your program is
+working and debugged. I'm not yet using any of these suggestions, so
+hopefully my sluggish performance could be improved substantially.</p>
+<p>In addition, Richard Jones suggested that the innermost Render.draw()
+loop could possibly benefit from <a href="http://www.cython.org/">Cython</a>
+(optional static typing to be added to code written in a less-dynamic
+subset of Python.) This would not just improve the general performance
+of the code in that loop, by actually compiling it to C, but in doing
+so, it would eliminate the Python / C boundary performance penalties,
+and this is something I'm excited to try out in the near future.</p>
+<p>[1] <strong>Update:</strong> A couple of hours after hitting publish on
+this, I discover that switching from the PyOpenGL bindings to those
+built into pyglet gives me two to four times the frame rate, for zero
+code change except the imports. Clearly I don't understand how to get
+the best performance out of PyOpenGL. I've been back and updated the
+performance stats in this post, and hope to make another post about this
+at some point when I understand what I was doing wrong.</p>
+<p><em>The demonstrated</em> <em>code</em> <em>is available at
+<a href="https://github.com/tartley/gloopy">https://github.com/tartley/gloopy</a></em></p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../categories/gamedev.html" rel="tag">GameDev</a></li>
+            <li><a class="tag p-category" href="../../../../categories/graphics.html" rel="tag">Graphics</a></li>
+            <li><a class="tag p-category" href="../../../../categories/presentations.html" rel="tag">Presentations</a></li>
+            <li><a class="tag p-category" href="../../../../categories/python.html" rel="tag">Python</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../7/31/flying-high-hobbyist-opengl-from-python.html" rel="prev" title="Flying High: Hobbyist OpenGL from Python">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../10/15/rerun-unit-tests-whenever-files-update.html" rel="next" title="Rerun unit tests whenever files update">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                
+
+        </section></article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2020         <a href="mailto:tartley@tartley.com">Jonathan Hartley</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">tartley.com</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL">Jonathan Hartley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+            
+        </footer>
+</div>
+</div>
+
+            <script src="../../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

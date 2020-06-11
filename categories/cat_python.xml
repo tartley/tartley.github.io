@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about Python)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/cat_python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley@tartley.com"&gt;Jonathan Hartley&lt;/a&gt; &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"&gt;tartley.com&lt;/span&gt; by &lt;a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL"&gt;Jonathan Hartley&lt;/a&gt; is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.</copyright><lastBuildDate>Thu, 11 Jun 2020 19:39:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/2020/6/9/format-python-snippets-with-black.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;But often you'd like to reformat just a section of the file, while leaving
+everything else intact. In principle, it's easy to tell Vim to just send the
+current visual selection:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;" Black(Python) format the visual selection&lt;/span&gt;
+xnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;(Note that both the above Vim configuration snippets map the same key
+sequence -- leader (commonly comma) followed by lower case b. These can be
+defined simultaneously, because the second one uses 'xnoremap', meaning it is
+used only while a visual selection exists, while the first uses 'nnoremap', so
+is used all other times.)&lt;/p&gt;
+&lt;p&gt;But if the given code starts with an indent on the first line, for example if
+it comes from lines in the middle of a function, then this won't work. Black
+parses the given code into a Python abstract syntax tree (AST), and a leading
+indent is a syntax error - it's just not valid Python.&lt;/p&gt;
+&lt;p&gt;I filed a hopeful &lt;a href="https://github.com/psf/black/issues/1352"&gt;issue with Black&lt;/a&gt;,
+suggesting they could handle this case, but it was a long shot and hasn't
+gained much enthusiasm.&lt;/p&gt;
+&lt;p&gt;So, I present a tiny Python3 wrapper, &lt;em&gt;enblacken&lt;/em&gt;, which:
+* Unindents the given code such that the first line has no indent.
+* Passes the result to Black.
+* Reindents Black's output, by the same amount as the original unindent.&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>Python</category><category>Software</category><guid>https://www.tartley.com/posts/2020/6/9/format-python-snippets-with-black.html</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/posts/2016/5/15/rhythmbox-plugin-announce.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
+for it, called "Announce":&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/tartley/rhythmbox-plugin-announce"&gt;https://github.com/tartley/rhythmbox-plugin-announce&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Every time a new song starts to play, it announces the title using
+speech synthesis. I like it when I'm listening to some new music I'm not
+familiar with, but am away from the computer. Then I can still know
+which track is which.&lt;/p&gt;
+&lt;p&gt;If the album or artist names are different from the previous track, then
+it includes those in the announcement, too.&lt;/p&gt;&lt;/div&gt;</description><category>Python</category><category>Software</category><guid>https://www.tartley.com/posts/2016/5/15/rhythmbox-plugin-announce.html</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>PyRochesterMN</title><link>https://www.tartley.com/posts/2016/1/20/pyrochestermn.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Announcing the world's newest Python User Group, PyRochesterMN, based in
+Rochester, Minnesota, USA.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; We've had a couple of name &amp;amp; hosting changes since:&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/PyRochesterMN"&gt;http://www.meetup.com/PyRochesterMN&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/RochesTech"&gt;http://www.meetup.com/RochesTech&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.reddit.com/r/rochestertech/"&gt;https://www.reddit.com/r/rochestertech/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Python</category><guid>https://www.tartley.com/posts/2016/1/20/pyrochestermn.html</guid><pubDate>Thu, 21 Jan 2016 03:01:27 GMT</pubDate></item><item><title>Chaining a sequence of generators</title><link>https://www.tartley.com/posts/2013/10/15/chaining-a-sequence-of-generators.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I often gravitate towards solutions using a series of chained
+generators, in the style of David Beazley's '&lt;a href="http://www.dabeaz.com/generators-uk/"&gt;Generator Tricks for
+Systems Programmers&lt;/a&gt;.'&lt;/p&gt;
+&lt;p&gt;This results in the outer level of my code calling one generator after
+another, terminating in something that consumes the rows, pulling data
+one row at a time through each of the generators:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;inputRows&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;parsedRows&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inputRows&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;processedRows&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;process&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parsedRows&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;outputRows&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;format_&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;processedRows&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outputRows&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;where each called function except the last is actually a generator, e.g:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rows&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;rows&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;This is great. But my itch is that the top level code above is a bit
+wordy, given that what it does is so simple. The reader has to check
+each temporary variable quite carefully to be sure it's doing the right
+thing.&lt;/p&gt;
+&lt;p&gt;Fowler's 'Refactoring' describes circumstances when &lt;a href="http://www.refactoring.com/catalog/replaceTempWithQuery.html"&gt;it's good to remove
+intermediate
+variables&lt;/a&gt;,
+which results in:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;format_&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;process&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;This is certainly less wordy, and expresses what's happening very
+directly, but it annoys some of my colleagues that the called functions
+are listed in reverse order from what one might intuitively expect.&lt;/p&gt;
+&lt;p&gt;I've had this idea in my head to create a decorator for generators which
+allows one to chain them in an intuitive order, possibly using some
+unconventional notation such as:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;parse&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;process&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;format_&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;where 'parse', et al, are now decorated with '@chainable' or somesuch,
+which returns an instance of a class that stores the wrapped generator,
+and overrides __or__ to do its magic. Maybe 'read' doesn't need to
+be invoked manually there at the start of the chain. I haven't really
+thought this through.&lt;/p&gt;
+&lt;p&gt;Luckily, before embarking on that, I realised today I've been
+over-complicating the whole thing. There's no need for decorators, nor
+for the cute '|' syntax. I just need a plain old function:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;link&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;transforms&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;transform&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;transforms&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: This code has been improved thanks to suggestions in the
+comments from Daniel Pope (eliminate the 'first' variable) and Xtian
+(take an iterable rather than a callable for the source.)&lt;/p&gt;
+&lt;p&gt;This assumes the first item passed to link is an iterable, and each
+subsequent item is a generator that takes the result of the item before.&lt;/p&gt;
+&lt;p&gt;If the final item in the sequence passed to 'link' is a generator, then
+this returns a generator which is the composite of all the ones passed
+in:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;process&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;format_&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Or if the final item passed to 'link' is a regular function, which
+consumes the preceding generators, then calling 'link' will invoke the
+generators, i.e. the following is the same as the above 'for' loop:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;link&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;process&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;format_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;There's some rough edges, such as determining what to do if different
+generators require other args. Presumably 'partial' could help here. But
+in general, 'link' only needs to be written once, and I'm liking it.&lt;/p&gt;&lt;/div&gt;</description><category>Python</category><guid>https://www.tartley.com/posts/2013/10/15/chaining-a-sequence-of-generators.html</guid><pubDate>Tue, 15 Oct 2013 20:09:54 GMT</pubDate></item><item><title>pip install : Lightspeed and Bulletproof</title><link>https://www.tartley.com/posts/2013/3/8/pip-install-lightspeed-and-bulletproof.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I saw a post about &lt;a href="http://www.scottisheyes.com/how-to-fix-slow-pip-install"&gt;speeding up the Python packaging command "pip
+install"&lt;/a&gt;, by
+specifying more responsive mirrors for querying and downloading
+packages. For my situation, a better tactic is this.&lt;/p&gt;
+&lt;p&gt;Step one: Download all your project's dependencies into a local
+'packages' dir, but don't install them yet:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;mkdir packages
+pip install --download&lt;span class="o"&gt;=&lt;/span&gt;packages -r requirements.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Step two, install from the 'packages' dir:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install --no-index --find-links&lt;span class="o"&gt;=&lt;/span&gt;packages -r requirements.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;em&gt;(The above syntax works on pip 1.3, released yesterday. Docs for older
+versions of pip claim to support this, but in practice, for pip 1.2,
+I've had to use "&lt;code&gt;--find-links=file://$PWD/packages&lt;/code&gt;")&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Step 2 works even if PyPI is unreachable. It works even if some of your
+dependencies are self-hosted by the authors, and that website is
+unreachable. It works even if the version you have pinned of one of your
+dependencies has been deleted by the author (some packages do this
+routinely after security updates.) It works even if you have no network
+connection at all. In short, it makes creation of your virtualenv
+bulletproof.&lt;/p&gt;
+&lt;p&gt;As a nice side effect, it runs really fast, because it isn't downloading
+the packages across the internet, nor is it attempting to scan a remote
+index to check for matching or newer versions of each package. This is
+much quicker than just using a Pip download cache, especially for large
+projects with many dependencies which only change occasionally.&lt;/p&gt;
+&lt;p&gt;At &lt;a href="http://rangespan.com"&gt;Rangespan&lt;/a&gt;, we check the 'packages' directory
+into source control, so that once you've checked out a project's repo,
+you have everything you need to deploy locally and run, even if you have
+no network. You might choose to treat 'packages' as ephemeral.&lt;/p&gt;
+&lt;p&gt;It was pointed out to me recently by
+&lt;a href="https://twitter.com/jezdez"&gt;@jezdez&lt;/a&gt;, Pip maintainer, this usage
+pattern has now been &lt;a href="http://www.pip-installer.org/en/latest/cookbook.html#fast-local-installs"&gt;explicitly called out in the
+documentation&lt;/a&gt;,
+which was substantially reorganised and improved with the recent 1.3
+release.&lt;/p&gt;&lt;/div&gt;</description><category>Python</category><guid>https://www.tartley.com/posts/2013/3/8/pip-install-lightspeed-and-bulletproof.html</guid><pubDate>Fri, 08 Mar 2013 15:29:09 GMT</pubDate></item><item><title>Hexagonal Django</title><link>https://www.tartley.com/posts/2012/12/4/hexagonal-django.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The last few weeks I've been thinking about the architectural pattern
+known as &lt;a href="http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html"&gt;Clean, Onion, Hexagonal, or
+Ports'n'Adaptors&lt;/a&gt;.
+I'm curious if many people are applying it in the Django world.&lt;/p&gt;
+&lt;p&gt;The premise is for your core application entity classes and business
+rules to be plain old objects, with no dependencies. In particular, they
+are not dependent on the interfaces between your application and
+external systems, such as your persistence mechanism, or your web
+framework. Instead, external interface components depend upon your core
+business objects. This essentially moves the database from the 'bottom'
+layer of the old traditional 'three layer architecture', to form a part
+of the topmost layer - a sibling with the 'UI.'&lt;/p&gt;
+&lt;p&gt;For inbound messages (e.g handling a web request) this is
+straightforward - Django calls your view code which calls your business
+layer, but keep your business layer separate from your Django code, so
+it is stand-alone and unit-testable. For outbound messages, such as then
+rendering the web page in response, it's slightly more complicated: Your
+business logic must pass the result (typically a pure data structure)
+back to your web-aware code, but without your business logic depending
+on the web-aware component. This requires an inversion of control.&lt;/p&gt;
+&lt;p&gt;That way, all your business logic can easily be tested in unit tests,
+with no mocking required. You still need some end-to-end tests to verify
+integration, but you shouldn't need to involve your UI or database in
+testing every detail of your business logic.&lt;/p&gt;
+&lt;p&gt;Also, you can easily switch out your external system interfaces, such as
+persistence, to use another RDBMS, another ORM, a NoSQL store, or an
+in-memory version for testing Since the core of your application doesn't
+have any dependency on these components, it is oblivious to the
+change. The business logic, because it doesn't depend on Django, is no
+longer riddled with Django's convenient ORM database access.&lt;/p&gt;
+&lt;p&gt;Same thing goes for switching out your web framework, or calling the
+same logic from web UI or web API calls. And again, for switching out
+your UI: add a command line application, or a console UI. The core
+application logic is unaffected, and your new interface components
+contain only the code that is specific to that interface's concerns.&lt;/p&gt;
+&lt;p&gt;Another side effect is that your web framework, if you're using one,
+becomes a peripheral detail which depends upon your core application,
+rather than the other way round. Your Django project would become a
+subdirectory of your project, rather than dominating your project
+directory structure. Since the business logic formerly contained within
+it is now elsewhere (in your core business objects) the Django project
+is now very thin. Views, for example, are delegations to single
+business-layer functions. The Django project now contains just the
+web-oriented aspects of your project, as it should.&lt;/p&gt;
+&lt;p&gt;These ideas all seem like relatively straightforward software
+engineering, and I feel a bit foolish for not having been aware of them
+all these years. I console myself that I'm not alone.&lt;/p&gt;
+&lt;p&gt;UncleBob's Ruby Midwest keynote "&lt;a href="https://www.tartley.com/posts/2012/12/4/%20http:/www.confreaks.com/videos/759-rubymidwest2011-keynote-architecture-the-lost-years"&gt;Architecture - The Lost
+Years&lt;/a&gt;"
+attributes one source of this idea to Ivar Jacobsen's 1994 book &lt;a href="https://www.tartley.com/posts/2012/12/4/%20http:/www.amazon.co.uk/Object-oriented-Software-Engineering-Approach-Press/dp/0201544350"&gt;Object
+Oriented Software Engineering : A Use Case Driven
+Approach&lt;/a&gt;
+(2nd-hand hardbacks cheap on Amazon.)&lt;/p&gt;
+&lt;p&gt;I see a few people applying these ideas to Rails, but are many people
+out there doing this in Django? I plan to refactor a small vertical
+slice of our monster Django app into this style, to try and prove the
+idea for myself.&lt;/p&gt;&lt;/div&gt;</description><category>Python</category><guid>https://www.tartley.com/posts/2012/12/4/hexagonal-django.html</guid><pubDate>Tue, 04 Dec 2012 20:42:01 GMT</pubDate></item><item><title>Compiling MacVim with Python 2.7</title><link>https://www.tartley.com/posts/2011/10/18/compiling-macvim-with-python-2-7.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I love the brilliant Vim plugin
+&lt;a href="http://www.vim.org/scripts/script.php?script_id=2441"&gt;pyflakes-vim&lt;/a&gt;,
+which highlights errors &amp;amp; warnings, and since I got a MacBook for work,
+I've been using MacVim a lot.&lt;/p&gt;
+&lt;p&gt;This combination has a problem, that MacVim uses the OSX system default
+Python 2.6, so pyflakes is unable to handle Python 2.7 syntax, such as
+set literals. These are marked as a syntax errors, which prevents the
+rest of the file from being parsed.&lt;/p&gt;
+&lt;p&gt;The solution is to compile your own MacVim, using Python 2.7 instead of
+the system Python. The following commands got MacVim compiled for me:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+git clone git://github.com/b4winckler/macvim.git
+&lt;span class="nb"&gt;cd&lt;/span&gt; macvim/src
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;LDFLAGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;-L/usr/lib
+./configure &lt;span class="se"&gt;\&lt;/span&gt;
+    --with-features&lt;span class="o"&gt;=&lt;/span&gt;huge &lt;span class="se"&gt;\&lt;/span&gt;
+    --enable-rubyinterp &lt;span class="se"&gt;\&lt;/span&gt;
+    --enable-perlinterp &lt;span class="se"&gt;\&lt;/span&gt;
+    --enable-cscope &lt;span class="se"&gt;\&lt;/span&gt;
+    --enable-pythoninterp &lt;span class="se"&gt;\&lt;/span&gt;
+    --with-python-config-dir&lt;span class="o"&gt;=&lt;/span&gt;/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config
+make
+open MacVim/build/Release
+&lt;span class="nb"&gt;echo&lt;/span&gt; Drag MacVim.app to your Applications directory
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Without the LDFLAGS setting, I was missing some symbols at link. The
+--with-python-config-dir entry came from typing 'which python' to find
+where my Python 2.7 install lives, and modifying that result to find its
+'config' directory (whatever that is) near to the binary.&lt;/p&gt;
+&lt;p&gt;As indicated, install by dragging the resulting
+macvim/src/MacVim/build/Release/MacVim.app into your Applications
+directory.&lt;/p&gt;
+&lt;p&gt;Open up MacVim, and check out the built-in Python version:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
+&lt;span class="mf"&gt;2.7&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r271&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;86882&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Nov&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="mi"&gt;2010&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;35&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;34&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;And files with set literals are now correctly parsed for errors.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This only works if the Python 2.7 is your default 'python'
+executable. Otherwise, or if you get "ImportError: No module named
+site"?, see Richard's comments below.&lt;/p&gt;&lt;/div&gt;</description><category>OSX-dev</category><category>Python</category><category>Vim</category><guid>https://www.tartley.com/posts/2011/10/18/compiling-macvim-with-python-2-7.html</guid><pubDate>Tue, 18 Oct 2011 17:25:03 GMT</pubDate></item><item><title>Python 2.7 regular expression cheatsheet</title><link>https://www.tartley.com/posts/2011/10/14/python-2-7-regular-expression-cheatsheet.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Couldn't find one of these, so I whipped one up.&lt;/p&gt;
+&lt;p&gt;Bit of restructured text:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/blob/master/cheatsheet.rst"&gt;https://github.com/tartley/python-regex-cheatsheet/blob/master/cheatsheet.rst&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Install some Python packages:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/blob/master/requirements.txt"&gt;https://github.com/tartley/python-regex-cheatsheet/blob/master/requirements.txt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Invoke rst2pdf:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/blob/master/Makefile"&gt;https://github.com/tartley/python-regex-cheatsheet/blob/master/Makefile&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Get a nice PDF out:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf"&gt;Python 2.7 regular expression
+cheatsheet&lt;/a&gt;
+(click this link or the image for the most up-to-date PDF from github.)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf"&gt;&lt;img alt="" src="https://www.tartley.com/files/2011/10/Python-regular-expression-cheatsheet-0.3.0.png" title="Python regular expression cheatsheet 0.3.3"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Python</category><guid>https://www.tartley.com/posts/2011/10/14/python-2-7-regular-expression-cheatsheet.html</guid><pubDate>Fri, 14 Oct 2011 16:20:11 GMT</pubDate></item><item><title>Django testing 201 : Acceptance Tests vs Unit Tests</title><link>https://www.tartley.com/posts/2011/7/14/django-testing-201-acceptance-tests-vs-unit-tests.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I'm finding that our Django project's tests fall into an uncomfortable
+middle-ground, halfway between end-to-end acceptance tests and proper
+unit tests. As such they don't exhibit the best qualities of either. I'd
+like to fix this.&lt;/p&gt;
+&lt;p&gt;We're testing our Django application in what I believe is the canonical
+way, as described by the &lt;a href="https://docs.djangoproject.com/en/dev/topics/testing/"&gt;excellent
+documentation&lt;/a&gt;.
+We have a half-dozen Django applications, with a mixture of
+&lt;code&gt;unittest.TestCase&lt;/code&gt; and &lt;code&gt;django.test.TestCase&lt;/code&gt; subclasses in each
+application's tests.py module. They generally use fixtures or the Django
+ORM to set up data for the test, then invoke the function-under-test,
+and then make assertions about return values or side-effects, often
+using the ORM again to assert about the new state of the database.&lt;/p&gt;
+&lt;h3&gt;Not an Acceptance Test&lt;/h3&gt;
+&lt;p&gt;Such a test doesn't provide the primary benefit of an acceptance test,
+namely proof that the application actually works, because it isn't quite
+end-to-end enough. Instead of calling methods-under-test, we should be
+using the Django testing client to make HTTP requests to our web
+services, and maybe incorporating Selenium tests to drive our web UI.
+This change is a lot of work, but at least the path forward seems clear.&lt;/p&gt;
+&lt;p&gt;However, an additional problem is that acceptance tests ought to be
+associated with features that are visible to an end user. A single user
+story might involve calls to several views, potentially spread across
+different Django apps. Because of this, I don't think it's appropriate
+for an acceptance test to live within a single Django app's directory.&lt;/p&gt;
+&lt;h3&gt;Not a Unit Test&lt;/h3&gt;
+&lt;p&gt;On the other hand, our existing tests are also not proper unit tests.
+They hit the (test) database and the filesystem, and they currently
+don't do any mocking out of expensive or complicated function calls. As
+a result, they are slow to run, and will only get slower as we ramp up
+our feature set and our test coverage. This is a cardinal sin for unit
+tests, and it discourages developers from running the tests frequently
+enough. In addition, tests like this often require extensive setup of
+test data, and are therefore hard to write, so it's very
+labour-intensive to provide adequate test coverage.&lt;/p&gt;
+&lt;h3&gt;My Solution&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;1) I've created a top-level acceptancetests directory.&lt;/strong&gt; Most of our
+current tests will be moved into this directory, because they are closer
+to acceptance tests than unit tests, and will gradually be modified to
+be more end-to-end.&lt;/p&gt;
+&lt;p&gt;These acceptance tests need to be run by the Django testrunner, since
+they rely on lots of things that it does, such as creating the test
+database and rolling back after each test method. However, the Django
+testrunner won't find these tests unless I make 'acceptancetests' a new
+Django application, and import all acceptance test classes into its
+tests.py. I'm considering doing this, but for the moment I have another
+solution, which I'll describe in a moment.&lt;/p&gt;
+&lt;p&gt;We also need to be able to create unit tests for all of our code,
+regardless of whether that code is within a Django model, or somewhere
+else in a Django app, or in another top-level directory that isn't a
+Django app. Such unit tests should live in a 'tests' package right next
+to the code they test. I'm puzzled as to why Django's testrunner doesn't
+look for unit tests throughout the project and just run them all, along
+with the Django-specific tests.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2) My solution to this is to augment the Django test runner&lt;/strong&gt;, by
+inheriting from it. My test runner, instead of just looking for tests in
+each app's models.py and tests.py, looks for subclasses of
+unittest.TestCase in every module throughout the whole project. Setting
+Django's settings.TEST_RUNNER causes this custom test runner to be used
+by 'manage.py test'. Thanks to the Django contributors for this
+flexibility!&lt;/p&gt;
+&lt;p&gt;So the new test runner finds and runs all the tests which the default
+Django runner runs, and it also finds our unit tests from all over the
+project, and it also includes our new top-level 'acceptancetests'
+directory. This is great!&lt;/p&gt;
+&lt;p&gt;One surprise is that the number of tests which get run has actually
+decreased. On closer inspection, this is because the standard Django
+test runner includes all the tests for every Django app, and this
+includes not just my project's apps, but also the built-in and
+middleware Django apps. We are no longer running these tests. Is this
+important? I'm not sure: After all, we are not modifying the code in
+django.contrib, so I don't expect these tests to start failing. On the
+other hand, maybe those tests help to demonstrate that our Django
+settings are not broken?&lt;/p&gt;
+&lt;h3&gt;An appeal for sanity&lt;/h3&gt;
+&lt;p&gt;My solutions seem to work, but I'm suspicious that I'm swimming against
+the current, because I haven't found much discussion about these issues,
+so maybe I'm just well off the beaten path. Have many other people
+already written a similar extension to Django's test runner? If so,
+where are they all? If not, why not? How else is everyone running their
+Django project tests in locations other than models.py or tests.py? Or
+do they not have tests outside these locations? If not, why not? I'd
+love to hear about it if I'm doing it wrong, or if there's an easier
+approach.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; My &lt;a href="http://rangespan.com/"&gt;fabulous employer&lt;/a&gt; has given
+permission to release the test runner as open source:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/rangespan/django-alltestsrunner"&gt;https://github.com/rangespan/django-alltestsrunner&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update2:&lt;/strong&gt; I like this post's numeric ID (check the URL)&lt;/p&gt;&lt;/div&gt;</description><category>Python</category><category>Testing</category><guid>https://www.tartley.com/posts/2011/7/14/django-testing-201-acceptance-tests-vs-unit-tests.html</guid><pubDate>Thu, 14 Jul 2011 21:19:43 GMT</pubDate></item><item><title>Python port of Modern 3D Graphics using OpenGL tutorial</title><link>https://www.tartley.com/posts/2011/4/20/python-port-of-modern-3d-graphics-using-opengl-tutorial.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;To my knowledge, there are three online OpenGL tutorials which stand
+head and shoulders above the rest:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.arcsynthesis.org/gltut/index.html"&gt;Learning Modern 3D Graphics Programming Through
+    OpenGL&lt;/a&gt; (C)&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html"&gt;An intro to modern
+    OpenGL&lt;/a&gt; (C)&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://learningwebgl.com/blog/?category_name=lessons"&gt;Learning
+    WebGL&lt;/a&gt;
+    (Javascript)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I recently started porting the first of these from C to Python.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://bitbucket.org/tartley/gltutpy"&gt;https://bitbucket.org/tartley/gltutpy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is primarily for my own benefit, and I've only done the first two
+chapters thus far, but others may find some use in seeing the
+translation. If anyone else is interested enough to want to contribute,
+drop me a line and I'll happily grant commit rights.&lt;/p&gt;&lt;/div&gt;</description><category>Graphics</category><category>Python</category><guid>https://www.tartley.com/posts/2011/4/20/python-port-of-modern-3d-graphics-using-opengl-tutorial.html</guid><pubDate>Wed, 20 Apr 2011 19:23:54 GMT</pubDate></item></channel></rss>

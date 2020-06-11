@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about Tartley.com)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/cat_tartleycom.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley@tartley.com"&gt;Jonathan Hartley&lt;/a&gt; &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"&gt;tartley.com&lt;/span&gt; by &lt;a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL"&gt;Jonathan Hartley&lt;/a&gt; is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.</copyright><lastBuildDate>Thu, 11 Jun 2020 19:39:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cross-site image linking vandalism</title><link>https://www.tartley.com/posts/2008/6/5/cross-site-image-linking-vandalism.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="New Super Mario Brothers... or is it?" src="https://www.tartley.com/files/2007/03/new-super-mario-bros2.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;It never gets old. Thank you for the giggles, &lt;a href="http://vgfreedom.blogspot.com/2008/06/podcast-review-new-super-mario-bros.html"&gt;Video Game
+Freedom&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>Creative</category><category>gumby</category><category>image</category><category>linking</category><category>Refried</category><category>Tartley.com</category><category>vandalism</category><category>Web</category><guid>https://www.tartley.com/posts/2008/6/5/cross-site-image-linking-vandalism.html</guid><pubDate>Thu, 05 Jun 2008 22:17:28 GMT</pubDate></item><item><title>Webfaction hosting</title><link>https://www.tartley.com/posts/2007/6/21/webfaction-hosting.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://www.webfaction.com/" title="WebFaction - hosting for an agile web."&gt;&lt;img alt="WebFaction - hosting for an agile web." src="https://www.tartley.com/files/2007/06/webfaction.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If
+you can see this post, then tartley.com successfully switched to
+&lt;a href="https://www.webfaction.com/" title="WebFaction - hosting for an agile web."&gt;WebFaction&lt;/a&gt;
+for our hosting, thanks to the resounding recommendations of Michael,
+and the genial-but-highly-competent aura emanating from the big cheese,
+Remi Delon. Shell access, Linux environment, open-source friendly,
+Wordpress directly catered for. I'm a happy bunny. Thanks all round.
+Maybe now I can finally get around to putting that photo gallery up?&lt;/p&gt;&lt;/div&gt;</description><category>Tartley.com</category><guid>https://www.tartley.com/posts/2007/6/21/webfaction-hosting.html</guid><pubDate>Thu, 21 Jun 2007 15:34:05 GMT</pubDate></item><item><title>WordPress providing categorised RSS feeds</title><link>https://www.tartley.com/posts/2007/3/14/wordpress-providing-categorised-rss-feeds.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Apologies in advance to the &lt;a href="http://londonpython.org.uk/"&gt;London Python&lt;/a&gt;
+crowd, who I know are being force-fed these posts, for the bundle of
+non-Python-related updates they are about to receive. Can anyone go and
+look on the WordPress doc pages for me and figure out if there is plugin
+to make the RSS feeds it generates specific to a particular combo of
+site categories? Tar. :)&lt;/p&gt;</description><category>Tartley.com</category><guid>https://www.tartley.com/posts/2007/3/14/wordpress-providing-categorised-rss-feeds.html</guid><pubDate>Wed, 14 Mar 2007 12:12:49 GMT</pubDate></item><item><title>GoDaddy sucks</title><link>https://www.tartley.com/posts/2007/2/20/godaddy-sucks.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;In the 36 hours since embarking upon this ill-considered plan to
+jump-start &lt;em&gt;tartley.com&lt;/em&gt;, it has became increasingly apparent that
+&lt;a href="https://www.tartley.com/posts/2007/2/20/godaddy.com"&gt;godaddy.com&lt;/a&gt;, the cheap-as-chips host I hurriedly opted
+for earlier in the year, sucks &lt;em&gt;McSuckety&lt;/em&gt; suck-suck.&lt;/p&gt;
+&lt;p&gt;Let's hope &lt;a href="http://laughingsquid.net/"&gt;these guys&lt;/a&gt; are somewhat better.
+Planned photo gallery will have to wait until I get switched over. I
+think I could even qualify for their 'starving artist' discount!&lt;/p&gt;&lt;/div&gt;</description><category>Tartley.com</category><guid>https://www.tartley.com/posts/2007/2/20/godaddy-sucks.html</guid><pubDate>Tue, 20 Feb 2007 14:55:02 GMT</pubDate></item><item><title>First Post!</title><link>https://www.tartley.com/posts/2007/2/18/first-post.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;Tartley.com&lt;/em&gt; relaunched all over an unsuspecting, with a
+content-management makeover and a brand-new pseudonym &lt;strong&gt;(subsequently
+retracted&lt;/strong&gt;, at least until &lt;a href="http://www.whois.net/whois_new.cgi?d=gridbug&amp;amp;tld=com"&gt;Operation Cyber
+Poach&lt;/a&gt; goes into
+action.&lt;strong&gt;)&lt;/strong&gt; Fortunately for those of a sensitive disposition, there
+doesn't seem to be any way to import the mouldy carcass of tartley.com
+&lt;a href="http://web.archive.org/web/20010310062042/http://www.tartley.com/"&gt;circa
+2000&lt;/a&gt;,
+short of devoting a Sunday afternoon to the task, those being a resource
+of which I am in limited supply. Luckily, I needn't be embarrassed about
+having such a bare-cupboard site - as &lt;a href="http://www.zefrank.com/theshow/archives/2007/02/020107.html"&gt;everyone
+knows&lt;/a&gt;, it
+takes millions of dollars to create compelling content.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update 10/05/2007:&lt;/strong&gt; Operation cyber-poach aborted, the bastard
+renewed.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ whois gridbug.com
+ Registrar of Record: Easyspace Ltd.
+ Record last updated on &lt;span class="m"&gt;30&lt;/span&gt;-Mar-2007.
+ Record expires on &lt;span class="m"&gt;24&lt;/span&gt;-May-2008.
+ Record created on &lt;span class="m"&gt;24&lt;/span&gt;-May-2002.
+
+ Domain servers in listed order:
+    NS1.EASYPOST.COM   &lt;span class="m"&gt;84&lt;/span&gt;.22.162.11
+    NS3.EASYPOST.COM   &lt;span class="m"&gt;62&lt;/span&gt;.128.193.206
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><category>Tartley.com</category><guid>https://www.tartley.com/posts/2007/2/18/first-post.html</guid><pubDate>Mon, 19 Feb 2007 03:36:50 GMT</pubDate></item></channel></rss>

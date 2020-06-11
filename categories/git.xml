@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about Git)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/git.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley@tartley.com"&gt;Jonathan Hartley&lt;/a&gt; &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"&gt;tartley.com&lt;/span&gt; by &lt;a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL"&gt;Jonathan Hartley&lt;/a&gt; is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.</copyright><lastBuildDate>Thu, 11 Jun 2020 19:39:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Git: When to use three dots vs two</title><link>https://www.tartley.com/posts/2015/8/25/git-when-to-use-three-dots-vs-two.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
+today:&lt;/p&gt;
+&lt;p&gt;To see the commits or diffs introduced by a branch (the filled circles ●):&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     f
+    +●  m           git log m..f
+     |  ○
+    +●  |           git diff m...f
+      \ ○
+       \|
+        ○
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;To see the commits or diffs between the tip of one branch and another:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     f              git log m...f
+    +●  m           All commits look the same,
+     |  ●-          unless you use --left-right, which
+    +●  |           shows where each commit comes from.
+      \ ●-
+       \|           git diff m..f
+        ○           '-' commits are shown inverted,
+                     i.e. additions as deletions.
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;To see the commits from 'f' back to the beginning of time:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     f
+    +●  m           git log f
+     |  ○
+    +●  |           (diffs back to start of time are just
+      \ ○            the contents of the working tree)
+       \|
+       +●
+        |
+       +●
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
+above that you almost always want:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git diff m...f
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;is the same as&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git checkout f
+git diff m...
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;or&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git checkout m
+git diff ...f
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;&lt;/div&gt;</description><category>Geek</category><category>Git</category><category>Version control</category><guid>https://www.tartley.com/posts/2015/8/25/git-when-to-use-three-dots-vs-two.html</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>Understanding git rebase so it sticks</title><link>https://www.tartley.com/posts/2014/2/7/understanding-rebase-so-it-sticks.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember how to use git rebase. That ends today. Here are
+my notes to help me remember.&lt;/p&gt;
+&lt;p&gt;Rebase is traditionally documented as:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase &lt;span class="o"&gt;[&lt;/span&gt;--onto newbase&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;upstream &lt;span class="o"&gt;[&lt;/span&gt;branch&lt;span class="o"&gt;]]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;This is confusing for several reasons. A slight improvement is to rename
+the args:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase &lt;span class="o"&gt;[&lt;/span&gt;--onto target&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;include&lt;/code&gt; is the tip of the branch to be transplanted. If omitted,
+    it defaults to the current branch.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;exclude&lt;/code&gt; excludes all its ancestors from being transplanted. Hence
+    the transplanted branch will have its tip at &lt;code&gt;include&lt;/code&gt;, and its base
+    at the common ancestor of &lt;code&gt;include&lt;/code&gt; and &lt;code&gt;exclude&lt;/code&gt;. If &lt;code&gt;--onto&lt;/code&gt; isn't
+    specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the destination for the
+    transplant.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;target&lt;/code&gt; is the place to transplant the branch to. If not specified,
+    it defaults to the value of &lt;code&gt;exclude&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hence, a simple before and after:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;o---o---o---o---o---o exclude
+     \
+      1---2---3 current branch
+                or include
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;                exclude
+                v
+o---o---o---o---o---1---2---3 current branch
+                              or include
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;See how the commits to be transplanted start at &lt;code&gt;include&lt;/code&gt; and go back to
+the common ancestor of that and &lt;code&gt;exclude&lt;/code&gt;. Since &lt;code&gt;--onto&lt;/code&gt; isn't
+specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the transplant destination.&lt;/p&gt;
+&lt;p&gt;Or a more complex one:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt; o---o---o---o---o target
+      \
+       o---o---o exclude
+            \
+             1---2 current branch
+                   or include
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase --onto target exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;                    target
+                    v
+    o---o---o---o---o---1---2 current branch
+         \                    or include
+          o---o---o
+                  ^
+                  exclude
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Again, the commits to be transplanted are defined by &lt;code&gt;include&lt;/code&gt; and
+&lt;code&gt;exclude&lt;/code&gt;, but this time a separate destination is specified using
+&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>Git</category><category>Software</category><guid>https://www.tartley.com/posts/2014/2/7/understanding-rebase-so-it-sticks.html</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item><item><title>Launch Gitk displaying all branches</title><link>https://www.tartley.com/posts/2010/12/31/launch-gitk-displaying-all-extant-branches.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; All of the below is made totally redundant by simply using
+&lt;code&gt;gitk --all&lt;/code&gt;. Thanks Russel!&lt;/p&gt;
+&lt;p&gt;When I launch Gitk, it just displays the current branch. To display
+other branches, you must name them on the command line. To display all
+existing branches, you need to find out all the branch names:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git branch
+  create-sql-dev
+  formula-rewrite
+* master
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Then laboriously type them in to the gitk command line:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ gitk create-sql-dev formula-rewrite master
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Alternatively, save this Bash snippet in a script on your PATH. I call
+mine gitka, for 'all branches':&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/usr/bin/bash&lt;/span&gt;
+&lt;span class="c1"&gt;# run gitk, displaying all existing branches&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; b in &lt;span class="s2"&gt;"`git branch`"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$b&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; tr -d &lt;span class="s2"&gt;"*"&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; xargs gitk
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;img alt="Gitk displaying all branches, not just the current ('master' in bold)" src="https://www.tartley.com/files/2010/12/gitk-all-branches.png" title="gitk-all-branches"&gt;&lt;/p&gt;
+&lt;p&gt;This works on Windows too, if you save it as 'gitka.sh', and have Cygwin
+installed and associate the .sh filename extension with the Cygwin Bash
+executable. You can then run it as 'gitka' from a Windows command prompt
+thingy. If you then use 'ln -s gitka.sh gitka', then you can also run it
+as just 'gitka' from a Cygwin bash prompt too - without this you would
+have had to type out the full 'gitka.sh'.&lt;/p&gt;&lt;/div&gt;</description><category>Git</category><category>MSWin-dev</category><category>Software</category><guid>https://www.tartley.com/posts/2010/12/31/launch-gitk-displaying-all-extant-branches.html</guid><pubDate>Fri, 31 Dec 2010 18:25:31 GMT</pubDate></item></channel></rss>

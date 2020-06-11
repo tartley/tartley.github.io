@@ -1,0 +1,1288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about MSWin-dev)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/mswin-dev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley@tartley.com"&gt;Jonathan Hartley&lt;/a&gt; &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"&gt;tartley.com&lt;/span&gt; by &lt;a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL"&gt;Jonathan Hartley&lt;/a&gt; is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.</copyright><lastBuildDate>Thu, 11 Jun 2020 19:39:39 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>£ key in Windows on a US laptop keyboard, done right.</title><link>https://www.tartley.com/posts/2011/7/10/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The usual solution to typing non-US characters on a US keyboard in
+Windows is to hold left-alt, then type on the numeric keypad:&lt;/p&gt;
+&lt;p&gt;£   Left-alt + 0163&lt;/p&gt;
+&lt;p&gt;€   Left-alt + 0128&lt;/p&gt;
+&lt;p&gt;This is a pain on my (otherwise fabulous) Thinkpad laptop, because the
+numeric keypad is accessed by holding the blue 'Fn' key while you tap
+ScrLk, to toggle numeric keypad mode, and then doing the same again
+afterwards to turn it off.&lt;/p&gt;
+&lt;p&gt;One inadequate alternative (on WindowsXP, YMMV) is to go into control
+panel; Regional and Language Options; Languages; Details; Settings. Add
+a new keyboard configuration, "United States-International", which
+should be grouped under your existing language ("English (United
+Kingdom)" for me.) OK all the dialogs, restart your applications.&lt;/p&gt;
+&lt;p&gt;Now you can simply type:&lt;/p&gt;
+&lt;p&gt;£   Right-alt + Shift + 4&lt;/p&gt;
+&lt;p&gt;€   Right-alt + 5&lt;/p&gt;
+&lt;p&gt;The downside of this solution is that the "UnitedStates-International"
+keyboard setting adds a bunch of other features, including 'dead-keys',
+whereby quotes and other punctuation are used to add accents to letters,
+which is overly intrusive if, like me, you hardly ever use accents.&lt;/p&gt;
+&lt;p&gt;Ultimate solution then, define your own personal keyboard layout.
+Download the Microsoft Keyboard Layout Creator from here:
+&lt;a href="http://msdn.microsoft.com/en-us/goglobal/bb964665"&gt;http://msdn.microsoft.com/en-us/goglobal/bb964665&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;My end result is an MSI with which I can install a new keyboard layout,
+which is exactly like 'US', but with the addition of £ on the key
+right-alt + 3:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2011/07/windows-US-keyboard-layout-with-pound-on-right-alt-3.zip"&gt;windows-US-keyboard-layout-with-pound-on-right-alt-3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The source .klc file is in there, so you could add your own tweaks on
+top of that.&lt;/p&gt;&lt;/div&gt;</description><category>Geek</category><category>MSWin-dev</category><guid>https://www.tartley.com/posts/2011/7/10/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right.html</guid><pubDate>Sun, 10 Jul 2011 18:06:34 GMT</pubDate></item><item><title>Launch Gitk displaying all branches</title><link>https://www.tartley.com/posts/2010/12/31/launch-gitk-displaying-all-extant-branches.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; All of the below is made totally redundant by simply using
+&lt;code&gt;gitk --all&lt;/code&gt;. Thanks Russel!&lt;/p&gt;
+&lt;p&gt;When I launch Gitk, it just displays the current branch. To display
+other branches, you must name them on the command line. To display all
+existing branches, you need to find out all the branch names:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git branch
+  create-sql-dev
+  formula-rewrite
+* master
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Then laboriously type them in to the gitk command line:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ gitk create-sql-dev formula-rewrite master
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Alternatively, save this Bash snippet in a script on your PATH. I call
+mine gitka, for 'all branches':&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/usr/bin/bash&lt;/span&gt;
+&lt;span class="c1"&gt;# run gitk, displaying all existing branches&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; b in &lt;span class="s2"&gt;"`git branch`"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$b&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; tr -d &lt;span class="s2"&gt;"*"&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; xargs gitk
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;img alt="Gitk displaying all branches, not just the current ('master' in bold)" src="https://www.tartley.com/files/2010/12/gitk-all-branches.png" title="gitk-all-branches"&gt;&lt;/p&gt;
+&lt;p&gt;This works on Windows too, if you save it as 'gitka.sh', and have Cygwin
+installed and associate the .sh filename extension with the Cygwin Bash
+executable. You can then run it as 'gitka' from a Windows command prompt
+thingy. If you then use 'ln -s gitka.sh gitka', then you can also run it
+as just 'gitka' from a Cygwin bash prompt too - without this you would
+have had to type out the full 'gitka.sh'.&lt;/p&gt;&lt;/div&gt;</description><category>Git</category><category>MSWin-dev</category><category>Software</category><guid>https://www.tartley.com/posts/2010/12/31/launch-gitk-displaying-all-extant-branches.html</guid><pubDate>Fri, 31 Dec 2010 18:25:31 GMT</pubDate></item><item><title>'Go to Definition' in Vim for Python using Ctags, Done Right</title><link>https://www.tartley.com/posts/2010/12/16/go-to-definition-in-vim-for-python-using-ctags-on-windows.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;How to set up and configure Vim to use tags for Python development so
+that it doesn't suck.&lt;/p&gt;
+&lt;h3&gt;Install Ctags&lt;/h3&gt;
+&lt;p&gt;Get the latest version of &lt;a href="http://ctags.sourceforge.net/"&gt;ctags&lt;/a&gt;, put it
+on your PATH. Recent releases are much improved for Python.&lt;/p&gt;
+&lt;h3&gt;Creating or updating tags files&lt;/h3&gt;
+&lt;p&gt;You'll probably want one tags file at the root of your project, which
+will need to be created or updated whenever you make significant
+changes. Either get used to manually running the following command a
+lot:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ctags -R .
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;or bind it to a key in your \~/.vimrc:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;map  :&lt;span class="p"&gt;!&lt;/span&gt;&lt;span class="k"&gt;start&lt;/span&gt; /min ctags &lt;span class="p"&gt;-&lt;/span&gt;R .
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;I like to set Vim's current working directory equal to the root of
+whatever project I'm working in, so now I can press f12 to update the
+tags file for the project. The 'start /min' part is a Windows-specific
+way to run the command in the background, so Vim isn't locked up waiting
+for it to finish.&lt;/p&gt;
+&lt;h3&gt;Test it out&lt;/h3&gt;
+&lt;p&gt;Now, in Vim, ctrl-] will jump to the definition of the symbol under
+your text cursor. Hooray, etc. If there is more than one definition of
+that symbol, it presents a menu for you to choose from.&lt;/p&gt;
+&lt;h3&gt;Turn off useless tags&lt;/h3&gt;
+&lt;p&gt;By default, ctags generates tags for Python functions, classes, class
+members, variables and imports. The last two are useless to me, and they
+actually make ctrl-] more inconvenient, because they increase the
+likelyhood of finding duplicate definitions of a tag, causing the menu
+to inconveniently pop up, rather than just jumping to the tag you want.&lt;/p&gt;
+&lt;p&gt;To fix this, create a \~/.ctags file:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;--python-kinds&lt;span class="o"&gt;=&lt;/span&gt;-iv
+--exclude&lt;span class="o"&gt;=&lt;/span&gt;build
+--exclude&lt;span class="o"&gt;=&lt;/span&gt;dist
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;The first line turns off tags generation for variables and imports. The
+second and third lines turn off generation of tags in the named dirs,
+since you almost certainly want to ignore source code in those
+directories.&lt;/p&gt;
+&lt;h3&gt;Case insensitive tag matching&lt;/h3&gt;
+&lt;p&gt;If your .vimrc requests case-insensitive searching by setting
+&lt;em&gt;ignorecase&lt;/em&gt; (aka &lt;em&gt;ic&lt;/em&gt;), then the above tag matching will also be case
+insensitive. This is irksome, because searching for the definition of
+property &lt;em&gt;.matrix&lt;/em&gt; will present you with a menu asking you to choose
+between property &lt;em&gt;.matrix&lt;/em&gt; and class &lt;em&gt;Matrix&lt;/em&gt;, rather than just jumping
+to the property.&lt;/p&gt;
+&lt;p&gt;To fix this, add this to your .vimrc:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;" go to defn of tag under the cursor&lt;/span&gt;
+&lt;span class="k"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; MatchCaseTag&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nb"&gt;ic&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;ic&lt;/span&gt;
+    &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;noic&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;
+        exe &lt;span class="s1"&gt;'tjump '&lt;/span&gt; . expand&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;finally&lt;/span&gt;
+       &lt;span class="k"&gt;let&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;ic&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;ic&lt;/span&gt;
+    &lt;span class="k"&gt;endtry&lt;/span&gt;
+&lt;span class="k"&gt;endfun&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt;   :&lt;span class="k"&gt;call&lt;/span&gt; MatchCaseTag&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt;This Vim script was suggested in a comment by James Vega, in
+order to reliably restore the state of 'ignorecase' after doing the tag
+jump. Many thanks!&lt;/p&gt;
+&lt;p&gt;This maps your ctrl-] key to turn off case-insensitivity while it does
+the jump to tag, then turn it back on again. Now pressing ctrl-] will
+jump directly to your property, only presenting menus on the occasion
+when the tag you search for is defined in more than one place using
+precisely the same name.&lt;/p&gt;
+&lt;p&gt;Much better.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Also see this post about adding stdlib and venv contents to
+your tags:
+&lt;a href="https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/"&gt;https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>MSWin-dev</category><category>Python</category><category>Vim</category><guid>https://www.tartley.com/posts/2010/12/16/go-to-definition-in-vim-for-python-using-ctags-on-windows.html</guid><pubDate>Fri, 17 Dec 2010 02:39:01 GMT</pubDate></item><item><title>Rerun unit tests whenever files update</title><link>https://www.tartley.com/posts/2010/10/15/rerun-unit-tests-whenever-files-update.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;In which I once again indulge my obscure command-line fetish.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I often spend hours of my day cycling through:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Edit code and its unit tests&lt;/li&gt;
+&lt;li&gt;Save my changes&lt;/li&gt;
+&lt;li&gt;Push a button or change window focus to explicitly re-run the code's
+    unit tests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Oh frabjous day, the grinding manual labour of the last of these three
+steps can now be banished forever, courtesy of &lt;code&gt;rerun&lt;/code&gt;, a command line
+Python script that re-runs a given command whenever it detects changes
+to any of the files in the current directory, or its subdirectories.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: It's Python 2.7, and works great on Windows XP, Macs and
+Ubuntu.&lt;/p&gt;
+&lt;p&gt;For example: I had previously bound f6 in Vim to 'run the current file's
+unit tests. Now I've bound shift-f6 to &lt;code&gt;rerun&lt;/code&gt; the current file's
+unit tests in a new console window. This pops up a new window showing
+the test results. I then continue editing in Vim, and whenever I hit
+save, the unit tests are re-run in the other window. All the while the
+focus stays on my editor. It's really sweet!&lt;/p&gt;
+&lt;p&gt;Thanks for the original idea goes to to the bash command &lt;code&gt;watch&lt;/code&gt;, and an
+old (now offline) blog post by Jeff Winkler.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://bitbucket.org/tartley/rerun"&gt;https://bitbucket.org/tartley/rerun&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>MSWin-dev</category><category>Python</category><category>Software</category><category>Testing</category><guid>https://www.tartley.com/posts/2010/10/15/rerun-unit-tests-whenever-files-update.html</guid><pubDate>Fri, 15 Oct 2010 06:43:33 GMT</pubDate></item><item><title>More Colored Terminal text on Windows: AnsiCon</title><link>https://www.tartley.com/posts/2010/7/8/more-colored-terminal-text-on-windows-ansicon.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;A reminder for myself:&lt;/p&gt;
+&lt;p&gt;ANSI escape characters don't work properly in Windows terminals:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Before: Raw ANSI codes. Not nice." src="https://www.tartley.com/files/2010/07/ansicon00-before.png"&gt;&lt;/p&gt;
+&lt;p&gt;To make them work properly, use
+&lt;a href="http://adoxa.110mb.com/ansicon/index.html"&gt;AnsiCon&lt;/a&gt;. Unzip it somewhere
+permanent (eg. &lt;code&gt;%ProgramFiles%\ansicon&lt;/code&gt;) and install it with:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;ansicon.exe -i&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;start a new terminal, and lo:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="After: Pretty." src="https://www.tartley.com/files/2010/07/ansicon01-working.png"&gt;&lt;/p&gt;
+&lt;p&gt;Fine tune the appearance of the programs generating the color, for
+example customise 'hg diff' by editing \~/.hgrc:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p p-Indicator"&gt;[&lt;/span&gt;&lt;span class="nv"&gt;extensions&lt;/span&gt;&lt;span class="p p-Indicator"&gt;]&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;color =&lt;/span&gt;
+
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;[color]&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;status.modified = yellow bold&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;status.unknown = white&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;status.deleted = red_background white bold&lt;/span&gt;
+
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;diff.deleted = red bold&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;diff.inserted = green bold&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;diff.file_a = white&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;diff.file_b = white&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;diff.diffline = white_background black&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;diff.extended = yellow bold&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;diff.hunk = underline black&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;diff.changed = yellow bold&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;img alt="Fine-tuned" src="https://www.tartley.com/files/2010/07/ansicon02-tuned.png"&gt;&lt;/p&gt;
+&lt;p&gt;ANSI is correctly stripped out if the output of a program is not a
+terminal, so the colored output won't interfere with saving to files nor
+machine-parsing of the text:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Filtered" src="https://www.tartley.com/files/2010/07/ansicon03-filtered.png"&gt;&lt;/p&gt;
+&lt;p&gt;Finally, insert some &lt;a href="http://pueblo.sourceforge.net/doc/manual/ansi_color_codes.html"&gt;ANSI
+codes&lt;/a&gt;
+into your &lt;a href="http://ss64.com/nt/prompt.html"&gt;prompt&lt;/a&gt;, by setting
+environment variable PROMPT:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;set PROMPT=$E[0;36m$P$_$E[36;1m$G$E[0m$S&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;img alt="Colored Prompt" src="https://www.tartley.com/files/2010/07/ansicon04-prompt.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://tartley.com/?p=1062"&gt;Multiple&lt;/a&gt;
+&lt;a href="http://tartley.com/?p=863"&gt;posts&lt;/a&gt; on colors and terminal text is
+perhaps a bit obsessive of me. I think I'm all done now.&lt;/p&gt;&lt;/div&gt;</description><category>MSWin-dev</category><guid>https://www.tartley.com/posts/2010/7/8/more-colored-terminal-text-on-windows-ansicon.html</guid><pubDate>Thu, 08 Jul 2010 19:07:09 GMT</pubDate></item><item><title>colorama: Simple cross-platform Python API for colored terminal text</title><link>https://www.tartley.com/posts/2010/4/21/colorama-simple-cross-platform-python-api-for-colored-terminal-text.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Announcing new Python package, colorama:&lt;a href="http://pypi.python.org/pypi/colorama"&gt;\
+http://pypi.python.org/pypi/colorama&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ANSI escape character sequences have long been used to produce colored
+terminal text on Unix and Macs. Colorama makes this work on Windows,
+too. It also provides some shortcuts to help generate these ANSI
+sequences, and works fine in conjunction with any other ANSI sequence
+generation library, such as Termcolor
+(&lt;a href="http://pypi.python.org/pypi/termcolor"&gt;http://pypi.python.org/pypi/termcolor&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;This has the upshot of providing a simple cross-platform API for
+printing colored terminal text from Python, and has the happy
+side-effect that existing applications or libraries which use ANSI
+sequences to produce colored output on Linux or Macs can now also work
+on Windows, simply by calling &lt;code&gt;colorama.init()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;I realise that printing colored terminal text is verging on
+pathalogically superficial, but it has long irked me that this didn't
+just work. Python should make this easy.&lt;/p&gt;
+&lt;p&gt;My mapping of ANSI conventions to the equivalent Win32 calls is far from
+perfect. Currently it has the following results. ANSI codes under Ubuntu
+on gnome-terminal:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/04/screenshot-ubuntu-gnometerminal.png"&gt;&lt;/p&gt;
+&lt;p&gt;and the exact same ANSI codes printed on Windows under Colorama:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/04/screenshot-winxp-console2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; I previously wrote here about discrepancies between the two,
+which have since been fixed. The only outstanding issue is that colorama
+does not support 'dim' text on Windows - it looks just the same as
+'normal' text, and as far as I know, will never be able to.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://pypi.python.org/pypi/colorama"&gt;http://pypi.python.org/pypi/colorama&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>MSWin-dev</category><category>Python</category><guid>https://www.tartley.com/posts/2010/4/21/colorama-simple-cross-platform-python-api-for-colored-terminal-text.html</guid><pubDate>Wed, 21 Apr 2010 15:18:30 GMT</pubDate></item><item><title>Acceptance Testing .NET Applications using IronPython</title><link>https://www.tartley.com/posts/2010/3/16/acceptance-testing-net-applications-using-ironpython.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
+&lt;p&gt;The following was originally published in the excellent &lt;a href="http://pythonmagazine.com/"&gt;Python
+Magazine&lt;/a&gt;. Thier contractual exclusivity
+period has now long expired, so here it comes again. Many thanks to my
+technical reviewer &lt;a href="http://www.voidspace.org.uk/python/weblog/index.shtml"&gt;Michael
+Foord&lt;/a&gt;, and to
+the editors &lt;a href="http://rhodesmill.org/brandon/"&gt;Brandon Craig Rhodes&lt;/a&gt; and
+&lt;a href="http://www.doughellmann.com/"&gt;Doug Hellmann&lt;/a&gt;, who patiently gave
+excellent and much needed guidance through its protracted gestation,
+and especially to all my co-workers at &lt;a href="http://www.resolversystems.com/"&gt;Resolver
+Systems&lt;/a&gt;, from whom I've learned so
+much.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Acceptance Testing .NET Applications using IronPython&lt;/h3&gt;
+&lt;p&gt;Unit tests demonstrate to developers that individual functions and
+classes work as expected. Acceptance tests are an orthogonal complement
+to this. They verify to everybody, including managers and clients, that
+features they understand and care about are completed and working
+correctly. They also prove that the system as a whole is correctly
+integrated and that no regressions have occurred.&lt;/p&gt;
+&lt;p&gt;Resolver Systems is developing a .NET desktop spreadsheet application,
+&lt;a href="http://www.resolversystems.com/products/resolver-one/"&gt;Resolver One&lt;/a&gt;,
+for which we have accumulated an acceptance testing framework. This
+framework uses &lt;a href="http://docs.python.org/library/unittest.html"&gt;Python's standard unittest
+module&lt;/a&gt;, and is executed
+using &lt;a href="http://www.codeplex.com/IronPython"&gt;IronPython&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;While Resolver One is written in IronPython, this technique allows
+IronPython tests to interact with product code written in any .NET
+language.&lt;/p&gt;
+&lt;p&gt;This article describes the principles of this IronPython acceptance
+testing framework, and demonstrates them by creating an acceptance test
+for a small sample C# GUI application.&lt;/p&gt;
+&lt;h3&gt;Caveats&lt;/h3&gt;
+&lt;p&gt;When testing products written in static .NET languages such as C#, some
+common testing practices like monkey-patching will be unavailable.
+Static language classes are not modifiable at runtime, not even from
+tests written in IronPython. Fortunately, this is less of a concern for
+acceptance testing than it is for unit testing - we want the tests to
+operate on the unmodified whole end-to-end system.&lt;/p&gt;
+&lt;p&gt;Resolver One is currently 40k lines of IronPython. I would guess this is
+maybe equivalent to 60-80k lines of C#, demonstrating the viability of
+this approach for desktop applications of this size.&lt;/p&gt;
+&lt;p&gt;Our approach requires source code modifications to the system under test
+(SUT.) In particular, the SUT must provide methods for the test to start
+and stop the application, and must provide public access to its forms
+and other GUI objects. This means that this methodology cannot be used
+to black-box test arbitrary compiled programs - it requires the SUT to
+be written with testing in mind.&lt;/p&gt;
+&lt;h3&gt;Why Acceptance Test?&lt;/h3&gt;
+&lt;p&gt;Unit tests call individual methods and functions of the SUT, and have a
+close correspondence with the internal design of the product. Acceptance
+tests, in contrast, invoke the program as a whole, just like a user
+would, and have a close correspondence with the product specification.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Acceptance vs unit tests" src="https://www.tartley.com/files/2010/03/acceptance-vs-unit-tests.png"&gt;&lt;/p&gt;
+&lt;p&gt;Acceptance testing automates the expensive, time consuming, error-prone
+and soul-destroying process of using a team of human testers to fire up
+the application under test, and exhaustively interact with the user
+interface to verify the program behaves correctly. Traditionally, a
+single iteration of this process can take days or weeks for substantial
+applications. Automating the process can yield the same feedback - or
+better - in minutes or hours. This reduces costs and provides valuable,
+rapid feedback to both developers and project stakeholders.&lt;/p&gt;
+&lt;p&gt;This is useful for assessing whether user-visible features are correctly
+implemented, for doing quick smoke tests to make sure recent changes
+haven't accidentally broken other features, or for systematic checking
+that new functionality works under various conditions, such as on
+different operating systems, or in various browsers. Acceptance tests
+can include stress testing, and continually running acceptance tests on
+an integration server can detect infrequent, intermittent bugs.&lt;/p&gt;
+&lt;p&gt;Best of all, acceptance tests that are derived directly from the
+specification can prove to clients that the system does what the
+requirements ask. This can be invaluable when it comes to client
+sign-off on deliverables, especially if the client trusts this process
+due to having participated in the creation of the user-stories or
+acceptance tests themselves.&lt;/p&gt;
+&lt;p&gt;Acceptance tests do not yield the same incidental benefits in terms of
+good code design as unit tests do. However, creating acceptance tests
+before the product code is implemented does allow developers to focus
+exclusively on the requirements from a user's point of view. In
+practice, this turns out to help immeasurably in defining the
+specifications, and in giving developers a solid understanding of them.&lt;/p&gt;
+&lt;h3&gt;Acceptance Tests Should Derive From User Stories&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;User Stories&lt;/em&gt; are a human-readable specification document that
+describes a short scenario, using the SUT to perform some actions that a
+real user cares about. User stories usually form the entire
+specification. Such documents should be informal yet precise, succinct
+and easy to understand. In ideal circumstances, your customer would
+collaborate with you in creating these documents.&lt;/p&gt;
+&lt;p&gt;An example user story might look like this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Alice starts WizBang. The window appears.&lt;/li&gt;
+&lt;li&gt;She sees the three default list entries: 'one', 'two', 'three'.
+    Nothing is selected.&lt;/li&gt;
+&lt;li&gt;She clicks the 'AddButton'&lt;/li&gt;
+&lt;li&gt;The 'Add Item' dialog appears&lt;/li&gt;
+&lt;li&gt;She types an item name into the dialog and clicks OK&lt;/li&gt;
+&lt;li&gt;The new item is at the end of the list, selected.&lt;/li&gt;
+&lt;li&gt;She clicks the 'CloseButton'&lt;/li&gt;
+&lt;li&gt;The application closes&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;An acceptance test is an executable script that performs the actions
+described in the user story, and verifies the application responds as
+expected. To create an acceptance test, at Resolver Systems we paste the
+entire user story, as comments, into a new test method, on a class
+derived from Python's &lt;code&gt;unittest.TestCase&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;unittest&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;run_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;TestCase&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;AT001_AddItems&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TestCase&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;test_additems&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# 1. Alice starts WizBang. The window appears.&lt;/span&gt;
+        &lt;span class="c1"&gt;# 2. She sees the three default list entries:&lt;/span&gt;
+        &lt;span class="c1"&gt;#    'one', 'two', 'three'. Nothing is selected.&lt;/span&gt;
+        &lt;span class="c1"&gt;# 3. She clicks the 'AddButton'&lt;/span&gt;
+        &lt;span class="c1"&gt;# 4. The 'Add Item' dialog appears&lt;/span&gt;
+        &lt;span class="c1"&gt;# 5. She types an item name into the dialog and clicks OK&lt;/span&gt;
+        &lt;span class="c1"&gt;# 6. The new item is at the end of the list, selected.&lt;/span&gt;
+        &lt;span class="c1"&gt;# 7. She clicks the 'CloseButton'&lt;/span&gt;
+        &lt;span class="c1"&gt;# 8. The application closes&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"test not finished"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'__main__'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;run_test&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;The call to &lt;code&gt;fail()&lt;/code&gt; at the end of this test is a good habit to develop.
+It stops unfinished tests like this one from passing, making them easy
+to accidentally overlook and be forgotten, invisible amongst a large
+collection of passing tests. When the test is complete, this fail can be
+removed.&lt;/p&gt;
+&lt;h3&gt;Setting up IronPython&lt;/h3&gt;
+&lt;p&gt;In order for IronPython to be able to import from &lt;code&gt;unittest&lt;/code&gt; like this,
+a copy of the CPython standard library must be on &lt;code&gt;sys.path&lt;/code&gt;. If you
+installed version 2+ of IronPython from the MSI installer, this is all
+taken care of automatically, using a copy of the standard library that
+is included with the install. Otherwise, you need to set this up
+manually, either by setting an environment variable:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;set IRONPYTHONPATH=C:\Python25\Lib&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;or by appending this directory to &lt;code&gt;sys.path&lt;/code&gt; inside your IronPython
+install's &lt;code&gt;Lib\site.py&lt;/code&gt; file:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'C:\Python25\Lib'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Note that different versions of IronPython require different versions of
+the CPython standard library:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IronPython 1.1: Python 2.4&lt;/li&gt;
+&lt;li&gt;IronPython 2.0: Python 2.5&lt;/li&gt;
+&lt;li&gt;IronPython 2.6: Python 2.6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once this is done, test it out by starting &lt;code&gt;ipy.exe&lt;/code&gt;, and typing:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;unittest&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;If this works without complaint, exit &lt;em&gt;ipy.exe&lt;/em&gt;, and run the nascent
+acceptance test above, using the DOS command-line:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ipy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exe&lt;/span&gt; &lt;span class="n"&gt;AT001_AddItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="n"&gt;F&lt;/span&gt;
+&lt;span class="o"&gt;======================================================================&lt;/span&gt;
+&lt;span class="n"&gt;FAIL&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;test_add_address&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;__main__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AT001_AddItems&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;----------------------------------------------------------------------&lt;/span&gt;
+&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="k"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+  &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="ss"&gt;"AT001_AddItems.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;test_add_address&lt;/span&gt;
+    &lt;span class="k"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;"test not finished"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;AssertionError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="k"&gt;not&lt;/span&gt; &lt;span class="n"&gt;finished&lt;/span&gt;
+
+&lt;span class="c1"&gt;----------------------------------------------------------------------&lt;/span&gt;
+&lt;span class="n"&gt;Ran&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;141&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
+
+&lt;span class="n"&gt;FAILED&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;failures&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h3&gt;About IronPython&lt;/h3&gt;
+&lt;p&gt;IronPython is a .NET based reimplementation of the Python language. It
+combines the strength and elegance of Python as a language with the
+ability to directly call and interoperate with other .NET code. In daily
+use, I am continually surprised by how well this works. IronPython
+faithfully mimics CPython - there are almost no surprising differences
+between the two. Native Python types are mapped seamlessly and
+intuitively to equivalent .NET data types with an absolute minimum of
+fuss. For example, IronPython code can generally pass native Python
+types, like lists or dictionaries, to .NET functions or methods, instead
+of having to instantiate and populate .NET collection classes.&lt;/p&gt;
+&lt;p&gt;To use a .NET library, your IronPython code first has to add a reference
+to the containing .NET &lt;em&gt;assembly&lt;/em&gt;. An assembly is a physical chunk of
+code, usually contained in a DLL file. To add a reference, use the &lt;code&gt;clr&lt;/code&gt;
+module, which is built-in to IronPython:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;clr&lt;/span&gt;
+&lt;span class="n"&gt;clr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddReference&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'System.Windows.Forms'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;This &lt;code&gt;AddReference()&lt;/code&gt; function behaves just the same regardless of
+whether you are referencing assemblies from the .NET standard library
+(as shown here), 3rd party DLLs, or your own .NET projects.&lt;/p&gt;
+&lt;p&gt;Code within an assembly is contained within namespaces. For the .NET
+standard library, the assemblies are usually given the same name as the
+namespace they implement. This is the case here, so once the above
+assembly is referenced, we can import code from the
+&lt;em&gt;System.Windows.Forms&lt;/em&gt; namespace just as if it was a Python module:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;System.Windows.Forms&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Form&lt;/span&gt;
+&lt;span class="n"&gt;form&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Form&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;form&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;This will display an instance of the .NET form class on screen. Note
+that the form does not yet respond to events. For that, we will add a
+call to &lt;code&gt;Application.Run()&lt;/code&gt;, discussed below.&lt;/p&gt;
+&lt;p&gt;Note that our IronPython projects always contain an automatic reference
+to the &lt;code&gt;System&lt;/code&gt; assembly, so anything implemented in there, such as the
+&lt;code&gt;System.Threading&lt;/code&gt; namespace, can always be imported without having to
+explicitly add any references.&lt;/p&gt;
+&lt;p&gt;Ostensibly, using .NET and IronPython limits the operations described in
+this whole article to Windows only. The Mono project should allow this
+acceptance testing technique to be used directly on other operating
+systems, but that has not been tried.&lt;/p&gt;
+&lt;h3&gt;Implementing the Test&lt;/h3&gt;
+&lt;p&gt;To implement the comments pasted into our acceptance test, three things
+must be done:&lt;/p&gt;
+&lt;p&gt;Firstly, the test must invoke the SUT, once for every test method, in
+such a way that the test and the SUT then both run simultaneously.&lt;/p&gt;
+&lt;p&gt;Secondly, while the test runs, it must be able to make assertions about
+the behaviour of the SUT. On the GUI, for example, the test must be able
+to read the state of the form and its controls, in order to assert that
+the correct text is displayed.&lt;/p&gt;
+&lt;p&gt;Thirdly, the test must provide simulated input on each of the SUT's
+external interfaces, to stimulate the program into action. For example,
+then the test must drive the SUT by providing simulated button clicks or
+keyboard input.&lt;/p&gt;
+&lt;p&gt;The method chosen to fulfil all three of these requirements is for the
+test to invoke the SUT in the same process, but on a new thread. Since
+IronPython is a .NET language, it can directly access the SUT's form and
+control objects, making assertions about the state of the controls that
+are visible to the user. It can also simulate user actions by calling
+methods and firing events on the SUT's GUI controls.&lt;/p&gt;
+&lt;p&gt;For this acceptance testing technique to work, the start-up of the SUT
+must be structured so as to expose a few public members and objects that
+are monitored and manipulated by the test. For example, elements of the
+GUI must be public. This obviously makes the tests fairly invasive.&lt;/p&gt;
+&lt;p&gt;We've justified this to ourselves at Resolver Systems by taking a
+pragmatic philosophy: These are the smallest set of changes to our
+application that we could find in order to make it testable. This
+technique has allowed us to create a set of working acceptance tests
+that wouldn't otherwise have existed.&lt;/p&gt;
+&lt;h3&gt;The System Under Test&lt;/h3&gt;
+&lt;p&gt;The public methods and objects required from our SUT are shown in the
+following minimal C# GUI application, called &lt;em&gt;WizBang&lt;/em&gt;. This was
+created using the free Visual Studio Express Edition, but could easily
+be created using your own development tools of choice. At Resolver
+Systems, we prefer to create form layouts using Visual Studio's
+excellent GUI designing tool, and then inherit from these generated
+classes in other editors, such as Wing, Emacs or Vi.&lt;/p&gt;
+&lt;p&gt;WizBang defines a couple of simple forms, &lt;code&gt;MainForm&lt;/code&gt; and &lt;code&gt;AddItemForm&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/03/wizbangs-mainform.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/03/wizbangs-additemform.png"&gt;&lt;/p&gt;
+&lt;p&gt;WizBang has a public class called &lt;code&gt;Program&lt;/code&gt;, which provides public
+access to the application's forms, and handles the startup and shutdown
+of the application. During startup, it creates and shows an instance of
+the main form.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;// C# scaffolding for the WizBang application.&lt;/span&gt;
+&lt;span class="c1"&gt;// Exposes public functions and GUI forms, for use by tests.&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Threading&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Windows.Forms&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;WizBang&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;AllForms&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;MainForm&lt;/span&gt; &lt;span class="n"&gt;mainForm&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;AddItemForm&lt;/span&gt; &lt;span class="n"&gt;addItemForm&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Program&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;ManualResetEvent&lt;/span&gt; &lt;span class="n"&gt;eventloopReady&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt;
+            &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nf"&gt;ManualResetEvent&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;false&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+        &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Start&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;AllForms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainForm&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;MainForm&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="n"&gt;AllForms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainForm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Show&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="n"&gt;eventloopReady&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Set&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="n"&gt;Application&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Run&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+
+        &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;Stop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;Application&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Exit&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;em&gt;Program.cs&lt;/em&gt; and its respective forms can be compiled to a .NET
+assembly, &lt;em&gt;WizBang.dll&lt;/em&gt;. When the application is run normally by users,
+&lt;code&gt;Program.Start()&lt;/code&gt; is called by a second Visual Studio project,
+&lt;em&gt;RunWizBang&lt;/em&gt;, which exists simply to create a minimal Windows
+executable.&lt;/p&gt;
+&lt;p&gt;To run WizBang during testing, the test code references the
+&lt;em&gt;WizBang.dll&lt;/em&gt; assembly, and calls &lt;code&gt;Program.Start()&lt;/code&gt; itself.&lt;/p&gt;
+&lt;p&gt;Importantly, a new instance of the main form is created every time
+&lt;code&gt;Program.Start()&lt;/code&gt; is called. This allows many successive tests to run,
+each with their own instance of the main form, so that state changes in
+one test do not affect subsequent tests. This is important - the
+application's state should be completely reset before the start of each
+test. Take particular care to do this right if your application has
+global state, such as class-level variables, singletons, or relies on
+external systems such as the file system, the registry or databases.&lt;/p&gt;
+&lt;p&gt;After the main form is created and shown, &lt;code&gt;Application.Run()&lt;/code&gt; is called.
+This is a .NET method which starts the main form's event loop, making
+the form responsive to events such as form moves and resizes, control
+clicks and keyboard presses.&lt;/p&gt;
+&lt;p&gt;When the test is completed, it can call the public &lt;code&gt;Program.Stop()&lt;/code&gt;
+method, which safely disposes of resources and unconditionally closes
+the application by calling &lt;code&gt;Application.Exit()&lt;/code&gt;. This is a .NET method
+which closes all our forms and ends their event loops.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Program.Stop()&lt;/code&gt; should be the same method that your application calls
+when quitting, after any user confirmations have happened. The following
+handler on the main form's &lt;em&gt;Closed&lt;/em&gt; event ensures this:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;// C# event hander for the main form of the WizBang application&lt;/span&gt;
+&lt;span class="k"&gt;private&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;MainForm_Closed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="n"&gt;sender&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;EventArgs&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;Program&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Stop&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h3&gt;Invoking the SUT on a New Thread&lt;/h3&gt;
+&lt;p&gt;If the test calls &lt;code&gt;Program.Start()&lt;/code&gt; directly, as described above, then
+the program will run, and the main form will be displayed and
+responsive, but the test will not work. The reason is that the call to
+&lt;code&gt;Application.Run()&lt;/code&gt; is synchronous - it does not return until the
+program exits. The test will be blocked, waiting for the application's
+event loop to end.&lt;/p&gt;
+&lt;p&gt;The test must invoke the SUT in such a way that the program and the test
+can run together in parallel. Invoking the SUT in a new process would be
+nice for the sake of decoupling one test from the next. For our
+approach, however, the SUT has to run in the same process, to give the
+test access to the SUT's public methods and objects.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Program.Start()&lt;/code&gt; therefore needs to be called on a new thread, created
+by the test. The program's event loop can proceed on the new thread,
+handling events to let the application run normally. Meanwhile, our test
+can proceed on the original thread, stimulating the GUI and watching the
+application's behaviour.&lt;/p&gt;
+&lt;p&gt;This threading is the reason for the &lt;code&gt;ManualResetEvent&lt;/code&gt; instance in
+&lt;em&gt;Program.cs&lt;/em&gt;. Manual reset events are a .NET construct to facilitate
+synchronisation between threads. In this case, the SUT calls &lt;code&gt;Set()&lt;/code&gt; in
+&lt;code&gt;Program.Start()&lt;/code&gt;, to tell the test thread that the main form has been
+created and shown. The test can then start to make assertions about the
+state of the main form's controls, and trigger events to manipulate
+those controls.&lt;/p&gt;
+&lt;p&gt;For many activities in IronPython, there is a choice of using the
+familiar Python libraries, or the .NET equivalents. Threads are no
+exception to this - we may use the Python &lt;em&gt;thread&lt;/em&gt; or &lt;em&gt;threading&lt;/em&gt;
+modules, or we may use .NET's &lt;em&gt;Threading&lt;/em&gt; library.&lt;/p&gt;
+&lt;p&gt;Incidentally, these threads differ from those in CPython in one
+important respect - there is no Global Interpreter Lock (GIL). The GIL
+is an implementation detail of the CPython interpreter. The threads
+created by .NET will run concurrently on multiple cores, no matter which
+library we use.&lt;/p&gt;
+&lt;p&gt;We implement this in a new class &lt;code&gt;AcceptanceTest&lt;/code&gt;, which sits between
+&lt;code&gt;AT001_AddItems&lt;/code&gt; and &lt;code&gt;unittest.TestCase&lt;/code&gt; in the inheritance hierarchy:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/03/test-inheritance.png"&gt;&lt;/p&gt;
+&lt;p&gt;On a real project, many &lt;code&gt;ATxxx&lt;/code&gt; test classes would inherit from
+&lt;code&gt;AcceptanceTest&lt;/code&gt;, which looks like this:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Python acceptance test base class&lt;/span&gt;
+&lt;span class="c1"&gt;# References .NET assemblies - requires IronPython&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;clr&lt;/span&gt;
+&lt;span class="n"&gt;clr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddReference&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'WizBang'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# import from .NET namespaces - requires IronPython&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;System.Threading&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ApartmentState&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Thread&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ThreadStart&lt;/span&gt;
+
+&lt;span class="c1"&gt;# import from the Python standard library&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;unittest&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;TestCase&lt;/span&gt;
+
+&lt;span class="c1"&gt;# import from the .NET namespace of the system under test&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;WizBang&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Program&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;AcceptanceTest&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TestCase&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;"""&lt;/span&gt;
+&lt;span class="sd"&gt;    Starts up the program under test (PUT) on a new thread at the start&lt;/span&gt;
+&lt;span class="sd"&gt;    of each test, and shut it down again after each test has run&lt;/span&gt;
+&lt;span class="sd"&gt;    """&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;TestCase&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eventloop&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;setUp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;TestCase&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setUp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Program&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eventloop&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Thread&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ThreadStart&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Start&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eventloop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"eventloop"&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eventloop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SetApartmentState&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ApartmentState&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;STA&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eventloop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Start&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eventloopReady&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WaitOne&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;tearDown&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Stop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eventloop&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Join&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;TestCase&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tearDown&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Python's unittest module will call AcceptanceTest's &lt;code&gt;setUp()&lt;/code&gt; method
+before each test method is run, so this is an ideal place to create a
+new thread and invoke &lt;code&gt;Program.Start()&lt;/code&gt; on it. The new thread is given a
+name, for ease of hypothetical future debugging. It must be set to a
+single threaded apartment state to prevent possible errors if your code
+calls any COM components, even indirectly.&lt;/p&gt;
+&lt;p&gt;Once the new thread has been started, starting the WizBang application,
+&lt;code&gt;setUp()&lt;/code&gt; waits for a signal from the application on the
+&lt;code&gt;ManualResetEvent eventloopReady&lt;/code&gt;. This is used by the application to
+signal to the test that the main form is shown and its event loop is
+started. This prevents over-eager tests from attempting to access the
+main form before it is visible and responding to events.&lt;/p&gt;
+&lt;p&gt;Similarly, &lt;code&gt;tearDown()&lt;/code&gt; will be called by unittest after every test has
+completed. In this method, &lt;code&gt;Program.Stop()&lt;/code&gt; is called to exit this
+instance of WizBang. &lt;code&gt;tearDown()&lt;/code&gt; then waits for the SUT's event loop
+thread to end, by joining it. This is to ensure the next test is not
+affected in some way, by allowing it to start before this test has
+ended.&lt;/p&gt;
+&lt;p&gt;This can all be tried out, by modifying &lt;code&gt;AT001_AddItems&lt;/code&gt; to inherit from
+&lt;code&gt;AcceptanceTest&lt;/code&gt; instead of &lt;code&gt;TestCase&lt;/code&gt;, and adding a sleep in the body
+of the test method, before the fail:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;System.Threading&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Thread&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;unittest&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;run_test&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;AcceptanceTest&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;AcceptanceTest&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;AT001_AddItems&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AcceptanceTest&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;test_add_address&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# 1. Alice starts WizBang. The window appears.&lt;/span&gt;
+        &lt;span class="c1"&gt;# etc (not yet implimented)&lt;/span&gt;
+
+        &lt;span class="n"&gt;Thread&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"test not finished"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'__main__'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;run_test&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Running this test now displays the SUT's form for the duration of the
+sleep, and during that time it is responsive to move and resize events.
+Unlike the last version, this test proceeds to execute while the form is
+visible, so at the end of the sleep, the test fails, with 'test not
+finished', and the SUT is ended, closing its form.&lt;/p&gt;
+&lt;p&gt;Note that the sleep triggers a runtime warning from ipy.exe on stdout,
+about sleeping threads not pumping GUI events. This makes no difference
+here, but from now on, we'll do as this warning suggests and replace
+sleeps with calls to &lt;code&gt;Thread.CurrentThread.Join()&lt;/code&gt;, which behaves the
+same as sleep, but continues to process any events that arrive while
+sleeping.&lt;/p&gt;
+&lt;p&gt;Now that our acceptance test is properly starting and stopping the SUT,
+we are in a position to start making assertions about the state and
+behaviour of the main form.&lt;/p&gt;
+&lt;h3&gt;Asserting Correct Behaviour&lt;/h3&gt;
+&lt;p&gt;We can now start coding the requirements that have been pasted into our
+acceptance test as comments. We might be tempted to implement the first
+requirement of the acceptance test as follows:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;clr&lt;/span&gt;
+&lt;span class="n"&gt;clr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddReference&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'WizBang'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;WizBang&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;AllForms&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 1. Alice starts WizBang. The window appears.&lt;/span&gt;
+&lt;span class="n"&gt;mainform&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AllForms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;
+&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Visible&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'form should be visible'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;On first glance, this appears to work - you can run this and this assert
+will pass. However, there is an insidious problem here, because it
+accesses properties of a .NET control from a thread other than the one
+it was created on. Such access can sometimes result in an
+&lt;code&gt;InvalidOperationException&lt;/code&gt;, with a message along the lines of
+"Cross-thread operation not valid: Control 'mainform' accessed from a
+thread other than the thread it was created on." Worse, depending on
+circumstances, sometimes no exception is raised, but values are returned
+which may not be correctly synced to the current value of
+&lt;code&gt;mainform.Visible&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The proper way to access properties like this is to invoke such code on
+the control's own thread. All .NET controls, of which forms are a
+subclass, have an &lt;code&gt;Invoke()&lt;/code&gt; method for just this purpose.&lt;/p&gt;
+&lt;p&gt;Conceptually, &lt;code&gt;Invoke()&lt;/code&gt; takes a callable, which is executed
+synchronously by passing it as an event to the control's event loop (or
+the event loop of its parent form). When the event loop processes this
+event, the passed callable is invoked on the event loop's thread - which
+can safely access the properties of its own controls. The return value
+from the callable is passed back by the event-handler, and then safely
+marshalled back to the invoking thread as the return value from
+&lt;code&gt;Invoke()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In practice, the callable passed to Invoke needs to be wrapped in a
+&lt;em&gt;delegate&lt;/em&gt;. Delegates are .NET's type-safe function pointers. An
+appropriate delegate can be constructed using the IronPython construct
+&lt;code&gt;CallTarget0&lt;/code&gt;, which denotes a delegate taking zero arguments.&lt;/p&gt;
+&lt;p&gt;The above sounds like quite a mouthful, and the code is correspondingly
+verbose:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;clr&lt;/span&gt;
+&lt;span class="n"&gt;clr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddReference&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'IronPython'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;IronPython.Runtime.Calls&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;CallTarget0&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 1. Alice starts WizBang. The window appears.&lt;/span&gt;
+&lt;span class="n"&gt;getVisible&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;CallTarget0&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Visible&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertTrue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;getVisible&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s1"&gt;'form not visible'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Note that the location of &lt;code&gt;CallTarget0&lt;/code&gt; was changed between IronPython
+versions 1 and 2. The location of the import will need to change for the
+above code to work on IronPython 1.&lt;/p&gt;
+&lt;p&gt;Invoking on the control's own thread like this means that our callable
+(the &lt;code&gt;lambda: mainform.Visible&lt;/code&gt;) can safely access any of mainform's
+properties and methods.&lt;/p&gt;
+&lt;h3&gt;More Concise Test Code&lt;/h3&gt;
+&lt;p&gt;The cross-thread invoking described above will be used frequently
+throughout our acceptance tests, whenever the properties or methods of a
+control are accessed. Such code can be abbreviated slightly, by defining
+a method on &lt;code&gt;AcceptanceTest&lt;/code&gt;, to help us invoke on the main form's
+thread:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;on_gui&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CallTarget0&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Which can be used to reduce the length of our assertion to:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 1. Alice starts WizBang. The window appears.&lt;/span&gt;
+&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertTrue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;on_gui&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Visible&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s1"&gt;'form not visible'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Even so, wrapping access to each attribute individually like is still a
+little fiddly, especially if it is happening many times. To improve
+this, there is nothing to stop us wrapping larger callables instead. For
+example, consider the second user story requirement:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 2. She sees the three default list entries:&lt;/span&gt;
+&lt;span class="c1"&gt;#    'one', 'two', 'three'. Nothing is selected.&lt;/span&gt;
+&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;on_gui&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assert_list_at_startup&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;The function &lt;code&gt;assert_list_at_startup()&lt;/code&gt;, shown below, can now have
+access to properties on all controls without using &lt;code&gt;Invoke()&lt;/code&gt;, since it
+runs entirely on the GUI thread:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;assert_list_at_startup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;wizList&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Controls&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'WizList'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SelectedIndex&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;'should be nothing selected'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Items&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="s1"&gt;'one'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'list[0] wrong'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Items&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="s1"&gt;'two'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'list[1] wrong'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Items&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="s1"&gt;'three'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'list[2] wrong'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;If any of these assertions should fail, raised exceptions are correctly
+propagated back to our test thread. The only problem is that the stack
+trace displayed in the test output ends at &lt;code&gt;on_gui()&lt;/code&gt;'s cross-thread
+invoke - i.e. it does not display the line within
+&lt;code&gt;assert_list_at_startup()&lt;/code&gt; which failed. However such stack traces are
+accompanied by the error message from the failing assertion, so this is
+not usually a problem. If this turns out to be critical for your
+situation, it is possible to create your own cross-thread exception
+handler which fixes this, reconstituting the entire stack trace even
+across thread boundaries.&lt;/p&gt;
+&lt;p&gt;Wrapping callables, as &lt;code&gt;on_gui()&lt;/code&gt; does, is often usefully implemented as
+a decorator. This can be provided by our AcceptanceTest module:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;guithread&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;wrapper&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;on_gui&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;wrapper&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;This decorator expects to be applied to methods on &lt;code&gt;AcceptanceTest&lt;/code&gt;, so
+that it can call &lt;code&gt;.on_gui()&lt;/code&gt; on this method's first parameter. if the
+decorated function is not a method on AcceptanceTest, the decorator will
+not work.&lt;/p&gt;
+&lt;p&gt;Functions like &lt;code&gt;assert_list_at_startup()&lt;/code&gt;, above, which make frequent
+access to properties of controls, can now be decorated:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@guithread&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;assert_list_at_startup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;wizList&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Controls&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'WizList'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SelectedIndex&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="c1"&gt;# etc&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Such a decorated method can then be conveniently called by the
+acceptance test:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 2. She sees the three default list entries:&lt;/span&gt;
+&lt;span class="c1"&gt;#    'one', 'two', 'three'. Nothing is selected.&lt;/span&gt;
+&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assert_list_at_startup&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;It is tempting at this point to simply decorate our entire test method
+with &lt;code&gt;@guithread&lt;/code&gt;, so that the whole thing can execute on the GUI thread
+and have unfettered access to the form's attributes and controls.
+However, this would not work since the test needs to surrender its use
+of the GUI thread from time to time, to allow the form to process all
+the events on its event loop. Without this, the form would be blocked,
+waiting for the test to finish, and would be unable to handle button
+clicks and other input. Amongst other things, this would prevent the
+form from reacting to the simulated user input that our test is about to
+provide.&lt;/p&gt;
+&lt;h3&gt;Simulating User Button Clicks&lt;/h3&gt;
+&lt;p&gt;The next part of our acceptance test requires that the test provides
+some input to the SUT, simulating the actions of a user:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 3. She clicks the 'AddButton'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Buttons provide a method specifically to simulate being clicked, which
+our test can use. A small utility method on &lt;code&gt;AcceptanceTest&lt;/code&gt; calls this
+on the GUI thread:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@guithread&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;click_button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;form&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;buttonName&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;form&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Controls&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;buttonName&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PerformClick&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;This can be used in our acceptance test:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 3. She clicks the 'AddButton'&lt;/span&gt;
+&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;click_button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'addButton'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Running the test will now correctly click the &lt;em&gt;add item&lt;/em&gt; button.
+However, the Wizbang application does not yet have any button click
+handlers, so the button has no effect.&lt;/p&gt;
+&lt;p&gt;Up until this point, all the assertions in &lt;code&gt;AT001_AddItems&lt;/code&gt; have passed
+without us having to modify WizBang the application. This is because the
+conditions being tested were already set up correctly by the design-time
+properties of the main form, or by the application's scaffolding code in
+&lt;code&gt;WizBang.Program&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;When using test-driven development (TDD), this is generally not the
+case, and in fact, this is not true for our next requirement, which
+tests that the &lt;em&gt;add item&lt;/em&gt; button click caused the &lt;em&gt;add item&lt;/em&gt; form to
+appear. Since this is not yet implemented, when the test is run, this
+assertion will fail:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 4. The 'Add Item' dialog appears&lt;/span&gt;
+&lt;span class="n"&gt;addItemForm&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AllForms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addItemForm&lt;/span&gt;
+&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertTrue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;on_gui&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;addItemForm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Visible&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="s1"&gt;'additem form should be visible'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;To make this requirement pass, the following click handler is attached
+to the &lt;em&gt;Add Item&lt;/em&gt; button on WizBang's main form. We're going to skip
+unit tests for this article, but on a real project, this is the perfect
+time to create them - after the acceptance test, but before the
+implimentation. Once they are done, the handler to make them and the
+acceptance test both pass looks like this:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;// C# click handler for the AddItem button on WizBang's main form&lt;/span&gt;
+&lt;span class="k"&gt;private&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;AddButton_Click&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="n"&gt;sender&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;EventArgs&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AllForms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addItemForm&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="k"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;AllForms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addItemForm&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;AddItemForm&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="n"&gt;AllForms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addItemForm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Show&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;In a real application, this handler would need to be a little more
+robust, able to handle multiple clicks of the button, and forms which
+are disposed or already visible. However, this behaviour is not yet
+tested by our acceptance test, and therefore TDD conveniently suggests
+that for the moment, it should remain unimplemented.&lt;/p&gt;
+&lt;h3&gt;Simulating User Keyboard Input&lt;/h3&gt;
+&lt;p&gt;The next requirement asks that our test simulate the user typing into a
+TextBox control on the &lt;em&gt;add item&lt;/em&gt; form. This can be trivially
+implemented using the techniques discussed thus far:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 5. She types an item name into the dialog and clicks OK&lt;/span&gt;
+&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;addItemForm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addItem&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'hello'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;click_button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;addItemForm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'okButton'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertFalse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;on_gui&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;addItemForm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Visible&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="s2"&gt;"additem form should close"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Where &lt;code&gt;set_text()&lt;/code&gt; is a small helper function provided by
+&lt;code&gt;AcceptanceTest&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@guithread&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;set_text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;textbox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;textbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Running this test will successfully populate the TextBox with the word
+"hello". However, this is a fairly poor acceptance test. If the TextBox
+control did not have focus, then a real user would have to perform extra
+steps before being able to type into it. If the TextBox was not visible
+or enabled, then a user would not be able to type into it at all. Our
+test implementation, by simply setting the &lt;code&gt;Text&lt;/code&gt; attribute, performs an
+end-run around many of the restrictions that real users would face, and
+hence is not a good test of the application's behaviour as a user would
+actually experience it.&lt;/p&gt;
+&lt;p&gt;The simplest way to improve on this for the moment is to explicitly test
+for these conditions:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@guithread&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;set_text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;textbox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertTrue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;textbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Visible&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'textbox should be visible'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertTrue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;textbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Focused&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'textbox should have focus'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertTrue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;textbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Enabled&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'textbox should be enabled'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;textbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Running this test does actually reveal a genuine error - the &lt;em&gt;add item&lt;/em&gt;
+form's textbox does not have focus. A real user, on running WizBang,
+would have to click or use the tab key to give the textbox focus, a step
+which our test has previously been able to obliviously skip. We would
+prefer that our user didn't have to do this either, so we add an
+&lt;code&gt;Activated&lt;/code&gt; handler on the &lt;code&gt;AddItemForm&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;// C# handler for the add item form's Activated event&lt;/span&gt;
+&lt;span class="k"&gt;private&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;AddItemForm_Activated&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="n"&gt;sender&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;EventArgs&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;addItem&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Focus&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;This makes the acceptance test pass. Implementing the next test
+requirement is straightforward:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 6. The new item is at the end of the list, selected.&lt;/span&gt;
+&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assert_list_after_add&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;where:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@guithread&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;assert_list_after_add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;item_count&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'should be 4 items'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;wizList&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AllForms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainForm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Controls&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'WizList'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Items&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="s1"&gt;'hello'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'list[3] wrong'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SelectedIndex&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'4th should be selected'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;This is asserting that the text we typed into the &lt;em&gt;add item&lt;/em&gt; form
+("hello") is added to the end of the main form's list, and is selected.
+In order to make this pass, we need a click handler for the OK button on
+the &lt;em&gt;add item&lt;/em&gt; form:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;// C# handler for add item form's ok button&lt;/span&gt;
+&lt;span class="k"&gt;private&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;okButton_Click&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="n"&gt;sender&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;EventArgs&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;ListBox&lt;/span&gt; &lt;span class="n"&gt;wizList&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AllForms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainForm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WizList&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Items&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;addItem&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SelectedIndex&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Items&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Count&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Finally, the test closes down the application and ends:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 7. She clicks the 'CloseButton'&lt;/span&gt;
+&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;click_button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainForm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'closeButton'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 8. The application closes&lt;/span&gt;
+&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertTrue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainForm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IsDisposed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'mainform should close'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Notice how access to &lt;code&gt;mainForm.IsDisposed&lt;/code&gt; is not invoked on the GUI
+thread. By this point in the test, all being well, the main form has
+been closed, and its thread will be ended. Attempting to invoke on it
+will fail. Instead, we read this property directly.&lt;/p&gt;
+&lt;p&gt;To make this pass, we add a simple button click hander to the main
+form's &lt;em&gt;Close&lt;/em&gt; button:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;// C# handler for click event on main form's close button&lt;/span&gt;
+&lt;span class="k"&gt;private&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;CloseButton_Click&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="n"&gt;sender&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;EventArgs&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h3&gt;Simulating Mouse and Keyboard Events&lt;/h3&gt;
+&lt;p&gt;Directly calling controls' methods and setting their properties, as
+described above, can be problematic, since the controls will not behave
+precisely as they would when in use by a real user. Our assertions above
+that controls being manipulated are currently visible, enabled and
+focussed are a partial solution to this problem.&lt;/p&gt;
+&lt;p&gt;However, there are many other possible ways in which our tests could
+unintentionally get the SUT to behave in ways that are different from
+the behaviour a real user would see. For example, a textbox could have a
+custom keypress handler, which performs input validation of some kind.
+Such a handler would not be invoked when our test simply sets the
+&lt;code&gt;.Text&lt;/code&gt; property of the control, as we do above.&lt;/p&gt;
+&lt;p&gt;In a worst case scenario, acceptance tests could pass even though the
+application was completely unusable by a real user.&lt;/p&gt;
+&lt;p&gt;To combat this, the approach taken at Resolver Systems is to stimulate
+controls by generating fake Win32 mouse and keyboard events. This drives
+the application by, for example, actually moving the mouse cursor over a
+button, then issuing a mouse click event. Windows itself then fires the
+button click event, which ends up calling the click event handlers.&lt;/p&gt;
+&lt;p&gt;This approach guarantees that our acceptance tests are only able to
+perform the same actions that a human user would be able to, and is more
+of a true 'end-to-end' test - which seems like a good principle for
+acceptance tests to aim for in general.&lt;/p&gt;
+&lt;p&gt;Simulating user input in this way, however, is not without drawbacks.&lt;/p&gt;
+&lt;p&gt;The acceptance test framework sends low level mouse events, using the
+win32 function &lt;code&gt;SendInput()&lt;/code&gt;, from the Windows user32.dll. Calling win32
+functions from IronPython like this requires creating a C# assembly, in
+which we expose &lt;code&gt;SendInput()&lt;/code&gt;, and more than a dozen similar functions,
+by declaring them as follows:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="nn"&gt;System.Runtime.InteropServices&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;UnmanagedCode&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="c1"&gt;// extensive type declarations for type 'Input' go here&lt;/span&gt;
+
+    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;User32&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="na"&gt;        [DllImport("user32.dll", CharSet = CharSet.Auto)]&lt;/span&gt;
+        &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="k"&gt;extern&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;SendInput&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;nInputs&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;ref&lt;/span&gt; &lt;span class="n"&gt;Input&lt;/span&gt; &lt;span class="n"&gt;pInputs&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;cbSize&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;It turns out that populating the large &lt;code&gt;Input&lt;/code&gt; data structure to be
+passed to this function takes another 50 lines of code. Similar
+scaffolding is required to support keyboard events. This is a
+substantial extra layer of complexity - albeit one that has proven
+reliable and stable since it was created.&lt;/p&gt;
+&lt;p&gt;Having said that, the acceptance tests written this way are not
+completely reliable in operation - developers (or office cleaners)
+moving the mouse or leaning on the keyboard can interfere with the
+running tests. Sometimes, due simply to race conditions, the GUI does
+not respond as quickly as the test script expects, causing spurious
+failures. While issues such as these can be accounted for, for example
+by waiting for events or for conditions before allowing tests to
+proceed, this still causes a significant level of false positives in our
+test failures, as new tests 'bed down' and we gradually discover and
+compensate for their intermittent failure modes.&lt;/p&gt;
+&lt;p&gt;Finally, it is probable that our tests run more slowly than they would
+if they invoked event handlers directly. To some extent this is
+mitigated by a distributed test runner, which splits any given test
+suite across all idle desktop machines in the office. However, there are
+many tests, some of which are stress tests, and running our full
+acceptance test suite still takes at least a couple of hours. Having it
+run faster would always be beneficial.&lt;/p&gt;
+&lt;p&gt;Because both speed and reliability might be improved to some extent by
+reducing our use of keyboard and mouse events, it would be advisable to
+at least consider trying the simpler techniques described earlier in
+this article, before attempting to generate mouse and keyboard events
+like this.&lt;/p&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;We've seen how to construct an IronPython acceptance test for an
+application written in C#.&lt;/p&gt;
+&lt;p&gt;Despite the pitfalls described in the last section, we're very happy
+with acceptance testing of our .NET desktop application at Resolver
+Systems. It has proven to be eminently feasible, and of great value to
+us. In addition to the well-known benefits of unit-testing, acceptance
+testing provides an orthogonal layer of information about the
+system-under-test.&lt;/p&gt;
+&lt;p&gt;Most directly, it gives concrete, rapid feedback on the completion and
+robustness of features at a level that managers care about and users
+understand. Also, it provides thorough smoke tests to check that recent
+changes have not broken existing functionality. Perhaps most important
+of all, however, acceptance tests provide a method to precisely specify
+detailed requirements which can be easily created by users, are
+intimately understood by developers, are provably met, and are trivially
+traceable through to the final phases of the project.&lt;/p&gt;
+&lt;p&gt;Given acceptance tests such as those described in this article,
+test-driven development then provides developers with the ability to
+navigate from requirements through to working code that provably fulfils
+the specification, using a series of small, discrete and well-understood
+steps. This gives projects practical tools with which to make rapid
+progress, to avoid major risks, and to meaningfully measure the
+project's current status and velocity.&lt;/p&gt;
+&lt;p&gt;Readers who are interested in using IronPython, for testing or for other
+purposes, should check out &lt;a href="http://www.ironpythoninaction.com/"&gt;IronPython in
+Action&lt;/a&gt;, a pragmatic and densely
+informative new book by Michael Foord, which caters to both Python and
+.NET developers.&lt;/p&gt;&lt;/div&gt;</description><category>MSWin-dev</category><category>Python</category><category>Software</category><category>Testing</category><guid>https://www.tartley.com/posts/2010/3/16/acceptance-testing-net-applications-using-ironpython.html</guid><pubDate>Tue, 16 Mar 2010 17:13:15 GMT</pubDate></item><item><title>Howto bundle binary dependancies with py2exe, et al.</title><link>https://www.tartley.com/posts/2010/1/27/howto-bundle-binary-dependancies-with-py2exe-et-al.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Hey. I notice that
+&lt;a href="https://lists.sourceforge.net/lists/listinfo/py2exe-users"&gt;py2exe-users&lt;/a&gt;
+has a recent question that seems to be about how to correctly bundle the
+required Microsoft C runtime DLL with executables generated from Python
+scripts.&lt;/p&gt;
+&lt;p&gt;Last month I updated the py2exe wiki tutorial to cover this issue, as
+best as I was able. Since people are still asking questions about it, I
+figured I'd promote that change a little.&lt;/p&gt;
+&lt;p&gt;Check out the new, revamped &lt;a href="http://www.py2exe.org/index.cgi/Tutorial"&gt;py2exe tutorial
+page&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;That is all.&lt;/p&gt;&lt;/div&gt;</description><category>MSWin-dev</category><category>Python</category><guid>https://www.tartley.com/posts/2010/1/27/howto-bundle-binary-dependancies-with-py2exe-et-al.html</guid><pubDate>Thu, 28 Jan 2010 04:26:00 GMT</pubDate></item><item><title>MSWindows Programming : Propogating child process exit values out of .bat scripts</title><link>https://www.tartley.com/posts/2010/1/21/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;"God &lt;em&gt;dammit&lt;/em&gt;. Why won't you just DO what I WANT you hopeless pile of
+crap!"&lt;/p&gt;
+&lt;p&gt;So goes the refrain. I think you know where I'm coming from. Yet again,
+I have ended up learning far more about crappy DOS scripting than I ever
+wanted to know.&lt;/p&gt;
+&lt;p&gt;So I'm writing a program to automate some small task on Windows. One of
+the jobs of this tool is to modify the current environment. But I don't
+know how a child process in Windows can modify the environment of it's
+parent (namely the command-line shell that invoked it.) Can it be done?&lt;/p&gt;
+&lt;p&gt;So I hack a ghastly workaround: Wrap the script in a .bat file. A .bat
+file is invoked from the command-line in the same process as the shell,
+so any change it makes to the environment are made to the environment of
+the invoking shell itself. This also has the advantage that the tool can
+now be invoked by typing 'toolname', just like on other platforms, as
+opposed to 'toolname.py' or even 'python toolname.py'. So I wrap my
+Python script 'toolname.py' with a new file, 'toolname.bat', living in
+the same directory:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="k"&gt;first&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;our&lt;/span&gt; &lt;span class="n"&gt;tool&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="ss"&gt;"%~dp0%~n0.py"&lt;/span&gt; &lt;span class="o"&gt;%*&lt;/span&gt;
+
+&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="k"&gt;any&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="n"&gt;THIS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;THAT&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;The %\~dp0 and %\~n0 gobbledygook is a batch file way of referencing the
+same drive, path and filename (minus extension) as the current script,
+to which I add '.py' to run toolname.py. Easy enough.&lt;/p&gt;
+&lt;p&gt;There's a minor problem: The environment changes that need to be made
+depend on what goes on inside toolname.py. So I have that Python write a
+new batch file to the temp directory, containing all the 'set' commands
+which will replace the hardcoded 'set THIS=THAT' in the above script.
+Then we call that new temporary bat file from here:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="k"&gt;first&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;our&lt;/span&gt; &lt;span class="n"&gt;tool&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="ss"&gt;"%~dp0%~n0.py"&lt;/span&gt; &lt;span class="o"&gt;%*&lt;/span&gt;
+
+&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="k"&gt;any&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt;
+&lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;Temp&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;%~&lt;/span&gt;&lt;span class="n"&gt;n0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;setvar&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bat&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Which is good enough. Presumably it will barf all over the place if run
+concurrently. But there's a more pressing problem. I need the exit value
+of this tool to be equal to the exit value from toolname.py. Currently,
+the exit value of this .bat script is always zero, because the 'call'
+command at the end is always successful.&lt;/p&gt;
+&lt;p&gt;One solution I've seen used is to remember the exit value from
+toolname.py, and then use the DOS exit command to propagate this value
+out to our caller:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="k"&gt;first&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;our&lt;/span&gt; &lt;span class="n"&gt;tool&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="ss"&gt;"%~dp0%~n0.py"&lt;/span&gt; &lt;span class="o"&gt;%*&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="n"&gt;EXITVAL&lt;/span&gt;&lt;span class="o"&gt;=%&lt;/span&gt;&lt;span class="n"&gt;ERRORLEVEL&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+
+&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="k"&gt;any&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt;
+&lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;Temp&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;%~&lt;/span&gt;&lt;span class="n"&gt;n0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;setvar&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bat&lt;/span&gt;
+
+&lt;span class="n"&gt;exit&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;EXITVAL&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;The problem with this is that 'exit' doesn't do what you think it does.
+It doesn't just stop interpreting the current script, rather it
+terminates the current interpreter, ie. the shell that is running the
+script. If you run this from a command-line, since Windows doesn't
+differentiate between a console and a shell, your window disappears.
+&lt;em&gt;Sigh&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The exit command has a fix for this: It takes a switch '/B', that causes
+it to just end the current script, rather than killing the shell. But
+now, it ignores any %EXITVAL% parameter you try to feed it, so the exit
+value of your batch file is always zero.&lt;/p&gt;
+&lt;p&gt;This is what I get for developing software on Windows. Nothing ever
+works the way it ought to. It's as though everything were designed to
+oppose simple engineering idioms, like composing systems out of small,
+interchangeable parts.&lt;/p&gt;
+&lt;p&gt;So here's what I finally did. The exit value of running a batch script
+can be set without using the hopelessly brain-dead 'exit' command. It is
+equal to the exit value of the last process the script invokes. So
+instead of exit, simply find a process that will exit with the value you
+need, and invoke it as the final command in your batch script:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;our&lt;/span&gt; &lt;span class="n"&gt;tool&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="s2"&gt;"%~dp0%~n0.py"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;%*&lt;/span&gt;
+&lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="n"&gt;EXITVAL&lt;/span&gt;&lt;span class="o"&gt;=%&lt;/span&gt;&lt;span class="n"&gt;ERRORLEVEL&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+
+&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="n"&gt;then&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="nb"&gt;any&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt;
+&lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;Temp&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;\&lt;span class="o"&gt;%~&lt;/span&gt;&lt;span class="n"&gt;n0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;setvar&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bat&lt;/span&gt;
+
+&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;propagate&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;our&lt;/span&gt; &lt;span class="n"&gt;invoker&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s2"&gt;"import sys; sys.exit(&lt;/span&gt;&lt;span class="si"&gt;%E&lt;/span&gt;&lt;span class="s2"&gt;XITVAL%)"&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Bingo. I now have a Python process that can modify the environment of
+its invoking shell, and propagates the correct exit value out of the
+wrapping DOS script. [Short bow. Applause. Roses. etc.]&lt;/p&gt;&lt;/div&gt;</description><category>MSWin-dev</category><category>Software</category><guid>https://www.tartley.com/posts/2010/1/21/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts.html</guid><pubDate>Fri, 22 Jan 2010 02:04:25 GMT</pubDate></item><item><title>My Fonts Look Crap. I blame Windows and ATI.</title><link>https://www.tartley.com/posts/2010/1/20/my-fonts-look-crap-i-blame-windows-and-ati.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I know, I &lt;em&gt;know&lt;/em&gt;. But I use Windows for 8 hours a day at work. So what
+do you do?&lt;/p&gt;
+&lt;p&gt;Here's the poster-boy for programmer-friendly fonts, your friend and
+mine, everyone loves him, &lt;strong&gt;Inconsolata&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2010/01/inconsolata-11.png"&gt;&lt;img alt="inconsolata-11" src="https://www.tartley.com/files/2010/01/inconsolata-11.png" title="inconsolata-11"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I don't know about you, but to me that looks unutterably crap. Wonky and
+irregular. On the right of the orange line is what it looks like with
+ClearType turned off. Meh. Presumably I'm doing it wrong, somehow, but
+unless I figure out how, Inconsolata can fuck right off.&lt;/p&gt;
+&lt;p&gt;So then I fire up the trusty fallback, &lt;strong&gt;Consolas&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2010/01/consolas-10.png"&gt;&lt;img alt="consolas-10" src="https://www.tartley.com/files/2010/01/consolas-10.png" title="consolas-10"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is better, certainly, but the letters look cramped. For the number
+of visible lines in a window that size, the letters are awful small.
+Again, on the right of the line is ClearType turned off - which in this
+case distinctly worse.&lt;/p&gt;
+&lt;p&gt;So I continue peering at a succession of monospaced idiocy, eventually
+ending up on &lt;strong&gt;DejaVu Sans Mono&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2010/01/deja-vu-sans-mono-9.png"&gt;&lt;img alt="deja-vu-sans-mono-9" src="https://www.tartley.com/files/2010/01/deja-vu-sans-mono-9.png" title="deja-vu-sans-mono-9"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This still isn't perfect, but it's the best I can find. Note that it
+bears out my impression of Consolas being cramped - even though the
+letters are substantially larger, we still manage to fit an extra line
+of text in. This time, turning ClearType off (right of the line) makes
+it a little crisper, and a little more wonky, but not much.&lt;/p&gt;
+&lt;p&gt;This isn't just in Vim. It looks like this in all applications. I've
+tried running the &lt;a href="http://www.microsoft.com/typography/ClearTypePowerToy.mspx"&gt;ClearType Tuning
+Powertool&lt;/a&gt;,
+to no avail. Admittedly, all these fonts start to look a damn sight
+better when I increase the size a few notches. But that's bugger all use
+really, isn't it? Maybe I should be digging out some mono fonts designed
+especially to be viewed at small sizes? Oooh, now that's actually not a
+bad idea: How about those Android fonts everyone's banging on about?
+&lt;strong&gt;Droid Sans Mono:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2010/01/droid-sans-mono-101.png"&gt;&lt;img alt="droid-sans-mono-10" src="https://www.tartley.com/files/2010/01/droid-sans-mono-101.png" title="droid-sans-mono-10"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This isn't bad, but does contain all the old 'zero vs upper-case O' and
+'one versus lower-case L' ambiguities. I think I'll stick with DejaVu
+Sans Mono.&lt;/p&gt;
+&lt;p&gt;Does Inconsolata work OK on Windows for everyone else?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: Gerry suggested trying out Proggy Fonts (thanks!). These are
+bitmap fonts (unless you want to do without extended characters) so they
+won't scale. Nevertheless, here's how some representative fonts from
+there look. First up, &lt;strong&gt;Proggy Clean slashed zero:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2010/01/proggy-clean-sz.png"&gt;&lt;img alt="proggy-clean-sz font" src="https://www.tartley.com/files/2010/01/proggy-clean-sz.png" title="proggy-clean-sz"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I love the crisp clarity of a pixel-perfect bitmap font with no scaling
+or anti-aliasing. On the downside, I have a feeling that the characters'
+shapes aren't quite as well-formed and beautiful as &lt;em&gt;DejaVu&lt;/em&gt;. Not sure
+whether or not this would bug me. Next up, &lt;strong&gt;Proggy Opti:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2010/01/proggy-opti.png"&gt;&lt;img alt="proggy-opti font" src="https://www.tartley.com/files/2010/01/proggy-opti.png" title="proggy-opti"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Color me impressed. &lt;em&gt;Opti&lt;/em&gt; still has the wonderful pixel-perfect clarity
+of &lt;em&gt;Proggy Clean&lt;/em&gt;, and manages to fit four extra lines of text into the
+same sized window. Obviously in order to achieve this, the characters
+are smaller than &lt;em&gt;Deja Vu&lt;/em&gt;, but this is no bad thing. I would have liked
+to scale Deja Vu down a tad from the size you see it above, but if I
+try, the letters start to become a little distorted and indistinct. I
+might well give Opti a spin for a few days, see how it wears on me.
+Thanks for the suggestion Gerry!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Nowadays I use &lt;a href="https://github.com/ProgrammingFonts/ProgrammingFonts/tree/master/Dina"&gt;Dina&lt;/a&gt;,
+a monospaced bitmap font created by some obsessive with a penchant for
+microscopic fonts. It's absolutely perfect.&lt;/p&gt;&lt;/div&gt;</description><category>MSWin-dev</category><category>Software</category><guid>https://www.tartley.com/posts/2010/1/20/my-fonts-look-crap-i-blame-windows-and-ati.html</guid><pubDate>Thu, 21 Jan 2010 02:21:09 GMT</pubDate></item></channel></rss>

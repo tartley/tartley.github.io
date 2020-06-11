@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flying High: Hobbyist OpenGL from Python | tartley.com</title>
+<link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../../rss.xml">
+<link rel="canonical" href="https://www.tartley.com/posts/2010/7/31/flying-high-hobbyist-opengl-from-python.html">
+<!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
+<link rel="prev" href="../19/loving-europython-tutorials.html" title="Loving EuroPython Tutorials" type="text/html">
+<link rel="next" href="../../8/3/flying-high-opengl-from-python-part-2.html" title="Flying High: OpenGL from Python, Part 2" type="text/html">
+<meta property="og:site_name" content="tartley.com">
+<meta property="og:title" content="Flying High: Hobbyist OpenGL from Python">
+<meta property="og:url" content="https://www.tartley.com/posts/2010/7/31/flying-high-hobbyist-opengl-from-python.html">
+<meta property="og:description" content="This is a transcript-from-memory (what I wish I'd said) of the talk I
+just gave at EuroPython 2010, for which I
+owe a debt of gratitude to Richard Jones for his last-minute moral
+support while wrestli">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2010-07-31T14:58:30-05:00">
+<meta property="article:tag" content="GameDev">
+<meta property="article:tag" content="Graphics">
+<meta property="article:tag" content="Presentations">
+<meta property="article:tag" content="Python">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="flying-high-hobbyist-opengl-from-python.md" id="sourcelink">Source</a>
+    </li>
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Flying High: Hobbyist OpenGL from Python</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="#" rel="bookmark">
+            <time class="published dt-published" datetime="2010-07-31T14:58:30-05:00" itemprop="datePublished" title="2010-07-31 14:58">2010-07-31 14:58</time></a>
+            </p>
+                <p class="commentline">        
+
+                    </p>
+<p class="sourceline"><a href="flying-high-hobbyist-opengl-from-python.md" class="sourcelink">Source</a></p>
+
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p><em>This is a transcript-from-memory (what I wish I'd said) of the talk I
+just gave at <a href="http://www.europython.eu/">EuroPython</a> 2010, for which I
+owe a debt of gratitude to Richard Jones for his last-minute moral
+support while wrestling with projectors and refresh rates; and to the
+whole team of hard-working volunteers, especially John Pinner &amp; Richard
+Taylor, who gave so much time and effort to make EuroPython in the UK
+brilliant once again.</em></p>
+<p><em>The demonstrated</em> <em>code</em> <em>is available at
+<a href="https://github.com/tartley/gloopy">https://github.com/tartley/gloopy</a></em></p>
+<hr>
+<p>With this talk I want to give an overview of creating 3D graphics in
+OpenGL from Python. Instead of covering topics already covered by a
+thousand OpenGL tutorials, I want to shift attention towards some ideas
+of how to generate the input to your renderer - how to algorithmically
+create geometry. I'll show that with just a paltry few hundred lines of
+relatively simple code, you can generate some interestingly chunky
+shapes - virtual sculptures, if you will. Since this talk has the word
+<em>hobbyist</em> in the title, I want to emphasise how easy this is, and I
+want to have some fun with the pretty pictures.</p>
+<p>Out of interest, how many people here are already expert OpenGL users
+<em>(a few hands hesitantly go up, then some think about it and go down
+again</em>) err, I mean how many have already used OpenGL to do anything at
+all <em>(about half the people raise their hand</em>.) Alright, well, I want
+you all to leave here enthused to go generate your own images or
+animations or games.</p>
+<h3><strong>Inspirations</strong></h3>
+<p>As the field of computer graphics advances, there's an understandable
+tendency for more photorealism, This is laudable, but I also feel that
+the effort expended on achieving this technical goal is often undertaken
+without considering whether photorealism is the best aesthetic choice
+for a particular project.</p>
+<p>In the past, games and other applications adopted particular visual
+styles out of technical necessity. As is often the case, these
+restrictions resulted in a diverse blossoming of creative ideas,
+producing an enormous set of distinctive visual styles and experiences.</p>
+<p><img alt="Non-photo-realistic Quake" src="../../../../files/2010/07/nprquake.jpg"></p>
+<p>Crucially, the most successful and memorable examples of these were
+projects that found ways to work in harmony with the restrictions of the
+medium, rather than attempting to gloss over them.</p>
+<p><img alt="Rez HD" src="../../../../files/2010/07/RezHDA.jpg"></p>
+<p>Advances in computing power and technique provide modern games and
+applications with a far wider range of options in how to present
+themselves visually, and yet the greater proportion of them seem content
+with a conventional and unimaginative 'near-photorealistic' appearance.
+This disappoints me, because I feel that projects that opt for a more
+highly stylised look, when appropriately chosen, can create a vastly
+more striking and memorable artistic experiences. This is true in movies
+and all kinds of art.</p>
+<p><img alt="Waking Life" src="../../../../files/2010/07/wakinglife1.jpg"></p>
+<p>As an amateur graphics programmer, I don't have large resources nor much
+experience to throw at the problem, so my options and my abilities are
+limited. But, like a good artist, I believe it should still be possible
+to create things that are both strikingly beautiful and highly
+functional, either by working with the restrictions of the medium, or by
+finding creative ways to exploit or extend them.</p>
+<p><img alt="Love" src="../../../../files/2010/07/love.jpg"></p>
+<p>In particular, the kind of minimal, clean-lined aesthetic that amateur
+OpenGL programs take on by default are useful for their crisp precision,
+as charting and visualisation tools. But above that, I love them for
+their stark minimalism, their clean lines and homogeneous fields of
+colour.</p>
+<p><img alt="Tron Legacy" src="../../../../files/2010/07/tron.jpg"></p>
+<p>I wish more professional game developers had an incentive to aim for
+less conventional aesthetics - whether they be deliberately retro, or
+else striking out in some new direction of their own. It's that brave
+minority of projects which do this which form my inspiration.</p>
+<h3><strong>Starting Point</strong></h3>
+<p>I'm assuming we already have a minimal OpenGL application, that:</p>
+<ul>
+<li>Opens a window</li>
+<li>Provides an OpenGL context for us to render to</li>
+<li>Sets appropriate 3D projection matrix</li>
+<li>Sets the initial modelview matrix state based on the position and
+  orientation of a 'camera' object</li>
+<li>Calls our empty 'draw' function once per monitor refresh.</li>
+</ul>
+<p>This results in a blank screen, at 60fps. Here's a screenshot, so you
+can see exactly what it's doing:</p>
+<p><img alt="A blank screen" src="../../../../files/2010/07/blank1.png"></p>
+<p>I'm using pyglet &amp; PyOpenGL for this, but this isn't important. Any
+framework that provides the above abilities, such as PyGame, along with
+bindings to OpenGL, will be just fine. Whichever framework you use, this
+minimal application might take on the order of about 150 lines of code,
+and is covered in countless tutorials all over the web.</p>
+<p>From here on in I plan to show (or at least describe) pretty much all of
+the code that I add on top of this minimal OpenGL loop.</p>
+<h3><strong>Goal</strong></h3>
+<p>To begin with, I'm going to lead you as quickly as I can through a Shape
+class, that model 3D shapes, in a way useful for the creation of
+geometry, and then a Glyph class that converts these geometries into
+arrays for OpenGL. Finally these arrays get passed into a Render class,
+which simply calls glDrawElements to render them.</p>
+<p><img alt="Our Goal" src="../../../../files/2010/07/fun-stuff.png"></p>
+<p>Once the above infrastructure is in place, we can have some fun
+generating interesting shapes to make pretty pictures with. The
+conventional way to provide geometry to your OpenGL code is by loading
+your data from files. Today though, I want to stick with generating
+geometry from code, to see where that leads.</p>
+<h3><strong>Modelling Polyhedra</strong></h3>
+<p>A polyhedron is a 3D shape with flat faces and straight edges. We can
+model coloured polyhedra using a simple Shape class:</p>
+<pre class="code literal-block"><span></span><code><span class="n">Vec3</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">'Vec3'</span><span class="p">,</span> <span class="s1">'x y z'</span><span class="p">)</span>
+<span class="n">Color</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">'Color'</span><span class="p">,</span> <span class="s1">'r g b a'</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Shape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">face_colors</span><span class="p">):</span>
+        <span class="c1"># list of Vec3s</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="n">vertices</span>
+
+        <span class="c1"># list of faces, each face is a list of indices into 'vertices'</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">faces</span> <span class="o">=</span> <span class="n">faces</span>
+
+        <span class="c1"># List of colors, one per face</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">face_colors</span> <span class="o">=</span> <span class="n">face_colors</span>
+</code></pre>
+
+
+<p>An instance of this class, for example, might represent a yellow cube,
+or a tetrahedron with green and black faces, or any other coloured
+polyhedron we can imagine.</p>
+<p>To demonstrate how classes Shape, Glyph and Render hang together, let's
+examine an even simpler example, a yellow triangle joined to a red
+square:</p>
+<p><img alt="Red Triangle &amp; Yellow Square" src="../../../../files/2010/07/triangle-square.png"></p>
+<p>You can see this geometry features five vertices (v0 to v4), which are
+used by the two faces. This might be represented by an instance of
+Shape:</p>
+<pre class="code literal-block"><span></span><code><span class="n">v0</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">v3</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">v4</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">red</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+<span class="n">yellow</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+
+<span class="n">shape</span> <span class="o">=</span> <span class="n">Shape</span><span class="p">(</span>
+    <span class="n">vertices</span><span class="o">=</span><span class="p">[</span><span class="n">v0</span><span class="p">,</span> <span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">v3</span><span class="p">,</span> <span class="n">v4</span><span class="p">],</span>
+    <span class="n">faces</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>    <span class="c1"># f0, triangle</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="c1"># f1, square</span>
+    <span class="p">],</span>
+    <span class="n">face_colors</span><span class="o">=</span><span class="p">[</span><span class="n">red</span><span class="p">,</span> <span class="n">yellow</span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre>
+
+
+<p>The integers in the 'faces' member are indices into the vertices list.
+So the triangular face, for example, is formed by linking vertices 2, 3
+and 4.</p>
+<h3><strong>Step 1. Creating a Ctypes Vertex array</strong></h3>
+<p>In order to render our Shape, we need to convert it to some ctypes
+arrays that OpenGL will eat:</p>
+<ul>
+<li>glvertices - an array of GLfloats (three for each vertex)</li>
+<li>glindices - an array of GLubytes (one for each index of each face)</li>
+<li>glcolors - an array of GLubytes (four for each vertex)</li>
+</ul>
+<p>To generate glvertices, we need to dereference the indices in
+Shape.faces, to produce a new list of vertices, rearranged into the
+order they are going to be drawn:</p>
+<p><img alt="Step 1. Dereference indices" src="../../../../files/2010/07/dereference-indices.png"></p>
+<p>The most visible aspect of this change is that the vertices are
+re-ordered, such that the indices now simply read '0, 1, 2, 3, 4, 5...'.
+However that isn't actually necessary. The important part of this
+transformation is that vertices which are re-used are now duplicated in
+the vertex list. For example v0 now occurs twice. As a result of this
+vertex duplication, one the two instances of '0' in the faces lists now
+instead reads '3' (referencing the new second copy of v0).</p>
+<p>This duplication of vertices is required, because when v0 is used for
+the first time, it is as part of the red triangle, and when it is used
+the second time it is as part of the yellow square. The color of the
+vertex changes from one occurrence to the next. All the attributes of a
+vertex (position, color, texture co-ords, normals, etc) are treated as
+an atomic unit, so whenever any attribute changes, as the color is
+changing here, the vertex position needs to be redundantly specified
+again, so as to create a new unique vertex with its own unique attribute
+values. Even if the color of v0 in our example was identical for each
+use, we will see later that other vertex attributes such as surface
+normals will still differ. Don't sweat trying to eliminate these
+redundancies, they are necessary, unless every single attribute of the
+re-used vertex (including surface normals) are identical.</p>
+<p>The code in Glyph.get_glverts() performs this dereferencing step:</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Glyph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">get_glverts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">num_glverts</span><span class="p">):</span>
+        <span class="n">glverts</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span>
+            <span class="n">shape</span><span class="o">.</span><span class="n">vertices</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">face</span> <span class="ow">in</span> <span class="n">shape</span><span class="o">.</span><span class="n">faces</span>
+            <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">face</span>
+        <span class="p">)</span>
+        <span class="n">ArrayType</span> <span class="o">=</span> <span class="n">GLfloat</span> <span class="o">*</span> <span class="p">(</span><span class="n">num_glverts</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ArrayType</span><span class="p">(</span><span class="o">*</span><span class="n">glverts</span><span class="p">)</span>
+</code></pre>
+
+
+<p>This uses a generator to produce the vertices in the order that we need
+them. 'ArrayType' shows the standard idiom to create a ctypes array - we
+take the datatype of the array elements, in this case GLfloat since our
+vertex positions consist of three floats, and multiply it by the
+required length of the array. This yields a new array type. The final
+return statement instantiates this array type using the data supplied by
+the glverts generator.</p>
+<h3><strong>Step 2. Creating Ctypes Index Arrays</strong></h3>
+<p>The second job Glyph has to do is create a ctypes indices array, which
+is derived from the Shape's faces. In doing this, it has to break the
+Shape's faces down into individual triangles.</p>
+<p><img alt="Step 2. Tessellate indices" src="../../../../files/2010/07/tessellate-indices.png"></p>
+<p>The vertex list is unchanged by this step, and the first face - the
+triangle - is also unchanged. The second face, the square, has been
+broken into two triangles.</p>
+<p>There are well-known algorithms for breaking an arbitrary polygon down
+into individual triangles. Using the utility functions found in the GLU
+library, this can be done in about 150 lines of Python. But in the
+interests of keeping it simple, I decided to restrict our code to just
+handling convex faces. Tessellating these faces can be done using a
+considerably simpler algorithm:</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">tessellate</span><span class="p">(</span><span class="n">face</span><span class="p">):</span>
+    <span class="sd">'''</span>
+<span class="sd">    Break the given face into triangles.</span>
+<span class="sd">    e.g. [0, 1, 2, 3, 4] -&gt;</span>
+<span class="sd">    [[0, 1, 2], [0, 2, 3], [0, 3, 4]]</span>
+<span class="sd">    Does not work on concave faces.</span>
+<span class="sd">    '''</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">face</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">face</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">face</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">)</span>
+</code></pre>
+
+
+<p>We again use a generator, to simply join up the face's first vertex with
+all the other vertices, like this:</p>
+<p><img alt="Tessellation of convex faces" src="../../../../files/2010/07/tessellation.png"></p>
+<p>Now we have our tessellate function, Glyph can now create the glindices
+array in much the same way as it generated the glvertices. I wasn't
+smart enough to write this as a generator first time around, I presume
+it would require more than one generator to do it (anyone?), so I'm
+needlessly creating an in-memory copy of the sequence, but it turns out
+I need to take its length right afterwards anyway, so what the heck:</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Glyph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">get_glindices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">):</span>
+        <span class="n">glindices</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">face_offset</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">face</span> <span class="ow">in</span> <span class="n">faces</span><span class="p">:</span>
+            <span class="n">indices</span> <span class="o">=</span> <span class="n">xrange</span><span class="p">(</span><span class="n">face_offset</span><span class="p">,</span> <span class="n">face_offset</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">face</span><span class="p">))</span>
+            <span class="n">glindices</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">chain</span><span class="p">(</span><span class="o">*</span><span class="n">tessellate</span><span class="p">(</span><span class="n">indices</span><span class="p">)))</span>
+            <span class="n">face_offset</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">face</span><span class="p">)</span>
+        <span class="n">ArrayType</span> <span class="o">=</span> <span class="n">GLubyte</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">glindices</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ArrayType</span><span class="p">(</span><span class="n">glindices</span><span class="p">)</span>
+</code></pre>
+
+
+<p>This is more complex than get_glvertices because it is performing both
+of the transformations described in steps 1 and 2. But it's still pretty
+straightforward. Note that the type of the index array will have change
+from GLubytes to GLushorts (or GLuints) if the number of vertices rises
+above 256 (or 65,536.)</p>
+<h3><strong>Step 3. Creating Ctypes Color Arrays</strong></h3>
+<p>Finally, we need an array of vertex colors. This is the simplest of the
+lot, generated by repeating the face_color for each face, once per
+vertex:</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Glyph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">get_glcolors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">face_colors</span><span class="p">,</span> <span class="n">num_glvertices</span><span class="p">):</span>
+        <span class="n">glcolors</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span>
+            <span class="n">repeat</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">face</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">face</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">izip</span><span class="p">(</span><span class="n">faces</span><span class="p">,</span> <span class="n">face_colors</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">ArrayType</span> <span class="o">=</span> <span class="n">GLubyte</span> <span class="o">*</span> <span class="p">(</span><span class="n">num_glvertices</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ArrayType</span><span class="p">(</span><span class="n">chain</span><span class="p">(</span><span class="o">*</span><span class="n">glcolors</span><span class="p">))</span>
+</code></pre>
+
+
+<h3><strong>First Light</strong></h3>
+<p>It's might seem like a teensy bit of a slog to get here, but it hasn't
+been more than sixty lines of code, and now we're in a position to pass
+our ctypes arrays into OpenGL's drawElements. This happens in our
+Render.draw() method:</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Render</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">world</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">world</span><span class="p">:</span>
+            <span class="n">glVertexPointer</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">GL_FLOAT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">glyph</span><span class="o">.</span><span class="n">glvertices</span><span class="p">)</span>
+            <span class="n">glColorPointer</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">GL_UNSIGNED_BYTE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">glyph</span><span class="o">.</span><span class="n">glcolors</span><span class="p">)</span>
+
+            <span class="c1"># TODO: handle the item's position and orientation</span>
+
+            <span class="n">glDrawElements</span><span class="p">(</span>
+                <span class="n">GL_TRIANGLES</span><span class="p">,</span>
+                <span class="nb">len</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">glyph</span><span class="o">.</span><span class="n">glindices</span><span class="p">),</span>
+                <span class="n">GL_UNSIGNED_BYTE</span><span class="p">,</span>
+                <span class="n">item</span><span class="o">.</span><span class="n">glyph</span><span class="o">.</span><span class="n">glindices</span>
+            <span class="p">)</span>
+</code></pre>
+
+
+<p>This is canonical OpenGL render code, so I'm not going to dissect it,
+but now we get some actual visible output:</p>
+<p><img alt="Red triangle, yellow square" src="../../../../files/2010/07/screen-triangle-square.png"></p>
+<p>Hooray! \o/ We can move our camera position around, and view this 3D
+object from different angles.</p>
+<p>There's a minor wrinkle here that I'm glossing over. I've turned on
+backface culling, so the triangle and square aren't visible if we view
+them from the back. For all our future examples I plan on using closed
+polyhedra, so we won't be able to see the 'backs' of the faces - those
+will be on the inside of the polyhedron.</p>
+<h3><strong>The Fun Stuff</strong></h3>
+<p>So now we've got all our infrastructure in place, we can start creating
+factory functions to churn out some Shapes. Let's start with something
+straightforward, a tetrahedron (triangle-based pyramid):</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">Tetrahedron</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">face_colors</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="n">edge</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+    <span class="n">vertices</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="o">+</span><span class="n">size</span><span class="p">,</span> <span class="o">+</span><span class="n">size</span><span class="p">,</span> <span class="o">+</span><span class="n">size</span><span class="p">),</span>
+        <span class="p">(</span><span class="o">-</span><span class="n">size</span><span class="p">,</span> <span class="o">-</span><span class="n">size</span><span class="p">,</span> <span class="o">+</span><span class="n">size</span><span class="p">),</span>
+        <span class="p">(</span><span class="o">-</span><span class="n">size</span><span class="p">,</span> <span class="o">+</span><span class="n">size</span><span class="p">,</span> <span class="o">-</span><span class="n">size</span><span class="p">),</span>
+        <span class="p">(</span><span class="o">+</span><span class="n">size</span><span class="p">,</span> <span class="o">-</span><span class="n">size</span><span class="p">,</span> <span class="o">-</span><span class="n">size</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">faces</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="p">]</span>
+    <span class="k">return</span> <span class="n">Shape</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">face_colors</span><span class="p">)</span>
+</code></pre>
+
+
+<p>Which produces a tetrahedron:</p>
+<p><img alt="A tetrahedron" src="../../../../files/2010/07/screen-tetrahedron.png"></p>
+<p>Then a cube factory:</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">face_colors</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">e2</span> <span class="o">=</span> <span class="n">edge</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">verts</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="o">*</span><span class="n">repeat</span><span class="p">([</span><span class="o">-</span><span class="n">e2</span><span class="p">,</span> <span class="o">+</span><span class="n">e2</span><span class="p">],</span> <span class="mi">3</span><span class="p">)))</span>
+    <span class="n">faces</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="c1"># left</span>
+        <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="c1"># right</span>
+        <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="c1"># front</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="c1"># back</span>
+        <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="c1"># top</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="c1"># bottom</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="n">Shape</span><span class="p">(</span><span class="n">verts</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">face_colors</span><span class="p">)</span>
+</code></pre>
+
+
+<p>The six faces are quite evident, but the use of <em>itertools.product</em> to
+produce the list of vertices perhaps deserves a bit of exposition. It's
+an inspired tip from <a href="http://tzotzioy.blogspot.com/">Î¤Î–Î©Î¤Î–Î™ÎŸÎ¥</a>.
+Just to spell it out in longhand:</p>
+<pre class="code literal-block"><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">repeat</span><span class="p">,</span> <span class="n">product</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="n">product</span><span class="p">(</span><span class="o">*</span><span class="n">repeat</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">)))</span>
+<span class="p">[(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+</code></pre>
+
+
+<p>So there are the eight vertices of the cube, and that gets us the
+following:</p>
+<p><img alt="A cube" src="../../../../files/2010/07/screen-cube.png"></p>
+<p>We can add a few more vertices and faces, to make ourselves a truncated
+cube:</p>
+<p><img alt="A truncated cube" src="../../../../files/2010/07/screen-truncated-cube.png"></p>
+<p>Once we've got truncated cubes, we might as well add one last face to
+form the entrance:</p>
+<p><img alt="A truncated cube with entrance" src="../../../../files/2010/07/screen-space-station.png"></p>
+<p>There's nothing to stop us adding several of these shapes into the world
+at once, but since we haven't yet moved any of them away from the
+origin, they just sit there, embedded within one another:</p>
+<p><img alt="A cube and tetrahedron interpenetrate" src="../../../../files/2010/07/screen-cube-tetra.png"></p>
+<p><img alt="A truncated cube with two tetrahedrons" src="../../../../files/2010/07/screen-trunccube-two-tetras.png"></p>
+<h3><strong>Moving objects around</strong></h3>
+<p>In our earlier Render.draw() method, we left a 'TODO' comment in place,
+to note that we weren't yet handling item positions and orientations.
+Here's what Render.draw looks like when we fill that code in:</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Render</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">world</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">world</span><span class="p">:</span>
+            <span class="n">glVertexPointer</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">GL_FLOAT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">glyph</span><span class="o">.</span><span class="n">glvertices</span><span class="p">)</span>
+            <span class="n">glColorPointer</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">GL_UNSIGNED_BYTE</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">glyph</span><span class="o">.</span><span class="n">glcolors</span><span class="p">)</span>
+
+            <span class="n">glPushMatrix</span><span class="p">()</span>
+            <span class="n">glTranslatef</span><span class="p">(</span><span class="o">*</span><span class="n">item</span><span class="o">.</span><span class="n">position</span><span class="p">)</span>
+            <span class="n">glMultMatrixf</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">matrix</span><span class="p">)</span>
+
+            <span class="n">glDrawElements</span><span class="p">(</span>
+                <span class="n">GL_TRIANGLES</span><span class="p">,</span>
+                <span class="nb">len</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">glyph</span><span class="o">.</span><span class="n">glindices</span><span class="p">),</span>
+                <span class="n">GL_UNSIGNED_BYTE</span><span class="p">,</span>
+                <span class="n">item</span><span class="o">.</span><span class="n">glyph</span><span class="o">.</span><span class="n">glindices</span>
+            <span class="p">)</span>
+            <span class="n">glPopMatrix</span><span class="p">()</span>
+</code></pre>
+
+
+<p>Again, this is very standard OpenGL usage. To set an item's <em>position</em>
+attribute, I'm going to use a bit of code that I already snuck into the
+demo without telling you about. It's the code that moves the camera
+around in space. A simplified version is here, class Orbit, which will
+return a new position each time it gets called. The locus of this
+position is an orbit around the origin:</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Orbit</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="n">phase</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">distance</span> <span class="o">=</span> <span class="n">distance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">speed</span>
+        <span class="k">if</span> <span class="n">phase</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">phase</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">phase</span> <span class="o">=</span> <span class="n">phase</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
+        <span class="n">bearing</span> <span class="o">=</span> <span class="n">time</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">phase</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distance</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">bearing</span><span class="p">)</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distance</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">bearing</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Vec3</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+</code></pre>
+
+
+<p>The actual camera uses a slightly longer version I call WobblyOrbit (not
+shown), which operates in exactly the same way. Any 'mover' class, i.e.
+one that returns a Vec3 position when called, can be used to move the
+camera, or any other item, around in space:</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">GameItem</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span> <span class="n">kwargs</span><span class="p">):</span>
+       <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="o">**</span> <span class="n">kwargs</span><span class="p">)</span>
+
+<span class="n">world</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">GameItem</span><span class="p">(</span>
+    <span class="n">shape</span><span class="o">=</span><span class="n">Cube</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">repeat</span><span class="p">(</span><span class="n">red</span><span class="p">)),</span>
+    <span class="n">mover</span><span class="o">=</span><span class="n">Orbit</span><span class="p">(</span><span class="n">distance</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">speed</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
+<span class="p">)</span> <span class="p">)</span>
+
+<span class="c1"># then, in world.update():</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">mover</span><span class="p">:</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">mover</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+</code></pre>
+
+
+<p>Similarly, we can spin items using 'spinner' classes, that tweak an
+item's orientation as time goes by.</p>
+<p>With these all in place, we can now add many Shapes to the world, each
+moving and rotating independently:</p>
+<p><img alt="Several independantly positioned and oriented shapes" src="../../../../files/2010/07/screen-several-shapes.png"></p>
+<h3><strong>Next week: Composite Shapes...</strong></h3>
+<p>This is all great as far as it goes, but it turns out we have a
+performance problem. Adding more than about 450 shapes at once starts to
+slow down below 60fps (This is all on my trusty 2005-era Thinkpad T60
+laptop.) The bottleneck turns out to be in our Render.draw() loop. Each
+of those OpenGL functions are from (wrappers around) the OpenGL C
+library, and calling across the Python / C boundary like this incurs a
+per-function call overhead. Also, a second looming problem is that
+creating more interesting shapes is going to become more onerous and
+error-prone, as we create longer and more complex lists of vertices and
+faces in our code.</p>
+<p>One partial solution to both these problems is to use composite shapes,
+in which we can compose many copies of our basic shapes into one single,
+more complex shape. This will allow us to use algorithmic means to
+produce more fun geometry, and will also help us draw more complex
+shapes, composed of many simpler shapes, without requiring several
+separate OpenGL function calls for each of the simple shapes.</p>
+<p><a href="../../../../flying-high-opengl-from-python-part-2">On to Part 2 &gt;&gt;</a></p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../categories/gamedev.html" rel="tag">GameDev</a></li>
+            <li><a class="tag p-category" href="../../../../categories/graphics.html" rel="tag">Graphics</a></li>
+            <li><a class="tag p-category" href="../../../../categories/presentations.html" rel="tag">Presentations</a></li>
+            <li><a class="tag p-category" href="../../../../categories/python.html" rel="tag">Python</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../19/loving-europython-tutorials.html" rel="prev" title="Loving EuroPython Tutorials">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../8/3/flying-high-opengl-from-python-part-2.html" rel="next" title="Flying High: OpenGL from Python, Part 2">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                
+
+        </section></article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2020         <a href="mailto:tartley@tartley.com">Jonathan Hartley</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">tartley.com</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL">Jonathan Hartley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+            
+        </footer>
+</div>
+</div>
+
+            <script src="../../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

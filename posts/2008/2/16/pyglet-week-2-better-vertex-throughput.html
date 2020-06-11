@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pyglet week 2: Better Vertex Throughput | tartley.com</title>
+<link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../../rss.xml">
+<link rel="canonical" href="https://www.tartley.com/posts/2008/2/16/pyglet-week-2-better-vertex-throughput.html">
+<!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
+<link rel="prev" href="../13/modularised-personal-devices.html" title="Modularised Personal Devices" type="text/html">
+<link rel="next" href="history-of-western-philosophy.html" title="History of Western Philosophy" type="text/html">
+<meta property="og:site_name" content="tartley.com">
+<meta property="og:title" content="pyglet week 2: Better Vertex Throughput">
+<meta property="og:url" content="https://www.tartley.com/posts/2008/2/16/pyglet-week-2-better-vertex-throughput.html">
+<meta property="og:description" content="In last week's 2D Graphics With pyglet and OpenGL,
+I used the pyglet library to produce some OpenGL
+triangles on the screen, from my rough-and-ready Python code. This week,
+I want to try to boost the ">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2008-02-16T04:24:33-06:00">
+<meta property="article:tag" content="Graphics">
+<meta property="article:tag" content="Python">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="pyglet-week-2-better-vertex-throughput.md" id="sourcelink">Source</a>
+    </li>
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">pyglet week 2: Better Vertex Throughput</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="#" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-16T04:24:33-06:00" itemprop="datePublished" title="2008-02-16 04:24">2008-02-16 04:24</time></a>
+            </p>
+                <p class="commentline">        
+
+                    </p>
+<p class="sourceline"><a href="pyglet-week-2-better-vertex-throughput.md" class="sourcelink">Source</a></p>
+
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>In last week's <a href="../../../../2d-graphics-with-pyglet-and-opengl">2D Graphics With pyglet and OpenGL</a>,
+I used the <a href="http://www.pyglet.org/">pyglet</a> library to produce some OpenGL
+triangles on the screen, from my rough-and-ready Python code. This week,
+I want to try to boost the throughput, to get some idea of how complex a
+scene we can realistically render from Python, while still maintaining a
+decent frame rate.</p>
+<p>I was a little optimistic in my assessment of how fast last week's code
+was running. When I come to measure it carefully, I find that displaying
+just <strong>85 triangles</strong> will bring the framerate down to a minimally
+acceptable <strong>30fps</strong>. This is on my lappy - a Thinkpad T60, with a dual
+1.6GHz cores, only one of which is busy, and an ATI Radeon Mobility
+X1400 running at 1680x1050. The framerate seems fairly independent of
+what size the triangles are, and of whether blend is enabled to make
+them translucent.</p>
+<p>So what can we do to improve this? I suspect that an easy win would be
+to replace each entity's single triangle with a collection of triangles,
+specified by an array of vertices. To assemble the vertex list, we
+create the first vertex at (0, 0), and then lay all the following
+vertices in a ring around it.</p>
+<p><img alt="Seven
+vertices" src="../../../../files/2008/02/points5.png"><img alt="Five
+triangles" src="../../../../files/2008/02/fan5.png"></p>
+<p>I've shown vertex 6 lying adjacent to vertex 1, just to make them both
+visible, but in actuality they are coincident. Rendering these N
+vertices using glDrawArray() can produce N-2 triangles in the best case.
+All these vertices are shunted to the graphics card, translated,
+rotated, scaled and rendered in hardware, all without our code having to
+do any extra work, and hopefully without any significant performance
+penalty.</p>
+<p>Starting with the code from last week, I modify it to generate the
+vertex list using the following new static member on class Entity. Note
+that I have coined the term <em>shard</em> to describe the individual triangles
+rendered by class Entity:</p>
+<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Entity</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="n">numShards</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">vertsGl</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_generateVerts</span><span class="p">():</span>
+        <span class="n">verts</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Entity</span><span class="o">.</span><span class="n">numShards</span><span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">bearing</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">/</span> <span class="n">Entity</span><span class="o">.</span><span class="n">numShards</span>
+            <span class="n">radius</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">bearing</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">Position</span><span class="o">.</span><span class="n">CoordsFromPolar</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">bearing</span><span class="p">)</span>
+            <span class="n">verts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">verts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+        <span class="n">Entity</span><span class="o">.</span><span class="n">vertsGl</span> <span class="o">=</span> <span class="p">(</span><span class="n">GLfloat</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">verts</span><span class="p">))(</span><span class="o">*</span><span class="n">verts</span><span class="p">)</span>
+
+<span class="n">Entity</span><span class="o">.</span><span class="n">_generateVerts</span><span class="p">()</span>
+</code></pre>
+
+
+<p>The for-loop simply creates the list of vertex co-ordinates, as
+illustrated above. The cryptic-looking penultimate line converts that
+list into an array of GLfloats, as provided by ctypes, and stores that
+array on a class level attribute, Entity.vertsGl. The final line then
+calls this member function as soon as the class is defined, creating our
+vertex array at program startup. We also create a similar array of
+colors, which will be used to color each vertex, but since I want each
+fan drawn in a different set of colors, this is done in
+Entity.__init__(), and the resulting arrays are stored on the
+instance (not shown).</p>
+<p>This vertex and color arrays can then be rendered as a triangle fan
+using the following Entity.draw() method:</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">glLoadIdentity</span><span class="p">()</span>
+    <span class="n">glTranslatef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">glRotatef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">rot</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">glScalef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">glEnableClientState</span><span class="p">(</span><span class="n">GL_VERTEX_ARRAY</span><span class="p">)</span>
+    <span class="n">glEnableClientState</span><span class="p">(</span><span class="n">GL_COLOR_ARRAY</span><span class="p">)</span>
+    <span class="n">glVertexPointer</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">GL_FLOAT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Entity</span><span class="o">.</span><span class="n">vertsGl</span><span class="p">)</span>
+    <span class="n">glColorPointer</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">GL_FLOAT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">colorsGl</span><span class="p">)</span>
+
+    <span class="n">glDrawArrays</span><span class="p">(</span><span class="n">GL_TRIANGLE_FAN</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vertsGl</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre>
+
+
+<p>With other minor tweaks to give a new background color, running this
+with 3 shards per Entity produces quite a pleasing effect:</p>
+<p><img alt="3 shards per
+entity" src="../../../../files/2008/02/screenshot-3.png"></p>
+<p>At 30fps, we can still manage 85 entities, and we're now rendering a fan
+of three shards for each one, so we've tripled our throughput to <strong>225
+triangles</strong> per frame. I suspect it can get better though. Let's try
+cranking up the number of shards per fan, while reducing the number of
+fans to maintain 30fps.</p>
+<table>
+<thead><tr>
+<th align="right">Shards per entity</th>
+<th align="right">Entities at 30fps</th>
+<th align="right">Triangles per frame</th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="right">3</td>
+<td align="right">85</td>
+<td align="right">225</td>
+</tr>
+<tr>
+<td align="right">
+<a href="../../../../files/2008/02/7shards85ents.png"><img alt="7 shards" src="../../../../files/2008/02/7shards85ents.small.png"></a> 7</td>
+<td align="right">85</td>
+<td align="right">595</td>
+</tr>
+<tr>
+<td align="right">
+<a href="../../../../files/2008/02/20shards85ents.png"><img alt="20 shards" src="../../../../files/2008/02/20shards85ents.small.png"></a> 20</td>
+<td align="right">85</td>
+<td align="right">1,700</td>
+</tr>
+<tr>
+<td align="right">100</td>
+<td align="right">82</td>
+<td align="right">8,200</td>
+</tr>
+<tr>
+<td align="right">
+<a href="../../../../files/2008/02/400shards68ents.png"><img alt="400 shards" src="../../../../files/2008/02/400shards68ents.small.png"></a> 400</td>
+<td align="right">68</td>
+<td align="right">27,200</td>
+</tr>
+<tr>
+<td align="right">
+<a href="../../../../files/2008/02/1200shards48ents.png"><img alt="1200 shards" src="../../../../files/2008/02/1200shards48ents.small.png"></a>1,200</td>
+<td align="right">48</td>
+<td align="right">57,600</td>
+</tr>
+<tr>
+<td align="right">1,800</td>
+<td align="right">39</td>
+<td align="right">70,200</td>
+</tr>
+<tr>
+<td align="right">3,000</td>
+<td align="right">29</td>
+<td align="right">87,000</td>
+</tr>
+<tr>
+<td align="right">6,000</td>
+<td align="right">17</td>
+<td align="right">102,000</td>
+</tr>
+<tr>
+<td align="right">
+<a href="../../../../files/2008/02/12000shards10ents.png"><img alt="" src="../../../../files/2008/02/12000shards10ents.small.png"></a> 12,000</td>
+<td align="right">10</td>
+<td align="right">120,000</td>
+</tr>
+<tr>
+<td align="right">100,000</td>
+<td align="right">1</td>
+<td align="right">100,000</td>
+</tr>
+</tbody>
+</table>
+<p>Above about 200 shards per fan, the shards start getting so thin that
+they produce moire effects, and above 10,000 there's some crazy white
+artifact starts happening in the middle of the fans. But nevertheless,
+the times taken to render these frames show a strong trend.</p>
+<p>Fewer fans, each with more shards, results in much higher triangle
+throughput - up to <strong>120,000 triangles</strong> per frame. Although it's
+exciting to see such high figures, I'd almost rather it wasn't the case.
+I'd prefer to create a game with more independent entities wandering
+around, regardless of how little graphical detail they could be adorned
+with. But there you have it, blame John Carmack. Anyhow, it's clear that
+we can deliver sufficient graphical grunt to put together <em>some sort</em> of
+game. Next time I hope to make a start on putting all these triangles to
+good use.</p>
+<p><strong>Update:</strong> For a 500% performance boost when running under Linux,
+invoke Python with the -O flag. I can now get 500 fans on screen, each
+with 100 triangles, at 30fps. See comments below.</p>
+<p><strong>On to <a href="http://tartley.com/?p=285">Part 3 - Some Pretty Flowers...</a></strong></p>
+<h4>Download the source</h4>
+<p><a href="../../../../files/2008/02/gameloop2py.zip" title="gameloop2.py.zip"><img alt="Python
+file" src="../../../../files/2008/02/doc-python.png">gameloop2.py.zip</a></p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../categories/graphics.html" rel="tag">Graphics</a></li>
+            <li><a class="tag p-category" href="../../../../categories/python.html" rel="tag">Python</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../13/modularised-personal-devices.html" rel="prev" title="Modularised Personal Devices">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="history-of-western-philosophy.html" rel="next" title="History of Western Philosophy">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                
+
+        </section></article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2020         <a href="mailto:tartley@tartley.com">Jonathan Hartley</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">tartley.com</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL">Jonathan Hartley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+            
+        </footer>
+</div>
+</div>
+
+            <script src="../../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

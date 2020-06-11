@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about Version control)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/version-control.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley@tartley.com"&gt;Jonathan Hartley&lt;/a&gt; &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"&gt;tartley.com&lt;/span&gt; by &lt;a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL"&gt;Jonathan Hartley&lt;/a&gt; is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.</copyright><lastBuildDate>Thu, 11 Jun 2020 19:39:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Git: When to use three dots vs two</title><link>https://www.tartley.com/posts/2015/8/25/git-when-to-use-three-dots-vs-two.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
+today:&lt;/p&gt;
+&lt;p&gt;To see the commits or diffs introduced by a branch (the filled circles ●):&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     f
+    +●  m           git log m..f
+     |  ○
+    +●  |           git diff m...f
+      \ ○
+       \|
+        ○
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;To see the commits or diffs between the tip of one branch and another:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     f              git log m...f
+    +●  m           All commits look the same,
+     |  ●-          unless you use --left-right, which
+    +●  |           shows where each commit comes from.
+      \ ●-
+       \|           git diff m..f
+        ○           '-' commits are shown inverted,
+                     i.e. additions as deletions.
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;To see the commits from 'f' back to the beginning of time:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     f
+    +●  m           git log f
+     |  ○
+    +●  |           (diffs back to start of time are just
+      \ ○            the contents of the working tree)
+       \|
+       +●
+        |
+       +●
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
+above that you almost always want:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git diff m...f
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;is the same as&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git checkout f
+git diff m...
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;or&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git checkout m
+git diff ...f
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;&lt;/div&gt;</description><category>Geek</category><category>Git</category><category>Version control</category><guid>https://www.tartley.com/posts/2015/8/25/git-when-to-use-three-dots-vs-two.html</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item></channel></rss>

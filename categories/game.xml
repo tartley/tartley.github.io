@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about game)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/game.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley@tartley.com"&gt;Jonathan Hartley&lt;/a&gt; &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"&gt;tartley.com&lt;/span&gt; by &lt;a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL"&gt;Jonathan Hartley&lt;/a&gt; is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.</copyright><lastBuildDate>Thu, 11 Jun 2020 19:39:36 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Legend of Zelda : The Phantom Hourglass</title><link>https://www.tartley.com/posts/2009/1/16/legend-of-zelda-the-phantom-hourglass.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2008/05/phantom-hourglass.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Nintendo, 2008&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Nintendo spin off a &lt;em&gt;fourteenth&lt;/em&gt; iteration of the familiar and
+oh-so-beloved franchise. I'd only previously played the
+preposterously-sub-titled &lt;em&gt;Ocarina of Time&lt;/em&gt; on the N64, of which I
+retain fond, sepia-coloured memories.&lt;/p&gt;
+&lt;p&gt;I found &lt;em&gt;Phantom Hourglass&lt;/em&gt; to be engaging, and played it to a
+thoroughly jolly completion over the course of a couple of months. The
+gameplay and plot are a tad more casual and lightweight than &lt;em&gt;Ocarina&lt;/em&gt;,
+as befitting play snatched while on-the-go on the handheld platform.&lt;/p&gt;
+&lt;p&gt;Using the DS stylus to control Link is delightfully transparent and
+intuitive. Just as for a mouse, however, expert users will eventually
+eschew it for many actions, preferring the speed, precision and
+tactility of distinct physical buttons.&lt;/p&gt;
+&lt;p&gt;On the down side, some of the puzzles are downright contrived. After
+introducing a handy little map, on which you can scrawl notes and
+reminders for yourself, the game then promptly takes it away again for
+&lt;em&gt;exactly&lt;/em&gt; the levels on which it would be of most use, proclaiming 'you
+can't use the map here, some sort of magic prevents it.' Right. Up
+yours.&lt;/p&gt;
+&lt;p&gt;Equally intrusive, the dialog is entirely Nintendo-esque cutesy Japanese
+schmultz, and it would have improved the game no end for it to have been
+entirely absent.&lt;/p&gt;
+&lt;p&gt;Such niggles are few and far between, though. Time for another go of the
+newfangled rating system.&lt;/p&gt;
+&lt;p&gt;Rating: Place yourself somewhere between...&lt;/p&gt;
+&lt;p&gt;10/10 if you're into a deftly executed handheld riff on the Zelda
+series, beautifully integrated with the affordances and sensibilities of
+the hosting hardware in that way that only Nintendo can do. Lots to love
+here.&lt;/p&gt;
+&lt;p&gt;0/10 if you're done with revisiting timeworn ideas, even ones as
+compelling and charming as this, and yearn for a resurgence in
+experimental originality to kick the gaming industry out of one or two
+ruts (such as having a blind spot for crappy dialog.)&lt;/p&gt;&lt;/div&gt;</description><category>ds</category><category>game</category><category>Games</category><category>nintendo</category><category>review</category><category>videogame</category><guid>https://www.tartley.com/posts/2009/1/16/legend-of-zelda-the-phantom-hourglass.html</guid><pubDate>Fri, 16 Jan 2009 20:36:05 GMT</pubDate></item><item><title>Sole Scion project v0.1 : A 2D rigid-body Python game</title><link>https://www.tartley.com/posts/2008/6/18/sole-scion-project-v01-a-2d-rigid-body-python-game.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="screenshot Sole Scion
+v1.0" src="https://www.tartley.com/files/2008/06/screenshot-sole-scion-v10.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://sethgodin.typepad.com/seths_blog/2008/06/is-it-worthy.html"&gt;Everyone&lt;/a&gt;
+today is &lt;a href="http://www.codinghorror.com/blog/archives/001134.html"&gt;abuzz&lt;/a&gt;
+with the 'release early, release often' sentiment, so I've decided to
+get in the spirit and upload the first iteration of 'Sole Scion', my
+summertime sabbatical game project.&lt;/p&gt;
+&lt;p&gt;Version 0.1 merely bounces some circles off an inclined plane
+(pictured.) I aim to transform this into a 2D graphical adventure game,
+in which I hope emergent fun will take place, once I populate the world
+with enough twisty corridors, uniquely-shaped objects that need slotting
+into the right places, and judicious instances of ornery fauna to
+contend with.&lt;/p&gt;
+&lt;p&gt;It's written in Python, using
+&lt;a href="http://wiki.slembcke.net/main/published/Chipmunk"&gt;Chipmunk&lt;/a&gt; for rigid
+body Newtonian dynamics, with Python bindings using
+&lt;a href="http://code.google.com/p/pymunk/"&gt;Pymunk&lt;/a&gt;. Rendering, gameloop, sounds,
+etc are handled by &lt;a href="http://pyglet.org"&gt;pyglet&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://code.google.com/p/sole-scion"&gt;Sole Scion is hosted on Google
+Code&lt;/a&gt;, with Subversion read-access
+and a source code tarball, including the redistributables for the above
+dependencies, should anyone be curious. It has a &lt;a href="http://www.opensource.org/licenses/bsd-license.php"&gt;New BSD
+License&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Feedback, thoughts and ideas, very welcome.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: I've only run it on Linux, but reportedly it also works on
+Windows. Thanks Xtian!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; It also reportedly works under PyPy, provided you install
+the 'functools' module. Thanks Maciej!&lt;/p&gt;&lt;/div&gt;</description><category>2d</category><category>chipmunk</category><category>game</category><category>Graphics</category><category>physics</category><category>pyglet</category><category>pymunk</category><category>Python</category><category>rigid body</category><guid>https://www.tartley.com/posts/2008/6/18/sole-scion-project-v01-a-2d-rigid-body-python-game.html</guid><pubDate>Wed, 18 Jun 2008 11:37:17 GMT</pubDate></item></channel></rss>

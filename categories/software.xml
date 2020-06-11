@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about Software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley@tartley.com"&gt;Jonathan Hartley&lt;/a&gt; &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"&gt;tartley.com&lt;/span&gt; by &lt;a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL"&gt;Jonathan Hartley&lt;/a&gt; is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.</copyright><lastBuildDate>Thu, 11 Jun 2020 19:39:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/2020/6/9/format-python-snippets-with-black.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;But often you'd like to reformat just a section of the file, while leaving
+everything else intact. In principle, it's easy to tell Vim to just send the
+current visual selection:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;" Black(Python) format the visual selection&lt;/span&gt;
+xnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;(Note that both the above Vim configuration snippets map the same key
+sequence -- leader (commonly comma) followed by lower case b. These can be
+defined simultaneously, because the second one uses 'xnoremap', meaning it is
+used only while a visual selection exists, while the first uses 'nnoremap', so
+is used all other times.)&lt;/p&gt;
+&lt;p&gt;But if the given code starts with an indent on the first line, for example if
+it comes from lines in the middle of a function, then this won't work. Black
+parses the given code into a Python abstract syntax tree (AST), and a leading
+indent is a syntax error - it's just not valid Python.&lt;/p&gt;
+&lt;p&gt;I filed a hopeful &lt;a href="https://github.com/psf/black/issues/1352"&gt;issue with Black&lt;/a&gt;,
+suggesting they could handle this case, but it was a long shot and hasn't
+gained much enthusiasm.&lt;/p&gt;
+&lt;p&gt;So, I present a tiny Python3 wrapper, &lt;em&gt;enblacken&lt;/em&gt;, which:
+* Unindents the given code such that the first line has no indent.
+* Passes the result to Black.
+* Reindents Black's output, by the same amount as the original unindent.&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>Python</category><category>Software</category><guid>https://www.tartley.com/posts/2020/6/9/format-python-snippets-with-black.html</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/2020/4/20/lxd-for-dev-env.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I would be interested in seeing some example lxd config files,
+bash command history when creating, etc?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here goes then.&lt;/p&gt;
+&lt;p&gt;I have one LXD container running for each nontrivial development project I'm
+working on.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ lxc ls
+&lt;span class="p"&gt;|&lt;/span&gt;    NAME     &lt;span class="p"&gt;|&lt;/span&gt;  STATE  &lt;span class="p"&gt;|&lt;/span&gt;        IPV4         &lt;span class="p"&gt;|&lt;/span&gt; IPV6 &lt;span class="p"&gt;|&lt;/span&gt;   TYPE    &lt;span class="p"&gt;|&lt;/span&gt; SNAPSHOTS &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt; devicegw    &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.228 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt; ident       &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.4 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;   &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt; revs        &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.151 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt; siab        &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.128 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt; tartley-com &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.161 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Out of the gate we see one source of confusion. "LXD", the daemon, is a
+newer project that builds on top of "LXC" the containers. However the user
+interface to all the new LXD-goodness is through a command-line called "lxc",
+which replaces the older command line tool called "lxd". :-/&lt;/p&gt;
+&lt;p&gt;To create a new one:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ &lt;span class="nb"&gt;time&lt;/span&gt; lxc launch ubuntu:16.04 -p default -p jhartley demo
+Creating demo
+Starting demo
+real    0m9.593s
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Once created, they take about 3 seconds to stop and 0.5 seconds to start.&lt;/p&gt;
+&lt;p&gt;Those "-p" options cause the container to use two &lt;em&gt;profiles&lt;/em&gt;. They are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;em&gt;default&lt;/em&gt; profile, which I've never touched. It's just doing whatever it
+   always does.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;em&gt;jhartley&lt;/em&gt; profile, I created in a one-off step by running a Bash script
+   derived from instructions one of my colleagues passed around. I'll describe
+   it at the end.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once a new container is up, we can execute commands directly on it:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ lxc &lt;span class="nb"&gt;exec&lt;/span&gt; demo hostname
+demo
+$ lxc &lt;span class="nb"&gt;exec&lt;/span&gt; demo whoami
+root
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Or SSH to them using their IP address:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;jhartley@t460 $ lxc ls demo
+&lt;span class="p"&gt;|&lt;/span&gt; NAME &lt;span class="p"&gt;|&lt;/span&gt;  STATE  &lt;span class="p"&gt;|&lt;/span&gt;        IPV4         &lt;span class="p"&gt;|&lt;/span&gt; IPV6 &lt;span class="p"&gt;|&lt;/span&gt;   TYPE    &lt;span class="p"&gt;|&lt;/span&gt; SNAPSHOTS &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt; demo &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.162 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
+jhartley@t460 $ ssh &lt;span class="m"&gt;10&lt;/span&gt;.44.99.162
+...
+Warning: Permanently added &lt;span class="s1"&gt;'10.44.99.162'&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;ECDSA&lt;span class="o"&gt;)&lt;/span&gt; to the list of known hosts.
+Welcome to Ubuntu &lt;span class="m"&gt;16&lt;/span&gt;.04.6 LTS &lt;span class="o"&gt;(&lt;/span&gt;GNU/Linux &lt;span class="m"&gt;5&lt;/span&gt;.4.0-25-generic x86_64&lt;span class="o"&gt;)&lt;/span&gt;
+jhartley@demo $
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Better than using IP addresses, you can run a DNS server to recognize
+&lt;code&gt;{containername}.lxd&lt;/code&gt; hostnames. (This part is from
+&lt;a href="https://discuss.linuxcontainers.org/t/a-way-to-resolve-container-lxd-from-host-in-all-cases/3698"&gt;here&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;Find your lxd bridge IPv4 address&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;lxc network show lxdbr0
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Create file &lt;code&gt;/etc/systemd/network/lxd.network&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[Match]&lt;/span&gt;
+&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;lxdbr0&lt;/span&gt;
+
+&lt;span class="k"&gt;[Network]&lt;/span&gt;
+&lt;span class="na"&gt;Address&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR/24&lt;/span&gt;
+&lt;span class="na"&gt;DNS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR&lt;/span&gt;
+&lt;span class="na"&gt;Domains&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;~lxd&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Where IPADDR is the lxdbr0 IPv4 address.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; systemd-networkd
+sudo reboot now
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Then:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;jhartley@t460 $ ssh demo.lxd
+jhartley@demo $ &lt;span class="c1"&gt;# \o/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;One nice thing is that DNS works both from the host and on the containers,
+so your services can be configured by default to talk to each other at
+SERVICE1.lxd, SERVICE2.lxd. Then running them in containers on your host
+they would just find each other. We don't actually do this, but it seems
+trivially easy to do. I should ask why we don't.&lt;/p&gt;
+&lt;p&gt;In practice I wrap up the ssh command with my accumulated foibles:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;jhartley@demo $ &lt;span class="nb"&gt;type&lt;/span&gt; -a lssh
+lssh is a &lt;span class="k"&gt;function&lt;/span&gt;
+lssh &lt;span class="o"&gt;()&lt;/span&gt;
+&lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="nv"&gt;TERM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xterm-color ssh -A -t &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.lxd"&lt;/span&gt; -- &lt;span class="s2"&gt;"cd &lt;/span&gt;&lt;span class="nv"&gt;$PWD&lt;/span&gt;&lt;span class="s2"&gt; &amp;amp;&amp;amp; exec &lt;/span&gt;&lt;span class="nv"&gt;$SHELL&lt;/span&gt;&lt;span class="s2"&gt; -l"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;I forget why -A and -t were required. The rest is mostly just to start the
+shell on the container in the same directory as I was in on the host. There
+is probably a simpler way.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;The booooooring bits:&lt;/p&gt;
+&lt;p&gt;When we started the container, we mentioned
+&lt;a href="https://www.tartley.com/files/2020/setup-lxd-profile.sh"&gt;a one-off setup script&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The script does a few things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Creates a new key pair specifically to SSH to the container.&lt;/li&gt;
+&lt;li&gt;Creates the custom &lt;em&gt;jhartley&lt;/em&gt; profile, which causes all containers started
+   with it to:&lt;/li&gt;
+&lt;li&gt;Create a new user on the container with user and group ID mapped to
+      those of my user on the host, presumably so that file permissions work
+      for...&lt;/li&gt;
+&lt;li&gt;Mount my $HOME directory on the container. Might not always be what you
+      want, but works for me right now.&lt;/li&gt;
+&lt;li&gt;Doubtless due to my own misunderstanding somewhere, in order to get working
+   IPv4 connections to my containers, I had to disable IPv6 connections to
+   them.&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>Geek</category><category>Linux-dev</category><category>Software</category><guid>https://www.tartley.com/posts/2020/4/20/lxd-for-dev-env.html</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/posts/2016/5/15/rhythmbox-plugin-announce.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
+for it, called "Announce":&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/tartley/rhythmbox-plugin-announce"&gt;https://github.com/tartley/rhythmbox-plugin-announce&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Every time a new song starts to play, it announces the title using
+speech synthesis. I like it when I'm listening to some new music I'm not
+familiar with, but am away from the computer. Then I can still know
+which track is which.&lt;/p&gt;
+&lt;p&gt;If the album or artist names are different from the previous track, then
+it includes those in the announcement, too.&lt;/p&gt;&lt;/div&gt;</description><category>Python</category><category>Software</category><guid>https://www.tartley.com/posts/2016/5/15/rhythmbox-plugin-announce.html</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://www.tartley.com/posts/2016/1/20/google-chrome-credit.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I just noticed: Open Chrome, go to &lt;chrome:&gt;&lt;/chrome:&gt;, search in page,
+'show licence', and:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;img alt="chrome-credit" src="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;&lt;/div&gt;</description><category>Geek</category><category>Linux-dev</category><category>Software</category><guid>https://www.tartley.com/posts/2016/1/20/google-chrome-credit.html</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://www.tartley.com/posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
+Code."&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The goals of making deployment consistent, reliable and fast are very
+laudable, and the conclusion involving creating Debian packages is just
+great. But in the spirit of geek nitpicking, I can't help but think the
+justifications given are misguided, and overlook a simpler solution.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; pip does not offer a "revert deploy" strategy&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Yes it does. Throw away the virtualenv and create a new one using the
+requirements.txt from an earlier release. This might be slow, but you
+can both speed it up (see below), and you can keep old versioned
+virtualenvs around, as a cache of the output of this slow step, so that
+reverts (the time when you really want deploys to go quickly) require
+only a couple of symlinks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Oooh, and I just had an idea. You could version virtualenvs
+using a hash of the requirements, so that deploys which do not change
+dependencies can share the same virtualenv. I've never tried that - it
+might work?!?!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; Installing dependencies with pip can make deploys painfully
+slow&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is true. But it's not the final word on the matter.&lt;/p&gt;
+&lt;p&gt;Firstly, don't grab the dependencies you're installing from PyPI. Have a
+local cache of them. That speeds up the install tremendously, not just
+because no download takes place, but also because no trawling of PyPI
+and author sites for possible alternate versions takes place. Some
+people use a local PyPI instance, but I like simply using a directory
+full of packages. Point pip at it using
+'&lt;code&gt;pip install --no-index --find-links=packages -r requirements&lt;/code&gt;'. The
+'packages' directory could be checked into your project's repo, so that
+once you've checked a project out, you have everything you need to
+deploy to local VMs, even with no network connection at all. I wrote
+about this &lt;a href="https://www.tartley.com/pip-install-lightspeed-and-bulletproof"&gt;a while ago&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; Building your code separately on each host will cause
+consistency issues&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;So don't install dependencies using source packages, use wheels instead.
+Then any slow or unreliable build step is done once, when you create the
+packages directory, while deployment is now reliable and requires no
+development tools on the production server such as compilers, headers,
+etc.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; As a bonus, this will again substantially speed up the
+creation of your virtualenv when deploying.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; Deploys will fail if the PyPI or your git server are down&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;PyPI outages (or a package author deleting their package, which happens
+routinely) are not a problem if you're deploying from a local source of
+packages.&lt;/p&gt;
+&lt;p&gt;I agree that application code deployment shouldn't be done using a 'git
+pull'. Accessibility to GitHub shouldn't be a single point of failure,
+and the fewer development tools needed on production servers the better.
+So export the code from git into a tar file when you cut a release, and
+then push it out using scp at deploy time.&lt;/p&gt;
+&lt;p&gt;Having said all that, there are still advantages to having your whole
+app and its dependencies handled by a single mechanism like Debian
+packages, rather than more bug-prone ad-hoc scripts and Ansible config.
+So I'm not at all against the final conclusions of the Nylas article.
+(Hugs to you folks at Nylas!)&lt;/p&gt;
+&lt;p&gt;Dashed this out in ten minutes between daycare pickup and dinner being
+ready. Apologies for the inevitable shoddyness.&lt;/p&gt;&lt;/div&gt;</description><category>Geek</category><category>Python</category><category>Software</category><guid>https://www.tartley.com/posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code.html</guid><pubDate>Wed, 22 Jul 2015 00:06:02 GMT</pubDate></item><item><title>Understanding git rebase so it sticks</title><link>https://www.tartley.com/posts/2014/2/7/understanding-rebase-so-it-sticks.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember how to use git rebase. That ends today. Here are
+my notes to help me remember.&lt;/p&gt;
+&lt;p&gt;Rebase is traditionally documented as:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase &lt;span class="o"&gt;[&lt;/span&gt;--onto newbase&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;upstream &lt;span class="o"&gt;[&lt;/span&gt;branch&lt;span class="o"&gt;]]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;This is confusing for several reasons. A slight improvement is to rename
+the args:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase &lt;span class="o"&gt;[&lt;/span&gt;--onto target&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;include&lt;/code&gt; is the tip of the branch to be transplanted. If omitted,
+    it defaults to the current branch.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;exclude&lt;/code&gt; excludes all its ancestors from being transplanted. Hence
+    the transplanted branch will have its tip at &lt;code&gt;include&lt;/code&gt;, and its base
+    at the common ancestor of &lt;code&gt;include&lt;/code&gt; and &lt;code&gt;exclude&lt;/code&gt;. If &lt;code&gt;--onto&lt;/code&gt; isn't
+    specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the destination for the
+    transplant.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;target&lt;/code&gt; is the place to transplant the branch to. If not specified,
+    it defaults to the value of &lt;code&gt;exclude&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hence, a simple before and after:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;o---o---o---o---o---o exclude
+     \
+      1---2---3 current branch
+                or include
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;                exclude
+                v
+o---o---o---o---o---1---2---3 current branch
+                              or include
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;See how the commits to be transplanted start at &lt;code&gt;include&lt;/code&gt; and go back to
+the common ancestor of that and &lt;code&gt;exclude&lt;/code&gt;. Since &lt;code&gt;--onto&lt;/code&gt; isn't
+specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the transplant destination.&lt;/p&gt;
+&lt;p&gt;Or a more complex one:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt; o---o---o---o---o target
+      \
+       o---o---o exclude
+            \
+             1---2 current branch
+                   or include
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase --onto target exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;                    target
+                    v
+    o---o---o---o---o---1---2 current branch
+         \                    or include
+          o---o---o
+                  ^
+                  exclude
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Again, the commits to be transplanted are defined by &lt;code&gt;include&lt;/code&gt; and
+&lt;code&gt;exclude&lt;/code&gt;, but this time a separate destination is specified using
+&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>Git</category><category>Software</category><guid>https://www.tartley.com/posts/2014/2/7/understanding-rebase-so-it-sticks.html</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://www.tartley.com/posts/2014/2/2/object-oriented-software-engineering-a-use-case-driven-approach.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="object-oriented-sofware-engineering" src="https://www.tartley.com/files/2014/02/object-oriented-sofware-engineering.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Ivar Jacobsen&lt;/em&gt; (1992, 4th revision)&lt;/p&gt;
+&lt;p&gt;You might wonder if there's anything left to say about
+object-orientation that hasn't already been discussed to death. I was
+led to this 1992 book by Uncle Bob's talk "&lt;a href="http://www.youtube.com/watch?v=WpkDN78P884"&gt;Architecture: The Lost
+Years&lt;/a&gt;." In it Bob posits
+that in the 1990s, just as people like Ivar were completing their
+20-year journey of figuring out some fairly optimal ways to do
+object-orientation, along came the disruptive influence of the web,
+which turned everyone's priorities, methodologies and designs upside
+down. In the resulting stampede, some highly practical ideas have been
+lost, both in terms of design and process. This has substantially
+watered down OO's ability to deliver on its promises of reuse and
+maintainability. It has stranded a whole generation of applications with
+distorted architectures, inside-out designs, and less maintainable code.&lt;/p&gt;
+&lt;p&gt;Aspects of these historical approaches do survive, such as the
+prominence Agile gives to use-cases as a way to concretely tie together
+requirements, design, testing, and acceptance. But some equally powerful
+ideas, such as appropriate ways to manage dependencies within an
+application, have seen relatively little use, and are only now being
+rediscovered in guises such as the clean and hexagonal architectures.&lt;/p&gt;
+&lt;p&gt;Ivar's book can certainly lay claim to being one of the earliest
+published sources to lay out these ideas, and he does so with a style
+that is convincingly thoughtful. This is the work of an intelligent man,
+honed and refined over many years of practice. The omission of modern
+testing techniques are the only thing that substantially dates the
+content. Otherwise I found it exciting, insightful and revolutionary. It
+seems naive to claim that this book describes the One True Architecture
+which is applicable to all systems. But it certainly seems very widely
+applicable, and has deeply affected my thinking on all projects larger
+than a couple of weeks' work.&lt;/p&gt;
+&lt;p&gt;The book also discusses software development methodology in an
+intriguingly meta way, constructing an object-oriented model of the
+process itself. Each software development team or organisation
+represents a particular implementation of this model. Parallels with the
+execution of software are drawn, with the output of one part of the
+process, e.g. design work, having to produce results that conform to the
+expectations of the downstream process, such as implementation. In this
+way, sections of the process can be removed and replaced by compatible
+alternatives, to better suit the application domain and the organisation
+within which the project is embedded. These ideas seem less immediately
+applicable and actionable. Maybe that's just my personal circumstance.
+Perhaps they are more applicable to larger projects, which I avoid these
+days.&lt;/p&gt;
+&lt;p&gt;Rating:&lt;/p&gt;
+&lt;p&gt;10/10 if you're going to enjoy 500 pages of software design principles
+and case studies.&lt;/p&gt;
+&lt;p&gt;0/10 if you're not.&lt;/p&gt;&lt;/div&gt;</description><category>Books</category><category>Software</category><guid>https://www.tartley.com/posts/2014/2/2/object-oriented-software-engineering-a-use-case-driven-approach.html</guid><pubDate>Sun, 02 Feb 2014 20:26:43 GMT</pubDate></item><item><title>Domain Driven Design: Tackling Complexity in the Heart of Software</title><link>https://www.tartley.com/posts/2014/1/27/domain-driven-design-tackling-complexity-in-the-heart-of-software.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="domaindrivendesign" src="https://www.tartley.com/files/2014/01/domaindrivendesign.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Eric Evans (2004)&lt;/em&gt; &lt;a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215"&gt;on Amazon&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It's a big, dense book -- possibly the most important of the technical
+books I've read in a flurry over the last few months, catching up after
+recovering a modicum of sanity in our lives after our kid's first year.
+I finish it feeling changed, invigorated, and given new direction.&lt;/p&gt;
+&lt;p&gt;At its core is a simple idea, which sounds neither new nor revolutionary
+on the surface. Software projects, Evans maintains, should work closely
+with business experts to create and maintain a domain model. The model
+might be expressed as a class diagram of core business concerns, and
+should also correspond directly to a body of code modelling these
+business entities. This forms a set of core business entities which are
+clearly analogous to things like the core enterprise entities of the
+hexagonal or clean architectures.&lt;/p&gt;
+&lt;p&gt;However it's created, the terminology and notation used in the class
+diagram (or it's equivalent) should be well understood by individuals on
+both side of the tech/business divide. In the past I think I've made the
+mistake of believing that only developers needed to understand it, and
+therefore the model only needed to be expressed in code.&lt;/p&gt;
+&lt;p&gt;This model should be displayed prominently, referred to continually, and
+in a healthy project should very directly correspond to the specialised
+language that evolves within the organisation. Where the team's language
+doesn't match the model - for example, your business experts' use of
+plurals betrays that the cardinality of relationships are modelled
+wrongly, then the model - and the underlying code - should be
+aggressively refactored to match reality.&lt;/p&gt;
+&lt;p&gt;Evans makes a persuasive case that the appropriate management of this
+complexity at the heart of your software will be a major influence on
+the success of the project. To be fair, this is a viewpoint that I
+already believed in, so I was a sucker for all of this. Without an
+appropriate approach to these central design concerns, over time
+developers will find they are no longer able to understand the code
+thoroughly enough to be able to modify or extend it easily, unless they
+deliberately or inadvertently use design-breaking hacks like redundancy
+or mislocated chunks of code. This forms a vicious cycle of technical
+debt accrual, and creates an upper limit on the size or complexity which
+can be achieved by any project before productivity begins to slump.
+Other metrics like reliability then also suffer.&lt;/p&gt;
+&lt;p&gt;To counter this, conquering these central design issues requires a
+pro-active and multi-pronged effort. Firstly, the existing design must
+be understood by all parties. In order for this to remain true, the
+design needs to be kept up to date and be easily understood by new team
+members. The code must be kept directly in sync with the model, and kept
+understandable - inappropriate dependencies must be ruthlessly pruned.
+Simultaneously, the "correct" design must be discovered iteratively,
+throughout the life of the project, and this can only be done by
+encouraging continual conversations between developers and business
+folks to discuss the potential inadequacies of the current design and
+possible alternatives.&lt;/p&gt;
+&lt;p&gt;When managed correctly, this lends an agility and suppleness to project.
+Developers find it easy to integrate subsequent parts of code because
+they 'fit naturally' into the existing design, and when the design is
+found wanting, it's relatively easy to modify it to incorporate new
+concerns.&lt;/p&gt;
+&lt;p&gt;There are times when I've struggled to convey the message about how the
+resulting trade off works between time spent refactoring versus time
+saved over the long term. Evans describes this in an interesting way.
+Instead of trying to model team productivity by applying a multiplier to
+describe drag caused by technical debt, he simply contrasts the normal
+way projects slow down as they become larger and more complex, with a
+project that instead &lt;em&gt;speeds up&lt;/em&gt; over time, as developers, unhindered by
+a cycle of technical debt, are instead empowered by the creation of
+powerful and expressive abstractions, which can then be relatively
+easily reconfigured into unanticipated configurations.&lt;/p&gt;
+&lt;p&gt;To counter-balance this idealistic hand-waving, the next section dives
+right into some specific design practices which embody these ideas.
+These are valuable and insightful, stock-in-trade, such as
+distinguishing between entity and value types. But many of the ideas
+were completely new to me, such as the concept of &lt;em&gt;aggregates&lt;/em&gt;, which
+define subsets of the domain model which are always atomically retrieved
+from (or updated in) a data store.&lt;/p&gt;
+&lt;p&gt;In short, I really loved this book. It stretched and inspired me. It's
+in a very small set of books I've flagged to re-read in a couple of
+years. It's top of my list for 'books to bring in and talk about at
+work'.&lt;/p&gt;
+&lt;p&gt;Rating:&lt;/p&gt;
+&lt;p&gt;10/10 if you're a programmer, or work with programmers.&lt;/p&gt;
+&lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;&lt;/div&gt;</description><category>Books</category><category>Software</category><guid>https://www.tartley.com/posts/2014/1/27/domain-driven-design-tackling-complexity-in-the-heart-of-software.html</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item><item><title>Launch Gitk displaying all branches</title><link>https://www.tartley.com/posts/2010/12/31/launch-gitk-displaying-all-extant-branches.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; All of the below is made totally redundant by simply using
+&lt;code&gt;gitk --all&lt;/code&gt;. Thanks Russel!&lt;/p&gt;
+&lt;p&gt;When I launch Gitk, it just displays the current branch. To display
+other branches, you must name them on the command line. To display all
+existing branches, you need to find out all the branch names:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git branch
+  create-sql-dev
+  formula-rewrite
+* master
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Then laboriously type them in to the gitk command line:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ gitk create-sql-dev formula-rewrite master
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;Alternatively, save this Bash snippet in a script on your PATH. I call
+mine gitka, for 'all branches':&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/usr/bin/bash&lt;/span&gt;
+&lt;span class="c1"&gt;# run gitk, displaying all existing branches&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; b in &lt;span class="s2"&gt;"`git branch`"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$b&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; tr -d &lt;span class="s2"&gt;"*"&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; xargs gitk
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;img alt="Gitk displaying all branches, not just the current ('master' in bold)" src="https://www.tartley.com/files/2010/12/gitk-all-branches.png" title="gitk-all-branches"&gt;&lt;/p&gt;
+&lt;p&gt;This works on Windows too, if you save it as 'gitka.sh', and have Cygwin
+installed and associate the .sh filename extension with the Cygwin Bash
+executable. You can then run it as 'gitka' from a Windows command prompt
+thingy. If you then use 'ln -s gitka.sh gitka', then you can also run it
+as just 'gitka' from a Cygwin bash prompt too - without this you would
+have had to type out the full 'gitka.sh'.&lt;/p&gt;&lt;/div&gt;</description><category>Git</category><category>MSWin-dev</category><category>Software</category><guid>https://www.tartley.com/posts/2010/12/31/launch-gitk-displaying-all-extant-branches.html</guid><pubDate>Fri, 31 Dec 2010 18:25:31 GMT</pubDate></item><item><title>A Guide to GIT using spatial analogies</title><link>https://www.tartley.com/posts/2010/12/15/a-guide-to-git-using-spatial-analogies.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Some developers find Git takes a little getting used to, claiming that
+it is conceptually convoluted compared to other distributed version
+control systems. I used to number myself amongst them.&lt;/p&gt;
+&lt;p&gt;Happily, I've found that a couple of simple spatial analogies have made
+me proficient and fluent in using Git's command-line interface.&lt;/p&gt;
+&lt;p&gt;One of the things that tripped me up as a novice user was the way Git
+handles &lt;strong&gt;branches&lt;/strong&gt;. Unlike more primitive version control systems, git
+repositories are not linear, they support branching, and are thus best
+visualised as trees, upon the nodes of which your current commit may add
+new leaf nodes. To visualise this, it's simplest to think of the state
+of your repository as a point in a high-dimensional 'code-space', in
+which branches are represented as n-dimensional membranes, mapping the
+spatial loci of successive commits onto the projected manifold of each
+cloned repository.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Branches as n-branes" src="https://www.tartley.com/files/2010/12/I1546manifold.png" title="I1546manifold"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; There is, of course, a &lt;a href="http://www.reddit.com/r/programming/comments/embdf/git_complicated_of_course_not_commits_map_to/"&gt;fabulously insightful
+commentary&lt;/a&gt;
+on reddit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Thanks folks. You've made my usual one or two hundred daily
+visitors look kinda paltry:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="spike in daily traffic graph" src="https://www.tartley.com/files/2010/12/daily-traffic.png" title="daily-traffic"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Python</category><category>Software</category><guid>https://www.tartley.com/posts/2010/12/15/a-guide-to-git-using-spatial-analogies.html</guid><pubDate>Wed, 15 Dec 2010 20:40:14 GMT</pubDate></item></channel></rss>

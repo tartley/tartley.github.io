@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chaining a sequence of generators | tartley.com</title>
+<link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../../rss.xml">
+<link rel="canonical" href="https://www.tartley.com/posts/2013/10/15/chaining-a-sequence-of-generators.html">
+<!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
+<link rel="prev" href="../../8/10/revolution-an-instruction-manual.html" title="Revolution: An Instruction Manual" type="text/html">
+<link rel="next" href="../../../2014/1/22/brief-interviews-with-hideous-men.html" title="Brief Interviews with Hideous Men" type="text/html">
+<meta property="og:site_name" content="tartley.com">
+<meta property="og:title" content="Chaining a sequence of generators">
+<meta property="og:url" content="https://www.tartley.com/posts/2013/10/15/chaining-a-sequence-of-generators.html">
+<meta property="og:description" content="I often gravitate towards solutions using a series of chained
+generators, in the style of David Beazley's 'Generator Tricks for
+Systems Programmers.'
+This results in the outer level of my code calling">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2013-10-15T15:09:54-05:00">
+<meta property="article:tag" content="Python">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="chaining-a-sequence-of-generators.md" id="sourcelink">Source</a>
+    </li>
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Chaining a sequence of generators</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="#" rel="bookmark">
+            <time class="published dt-published" datetime="2013-10-15T15:09:54-05:00" itemprop="datePublished" title="2013-10-15 15:09">2013-10-15 15:09</time></a>
+            </p>
+                <p class="commentline">        
+
+                    </p>
+<p class="sourceline"><a href="chaining-a-sequence-of-generators.md" class="sourcelink">Source</a></p>
+
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>I often gravitate towards solutions using a series of chained
+generators, in the style of David Beazley's '<a href="http://www.dabeaz.com/generators-uk/">Generator Tricks for
+Systems Programmers</a>.'</p>
+<p>This results in the outer level of my code calling one generator after
+another, terminating in something that consumes the rows, pulling data
+one row at a time through each of the generators:</p>
+<pre class="code literal-block"><span></span><code><span class="n">inputRows</span> <span class="o">=</span> <span class="n">read</span><span class="p">()</span>
+<span class="n">parsedRows</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">inputRows</span><span class="p">)</span>
+<span class="n">processedRows</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="n">parsedRows</span><span class="p">)</span>
+<span class="n">outputRows</span> <span class="o">=</span> <span class="n">format_</span><span class="p">(</span><span class="n">processedRows</span><span class="p">)</span>
+<span class="n">output</span><span class="p">(</span><span class="n">outputRows</span><span class="p">)</span>
+</code></pre>
+
+
+<p>where each called function except the last is actually a generator, e.g:</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</code></pre>
+
+
+<p>This is great. But my itch is that the top level code above is a bit
+wordy, given that what it does is so simple. The reader has to check
+each temporary variable quite carefully to be sure it's doing the right
+thing.</p>
+<p>Fowler's 'Refactoring' describes circumstances when <a href="http://www.refactoring.com/catalog/replaceTempWithQuery.html">it's good to remove
+intermediate
+variables</a>,
+which results in:</p>
+<pre class="code literal-block"><span></span><code><span class="n">output</span><span class="p">(</span> <span class="n">format_</span><span class="p">(</span> <span class="n">process</span><span class="p">(</span> <span class="n">parse</span><span class="p">(</span> <span class="n">read</span><span class="p">()</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+</code></pre>
+
+
+<p>This is certainly less wordy, and expresses what's happening very
+directly, but it annoys some of my colleagues that the called functions
+are listed in reverse order from what one might intuitively expect.</p>
+<p>I've had this idea in my head to create a decorator for generators which
+allows one to chain them in an intuitive order, possibly using some
+unconventional notation such as:</p>
+<pre class="code literal-block"><span></span><code><span class="n">read</span><span class="p">()</span> <span class="o">|</span> <span class="n">parse</span> <span class="o">|</span> <span class="n">process</span> <span class="o">|</span> <span class="n">format_</span> <span class="o">|</span> <span class="n">output</span>
+</code></pre>
+
+
+<p>where 'parse', et al, are now decorated with '@chainable' or somesuch,
+which returns an instance of a class that stores the wrapped generator,
+and overrides __or__ to do its magic. Maybe 'read' doesn't need to
+be invoked manually there at the start of the chain. I haven't really
+thought this through.</p>
+<p>Luckily, before embarking on that, I realised today I've been
+over-complicating the whole thing. There's no need for decorators, nor
+for the cute '|' syntax. I just need a plain old function:</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">link</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="o">*</span><span class="n">transforms</span><span class="p">):</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">source</span>
+    <span class="k">for</span> <span class="n">transform</span> <span class="ow">in</span> <span class="n">transforms</span><span class="p">:</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">args</span>
+</code></pre>
+
+
+<p><strong>Update</strong>: This code has been improved thanks to suggestions in the
+comments from Daniel Pope (eliminate the 'first' variable) and Xtian
+(take an iterable rather than a callable for the source.)</p>
+<p>This assumes the first item passed to link is an iterable, and each
+subsequent item is a generator that takes the result of the item before.</p>
+<p>If the final item in the sequence passed to 'link' is a generator, then
+this returns a generator which is the composite of all the ones passed
+in:</p>
+<pre class="code literal-block"><span></span><code><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">link</span><span class="p">(</span><span class="n">read</span><span class="p">(),</span> <span class="n">parse</span><span class="p">,</span> <span class="n">process</span><span class="p">,</span> <span class="n">format_</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="n">item</span>
+</code></pre>
+
+
+<p>Or if the final item passed to 'link' is a regular function, which
+consumes the preceding generators, then calling 'link' will invoke the
+generators, i.e. the following is the same as the above 'for' loop:</p>
+<pre class="code literal-block"><span></span><code><span class="n">link</span><span class="p">(</span><span class="n">read</span><span class="p">(),</span> <span class="n">parse</span><span class="p">,</span> <span class="n">process</span><span class="p">,</span> <span class="n">format_</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+</code></pre>
+
+
+<p>There's some rough edges, such as determining what to do if different
+generators require other args. Presumably 'partial' could help here. But
+in general, 'link' only needs to be written once, and I'm liking it.</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../categories/python.html" rel="tag">Python</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../8/10/revolution-an-instruction-manual.html" rel="prev" title="Revolution: An Instruction Manual">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../../2014/1/22/brief-interviews-with-hideous-men.html" rel="next" title="Brief Interviews with Hideous Men">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                
+
+        </section></article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2020         <a href="mailto:tartley@tartley.com">Jonathan Hartley</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">tartley.com</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com" property="cc:attributionName" rel="cc:attributionURL">Jonathan Hartley</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+            
+        </footer>
+</div>
+</div>
+
+            <script src="../../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>
