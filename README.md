@@ -4,8 +4,6 @@ Uses Nikola. See Makefile for some handy commands.
 
 ## TODO
 
-* favicon?
-
 Customize theme to:
     Put tags at top of posts?
     Put tags at top of posts in index
