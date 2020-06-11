@@ -808,7 +808,7 @@ IMAGE_FOLDERS = {'images': 'images'}
 # If the following is True, a meta name="generator" tag is added to pages. The
 # generator tag is used to specify the software used to generate the page
 # (it promotes Nikola).
-# META_GENERATOR_TAG = True
+META_GENERATOR_TAG = False
 
 # Color scheme to be used for code blocks. If your theme provides
 # "assets/css/code.css" this is ignored. Set to None to disable.
@@ -824,10 +824,9 @@ IMAGE_FOLDERS = {'images': 'images'}
 # FAVICONS contains (name, file, size) tuples.
 # Used to create favicon link like this:
 # <link rel="name" href="file" sizes="size"/>
-# FAVICONS = (
-#     ("icon", "/favicon.ico", "16x16"),
-#     ("icon", "/icon_128x128.png", "128x128"),
-# )
+FAVICONS = (
+    ("icon", "/welcome.gif", "16x16"),
+)
 
 # Show teasers (instead of full posts) in indexes? Defaults to False.
 # INDEX_TEASERS = False
