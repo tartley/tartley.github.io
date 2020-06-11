@@ -1,0 +1,6 @@
+.doit.db*
+.ipynb_checkpoints
+__pycache__
+cache
+output
+
