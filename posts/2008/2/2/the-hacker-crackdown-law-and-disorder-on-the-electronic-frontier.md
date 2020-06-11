@@ -3,7 +3,7 @@
 .. slug: the-hacker-crackdown-law-and-disorder-on-the-electronic-frontier
 .. date: 2008-02-02 16:15:49-06:00
 .. tags: Books
-.. category: Books
+.. category:
 .. link: 
 .. description: 
 .. type: text

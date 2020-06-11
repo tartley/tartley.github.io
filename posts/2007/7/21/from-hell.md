@@ -3,7 +3,7 @@
 .. slug: from-hell
 .. date: 2007-07-21 22:34:22-05:00
 .. tags: Books,Comics,Fiction
-.. category: Books
+.. category:
 .. link: 
 .. description: 
 .. type: text
