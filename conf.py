@@ -209,6 +209,7 @@ TIMEZONE = "America/Chicago"
 # Default is:
 FILES_FOLDERS = {
     'files': 'files',
+    'root': '',
 }
 # Which means copy 'files' into 'output'
 
@@ -865,7 +866,7 @@ LICENSE = """<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = 'Contents &copy; {date}         <a href="mailto:{email}">{author}</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         {license}'
+CONTENT_FOOTER = 'Contents &copy; {date} <a href="mailto:{email}">{author}</a> - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a> {license}'
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
