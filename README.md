@@ -4,17 +4,6 @@ Uses Nikola. See Makefile for some handy commands.
 
 ## TODO
 
-Customize theme to:
-    Put tags at top of posts?
-    Put tags at top of posts in index
-    Check it still works with index teasers
-    Turn on Index teasers?
-        Using a 'description' for posts?
-    Put an hr between index posts?
-        Maybe they do already? HR in posts is invisible.
-    About link in the header?
-        Move license info there?
-
 Categories vs Tags
 Categories: A post has one. They can be flat or a hierarchy.
 Tags: A post can have many. No hierarchy.
@@ -22,6 +11,10 @@ Decide which to use (or both?)
 Normalize their case.
 
 * get my python feed reinstated on planetpython
+
+Customize theme to:
+    Put tags at top of posts instead of bottom?
+    Put tags at top of posts in index
 
 Get Disqus working
 

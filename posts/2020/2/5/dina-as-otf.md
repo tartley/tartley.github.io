@@ -13,7 +13,7 @@
 The Dina font, converted to an OpenType Font (see screenshots at the bottom of
 the page):
 
-[:package: Dina-v2.93-otf.tar.gz](/files/2020/Dina-v2.93-otf.tar.gz)
+# [{{% emoji package %}} Dina-v2.93-otf.tar.gz](/files/2020/Dina-v2.93-otf.tar.gz)
 
 [Pango dropped support for naive bitmap fonts](https://gitlab.gnome.org/GNOME/pango/issues/386)
 in v1.44 -- i.e. from Ubuntu 20.04, *Focal*, onwards.
