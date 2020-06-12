@@ -3,7 +3,7 @@
 .. slug: someone-comes-to-town-someone-leaves-town
 .. date: 2008-02-08 01:01:37-06:00
 .. tags: Books,Fiction
-.. category:
+.. category: Books
 .. link: 
 .. description: 
 .. type: text

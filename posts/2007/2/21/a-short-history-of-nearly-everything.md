@@ -3,7 +3,7 @@
 .. slug: a-short-history-of-nearly-everything
 .. date: 2007-02-21 00:12:36-06:00
 .. tags: Books
-.. category:
+.. category: Books
 .. link: 
 .. description: 
 .. type: text

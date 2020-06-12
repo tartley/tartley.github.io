@@ -3,7 +3,7 @@
 .. slug: beautiful-code-leading-programmers-explain-how-they-think
 .. date: 2008-02-23 01:29:04-06:00
 .. tags: Books,Software
-.. category:
+.. category: Books
 .. link: 
 .. description: 
 .. type: text

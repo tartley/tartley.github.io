@@ -9,7 +9,6 @@
 .. type: text
 -->
 
-
 Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:
 
@@ -43,6 +42,7 @@ suggesting they could handle this case, but it was a long shot and hasn't
 gained much enthusiasm.
 
 So, I present a tiny Python3 wrapper, *enblacken*, which:
+
 * Unindents the given code such that the first line has no indent.
 * Passes the result to Black.
 * Reindents Black's output, by the same amount as the original unindent.

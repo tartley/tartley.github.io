@@ -3,7 +3,7 @@
 .. slug: 12-books-that-changed-the-world
 .. date: 2007-06-12 08:14:17-05:00
 .. tags: Books
-.. category:
+.. category: Books
 .. link: 
 .. description: 
 .. type: text

@@ -121,10 +121,12 @@ indent is a syntax error - it's just not valid Python.</p>
 <p>I filed a hopeful <a href="https://github.com/psf/black/issues/1352">issue with Black</a>,
 suggesting they could handle this case, but it was a long shot and hasn't
 gained much enthusiasm.</p>
-<p>So, I present a tiny Python3 wrapper, <em>enblacken</em>, which:
-* Unindents the given code such that the first line has no indent.
-* Passes the result to Black.
-* Reindents Black's output, by the same amount as the original unindent.</p>
+<p>So, I present a tiny Python3 wrapper, <em>enblacken</em>, which:</p>
+<ul>
+<li>Unindents the given code such that the first line has no indent.</li>
+<li>Passes the result to Black.</li>
+<li>Reindents Black's output, by the same amount as the original unindent.</li>
+</ul>
 <p>See <a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken">enblacken on github</a>.</p>
 </div>
     </div>

@@ -105,10 +105,12 @@ indent is a syntax error - it's just not valid Python.</p>
 <p>I filed a hopeful <a href="https://github.com/psf/black/issues/1352">issue with Black</a>,
 suggesting they could handle this case, but it was a long shot and hasn't
 gained much enthusiasm.</p>
-<p>So, I present a tiny Python3 wrapper, <em>enblacken</em>, which:
-* Unindents the given code such that the first line has no indent.
-* Passes the result to Black.
-* Reindents Black's output, by the same amount as the original unindent.</p>
+<p>So, I present a tiny Python3 wrapper, <em>enblacken</em>, which:</p>
+<ul>
+<li>Unindents the given code such that the first line has no indent.</li>
+<li>Passes the result to Black.</li>
+<li>Reindents Black's output, by the same amount as the original unindent.</li>
+</ul>
 <p>See <a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken">enblacken on github</a>.</p>
 </div>
     </div>
@@ -276,7 +278,7 @@ is probably a simpler way.</p>
     <div>
 <p>The Dina font, converted to an OpenType Font (see screenshots at the bottom of
 the page):</p>
-<p><a href="files/2020/Dina-v2.93-otf.tar.gz">:package: Dina-v2.93-otf.tar.gz</a></p>
+<h2><a href="files/2020/Dina-v2.93-otf.tar.gz"><span class="emoji">📦</span> Dina-v2.93-otf.tar.gz</a></h2>
 <p><a href="https://gitlab.gnome.org/GNOME/pango/issues/386">Pango dropped support for naive bitmap fonts</a>
 in v1.44 -- i.e. from Ubuntu 20.04, <em>Focal</em>, onwards.</p>
 <p>So all bitmap fonts need to be converted into a format that will render,
