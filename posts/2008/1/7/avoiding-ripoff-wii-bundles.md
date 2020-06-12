@@ -3,7 +3,6 @@
 .. slug: avoiding-ripoff-wii-bundles
 .. date: 2008-01-07 15:09:12-06:00
 .. tags: Geek,IMHO,Journal
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

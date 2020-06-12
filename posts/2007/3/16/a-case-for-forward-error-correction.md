@@ -3,7 +3,6 @@
 .. slug: a-case-for-forward-error-correction
 .. date: 2007-03-16 17:19:53-05:00
 .. tags: Geek,Refried
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

@@ -3,7 +3,6 @@
 .. slug: the-man-who-knew-too-much
 .. date: 2008-08-19 05:24:01-05:00
 .. tags: Books
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

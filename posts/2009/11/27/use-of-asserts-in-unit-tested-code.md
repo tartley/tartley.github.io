@@ -3,7 +3,6 @@
 .. slug: use-of-asserts-in-unit-tested-code
 .. date: 2009-11-27 14:47:32-06:00
 .. tags: Python,Testing,Software
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

@@ -3,7 +3,6 @@
 .. slug: pycon-2008-chicago-usa
 .. date: 2008-03-19 22:14:13-05:00
 .. tags: Journal,Python,Testing,Presentations
-.. category: Journal
 .. link: 
 .. description: 
 .. type: text

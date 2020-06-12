@@ -3,7 +3,6 @@
 .. slug: expert-python-programming
 .. date: 2009-01-11 22:58:26-06:00
 .. tags: Python,Books
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

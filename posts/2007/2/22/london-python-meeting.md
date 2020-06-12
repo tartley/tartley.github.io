@@ -3,7 +3,6 @@
 .. slug: london-python-meeting
 .. date: 2007-02-22 20:20:59-06:00
 .. tags: Journal,Python
-.. category: Journal
 .. link: 
 .. description: 
 .. type: text

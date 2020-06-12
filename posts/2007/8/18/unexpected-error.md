@@ -3,7 +3,6 @@
 .. slug: unexpected-error
 .. date: 2007-08-18 15:33:47-05:00
 .. tags: Journal,Software
-.. category: Journal
 .. link: 
 .. description: 
 .. type: text

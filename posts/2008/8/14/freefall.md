@@ -3,7 +3,6 @@
 .. slug: freefall
 .. date: 2008-08-14 07:40:08-05:00
 .. tags: Journal
-.. category: Journal
 .. link: 
 .. description: 
 .. type: text

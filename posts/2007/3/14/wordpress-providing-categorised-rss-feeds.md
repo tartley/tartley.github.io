@@ -3,7 +3,6 @@
 .. slug: wordpress-providing-categorised-rss-feeds
 .. date: 2007-03-14 07:12:49-05:00
 .. tags: Tartley.com
-.. category: Tartley.com
 .. link: 
 .. description: 
 .. type: text

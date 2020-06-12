@@ -3,7 +3,6 @@
 .. slug: here-comes-everybody
 .. date: 2008-09-16 17:58:57-05:00
 .. tags: Books
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

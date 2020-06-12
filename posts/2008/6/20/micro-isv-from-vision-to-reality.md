@@ -3,7 +3,6 @@
 .. slug: micro-isv-from-vision-to-reality
 .. date: 2008-06-20 15:50:57-05:00
 .. tags: Books
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

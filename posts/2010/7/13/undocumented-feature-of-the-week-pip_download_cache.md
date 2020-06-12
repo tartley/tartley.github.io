@@ -3,7 +3,6 @@
 .. slug: undocumented-feature-of-the-week-pip_download_cache
 .. date: 2010-07-13 12:46:15-05:00
 .. tags: Python
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

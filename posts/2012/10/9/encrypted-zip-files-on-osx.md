@@ -3,7 +3,6 @@
 .. slug: encrypted-zip-files-on-osx
 .. date: 2012-10-09 10:17:07-05:00
 .. tags: OSX-dev
-.. category: OSX-dev
 .. link: 
 .. description: 
 .. type: text

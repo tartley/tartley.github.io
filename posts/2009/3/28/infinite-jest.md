@@ -3,7 +3,6 @@
 .. slug: infinite-jest
 .. date: 2009-03-28 16:26:49-05:00
 .. tags: Books,Fiction
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

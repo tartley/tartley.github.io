@@ -3,7 +3,6 @@
 .. slug: python-2-7-regular-expression-cheatsheet
 .. date: 2011-10-14 11:20:11-05:00
 .. tags: Python
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

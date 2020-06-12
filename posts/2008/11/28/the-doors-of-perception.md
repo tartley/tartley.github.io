@@ -3,7 +3,6 @@
 .. slug: the-doors-of-perception
 .. date: 2008-11-28 11:45:00-06:00
 .. tags: Books
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

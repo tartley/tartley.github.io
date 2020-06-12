@@ -3,7 +3,6 @@
 .. slug: object-oriented-software-engineering-a-use-case-driven-approach
 .. date: 2014-02-02 14:26:43-06:00
 .. tags: Books,Software
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

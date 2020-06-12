@@ -3,7 +3,6 @@
 .. slug: use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures
 .. date: 2010-01-03 15:33:10-06:00
 .. tags: Graphics
-.. category: Graphics
 .. link: 
 .. description: 
 .. type: text

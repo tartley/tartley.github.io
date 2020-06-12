@@ -3,7 +3,6 @@
 .. slug: musicians-wake-up
 .. date: 2010-01-22 09:43:24-06:00
 .. tags: Geek,IMHO,Gigs
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

@@ -3,7 +3,6 @@
 .. slug: slaughterhouse-5
 .. date: 2007-07-22 00:08:34-05:00
 .. tags: Books,Fiction
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

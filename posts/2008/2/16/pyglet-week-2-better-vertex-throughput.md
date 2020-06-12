@@ -3,7 +3,6 @@
 .. slug: pyglet-week-2-better-vertex-throughput
 .. date: 2008-02-16 04:24:33-06:00
 .. tags: Python,Graphics
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

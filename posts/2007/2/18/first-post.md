@@ -3,7 +3,6 @@
 .. slug: first-post
 .. date: 2007-02-18 21:36:50-06:00
 .. tags: Tartley.com
-.. category: Tartley.com
 .. link: 
 .. description: 
 .. type: text

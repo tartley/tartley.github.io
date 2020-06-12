@@ -3,7 +3,6 @@
 .. slug: only-joking
 .. date: 2008-05-09 10:14:22-05:00
 .. tags: IMHO
-.. category: IMHO
 .. link: 
 .. description: 
 .. type: text

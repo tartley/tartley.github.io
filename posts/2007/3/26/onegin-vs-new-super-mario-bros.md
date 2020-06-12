@@ -3,7 +3,6 @@
 .. slug: onegin-vs-new-super-mario-bros
 .. date: 2007-03-26 23:40:04-05:00
 .. tags: Games,Shows
-.. category: Games
 .. link: 
 .. description: 
 .. type: text

@@ -3,7 +3,6 @@
 .. slug: python-port-of-modern-3d-graphics-using-opengl-tutorial
 .. date: 2011-04-20 14:23:54-05:00
 .. tags: Python,Graphics
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

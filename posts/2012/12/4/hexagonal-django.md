@@ -3,7 +3,6 @@
 .. slug: hexagonal-django
 .. date: 2012-12-04 14:42:01-06:00
 .. tags: Python
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

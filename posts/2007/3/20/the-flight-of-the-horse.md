@@ -3,7 +3,6 @@
 .. slug: the-flight-of-the-horse
 .. date: 2007-03-20 01:22:18-05:00
 .. tags: Books,Science-Fiction
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

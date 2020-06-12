@@ -3,7 +3,6 @@
 .. slug: othello-donmar-warehouse
 .. date: 2008-01-23 20:04:30-06:00
 .. tags: Shows
-.. category: Shows
 .. link: 
 .. description: 
 .. type: text

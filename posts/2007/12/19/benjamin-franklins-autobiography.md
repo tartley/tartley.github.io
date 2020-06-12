@@ -3,7 +3,6 @@
 .. slug: benjamin-franklins-autobiography
 .. date: 2007-12-19 09:23:29-06:00
 .. tags: Geek,Books
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

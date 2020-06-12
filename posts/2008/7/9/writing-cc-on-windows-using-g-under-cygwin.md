@@ -3,7 +3,6 @@
 .. slug: writing-cc-on-windows-using-g-under-cygwin
 .. date: 2008-07-09 22:57:50-05:00
 .. tags: Software
-.. category: Software
 .. link: 
 .. description: 
 .. type: text

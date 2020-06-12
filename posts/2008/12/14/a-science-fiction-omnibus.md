@@ -3,7 +3,6 @@
 .. slug: a-science-fiction-omnibus
 .. date: 2008-12-14 17:32:47-06:00
 .. tags: Books,Science-Fiction
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

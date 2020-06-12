@@ -3,7 +3,6 @@
 .. slug: a-bit-of-fun
 .. date: 2008-09-30 19:44:25-05:00
 .. tags: Software
-.. category: Software
 .. link: 
 .. description: 
 .. type: text

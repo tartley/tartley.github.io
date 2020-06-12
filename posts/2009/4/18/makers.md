@@ -3,7 +3,6 @@
 .. slug: makers
 .. date: 2009-04-18 17:10:31-05:00
 .. tags: Books,Fiction
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

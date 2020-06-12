@@ -3,7 +3,6 @@
 .. slug: mocks-arent-just-stubs
 .. date: 2007-04-22 21:28:07-05:00
 .. tags: Testing,Software
-.. category: Testing
 .. link: 
 .. description: 
 .. type: text

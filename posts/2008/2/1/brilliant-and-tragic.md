@@ -3,7 +3,6 @@
 .. slug: brilliant-and-tragic
 .. date: 2008-02-01 11:48:39-06:00
 .. tags: IMHO,Journal
-.. category: IMHO
 .. link: 
 .. description: 
 .. type: text

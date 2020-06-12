@@ -3,7 +3,6 @@
 .. slug: converting-any-repository-fom-svn-to-hg-on-windows
 .. date: 2010-10-20 10:26:02-05:00
 .. tags: Geek
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

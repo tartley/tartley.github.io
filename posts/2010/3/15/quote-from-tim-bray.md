@@ -3,7 +3,6 @@
 .. slug: quote-from-tim-bray
 .. date: 2010-03-15 09:12:29-05:00
 .. tags: Geek,Politics
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

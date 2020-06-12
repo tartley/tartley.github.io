@@ -3,7 +3,6 @@
 .. slug: 2d-graphics-with-pyglet-and-opengl
 .. date: 2008-02-06 00:57:58-06:00
 .. tags: Python,Graphics
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

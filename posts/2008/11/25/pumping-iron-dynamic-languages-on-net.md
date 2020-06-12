@@ -3,7 +3,6 @@
 .. slug: pumping-iron-dynamic-languages-on-net
 .. date: 2008-11-25 00:14:11-06:00
 .. tags: Python,Software,Presentations
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

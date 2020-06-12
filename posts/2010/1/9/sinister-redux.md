@@ -3,7 +3,6 @@
 .. slug: sinister-redux
 .. date: 2010-01-09 15:57:47-06:00
 .. tags: Python,Graphics
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

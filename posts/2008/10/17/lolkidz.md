@@ -3,7 +3,6 @@
 .. slug: lolkidz
 .. date: 2008-10-17 12:49:31-05:00
 .. tags: Journal
-.. category: Journal
 .. link: 
 .. description: 
 .. type: text

@@ -3,7 +3,6 @@
 .. slug: listen-to-your-phone-through-your-pc-speakers
 .. date: 2015-03-15 10:50:09-05:00
 .. tags: Geek,Bash
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

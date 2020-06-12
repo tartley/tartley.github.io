@@ -3,7 +3,6 @@
 .. slug: national-portrait-gallery-photographic-portrait-prize-2007
 .. date: 2008-01-23 16:19:35-06:00
 .. tags: Exhibits
-.. category: Exhibits
 .. link: 
 .. description: 
 .. type: text

@@ -3,7 +3,6 @@
 .. slug: more-colored-terminal-text-on-windows-ansicon
 .. date: 2010-07-08 14:07:09-05:00
 .. tags: MSWin-dev
-.. category: MSWin-dev
 .. link: 
 .. description: 
 .. type: text

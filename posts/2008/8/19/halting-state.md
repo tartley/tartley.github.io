@@ -3,7 +3,6 @@
 .. slug: halting-state
 .. date: 2008-08-19 05:50:19-05:00
 .. tags: Books,Fiction
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

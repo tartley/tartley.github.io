@@ -3,7 +3,6 @@
 .. slug: the-simpsons-movie-goodbye-forever
 .. date: 2008-05-08 12:48:12-05:00
 .. tags: IMHO,Movies
-.. category: IMHO
 .. link: 
 .. description: 
 .. type: text

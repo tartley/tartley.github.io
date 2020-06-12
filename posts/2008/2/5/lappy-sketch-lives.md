@@ -3,7 +3,6 @@
 .. slug: lappy-sketch-lives
 .. date: 2008-02-05 13:13:02-06:00
 .. tags: Draw,Refried
-.. category: Draw
 .. link: 
 .. description: 
 .. type: text

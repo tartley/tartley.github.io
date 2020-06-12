@@ -3,7 +3,6 @@
 .. slug: remix
 .. date: 2009-04-07 23:42:58-05:00
 .. tags: Books
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

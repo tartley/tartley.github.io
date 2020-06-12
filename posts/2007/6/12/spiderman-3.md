@@ -3,7 +3,6 @@
 .. slug: spiderman-3
 .. date: 2007-06-12 12:44:13-05:00
 .. tags: Movies
-.. category: Movies
 .. link: 
 .. description: 
 .. type: text

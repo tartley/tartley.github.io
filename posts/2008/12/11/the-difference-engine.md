@@ -3,7 +3,6 @@
 .. slug: the-difference-engine
 .. date: 2008-12-11 09:19:16-06:00
 .. tags: Geek,Journal,Books,Exhibits,Science-Fiction
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

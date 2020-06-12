@@ -3,7 +3,6 @@
 .. slug: lxd-for-dev-env
 .. date: 2020-04-20 13:57:47-05:00
 .. tags: Linux-dev,Geek,Software
-.. category:
 .. link:
 .. description:
 .. type: text

@@ -3,7 +3,6 @@
 .. slug: acceptance-testing-a-pyglet-application
 .. date: 2008-07-04 17:30:58-05:00
 .. tags: Python,Testing,Graphics
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

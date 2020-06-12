@@ -3,7 +3,6 @@
 .. slug: rerun-unit-tests-whenever-files-update
 .. date: 2010-10-15 01:43:33-05:00
 .. tags: Python,Testing,Software,MSWin-dev
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

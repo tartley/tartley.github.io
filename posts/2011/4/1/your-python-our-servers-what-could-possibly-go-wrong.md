@@ -3,7 +3,6 @@
 .. slug: your-python-our-servers-what-could-possibly-go-wrong
 .. date: 2011-04-01 17:33:46-05:00
 .. tags: Python
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

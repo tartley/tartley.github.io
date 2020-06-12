@@ -3,7 +3,6 @@
 .. slug: rosencrantz-and-guildenstern-are-dead
 .. date: 2007-07-22 00:10:00-05:00
 .. tags: Movies
-.. category: Movies
 .. link: 
 .. description: 
 .. type: text

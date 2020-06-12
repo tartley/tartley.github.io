@@ -3,7 +3,6 @@
 .. slug: london-geek-night-game-dev
 .. date: 2008-11-22 14:19:48-06:00
 .. tags: Games,Software
-.. category: Games
 .. link: 
 .. description: 
 .. type: text

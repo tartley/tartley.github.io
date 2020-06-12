@@ -3,7 +3,6 @@
 .. slug: the-day-the-earth-stood-still
 .. date: 2009-04-29 22:17:24-05:00
 .. tags: Movies
-.. category: Movies
 .. link: 
 .. description: 
 .. type: text

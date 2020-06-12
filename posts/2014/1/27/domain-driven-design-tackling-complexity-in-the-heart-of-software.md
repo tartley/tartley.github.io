@@ -3,7 +3,6 @@
 .. slug: domain-driven-design-tackling-complexity-in-the-heart-of-software
 .. date: 2014-01-27 11:05:53-06:00
 .. tags: Books,Software
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

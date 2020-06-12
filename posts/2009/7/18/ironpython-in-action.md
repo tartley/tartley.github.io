@@ -3,7 +3,6 @@
 .. slug: ironpython-in-action
 .. date: 2009-07-18 12:03:31-05:00
 .. tags: Python,Books
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

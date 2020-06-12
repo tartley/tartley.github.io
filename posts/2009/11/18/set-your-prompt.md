@@ -3,7 +3,6 @@
 .. slug: set-your-prompt
 .. date: 2009-11-18 16:57:10-06:00
 .. tags: MSWin-dev
-.. category: MSWin-dev
 .. link: 
 .. description: 
 .. type: text

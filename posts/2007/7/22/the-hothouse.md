@@ -3,7 +3,6 @@
 .. slug: the-hothouse
 .. date: 2007-07-22 01:31:10-05:00
 .. tags: Shows
-.. category: Shows
 .. link: 
 .. description: 
 .. type: text

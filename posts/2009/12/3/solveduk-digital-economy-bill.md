@@ -3,7 +3,6 @@
 .. slug: solveduk-digital-economy-bill
 .. date: 2009-12-03 10:04:59-06:00
 .. tags: Geek,IMHO,Python
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

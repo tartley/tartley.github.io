@@ -3,7 +3,6 @@
 .. slug: opengl-draw-api-visualised
 .. date: 2010-03-20 13:15:54-05:00
 .. tags: Python,Software,Graphics
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

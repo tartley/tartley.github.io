@@ -3,7 +3,6 @@
 .. slug: resolver-one-10
 .. date: 2008-01-17 12:12:19-06:00
 .. tags: Journal,Python,Software
-.. category: Journal
 .. link: 
 .. description: 
 .. type: text

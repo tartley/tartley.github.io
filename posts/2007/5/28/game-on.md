@@ -3,7 +3,6 @@
 .. slug: game-on
 .. date: 2007-05-28 12:03:47-05:00
 .. tags: Geek,Journal,Games,Exhibits
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

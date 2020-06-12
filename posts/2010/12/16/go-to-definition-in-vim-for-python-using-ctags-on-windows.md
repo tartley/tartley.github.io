@@ -3,7 +3,6 @@
 .. slug: go-to-definition-in-vim-for-python-using-ctags-on-windows
 .. date: 2010-12-16 20:39:01-06:00
 .. tags: Python,MSWin-dev,Vim
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

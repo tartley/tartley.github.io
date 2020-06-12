@@ -3,7 +3,6 @@
 .. slug: p56-from-the-nearest-book
 .. date: 2008-11-24 14:52:51-06:00
 .. tags: Python
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

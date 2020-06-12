@@ -3,7 +3,6 @@
 .. slug: la-science-des-reves
 .. date: 2007-05-18 13:47:38-05:00
 .. tags: Movies
-.. category: Movies
 .. link: 
 .. description: 
 .. type: text

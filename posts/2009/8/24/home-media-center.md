@@ -3,7 +3,6 @@
 .. slug: home-media-center
 .. date: 2009-08-24 13:02:42-05:00
 .. tags: Geek,Media
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

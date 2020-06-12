@@ -3,7 +3,6 @@
 .. slug: why-python
 .. date: 2008-03-10 01:22:46-05:00
 .. tags: Python
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

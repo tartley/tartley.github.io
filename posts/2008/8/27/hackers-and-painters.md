@@ -3,7 +3,6 @@
 .. slug: hackers-and-painters
 .. date: 2008-08-27 15:06:48-05:00
 .. tags: Geek,Books
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

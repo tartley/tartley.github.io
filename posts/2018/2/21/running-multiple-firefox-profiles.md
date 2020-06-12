@@ -3,7 +3,6 @@
 .. slug: running-multiple-firefox-profiles
 .. date: 2018-02-21 18:40:55-06:00
 .. tags: Geek,Linux-dev
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

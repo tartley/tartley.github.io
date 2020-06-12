@@ -3,7 +3,6 @@
 .. slug: avenue-q
 .. date: 2007-03-21 10:00:20-05:00
 .. tags: Shows
-.. category: Shows
 .. link: 
 .. description: 
 .. type: text

@@ -3,7 +3,6 @@
 .. slug: revolution-an-instruction-manual
 .. date: 2013-08-10 11:50:36-05:00
 .. tags: Politics
-.. category: Politics
 .. link: 
 .. description: 
 .. type: text

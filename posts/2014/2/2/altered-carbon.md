@@ -3,7 +3,6 @@
 .. slug: altered-carbon
 .. date: 2014-02-02 12:59:43-06:00
 .. tags: Books,Science-Fiction
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

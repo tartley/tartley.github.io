@@ -3,7 +3,6 @@
 .. slug: breakfast-of-champions
 .. date: 2008-08-27 15:45:56-05:00
 .. tags: Books,Fiction
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

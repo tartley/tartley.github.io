@@ -3,7 +3,6 @@
 .. slug: music-101c2bd
 .. date: 2007-06-11 10:37:44-05:00
 .. tags: Music
-.. category: Music
 .. link: 
 .. description: 
 .. type: text

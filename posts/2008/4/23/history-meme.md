@@ -3,7 +3,6 @@
 .. slug: history-meme
 .. date: 2008-04-23 06:50:01-05:00
 .. tags: Geek,Journal
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

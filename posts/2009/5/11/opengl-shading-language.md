@@ -3,7 +3,6 @@
 .. slug: opengl-shading-language
 .. date: 2009-05-11 22:19:26-05:00
 .. tags: Books,Graphics
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

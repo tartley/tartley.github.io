@@ -3,7 +3,6 @@
 .. slug: mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts
 .. date: 2010-01-21 20:04:25-06:00
 .. tags: Software,MSWin-dev
-.. category: Software
 .. link: 
 .. description: 
 .. type: text

@@ -3,7 +3,6 @@
 .. slug: minerva-metastasis
 .. date: 2007-04-05 00:24:11-05:00
 .. tags: Games
-.. category: Games
 .. link: 
 .. description: 
 .. type: text

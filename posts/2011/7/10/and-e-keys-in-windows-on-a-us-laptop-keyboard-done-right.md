@@ -3,7 +3,6 @@
 .. slug: and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right
 .. date: 2011-07-10 13:06:34-05:00
 .. tags: Geek,MSWin-dev
-.. category: Geek
 .. link: 
 .. description: 
 .. type: text

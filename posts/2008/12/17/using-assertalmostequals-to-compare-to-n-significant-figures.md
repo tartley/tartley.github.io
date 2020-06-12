@@ -3,7 +3,6 @@
 .. slug: using-assertalmostequals-to-compare-to-n-significant-figures
 .. date: 2008-12-17 14:59:54-06:00
 .. tags: Python,Testing
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

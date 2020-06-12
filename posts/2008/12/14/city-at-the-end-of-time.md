@@ -3,7 +3,6 @@
 .. slug: city-at-the-end-of-time
 .. date: 2008-12-14 16:56:38-06:00
 .. tags: Books,Science-Fiction
-.. category: Books
 .. link: 
 .. description: 
 .. type: text

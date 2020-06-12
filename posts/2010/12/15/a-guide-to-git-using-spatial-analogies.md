@@ -3,7 +3,6 @@
 .. slug: a-guide-to-git-using-spatial-analogies
 .. date: 2010-12-15 14:40:14-06:00
 .. tags: Python,Software
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

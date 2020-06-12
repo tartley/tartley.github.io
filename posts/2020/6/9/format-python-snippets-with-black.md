@@ -3,7 +3,6 @@
 .. slug: format-python-snippets-with-black
 .. date: 2020-06-09 19:36:58+00:00
 .. tags: Python,Software
-.. category: Python
 .. link: 
 .. description: 
 .. type: text

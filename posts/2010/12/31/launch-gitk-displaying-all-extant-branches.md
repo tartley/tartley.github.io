@@ -3,7 +3,6 @@
 .. slug: launch-gitk-displaying-all-extant-branches
 .. date: 2010-12-31 12:25:31-06:00
 .. tags: Software,MSWin-dev,Git
-.. category: Software
 .. link: 
 .. description: 
 .. type: text

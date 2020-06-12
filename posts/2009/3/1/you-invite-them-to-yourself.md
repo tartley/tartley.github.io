@@ -3,7 +3,6 @@
 .. slug: you-invite-them-to-yourself
 .. date: 2009-03-01 23:24:57-06:00
 .. tags: Personal
-.. category: Personal
 .. link: 
 .. description: 
 .. type: text

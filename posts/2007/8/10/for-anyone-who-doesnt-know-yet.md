@@ -3,7 +3,6 @@
 .. slug: for-anyone-who-doesnt-know-yet
 .. date: 2007-08-10 15:40:24-05:00
 .. tags: Journal
-.. category: Journal
 .. link: 
 .. description: 
 .. type: text

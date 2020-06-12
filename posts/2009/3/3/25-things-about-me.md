@@ -3,7 +3,6 @@
 .. slug: 25-things-about-me
 .. date: 2009-03-03 20:24:14-06:00
 .. tags: Write
-.. category: Write
 .. link: 
 .. description: 
 .. type: text
