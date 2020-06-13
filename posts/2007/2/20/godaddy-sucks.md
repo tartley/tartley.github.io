@@ -2,7 +2,7 @@
 .. title: GoDaddy sucks
 .. slug: godaddy-sucks
 .. date: 2007-02-20 08:55:02-06:00
-.. tags: Tartley.com
+.. tags: tartley.com
 .. link: 
 .. description: 
 .. type: text

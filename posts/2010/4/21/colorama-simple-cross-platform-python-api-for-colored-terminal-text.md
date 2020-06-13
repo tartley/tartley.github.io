@@ -2,7 +2,7 @@
 .. title: colorama: Simple cross-platform Python API for colored terminal text
 .. slug: colorama-simple-cross-platform-python-api-for-colored-terminal-text
 .. date: 2010-04-21 10:18:30-05:00
-.. tags: Python,MSWin-dev
+.. tags: python,mswin-dev
 .. link: 
 .. description: 
 .. type: text

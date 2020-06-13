@@ -2,7 +2,7 @@
 .. title: My Cacophony
 .. slug: my-cacaphony
 .. date: 2007-07-16 22:01:18-05:00
-.. tags: Music
+.. tags: music
 .. link: 
 .. description: 
 .. type: text

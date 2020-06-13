@@ -2,7 +2,7 @@
 .. title: Home media center
 .. slug: home-media-center
 .. date: 2009-08-24 13:02:42-05:00
-.. tags: Geek,Media
+.. tags: geek,media
 .. link: 
 .. description: 
 .. type: text

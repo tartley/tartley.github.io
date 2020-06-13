@@ -2,7 +2,7 @@
 .. title: Beginning Game Development With Python and PyGame
 .. slug: beginning-game-development-with-python-and-pygame
 .. date: 2009-01-12 00:17:54-06:00
-.. tags: Python,Books
+.. tags: python,books
 .. link: 
 .. description: 
 .. type: text

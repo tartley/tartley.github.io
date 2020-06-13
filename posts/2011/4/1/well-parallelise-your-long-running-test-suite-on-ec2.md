@@ -2,7 +2,7 @@
 .. title: We'll parallelise your long-running test suite on EC2
 .. slug: well-parallelise-your-long-running-test-suite-on-ec2
 .. date: 2011-04-01 19:04:09-05:00
-.. tags: Python
+.. tags: python
 .. link: 
 .. description: 
 .. type: text

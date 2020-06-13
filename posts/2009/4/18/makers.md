@@ -2,7 +2,7 @@
 .. title: Makers
 .. slug: makers
 .. date: 2009-04-18 17:10:31-05:00
-.. tags: Books,Fiction
+.. tags: books,fiction
 .. link: 
 .. description: 
 .. type: text

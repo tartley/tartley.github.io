@@ -2,7 +2,7 @@
 .. title: Google Chrome Credit
 .. slug: google-chrome-credit
 .. date: 2016-01-20 23:10:47-06:00
-.. tags: Geek,Software,Linux-dev
+.. tags: geek,software,linux-dev
 .. link: 
 .. description: 
 .. type: text

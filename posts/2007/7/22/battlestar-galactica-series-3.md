@@ -2,7 +2,7 @@
 .. title: Battlestar Galactica: Series 3
 .. slug: battlestar-galactica-series-3
 .. date: 2007-07-22 01:27:36-05:00
-.. tags: TV
+.. tags: tv
 .. link: 
 .. description: 
 .. type: text

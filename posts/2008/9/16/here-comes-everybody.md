@@ -2,7 +2,7 @@
 .. title: Here Comes Everybody
 .. slug: here-comes-everybody
 .. date: 2008-09-16 17:58:57-05:00
-.. tags: Books
+.. tags: books
 .. link: 
 .. description: 
 .. type: text

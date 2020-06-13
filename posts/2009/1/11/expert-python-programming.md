@@ -2,7 +2,7 @@
 .. title: Expert Python Programming
 .. slug: expert-python-programming
 .. date: 2009-01-11 22:58:26-06:00
-.. tags: Python,Books
+.. tags: python,books
 .. link: 
 .. description: 
 .. type: text

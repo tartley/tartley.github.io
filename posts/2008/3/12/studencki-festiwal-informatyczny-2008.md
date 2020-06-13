@@ -2,7 +2,7 @@
 .. title: Studencki Festiwal Informatyczny 2008
 .. slug: studencki-festiwal-informatyczny-2008
 .. date: 2008-03-12 11:00:19-05:00
-.. tags: Journal,Software,Presentations
+.. tags: journal,software,presentations
 .. link: 
 .. description: 
 .. type: text

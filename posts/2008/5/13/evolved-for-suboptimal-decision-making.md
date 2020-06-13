@@ -2,7 +2,7 @@
 .. title: Evolved for suboptimal decision making?
 .. slug: evolved-for-suboptimal-decision-making
 .. date: 2008-05-13 13:12:22-05:00
-.. tags: IMHO
+.. tags: imho
 .. link: 
 .. description: 
 .. type: text

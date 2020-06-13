@@ -2,7 +2,7 @@
 .. title: My Fonts Look Crap. I blame Windows and ATI.
 .. slug: my-fonts-look-crap-i-blame-windows-and-ati
 .. date: 2010-01-20 20:21:09-06:00
-.. tags: Software,MSWin-dev
+.. tags: software,mswin-dev
 .. link: 
 .. description: 
 .. type: text

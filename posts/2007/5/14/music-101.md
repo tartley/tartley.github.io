@@ -2,7 +2,7 @@
 .. title: Music 101
 .. slug: music-101
 .. date: 2007-05-14 10:37:21-05:00
-.. tags: Journal,Music
+.. tags: journal,music
 .. link: 
 .. description: 
 .. type: text

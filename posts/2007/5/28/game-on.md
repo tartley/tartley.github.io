@@ -2,7 +2,7 @@
 .. title: Game On: Origins
 .. slug: game-on
 .. date: 2007-05-28 12:03:47-05:00
-.. tags: Geek,Journal,Games,Exhibits
+.. tags: geek,journal,games,exhibits
 .. link: 
 .. description: 
 .. type: text

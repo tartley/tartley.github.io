@@ -2,7 +2,7 @@
 .. title: Diet Guru
 .. slug: diet-guru
 .. date: 2007-03-16 14:30:09-05:00
-.. tags: Draw,Refried
+.. tags: draw,refried
 .. link: 
 .. description: 
 .. type: text

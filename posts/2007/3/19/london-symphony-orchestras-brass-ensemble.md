@@ -2,7 +2,7 @@
 .. title: London Symphony Orchestra's Brass Ensemble
 .. slug: london-symphony-orchestras-brass-ensemble
 .. date: 2007-03-19 23:59:37-05:00
-.. tags: Gigs
+.. tags: gigs
 .. link: 
 .. description: 
 .. type: text

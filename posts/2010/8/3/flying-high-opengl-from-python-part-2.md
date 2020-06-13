@@ -2,7 +2,7 @@
 .. title: Flying High: OpenGL from Python, Part 2
 .. slug: flying-high-opengl-from-python-part-2
 .. date: 2010-08-03 10:04:43-05:00
-.. tags: Python,Graphics,Presentations,GameDev
+.. tags: python,graphics,presentations,gamedev
 .. link: 
 .. description: 
 .. type: text

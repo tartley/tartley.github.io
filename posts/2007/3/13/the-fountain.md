@@ -2,7 +2,7 @@
 .. title: The Fountain
 .. slug: the-fountain
 .. date: 2007-03-13 11:09:11-05:00
-.. tags: Movies
+.. tags: movies
 .. link: 
 .. description: 
 .. type: text

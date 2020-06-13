@@ -2,7 +2,7 @@
 .. title: Honeymoon photos
 .. slug: honeymoon-photos
 .. date: 2008-05-08 20:50:03-05:00
-.. tags: Photos
+.. tags: photos
 .. link: 
 .. description: 
 .. type: text

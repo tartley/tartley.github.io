@@ -2,7 +2,7 @@
 .. title: The Straight Story
 .. slug: the-straight-story
 .. date: 2007-07-22 00:40:15-05:00
-.. tags: Movies
+.. tags: movies
 .. link: 
 .. description: 
 .. type: text

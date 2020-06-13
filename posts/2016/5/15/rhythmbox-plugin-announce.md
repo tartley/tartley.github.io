@@ -2,7 +2,7 @@
 .. title: Rhythmbox plugin: "Announce"
 .. slug: rhythmbox-plugin-announce
 .. date: 2016-05-15 20:34:48-05:00
-.. tags: Python,Software
+.. tags: python,software
 .. link: 
 .. description: 
 .. type: text

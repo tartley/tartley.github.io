@@ -2,7 +2,7 @@
 .. title: Trans-Speculative Ramblings
 .. slug: trans-speculative-ramblings
 .. date: 2008-05-09 00:27:05-05:00
-.. tags: Geek,IMHO,Write
+.. tags: geek,imho,write
 .. link: 
 .. description: 
 .. type: text

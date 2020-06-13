@@ -2,7 +2,7 @@
 .. title: History of Western Philosophy
 .. slug: history-of-western-philosophy
 .. date: 2008-02-16 19:56:26-06:00
-.. tags: Books
+.. tags: books
 .. link: 
 .. description: 
 .. type: text

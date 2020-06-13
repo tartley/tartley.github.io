@@ -2,7 +2,7 @@
 .. title: The Long Overdue LinkedIn Backlash
 .. slug: the-long-overdue-linkedin-backlash
 .. date: 2008-03-18 16:09:57-05:00
-.. tags: IMHO
+.. tags: imho
 .. link: 
 .. description: 
 .. type: text

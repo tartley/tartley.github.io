@@ -2,7 +2,7 @@
 .. title: Just Married!
 .. slug: just-married
 .. date: 2008-04-23 13:16:36-05:00
-.. tags: Journal,Refried
+.. tags: journal,refried
 .. link: 
 .. description: 
 .. type: text

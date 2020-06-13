@@ -2,7 +2,7 @@
 .. title: National Portrait Gallery Photographic Portrait Prize 2007
 .. slug: national-portrait-gallery-photographic-portrait-prize-2007
 .. date: 2008-01-23 16:19:35-06:00
-.. tags: Exhibits
+.. tags: exhibits
 .. link: 
 .. description: 
 .. type: text

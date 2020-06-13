@@ -2,7 +2,7 @@
 .. title: Freakonomics: A Rogue Economist Explores the yada yada
 .. slug: freakonomics-a-rogue-economist-explores-the-yada-yada
 .. date: 2007-03-21 14:35:25-05:00
-.. tags: Books
+.. tags: books
 .. link: 
 .. description: 
 .. type: text

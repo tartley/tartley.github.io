@@ -2,7 +2,7 @@
 .. title: London Python meetup
 .. slug: london-python-meeting
 .. date: 2007-02-22 20:20:59-06:00
-.. tags: Journal,Python
+.. tags: journal,python
 .. link: 
 .. description: 
 .. type: text

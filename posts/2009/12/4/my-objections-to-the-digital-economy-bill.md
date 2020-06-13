@@ -2,7 +2,7 @@
 .. title: My objections to the Digital Economy Bill
 .. slug: my-objections-to-the-digital-economy-bill
 .. date: 2009-12-04 00:32:58-06:00
-.. tags: Geek,IMHO
+.. tags: geek,imho
 .. link: 
 .. description: 
 .. type: text

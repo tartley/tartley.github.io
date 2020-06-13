@@ -2,7 +2,7 @@
 .. title: Random Wallpaper for Linux Gnome Desktop
 .. slug: random-wallpaper-for-linux-gnome-desktop
 .. date: 2008-02-23 01:41:37-06:00
-.. tags: Python
+.. tags: python
 .. link: 
 .. description: 
 .. type: text

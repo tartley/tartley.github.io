@@ -2,7 +2,7 @@
 .. title: Power
 .. slug: power
 .. date: 2008-11-28 11:32:00-06:00
-.. tags: Books
+.. tags: books
 .. link: 
 .. description: 
 .. type: text

@@ -2,7 +2,7 @@
 .. title: Collapse: How Societies Choose to Fail or Survive
 .. slug: collapse-how-societies-choose-to-fail-or-survive
 .. date: 2008-01-30 11:22:00-06:00
-.. tags: Books
+.. tags: books
 .. link: 
 .. description: 
 .. type: text

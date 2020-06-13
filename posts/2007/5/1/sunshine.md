@@ -2,7 +2,7 @@
 .. title: Sunshine
 .. slug: sunshine
 .. date: 2007-05-01 13:13:43-05:00
-.. tags: Movies
+.. tags: movies
 .. link: 
 .. description: 
 .. type: text

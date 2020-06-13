@@ -2,7 +2,7 @@
 .. title: Blink: The Power of Thinking Without Thinking
 .. slug: blink
 .. date: 2007-07-22 00:11:08-05:00
-.. tags: Books
+.. tags: books
 .. link: 
 .. description: 
 .. type: text

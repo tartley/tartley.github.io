@@ -2,7 +2,7 @@
 .. title: Testing Extreme Programming
 .. slug: testing-extreme-programming
 .. date: 2007-03-20 09:52:39-05:00
-.. tags: Books,Testing,Software
+.. tags: books,testing,software
 .. link: 
 .. description: 
 .. type: text

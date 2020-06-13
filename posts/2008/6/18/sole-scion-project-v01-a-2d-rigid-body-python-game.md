@@ -2,7 +2,7 @@
 .. title: Sole Scion project v0.1 : A 2D rigid-body Python game
 .. slug: sole-scion-project-v01-a-2d-rigid-body-python-game
 .. date: 2008-06-18 06:37:17-05:00
-.. tags: game,Python,2d,rigid body,physics,Graphics,chipmunk,pymunk,pyglet,Python,Graphics
+.. tags: game,python,2d,rigid body,physics,graphics,chipmunk,pymunk,pyglet,python,graphics
 .. link: 
 .. description: 
 .. type: text

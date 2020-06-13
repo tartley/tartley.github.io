@@ -2,7 +2,7 @@
 .. title: Vonnegut on software development teams.
 .. slug: vonnegut-on-software-development-teams
 .. date: 2019-06-30 21:28:04-05:00
-.. tags: TODO
+.. tags: todo
 .. link: 
 .. description: 
 .. type: text

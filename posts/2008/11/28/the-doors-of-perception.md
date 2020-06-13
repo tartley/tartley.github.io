@@ -2,7 +2,7 @@
 .. title: The Doors of Perception
 .. slug: the-doors-of-perception
 .. date: 2008-11-28 11:45:00-06:00
-.. tags: Books
+.. tags: books
 .. link: 
 .. description: 
 .. type: text

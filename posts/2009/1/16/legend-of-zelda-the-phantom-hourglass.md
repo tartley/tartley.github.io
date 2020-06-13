@@ -2,7 +2,7 @@
 .. title: Legend of Zelda : The Phantom Hourglass
 .. slug: legend-of-zelda-the-phantom-hourglass
 .. date: 2009-01-16 14:36:05-06:00
-.. tags: game,videogame,nintendo,ds,review,Games
+.. tags: game,videogame,nintendo,ds,review,games
 .. link: 
 .. description: 
 .. type: text

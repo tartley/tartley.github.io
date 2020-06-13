@@ -2,7 +2,7 @@
 .. title: Benjamin Franklin's Autobiography
 .. slug: benjamin-franklins-autobiography
 .. date: 2007-12-19 09:23:29-06:00
-.. tags: Geek,Books
+.. tags: geek,books
 .. link: 
 .. description: 
 .. type: text

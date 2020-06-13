@@ -2,7 +2,7 @@
 .. title: WordPress providing categorised RSS feeds
 .. slug: wordpress-providing-categorised-rss-feeds
 .. date: 2007-03-14 07:12:49-05:00
-.. tags: Tartley.com
+.. tags: tartley.com
 .. link: 
 .. description: 
 .. type: text

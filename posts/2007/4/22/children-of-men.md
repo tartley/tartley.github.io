@@ -2,7 +2,7 @@
 .. title: Children of Men
 .. slug: children-of-men
 .. date: 2007-04-22 22:36:21-05:00
-.. tags: Movies
+.. tags: movies
 .. link: 
 .. description: 
 .. type: text

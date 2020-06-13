@@ -2,7 +2,7 @@
 .. title: Only Joking!
 .. slug: only-joking
 .. date: 2008-05-09 10:14:22-05:00
-.. tags: IMHO
+.. tags: imho
 .. link: 
 .. description: 
 .. type: text

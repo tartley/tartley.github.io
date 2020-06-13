@@ -2,7 +2,7 @@
 .. title: Comparing methods of deploying Python applications
 .. slug: comparing-methods-of-deploying-python-applications
 .. date: 2009-11-12 12:18:19-06:00
-.. tags: Python
+.. tags: python
 .. link: 
 .. description: 
 .. type: text

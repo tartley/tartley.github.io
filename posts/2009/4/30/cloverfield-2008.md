@@ -2,7 +2,7 @@
 .. title: Cloverfield (2008)
 .. slug: cloverfield-2008
 .. date: 2009-04-30 08:15:58-05:00
-.. tags: Movies
+.. tags: movies
 .. link: 
 .. description: 
 .. type: text
