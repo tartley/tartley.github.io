@@ -2,8 +2,7 @@
 .. title: Django testing 201 : Acceptance Tests vs Unit Tests
 .. slug: django-testing-201-acceptance-tests-vs-unit-tests
 .. date: 2011-07-14 16:19:43-05:00
-.. tags: Python,Testing
-.. category: Python
+.. tags: python,testing
 .. link: 
 .. description: 
 .. type: text

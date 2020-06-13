@@ -2,8 +2,7 @@
 .. title: History meme
 .. slug: history-meme
 .. date: 2008-04-23 06:50:01-05:00
-.. tags: Geek,Journal
-.. category: Geek
+.. tags: geek,journal
 .. link: 
 .. description: 
 .. type: text

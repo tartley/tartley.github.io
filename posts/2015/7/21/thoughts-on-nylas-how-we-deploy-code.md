@@ -2,8 +2,7 @@
 .. title: Thoughts on Nylas' "How We Deploy Code"
 .. slug: thoughts-on-nylas-how-we-deploy-code
 .. date: 2015-07-21 19:06:02-05:00
-.. tags: Geek,Python,Software
-.. category: Geek
+.. tags: geek,python,software
 .. link: 
 .. description: 
 .. type: text

@@ -2,8 +2,7 @@
 .. title: Kill Bill (Vol 2)
 .. slug: kill-bill-vol-2
 .. date: 2007-07-22 00:25:26-05:00
-.. tags: Movies
-.. category: Movies
+.. tags: movies
 .. link: 
 .. description: 
 .. type: text

@@ -2,8 +2,7 @@
 .. title: Webfaction hosting
 .. slug: webfaction-hosting
 .. date: 2007-06-21 10:34:05-05:00
-.. tags: Tartley.com
-.. category: Tartley.com
+.. tags: tartley.com
 .. link: 
 .. description: 
 .. type: text

@@ -2,8 +2,7 @@
 .. title: OpenID works!
 .. slug: openid-works
 .. date: 2008-09-17 19:06:48-05:00
-.. tags: Geek,Journal
-.. category: Geek
+.. tags: geek,journal
 .. link: 
 .. description: 
 .. type: text

@@ -2,8 +2,7 @@
 .. title: IronPython in Action
 .. slug: ironpython-in-action
 .. date: 2009-07-18 12:03:31-05:00
-.. tags: Python,Books
-.. category: Python
+.. tags: python,books
 .. link: 
 .. description: 
 .. type: text

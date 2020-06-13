@@ -2,8 +2,7 @@
 .. title: Acceptance Testing .NET Applications using IronPython
 .. slug: acceptance-testing-net-applications-using-ironpython
 .. date: 2010-03-16 12:13:15-05:00
-.. tags: Python,Testing,Software,MSWin-dev
-.. category: Python
+.. tags: python,testing,software,mswin-dev
 .. link: 
 .. description: 
 .. type: text

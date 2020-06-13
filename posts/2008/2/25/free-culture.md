@@ -2,8 +2,7 @@
 .. title: Free Culture
 .. slug: free-culture
 .. date: 2008-02-25 14:08:18-06:00
-.. tags: Books
-.. category: Books
+.. tags: books
 .. link: 
 .. description: 
 .. type: text

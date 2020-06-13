@@ -2,8 +2,7 @@
 .. title: I am Legend
 .. slug: i-am-legend
 .. date: 2008-02-08 00:45:21-06:00
-.. tags: Movies
-.. category: Movies
+.. tags: movies
 .. link: 
 .. description: 
 .. type: text

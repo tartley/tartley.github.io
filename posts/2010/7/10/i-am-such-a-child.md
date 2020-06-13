@@ -2,8 +2,7 @@
 .. title: I am such a child
 .. slug: i-am-such-a-child
 .. date: 2010-07-10 13:36:20-05:00
-.. tags: IMHO
-.. category: IMHO
+.. tags: imho
 .. link: 
 .. description: 
 .. type: text

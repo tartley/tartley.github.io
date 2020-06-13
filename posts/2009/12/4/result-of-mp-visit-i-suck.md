@@ -2,8 +2,7 @@
 .. title: Result of MP visit - I suck
 .. slug: result-of-mp-visit-i-suck
 .. date: 2009-12-04 23:23:09-06:00
-.. tags: Geek,IMHO,Journal
-.. category: Geek
+.. tags: geek,imho,journal
 .. link: 
 .. description: 
 .. type: text

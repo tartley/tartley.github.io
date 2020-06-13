@@ -2,8 +2,7 @@
 .. title: Trip Report: The Chelsea Arts Club
 .. slug: trip-report-the-chelsea-arts-club
 .. date: 2007-03-14 10:23:52-05:00
-.. tags: Journal
-.. category: Journal
+.. tags: journal
 .. link: 
 .. description: 
 .. type: text

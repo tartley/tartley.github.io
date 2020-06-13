@@ -2,8 +2,7 @@
 .. title: Understanding git rebase so it sticks
 .. slug: understanding-rebase-so-it-sticks
 .. date: 2014-02-07 10:28:37-06:00
-.. tags: Software,Git
-.. category: Software
+.. tags: software,git
 .. link: 
 .. description: 
 .. type: text

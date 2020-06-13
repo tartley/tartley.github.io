@@ -2,8 +2,7 @@
 .. title: Ah... the strangeness of chance
 .. slug: ah-the-strangeness-of-chance
 .. date: 2008-01-25 16:43:58-06:00
-.. tags: Personal
-.. category: Personal
+.. tags: personal
 .. link: 
 .. description: 
 .. type: text

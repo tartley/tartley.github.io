@@ -2,8 +2,7 @@
 .. title: The Suze...
 .. slug: the-suze
 .. date: 2008-10-17 12:52:19-05:00
-.. tags: Journal,Write
-.. category: Journal
+.. tags: journal,write
 .. link: 
 .. description: 
 .. type: text

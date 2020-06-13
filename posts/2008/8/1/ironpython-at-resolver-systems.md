@@ -2,8 +2,7 @@
 .. title: IronPython at Resolver Systems
 .. slug: ironpython-at-resolver-systems
 .. date: 2008-08-01 01:12:17-05:00
-.. tags: Python,Software,Presentations
-.. category: Python
+.. tags: python,software,presentations
 .. link: 
 .. description: 
 .. type: text

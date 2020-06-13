@@ -2,8 +2,7 @@
 .. title: Tide Turning on Copyright Abuses?
 .. slug: tide-turning-on-copyright-abuses
 .. date: 2007-09-02 22:03:59-05:00
-.. tags: Geek,IMHO
-.. category: Geek
+.. tags: geek,imho
 .. link: 
 .. description: 
 .. type: text

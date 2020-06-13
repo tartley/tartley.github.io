@@ -2,8 +2,7 @@
 .. title: Shadow of the Colossus
 .. slug: shadow-of-the-colossus
 .. date: 2009-01-15 19:33:59-06:00
-.. tags: Games
-.. category: Games
+.. tags: games
 .. link: 
 .. description: 
 .. type: text

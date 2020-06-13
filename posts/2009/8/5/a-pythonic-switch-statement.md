@@ -2,8 +2,7 @@
 .. title: A Pythonic 'switch' statement
 .. slug: a-pythonic-switch-statement
 .. date: 2009-08-05 08:59:53-05:00
-.. tags: Python
-.. category: Python
+.. tags: python
 .. link: 
 .. description: 
 .. type: text

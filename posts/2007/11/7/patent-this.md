@@ -2,8 +2,7 @@
 .. title: Patent This
 .. slug: patent-this
 .. date: 2007-11-07 14:30:32-06:00
-.. tags: Geek
-.. category: Geek
+.. tags: geek
 .. link: 
 .. description: 
 .. type: text

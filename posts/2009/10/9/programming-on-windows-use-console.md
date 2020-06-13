@@ -2,8 +2,7 @@
 .. title: Programming on Windows : Use Console
 .. slug: programming-on-windows-use-console
 .. date: 2009-10-09 18:18:50-05:00
-.. tags: Software,MSWin-dev
-.. category: Software
+.. tags: software,mswin-dev
 .. link: 
 .. description: 
 .. type: text

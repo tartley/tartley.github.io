@@ -2,8 +2,7 @@
 .. title: Fargo
 .. slug: fargo
 .. date: 2009-01-27 17:09:56-06:00
-.. tags: Movies
-.. category: Movies
+.. tags: movies
 .. link: 
 .. description: 
 .. type: text

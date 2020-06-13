@@ -2,8 +2,7 @@
 .. title: Testwatcher
 .. slug: testwatcher
 .. date: 2009-04-29 23:02:59-05:00
-.. tags: Python,Testing
-.. category: Python
+.. tags: python,testing
 .. link: 
 .. description: 
 .. type: text

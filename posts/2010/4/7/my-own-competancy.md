@@ -2,8 +2,7 @@
 .. title: My own competency
 .. slug: my-own-competancy
 .. date: 2010-04-07 11:41:50-05:00
-.. tags: Geek,Software
-.. category: Geek
+.. tags: geek,software
 .. link: 
 .. description: 
 .. type: text

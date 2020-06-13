@@ -2,8 +2,7 @@
 .. title: Deja Vu
 .. slug: deja-vu
 .. date: 2007-03-13 14:56:58-05:00
-.. tags: Movies
-.. category: Movies
+.. tags: movies
 .. link: 
 .. description: 
 .. type: text

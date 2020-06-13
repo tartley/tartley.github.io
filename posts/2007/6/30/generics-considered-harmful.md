@@ -2,8 +2,7 @@
 .. title: Generics Considered Harmful
 .. slug: generics-considered-harmful
 .. date: 2007-06-30 15:03:34-05:00
-.. tags: IMHO,Software
-.. category: IMHO
+.. tags: imho,software
 .. link: 
 .. description: 
 .. type: text

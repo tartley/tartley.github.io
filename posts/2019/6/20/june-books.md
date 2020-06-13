@@ -2,8 +2,7 @@
 .. title: Recent Books
 .. slug: june-books
 .. date: 2019-06-20 10:17:46-05:00
-.. tags: Books
-.. category: Books
+.. tags: books
 .. link: 
 .. description: 
 .. type: text

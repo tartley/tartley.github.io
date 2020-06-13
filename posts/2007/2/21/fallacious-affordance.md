@@ -2,8 +2,7 @@
 .. title: Fallacious Affordance
 .. slug: fallacious-affordance
 .. date: 2007-02-21 10:06:14-06:00
-.. tags: IMHO
-.. category: IMHO
+.. tags: imho
 .. link: 
 .. description: 
 .. type: text

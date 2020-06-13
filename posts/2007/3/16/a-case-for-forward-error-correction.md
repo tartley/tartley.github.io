@@ -2,8 +2,7 @@
 .. title: A Case for Forward Error Correction
 .. slug: a-case-for-forward-error-correction
 .. date: 2007-03-16 17:19:53-05:00
-.. tags: Geek,Refried
-.. category: Geek
+.. tags: geek,refried
 .. link: 
 .. description: 
 .. type: text

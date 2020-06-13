@@ -2,8 +2,7 @@
 .. title: Countries and US States visited
 .. slug: countries-and-us-states-visited
 .. date: 2007-05-23 14:13:40-05:00
-.. tags: Journal,Refried
-.. category: Journal
+.. tags: journal,refried
 .. link: 
 .. description: 
 .. type: text

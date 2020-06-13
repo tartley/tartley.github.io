@@ -2,8 +2,7 @@
 .. title: The History Boys
 .. slug: the-history-boys
 .. date: 2007-03-01 11:26:06-06:00
-.. tags: Shows
-.. category: Shows
+.. tags: shows
 .. link: 
 .. description: 
 .. type: text

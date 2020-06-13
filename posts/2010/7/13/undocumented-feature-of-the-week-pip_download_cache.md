@@ -2,8 +2,7 @@
 .. title: Undocumented feature of the week: $PIP_DOWNLOAD_CACHE
 .. slug: undocumented-feature-of-the-week-pip_download_cache
 .. date: 2010-07-13 12:46:15-05:00
-.. tags: Python
-.. category: Python
+.. tags: python
 .. link: 
 .. description: 
 .. type: text

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about Geek)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley@domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 11 Jun 2020 21:33:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/2020/4/20/lxd-for-dev-env.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley@domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 13 Jun 2020 00:42:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/2020/4/20/lxd-for-dev-env.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;
@@ -128,7 +128,7 @@ is probably a simpler way.&lt;/p&gt;
 &lt;li&gt;Doubtless due to my own misunderstanding somewhere, in order to get working
    IPv4 connections to my containers, I had to disable IPv6 connections to
    them.&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>Geek</category><category>Linux-dev</category><category>Software</category><guid>https://www.tartley.com/posts/2020/4/20/lxd-for-dev-env.html</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Installing Colout</title><link>https://www.tartley.com/posts/2019/1/25/installing-colout.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>geek</category><category>linux-dev</category><category>software</category><guid>https://www.tartley.com/posts/2020/4/20/lxd-for-dev-env.html</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Installing Colout</title><link>https://www.tartley.com/posts/2019/1/25/installing-colout.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
 &lt;p&gt;But &lt;code&gt;pip install colout&lt;/code&gt; from PyPI is broken, and has been for many months,
 due to a typo in the
 &lt;a href="https://pypi.org/project/colout/"&gt;latest (v0.5) PyPI release&lt;/a&gt;.&lt;/p&gt;
@@ -160,7 +160,7 @@ latest Github at the time:&lt;/p&gt;
 &lt;p&gt;Note that, throughout, we're using &lt;code&gt;--user&lt;/code&gt;, so that you can install
 development tools like this system-wide for the current user, without needing a
 virtualenv, without needing root access, and without modifying your installed
-Python system libraries.&lt;/p&gt;&lt;/div&gt;</description><category>Geek</category><category>Linux-dev</category><guid>https://www.tartley.com/posts/2019/1/25/installing-colout.html</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item><item><title>Running Multiple Firefox Profiles on Linux</title><link>https://www.tartley.com/posts/2018/2/21/running-multiple-firefox-profiles.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I recently switched from Chrome to Firefox. It's so &lt;em&gt;fast&lt;/em&gt;, and easier
+Python system libraries.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>linux-dev</category><guid>https://www.tartley.com/posts/2019/1/25/installing-colout.html</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item><item><title>Running Multiple Firefox Profiles on Linux</title><link>https://www.tartley.com/posts/2018/2/21/running-multiple-firefox-profiles.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I recently switched from Chrome to Firefox. It's so &lt;em&gt;fast&lt;/em&gt;, and easier
 to trust that Mozilla has my privacy and interests at heart than Google
 does.&lt;/p&gt;
 &lt;p&gt;I want to run a second profile at work, to keep a distinct set of open
@@ -209,10 +209,10 @@ to whichever profile you mark as default in the ProfileManager, but
 right clicking lets you select the home or work profile explicitly. Open
 each, and change the theme in one of them so the windows are visually
 distinct.&lt;/p&gt;
-&lt;p&gt;Tested on Ubuntu, RHEL 7.3, probably works on all Gnome3 desktops.&lt;/p&gt;&lt;/div&gt;</description><category>Geek</category><category>Linux-dev</category><guid>https://www.tartley.com/posts/2018/2/21/running-multiple-firefox-profiles.html</guid><pubDate>Thu, 22 Feb 2018 00:40:55 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://www.tartley.com/posts/2016/1/20/google-chrome-credit.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I just noticed: Open Chrome, go to &lt;chrome:&gt;&lt;/chrome:&gt;, search in page,
+&lt;p&gt;Tested on Ubuntu, RHEL 7.3, probably works on all Gnome3 desktops.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>linux-dev</category><guid>https://www.tartley.com/posts/2018/2/21/running-multiple-firefox-profiles.html</guid><pubDate>Thu, 22 Feb 2018 00:40:55 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://www.tartley.com/posts/2016/1/20/google-chrome-credit.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I just noticed: Open Chrome, go to &lt;chrome:&gt;&lt;/chrome:&gt;, search in page,
 'show licence', and:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;img alt="chrome-credit" src="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;&lt;/div&gt;</description><category>Geek</category><category>Linux-dev</category><category>Software</category><guid>https://www.tartley.com/posts/2016/1/20/google-chrome-credit.html</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>Git: When to use three dots vs two</title><link>https://www.tartley.com/posts/2015/8/25/git-when-to-use-three-dots-vs-two.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
+&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>linux-dev</category><category>software</category><guid>https://www.tartley.com/posts/2016/1/20/google-chrome-credit.html</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>Git: When to use three dots vs two</title><link>https://www.tartley.com/posts/2015/8/25/git-when-to-use-three-dots-vs-two.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
 today:&lt;/p&gt;
 &lt;p&gt;To see the commits or diffs introduced by a branch (the filled circles ●):&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     f
@@ -268,7 +268,7 @@ git diff ...f
 &lt;/code&gt;&lt;/pre&gt;
 
 
-&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;&lt;/div&gt;</description><category>Geek</category><category>Git</category><category>Version control</category><guid>https://www.tartley.com/posts/2015/8/25/git-when-to-use-three-dots-vs-two.html</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://www.tartley.com/posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
+&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>git</category><category>version control</category><guid>https://www.tartley.com/posts/2015/8/25/git-when-to-use-three-dots-vs-two.html</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://www.tartley.com/posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
 Code."&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The goals of making deployment consistent, reliable and fast are very
 laudable, and the conclusion involving creating Debian packages is just
@@ -323,7 +323,7 @@ packages, rather than more bug-prone ad-hoc scripts and Ansible config.
 So I'm not at all against the final conclusions of the Nylas article.
 (Hugs to you folks at Nylas!)&lt;/p&gt;
 &lt;p&gt;Dashed this out in ten minutes between daycare pickup and dinner being
-ready. Apologies for the inevitable shoddyness.&lt;/p&gt;&lt;/div&gt;</description><category>Geek</category><category>Python</category><category>Software</category><guid>https://www.tartley.com/posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code.html</guid><pubDate>Wed, 22 Jul 2015 00:06:02 GMT</pubDate></item><item><title>Listen to your phone through your PC speakers</title><link>https://www.tartley.com/posts/2015/3/15/listen-to-your-phone-through-your-pc-speakers.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
+ready. Apologies for the inevitable shoddyness.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code.html</guid><pubDate>Wed, 22 Jul 2015 00:06:02 GMT</pubDate></item><item><title>Listen to your phone through your PC speakers</title><link>https://www.tartley.com/posts/2015/3/15/listen-to-your-phone-through-your-pc-speakers.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Directs audio input (e.g. mic) to audio output (e.g. speakers),&lt;/span&gt;
 &lt;span class="c1"&gt;# then sleeps forever. Stops audio redirection when it is killed.&lt;/span&gt;
@@ -344,7 +344,7 @@ ready. Apologies for the inevitable shoddyness.&lt;/p&gt;&lt;/div&gt;</descripti
 &lt;span class="nb"&gt;trap&lt;/span&gt; cleanup EXIT
 
 sleep infinity
-&lt;/code&gt;&lt;/pre&gt;</description><category>Bash</category><category>Geek</category><guid>https://www.tartley.com/posts/2015/3/15/listen-to-your-phone-through-your-pc-speakers.html</guid><pubDate>Sun, 15 Mar 2015 15:50:09 GMT</pubDate></item><item><title>£ key in Windows on a US laptop keyboard, done right.</title><link>https://www.tartley.com/posts/2011/7/10/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The usual solution to typing non-US characters on a US keyboard in
+&lt;/code&gt;&lt;/pre&gt;</description><category>bash</category><category>geek</category><guid>https://www.tartley.com/posts/2015/3/15/listen-to-your-phone-through-your-pc-speakers.html</guid><pubDate>Sun, 15 Mar 2015 15:50:09 GMT</pubDate></item><item><title>£ key in Windows on a US laptop keyboard, done right.</title><link>https://www.tartley.com/posts/2011/7/10/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The usual solution to typing non-US characters on a US keyboard in
 Windows is to hold left-alt, then type on the numeric keypad:&lt;/p&gt;
 &lt;p&gt;£   Left-alt + 0163&lt;/p&gt;
 &lt;p&gt;€   Left-alt + 0128&lt;/p&gt;
@@ -372,7 +372,7 @@ which is exactly like 'US', but with the addition of £ on the key
 right-alt + 3:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/files/2011/07/windows-US-keyboard-layout-with-pound-on-right-alt-3.zip"&gt;windows-US-keyboard-layout-with-pound-on-right-alt-3&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The source .klc file is in there, so you could add your own tweaks on
-top of that.&lt;/p&gt;&lt;/div&gt;</description><category>Geek</category><category>MSWin-dev</category><guid>https://www.tartley.com/posts/2011/7/10/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right.html</guid><pubDate>Sun, 10 Jul 2011 18:06:34 GMT</pubDate></item><item><title>Converting any repository from Svn to Hg on Windows</title><link>https://www.tartley.com/posts/2010/10/20/converting-any-repository-fom-svn-to-hg-on-windows.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;There's been a lot of
+top of that.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><guid>https://www.tartley.com/posts/2011/7/10/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right.html</guid><pubDate>Sun, 10 Jul 2011 18:06:34 GMT</pubDate></item><item><title>Converting any repository from Svn to Hg on Windows</title><link>https://www.tartley.com/posts/2010/10/20/converting-any-repository-fom-svn-to-hg-on-windows.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;There's been a lot of
 &lt;a href="http://www.voidspace.org.uk/python/weblog/index.shtml"&gt;blather&lt;/a&gt; of late
 about this supposedly-fiddly conversion process. Personally I've found
 that working on the Windows operating system, the transition is a lot
@@ -385,7 +385,7 @@ hg add .
 
 
 &lt;p&gt;and you're done. There may be a few &lt;em&gt;nuances&lt;/em&gt; this doesn't address, but
-come on, let's not expect miracles.&lt;/p&gt;&lt;/div&gt;</description><category>Geek</category><guid>https://www.tartley.com/posts/2010/10/20/converting-any-repository-fom-svn-to-hg-on-windows.html</guid><pubDate>Wed, 20 Oct 2010 15:26:02 GMT</pubDate></item><item><title>My own competency</title><link>https://www.tartley.com/posts/2010/4/7/my-own-competancy.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;My single degree was in Electronics and Physics, so although that
+come on, let's not expect miracles.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><guid>https://www.tartley.com/posts/2010/10/20/converting-any-repository-fom-svn-to-hg-on-windows.html</guid><pubDate>Wed, 20 Oct 2010 15:26:02 GMT</pubDate></item><item><title>My own competency</title><link>https://www.tartley.com/posts/2010/4/7/my-own-competancy.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;My single degree was in Electronics and Physics, so although that
 covered a considerable amount of digital electronics and CPU design,
 I've pretty much picked up everything I know about software in my own
 time or on the job. Consequentially, there are aspects of computer
@@ -404,4 +404,4 @@ each area.&lt;/p&gt;
 arrived at in almost all areas I feel deficient was to &lt;em&gt;finish working
 through
 &lt;a href="http://www.amazon.co.uk/Structure-Interpretation-Computer-Electrical-Engineering/dp/0262510871"&gt;SICP&lt;/a&gt;&lt;/em&gt;.
-Alright, alright, my path is clear.&lt;/p&gt;&lt;/div&gt;</description><category>Geek</category><category>Software</category><guid>https://www.tartley.com/posts/2010/4/7/my-own-competancy.html</guid><pubDate>Wed, 07 Apr 2010 16:41:50 GMT</pubDate></item></channel></rss>
+Alright, alright, my path is clear.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>software</category><guid>https://www.tartley.com/posts/2010/4/7/my-own-competancy.html</guid><pubDate>Wed, 07 Apr 2010 16:41:50 GMT</pubDate></item></channel></rss>

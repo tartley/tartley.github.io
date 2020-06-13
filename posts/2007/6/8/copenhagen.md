@@ -2,8 +2,7 @@
 .. title: Copenhagen
 .. slug: copenhagen
 .. date: 2007-06-08 10:24:50-05:00
-.. tags: Journal
-.. category: Journal
+.. tags: journal
 .. link: 
 .. description: 
 .. type: text

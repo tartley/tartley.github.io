@@ -2,8 +2,7 @@
 .. title: lang.name, lang.desc for lang in self.languages
 .. slug: a-bit-of-fun
 .. date: 2008-09-30 19:44:25-05:00
-.. tags: Software
-.. category: Software
+.. tags: software
 .. link: 
 .. description: 
 .. type: text

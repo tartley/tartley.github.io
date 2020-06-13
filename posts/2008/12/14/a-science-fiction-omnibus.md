@@ -2,8 +2,7 @@
 .. title: A Science-Fiction Omnibus
 .. slug: a-science-fiction-omnibus
 .. date: 2008-12-14 17:32:47-06:00
-.. tags: Books,Science-Fiction
-.. category: Books
+.. tags: books,science-fiction
 .. link: 
 .. description: 
 .. type: text

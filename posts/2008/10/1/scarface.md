@@ -2,8 +2,7 @@
 .. title: Scarface
 .. slug: scarface
 .. date: 2008-10-01 22:11:01-05:00
-.. tags: Movies
-.. category: Movies
+.. tags: movies
 .. link: 
 .. description: 
 .. type: text

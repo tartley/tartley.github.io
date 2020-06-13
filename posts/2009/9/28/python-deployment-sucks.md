@@ -2,8 +2,7 @@
 .. title: Python Deployment Sucks
 .. slug: python-deployment-sucks
 .. date: 2009-09-28 13:26:45-05:00
-.. tags: Python
-.. category: Python
+.. tags: python
 .. link: 
 .. description: 
 .. type: text

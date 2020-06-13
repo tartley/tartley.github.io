@@ -2,8 +2,7 @@
 .. title: Stretching pyglet's Wings
 .. slug: stretching-pyglets-wings
 .. date: 2008-09-08 22:25:36-05:00
-.. tags: Python,Software,Graphics,Presentations
-.. category: Python
+.. tags: python,software,graphics,presentations
 .. link: 
 .. description: 
 .. type: text

@@ -2,8 +2,7 @@
 .. title: PyRochesterMN
 .. slug: pyrochestermn
 .. date: 2016-01-20 21:01:27-06:00
-.. tags: Python
-.. category: Python
+.. tags: python
 .. link: 
 .. description: 
 .. type: text

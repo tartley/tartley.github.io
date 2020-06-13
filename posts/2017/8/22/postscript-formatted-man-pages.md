@@ -2,8 +2,7 @@
 .. title: Postscript formatted man pages
 .. slug: postscript-formatted-man-pages
 .. date: 2017-08-22 20:34:02-05:00
-.. tags: Linux-dev,Bash
-.. category: Linux-dev
+.. tags: linux-dev,bash
 .. link: 
 .. description: 
 .. type: text
