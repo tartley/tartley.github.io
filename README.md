@@ -69,3 +69,13 @@ Click around a few pages to see what else does not work.
 
 * Embed ancient backed up tartley.com content, and link to it.
 
+# some commands
+
+Delete all category lines:
+
+    find posts -type f | xargs sed -i '/^\.\. category:/d'
+
+Make all tags lower case
+
+    find posts -type f | xargs sed -i 's/^\.\. tags: .*/\L&/g'
+
