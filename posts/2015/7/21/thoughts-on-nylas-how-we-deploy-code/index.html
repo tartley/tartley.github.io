@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thoughts on Nylas' "How We Deploy Code" | tartley.com</title>
+<link href="../../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../../../rss.xml">
+<link rel="canonical" href="https://www.tartley.com/posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code/">
+<link rel="icon" href="../../../../../welcome.gif" sizes="16x16">
+<!--[if lt IE 9]><script src="../../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
+<link rel="prev" href="../../../3/15/listen-to-your-phone-through-your-pc-speakers/" title="Listen to your phone through your PC speakers" type="text/html">
+<link rel="next" href="../../../8/25/git-when-to-use-three-dots-vs-two/" title="Git: When to use three dots vs two" type="text/html">
+<meta property="og:site_name" content="tartley.com">
+<meta property="og:title" content="Thoughts on Nylas' &quot;How We Deploy Code&quot;">
+<meta property="og:url" content="https://www.tartley.com/posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code/">
+<meta property="og:description" content="Some thoughts on Nylas' post &quot;How We Deploy
+Code.&quot;
+The goals of making deployment consistent, reliable and fast are very
+laudable, and the conclusion involving creating Debian packages is just
+great. ">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2015-07-21T19:06:02-05:00">
+<meta property="article:tag" content="geek">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="software">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../../../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../../../../rss.xml">RSS feed</a>
+                </li>
+<li>
+<a href="../../../../../pages/about.html">About</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.md" id="sourcelink">Source</a>
+    </li>
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Thoughts on Nylas' "How We Deploy Code"</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2015-07-21T19:06:02-05:00" itemprop="datePublished" title="2015-07-21 19:06">2015-07-21 19:06</time></a>
+            </p>
+                <p class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code.html">Comments</a>
+
+
+                    </p>
+<p class="sourceline"><a href="index.md" class="sourcelink">Source</a></p>
+
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Some thoughts on <a href="https://nylas.com/blog/packaging-deploying-python">Nylas' post "How We Deploy
+Code."</a></p>
+<p>The goals of making deployment consistent, reliable and fast are very
+laudable, and the conclusion involving creating Debian packages is just
+great. But in the spirit of geek nitpicking, I can't help but think the
+justifications given are misguided, and overlook a simpler solution.</p>
+<p><strong>&gt;&gt; pip does not offer a "revert deploy" strategy</strong></p>
+<p>Yes it does. Throw away the virtualenv and create a new one using the
+requirements.txt from an earlier release. This might be slow, but you
+can both speed it up (see below), and you can keep old versioned
+virtualenvs around, as a cache of the output of this slow step, so that
+reverts (the time when you really want deploys to go quickly) require
+only a couple of symlinks.</p>
+<p><strong>Update:</strong> Oooh, and I just had an idea. You could version virtualenvs
+using a hash of the requirements, so that deploys which do not change
+dependencies can share the same virtualenv. I've never tried that - it
+might work?!?!</p>
+<p><strong>&gt;&gt; Installing dependencies with pip can make deploys painfully
+slow</strong></p>
+<p>This is true. But it's not the final word on the matter.</p>
+<p>Firstly, don't grab the dependencies you're installing from PyPI. Have a
+local cache of them. That speeds up the install tremendously, not just
+because no download takes place, but also because no trawling of PyPI
+and author sites for possible alternate versions takes place. Some
+people use a local PyPI instance, but I like simply using a directory
+full of packages. Point pip at it using
+'<code>pip install --no-index --find-links=packages -r requirements</code>'. The
+'packages' directory could be checked into your project's repo, so that
+once you've checked a project out, you have everything you need to
+deploy to local VMs, even with no network connection at all. I wrote
+about this <a href="../../../../../pip-install-lightspeed-and-bulletproof">a while ago</a>.</p>
+<p><strong>&gt;&gt; Building your code separately on each host will cause
+consistency issues</strong></p>
+<p>So don't install dependencies using source packages, use wheels instead.
+Then any slow or unreliable build step is done once, when you create the
+packages directory, while deployment is now reliable and requires no
+development tools on the production server such as compilers, headers,
+etc.</p>
+<p><strong>Update:</strong> As a bonus, this will again substantially speed up the
+creation of your virtualenv when deploying.</p>
+<p><strong>&gt;&gt; Deploys will fail if the PyPI or your git server are down</strong></p>
+<p>PyPI outages (or a package author deleting their package, which happens
+routinely) are not a problem if you're deploying from a local source of
+packages.</p>
+<p>I agree that application code deployment shouldn't be done using a 'git
+pull'. Accessibility to GitHub shouldn't be a single point of failure,
+and the fewer development tools needed on production servers the better.
+So export the code from git into a tar file when you cut a release, and
+then push it out using scp at deploy time.</p>
+<p>Having said all that, there are still advantages to having your whole
+app and its dependencies handled by a single mechanism like Debian
+packages, rather than more bug-prone ad-hoc scripts and Ansible config.
+So I'm not at all against the final conclusions of the Nylas article.
+(Hugs to you folks at Nylas!)</p>
+<p>Dashed this out in ten minutes between daycare pickup and dinner being
+ready. Apologies for the inevitable shoddyness.</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../../categories/geek/" rel="tag">geek</a></li>
+            <li><a class="tag p-category" href="../../../../../categories/python/" rel="tag">python</a></li>
+            <li><a class="tag p-category" href="../../../../../categories/software/" rel="tag">software</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../../3/15/listen-to-your-phone-through-your-pc-speakers/" rel="prev" title="Listen to your phone through your PC speakers">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../../8/25/git-when-to-use-three-dots-vs-two/" rel="next" title="Git: When to use three dots vs two">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="tartley",
+            disqus_url="https://www.tartley.com/posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code/",
+        disqus_title="Thoughts on Nylas' \"How We Deploy Code\"",
+        disqus_identifier="cache/posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="tartley";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer"></footer>
+</div>
+</div>
+
+            <script src="../../../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acceptance Testing .NET Applications using IronPython | tartley.com</title>
+<link href="../../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../../../rss.xml">
+<link rel="canonical" href="https://www.tartley.com/posts/2010/3/16/acceptance-testing-net-applications-using-ironpython/">
+<link rel="icon" href="../../../../../welcome.gif" sizes="16x16">
+<!--[if lt IE 9]><script src="../../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
+<link rel="prev" href="../../15/quote-from-tim-bray/" title="Quote from Tim Bray" type="text/html">
+<link rel="next" href="../../20/opengl-draw-api-visualised/" title="OpenGL Draw API Visualised" type="text/html">
+<meta property="og:site_name" content="tartley.com">
+<meta property="og:title" content="Acceptance Testing .NET Applications using IronPython">
+<meta property="og:url" content="https://www.tartley.com/posts/2010/3/16/acceptance-testing-net-applications-using-ironpython/">
+<meta property="og:description" content="The following was originally published in the excellent Python
+Magazine. Thier contractual exclusivity
+period has now long expired, so here it comes again. Many thanks to my
+technical reviewer Michael">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2010-03-16T12:13:15-05:00">
+<meta property="article:tag" content="mswin-dev">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="software">
+<meta property="article:tag" content="testing">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../../../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../../../../rss.xml">RSS feed</a>
+                </li>
+<li>
+<a href="../../../../../pages/about.html">About</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.md" id="sourcelink">Source</a>
+    </li>
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Acceptance Testing .NET Applications using IronPython</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2010-03-16T12:13:15-05:00" itemprop="datePublished" title="2010-03-16 12:13">2010-03-16 12:13</time></a>
+            </p>
+                <p class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/2010/3/16/acceptance-testing-net-applications-using-ironpython.html">Comments</a>
+
+
+                    </p>
+<p class="sourceline"><a href="index.md" class="sourcelink">Source</a></p>
+
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<blockquote>
+<p>The following was originally published in the excellent <a href="http://pythonmagazine.com/">Python
+Magazine</a>. Thier contractual exclusivity
+period has now long expired, so here it comes again. Many thanks to my
+technical reviewer <a href="http://www.voidspace.org.uk/python/weblog/index.shtml">Michael
+Foord</a>, and to
+the editors <a href="http://rhodesmill.org/brandon/">Brandon Craig Rhodes</a> and
+<a href="http://www.doughellmann.com/">Doug Hellmann</a>, who patiently gave
+excellent and much needed guidance through its protracted gestation,
+and especially to all my co-workers at <a href="http://www.resolversystems.com/">Resolver
+Systems</a>, from whom I've learned so
+much.</p>
+</blockquote>
+<h3>Acceptance Testing .NET Applications using IronPython</h3>
+<p>Unit tests demonstrate to developers that individual functions and
+classes work as expected. Acceptance tests are an orthogonal complement
+to this. They verify to everybody, including managers and clients, that
+features they understand and care about are completed and working
+correctly. They also prove that the system as a whole is correctly
+integrated and that no regressions have occurred.</p>
+<p>Resolver Systems is developing a .NET desktop spreadsheet application,
+<a href="http://www.resolversystems.com/products/resolver-one/">Resolver One</a>,
+for which we have accumulated an acceptance testing framework. This
+framework uses <a href="http://docs.python.org/library/unittest.html">Python's standard unittest
+module</a>, and is executed
+using <a href="http://www.codeplex.com/IronPython">IronPython</a>.</p>
+<p>While Resolver One is written in IronPython, this technique allows
+IronPython tests to interact with product code written in any .NET
+language.</p>
+<p>This article describes the principles of this IronPython acceptance
+testing framework, and demonstrates them by creating an acceptance test
+for a small sample C# GUI application.</p>
+<h3>Caveats</h3>
+<p>When testing products written in static .NET languages such as C#, some
+common testing practices like monkey-patching will be unavailable.
+Static language classes are not modifiable at runtime, not even from
+tests written in IronPython. Fortunately, this is less of a concern for
+acceptance testing than it is for unit testing - we want the tests to
+operate on the unmodified whole end-to-end system.</p>
+<p>Resolver One is currently 40k lines of IronPython. I would guess this is
+maybe equivalent to 60-80k lines of C#, demonstrating the viability of
+this approach for desktop applications of this size.</p>
+<p>Our approach requires source code modifications to the system under test
+(SUT.) In particular, the SUT must provide methods for the test to start
+and stop the application, and must provide public access to its forms
+and other GUI objects. This means that this methodology cannot be used
+to black-box test arbitrary compiled programs - it requires the SUT to
+be written with testing in mind.</p>
+<h3>Why Acceptance Test?</h3>
+<p>Unit tests call individual methods and functions of the SUT, and have a
+close correspondence with the internal design of the product. Acceptance
+tests, in contrast, invoke the program as a whole, just like a user
+would, and have a close correspondence with the product specification.</p>
+<p><img alt="Acceptance vs unit tests" src="../../../../../files/2010/03/acceptance-vs-unit-tests.png"></p>
+<p>Acceptance testing automates the expensive, time consuming, error-prone
+and soul-destroying process of using a team of human testers to fire up
+the application under test, and exhaustively interact with the user
+interface to verify the program behaves correctly. Traditionally, a
+single iteration of this process can take days or weeks for substantial
+applications. Automating the process can yield the same feedback - or
+better - in minutes or hours. This reduces costs and provides valuable,
+rapid feedback to both developers and project stakeholders.</p>
+<p>This is useful for assessing whether user-visible features are correctly
+implemented, for doing quick smoke tests to make sure recent changes
+haven't accidentally broken other features, or for systematic checking
+that new functionality works under various conditions, such as on
+different operating systems, or in various browsers. Acceptance tests
+can include stress testing, and continually running acceptance tests on
+an integration server can detect infrequent, intermittent bugs.</p>
+<p>Best of all, acceptance tests that are derived directly from the
+specification can prove to clients that the system does what the
+requirements ask. This can be invaluable when it comes to client
+sign-off on deliverables, especially if the client trusts this process
+due to having participated in the creation of the user-stories or
+acceptance tests themselves.</p>
+<p>Acceptance tests do not yield the same incidental benefits in terms of
+good code design as unit tests do. However, creating acceptance tests
+before the product code is implemented does allow developers to focus
+exclusively on the requirements from a user's point of view. In
+practice, this turns out to help immeasurably in defining the
+specifications, and in giving developers a solid understanding of them.</p>
+<h3>Acceptance Tests Should Derive From User Stories</h3>
+<p><em>User Stories</em> are a human-readable specification document that
+describes a short scenario, using the SUT to perform some actions that a
+real user cares about. User stories usually form the entire
+specification. Such documents should be informal yet precise, succinct
+and easy to understand. In ideal circumstances, your customer would
+collaborate with you in creating these documents.</p>
+<p>An example user story might look like this:</p>
+<ol>
+<li>Alice starts WizBang. The window appears.</li>
+<li>She sees the three default list entries: 'one', 'two', 'three'.
+    Nothing is selected.</li>
+<li>She clicks the 'AddButton'</li>
+<li>The 'Add Item' dialog appears</li>
+<li>She types an item name into the dialog and clicks OK</li>
+<li>The new item is at the end of the list, selected.</li>
+<li>She clicks the 'CloseButton'</li>
+<li>The application closes</li>
+</ol>
+<p>An acceptance test is an executable script that performs the actions
+described in the user story, and verifies the application responds as
+expected. To create an acceptance test, at Resolver Systems we paste the
+entire user story, as comments, into a new test method, on a class
+derived from Python's <code>unittest.TestCase</code>.</p>
+<pre class="code literal-block"><span></span><code><span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">main</span> <span class="k">as</span> <span class="n">run_test</span><span class="p">,</span> <span class="n">TestCase</span>
+
+<span class="k">class</span> <span class="nc">AT001_AddItems</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">test_additems</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># 1. Alice starts WizBang. The window appears.</span>
+        <span class="c1"># 2. She sees the three default list entries:</span>
+        <span class="c1">#    'one', 'two', 'three'. Nothing is selected.</span>
+        <span class="c1"># 3. She clicks the 'AddButton'</span>
+        <span class="c1"># 4. The 'Add Item' dialog appears</span>
+        <span class="c1"># 5. She types an item name into the dialog and clicks OK</span>
+        <span class="c1"># 6. The new item is at the end of the list, selected.</span>
+        <span class="c1"># 7. She clicks the 'CloseButton'</span>
+        <span class="c1"># 8. The application closes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fail</span><span class="p">(</span><span class="s2">"test not finished"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+    <span class="n">run_test</span><span class="p">()</span>
+</code></pre>
+
+
+<p>The call to <code>fail()</code> at the end of this test is a good habit to develop.
+It stops unfinished tests like this one from passing, making them easy
+to accidentally overlook and be forgotten, invisible amongst a large
+collection of passing tests. When the test is complete, this fail can be
+removed.</p>
+<h3>Setting up IronPython</h3>
+<p>In order for IronPython to be able to import from <code>unittest</code> like this,
+a copy of the CPython standard library must be on <code>sys.path</code>. If you
+installed version 2+ of IronPython from the MSI installer, this is all
+taken care of automatically, using a copy of the standard library that
+is included with the install. Otherwise, you need to set this up
+manually, either by setting an environment variable:</p>
+<pre class="code literal-block"><span></span><code><span class="err">set IRONPYTHONPATH=C:\Python25\Lib</span>
+</code></pre>
+
+
+<p>or by appending this directory to <code>sys.path</code> inside your IronPython
+install's <code>Lib\site.py</code> file:</p>
+<pre class="code literal-block"><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">r</span><span class="s1">'C:\Python25\Lib'</span><span class="p">)</span>
+</code></pre>
+
+
+<p>Note that different versions of IronPython require different versions of
+the CPython standard library:</p>
+<ul>
+<li>IronPython 1.1: Python 2.4</li>
+<li>IronPython 2.0: Python 2.5</li>
+<li>IronPython 2.6: Python 2.6</li>
+</ul>
+<p>Once this is done, test it out by starting <code>ipy.exe</code>, and typing:</p>
+<pre class="code literal-block"><span></span><code><span class="o">&gt;</span> <span class="kn">import</span> <span class="nn">unittest</span>
+</code></pre>
+
+
+<p>If this works without complaint, exit <em>ipy.exe</em>, and run the nascent
+acceptance test above, using the DOS command-line:</p>
+<pre class="code literal-block"><span></span><code><span class="o">&gt;</span> <span class="n">ipy</span><span class="p">.</span><span class="n">exe</span> <span class="n">AT001_AddItems</span><span class="p">.</span><span class="n">py</span>
+<span class="n">F</span>
+<span class="o">======================================================================</span>
+<span class="n">FAIL</span><span class="p">:</span> <span class="n">test_add_address</span> <span class="p">(</span><span class="n">__main__</span><span class="p">.</span><span class="n">AT001_AddItems</span><span class="p">)</span>
+<span class="c1">----------------------------------------------------------------------</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="k">call</span> <span class="k">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="ss">"AT001_AddItems.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">11</span><span class="p">,</span> <span class="k">in</span> <span class="n">test_add_address</span>
+    <span class="k">self</span><span class="p">.</span><span class="n">fail</span><span class="p">(</span><span class="ss">"test not finished"</span><span class="p">)</span>
+<span class="n">AssertionError</span><span class="p">:</span> <span class="n">test</span> <span class="k">not</span> <span class="n">finished</span>
+
+<span class="c1">----------------------------------------------------------------------</span>
+<span class="n">Ran</span> <span class="mi">1</span> <span class="n">test</span> <span class="k">in</span> <span class="mi">0</span><span class="p">.</span><span class="mi">141</span><span class="n">s</span>
+
+<span class="n">FAILED</span> <span class="p">(</span><span class="n">failures</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre>
+
+
+<h3>About IronPython</h3>
+<p>IronPython is a .NET based reimplementation of the Python language. It
+combines the strength and elegance of Python as a language with the
+ability to directly call and interoperate with other .NET code. In daily
+use, I am continually surprised by how well this works. IronPython
+faithfully mimics CPython - there are almost no surprising differences
+between the two. Native Python types are mapped seamlessly and
+intuitively to equivalent .NET data types with an absolute minimum of
+fuss. For example, IronPython code can generally pass native Python
+types, like lists or dictionaries, to .NET functions or methods, instead
+of having to instantiate and populate .NET collection classes.</p>
+<p>To use a .NET library, your IronPython code first has to add a reference
+to the containing .NET <em>assembly</em>. An assembly is a physical chunk of
+code, usually contained in a DLL file. To add a reference, use the <code>clr</code>
+module, which is built-in to IronPython:</p>
+<pre class="code literal-block"><span></span><code><span class="kn">import</span> <span class="nn">clr</span>
+<span class="n">clr</span><span class="o">.</span><span class="n">AddReference</span><span class="p">(</span><span class="s1">'System.Windows.Forms'</span><span class="p">)</span>
+</code></pre>
+
+
+<p>This <code>AddReference()</code> function behaves just the same regardless of
+whether you are referencing assemblies from the .NET standard library
+(as shown here), 3rd party DLLs, or your own .NET projects.</p>
+<p>Code within an assembly is contained within namespaces. For the .NET
+standard library, the assemblies are usually given the same name as the
+namespace they implement. This is the case here, so once the above
+assembly is referenced, we can import code from the
+<em>System.Windows.Forms</em> namespace just as if it was a Python module:</p>
+<pre class="code literal-block"><span></span><code><span class="kn">from</span> <span class="nn">System.Windows.Forms</span> <span class="kn">import</span> <span class="n">Form</span>
+<span class="n">form</span> <span class="o">=</span> <span class="n">Form</span><span class="p">()</span>
+<span class="n">form</span><span class="o">.</span><span class="n">Show</span><span class="p">()</span>
+</code></pre>
+
+
+<p>This will display an instance of the .NET form class on screen. Note
+that the form does not yet respond to events. For that, we will add a
+call to <code>Application.Run()</code>, discussed below.</p>
+<p>Note that our IronPython projects always contain an automatic reference
+to the <code>System</code> assembly, so anything implemented in there, such as the
+<code>System.Threading</code> namespace, can always be imported without having to
+explicitly add any references.</p>
+<p>Ostensibly, using .NET and IronPython limits the operations described in
+this whole article to Windows only. The Mono project should allow this
+acceptance testing technique to be used directly on other operating
+systems, but that has not been tried.</p>
+<h3>Implementing the Test</h3>
+<p>To implement the comments pasted into our acceptance test, three things
+must be done:</p>
+<p>Firstly, the test must invoke the SUT, once for every test method, in
+such a way that the test and the SUT then both run simultaneously.</p>
+<p>Secondly, while the test runs, it must be able to make assertions about
+the behaviour of the SUT. On the GUI, for example, the test must be able
+to read the state of the form and its controls, in order to assert that
+the correct text is displayed.</p>
+<p>Thirdly, the test must provide simulated input on each of the SUT's
+external interfaces, to stimulate the program into action. For example,
+then the test must drive the SUT by providing simulated button clicks or
+keyboard input.</p>
+<p>The method chosen to fulfil all three of these requirements is for the
+test to invoke the SUT in the same process, but on a new thread. Since
+IronPython is a .NET language, it can directly access the SUT's form and
+control objects, making assertions about the state of the controls that
+are visible to the user. It can also simulate user actions by calling
+methods and firing events on the SUT's GUI controls.</p>
+<p>For this acceptance testing technique to work, the start-up of the SUT
+must be structured so as to expose a few public members and objects that
+are monitored and manipulated by the test. For example, elements of the
+GUI must be public. This obviously makes the tests fairly invasive.</p>
+<p>We've justified this to ourselves at Resolver Systems by taking a
+pragmatic philosophy: These are the smallest set of changes to our
+application that we could find in order to make it testable. This
+technique has allowed us to create a set of working acceptance tests
+that wouldn't otherwise have existed.</p>
+<h3>The System Under Test</h3>
+<p>The public methods and objects required from our SUT are shown in the
+following minimal C# GUI application, called <em>WizBang</em>. This was
+created using the free Visual Studio Express Edition, but could easily
+be created using your own development tools of choice. At Resolver
+Systems, we prefer to create form layouts using Visual Studio's
+excellent GUI designing tool, and then inherit from these generated
+classes in other editors, such as Wing, Emacs or Vi.</p>
+<p>WizBang defines a couple of simple forms, <code>MainForm</code> and <code>AddItemForm</code>:</p>
+<p><img alt="" src="../../../../../files/2010/03/wizbangs-mainform.png"></p>
+<p><img alt="" src="../../../../../files/2010/03/wizbangs-additemform.png"></p>
+<p>WizBang has a public class called <code>Program</code>, which provides public
+access to the application's forms, and handles the startup and shutdown
+of the application. During startup, it creates and shows an instance of
+the main form.</p>
+<pre class="code literal-block"><span></span><code><span class="c1">// C# scaffolding for the WizBang application.</span>
+<span class="c1">// Exposes public functions and GUI forms, for use by tests.</span>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Windows.Forms</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">WizBang</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">AllForms</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="n">MainForm</span> <span class="n">mainForm</span><span class="p">;</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="n">AddItemForm</span> <span class="n">addItemForm</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="n">ManualResetEvent</span> <span class="n">eventloopReady</span> <span class="p">=</span>
+            <span class="k">new</span> <span class="nf">ManualResetEvent</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
+
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">Start</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">AllForms</span><span class="p">.</span><span class="n">mainForm</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MainForm</span><span class="p">();</span>
+            <span class="n">AllForms</span><span class="p">.</span><span class="n">mainForm</span><span class="p">.</span><span class="n">Show</span><span class="p">();</span>
+            <span class="n">eventloopReady</span><span class="p">.</span><span class="n">Set</span><span class="p">();</span>
+            <span class="n">Application</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Stop</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Application</span><span class="p">.</span><span class="n">Exit</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+
+<p><em>Program.cs</em> and its respective forms can be compiled to a .NET
+assembly, <em>WizBang.dll</em>. When the application is run normally by users,
+<code>Program.Start()</code> is called by a second Visual Studio project,
+<em>RunWizBang</em>, which exists simply to create a minimal Windows
+executable.</p>
+<p>To run WizBang during testing, the test code references the
+<em>WizBang.dll</em> assembly, and calls <code>Program.Start()</code> itself.</p>
+<p>Importantly, a new instance of the main form is created every time
+<code>Program.Start()</code> is called. This allows many successive tests to run,
+each with their own instance of the main form, so that state changes in
+one test do not affect subsequent tests. This is important - the
+application's state should be completely reset before the start of each
+test. Take particular care to do this right if your application has
+global state, such as class-level variables, singletons, or relies on
+external systems such as the file system, the registry or databases.</p>
+<p>After the main form is created and shown, <code>Application.Run()</code> is called.
+This is a .NET method which starts the main form's event loop, making
+the form responsive to events such as form moves and resizes, control
+clicks and keyboard presses.</p>
+<p>When the test is completed, it can call the public <code>Program.Stop()</code>
+method, which safely disposes of resources and unconditionally closes
+the application by calling <code>Application.Exit()</code>. This is a .NET method
+which closes all our forms and ends their event loops.</p>
+<p><code>Program.Stop()</code> should be the same method that your application calls
+when quitting, after any user confirmations have happened. The following
+handler on the main form's <em>Closed</em> event ensures this:</p>
+<pre class="code literal-block"><span></span><code><span class="c1">// C# event hander for the main form of the WizBang application</span>
+<span class="k">private</span> <span class="k">void</span> <span class="nf">MainForm_Closed</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Program</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre>
+
+
+<h3>Invoking the SUT on a New Thread</h3>
+<p>If the test calls <code>Program.Start()</code> directly, as described above, then
+the program will run, and the main form will be displayed and
+responsive, but the test will not work. The reason is that the call to
+<code>Application.Run()</code> is synchronous - it does not return until the
+program exits. The test will be blocked, waiting for the application's
+event loop to end.</p>
+<p>The test must invoke the SUT in such a way that the program and the test
+can run together in parallel. Invoking the SUT in a new process would be
+nice for the sake of decoupling one test from the next. For our
+approach, however, the SUT has to run in the same process, to give the
+test access to the SUT's public methods and objects.</p>
+<p><code>Program.Start()</code> therefore needs to be called on a new thread, created
+by the test. The program's event loop can proceed on the new thread,
+handling events to let the application run normally. Meanwhile, our test
+can proceed on the original thread, stimulating the GUI and watching the
+application's behaviour.</p>
+<p>This threading is the reason for the <code>ManualResetEvent</code> instance in
+<em>Program.cs</em>. Manual reset events are a .NET construct to facilitate
+synchronisation between threads. In this case, the SUT calls <code>Set()</code> in
+<code>Program.Start()</code>, to tell the test thread that the main form has been
+created and shown. The test can then start to make assertions about the
+state of the main form's controls, and trigger events to manipulate
+those controls.</p>
+<p>For many activities in IronPython, there is a choice of using the
+familiar Python libraries, or the .NET equivalents. Threads are no
+exception to this - we may use the Python <em>thread</em> or <em>threading</em>
+modules, or we may use .NET's <em>Threading</em> library.</p>
+<p>Incidentally, these threads differ from those in CPython in one
+important respect - there is no Global Interpreter Lock (GIL). The GIL
+is an implementation detail of the CPython interpreter. The threads
+created by .NET will run concurrently on multiple cores, no matter which
+library we use.</p>
+<p>We implement this in a new class <code>AcceptanceTest</code>, which sits between
+<code>AT001_AddItems</code> and <code>unittest.TestCase</code> in the inheritance hierarchy:</p>
+<p><img alt="" src="../../../../../files/2010/03/test-inheritance.png"></p>
+<p>On a real project, many <code>ATxxx</code> test classes would inherit from
+<code>AcceptanceTest</code>, which looks like this:</p>
+<pre class="code literal-block"><span></span><code><span class="c1"># Python acceptance test base class</span>
+<span class="c1"># References .NET assemblies - requires IronPython</span>
+<span class="kn">import</span> <span class="nn">clr</span>
+<span class="n">clr</span><span class="o">.</span><span class="n">AddReference</span><span class="p">(</span><span class="s1">'WizBang'</span><span class="p">)</span>
+
+<span class="c1"># import from .NET namespaces - requires IronPython</span>
+<span class="kn">from</span> <span class="nn">System.Threading</span> <span class="kn">import</span> <span class="n">ApartmentState</span><span class="p">,</span> <span class="n">Thread</span><span class="p">,</span> <span class="n">ThreadStart</span>
+
+<span class="c1"># import from the Python standard library</span>
+<span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">TestCase</span>
+
+<span class="c1"># import from the .NET namespace of the system under test</span>
+<span class="kn">from</span> <span class="nn">WizBang</span> <span class="kn">import</span> <span class="n">Program</span>
+
+<span class="k">class</span> <span class="nc">AcceptanceTest</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Starts up the program under test (PUT) on a new thread at the start</span>
+<span class="sd">    of each test, and shut it down again after each test has run</span>
+<span class="sd">    """</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="n">TestCase</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">program</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eventloop</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">TestCase</span><span class="o">.</span><span class="n">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">program</span> <span class="o">=</span> <span class="n">Program</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eventloop</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">ThreadStart</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="o">.</span><span class="n">Start</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eventloop</span><span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="s2">"eventloop"</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eventloop</span><span class="o">.</span><span class="n">SetApartmentState</span><span class="p">(</span><span class="n">ApartmentState</span><span class="o">.</span><span class="n">STA</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eventloop</span><span class="o">.</span><span class="n">Start</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="o">.</span><span class="n">eventloopReady</span><span class="o">.</span><span class="n">WaitOne</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="o">.</span><span class="n">Stop</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eventloop</span><span class="o">.</span><span class="n">Join</span><span class="p">()</span>
+        <span class="n">TestCase</span><span class="o">.</span><span class="n">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</code></pre>
+
+
+<p>Python's unittest module will call AcceptanceTest's <code>setUp()</code> method
+before each test method is run, so this is an ideal place to create a
+new thread and invoke <code>Program.Start()</code> on it. The new thread is given a
+name, for ease of hypothetical future debugging. It must be set to a
+single threaded apartment state to prevent possible errors if your code
+calls any COM components, even indirectly.</p>
+<p>Once the new thread has been started, starting the WizBang application,
+<code>setUp()</code> waits for a signal from the application on the
+<code>ManualResetEvent eventloopReady</code>. This is used by the application to
+signal to the test that the main form is shown and its event loop is
+started. This prevents over-eager tests from attempting to access the
+main form before it is visible and responding to events.</p>
+<p>Similarly, <code>tearDown()</code> will be called by unittest after every test has
+completed. In this method, <code>Program.Stop()</code> is called to exit this
+instance of WizBang. <code>tearDown()</code> then waits for the SUT's event loop
+thread to end, by joining it. This is to ensure the next test is not
+affected in some way, by allowing it to start before this test has
+ended.</p>
+<p>This can all be tried out, by modifying <code>AT001_AddItems</code> to inherit from
+<code>AcceptanceTest</code> instead of <code>TestCase</code>, and adding a sleep in the body
+of the test method, before the fail:</p>
+<pre class="code literal-block"><span></span><code><span class="kn">from</span> <span class="nn">System.Threading</span> <span class="kn">import</span> <span class="n">Thread</span>
+<span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">main</span> <span class="k">as</span> <span class="n">run_test</span>
+<span class="kn">from</span> <span class="nn">AcceptanceTest</span> <span class="kn">import</span> <span class="n">AcceptanceTest</span>
+
+<span class="k">class</span> <span class="nc">AT001_AddItems</span><span class="p">(</span><span class="n">AcceptanceTest</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">test_add_address</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># 1. Alice starts WizBang. The window appears.</span>
+        <span class="c1"># etc (not yet implimented)</span>
+
+        <span class="n">Thread</span><span class="o">.</span><span class="n">Sleep</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fail</span><span class="p">(</span><span class="s2">"test not finished"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+    <span class="n">run_test</span><span class="p">()</span>
+</code></pre>
+
+
+<p>Running this test now displays the SUT's form for the duration of the
+sleep, and during that time it is responsive to move and resize events.
+Unlike the last version, this test proceeds to execute while the form is
+visible, so at the end of the sleep, the test fails, with 'test not
+finished', and the SUT is ended, closing its form.</p>
+<p>Note that the sleep triggers a runtime warning from ipy.exe on stdout,
+about sleeping threads not pumping GUI events. This makes no difference
+here, but from now on, we'll do as this warning suggests and replace
+sleeps with calls to <code>Thread.CurrentThread.Join()</code>, which behaves the
+same as sleep, but continues to process any events that arrive while
+sleeping.</p>
+<p>Now that our acceptance test is properly starting and stopping the SUT,
+we are in a position to start making assertions about the state and
+behaviour of the main form.</p>
+<h3>Asserting Correct Behaviour</h3>
+<p>We can now start coding the requirements that have been pasted into our
+acceptance test as comments. We might be tempted to implement the first
+requirement of the acceptance test as follows:</p>
+<pre class="code literal-block"><span></span><code><span class="kn">import</span> <span class="nn">clr</span>
+<span class="n">clr</span><span class="o">.</span><span class="n">AddReference</span><span class="p">(</span><span class="s1">'WizBang'</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">WizBang</span> <span class="kn">import</span> <span class="n">AllForms</span>
+
+<span class="c1"># 1. Alice starts WizBang. The window appears.</span>
+<span class="n">mainform</span> <span class="o">=</span> <span class="n">AllForms</span><span class="o">.</span><span class="n">mainform</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">mainform</span><span class="o">.</span><span class="n">Visible</span><span class="p">,</span> <span class="s1">'form should be visible'</span><span class="p">)</span>
+</code></pre>
+
+
+<p>On first glance, this appears to work - you can run this and this assert
+will pass. However, there is an insidious problem here, because it
+accesses properties of a .NET control from a thread other than the one
+it was created on. Such access can sometimes result in an
+<code>InvalidOperationException</code>, with a message along the lines of
+"Cross-thread operation not valid: Control 'mainform' accessed from a
+thread other than the thread it was created on." Worse, depending on
+circumstances, sometimes no exception is raised, but values are returned
+which may not be correctly synced to the current value of
+<code>mainform.Visible</code>.</p>
+<p>The proper way to access properties like this is to invoke such code on
+the control's own thread. All .NET controls, of which forms are a
+subclass, have an <code>Invoke()</code> method for just this purpose.</p>
+<p>Conceptually, <code>Invoke()</code> takes a callable, which is executed
+synchronously by passing it as an event to the control's event loop (or
+the event loop of its parent form). When the event loop processes this
+event, the passed callable is invoked on the event loop's thread - which
+can safely access the properties of its own controls. The return value
+from the callable is passed back by the event-handler, and then safely
+marshalled back to the invoking thread as the return value from
+<code>Invoke()</code>.</p>
+<p>In practice, the callable passed to Invoke needs to be wrapped in a
+<em>delegate</em>. Delegates are .NET's type-safe function pointers. An
+appropriate delegate can be constructed using the IronPython construct
+<code>CallTarget0</code>, which denotes a delegate taking zero arguments.</p>
+<p>The above sounds like quite a mouthful, and the code is correspondingly
+verbose:</p>
+<pre class="code literal-block"><span></span><code><span class="kn">import</span> <span class="nn">clr</span>
+<span class="n">clr</span><span class="o">.</span><span class="n">AddReference</span><span class="p">(</span><span class="s1">'IronPython'</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">IronPython.Runtime.Calls</span> <span class="kn">import</span> <span class="n">CallTarget0</span>
+
+<span class="c1"># 1. Alice starts WizBang. The window appears.</span>
+<span class="n">getVisible</span> <span class="o">=</span> <span class="n">CallTarget0</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">mainform</span><span class="o">.</span><span class="n">Visible</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">mainform</span><span class="o">.</span><span class="n">Invoke</span><span class="p">(</span><span class="n">getVisible</span><span class="p">),</span> <span class="s1">'form not visible'</span><span class="p">)</span>
+</code></pre>
+
+
+<p>Note that the location of <code>CallTarget0</code> was changed between IronPython
+versions 1 and 2. The location of the import will need to change for the
+above code to work on IronPython 1.</p>
+<p>Invoking on the control's own thread like this means that our callable
+(the <code>lambda: mainform.Visible</code>) can safely access any of mainform's
+properties and methods.</p>
+<h3>More Concise Test Code</h3>
+<p>The cross-thread invoking described above will be used frequently
+throughout our acceptance tests, whenever the properties or methods of a
+control are accessed. Such code can be abbreviated slightly, by defining
+a method on <code>AcceptanceTest</code>, to help us invoke on the main form's
+thread:</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">on_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="o">.</span><span class="n">mainform</span><span class="o">.</span><span class="n">Invoke</span><span class="p">(</span><span class="n">CallTarget0</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+</code></pre>
+
+
+<p>Which can be used to reduce the length of our assertion to:</p>
+<pre class="code literal-block"><span></span><code><span class="c1"># 1. Alice starts WizBang. The window appears.</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_gui</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">mainform</span><span class="o">.</span><span class="n">Visible</span><span class="p">),</span> <span class="s1">'form not visible'</span><span class="p">)</span>
+</code></pre>
+
+
+<p>Even so, wrapping access to each attribute individually like is still a
+little fiddly, especially if it is happening many times. To improve
+this, there is nothing to stop us wrapping larger callables instead. For
+example, consider the second user story requirement:</p>
+<pre class="code literal-block"><span></span><code><span class="c1"># 2. She sees the three default list entries:</span>
+<span class="c1">#    'one', 'two', 'three'. Nothing is selected.</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">on_gui</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">assert_list_at_startup</span><span class="p">)</span>
+</code></pre>
+
+
+<p>The function <code>assert_list_at_startup()</code>, shown below, can now have
+access to properties on all controls without using <code>Invoke()</code>, since it
+runs entirely on the GUI thread:</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">assert_list_at_startup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">wizList</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="o">.</span><span class="n">mainform</span><span class="o">.</span><span class="n">Controls</span><span class="p">[</span><span class="s1">'WizList'</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">wizList</span><span class="o">.</span><span class="n">SelectedIndex</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="s1">'should be nothing selected'</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">wizList</span><span class="o">.</span><span class="n">Items</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">'one'</span><span class="p">,</span> <span class="s1">'list[0] wrong'</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">wizList</span><span class="o">.</span><span class="n">Items</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">'two'</span><span class="p">,</span> <span class="s1">'list[1] wrong'</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">wizList</span><span class="o">.</span><span class="n">Items</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s1">'three'</span><span class="p">,</span> <span class="s1">'list[2] wrong'</span><span class="p">)</span>
+</code></pre>
+
+
+<p>If any of these assertions should fail, raised exceptions are correctly
+propagated back to our test thread. The only problem is that the stack
+trace displayed in the test output ends at <code>on_gui()</code>'s cross-thread
+invoke - i.e. it does not display the line within
+<code>assert_list_at_startup()</code> which failed. However such stack traces are
+accompanied by the error message from the failing assertion, so this is
+not usually a problem. If this turns out to be critical for your
+situation, it is possible to create your own cross-thread exception
+handler which fixes this, reconstituting the entire stack trace even
+across thread boundaries.</p>
+<p>Wrapping callables, as <code>on_gui()</code> does, is often usefully implemented as
+a decorator. This can be provided by our AcceptanceTest module:</p>
+<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">guithread</span><span class="p">(</span><span class="n">target</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">test</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">test</span><span class="o">.</span><span class="n">on_gui</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">target</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
+</code></pre>
+
+
+<p>This decorator expects to be applied to methods on <code>AcceptanceTest</code>, so
+that it can call <code>.on_gui()</code> on this method's first parameter. if the
+decorated function is not a method on AcceptanceTest, the decorator will
+not work.</p>
+<p>Functions like <code>assert_list_at_startup()</code>, above, which make frequent
+access to properties of controls, can now be decorated:</p>
+<pre class="code literal-block"><span></span><code><span class="nd">@guithread</span>
+<span class="k">def</span> <span class="nf">assert_list_at_startup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">wizList</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="o">.</span><span class="n">mainform</span><span class="o">.</span><span class="n">Controls</span><span class="p">[</span><span class="s1">'WizList'</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">wizList</span><span class="o">.</span><span class="n">SelectedIndex</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="c1"># etc</span>
+</code></pre>
+
+
+<p>Such a decorated method can then be conveniently called by the
+acceptance test:</p>
+<pre class="code literal-block"><span></span><code><span class="c1"># 2. She sees the three default list entries:</span>
+<span class="c1">#    'one', 'two', 'three'. Nothing is selected.</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assert_list_at_startup</span><span class="p">()</span>
+</code></pre>
+
+
+<p>It is tempting at this point to simply decorate our entire test method
+with <code>@guithread</code>, so that the whole thing can execute on the GUI thread
+and have unfettered access to the form's attributes and controls.
+However, this would not work since the test needs to surrender its use
+of the GUI thread from time to time, to allow the form to process all
+the events on its event loop. Without this, the form would be blocked,
+waiting for the test to finish, and would be unable to handle button
+clicks and other input. Amongst other things, this would prevent the
+form from reacting to the simulated user input that our test is about to
+provide.</p>
+<h3>Simulating User Button Clicks</h3>
+<p>The next part of our acceptance test requires that the test provides
+some input to the SUT, simulating the actions of a user:</p>
+<pre class="code literal-block"><span></span><code><span class="c1"># 3. She clicks the 'AddButton'</span>
+</code></pre>
+
+
+<p>Buttons provide a method specifically to simulate being clicked, which
+our test can use. A small utility method on <code>AcceptanceTest</code> calls this
+on the GUI thread:</p>
+<pre class="code literal-block"><span></span><code><span class="nd">@guithread</span>
+<span class="k">def</span> <span class="nf">click_button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">form</span><span class="p">,</span> <span class="n">buttonName</span><span class="p">):</span>
+    <span class="n">form</span><span class="o">.</span><span class="n">Controls</span><span class="p">[</span><span class="n">buttonName</span><span class="p">]</span><span class="o">.</span><span class="n">PerformClick</span><span class="p">()</span>
+</code></pre>
+
+
+<p>This can be used in our acceptance test:</p>
+<pre class="code literal-block"><span></span><code><span class="c1"># 3. She clicks the 'AddButton'</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">click_button</span><span class="p">(</span><span class="n">mainform</span><span class="p">,</span> <span class="s1">'addButton'</span><span class="p">)</span>
+</code></pre>
+
+
+<p>Running the test will now correctly click the <em>add item</em> button.
+However, the Wizbang application does not yet have any button click
+handlers, so the button has no effect.</p>
+<p>Up until this point, all the assertions in <code>AT001_AddItems</code> have passed
+without us having to modify WizBang the application. This is because the
+conditions being tested were already set up correctly by the design-time
+properties of the main form, or by the application's scaffolding code in
+<code>WizBang.Program</code>.</p>
+<p>When using test-driven development (TDD), this is generally not the
+case, and in fact, this is not true for our next requirement, which
+tests that the <em>add item</em> button click caused the <em>add item</em> form to
+appear. Since this is not yet implemented, when the test is run, this
+assertion will fail:</p>
+<pre class="code literal-block"><span></span><code><span class="c1"># 4. The 'Add Item' dialog appears</span>
+<span class="n">addItemForm</span> <span class="o">=</span> <span class="n">AllForms</span><span class="o">.</span><span class="n">addItemForm</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_gui</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">addItemForm</span><span class="o">.</span><span class="n">Visible</span><span class="p">),</span>
+    <span class="s1">'additem form should be visible'</span><span class="p">)</span>
+</code></pre>
+
+
+<p>To make this requirement pass, the following click handler is attached
+to the <em>Add Item</em> button on WizBang's main form. We're going to skip
+unit tests for this article, but on a real project, this is the perfect
+time to create them - after the acceptance test, but before the
+implimentation. Once they are done, the handler to make them and the
+acceptance test both pass looks like this:</p>
+<pre class="code literal-block"><span></span><code><span class="c1">// C# click handler for the AddItem button on WizBang's main form</span>
+<span class="k">private</span> <span class="k">void</span> <span class="nf">AddButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">AllForms</span><span class="p">.</span><span class="n">addItemForm</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+        <span class="n">AllForms</span><span class="p">.</span><span class="n">addItemForm</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AddItemForm</span><span class="p">();</span>
+    <span class="n">AllForms</span><span class="p">.</span><span class="n">addItemForm</span><span class="p">.</span><span class="n">Show</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre>
+
+
+<p>In a real application, this handler would need to be a little more
+robust, able to handle multiple clicks of the button, and forms which
+are disposed or already visible. However, this behaviour is not yet
+tested by our acceptance test, and therefore TDD conveniently suggests
+that for the moment, it should remain unimplemented.</p>
+<h3>Simulating User Keyboard Input</h3>
+<p>The next requirement asks that our test simulate the user typing into a
+TextBox control on the <em>add item</em> form. This can be trivially
+implemented using the techniques discussed thus far:</p>
+<pre class="code literal-block"><span></span><code><span class="c1"># 5. She types an item name into the dialog and clicks OK</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="n">addItemForm</span><span class="o">.</span><span class="n">addItem</span><span class="p">,</span> <span class="s1">'hello'</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">click_button</span><span class="p">(</span><span class="n">addItemForm</span><span class="p">,</span> <span class="s1">'okButton'</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">on_gui</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">addItemForm</span><span class="o">.</span><span class="n">Visible</span><span class="p">),</span>
+    <span class="s2">"additem form should close"</span><span class="p">)</span>
+</code></pre>
+
+
+<p>Where <code>set_text()</code> is a small helper function provided by
+<code>AcceptanceTest</code>:</p>
+<pre class="code literal-block"><span></span><code><span class="nd">@guithread</span>
+<span class="k">def</span> <span class="nf">set_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">textbox</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+    <span class="n">textbox</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="n">text</span>
+</code></pre>
+
+
+<p>Running this test will successfully populate the TextBox with the word
+"hello". However, this is a fairly poor acceptance test. If the TextBox
+control did not have focus, then a real user would have to perform extra
+steps before being able to type into it. If the TextBox was not visible
+or enabled, then a user would not be able to type into it at all. Our
+test implementation, by simply setting the <code>Text</code> attribute, performs an
+end-run around many of the restrictions that real users would face, and
+hence is not a good test of the application's behaviour as a user would
+actually experience it.</p>
+<p>The simplest way to improve on this for the moment is to explicitly test
+for these conditions:</p>
+<pre class="code literal-block"><span></span><code><span class="nd">@guithread</span>
+<span class="k">def</span> <span class="nf">set_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">textbox</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">textbox</span><span class="o">.</span><span class="n">Visible</span><span class="p">,</span> <span class="s1">'textbox should be visible'</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">textbox</span><span class="o">.</span><span class="n">Focused</span><span class="p">,</span> <span class="s1">'textbox should have focus'</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">textbox</span><span class="o">.</span><span class="n">Enabled</span><span class="p">,</span> <span class="s1">'textbox should be enabled'</span><span class="p">)</span>
+    <span class="n">textbox</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="n">text</span>
+</code></pre>
+
+
+<p>Running this test does actually reveal a genuine error - the <em>add item</em>
+form's textbox does not have focus. A real user, on running WizBang,
+would have to click or use the tab key to give the textbox focus, a step
+which our test has previously been able to obliviously skip. We would
+prefer that our user didn't have to do this either, so we add an
+<code>Activated</code> handler on the <code>AddItemForm</code>:</p>
+<pre class="code literal-block"><span></span><code><span class="c1">// C# handler for the add item form's Activated event</span>
+<span class="k">private</span> <span class="k">void</span> <span class="nf">AddItemForm_Activated</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">addItem</span><span class="p">.</span><span class="n">Focus</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre>
+
+
+<p>This makes the acceptance test pass. Implementing the next test
+requirement is straightforward:</p>
+<pre class="code literal-block"><span></span><code><span class="c1"># 6. The new item is at the end of the list, selected.</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assert_list_after_add</span><span class="p">()</span>
+</code></pre>
+
+
+<p>where:</p>
+<pre class="code literal-block"><span></span><code><span class="nd">@guithread</span>
+<span class="k">def</span> <span class="nf">assert_list_after_add</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">item_count</span><span class="p">(),</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">'should be 4 items'</span><span class="p">)</span>
+    <span class="n">wizList</span> <span class="o">=</span> <span class="n">AllForms</span><span class="o">.</span><span class="n">mainForm</span><span class="o">.</span><span class="n">Controls</span><span class="p">[</span><span class="s1">'WizList'</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">wizList</span><span class="o">.</span><span class="n">Items</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="s1">'hello'</span><span class="p">,</span> <span class="s1">'list[3] wrong'</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">wizList</span><span class="o">.</span><span class="n">SelectedIndex</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">'4th should be selected'</span><span class="p">)</span>
+</code></pre>
+
+
+<p>This is asserting that the text we typed into the <em>add item</em> form
+("hello") is added to the end of the main form's list, and is selected.
+In order to make this pass, we need a click handler for the OK button on
+the <em>add item</em> form:</p>
+<pre class="code literal-block"><span></span><code><span class="c1">// C# handler for add item form's ok button</span>
+<span class="k">private</span> <span class="k">void</span> <span class="nf">okButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">ListBox</span> <span class="n">wizList</span> <span class="p">=</span> <span class="n">AllForms</span><span class="p">.</span><span class="n">mainForm</span><span class="p">.</span><span class="n">WizList</span><span class="p">;</span>
+    <span class="n">wizList</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">addItem</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
+    <span class="n">wizList</span><span class="p">.</span><span class="n">SelectedIndex</span> <span class="p">=</span> <span class="n">wizList</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Count</span> <span class="p">-</span> <span class="m">1</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre>
+
+
+<p>Finally, the test closes down the application and ends:</p>
+<pre class="code literal-block"><span></span><code><span class="c1"># 7. She clicks the 'CloseButton'</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">click_button</span><span class="p">(</span><span class="n">mainForm</span><span class="p">,</span> <span class="s1">'closeButton'</span><span class="p">)</span>
+
+<span class="c1"># 8. The application closes</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">mainForm</span><span class="o">.</span><span class="n">IsDisposed</span><span class="p">,</span> <span class="s1">'mainform should close'</span><span class="p">)</span>
+</code></pre>
+
+
+<p>Notice how access to <code>mainForm.IsDisposed</code> is not invoked on the GUI
+thread. By this point in the test, all being well, the main form has
+been closed, and its thread will be ended. Attempting to invoke on it
+will fail. Instead, we read this property directly.</p>
+<p>To make this pass, we add a simple button click hander to the main
+form's <em>Close</em> button:</p>
+<pre class="code literal-block"><span></span><code><span class="c1">// C# handler for click event on main form's close button</span>
+<span class="k">private</span> <span class="k">void</span> <span class="nf">CloseButton_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre>
+
+
+<h3>Simulating Mouse and Keyboard Events</h3>
+<p>Directly calling controls' methods and setting their properties, as
+described above, can be problematic, since the controls will not behave
+precisely as they would when in use by a real user. Our assertions above
+that controls being manipulated are currently visible, enabled and
+focussed are a partial solution to this problem.</p>
+<p>However, there are many other possible ways in which our tests could
+unintentionally get the SUT to behave in ways that are different from
+the behaviour a real user would see. For example, a textbox could have a
+custom keypress handler, which performs input validation of some kind.
+Such a handler would not be invoked when our test simply sets the
+<code>.Text</code> property of the control, as we do above.</p>
+<p>In a worst case scenario, acceptance tests could pass even though the
+application was completely unusable by a real user.</p>
+<p>To combat this, the approach taken at Resolver Systems is to stimulate
+controls by generating fake Win32 mouse and keyboard events. This drives
+the application by, for example, actually moving the mouse cursor over a
+button, then issuing a mouse click event. Windows itself then fires the
+button click event, which ends up calling the click event handlers.</p>
+<p>This approach guarantees that our acceptance tests are only able to
+perform the same actions that a human user would be able to, and is more
+of a true 'end-to-end' test - which seems like a good principle for
+acceptance tests to aim for in general.</p>
+<p>Simulating user input in this way, however, is not without drawbacks.</p>
+<p>The acceptance test framework sends low level mouse events, using the
+win32 function <code>SendInput()</code>, from the Windows user32.dll. Calling win32
+functions from IronPython like this requires creating a C# assembly, in
+which we expose <code>SendInput()</code>, and more than a dozen similar functions,
+by declaring them as follows:</p>
+<pre class="code literal-block"><span></span><code><span class="k">using</span> <span class="nn">System.Runtime.InteropServices</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">UnmanagedCode</span>
+<span class="p">{</span>
+    <span class="c1">// extensive type declarations for type 'Input' go here</span>
+
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">User32</span>
+    <span class="p">{</span>
+<span class="na">        [DllImport("user32.dll", CharSet = CharSet.Auto)]</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">extern</span> <span class="kt">int</span> <span class="nf">SendInput</span><span class="p">(</span>
+            <span class="kt">int</span> <span class="n">nInputs</span><span class="p">,</span> <span class="k">ref</span> <span class="n">Input</span> <span class="n">pInputs</span><span class="p">,</span> <span class="kt">int</span> <span class="n">cbSize</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+
+<p>It turns out that populating the large <code>Input</code> data structure to be
+passed to this function takes another 50 lines of code. Similar
+scaffolding is required to support keyboard events. This is a
+substantial extra layer of complexity - albeit one that has proven
+reliable and stable since it was created.</p>
+<p>Having said that, the acceptance tests written this way are not
+completely reliable in operation - developers (or office cleaners)
+moving the mouse or leaning on the keyboard can interfere with the
+running tests. Sometimes, due simply to race conditions, the GUI does
+not respond as quickly as the test script expects, causing spurious
+failures. While issues such as these can be accounted for, for example
+by waiting for events or for conditions before allowing tests to
+proceed, this still causes a significant level of false positives in our
+test failures, as new tests 'bed down' and we gradually discover and
+compensate for their intermittent failure modes.</p>
+<p>Finally, it is probable that our tests run more slowly than they would
+if they invoked event handlers directly. To some extent this is
+mitigated by a distributed test runner, which splits any given test
+suite across all idle desktop machines in the office. However, there are
+many tests, some of which are stress tests, and running our full
+acceptance test suite still takes at least a couple of hours. Having it
+run faster would always be beneficial.</p>
+<p>Because both speed and reliability might be improved to some extent by
+reducing our use of keyboard and mouse events, it would be advisable to
+at least consider trying the simpler techniques described earlier in
+this article, before attempting to generate mouse and keyboard events
+like this.</p>
+<h3>Conclusion</h3>
+<p>We've seen how to construct an IronPython acceptance test for an
+application written in C#.</p>
+<p>Despite the pitfalls described in the last section, we're very happy
+with acceptance testing of our .NET desktop application at Resolver
+Systems. It has proven to be eminently feasible, and of great value to
+us. In addition to the well-known benefits of unit-testing, acceptance
+testing provides an orthogonal layer of information about the
+system-under-test.</p>
+<p>Most directly, it gives concrete, rapid feedback on the completion and
+robustness of features at a level that managers care about and users
+understand. Also, it provides thorough smoke tests to check that recent
+changes have not broken existing functionality. Perhaps most important
+of all, however, acceptance tests provide a method to precisely specify
+detailed requirements which can be easily created by users, are
+intimately understood by developers, are provably met, and are trivially
+traceable through to the final phases of the project.</p>
+<p>Given acceptance tests such as those described in this article,
+test-driven development then provides developers with the ability to
+navigate from requirements through to working code that provably fulfils
+the specification, using a series of small, discrete and well-understood
+steps. This gives projects practical tools with which to make rapid
+progress, to avoid major risks, and to meaningfully measure the
+project's current status and velocity.</p>
+<p>Readers who are interested in using IronPython, for testing or for other
+purposes, should check out <a href="http://www.ironpythoninaction.com/">IronPython in
+Action</a>, a pragmatic and densely
+informative new book by Michael Foord, which caters to both Python and
+.NET developers.</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../../categories/mswin-dev/" rel="tag">mswin-dev</a></li>
+            <li><a class="tag p-category" href="../../../../../categories/python/" rel="tag">python</a></li>
+            <li><a class="tag p-category" href="../../../../../categories/software/" rel="tag">software</a></li>
+            <li><a class="tag p-category" href="../../../../../categories/testing/" rel="tag">testing</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../15/quote-from-tim-bray/" rel="prev" title="Quote from Tim Bray">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../20/opengl-draw-api-visualised/" rel="next" title="OpenGL Draw API Visualised">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="tartley",
+            disqus_url="https://www.tartley.com/posts/2010/3/16/acceptance-testing-net-applications-using-ironpython/",
+        disqus_title="Acceptance Testing .NET Applications using IronPython",
+        disqus_identifier="cache/posts/2010/3/16/acceptance-testing-net-applications-using-ironpython.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="tartley";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer"></footer>
+</div>
+</div>
+
+            <script src="../../../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

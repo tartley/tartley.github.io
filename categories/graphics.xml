@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about graphics)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/graphics.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley@domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 13 Jun 2020 00:42:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python port of Modern 3D Graphics using OpenGL tutorial</title><link>https://www.tartley.com/posts/2011/4/20/python-port-of-modern-3d-graphics-using-opengl-tutorial.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;To my knowledge, there are three online OpenGL tutorials which stand
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about graphics)</title><link>https://www.tartley.com/</link><description>Writing programs to generate images.</description><atom:link href="https://www.tartley.com/categories/graphics.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 14 Jun 2020 04:15:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python port of Modern 3D Graphics using OpenGL tutorial</title><link>https://www.tartley.com/posts/2011/4/20/python-port-of-modern-3d-graphics-using-opengl-tutorial/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;To my knowledge, there are three online OpenGL tutorials which stand
 head and shoulders above the rest:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.arcsynthesis.org/gltut/index.html"&gt;Learning Modern 3D Graphics Programming Through
@@ -15,7 +15,7 @@ head and shoulders above the rest:&lt;/p&gt;
 &lt;p&gt;This is primarily for my own benefit, and I've only done the first two
 chapters thus far, but others may find some use in seeing the
 translation. If anyone else is interested enough to want to contribute,
-drop me a line and I'll happily grant commit rights.&lt;/p&gt;&lt;/div&gt;</description><category>graphics</category><category>python</category><guid>https://www.tartley.com/posts/2011/4/20/python-port-of-modern-3d-graphics-using-opengl-tutorial.html</guid><pubDate>Wed, 20 Apr 2011 19:23:54 GMT</pubDate></item><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/posts/2010/8/3/flying-high-opengl-from-python-part-2.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
+drop me a line and I'll happily grant commit rights.&lt;/p&gt;&lt;/div&gt;</description><category>graphics</category><category>python</category><guid>https://www.tartley.com/posts/2011/4/20/python-port-of-modern-3d-graphics-using-opengl-tutorial/</guid><pubDate>Wed, 20 Apr 2011 19:23:54 GMT</pubDate></item><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/posts/2010/8/3/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
 geometry to drive OpenGL from Python.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/flying-high-hobbyist-opengl-from-python"&gt;&lt;em&gt;&amp;lt;&amp;lt; Back to part 1&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Last time we got as far as creating some instances of our super-simple
@@ -145,7 +145,7 @@ affect the framerate? Let's investigate... How about a spherical glob of
 red blood cubes:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="A glob of red blood cubes" src="https://www.tartley.com/files/2010/08/screen-glob-red-cubes2.png"&gt;&lt;/p&gt;
 &lt;p&gt;It turns out I can get about 14,000 cubes (168,000 triangles)
-&lt;a href="https://www.tartley.com/posts/2010/8/3/flying-high-opengl-from-python-part-2.html#update"&gt;[1]&lt;/a&gt; into a single MultiShape like this before the framerate
+&lt;a href="https://www.tartley.com/posts/2010/8/3/flying-high-opengl-from-python-part-2/#update"&gt;[1]&lt;/a&gt; into a single MultiShape like this before the framerate
 starts to drop. I'm still rendering these as regular ctypes arrays, not
 OpenGL vertex buffers (I don't think my hardware supports that), so all
 the geometry is being sent needlessly over the bus to the GPU every
@@ -257,7 +257,7 @@ the best performance out of PyOpenGL. I've been back and updated the
 performance stats in this post, and hope to make another post about this
 at some point when I understand what I was doing wrong.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The demonstrated&lt;/em&gt; &lt;em&gt;code&lt;/em&gt; &lt;em&gt;is available at
-&lt;a href="https://github.com/tartley/gloopy"&gt;https://github.com/tartley/gloopy&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>graphics</category><category>presentations</category><category>python</category><guid>https://www.tartley.com/posts/2010/8/3/flying-high-opengl-from-python-part-2.html</guid><pubDate>Tue, 03 Aug 2010 15:04:43 GMT</pubDate></item><item><title>Flying High: Hobbyist OpenGL from Python</title><link>https://www.tartley.com/posts/2010/7/31/flying-high-hobbyist-opengl-from-python.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;This is a transcript-from-memory (what I wish I'd said) of the talk I
+&lt;a href="https://github.com/tartley/gloopy"&gt;https://github.com/tartley/gloopy&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>graphics</category><category>presentations</category><category>python</category><guid>https://www.tartley.com/posts/2010/8/3/flying-high-opengl-from-python-part-2/</guid><pubDate>Tue, 03 Aug 2010 15:04:43 GMT</pubDate></item><item><title>Flying High: Hobbyist OpenGL from Python</title><link>https://www.tartley.com/posts/2010/7/31/flying-high-hobbyist-opengl-from-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;This is a transcript-from-memory (what I wish I'd said) of the talk I
 just gave at &lt;a href="http://www.europython.eu/"&gt;EuroPython&lt;/a&gt; 2010, for which I
 owe a debt of gratitude to Richard Jones for his last-minute moral
 support while wrestling with projectors and refresh rates; and to the
@@ -715,7 +715,7 @@ more complex shape. This will allow us to use algorithmic means to
 produce more fun geometry, and will also help us draw more complex
 shapes, composed of many simpler shapes, without requiring several
 separate OpenGL function calls for each of the simple shapes.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.tartley.com/flying-high-opengl-from-python-part-2"&gt;On to Part 2 &amp;gt;&amp;gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>graphics</category><category>presentations</category><category>python</category><guid>https://www.tartley.com/posts/2010/7/31/flying-high-hobbyist-opengl-from-python.html</guid><pubDate>Sat, 31 Jul 2010 19:58:30 GMT</pubDate></item><item><title>Loving EuroPython Tutorials</title><link>https://www.tartley.com/posts/2010/7/19/loving-europython-tutorials.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've been loving the two days of tutorials preceding the EuroPython
+&lt;p&gt;&lt;a href="https://www.tartley.com/flying-high-opengl-from-python-part-2"&gt;On to Part 2 &amp;gt;&amp;gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>graphics</category><category>presentations</category><category>python</category><guid>https://www.tartley.com/posts/2010/7/31/flying-high-hobbyist-opengl-from-python/</guid><pubDate>Sat, 31 Jul 2010 19:58:30 GMT</pubDate></item><item><title>Loving EuroPython Tutorials</title><link>https://www.tartley.com/posts/2010/7/19/loving-europython-tutorials/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've been loving the two days of tutorials preceding the EuroPython
 conference. This morning I attended &lt;a href="http://www.mechanicalcat.net/richard/log"&gt;Richard
 Jones&lt;/a&gt;' splendid &lt;em&gt;Introduction
 to Game Programming&lt;/em&gt;. It was an absolute pleasure to be walked through
@@ -735,7 +735,7 @@ flickery animated engine thrust, that made me gurgle with delight.&lt;/p&gt;
 engine thrust, and created the asteroids themselves entirely from
 scratch in Gimp. They are just rotatable bitmaps, albeit designed in
 homage of vector graphics of yore, complete with simulated CRT glow.
-Brilliant!&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>graphics</category><category>python</category><guid>https://www.tartley.com/posts/2010/7/19/loving-europython-tutorials.html</guid><pubDate>Mon, 19 Jul 2010 05:08:53 GMT</pubDate></item><item><title>More OpenGL from Python</title><link>https://www.tartley.com/posts/2010/6/2/more-opengl-from-python.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;My talk, &lt;em&gt;Flying High : Hobbyist OpenGL from Python&lt;/em&gt;, was accepted for
+Brilliant!&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>graphics</category><category>python</category><guid>https://www.tartley.com/posts/2010/7/19/loving-europython-tutorials/</guid><pubDate>Mon, 19 Jul 2010 05:08:53 GMT</pubDate></item><item><title>More OpenGL from Python</title><link>https://www.tartley.com/posts/2010/6/2/more-opengl-from-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;My talk, &lt;em&gt;Flying High : Hobbyist OpenGL from Python&lt;/em&gt;, was accepted for
 EuroPython 2010, \o/. I don't want to reveal the best bits of my talks,
 but to whet people's appetite, this is some of what my initial
 preparation involved.&lt;/p&gt;
@@ -948,7 +948,7 @@ reasonably performant. To improve performance or startup time, you might
 want to take a look in the 'flyinghigh/populate_world.py' module and
 comment out the creation of some of the GameItem instances that are
 passed to world.add().&lt;/p&gt;
-&lt;p&gt;Feedback, ideas and questions all welcome.&lt;/p&gt;&lt;/div&gt;</description><category>graphics</category><category>python</category><guid>https://www.tartley.com/posts/2010/6/2/more-opengl-from-python.html</guid><pubDate>Wed, 02 Jun 2010 07:04:37 GMT</pubDate></item><item><title>OpenGL Draw API Visualised</title><link>https://www.tartley.com/posts/2010/3/20/opengl-draw-api-visualised.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;To help me grok and remember the OpenGL 3.3 draw API, I drew them in a
+&lt;p&gt;Feedback, ideas and questions all welcome.&lt;/p&gt;&lt;/div&gt;</description><category>graphics</category><category>python</category><guid>https://www.tartley.com/posts/2010/6/2/more-opengl-from-python/</guid><pubDate>Wed, 02 Jun 2010 07:04:37 GMT</pubDate></item><item><title>OpenGL Draw API Visualised</title><link>https://www.tartley.com/posts/2010/3/20/opengl-draw-api-visualised/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;To help me grok and remember the OpenGL 3.3 draw API, I drew them in a
 diagram. I hope this will help me see at a glance what I can and can't
 achieve with each function call.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="OpenGL array draw calls" src="https://www.tartley.com/files/2010/03/opengl-draw-calls.png"&gt;&lt;/p&gt;
@@ -960,7 +960,7 @@ values. Interestingly, the most recent additions to the API, such as
 Board has also decided that they also no longer care about the types
 either. Wise choice. :-)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Updatate:&lt;/strong&gt; I wanted to publish this diagram as SVG, but apparently
-these days that works in every browser except IE, surprise surprise.&lt;/p&gt;&lt;/div&gt;</description><category>graphics</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/2010/3/20/opengl-draw-api-visualised.html</guid><pubDate>Sat, 20 Mar 2010 18:15:54 GMT</pubDate></item><item><title>Sinister Redux</title><link>https://www.tartley.com/posts/2010/1/9/sinister-redux.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;A few months ago, &lt;a href="http://millenniumhand.co.uk/"&gt;Glenn&lt;/a&gt; and
+these days that works in every browser except IE, surprise surprise.&lt;/p&gt;&lt;/div&gt;</description><category>graphics</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/2010/3/20/opengl-draw-api-visualised/</guid><pubDate>Sat, 20 Mar 2010 18:15:54 GMT</pubDate></item><item><title>Sinister Redux</title><link>https://www.tartley.com/posts/2010/1/9/sinister-redux/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;A few months ago, &lt;a href="http://millenniumhand.co.uk/"&gt;Glenn&lt;/a&gt; and
 &lt;a href="http://www.babbageclunk.com/"&gt;Christian&lt;/a&gt; and
 &lt;a href="http://freshfoo.com"&gt;Menno&lt;/a&gt; and myself created &lt;em&gt;Sinister Ducks&lt;/em&gt;, a game
 with some quacking, for &lt;a href="http://www.pyweek.org/9/"&gt;PyWeek 9&lt;/a&gt;, a contest
@@ -1005,7 +1005,7 @@ process finished. Behold, Sinister Ducks 1.0.2:&lt;/p&gt;
 double-click, without having to mess about installing Python first. Or a
 source release, which will run on Linux or Macs, but you'll have to
 download Python yourself, and possibly install the dependencies manually
-too, sorry.&lt;/p&gt;&lt;/div&gt;</description><category>graphics</category><category>python</category><guid>https://www.tartley.com/posts/2010/1/9/sinister-redux.html</guid><pubDate>Sat, 09 Jan 2010 21:57:47 GMT</pubDate></item><item><title>Use light-opacity RGBA to fix halo artifacts along edges of textures</title><link>https://www.tartley.com/posts/2010/1/3/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This is a quick post in response to the Vimeo video post &lt;a href="http://vimeo.com/8444889"&gt;Getting Rid of
+too, sorry.&lt;/p&gt;&lt;/div&gt;</description><category>graphics</category><category>python</category><guid>https://www.tartley.com/posts/2010/1/9/sinister-redux/</guid><pubDate>Sat, 09 Jan 2010 21:57:47 GMT</pubDate></item><item><title>Use light-opacity RGBA to fix halo artifacts along edges of textures</title><link>https://www.tartley.com/posts/2010/1/3/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This is a quick post in response to the Vimeo video post &lt;a href="http://vimeo.com/8444889"&gt;Getting Rid of
 White Halos in Transparent Textures&lt;/a&gt; by
 FlashBang Studios (creators of the awesome &lt;a href="http://blurst.com/raptor-safari/"&gt;Offroad Velociraptor
 Safari&lt;/a&gt;).&lt;/p&gt;
@@ -1131,7 +1131,7 @@ problem. Since the icons on the radar on FlashBang's video don't seem to
 be scaled or rotated, maybe they could sidestep the problem by just
 displaying the icons at integer pixel co-ordinates? I don't really know
 anything about how their code works though, so I might be talking
-nonsense here.&lt;/p&gt;&lt;/div&gt;</description><category>graphics</category><guid>https://www.tartley.com/posts/2010/1/3/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures.html</guid><pubDate>Sun, 03 Jan 2010 21:33:10 GMT</pubDate></item><item><title>Opengl Shading Language</title><link>https://www.tartley.com/posts/2009/5/11/opengl-shading-language.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://www.amazon.co.uk/Opengl-Shading-Language-Randi-Rost/dp/0321334892"&gt;&lt;img alt="OpenGL Shading Language cover" src="https://www.tartley.com/files/2009/05/opengl-shading-language.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+nonsense here.&lt;/p&gt;&lt;/div&gt;</description><category>graphics</category><guid>https://www.tartley.com/posts/2010/1/3/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures/</guid><pubDate>Sun, 03 Jan 2010 21:33:10 GMT</pubDate></item><item><title>Opengl Shading Language</title><link>https://www.tartley.com/posts/2009/5/11/opengl-shading-language/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://www.amazon.co.uk/Opengl-Shading-Language-Randi-Rost/dp/0321334892"&gt;&lt;img alt="OpenGL Shading Language cover" src="https://www.tartley.com/files/2009/05/opengl-shading-language.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Randi J. Rost.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I've had a passing interest in computer graphics for years, but had
 avoided the technology of &lt;em&gt;shaders&lt;/em&gt; these last few years, thinking that
@@ -1177,7 +1177,7 @@ bloody use to me.&lt;/p&gt;
 &lt;p&gt;Rating (oh, how I love my new rating system. Check this one out:)&lt;/p&gt;
 &lt;p&gt;10/10 if you want to learn &lt;em&gt;the theory of&lt;/em&gt; how to use the OpenGL shader
 language.&lt;/p&gt;
-&lt;p&gt;0/10 if you don't.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>graphics</category><guid>https://www.tartley.com/posts/2009/5/11/opengl-shading-language.html</guid><pubDate>Tue, 12 May 2009 03:19:26 GMT</pubDate></item><item><title>Envisioning Information</title><link>https://www.tartley.com/posts/2009/4/14/envisioning-information.html</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="Envisioning Information cover" src="https://www.tartley.com/files/2009/04/envisioning_information.gif"&gt;&lt;/p&gt;
+&lt;p&gt;0/10 if you don't.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>graphics</category><guid>https://www.tartley.com/posts/2009/5/11/opengl-shading-language/</guid><pubDate>Tue, 12 May 2009 03:19:26 GMT</pubDate></item><item><title>Envisioning Information</title><link>https://www.tartley.com/posts/2009/4/14/envisioning-information/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="Envisioning Information cover" src="https://www.tartley.com/files/2009/04/envisioning_information.gif"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Edward R. Tufte&lt;/em&gt; (1990)&lt;/p&gt;
 &lt;p&gt;In much the same vein as Tufte's &lt;em&gt;The Visual Display of Quantitative
 Information&lt;/em&gt;, and displaying the same calibre of deeply incisive
@@ -1191,4 +1191,4 @@ you.&lt;/p&gt;
 &lt;p&gt;10/10 If bad diagrams make you cringe, and good ones make you laugh out
 loud.&lt;/p&gt;
 &lt;p&gt;0/10 If you only care about beauty, but not about usefulness. Or if you
-don't have eyes.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>graphics</category><guid>https://www.tartley.com/posts/2009/4/14/envisioning-information.html</guid><pubDate>Tue, 14 Apr 2009 18:07:07 GMT</pubDate></item></channel></rss>
+don't have eyes.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>graphics</category><guid>https://www.tartley.com/posts/2009/4/14/envisioning-information/</guid><pubDate>Tue, 14 Apr 2009 18:07:07 GMT</pubDate></item></channel></rss>

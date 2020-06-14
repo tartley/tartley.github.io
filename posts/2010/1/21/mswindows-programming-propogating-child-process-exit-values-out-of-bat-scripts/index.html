@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MSWindows Programming : Propogating child process exit values out of .bat scripts | tartley.com</title>
+<link href="../../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../../../rss.xml">
+<link rel="canonical" href="https://www.tartley.com/posts/2010/1/21/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/">
+<link rel="icon" href="../../../../../welcome.gif" sizes="16x16">
+<!--[if lt IE 9]><script src="../../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
+<link rel="prev" href="../../20/my-fonts-look-crap-i-blame-windows-and-ati/" title="My Fonts Look Crap. I blame Windows and ATI." type="text/html">
+<link rel="next" href="../../22/musicians-wake-up/" title="Musicians : wake up!" type="text/html">
+<meta property="og:site_name" content="tartley.com">
+<meta property="og:title" content="MSWindows Programming : Propogating child process exit values out of .">
+<meta property="og:url" content="https://www.tartley.com/posts/2010/1/21/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/">
+<meta property="og:description" content="&quot;God dammit. Why won't you just DO what I WANT you hopeless pile of
+crap!&quot;
+So goes the refrain. I think you know where I'm coming from. Yet again,
+I have ended up learning far more about crappy DOS sc">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2010-01-21T20:04:25-06:00">
+<meta property="article:tag" content="mswin-dev">
+<meta property="article:tag" content="software">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../../../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../../../../rss.xml">RSS feed</a>
+                </li>
+<li>
+<a href="../../../../../pages/about.html">About</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.md" id="sourcelink">Source</a>
+    </li>
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">MSWindows Programming : Propogating child process exit values out of .bat scripts</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2010-01-21T20:04:25-06:00" itemprop="datePublished" title="2010-01-21 20:04">2010-01-21 20:04</time></a>
+            </p>
+                <p class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/2010/1/21/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts.html">Comments</a>
+
+
+                    </p>
+<p class="sourceline"><a href="index.md" class="sourcelink">Source</a></p>
+
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>"God <em>dammit</em>. Why won't you just DO what I WANT you hopeless pile of
+crap!"</p>
+<p>So goes the refrain. I think you know where I'm coming from. Yet again,
+I have ended up learning far more about crappy DOS scripting than I ever
+wanted to know.</p>
+<p>So I'm writing a program to automate some small task on Windows. One of
+the jobs of this tool is to modify the current environment. But I don't
+know how a child process in Windows can modify the environment of it's
+parent (namely the command-line shell that invoked it.) Can it be done?</p>
+<p>So I hack a ghastly workaround: Wrap the script in a .bat file. A .bat
+file is invoked from the command-line in the same process as the shell,
+so any change it makes to the environment are made to the environment of
+the invoking shell itself. This also has the advantage that the tool can
+now be invoked by typing 'toolname', just like on other platforms, as
+opposed to 'toolname.py' or even 'python toolname.py'. So I wrap my
+Python script 'toolname.py' with a new file, 'toolname.bat', living in
+the same directory:</p>
+<pre class="code literal-block"><span></span><code><span class="p">::</span> <span class="k">first</span> <span class="n">run</span> <span class="n">our</span> <span class="n">tool</span>
+<span class="n">python</span> <span class="ss">"%~dp0%~n0.py"</span> <span class="o">%*</span>
+
+<span class="p">::</span> <span class="k">then</span> <span class="n">make</span> <span class="k">any</span> <span class="n">changes</span> <span class="k">to</span> <span class="n">the</span> <span class="n">environment</span>
+<span class="k">set</span> <span class="n">THIS</span><span class="o">=</span><span class="n">THAT</span>
+</code></pre>
+
+
+<p>The %\~dp0 and %\~n0 gobbledygook is a batch file way of referencing the
+same drive, path and filename (minus extension) as the current script,
+to which I add '.py' to run toolname.py. Easy enough.</p>
+<p>There's a minor problem: The environment changes that need to be made
+depend on what goes on inside toolname.py. So I have that Python write a
+new batch file to the temp directory, containing all the 'set' commands
+which will replace the hardcoded 'set THIS=THAT' in the above script.
+Then we call that new temporary bat file from here:</p>
+<pre class="code literal-block"><span></span><code><span class="p">::</span> <span class="k">first</span> <span class="n">run</span> <span class="n">our</span> <span class="n">tool</span>
+<span class="n">python</span> <span class="ss">"%~dp0%~n0.py"</span> <span class="o">%*</span>
+
+<span class="p">::</span> <span class="k">then</span> <span class="n">make</span> <span class="k">any</span> <span class="n">changes</span> <span class="k">to</span> <span class="n">the</span> <span class="n">environment</span>
+<span class="k">call</span> <span class="o">%</span><span class="n">Temp</span><span class="o">%</span><span class="err">\</span><span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="p">.</span><span class="n">bat</span>
+</code></pre>
+
+
+<p>Which is good enough. Presumably it will barf all over the place if run
+concurrently. But there's a more pressing problem. I need the exit value
+of this tool to be equal to the exit value from toolname.py. Currently,
+the exit value of this .bat script is always zero, because the 'call'
+command at the end is always successful.</p>
+<p>One solution I've seen used is to remember the exit value from
+toolname.py, and then use the DOS exit command to propagate this value
+out to our caller:</p>
+<pre class="code literal-block"><span></span><code><span class="p">::</span> <span class="k">first</span> <span class="n">run</span> <span class="n">our</span> <span class="n">tool</span>
+<span class="n">python</span> <span class="ss">"%~dp0%~n0.py"</span> <span class="o">%*</span>
+<span class="k">set</span> <span class="n">EXITVAL</span><span class="o">=%</span><span class="n">ERRORLEVEL</span><span class="o">%</span>
+
+<span class="p">::</span> <span class="k">then</span> <span class="n">make</span> <span class="k">any</span> <span class="n">changes</span> <span class="k">to</span> <span class="n">the</span> <span class="n">environment</span>
+<span class="k">call</span> <span class="o">%</span><span class="n">Temp</span><span class="o">%</span><span class="err">\</span><span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="p">.</span><span class="n">bat</span>
+
+<span class="n">exit</span> <span class="o">%</span><span class="n">EXITVAL</span><span class="o">%</span>
+</code></pre>
+
+
+<p>The problem with this is that 'exit' doesn't do what you think it does.
+It doesn't just stop interpreting the current script, rather it
+terminates the current interpreter, ie. the shell that is running the
+script. If you run this from a command-line, since Windows doesn't
+differentiate between a console and a shell, your window disappears.
+<em>Sigh</em>.</p>
+<p>The exit command has a fix for this: It takes a switch '/B', that causes
+it to just end the current script, rather than killing the shell. But
+now, it ignores any %EXITVAL% parameter you try to feed it, so the exit
+value of your batch file is always zero.</p>
+<p>This is what I get for developing software on Windows. Nothing ever
+works the way it ought to. It's as though everything were designed to
+oppose simple engineering idioms, like composing systems out of small,
+interchangeable parts.</p>
+<p>So here's what I finally did. The exit value of running a batch script
+can be set without using the hopelessly brain-dead 'exit' command. It is
+equal to the exit value of the last process the script invokes. So
+instead of exit, simply find a process that will exit with the value you
+need, and invoke it as the final command in your batch script:</p>
+<pre class="code literal-block"><span></span><code><span class="p">::</span> <span class="n">first</span> <span class="n">run</span> <span class="n">our</span> <span class="n">tool</span>
+<span class="n">python</span> <span class="s2">"%~dp0%~n0.py"</span><span class="p">;</span> <span class="o">%*</span>
+<span class="nb">set</span> <span class="n">EXITVAL</span><span class="o">=%</span><span class="n">ERRORLEVEL</span><span class="o">%</span>
+
+<span class="p">::</span> <span class="n">then</span> <span class="n">make</span> <span class="nb">any</span> <span class="n">changes</span> <span class="n">to</span> <span class="n">the</span> <span class="n">environment</span>
+<span class="n">call</span> <span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span>
+
+<span class="p">::</span> <span class="ow">and</span> <span class="n">propagate</span> <span class="n">the</span> <span class="nb">exit</span> <span class="n">value</span> <span class="n">to</span> <span class="n">our</span> <span class="n">invoker</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">"import sys; sys.exit(</span><span class="si">%E</span><span class="s2">XITVAL%)"</span>
+</code></pre>
+
+
+<p>Bingo. I now have a Python process that can modify the environment of
+its invoking shell, and propagates the correct exit value out of the
+wrapping DOS script. [Short bow. Applause. Roses. etc.]</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../../categories/mswin-dev/" rel="tag">mswin-dev</a></li>
+            <li><a class="tag p-category" href="../../../../../categories/software/" rel="tag">software</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../20/my-fonts-look-crap-i-blame-windows-and-ati/" rel="prev" title="My Fonts Look Crap. I blame Windows and ATI.">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../22/musicians-wake-up/" rel="next" title="Musicians : wake up!">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="tartley",
+            disqus_url="https://www.tartley.com/posts/2010/1/21/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/",
+        disqus_title="MSWindows Programming : Propogating child process exit values out of .bat scripts",
+        disqus_identifier="cache/posts/2010/1/21/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="tartley";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer"></footer>
+</div>
+</div>
+
+            <script src="../../../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>
