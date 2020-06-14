@@ -2,7 +2,7 @@
 .. title: Running Multiple Firefox Profiles on Linux
 .. slug: running-multiple-firefox-profiles
 .. date: 2018-02-21 18:40:55-06:00
-.. tags: geek,linux-dev
+.. tags: geek,linux
 .. link: 
 .. description: 
 .. type: text

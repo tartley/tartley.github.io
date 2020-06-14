@@ -2,7 +2,7 @@
 .. title: Automate Gnome keybindings
 .. slug: automate-gnome-keybindings
 .. date: 2017-10-04 20:06:47-05:00
-.. tags: linux-dev,bash
+.. tags: linux,bash
 .. link: 
 .. description: 
 .. type: text
