@@ -43,25 +43,24 @@ I'm not remotely as mentally agile as I used to be.
 
 # TODO
 
+Disqus: Import old comments? Or can we at least display them?
+
 Match old URLs?
 What even were they?
+I may have done this by enabling pretty urls.
 
 Customize theme to:
     Put tags at top of posts instead of bottom?
     Put tags at top of posts in index
 
-Get Disqus working
-
 Check what has happened to old metadata.
 Are we leaving anything behind that we care about, eg. old comments.
-
-Import old comments? Or can we at least display them?
 
 Skim through handbook for other nice features?
 * Social buttons?
 * Alt layout for that type of 'short form' post
 
-Click around a few pages to see what else does not work.
+Click around a few older pages to see what else does not work.
 
 * Embed ancient backed up tartley.com content, and link to it.
 
