@@ -9,14 +9,20 @@
 .. type: text
 -->
 
-I loved *The Structure of Scientfic Revolutions*, a 1962 book by Thomas S. Kuhn.
-This post rescues the content of a series of tweets I wrote about it in 2018.
+This post rescues content from a series of tweets I wrote in 2018.
 
-The book begins by observing that discredited scientific theories, even those
+---
+
+I loved *The Structure of Scientfic Revolutions*, a 1962 book by Thomas S.
+Kuhn. It was recommended to me as having similar impact to undergraduate
+classics like *Godel, Escher, Bach*, or *The Blind Watchmaker.* I'm going
+to just summarize the content here, so: Spoilers.
+
+It begins by observing that discredited scientific theories, even those
 which seem laughable today, such as phrenology, or the Ptolemaic model of the
 heavens, were not crackpot theories with shaky evidence. Earnest, hardworking
 practitioners refined them using sensible processes, which by the 17th century
-had converged on the modern scientific method.
+were converging on the modern scientific method.
 
 This process of "normal" science excels at the incremental refinement of
 established scientific theories. But in practice, is unable to perform the
@@ -26,10 +32,9 @@ looks to us now with hindsight.
 
 So what is the unarticulated process that is responsible for these
 transitions, i.e. how do scientific revolutions happen? We have intuitive
-visions of this happening instantaneously. An individual experiment yields
-unexpected results, contradicting an expected hypothesis, while irrefutably
-supporting an alternate theory to take its place. But in practice, this *never*
-happens.
+visions of this occurring overnight. An individual experiment yields unexpected
+results, contradicting an expected hypothesis, while irrefutably supporting an
+alternate theory to take its place. But in practice, this *never* happens.
 
 At first, and often for years or centuries, no discrepancy between theory and
 experiment is noticed, because the prevailing theories of the time have a
@@ -69,10 +74,11 @@ uncovers more of these discrepancies, or reveals them in finer detail.
 Eventually they become too prominent to ignore, and a kind of phase transition
 occurs.
 
-Suddenly, the discrepancies become judged to be a valid area of study in
-themselves, rather than just annoying aberrations. Leading practitioners devote
-themselves to the task. Foundations of the specialisation that were once
-accepted without question now come under scrutiny.
+Eventually, the discrepancies become so prominent and concerning that they
+are judged to be a valid area of study in themselves, rather than just annoying
+aberrations. Leading practitioners devote themselves to the task. Foundations
+of the specialisation that were once accepted without question now come under
+scrutiny.
 
 To partially explain the discrepancies, people introduce many incompatible
 variations on current theories. The once unified field divides into cliques,
@@ -81,8 +87,8 @@ existing theory manages to explain all observations, then this gradually
 gains mindshare, until the whole community has migrated to this new,
 incrementally improved theory.
 
-However, in cases where a truly revolutionary change is required,
-such incrementalism is insufficient, and none of the theoretical variations are
+However, in cases where a truly revolutionary change is required, such
+incrementalism is insufficient, and none of the theoretical variations are
 fully successful in explaining all observations. The factions' differing
 underlying assumptions give them no common ground upon which to arbitrate their
 differences, so their debates are irreconcilable.
@@ -92,8 +98,8 @@ established scientific theories have taken hold.
 
 All is chaos, with different groups supporting different ideas, agreeing on
 nothing. The field is in turmoil, its practitioners in genuine emotional
-distress. Their personal identities, as a practitioner of the field and a
-scientist, are brought into question. What does it mean to be a practitioner
+distress. Their personal identities, as practitioners of the field, and as
+scientists, are brought into question. What does it mean to be a practitioner
 when nobody appears to know what the field even is? Is what we do even
 *science* at all? A crisis has arrived.
 
@@ -136,22 +142,23 @@ those entering from adjacent fields, will introduce strikingly different sets
 of theories. Occasionally, one of these will succeed in explaining all the
 observations, but in order to do so, it requires incommensurable changes in the
 underlying philosophy of the field, from the axiomatic definitions, to the set
-of questions that are valid to ask. One can no longer ask "What happens if you
-fall off?" a spherical Earth.
+of questions that are valid to ask. One can no longer ask, of a spherical
+Earth, "What happens if you fall off?"
 
 Notably, many revolutionary changes are not an unalloyed good. Gains in
 explicative power in one area are often balanced by losses elsewhere.
 
 As in evolution, the new theory is not necessarily more *correct*, so much as
 it is a better fit for the current circumstances, i.e. providing greater
-predictive power in an area that is pertinent at that moment. Maybe scientific
+predictive power in an area that is currently pertinent. Maybe scientific
 progress is more obviously useful to society in that area, or instruments are
-only capable of making measurements in that area.
+more capable of making measurements in that area.
 
-Nobody understands this trade-off more deeply than the field's most invested
-practitioners, who feel the losses of losing the old model most keenly, and
-therefore may resist the new paradigm for the remainder of their careers. The
-new paradigm will not achieve total dominance until the field is populated by a
-whole new generation. I am reminded of the dark priesthood of command-line
-programmers.
+Nobody understands this trade-off more deeply than the field's most
+invested practitioners, who feel the losses of losing the old model most
+keenly, and therefore may resist the new paradigm for the remainder of their
+careers. The new paradigm will not achieve total dominance until the field is
+populated by a whole new generation.
+
+I am reminded of the dark priesthood of command-line programmers.
 
