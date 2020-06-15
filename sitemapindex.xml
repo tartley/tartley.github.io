@@ -14,6 +14,10 @@
   <lastmod>2020-06-14T04:16:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://www.tartley.com/categories/book.xml</loc>
+  <lastmod>2020-06-15T20:25:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://www.tartley.com/categories/books.xml</loc>
   <lastmod>2020-06-14T04:15:00Z</lastmod>
  </sitemap>
@@ -48,10 +52,6 @@
  <sitemap>
   <loc>https://www.tartley.com/categories/fonts.xml</loc>
   <lastmod>2020-06-14T04:15:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/game.xml</loc>
-  <lastmod>2020-06-14T04:12:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/gamedev.xml</loc>
@@ -102,10 +102,6 @@
   <lastmod>2020-06-14T04:15:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/linux-dev.xml</loc>
-  <lastmod>2020-06-14T04:17:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/linux.xml</loc>
   <lastmod>2020-06-14T04:17:00Z</lastmod>
  </sitemap>
@@ -147,7 +143,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/politics.xml</loc>
-  <lastmod>2020-06-14T04:15:00Z</lastmod>
+  <lastmod>2020-06-15T20:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/presentations.xml</loc>
@@ -166,10 +162,6 @@
   <lastmod>2020-06-14T04:21:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/python2.xml</loc>
-  <lastmod>2020-06-14T04:20:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/refried.xml</loc>
   <lastmod>2020-06-14T04:15:00Z</lastmod>
  </sitemap>
@@ -184,6 +176,10 @@
  <sitemap>
   <loc>https://www.tartley.com/categories/science-fiction.xml</loc>
   <lastmod>2020-06-14T04:15:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://www.tartley.com/categories/science.xml</loc>
+  <lastmod>2020-06-15T20:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/shows.xml</loc>
@@ -234,11 +230,15 @@
   <lastmod>2020-06-14T04:15:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://www.tartley.com/categories/writing.xml</loc>
+  <lastmod>2020-06-15T20:25:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://www.tartley.com/rss.xml</loc>
-  <lastmod>2020-06-14T04:21:00Z</lastmod>
+  <lastmod>2020-06-15T20:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/sitemap.xml</loc>
-  <lastmod>2020-06-14T04:33:00Z</lastmod>
+  <lastmod>2020-06-15T20:25:00Z</lastmod>
  </sitemap>
 </sitemapindex>
