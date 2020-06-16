@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about science)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/science.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 15 Jun 2020 21:26:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Structure of Scientific Revolutions</title><link>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This post rescues content from a series of tweets I wrote in 2018.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about science)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/science.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 16 Jun 2020 15:49:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Structure of Scientific Revolutions</title><link>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This post rescues content from a series of tweets I wrote in 2018.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;I loved &lt;em&gt;The Structure of Scientfic Revolutions&lt;/em&gt;, a 1962 book by Thomas S.
 Kuhn. It was recommended to me as having similar impact to undergraduate
@@ -18,7 +18,7 @@ looks to us now with hindsight.&lt;/p&gt;
 &lt;p&gt;So what is the unarticulated process that is responsible for these
 transitions, i.e. how do scientific revolutions happen? We have intuitive
 visions of this occurring overnight. An individual experiment yields unexpected
-results, contradicting an expected hypothesis, while irrefutably supporting an
+results, contradicting conventional theory, while irrefutably supporting an
 alternate theory to take its place. But in practice, this &lt;em&gt;never&lt;/em&gt; happens.&lt;/p&gt;
 &lt;p&gt;At first, and often for years or centuries, no discrepancy between theory and
 experiment is noticed, because the prevailing theories of the time have a
@@ -44,7 +44,7 @@ revolution of theory can overturn conventional understanding, the stage
 must be set, the community prepared.&lt;/p&gt;
 &lt;p&gt;The process begins as the incremental advances of "normal" science gradually
 increase the scope and precision of accepted theories. Until this point,
-measurements in which experiment does not confirm to theory are either ignored
+measurements in which experiment does not conform to theory are either ignored
 as erroneous artifacts, or are dismissed as indicative of some separate,
 unknown phenomena. They are never interpreted to mean prevailing theory is
 wrong.&lt;/p&gt;
@@ -59,32 +59,33 @@ of the specialisation that were once accepted without question now come under
 scrutiny.&lt;/p&gt;
 &lt;p&gt;To partially explain the discrepancies, people introduce many incompatible
 variations on current theories. The once unified field divides into cliques,
-supporting different theoretical variations. If one of these variations on
-existing theory manages to explain all observations, then this gradually
-gains mindshare, until the whole community has migrated to this new,
-incrementally improved theory.&lt;/p&gt;
+supporting different theoretical variations. The field, formerly a united mass,
+calves into fragments.&lt;/p&gt;
+&lt;p&gt;If one of these variations on existing theory manages to explain all
+observations, then this gradually gains mindshare, until the whole community
+has migrated to this new, incrementally improved theory.&lt;/p&gt;
 &lt;p&gt;However, in cases where a truly revolutionary change is required, such
 incrementalism is insufficient, and none of the theoretical variations are
 fully successful in explaining all observations. The factions' differing
 underlying assumptions give them no common ground upon which to arbitrate their
-differences, so their debates are irreconcilable.&lt;/p&gt;
+differences, so their debates are irreconcilable. The fragments are melting,
+into a churning liquid of disagreement.&lt;/p&gt;
 &lt;p&gt;This state is notably similar to the state of a nascent field before any
 established scientific theories have taken hold.&lt;/p&gt;
 &lt;p&gt;All is chaos, with different groups supporting different ideas, agreeing on
 nothing. The field is in turmoil, its practitioners in genuine emotional
-distress. Their personal identities, as practitioners of the field, and as
-scientists, are brought into question. What does it mean to be a practitioner
-when nobody appears to know what the field even is? Is what we do even
-&lt;em&gt;science&lt;/em&gt; at all? A crisis has arrived.&lt;/p&gt;
+distress. Their personal identities are undermined. What does it mean to be a
+practitioner when nobody can agree on what the field even is? Is what we do
+even &lt;em&gt;science&lt;/em&gt; at all? A crisis has arrived. We are at boiling point.&lt;/p&gt;
 &lt;p&gt;Kuhn compares this to individuals in psychological experiments, given cunningly
 contradictory sensual stimuli. At first they don't notice anything wrong about
 a brief glimpse of a playing card showing a red king of clubs. As the length of
 their glimpse expands, and the stimulation becomes more intrusive, the subject
 starts to hesitate, and stumble on words. Suddenly it impinges on their
 consciousness, and they cry out, distressed, uncertain of even basic facts. "My
-God! What did I see? Are they always red? What's happening here?"&lt;/p&gt;
+God! What did I see? Are clubs always red? What's happening here?"&lt;/p&gt;
 &lt;p&gt;Kuhn also compares scientific revolutions to their social and political
-counterparts, in this chillingly familiar sounding passage:&lt;/p&gt;
+counterparts, in a chillingly familiar passage:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;"Political revolutions aim to change political institutions in ways that
 those institutions themselves prohibit. Their success therefore necessitates
@@ -100,15 +101,16 @@ camps or parties, one seeking to defend the old institutional constellation,
 others seeking to institute some new one.&lt;/p&gt;
 &lt;p&gt;Once that polarization has occurred, &lt;em&gt;political recourse fails&lt;/em&gt;. Because
 they differ about the political matrix within which political change is to be
-achieved and evaluated, and acknowledge no supra-institutional framework for
-adjudication of differences, the parties to a revolutionary conflict must
+achieved and evaluated, and acknowledge no common supra-institutional framework
+for adjudication of differences, the parties to a revolutionary conflict must
 finally resort to the techniques of mass persuasion, often including force."&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;So, finally, the stage has been set. The field is ready for a genuine
-revolution to be introduced. The &lt;em&gt;boldest&lt;/em&gt; practitioners, often those with
-least invested in the previous status quo, such as the relatively young, or
-those entering from adjacent fields, will introduce strikingly different sets
-of theories. Occasionally, one of these will succeed in explaining all the
+&lt;p&gt;At any point, the &lt;em&gt;boldest&lt;/em&gt; practitioners, often those with least invested in
+the previous status quo, such as the relatively young, or those entering from
+adjacent fields, will introduce strikingly different sets of theories. But only
+now that the stage is set, amongst such distressing chaos, is the community
+ready to entertain truly revolutionary ideas.&lt;/p&gt;
+&lt;p&gt;Occasionally, one of these new ideas will succeed in explaining all the
 observations, but in order to do so, it requires incommensurable changes in the
 underlying philosophy of the field, from the axiomatic definitions, to the set
 of questions that are valid to ask. One can no longer ask, of a spherical
@@ -119,10 +121,15 @@ explicative power in one area are often balanced by losses elsewhere.&lt;/p&gt;
 it is a better fit for the current circumstances, i.e. providing greater
 predictive power in an area that is currently pertinent. Maybe scientific
 progress is more obviously useful to society in that area, or instruments are
-more capable of making measurements in that area.&lt;/p&gt;
+more capable of making measurements in that area. The two often coincide,
+since influences are are unable to detect or manipulate are also unlikely to
+be of much direct use to society. So as the social and technological context
+evolves, so does the relative fitness of potential competing paradigms.&lt;/p&gt;
 &lt;p&gt;Nobody understands this trade-off more deeply than the field's most
 invested practitioners, who feel the losses of losing the old model most
 keenly, and therefore may resist the new paradigm for the remainder of their
 careers. The new paradigm will not achieve total dominance until the field is
 populated by a whole new generation.&lt;/p&gt;
-&lt;p&gt;I am reminded of the dark priesthood of command-line programmers.&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>politics</category><category>science</category><category>writing</category><guid>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</guid><pubDate>Sun, 14 Jun 2020 14:02:22 GMT</pubDate></item></channel></rss>
+&lt;p&gt;I am reminded of the dark priesthood of command-line programmers, although
+I note with no little joy that our merry band includes some of the best and
+brightest of the next generation (as judged by my own paradigm's criteria.)&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>politics</category><category>science</category><category>writing</category><guid>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</guid><pubDate>Sun, 14 Jun 2020 14:02:22 GMT</pubDate></item></channel></rss>
