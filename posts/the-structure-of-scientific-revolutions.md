@@ -33,7 +33,7 @@ looks to us now with hindsight.
 So what is the unarticulated process that is responsible for these
 transitions, i.e. how do scientific revolutions happen? We have intuitive
 visions of this occurring overnight. An individual experiment yields unexpected
-results, contradicting an expected hypothesis, while irrefutably supporting an
+results, contradicting conventional theory, while irrefutably supporting an
 alternate theory to take its place. But in practice, this *never* happens.
 
 At first, and often for years or centuries, no discrepancy between theory and
@@ -64,7 +64,7 @@ must be set, the community prepared.
 
 The process begins as the incremental advances of "normal" science gradually
 increase the scope and precision of accepted theories. Until this point,
-measurements in which experiment does not confirm to theory are either ignored
+measurements in which experiment does not conform to theory are either ignored
 as erroneous artifacts, or are dismissed as indicative of some separate,
 unknown phenomena. They are never interpreted to mean prevailing theory is
 wrong.
@@ -82,26 +82,28 @@ scrutiny.
 
 To partially explain the discrepancies, people introduce many incompatible
 variations on current theories. The once unified field divides into cliques,
-supporting different theoretical variations. If one of these variations on
-existing theory manages to explain all observations, then this gradually
-gains mindshare, until the whole community has migrated to this new,
-incrementally improved theory.
+supporting different theoretical variations. The field, formerly a united mass,
+calves into fragments.
+
+If one of these variations on existing theory manages to explain all
+observations, then this gradually gains mindshare, until the whole community
+has migrated to this new, incrementally improved theory.
 
 However, in cases where a truly revolutionary change is required, such
 incrementalism is insufficient, and none of the theoretical variations are
 fully successful in explaining all observations. The factions' differing
 underlying assumptions give them no common ground upon which to arbitrate their
-differences, so their debates are irreconcilable.
+differences, so their debates are irreconcilable. The fragments are melting,
+into a churning liquid of disagreement.
 
 This state is notably similar to the state of a nascent field before any
 established scientific theories have taken hold.
 
 All is chaos, with different groups supporting different ideas, agreeing on
 nothing. The field is in turmoil, its practitioners in genuine emotional
-distress. Their personal identities, as practitioners of the field, and as
-scientists, are brought into question. What does it mean to be a practitioner
-when nobody appears to know what the field even is? Is what we do even
-*science* at all? A crisis has arrived.
+distress. Their personal identities are undermined. What does it mean to be a
+practitioner when nobody can agree on what the field even is? Is what we do
+even *science* at all? A crisis has arrived. We are at boiling point.
 
 Kuhn compares this to individuals in psychological experiments, given cunningly
 contradictory sensual stimuli. At first they don't notice anything wrong about
@@ -109,10 +111,10 @@ a brief glimpse of a playing card showing a red king of clubs. As the length of
 their glimpse expands, and the stimulation becomes more intrusive, the subject
 starts to hesitate, and stumble on words. Suddenly it impinges on their
 consciousness, and they cry out, distressed, uncertain of even basic facts. "My
-God! What did I see? Are they always red? What's happening here?"
+God! What did I see? Are clubs always red? What's happening here?"
 
 Kuhn also compares scientific revolutions to their social and political
-counterparts, in this chillingly familiar sounding passage:
+counterparts, in a chillingly familiar passage:
 
 > "Political revolutions aim to change political institutions in ways that
 those institutions themselves prohibit. Their success therefore necessitates
@@ -131,15 +133,17 @@ others seeking to institute some new one.
 >
 > Once that polarization has occurred, *political recourse fails*. Because
 they differ about the political matrix within which political change is to be
-achieved and evaluated, and acknowledge no supra-institutional framework for
-adjudication of differences, the parties to a revolutionary conflict must
+achieved and evaluated, and acknowledge no common supra-institutional framework
+for adjudication of differences, the parties to a revolutionary conflict must
 finally resort to the techniques of mass persuasion, often including force."
 
-So, finally, the stage has been set. The field is ready for a genuine
-revolution to be introduced. The *boldest* practitioners, often those with
-least invested in the previous status quo, such as the relatively young, or
-those entering from adjacent fields, will introduce strikingly different sets
-of theories. Occasionally, one of these will succeed in explaining all the
+At any point, the *boldest* practitioners, often those with least invested in
+the previous status quo, such as the relatively young, or those entering from
+adjacent fields, will introduce strikingly different sets of theories. But only
+now that the stage is set, amongst such distressing chaos, is the community
+ready to entertain truly revolutionary ideas.
+
+Occasionally, one of these new ideas will succeed in explaining all the
 observations, but in order to do so, it requires incommensurable changes in the
 underlying philosophy of the field, from the axiomatic definitions, to the set
 of questions that are valid to ask. One can no longer ask, of a spherical
@@ -152,7 +156,10 @@ As in evolution, the new theory is not necessarily more *correct*, so much as
 it is a better fit for the current circumstances, i.e. providing greater
 predictive power in an area that is currently pertinent. Maybe scientific
 progress is more obviously useful to society in that area, or instruments are
-more capable of making measurements in that area.
+more capable of making measurements in that area. The two often coincide,
+since influences are are unable to detect or manipulate are also unlikely to
+be of much direct use to society. So as the social and technological context
+evolves, so does the relative fitness of potential competing paradigms.
 
 Nobody understands this trade-off more deeply than the field's most
 invested practitioners, who feel the losses of losing the old model most
@@ -160,5 +167,7 @@ keenly, and therefore may resist the new paradigm for the remainder of their
 careers. The new paradigm will not achieve total dominance until the field is
 populated by a whole new generation.
 
-I am reminded of the dark priesthood of command-line programmers.
+I am reminded of the dark priesthood of command-line programmers, although
+I note with no little joy that our merry band includes some of the best and
+brightest of the next generation (as judged by my own paradigm's criteria.)
 

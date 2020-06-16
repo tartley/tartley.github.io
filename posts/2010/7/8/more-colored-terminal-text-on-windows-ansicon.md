@@ -2,7 +2,7 @@
 .. title: More Colored Terminal text on Windows: AnsiCon
 .. slug: more-colored-terminal-text-on-windows-ansicon
 .. date: 2010-07-08 14:07:09-05:00
-.. tags: mswin-dev
+.. tags: mswin-dev,terminal
 .. link: 
 .. description: 
 .. type: text
