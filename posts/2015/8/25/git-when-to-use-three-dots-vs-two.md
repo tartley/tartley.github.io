@@ -2,7 +2,7 @@
 .. title: Git: When to use three dots vs two
 .. slug: git-when-to-use-three-dots-vs-two
 .. date: 2015-08-25 11:51:30-05:00
-.. tags: geek,version control,git
+.. tags: geek,version-control,git
 .. link: 
 .. description: 
 .. type: text
