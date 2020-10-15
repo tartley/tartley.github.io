@@ -3,7 +3,52 @@
 Uses Nikola static site generator.
 See Makefile for some handy commands.
 
+# TODO
+
+Urls used to look like:
+
+    https://www.tartley.com/dina-as-otf
+
+but are now like:
+
+    https://www.tartley.com/posts/2020/2/5/dina-as-otf/
+
+
+Disqus: Import old comments? Or can we at least display them?
+
+Match old URLs?
+What even were they?
+I may have done this by enabling pretty urls.
+
+Customize theme to:
+    Put tags at top of posts instead of bottom?
+    Put tags at top of posts in index
+
+Check what has happened to old metadata.
+Are we leaving anything behind that we care about, eg. old comments.
+
+Skim through handbook for other nice features?
+* Social buttons?
+* Alt layout for that type of 'short form' post
+
+Click around a few older pages to see what else does not work.
+
+* Embed ancient backed up tartley.com content, and link to it.
+
+# some commands
+
+Delete all category lines:
+
+    find posts -type f | xargs sed -i '/^\.\. category:/d'
+
+Make all tags lower case
+
+    find posts -type f | xargs sed -i 's/^\.\. tags: .*/\L&/g'
+
+
 # IDEAS
+
+
 
 ## Political
 
@@ -40,37 +85,4 @@ I'm not remotely as mentally agile as I used to be.
 * I'm forgetful.
 * I lack constancy of purpose. Can I enumerate the aspects of intelligence, and
   see which ones are most affected? Are they quantifiable? Improvable?
-
-# TODO
-
-Disqus: Import old comments? Or can we at least display them?
-
-Match old URLs?
-What even were they?
-I may have done this by enabling pretty urls.
-
-Customize theme to:
-    Put tags at top of posts instead of bottom?
-    Put tags at top of posts in index
-
-Check what has happened to old metadata.
-Are we leaving anything behind that we care about, eg. old comments.
-
-Skim through handbook for other nice features?
-* Social buttons?
-* Alt layout for that type of 'short form' post
-
-Click around a few older pages to see what else does not work.
-
-* Embed ancient backed up tartley.com content, and link to it.
-
-# some commands
-
-Delete all category lines:
-
-    find posts -type f | xargs sed -i '/^\.\. category:/d'
-
-Make all tags lower case
-
-    find posts -type f | xargs sed -i 's/^\.\. tags: .*/\L&/g'
 
