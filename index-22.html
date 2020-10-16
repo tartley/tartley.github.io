@@ -113,18 +113,16 @@ Rochester, Minnesota, USA.</p>
 <p>I endlessly misremember when to use '...' in git versus '..'. That ends
 today:</p>
 <p>To see the commits or diffs introduced by a branch (the filled circles ●):</p>
-<pre class="code literal-block"><span></span><code>     f
+<pre class="code literal-block">     f
     +●  m           git log m..f
      |  ○
     +●  |           git diff m...f
       \ ○
        \|
         ○
-</code></pre>
-
-
+</pre>
 <p>To see the commits or diffs between the tip of one branch and another:</p>
-<pre class="code literal-block"><span></span><code>     f              git log m...f
+<pre class="code literal-block">     f              git log m...f
     +●  m           All commits look the same,
      |  ●-          unless you use --left-right, which
     +●  |           shows where each commit comes from.
@@ -132,11 +130,9 @@ today:</p>
        \|           git diff m..f
         ○           '-' commits are shown inverted,
                      i.e. additions as deletions.
-</code></pre>
-
-
+</pre>
 <p>To see the commits from 'f' back to the beginning of time:</p>
-<pre class="code literal-block"><span></span><code>     f
+<pre class="code literal-block">     f
     +●  m           git log f
      |  ○
     +●  |           (diffs back to start of time are just
@@ -145,27 +141,19 @@ today:</p>
        +●
         |
        +●
-</code></pre>
-
-
+</pre>
 <p>Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
 above that you almost always want:</p>
-<pre class="code literal-block"><span></span><code>git diff m...f
-</code></pre>
-
-
+<pre class="code literal-block">git diff m...f
+</pre>
 <p>is the same as</p>
-<pre class="code literal-block"><span></span><code>git checkout f
+<pre class="code literal-block">git checkout f
 git diff m...
-</code></pre>
-
-
+</pre>
 <p>or</p>
-<pre class="code literal-block"><span></span><code>git checkout m
+<pre class="code literal-block">git checkout m
 git diff ...f
-</code></pre>
-
-
+</pre>
 <p>Is there a word for unicode ascii art?</p>
 </div>
     </div>
