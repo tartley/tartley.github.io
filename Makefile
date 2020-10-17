@@ -45,6 +45,8 @@ serve: ## Build site, start server, auto rebuild changes.
 .PHONY: serve
 
 deploy: ## Deploy site to Github
+	. ${ve}/bin/activate && \
 	${nikola} github_deploy -m "Automatic commit"
+
 .PHONY: deploy
 
