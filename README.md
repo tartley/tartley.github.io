@@ -5,17 +5,27 @@ See Makefile for some handy commands.
 
 # TODO
 
-move "structure of scientific revolution" into posts/2020
-
-Post ideas:
-* TIL: git regular lightweight tags vs annotated tags.
-  git push --tags vs --follow-tags.
-  Re-use existing write up on colorama README-hacking
-
 Urls used to look like:
     https://www.tartley.com/dina-as-otf
 but are now like:
     https://www.tartley.com/posts/2020/2/5/dina-as-otf/
+
+    [x] change the POSTS and PAGES config
+    [x] change the config I just changed yesterday, to put new posts
+        not in a year subdir
+    [x] move all posts markdown to not be in year/month/date subdirs
+    [x] test rendering
+    [x] test creating a new post
+
+Resend tweets of last two posts, and challenge to Glenn
+
+Change colorama docs to just reference the git tags post.
+
+Inter-post links. See
+https://www.getnikola.com/path-handlers.html
+
+Check my entry in planet python. Does it match my current:
+http://localhost:8000/categories/python.xml
 
 What's up with the crazy dual branches model?
 See https://getnikola.com/handbook.html#deploying-to-github

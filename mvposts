@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+for year in $(ls -1d posts/????); do
+    echo $year
+    for month in $(ls -1d $year/*); do
+        echo '  '$month
+        for day in $(ls -1d $month/*); do
+            echo '    '$day
+            for post in $(ls -1d $day/*); do
+                echo '      '$post
+                mv -n $post posts
+            done
+            rmdir $day
+        done
+        rmdir $month
+    done
+    rmdir $year
+done
+
+
