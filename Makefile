@@ -36,15 +36,15 @@ bootstrap: ${ve} ## Create venv & pip install packages from requirements.txt.
 
 nikola=${ve}/bin/nikola
 
-new-post:
+new-post: ## Create a new post
 	${nikola} new_post -f markdown
 .PHONY: new-post
 
-serve:  ## Build site, start server, auto rebuild changes.
+serve: ## Build site, start server, auto rebuild changes.
 	${nikola} auto
 .PHONY: serve
 
-deploy:
+deploy: ## Deploy site to github
 	${nikola} github_deploy -m "Automatic commit"
 .PHONY: deploy
 
