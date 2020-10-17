@@ -2,7 +2,7 @@
 .. title: TIL: Git Annotated Tags
 .. slug: til-git-annotated-tags
 .. date: 2020-10-17 00:40:24 UTC-05:00
-.. tags: git,version-control,tags
+.. tags: til,git,version-control,tags
 .. category: 
 .. link: 
 .. description: 
