@@ -16,3 +16,6 @@ variation on "percent", to find that this is one of the many spellings of
 a real thing. Rarely used in English, but more common in other European
 languages.
 
+Now that I see the symbol, I remember seeing it as a child, on an old
+typewriter that my Grandfather used. What's old is new.
+
