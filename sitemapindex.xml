@@ -34,6 +34,10 @@
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://www.tartley.com/categories/english.xml</loc>
+  <lastmod>2020-10-17T05:34:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://www.tartley.com/categories/exhibits.xml</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </sitemap>
@@ -67,7 +71,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/git.xml</loc>
-  <lastmod>2020-10-16T00:44:00Z</lastmod>
+  <lastmod>2020-10-17T05:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/graphics.xml</loc>
@@ -96,6 +100,10 @@
  <sitemap>
   <loc>https://www.tartley.com/categories/linux.xml</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://www.tartley.com/categories/math.xml</loc>
+  <lastmod>2020-10-17T05:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/media.xml</loc>
@@ -182,6 +190,10 @@
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://www.tartley.com/categories/tags.xml</loc>
+  <lastmod>2020-10-17T05:49:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://www.tartley.com/categories/tartleycom.xml</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </sitemap>
@@ -192,6 +204,10 @@
  <sitemap>
   <loc>https://www.tartley.com/categories/testing.xml</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://www.tartley.com/categories/til.xml</loc>
+  <lastmod>2020-10-17T05:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/todo.xml</loc>
@@ -207,7 +223,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/version-control.xml</loc>
-  <lastmod>2020-10-16T00:44:00Z</lastmod>
+  <lastmod>2020-10-17T05:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/videogame.xml</loc>
@@ -231,10 +247,10 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/rss.xml</loc>
-  <lastmod>2020-10-16T00:44:00Z</lastmod>
+  <lastmod>2020-10-17T05:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/sitemap.xml</loc>
-  <lastmod>2020-10-16T00:44:00Z</lastmod>
+  <lastmod>2020-10-17T05:49:00Z</lastmod>
  </sitemap>
 </sitemapindex>

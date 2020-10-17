@@ -11,11 +11,11 @@
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2020-10-16T00:44:00Z</lastmod>
+  <lastmod>2020-10-17T05:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/</loc>
-  <lastmod>2020-10-16T00:44:00Z</lastmod>
+  <lastmod>2020-10-17T05:43:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/bash/</loc>
@@ -44,6 +44,10 @@
  <url>
   <loc>https://www.tartley.com/categories/ds/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/english/</loc>
+  <lastmod>2020-10-17T05:32:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/exhibits/</loc>
@@ -108,6 +112,10 @@
  <url>
   <loc>https://www.tartley.com/categories/linux/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/math/</loc>
+  <lastmod>2020-10-17T05:32:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/media/</loc>
@@ -194,6 +202,10 @@
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/categories/tags/</loc>
+  <lastmod>2020-10-17T05:43:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/categories/tartleycom/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
@@ -204,6 +216,10 @@
  <url>
   <loc>https://www.tartley.com/categories/testing/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/til/</loc>
+  <lastmod>2020-10-17T05:32:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/todo/</loc>
@@ -303,7 +319,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-23.html</loc>
-  <lastmod>2020-10-16T00:44:00Z</lastmod>
+  <lastmod>2020-10-17T05:40:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-3.html</loc>
@@ -1264,6 +1280,14 @@
  <url>
   <loc>https://www.tartley.com/posts/2020/6/9/format-python-snippets-with-black/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/2020/til-git-annotated-tags/</loc>
+  <lastmod>2020-10-17T05:40:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/2020/til-per-mille/</loc>
+  <lastmod>2020-10-17T05:32:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</loc>
