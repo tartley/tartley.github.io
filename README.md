@@ -5,20 +5,12 @@ See Makefile for some handy commands.
 
 # TODO
 
-A big dina image
-
-Sort out 'make post'
-    quartile- it should use -e to fire up edit
-    - does it need to add an author?
-    - it should take a post title
-      Does that create the slug used for filename?
-    - should it create tags, or do we just add those in the editor?
+move "structure of scientific revolution" into posts/2020
 
 Post ideas:
 * TIL: git regular lightweight tags vs annotated tags.
   git push --tags vs --follow-tags.
   Re-use existing write up on colorama README-hacking
-* TIL: per-mille
 
 Urls used to look like:
     https://www.tartley.com/dina-as-otf
@@ -31,6 +23,7 @@ What happens if you set GITHUB_SOURCE_BRANCH to master?
 
 Can tags have a hierarchy?
 See https://www.getnikola.com/handbook.html#post-taxonomy
+If not, consider using categories.
 
 Customize theme to:
     Put tags at top of posts instead of bottom?
