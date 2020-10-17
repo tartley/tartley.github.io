@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mocks Aren't (Just) Stubs | tartley.com</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="https://www.tartley.com/posts/mocks-arent-just-stubs/">
+<link rel="icon" href="../../welcome.gif" sizes="16x16">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
+<link rel="prev" href="../minerva-metastasis/" title="Minerva: Metastasis" type="text/html">
+<link rel="next" href="../children-of-men/" title="Children of Men" type="text/html">
+<meta property="og:site_name" content="tartley.com">
+<meta property="og:title" content="Mocks Aren't (Just) Stubs">
+<meta property="og:url" content="https://www.tartley.com/posts/mocks-arent-just-stubs/">
+<meta property="og:description" content="My exposure to test-driven software development at Resolver Systems has
+resulted in a tremendous enthusiasm for the idea. Doubtless a
+significant proportion of my zeal stems from my own over-compensat">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2007-04-22T21:28:07-05:00">
+<meta property="article:tag" content="software">
+<meta property="article:tag" content="testing">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS feed</a>
+                </li>
+<li>
+<a href="../../pages/about/">About</a>
+
+                
+            </li>
+</ul>
+<!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Mocks Aren't (Just) Stubs</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2007-04-22T21:28:07-05:00" itemprop="datePublished" title="2007-04-22 21:28">2007-04-22 21:28</time></a>
+            </p>
+                <p class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/mocks-arent-just-stubs.html">Comments</a>
+
+
+            
+        </p>
+</div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>My exposure to test-driven software development at Resolver Systems has
+resulted in a tremendous enthusiasm for the idea. Doubtless a
+significant proportion of my zeal stems from my own over-compensation
+for arriving late to this particular party, but nevertheless, I truly
+believe that it's the most significant evolution the craft of software
+engineering has had in decades. For thirty years we've had good reason
+to believe Brooks' assertion that there will be no silver bullet, and
+now I can't shake the feeling that this is the closest thing to it that
+we'll ever have any right to expect.</p>
+<p>After hearing suggestions from
+<a href="http://andrzejonsoftware.blogspot.com">Andrzej</a> on improving our use of
+mock objects in our unit tests, I did a little reading around the ideas
+he mentioned. One of the best essays I found was Martin Fowler's piece,
+entitled <a href="http://www.martinfowler.com/articles/mocksArentStubs.html">mock objects aren't
+stubs.</a></p>
+<p><img alt="Mock classes used in unit tests as stubs." src="../../files/2007/04/mocks-arent-stubs.png"><em>Class UnderTest, shown on the left in use by release software, and on the
+right in a test environment, using stubbed out mock helper classes.</em></p>
+<p>Clearly, the idea of a generic mock object class isn't a brand-new one,
+and Martin's essay describes several such utilities that have been
+around for various lengths of time, but it is something I hadn't really
+thought about until this week. We do use mock objects in our tests at
+Resolver, in the sense of stub classes. When our class-under-test calls
+methods on other 'adjacent' classes, then the test will first substitute
+some mock object, often defined on the spot, to replace the adjacent
+class. This decoupling of the class-under-test from other adjacent
+classes keeps the tests simple and orthogonal.</p>
+<p>If these mock objects had no methods on them, then the class under test
+would barf when it tried to call methods on the mock. So we add empty
+stub methods on the mock, to mimic the method names present on the
+adjacent class it replaces.</p>
+<p>This conventional kind of test works well. State changes within the
+object-under-test can easily be asserted. Also, state changes to other,
+mocked objects cannot be directly tested, since the simple stub mocks
+described above maintain no internal state. In a way, this is fortunate,
+since such state changes to adjacent objects should not be tested, or at
+least not by the test under discussion. Those state changes should be
+implemented by method calls on the adjacent objects, and tested in the
+adjacent object's own unit test instead.</p>
+<p>However, this only emphasises how important it is that, as well as our
+own state changes, we should also be testing the behaviour of our
+object-under-test by asserting that it makes the correct method calls to
+adjacent objects. Not all method calls should be tested though - they
+can be split into two categories:</p>
+<ol>
+<li>Method calls made to calculate state changes in the current
+    object-under-test.</li>
+<li>Method calls made to inform other objects that they need to update
+    their own internal state.</li>
+</ol>
+<p>Method calls belonging to the second category need to be explicitly
+tested for. At Resolver we often implement such tests using a 'Listener'
+test pattern, which can be used to assert that a given method on an
+adjacent object was called with the correct arguments. Martin's essay
+describes a generic mock object class that can be instructed to assert
+that particular methods on it were called with particular parameters,
+and this seems like a convenient pattern, particularly the methods which
+create appropriately named stub methods on the mock object based upon a
+given class. We could, I think, use this idea at Resolver in places, if
+only to cut down on the manual creation of stubbed-out mock classes
+throughout our test code.</p>
+<p>However, the method of testing-by-behaviour that Martin describes does
+not seem to always be applicable. The first of the two categories of
+method calls above can and should be tested for by looking soley at the
+resultant state changes in the object-under-test. It is these state
+changes which are important, not the methods used to effect them.
+Asserting that various helper classes were used to make an internal
+state change only makes the test needlessly brittle to alternative
+implementations that achieve the same result.</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/software/" rel="tag">software</a></li>
+            <li><a class="tag p-category" href="../../categories/testing/" rel="tag">testing</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../minerva-metastasis/" rel="prev" title="Minerva: Metastasis">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../children-of-men/" rel="next" title="Children of Men">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="tartley",
+            disqus_url="https://www.tartley.com/posts/mocks-arent-just-stubs/",
+        disqus_title="Mocks Aren't (Just) Stubs",
+        disqus_identifier="cache/posts/mocks-arent-just-stubs.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="tartley";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer"></footer>
+</div>
+</div>
+
+            <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

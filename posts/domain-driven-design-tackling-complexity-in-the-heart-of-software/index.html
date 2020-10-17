@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domain Driven Design: Tackling Complexity in the Heart of Software | tartley.com</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/">
+<link rel="icon" href="../../welcome.gif" sizes="16x16">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
+<link rel="prev" href="../brief-interviews-with-hideous-men/" title="Brief Interviews with Hideous Men" type="text/html">
+<link rel="next" href="../altered-carbon/" title="Altered Carbon" type="text/html">
+<meta property="og:site_name" content="tartley.com">
+<meta property="og:title" content="Domain Driven Design: Tackling Complexity in the Heart of Software">
+<meta property="og:url" content="https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/">
+<meta property="og:description" content="by Eric Evans (2004) on Amazon
+It's a big, dense book -- possibly the most important of the technical
+books I've read in a flurry over the last few months, catching up after
+recovering a modicum of sa">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2014-01-27T11:05:53-06:00">
+<meta property="article:tag" content="books">
+<meta property="article:tag" content="software">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS feed</a>
+                </li>
+<li>
+<a href="../../pages/about/">About</a>
+
+                
+            </li>
+</ul>
+<!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Domain Driven Design: Tackling Complexity in the Heart of Software</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2014-01-27T11:05:53-06:00" itemprop="datePublished" title="2014-01-27 11:05">2014-01-27 11:05</time></a>
+            </p>
+                <p class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software.html">Comments</a>
+
+
+            
+        </p>
+</div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p><img alt="domaindrivendesign" src="../../files/2014/01/domaindrivendesign.jpg"></p>
+<p><em>by Eric Evans (2004)</em> <a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215">on Amazon</a></p>
+<p>It's a big, dense book -- possibly the most important of the technical
+books I've read in a flurry over the last few months, catching up after
+recovering a modicum of sanity in our lives after our kid's first year.
+I finish it feeling changed, invigorated, and given new direction.</p>
+<p>At its core is a simple idea, which sounds neither new nor revolutionary
+on the surface. Software projects, Evans maintains, should work closely
+with business experts to create and maintain a domain model. The model
+might be expressed as a class diagram of core business concerns, and
+should also correspond directly to a body of code modelling these
+business entities. This forms a set of core business entities which are
+clearly analogous to things like the core enterprise entities of the
+hexagonal or clean architectures.</p>
+<p>However it's created, the terminology and notation used in the class
+diagram (or it's equivalent) should be well understood by individuals on
+both side of the tech/business divide. In the past I think I've made the
+mistake of believing that only developers needed to understand it, and
+therefore the model only needed to be expressed in code.</p>
+<p>This model should be displayed prominently, referred to continually, and
+in a healthy project should very directly correspond to the specialised
+language that evolves within the organisation. Where the team's language
+doesn't match the model - for example, your business experts' use of
+plurals betrays that the cardinality of relationships are modelled
+wrongly, then the model - and the underlying code - should be
+aggressively refactored to match reality.</p>
+<p>Evans makes a persuasive case that the appropriate management of this
+complexity at the heart of your software will be a major influence on
+the success of the project. To be fair, this is a viewpoint that I
+already believed in, so I was a sucker for all of this. Without an
+appropriate approach to these central design concerns, over time
+developers will find they are no longer able to understand the code
+thoroughly enough to be able to modify or extend it easily, unless they
+deliberately or inadvertently use design-breaking hacks like redundancy
+or mislocated chunks of code. This forms a vicious cycle of technical
+debt accrual, and creates an upper limit on the size or complexity which
+can be achieved by any project before productivity begins to slump.
+Other metrics like reliability then also suffer.</p>
+<p>To counter this, conquering these central design issues requires a
+pro-active and multi-pronged effort. Firstly, the existing design must
+be understood by all parties. In order for this to remain true, the
+design needs to be kept up to date and be easily understood by new team
+members. The code must be kept directly in sync with the model, and kept
+understandable - inappropriate dependencies must be ruthlessly pruned.
+Simultaneously, the "correct" design must be discovered iteratively,
+throughout the life of the project, and this can only be done by
+encouraging continual conversations between developers and business
+folks to discuss the potential inadequacies of the current design and
+possible alternatives.</p>
+<p>When managed correctly, this lends an agility and suppleness to project.
+Developers find it easy to integrate subsequent parts of code because
+they 'fit naturally' into the existing design, and when the design is
+found wanting, it's relatively easy to modify it to incorporate new
+concerns.</p>
+<p>There are times when I've struggled to convey the message about how the
+resulting trade off works between time spent refactoring versus time
+saved over the long term. Evans describes this in an interesting way.
+Instead of trying to model team productivity by applying a multiplier to
+describe drag caused by technical debt, he simply contrasts the normal
+way projects slow down as they become larger and more complex, with a
+project that instead <em>speeds up</em> over time, as developers, unhindered by
+a cycle of technical debt, are instead empowered by the creation of
+powerful and expressive abstractions, which can then be relatively
+easily reconfigured into unanticipated configurations.</p>
+<p>To counter-balance this idealistic hand-waving, the next section dives
+right into some specific design practices which embody these ideas.
+These are valuable and insightful, stock-in-trade, such as
+distinguishing between entity and value types. But many of the ideas
+were completely new to me, such as the concept of <em>aggregates</em>, which
+define subsets of the domain model which are always atomically retrieved
+from (or updated in) a data store.</p>
+<p>In short, I really loved this book. It stretched and inspired me. It's
+in a very small set of books I've flagged to re-read in a couple of
+years. It's top of my list for 'books to bring in and talk about at
+work'.</p>
+<p>Rating:</p>
+<p>10/10 if you're a programmer, or work with programmers.</p>
+<p>0/10 if you're not, or don't.</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/books/" rel="tag">books</a></li>
+            <li><a class="tag p-category" href="../../categories/software/" rel="tag">software</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../brief-interviews-with-hideous-men/" rel="prev" title="Brief Interviews with Hideous Men">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../altered-carbon/" rel="next" title="Altered Carbon">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="tartley",
+            disqus_url="https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/",
+        disqus_title="Domain Driven Design: Tackling Complexity in the Heart of Software",
+        disqus_identifier="cache/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="tartley";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer"></footer>
+</div>
+</div>
+
+            <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>
