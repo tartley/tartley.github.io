@@ -70,16 +70,16 @@
     
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2016/1/20/pyrochestermn/" class="u-url">PyRochesterMN</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="pyrochestermn/" class="u-url">PyRochesterMN</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
             </span></p>
             <p class="dateline">
-            <a href="posts/2016/1/20/pyrochestermn/" rel="bookmark">
+            <a href="pyrochestermn/" rel="bookmark">
             <time class="published dt-published" datetime="2016-01-20T21:01:27-06:00" itemprop="datePublished" title="2016-01-20 21:01">2016-01-20 21:01</time></a>
             </p>
-                <p class="commentline">            <a href="posts/2016/1/20/pyrochestermn/#disqus_thread" data-disqus-identifier="cache/posts/2016/1/20/pyrochestermn.html">Comments</a>
+                <p class="commentline">            <a href="pyrochestermn/#disqus_thread" data-disqus-identifier="cache/posts/pyrochestermn.html">Comments</a>
 
 
         </p>
@@ -94,16 +94,16 @@ Rochester, Minnesota, USA.</p>
 <p><a href="https://www.reddit.com/r/rochestertech/">https://www.reddit.com/r/rochestertech/</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2015/8/25/git-when-to-use-three-dots-vs-two/" class="u-url">Git: When to use three dots vs two</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="git-when-to-use-three-dots-vs-two/" class="u-url">Git: When to use three dots vs two</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
             </span></p>
             <p class="dateline">
-            <a href="posts/2015/8/25/git-when-to-use-three-dots-vs-two/" rel="bookmark">
+            <a href="git-when-to-use-three-dots-vs-two/" rel="bookmark">
             <time class="published dt-published" datetime="2015-08-25T11:51:30-05:00" itemprop="datePublished" title="2015-08-25 11:51">2015-08-25 11:51</time></a>
             </p>
-                <p class="commentline">            <a href="posts/2015/8/25/git-when-to-use-three-dots-vs-two/#disqus_thread" data-disqus-identifier="cache/posts/2015/8/25/git-when-to-use-three-dots-vs-two.html">Comments</a>
+                <p class="commentline">            <a href="git-when-to-use-three-dots-vs-two/#disqus_thread" data-disqus-identifier="cache/posts/git-when-to-use-three-dots-vs-two.html">Comments</a>
 
 
         </p>
@@ -113,16 +113,17 @@ Rochester, Minnesota, USA.</p>
 <p>I endlessly misremember when to use '...' in git versus '..'. That ends
 today:</p>
 <p>To see the commits or diffs introduced by a branch (the filled circles ●):</p>
-<pre class="code literal-block">     f
+<pre class="code literal-block"><span></span><code>     f
     +●  m           git log m..f
      |  ○
     +●  |           git diff m...f
       \ ○
        \|
         ○
-</pre>
+</code></pre>
+
 <p>To see the commits or diffs between the tip of one branch and another:</p>
-<pre class="code literal-block">     f              git log m...f
+<pre class="code literal-block"><span></span><code>     f              git log m...f
     +●  m           All commits look the same,
      |  ●-          unless you use --left-right, which
     +●  |           shows where each commit comes from.
@@ -130,9 +131,10 @@ today:</p>
        \|           git diff m..f
         ○           '-' commits are shown inverted,
                      i.e. additions as deletions.
-</pre>
+</code></pre>
+
 <p>To see the commits from 'f' back to the beginning of time:</p>
-<pre class="code literal-block">     f
+<pre class="code literal-block"><span></span><code>     f
     +●  m           git log f
      |  ○
     +●  |           (diffs back to start of time are just
@@ -141,32 +143,36 @@ today:</p>
        +●
         |
        +●
-</pre>
+</code></pre>
+
 <p>Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
 above that you almost always want:</p>
-<pre class="code literal-block">git diff m...f
-</pre>
+<pre class="code literal-block"><span></span><code>git diff m...f
+</code></pre>
+
 <p>is the same as</p>
-<pre class="code literal-block">git checkout f
+<pre class="code literal-block"><span></span><code>git checkout f
 git diff m...
-</pre>
+</code></pre>
+
 <p>or</p>
-<pre class="code literal-block">git checkout m
+<pre class="code literal-block"><span></span><code>git checkout m
 git diff ...f
-</pre>
+</code></pre>
+
 <p>Is there a word for unicode ascii art?</p>
 </div>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code/" class="u-url">Thoughts on Nylas' "How We Deploy Code"</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="thoughts-on-nylas-how-we-deploy-code/" class="u-url">Thoughts on Nylas' "How We Deploy Code"</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
             </span></p>
             <p class="dateline">
-            <a href="posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code/" rel="bookmark">
+            <a href="thoughts-on-nylas-how-we-deploy-code/" rel="bookmark">
             <time class="published dt-published" datetime="2015-07-21T19:06:02-05:00" itemprop="datePublished" title="2015-07-21 19:06">2015-07-21 19:06</time></a>
             </p>
-                <p class="commentline">            <a href="posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code/#disqus_thread" data-disqus-identifier="cache/posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code.html">Comments</a>
+                <p class="commentline">            <a href="thoughts-on-nylas-how-we-deploy-code/#disqus_thread" data-disqus-identifier="cache/posts/thoughts-on-nylas-how-we-deploy-code.html">Comments</a>
 
 
         </p>
@@ -231,16 +237,16 @@ So I'm not at all against the final conclusions of the Nylas article.
 ready. Apologies for the inevitable shoddyness.</p>
 </div>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2015/3/15/listen-to-your-phone-through-your-pc-speakers/" class="u-url">Listen to your phone through your PC speakers</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="listen-to-your-phone-through-your-pc-speakers/" class="u-url">Listen to your phone through your PC speakers</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
             </span></p>
             <p class="dateline">
-            <a href="posts/2015/3/15/listen-to-your-phone-through-your-pc-speakers/" rel="bookmark">
+            <a href="listen-to-your-phone-through-your-pc-speakers/" rel="bookmark">
             <time class="published dt-published" datetime="2015-03-15T10:50:09-05:00" itemprop="datePublished" title="2015-03-15 10:50">2015-03-15 10:50</time></a>
             </p>
-                <p class="commentline">            <a href="posts/2015/3/15/listen-to-your-phone-through-your-pc-speakers/#disqus_thread" data-disqus-identifier="cache/posts/2015/3/15/listen-to-your-phone-through-your-pc-speakers.html">Comments</a>
+                <p class="commentline">            <a href="listen-to-your-phone-through-your-pc-speakers/#disqus_thread" data-disqus-identifier="cache/posts/listen-to-your-phone-through-your-pc-speakers.html">Comments</a>
 
 
         </p>
@@ -269,16 +275,16 @@ ready. Apologies for the inevitable shoddyness.</p>
 sleep infinity
 </code></pre>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2014/2/7/understanding-rebase-so-it-sticks/" class="u-url">Understanding git rebase so it sticks</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="understanding-rebase-so-it-sticks/" class="u-url">Understanding git rebase so it sticks</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
             </span></p>
             <p class="dateline">
-            <a href="posts/2014/2/7/understanding-rebase-so-it-sticks/" rel="bookmark">
+            <a href="understanding-rebase-so-it-sticks/" rel="bookmark">
             <time class="published dt-published" datetime="2014-02-07T10:28:37-06:00" itemprop="datePublished" title="2014-02-07 10:28">2014-02-07 10:28</time></a>
             </p>
-                <p class="commentline">            <a href="posts/2014/2/7/understanding-rebase-so-it-sticks/#disqus_thread" data-disqus-identifier="cache/posts/2014/2/7/understanding-rebase-so-it-sticks.html">Comments</a>
+                <p class="commentline">            <a href="understanding-rebase-so-it-sticks/#disqus_thread" data-disqus-identifier="cache/posts/understanding-rebase-so-it-sticks.html">Comments</a>
 
 
         </p>
@@ -291,12 +297,10 @@ my notes to help me remember.</p>
 <pre class="code literal-block"><span></span><code>git rebase <span class="o">[</span>--onto newbase<span class="o">]</span> <span class="o">[</span>upstream <span class="o">[</span>branch<span class="o">]]</span>
 </code></pre>
 
-
 <p>This is confusing for several reasons. A slight improvement is to rename
 the args:</p>
 <pre class="code literal-block"><span></span><code>git rebase <span class="o">[</span>--onto target<span class="o">]</span> <span class="o">[</span>exclude <span class="o">[</span>include<span class="o">]]</span>
 </code></pre>
-
 
 <p>Where:</p>
 <ul>
@@ -320,17 +324,14 @@ the args:</p>
                 or include
 </code></pre>
 
-
 <pre class="code literal-block"><span></span><code>git rebase exclude <span class="o">[</span>include<span class="o">]</span>
 </code></pre>
-
 
 <pre class="code literal-block"><span></span><code>                exclude
                 v
 o---o---o---o---o---1---2---3 current branch
                               or include
 </code></pre>
-
 
 <p>See how the commits to be transplanted start at <code>include</code> and go back to
 the common ancestor of that and <code>exclude</code>. Since <code>--onto</code> isn't
@@ -344,10 +345,8 @@ specified, <code>exclude</code> is also used as the transplant destination.</p>
                    or include
 </code></pre>
 
-
 <pre class="code literal-block"><span></span><code>git rebase --onto target exclude <span class="o">[</span>include<span class="o">]</span>
 </code></pre>
-
 
 <pre class="code literal-block"><span></span><code>                    target
                     v
@@ -358,22 +357,21 @@ specified, <code>exclude</code> is also used as the transplant destination.</p>
                   exclude
 </code></pre>
 
-
 <p>Again, the commits to be transplanted are defined by <code>include</code> and
 <code>exclude</code>, but this time a separate destination is specified using
 <code>--onto</code>.</p>
 </div>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2014/2/3/this-gaming-life-travels-in-three-cities/" class="u-url">This Gaming Life: Travels in Three Cities</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="this-gaming-life-travels-in-three-cities/" class="u-url">This Gaming Life: Travels in Three Cities</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
             </span></p>
             <p class="dateline">
-            <a href="posts/2014/2/3/this-gaming-life-travels-in-three-cities/" rel="bookmark">
+            <a href="this-gaming-life-travels-in-three-cities/" rel="bookmark">
             <time class="published dt-published" datetime="2014-02-03T20:31:29-06:00" itemprop="datePublished" title="2014-02-03 20:31">2014-02-03 20:31</time></a>
             </p>
-                <p class="commentline">            <a href="posts/2014/2/3/this-gaming-life-travels-in-three-cities/#disqus_thread" data-disqus-identifier="cache/posts/2014/2/3/this-gaming-life-travels-in-three-cities.html">Comments</a>
+                <p class="commentline">            <a href="this-gaming-life-travels-in-three-cities/#disqus_thread" data-disqus-identifier="cache/posts/this-gaming-life-travels-in-three-cities.html">Comments</a>
 
 
         </p>
@@ -400,16 +398,16 @@ dominant art form of the 21st century.</p>
 <p>0/10 if it's just for kids, innit?</p>
 </div>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2014/2/2/object-oriented-software-engineering-a-use-case-driven-approach/" class="u-url">Object-Oriented Software Engineering : A Use Case Driven Approach</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="object-oriented-software-engineering-a-use-case-driven-approach/" class="u-url">Object-Oriented Software Engineering : A Use Case Driven Approach</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
             </span></p>
             <p class="dateline">
-            <a href="posts/2014/2/2/object-oriented-software-engineering-a-use-case-driven-approach/" rel="bookmark">
+            <a href="object-oriented-software-engineering-a-use-case-driven-approach/" rel="bookmark">
             <time class="published dt-published" datetime="2014-02-02T14:26:43-06:00" itemprop="datePublished" title="2014-02-02 14:26">2014-02-02 14:26</time></a>
             </p>
-                <p class="commentline">            <a href="posts/2014/2/2/object-oriented-software-engineering-a-use-case-driven-approach/#disqus_thread" data-disqus-identifier="cache/posts/2014/2/2/object-oriented-software-engineering-a-use-case-driven-approach.html">Comments</a>
+                <p class="commentline">            <a href="object-oriented-software-engineering-a-use-case-driven-approach/#disqus_thread" data-disqus-identifier="cache/posts/object-oriented-software-engineering-a-use-case-driven-approach.html">Comments</a>
 
 
         </p>
@@ -466,16 +464,16 @@ and case studies.</p>
 <p>0/10 if you're not.</p>
 </div>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2014/2/2/altered-carbon/" class="u-url">Altered Carbon</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="altered-carbon/" class="u-url">Altered Carbon</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
             </span></p>
             <p class="dateline">
-            <a href="posts/2014/2/2/altered-carbon/" rel="bookmark">
+            <a href="altered-carbon/" rel="bookmark">
             <time class="published dt-published" datetime="2014-02-02T12:59:43-06:00" itemprop="datePublished" title="2014-02-02 12:59">2014-02-02 12:59</time></a>
             </p>
-                <p class="commentline">            <a href="posts/2014/2/2/altered-carbon/#disqus_thread" data-disqus-identifier="cache/posts/2014/2/2/altered-carbon.html">Comments</a>
+                <p class="commentline">            <a href="altered-carbon/#disqus_thread" data-disqus-identifier="cache/posts/altered-carbon.html">Comments</a>
 
 
         </p>
@@ -493,16 +491,16 @@ some exciting SF.</p>
 <p>0/10 if you're not.</p>
 </div>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2014/1/27/domain-driven-design-tackling-complexity-in-the-heart-of-software/" class="u-url">Domain Driven Design: Tackling Complexity in the Heart of Software</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="domain-driven-design-tackling-complexity-in-the-heart-of-software/" class="u-url">Domain Driven Design: Tackling Complexity in the Heart of Software</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
             </span></p>
             <p class="dateline">
-            <a href="posts/2014/1/27/domain-driven-design-tackling-complexity-in-the-heart-of-software/" rel="bookmark">
+            <a href="domain-driven-design-tackling-complexity-in-the-heart-of-software/" rel="bookmark">
             <time class="published dt-published" datetime="2014-01-27T11:05:53-06:00" itemprop="datePublished" title="2014-01-27 11:05">2014-01-27 11:05</time></a>
             </p>
-                <p class="commentline">            <a href="posts/2014/1/27/domain-driven-design-tackling-complexity-in-the-heart-of-software/#disqus_thread" data-disqus-identifier="cache/posts/2014/1/27/domain-driven-design-tackling-complexity-in-the-heart-of-software.html">Comments</a>
+                <p class="commentline">            <a href="domain-driven-design-tackling-complexity-in-the-heart-of-software/#disqus_thread" data-disqus-identifier="cache/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software.html">Comments</a>
 
 
         </p>
@@ -589,16 +587,16 @@ work'.</p>
 <p>0/10 if you're not, or don't.</p>
 </div>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2014/1/22/brief-interviews-with-hideous-men/" class="u-url">Brief Interviews with Hideous Men</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="brief-interviews-with-hideous-men/" class="u-url">Brief Interviews with Hideous Men</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
             </span></p>
             <p class="dateline">
-            <a href="posts/2014/1/22/brief-interviews-with-hideous-men/" rel="bookmark">
+            <a href="brief-interviews-with-hideous-men/" rel="bookmark">
             <time class="published dt-published" datetime="2014-01-22T20:51:51-06:00" itemprop="datePublished" title="2014-01-22 20:51">2014-01-22 20:51</time></a>
             </p>
-                <p class="commentline">            <a href="posts/2014/1/22/brief-interviews-with-hideous-men/#disqus_thread" data-disqus-identifier="cache/posts/2014/1/22/brief-interviews-with-hideous-men.html">Comments</a>
+                <p class="commentline">            <a href="brief-interviews-with-hideous-men/#disqus_thread" data-disqus-identifier="cache/posts/brief-interviews-with-hideous-men.html">Comments</a>
 
 
         </p>

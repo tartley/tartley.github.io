@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about osx-dev)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/osx-dev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 16 Oct 2020 00:44:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Encrypted zip files on OSX</title><link>https://www.tartley.com/posts/2012/10/9/encrypted-zip-files-on-osx/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;My passwords and other miscellany are in a plain text file within an
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about osx-dev)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/osx-dev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Oct 2020 18:54:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Encrypted zip files on OSX</title><link>https://www.tartley.com/encrypted-zip-files-on-osx/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;My passwords and other miscellany are in a plain text file within an
 encrypted zip. Since starting to use OSX I've been looking for a way to
 access my passwords such that:&lt;/p&gt;
 &lt;ul&gt;
@@ -41,9 +41,8 @@ rm passwords.txt
 rm passwords.datestamp
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;I don't expect this to be watertight, but seems good enough for today.
-I'm happy to hear suggestions.&lt;/p&gt;&lt;/div&gt;</description><category>osx-dev</category><guid>https://www.tartley.com/posts/2012/10/9/encrypted-zip-files-on-osx/</guid><pubDate>Tue, 09 Oct 2012 15:17:07 GMT</pubDate></item><item><title>Compiling MacVim with Python 2.7</title><link>https://www.tartley.com/posts/2011/10/18/compiling-macvim-with-python-2-7/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I love the brilliant Vim plugin
+I'm happy to hear suggestions.&lt;/p&gt;&lt;/div&gt;</description><category>osx-dev</category><guid>https://www.tartley.com/encrypted-zip-files-on-osx/</guid><pubDate>Tue, 09 Oct 2012 15:17:07 GMT</pubDate></item><item><title>Compiling MacVim with Python 2.7</title><link>https://www.tartley.com/compiling-macvim-with-python-2-7/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I love the brilliant Vim plugin
 &lt;a href="http://www.vim.org/scripts/script.php?script_id=2441"&gt;pyflakes-vim&lt;/a&gt;,
 which highlights errors &amp;amp; warnings, and since I got a MacBook for work,
 I've been using MacVim a lot.&lt;/p&gt;
@@ -69,7 +68,6 @@ open MacVim/build/Release
 &lt;span class="nb"&gt;echo&lt;/span&gt; Drag MacVim.app to your Applications directory
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Without the LDFLAGS setting, I was missing some symbols at link. The
 --with-python-config-dir entry came from typing 'which python' to find
 where my Python 2.7 install lives, and modifying that result to find its
@@ -82,8 +80,7 @@ directory.&lt;/p&gt;
 &lt;span class="mf"&gt;2.7&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r271&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;86882&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Nov&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="mi"&gt;2010&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;35&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;34&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;And files with set literals are now correctly parsed for errors.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This only works if the Python 2.7 is your default 'python'
 executable. Otherwise, or if you get "ImportError: No module named
-site"?, see Richard's comments below.&lt;/p&gt;&lt;/div&gt;</description><category>osx-dev</category><category>python</category><category>vim</category><guid>https://www.tartley.com/posts/2011/10/18/compiling-macvim-with-python-2-7/</guid><pubDate>Tue, 18 Oct 2011 17:25:03 GMT</pubDate></item></channel></rss>
+site"?, see Richard's comments below.&lt;/p&gt;&lt;/div&gt;</description><category>osx-dev</category><category>python</category><category>vim</category><guid>https://www.tartley.com/compiling-macvim-with-python-2-7/</guid><pubDate>Tue, 18 Oct 2011 17:25:03 GMT</pubDate></item></channel></rss>

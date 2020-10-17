@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 16 Oct 2020 00:44:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/2020/6/9/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Oct 2020 18:54:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-
+&lt;/pre&gt;
 &lt;p&gt;But often you'd like to reformat just a section of the file, while leaving
 everything else intact. In principle, it's easy to tell Vim to just send the
 current visual selection:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;" Black(Python) format the visual selection&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the visual selection&lt;/span&gt;
 xnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-
+&lt;/pre&gt;
 &lt;p&gt;(Note that both the above Vim configuration snippets map the same key
 sequence -- leader (commonly comma) followed by lower case b. These can be
 defined simultaneously, because the second one uses 'xnoremap', meaning it is
@@ -32,7 +28,7 @@ gained much enthusiasm.&lt;/p&gt;
 &lt;li&gt;Passes the result to Black.&lt;/li&gt;
 &lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>software</category><guid>https://www.tartley.com/posts/2020/6/9/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/2020/4/20/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>software</category><guid>https://www.tartley.com/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;
@@ -40,28 +36,24 @@ bash command history when creating, etc?&lt;/p&gt;
 &lt;p&gt;Here goes then.&lt;/p&gt;
 &lt;p&gt;I have one LXD container running for each nontrivial development project I'm
 working on.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ lxc ls
+&lt;pre class="code literal-block"&gt;$ lxc ls
 &lt;span class="p"&gt;|&lt;/span&gt;    NAME     &lt;span class="p"&gt;|&lt;/span&gt;  STATE  &lt;span class="p"&gt;|&lt;/span&gt;        IPV4         &lt;span class="p"&gt;|&lt;/span&gt; IPV6 &lt;span class="p"&gt;|&lt;/span&gt;   TYPE    &lt;span class="p"&gt;|&lt;/span&gt; SNAPSHOTS &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="p"&gt;|&lt;/span&gt; devicegw    &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.228 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="p"&gt;|&lt;/span&gt; ident       &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.4 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;   &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="p"&gt;|&lt;/span&gt; revs        &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.151 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="p"&gt;|&lt;/span&gt; siab        &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.128 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="p"&gt;|&lt;/span&gt; tartley-com &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.161 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-
+&lt;/pre&gt;
 &lt;p&gt;Out of the gate we see one source of confusion. "LXD", the daemon, is a
 newer project that builds on top of "LXC" the containers. However the user
 interface to all the new LXD-goodness is through a command-line called "lxc",
 which replaces the older command line tool called "lxd". :-/&lt;/p&gt;
 &lt;p&gt;To create a new one:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ &lt;span class="nb"&gt;time&lt;/span&gt; lxc launch ubuntu:16.04 -p default -p jhartley demo
+&lt;pre class="code literal-block"&gt;$ &lt;span class="nb"&gt;time&lt;/span&gt; lxc launch ubuntu:16.04 -p default -p jhartley demo
 Creating demo
 Starting demo
 real    0m9.593s
-&lt;/code&gt;&lt;/pre&gt;
-
-
+&lt;/pre&gt;
 &lt;p&gt;Once created, they take about 3 seconds to stop and 0.5 seconds to start.&lt;/p&gt;
 &lt;p&gt;Those "-p" options cause the container to use two &lt;em&gt;profiles&lt;/em&gt;. They are:&lt;/p&gt;
 &lt;ol&gt;
@@ -82,9 +74,8 @@ $ lxc &lt;span class="nb"&gt;exec&lt;/span&gt; demo whoami
 root
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Or SSH to them using their IP address:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;jhartley@t460 $ lxc ls demo
+&lt;pre class="code literal-block"&gt;jhartley@t460 $ lxc ls demo
 &lt;span class="p"&gt;|&lt;/span&gt; NAME &lt;span class="p"&gt;|&lt;/span&gt;  STATE  &lt;span class="p"&gt;|&lt;/span&gt;        IPV4         &lt;span class="p"&gt;|&lt;/span&gt; IPV6 &lt;span class="p"&gt;|&lt;/span&gt;   TYPE    &lt;span class="p"&gt;|&lt;/span&gt; SNAPSHOTS &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="p"&gt;|&lt;/span&gt; demo &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.162 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
 jhartley@t460 $ ssh &lt;span class="m"&gt;10&lt;/span&gt;.44.99.162
@@ -92,17 +83,13 @@ jhartley@t460 $ ssh &lt;span class="m"&gt;10&lt;/span&gt;.44.99.162
 Warning: Permanently added &lt;span class="s1"&gt;'10.44.99.162'&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;ECDSA&lt;span class="o"&gt;)&lt;/span&gt; to the list of known hosts.
 Welcome to Ubuntu &lt;span class="m"&gt;16&lt;/span&gt;.04.6 LTS &lt;span class="o"&gt;(&lt;/span&gt;GNU/Linux &lt;span class="m"&gt;5&lt;/span&gt;.4.0-25-generic x86_64&lt;span class="o"&gt;)&lt;/span&gt;
 jhartley@demo $
-&lt;/code&gt;&lt;/pre&gt;
-
-
+&lt;/pre&gt;
 &lt;p&gt;Better than using IP addresses, you can run a DNS server to recognize
 &lt;code&gt;{containername}.lxd&lt;/code&gt; hostnames. (This part is from
 &lt;a href="https://discuss.linuxcontainers.org/t/a-way-to-resolve-container-lxd-from-host-in-all-cases/3698"&gt;here&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Find your lxd bridge IPv4 address&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;lxc network show lxdbr0
-&lt;/code&gt;&lt;/pre&gt;
-
-
+&lt;pre class="code literal-block"&gt;lxc network show lxdbr0
+&lt;/pre&gt;
 &lt;p&gt;Create file &lt;code&gt;/etc/systemd/network/lxd.network&lt;/code&gt;:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[Match]&lt;/span&gt;
 &lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;lxdbr0&lt;/span&gt;
@@ -113,34 +100,27 @@ jhartley@demo $
 &lt;span class="na"&gt;Domains&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;~lxd&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Where IPADDR is the lxdbr0 IPv4 address.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; systemd-networkd
+&lt;pre class="code literal-block"&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; systemd-networkd
 sudo reboot now
-&lt;/code&gt;&lt;/pre&gt;
-
-
+&lt;/pre&gt;
 &lt;p&gt;Then:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;jhartley@t460 $ ssh demo.lxd
+&lt;pre class="code literal-block"&gt;jhartley@t460 $ ssh demo.lxd
 jhartley@demo $ &lt;span class="c1"&gt;# \o/&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-
+&lt;/pre&gt;
 &lt;p&gt;One nice thing is that DNS works both from the host and on the containers,
 so your services can be configured by default to talk to each other at
 SERVICE1.lxd, SERVICE2.lxd. Then running them in containers on your host
 they would just find each other. We don't actually do this, but it seems
 trivially easy to do. I should ask why we don't.&lt;/p&gt;
 &lt;p&gt;In practice I wrap up the ssh command with my accumulated foibles:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;jhartley@demo $ &lt;span class="nb"&gt;type&lt;/span&gt; -a lssh
+&lt;pre class="code literal-block"&gt;jhartley@demo $ &lt;span class="nb"&gt;type&lt;/span&gt; -a lssh
 lssh is a &lt;span class="k"&gt;function&lt;/span&gt;
 lssh &lt;span class="o"&gt;()&lt;/span&gt;
 &lt;span class="o"&gt;{&lt;/span&gt;
     &lt;span class="nv"&gt;TERM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xterm-color ssh -A -t &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.lxd"&lt;/span&gt; -- &lt;span class="s2"&gt;"cd &lt;/span&gt;&lt;span class="nv"&gt;$PWD&lt;/span&gt;&lt;span class="s2"&gt; &amp;amp;&amp;amp; exec &lt;/span&gt;&lt;span class="nv"&gt;$SHELL&lt;/span&gt;&lt;span class="s2"&gt; -l"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-
+&lt;/pre&gt;
 &lt;p&gt;I forget why -A and -t were required. The rest is mostly just to start the
 shell on the container in the same directory as I was in on the host. There
 is probably a simpler way.&lt;/p&gt;
@@ -161,7 +141,7 @@ is probably a simpler way.&lt;/p&gt;
 &lt;li&gt;Doubtless due to my own misunderstanding somewhere, in order to get working
    IPv4 connections to my containers, I had to disable IPv6 connections to
    them.&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>geek</category><category>linux</category><category>software</category><guid>https://www.tartley.com/posts/2020/4/20/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/posts/2016/5/15/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
+&lt;/ol&gt;&lt;/div&gt;</description><category>geek</category><category>linux</category><category>software</category><guid>https://www.tartley.com/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
 for it, called "Announce":&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/tartley/rhythmbox-plugin-announce"&gt;https://github.com/tartley/rhythmbox-plugin-announce&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Every time a new song starts to play, it announces the title using
@@ -169,10 +149,10 @@ speech synthesis. I like it when I'm listening to some new music I'm not
 familiar with, but am away from the computer. Then I can still know
 which track is which.&lt;/p&gt;
 &lt;p&gt;If the album or artist names are different from the previous track, then
-it includes those in the announcement, too.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>software</category><guid>https://www.tartley.com/posts/2016/5/15/rhythmbox-plugin-announce/</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://www.tartley.com/posts/2016/1/20/google-chrome-credit/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I just noticed: Open Chrome, go to &lt;chrome:&gt;&lt;/chrome:&gt;, search in page,
+it includes those in the announcement, too.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>software</category><guid>https://www.tartley.com/rhythmbox-plugin-announce/</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://www.tartley.com/google-chrome-credit/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I just noticed: Open Chrome, go to &lt;chrome:&gt;&lt;/chrome:&gt;, search in page,
 'show licence', and:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;img alt="chrome-credit" src="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>software</category><guid>https://www.tartley.com/posts/2016/1/20/google-chrome-credit/</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://www.tartley.com/posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
+&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>software</category><guid>https://www.tartley.com/google-chrome-credit/</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://www.tartley.com/thoughts-on-nylas-how-we-deploy-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
 Code."&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The goals of making deployment consistent, reliable and fast are very
 laudable, and the conclusion involving creating Debian packages is just
@@ -227,18 +207,16 @@ packages, rather than more bug-prone ad-hoc scripts and Ansible config.
 So I'm not at all against the final conclusions of the Nylas article.
 (Hugs to you folks at Nylas!)&lt;/p&gt;
 &lt;p&gt;Dashed this out in ten minutes between daycare pickup and dinner being
-ready. Apologies for the inevitable shoddyness.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/2015/7/21/thoughts-on-nylas-how-we-deploy-code/</guid><pubDate>Wed, 22 Jul 2015 00:06:02 GMT</pubDate></item><item><title>Understanding git rebase so it sticks</title><link>https://www.tartley.com/posts/2014/2/7/understanding-rebase-so-it-sticks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember how to use git rebase. That ends today. Here are
+ready. Apologies for the inevitable shoddyness.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/thoughts-on-nylas-how-we-deploy-code/</guid><pubDate>Wed, 22 Jul 2015 00:06:02 GMT</pubDate></item><item><title>Understanding git rebase so it sticks</title><link>https://www.tartley.com/understanding-rebase-so-it-sticks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember how to use git rebase. That ends today. Here are
 my notes to help me remember.&lt;/p&gt;
 &lt;p&gt;Rebase is traditionally documented as:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase &lt;span class="o"&gt;[&lt;/span&gt;--onto newbase&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;upstream &lt;span class="o"&gt;[&lt;/span&gt;branch&lt;span class="o"&gt;]]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;This is confusing for several reasons. A slight improvement is to rename
 the args:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase &lt;span class="o"&gt;[&lt;/span&gt;--onto target&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Where:&lt;/p&gt;
 &lt;ul&gt;
@@ -259,17 +237,14 @@ the args:&lt;/p&gt;
                 or include
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;                exclude
                 v
 o---o---o---o---o---1---2---3 current branch
                               or include
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;See how the commits to be transplanted start at &lt;code&gt;include&lt;/code&gt; and go back to
 the common ancestor of that and &lt;code&gt;exclude&lt;/code&gt;. Since &lt;code&gt;--onto&lt;/code&gt; isn't
@@ -283,10 +258,8 @@ specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the transplant desti
                    or include
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase --onto target exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;                    target
                     v
@@ -297,10 +270,9 @@ specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the transplant desti
                   exclude
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Again, the commits to be transplanted are defined by &lt;code&gt;include&lt;/code&gt; and
 &lt;code&gt;exclude&lt;/code&gt;, but this time a separate destination is specified using
-&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>software</category><guid>https://www.tartley.com/posts/2014/2/7/understanding-rebase-so-it-sticks/</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://www.tartley.com/posts/2014/2/2/object-oriented-software-engineering-a-use-case-driven-approach/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="object-oriented-sofware-engineering" src="https://www.tartley.com/files/2014/02/object-oriented-sofware-engineering.jpg"&gt;&lt;/p&gt;
+&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>software</category><guid>https://www.tartley.com/understanding-rebase-so-it-sticks/</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://www.tartley.com/object-oriented-software-engineering-a-use-case-driven-approach/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="object-oriented-sofware-engineering" src="https://www.tartley.com/files/2014/02/object-oriented-sofware-engineering.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Ivar Jacobsen&lt;/em&gt; (1992, 4th revision)&lt;/p&gt;
 &lt;p&gt;You might wonder if there's anything left to say about
 object-orientation that hasn't already been discussed to death. I was
@@ -347,7 +319,7 @@ days.&lt;/p&gt;
 &lt;p&gt;Rating:&lt;/p&gt;
 &lt;p&gt;10/10 if you're going to enjoy 500 pages of software design principles
 and case studies.&lt;/p&gt;
-&lt;p&gt;0/10 if you're not.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>software</category><guid>https://www.tartley.com/posts/2014/2/2/object-oriented-software-engineering-a-use-case-driven-approach/</guid><pubDate>Sun, 02 Feb 2014 20:26:43 GMT</pubDate></item><item><title>Domain Driven Design: Tackling Complexity in the Heart of Software</title><link>https://www.tartley.com/posts/2014/1/27/domain-driven-design-tackling-complexity-in-the-heart-of-software/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="domaindrivendesign" src="https://www.tartley.com/files/2014/01/domaindrivendesign.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;0/10 if you're not.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>software</category><guid>https://www.tartley.com/object-oriented-software-engineering-a-use-case-driven-approach/</guid><pubDate>Sun, 02 Feb 2014 20:26:43 GMT</pubDate></item><item><title>Domain Driven Design: Tackling Complexity in the Heart of Software</title><link>https://www.tartley.com/domain-driven-design-tackling-complexity-in-the-heart-of-software/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="domaindrivendesign" src="https://www.tartley.com/files/2014/01/domaindrivendesign.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Eric Evans (2004)&lt;/em&gt; &lt;a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215"&gt;on Amazon&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;It's a big, dense book -- possibly the most important of the technical
 books I've read in a flurry over the last few months, catching up after
@@ -424,7 +396,7 @@ years. It's top of my list for 'books to bring in and talk about at
 work'.&lt;/p&gt;
 &lt;p&gt;Rating:&lt;/p&gt;
 &lt;p&gt;10/10 if you're a programmer, or work with programmers.&lt;/p&gt;
-&lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>software</category><guid>https://www.tartley.com/posts/2014/1/27/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item><item><title>Launch Gitk displaying all branches</title><link>https://www.tartley.com/posts/2010/12/31/launch-gitk-displaying-all-extant-branches/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; All of the below is made totally redundant by simply using
+&lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>software</category><guid>https://www.tartley.com/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item><item><title>Launch Gitk displaying all branches</title><link>https://www.tartley.com/launch-gitk-displaying-all-extant-branches/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; All of the below is made totally redundant by simply using
 &lt;code&gt;gitk --all&lt;/code&gt;. Thanks Russel!&lt;/p&gt;
 &lt;p&gt;When I launch Gitk, it just displays the current branch. To display
 other branches, you must name them on the command line. To display all
@@ -435,11 +407,9 @@ existing branches, you need to find out all the branch names:&lt;/p&gt;
 * master
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Then laboriously type them in to the gitk command line:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ gitk create-sql-dev formula-rewrite master
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Alternatively, save this Bash snippet in a script on your PATH. I call
 mine gitka, for 'all branches':&lt;/p&gt;
@@ -448,14 +418,13 @@ mine gitka, for 'all branches':&lt;/p&gt;
 &lt;span class="k"&gt;for&lt;/span&gt; b in &lt;span class="s2"&gt;"`git branch`"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$b&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; tr -d &lt;span class="s2"&gt;"*"&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; xargs gitk
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;&lt;img alt="Gitk displaying all branches, not just the current ('master' in bold)" src="https://www.tartley.com/files/2010/12/gitk-all-branches.png" title="gitk-all-branches"&gt;&lt;/p&gt;
 &lt;p&gt;This works on Windows too, if you save it as 'gitka.sh', and have Cygwin
 installed and associate the .sh filename extension with the Cygwin Bash
 executable. You can then run it as 'gitka' from a Windows command prompt
 thingy. If you then use 'ln -s gitka.sh gitka', then you can also run it
 as just 'gitka' from a Cygwin bash prompt too - without this you would
-have had to type out the full 'gitka.sh'.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>mswin-dev</category><category>software</category><guid>https://www.tartley.com/posts/2010/12/31/launch-gitk-displaying-all-extant-branches/</guid><pubDate>Fri, 31 Dec 2010 18:25:31 GMT</pubDate></item><item><title>A Guide to GIT using spatial analogies</title><link>https://www.tartley.com/posts/2010/12/15/a-guide-to-git-using-spatial-analogies/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Some developers find Git takes a little getting used to, claiming that
+have had to type out the full 'gitka.sh'.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>mswin-dev</category><category>software</category><guid>https://www.tartley.com/launch-gitk-displaying-all-extant-branches/</guid><pubDate>Fri, 31 Dec 2010 18:25:31 GMT</pubDate></item><item><title>A Guide to GIT using spatial analogies</title><link>https://www.tartley.com/a-guide-to-git-using-spatial-analogies/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Some developers find Git takes a little getting used to, claiming that
 it is conceptually convoluted compared to other distributed version
 control systems. I used to number myself amongst them.&lt;/p&gt;
 &lt;p&gt;Happily, I've found that a couple of simple spatial analogies have made
@@ -475,4 +444,4 @@ commentary&lt;/a&gt;
 on reddit.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Thanks folks. You've made my usual one or two hundred daily
 visitors look kinda paltry:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="spike in daily traffic graph" src="https://www.tartley.com/files/2010/12/daily-traffic.png" title="daily-traffic"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>software</category><guid>https://www.tartley.com/posts/2010/12/15/a-guide-to-git-using-spatial-analogies/</guid><pubDate>Wed, 15 Dec 2010 20:40:14 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;img alt="spike in daily traffic graph" src="https://www.tartley.com/files/2010/12/daily-traffic.png" title="daily-traffic"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>software</category><guid>https://www.tartley.com/a-guide-to-git-using-spatial-analogies/</guid><pubDate>Wed, 15 Dec 2010 20:40:14 GMT</pubDate></item></channel></rss>

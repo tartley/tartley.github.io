@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about terminal)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/terminal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 16 Oct 2020 00:44:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>More Colored Terminal text on Windows: AnsiCon</title><link>https://www.tartley.com/posts/2010/7/8/more-colored-terminal-text-on-windows-ansicon/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;A reminder for myself:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about terminal)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/terminal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Oct 2020 18:54:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>More Colored Terminal text on Windows: AnsiCon</title><link>https://www.tartley.com/more-colored-terminal-text-on-windows-ansicon/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;A reminder for myself:&lt;/p&gt;
 &lt;p&gt;ANSI escape characters don't work properly in Windows terminals:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Before: Raw ANSI codes. Not nice." src="https://www.tartley.com/files/2010/07/ansicon00-before.png"&gt;&lt;/p&gt;
 &lt;p&gt;To make them work properly, use
@@ -7,7 +7,6 @@
 permanent (eg. &lt;code&gt;%ProgramFiles%\ansicon&lt;/code&gt;) and install it with:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;ansicon.exe -i&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;start a new terminal, and lo:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="After: Pretty." src="https://www.tartley.com/files/2010/07/ansicon01-working.png"&gt;&lt;/p&gt;
@@ -31,7 +30,6 @@ example customise 'hg diff' by editing \~/.hgrc:&lt;/p&gt;
 &lt;span class="l l-Scalar l-Scalar-Plain"&gt;diff.changed = yellow bold&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;&lt;img alt="Fine-tuned" src="https://www.tartley.com/files/2010/07/ansicon02-tuned.png"&gt;&lt;/p&gt;
 &lt;p&gt;ANSI is correctly stripped out if the output of a program is not a
 terminal, so the colored output won't interfere with saving to files nor
@@ -44,8 +42,7 @@ environment variable PROMPT:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;set PROMPT=$E[0;36m$P$_$E[36;1m$G$E[0m$S&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;&lt;img alt="Colored Prompt" src="https://www.tartley.com/files/2010/07/ansicon04-prompt.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://tartley.com/?p=1062"&gt;Multiple&lt;/a&gt;
 &lt;a href="http://tartley.com/?p=863"&gt;posts&lt;/a&gt; on colors and terminal text is
-perhaps a bit obsessive of me. I think I'm all done now.&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>terminal</category><guid>https://www.tartley.com/posts/2010/7/8/more-colored-terminal-text-on-windows-ansicon/</guid><pubDate>Thu, 08 Jul 2010 19:07:09 GMT</pubDate></item></channel></rss>
+perhaps a bit obsessive of me. I think I'm all done now.&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>terminal</category><guid>https://www.tartley.com/more-colored-terminal-text-on-windows-ansicon/</guid><pubDate>Thu, 08 Jul 2010 19:07:09 GMT</pubDate></item></channel></rss>

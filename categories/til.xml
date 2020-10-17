@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about til)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Oct 2020 05:34:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: ‰ is per mille</title><link>https://www.tartley.com/posts/2020/til-per-mille/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;‰ or &lt;em&gt;'per mille'&lt;/em&gt; means parts per thousand.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about til)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Oct 2020 18:27:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/til-git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've previously only ever used git's regujlar &lt;em&gt;lightweight&lt;/em&gt; tags, created with
+&lt;code&gt;git tag TAGNAME&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Today I learned about &lt;em&gt;annotated&lt;/em&gt; tags, created with &lt;code&gt;git tag -a -m "MESSAGE"
+TAGNAME&lt;/code&gt;. (If you don't specify &lt;code&gt;-m MESSAGE&lt;/code&gt;, git annoyingly prompts you for
+one.)&lt;/p&gt;
+&lt;p&gt;Annotated tags store the creator, created timestamp, and the message. This
+might occasionally be useful for understanding what happened. A release tagged
+this way shows us who created the release, and when, which might differ from
+when the commit was created.&lt;/p&gt;
+&lt;p&gt;My habitual way of pushing tags to the sever:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;git push --tags
+&lt;/pre&gt;
+&lt;p&gt;is slightly broken, in that it pushes &lt;em&gt;all&lt;/em&gt; tags. Some tags might be intended
+as private development state. Some of them might be unreachable in the origin
+repo.&lt;/p&gt;
+&lt;p&gt;To fix this, git push introduced: &lt;code&gt;--follow-tags&lt;/code&gt;, which aims to address these
+issues by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Only pushing annotated tags (hence, lightweight tags can be used as local,
+  private state)&lt;/li&gt;
+&lt;li&gt;Only pushing tags that are on an ancestor of the commit being pushed. Hence
+  no unreachable tags are created on the origin.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Or alternatively, just push the tag name directly:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;git push TAGAME
+&lt;/pre&gt;
+&lt;p&gt;Upshot: Use regular lightweight tags for private local state. Never &lt;code&gt;git push
+--tags&lt;/code&gt;. For public shared tagging, such as releases, use annotated tags,
+pushed either individually by name, or using &lt;code&gt;--follow-tags&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>tags</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/til-git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>TIL: ‰ is per mille</title><link>https://www.tartley.com/til-per-mille/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;‰ or &lt;em&gt;'per mille'&lt;/em&gt; means parts per thousand.&lt;/p&gt;
 &lt;p&gt;I wasn't aware of it until today when I idly Googled "permil", my imagined
 variation on "percent", to find that this is one of the many spellings of
 a real thing. Rarely used in English, but more common in other European
-languages.&lt;/p&gt;&lt;/div&gt;</description><category>english</category><category>math</category><category>til</category><guid>https://www.tartley.com/posts/2020/til-per-mille/</guid><pubDate>Sat, 17 Oct 2020 05:25:45 GMT</pubDate></item></channel></rss>
+languages.&lt;/p&gt;
+&lt;p&gt;Now that I see the symbol, I remember seeing it as a child, on an old
+typewriter that my Grandfather used. What's old is new.&lt;/p&gt;&lt;/div&gt;</description><category>english</category><category>math</category><category>til</category><guid>https://www.tartley.com/til-per-mille/</guid><pubDate>Sat, 17 Oct 2020 05:25:45 GMT</pubDate></item></channel></rss>

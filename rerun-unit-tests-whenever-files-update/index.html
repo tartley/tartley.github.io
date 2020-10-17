@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rerun unit tests whenever files update | tartley.com</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="https://www.tartley.com/rerun-unit-tests-whenever-files-update/">
+<link rel="icon" href="../welcome.gif" sizes="16x16">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
+<link rel="prev" href="../flying-high-opengl-from-python-part-2/" title="Flying High: OpenGL from Python, Part 2" type="text/html">
+<link rel="next" href="../converting-any-repository-fom-svn-to-hg-on-windows/" title="Converting any repository from Svn to Hg on Windows" type="text/html">
+<meta property="og:site_name" content="tartley.com">
+<meta property="og:title" content="Rerun unit tests whenever files update">
+<meta property="og:url" content="https://www.tartley.com/rerun-unit-tests-whenever-files-update/">
+<meta property="og:description" content="In which I once again indulge my obscure command-line fetish.
+I often spend hours of my day cycling through:
+
+Edit code and its unit tests
+Save my changes
+Push a button or change window focus to expli">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2010-10-15T01:43:33-05:00">
+<meta property="article:tag" content="mswin-dev">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="software">
+<meta property="article:tag" content="testing">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../categories/">Tags</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+                </li>
+<li>
+<a href="../pages/about/">About</a>
+
+                
+            </li>
+</ul>
+<!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Rerun unit tests whenever files update</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2010-10-15T01:43:33-05:00" itemprop="datePublished" title="2010-10-15 01:43">2010-10-15 01:43</time></a>
+            </p>
+                <p class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/rerun-unit-tests-whenever-files-update.html">Comments</a>
+
+
+            
+        </p>
+</div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p><em>In which I once again indulge my obscure command-line fetish.</em></p>
+<p>I often spend hours of my day cycling through:</p>
+<ul>
+<li>Edit code and its unit tests</li>
+<li>Save my changes</li>
+<li>Push a button or change window focus to explicitly re-run the code's
+    unit tests.</li>
+</ul>
+<p>Oh frabjous day, the grinding manual labour of the last of these three
+steps can now be banished forever, courtesy of <code>rerun</code>, a command line
+Python script that re-runs a given command whenever it detects changes
+to any of the files in the current directory, or its subdirectories.</p>
+<p><strong>Update</strong>: It's Python 2.7, and works great on Windows XP, Macs and
+Ubuntu.</p>
+<p>For example: I had previously bound f6 in Vim to 'run the current file's
+unit tests. Now I've bound shift-f6 to <code>rerun</code> the current file's
+unit tests in a new console window. This pops up a new window showing
+the test results. I then continue editing in Vim, and whenever I hit
+save, the unit tests are re-run in the other window. All the while the
+focus stays on my editor. It's really sweet!</p>
+<p>Thanks for the original idea goes to to the bash command <code>watch</code>, and an
+old (now offline) blog post by Jeff Winkler.</p>
+<p><a href="https://bitbucket.org/tartley/rerun">https://bitbucket.org/tartley/rerun</a></p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/mswin-dev/" rel="tag">mswin-dev</a></li>
+            <li><a class="tag p-category" href="../categories/python/" rel="tag">python</a></li>
+            <li><a class="tag p-category" href="../categories/software/" rel="tag">software</a></li>
+            <li><a class="tag p-category" href="../categories/testing/" rel="tag">testing</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../flying-high-opengl-from-python-part-2/" rel="prev" title="Flying High: OpenGL from Python, Part 2">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../converting-any-repository-fom-svn-to-hg-on-windows/" rel="next" title="Converting any repository from Svn to Hg on Windows">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="tartley",
+            disqus_url="https://www.tartley.com/rerun-unit-tests-whenever-files-update/",
+        disqus_title="Rerun unit tests whenever files update",
+        disqus_identifier="cache/posts/rerun-unit-tests-whenever-files-update.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="tartley";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer"></footer>
+</div>
+</div>
+
+            <script src="../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

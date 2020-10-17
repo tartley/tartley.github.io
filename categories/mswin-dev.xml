@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about mswin-dev)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/mswin-dev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 16 Oct 2020 00:44:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>£ key in Windows on a US laptop keyboard, done right.</title><link>https://www.tartley.com/posts/2011/7/10/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The usual solution to typing non-US characters on a US keyboard in
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about mswin-dev)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/mswin-dev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Oct 2020 18:54:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>£ key in Windows on a US laptop keyboard, done right.</title><link>https://www.tartley.com/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The usual solution to typing non-US characters on a US keyboard in
 Windows is to hold left-alt, then type on the numeric keypad:&lt;/p&gt;
 &lt;p&gt;£   Left-alt + 0163&lt;/p&gt;
 &lt;p&gt;€   Left-alt + 0128&lt;/p&gt;
@@ -27,7 +27,7 @@ which is exactly like 'US', but with the addition of £ on the key
 right-alt + 3:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/files/2011/07/windows-US-keyboard-layout-with-pound-on-right-alt-3.zip"&gt;windows-US-keyboard-layout-with-pound-on-right-alt-3&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The source .klc file is in there, so you could add your own tweaks on
-top of that.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><guid>https://www.tartley.com/posts/2011/7/10/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</guid><pubDate>Sun, 10 Jul 2011 18:06:34 GMT</pubDate></item><item><title>Launch Gitk displaying all branches</title><link>https://www.tartley.com/posts/2010/12/31/launch-gitk-displaying-all-extant-branches/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; All of the below is made totally redundant by simply using
+top of that.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><guid>https://www.tartley.com/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</guid><pubDate>Sun, 10 Jul 2011 18:06:34 GMT</pubDate></item><item><title>Launch Gitk displaying all branches</title><link>https://www.tartley.com/launch-gitk-displaying-all-extant-branches/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; All of the below is made totally redundant by simply using
 &lt;code&gt;gitk --all&lt;/code&gt;. Thanks Russel!&lt;/p&gt;
 &lt;p&gt;When I launch Gitk, it just displays the current branch. To display
 other branches, you must name them on the command line. To display all
@@ -38,11 +38,9 @@ existing branches, you need to find out all the branch names:&lt;/p&gt;
 * master
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Then laboriously type them in to the gitk command line:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ gitk create-sql-dev formula-rewrite master
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Alternatively, save this Bash snippet in a script on your PATH. I call
 mine gitka, for 'all branches':&lt;/p&gt;
@@ -51,14 +49,13 @@ mine gitka, for 'all branches':&lt;/p&gt;
 &lt;span class="k"&gt;for&lt;/span&gt; b in &lt;span class="s2"&gt;"`git branch`"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$b&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; tr -d &lt;span class="s2"&gt;"*"&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; xargs gitk
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;&lt;img alt="Gitk displaying all branches, not just the current ('master' in bold)" src="https://www.tartley.com/files/2010/12/gitk-all-branches.png" title="gitk-all-branches"&gt;&lt;/p&gt;
 &lt;p&gt;This works on Windows too, if you save it as 'gitka.sh', and have Cygwin
 installed and associate the .sh filename extension with the Cygwin Bash
 executable. You can then run it as 'gitka' from a Windows command prompt
 thingy. If you then use 'ln -s gitka.sh gitka', then you can also run it
 as just 'gitka' from a Cygwin bash prompt too - without this you would
-have had to type out the full 'gitka.sh'.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>mswin-dev</category><category>software</category><guid>https://www.tartley.com/posts/2010/12/31/launch-gitk-displaying-all-extant-branches/</guid><pubDate>Fri, 31 Dec 2010 18:25:31 GMT</pubDate></item><item><title>'Go to Definition' in Vim for Python using Ctags, Done Right</title><link>https://www.tartley.com/posts/2010/12/16/go-to-definition-in-vim-for-python-using-ctags-on-windows/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;How to set up and configure Vim to use tags for Python development so
+have had to type out the full 'gitka.sh'.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>mswin-dev</category><category>software</category><guid>https://www.tartley.com/launch-gitk-displaying-all-extant-branches/</guid><pubDate>Fri, 31 Dec 2010 18:25:31 GMT</pubDate></item><item><title>'Go to Definition' in Vim for Python using Ctags, Done Right</title><link>https://www.tartley.com/go-to-definition-in-vim-for-python-using-ctags-on-windows/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;How to set up and configure Vim to use tags for Python development so
 that it doesn't suck.&lt;/p&gt;
 &lt;h3&gt;Install Ctags&lt;/h3&gt;
 &lt;p&gt;Get the latest version of &lt;a href="http://ctags.sourceforge.net/"&gt;ctags&lt;/a&gt;, put it
@@ -71,11 +68,9 @@ lot:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ctags -R .
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;or bind it to a key in your \~/.vimrc:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;map  :&lt;span class="p"&gt;!&lt;/span&gt;&lt;span class="k"&gt;start&lt;/span&gt; /min ctags &lt;span class="p"&gt;-&lt;/span&gt;R .
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;I like to set Vim's current working directory equal to the root of
 whatever project I'm working in, so now I can press f12 to update the
@@ -97,7 +92,6 @@ to inconveniently pop up, rather than just jumping to the tag you want.&lt;/p&gt
 --exclude&lt;span class="o"&gt;=&lt;/span&gt;build
 --exclude&lt;span class="o"&gt;=&lt;/span&gt;dist
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;The first line turns off tags generation for variables and imports. The
 second and third lines turn off generation of tags in the named dirs,
@@ -124,7 +118,6 @@ to the property.&lt;/p&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt;   :&lt;span class="k"&gt;call&lt;/span&gt; MatchCaseTag&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt;This Vim script was suggested in a comment by James Vega, in
 order to reliably restore the state of 'ignorecase' after doing the tag
 jump. Many thanks!&lt;/p&gt;
@@ -136,7 +129,7 @@ precisely the same name.&lt;/p&gt;
 &lt;p&gt;Much better.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Also see this post about adding stdlib and venv contents to
 your tags:
-&lt;a href="https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/"&gt;https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><category>vim</category><guid>https://www.tartley.com/posts/2010/12/16/go-to-definition-in-vim-for-python-using-ctags-on-windows/</guid><pubDate>Fri, 17 Dec 2010 02:39:01 GMT</pubDate></item><item><title>Rerun unit tests whenever files update</title><link>https://www.tartley.com/posts/2010/10/15/rerun-unit-tests-whenever-files-update/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;In which I once again indulge my obscure command-line fetish.&lt;/em&gt;&lt;/p&gt;
+&lt;a href="https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/"&gt;https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><category>vim</category><guid>https://www.tartley.com/go-to-definition-in-vim-for-python-using-ctags-on-windows/</guid><pubDate>Fri, 17 Dec 2010 02:39:01 GMT</pubDate></item><item><title>Rerun unit tests whenever files update</title><link>https://www.tartley.com/rerun-unit-tests-whenever-files-update/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;In which I once again indulge my obscure command-line fetish.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I often spend hours of my day cycling through:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Edit code and its unit tests&lt;/li&gt;
@@ -158,7 +151,7 @@ save, the unit tests are re-run in the other window. All the while the
 focus stays on my editor. It's really sweet!&lt;/p&gt;
 &lt;p&gt;Thanks for the original idea goes to to the bash command &lt;code&gt;watch&lt;/code&gt;, and an
 old (now offline) blog post by Jeff Winkler.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://bitbucket.org/tartley/rerun"&gt;https://bitbucket.org/tartley/rerun&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/posts/2010/10/15/rerun-unit-tests-whenever-files-update/</guid><pubDate>Fri, 15 Oct 2010 06:43:33 GMT</pubDate></item><item><title>More Colored Terminal text on Windows: AnsiCon</title><link>https://www.tartley.com/posts/2010/7/8/more-colored-terminal-text-on-windows-ansicon/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;A reminder for myself:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://bitbucket.org/tartley/rerun"&gt;https://bitbucket.org/tartley/rerun&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/rerun-unit-tests-whenever-files-update/</guid><pubDate>Fri, 15 Oct 2010 06:43:33 GMT</pubDate></item><item><title>More Colored Terminal text on Windows: AnsiCon</title><link>https://www.tartley.com/more-colored-terminal-text-on-windows-ansicon/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;A reminder for myself:&lt;/p&gt;
 &lt;p&gt;ANSI escape characters don't work properly in Windows terminals:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Before: Raw ANSI codes. Not nice." src="https://www.tartley.com/files/2010/07/ansicon00-before.png"&gt;&lt;/p&gt;
 &lt;p&gt;To make them work properly, use
@@ -166,7 +159,6 @@ old (now offline) blog post by Jeff Winkler.&lt;/p&gt;
 permanent (eg. &lt;code&gt;%ProgramFiles%\ansicon&lt;/code&gt;) and install it with:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;ansicon.exe -i&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;start a new terminal, and lo:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="After: Pretty." src="https://www.tartley.com/files/2010/07/ansicon01-working.png"&gt;&lt;/p&gt;
@@ -190,7 +182,6 @@ example customise 'hg diff' by editing \~/.hgrc:&lt;/p&gt;
 &lt;span class="l l-Scalar l-Scalar-Plain"&gt;diff.changed = yellow bold&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;&lt;img alt="Fine-tuned" src="https://www.tartley.com/files/2010/07/ansicon02-tuned.png"&gt;&lt;/p&gt;
 &lt;p&gt;ANSI is correctly stripped out if the output of a program is not a
 terminal, so the colored output won't interfere with saving to files nor
@@ -203,11 +194,10 @@ environment variable PROMPT:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;set PROMPT=$E[0;36m$P$_$E[36;1m$G$E[0m$S&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;&lt;img alt="Colored Prompt" src="https://www.tartley.com/files/2010/07/ansicon04-prompt.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://tartley.com/?p=1062"&gt;Multiple&lt;/a&gt;
 &lt;a href="http://tartley.com/?p=863"&gt;posts&lt;/a&gt; on colors and terminal text is
-perhaps a bit obsessive of me. I think I'm all done now.&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>terminal</category><guid>https://www.tartley.com/posts/2010/7/8/more-colored-terminal-text-on-windows-ansicon/</guid><pubDate>Thu, 08 Jul 2010 19:07:09 GMT</pubDate></item><item><title>colorama: Simple cross-platform Python API for colored terminal text</title><link>https://www.tartley.com/posts/2010/4/21/colorama-simple-cross-platform-python-api-for-colored-terminal-text/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Announcing new Python package, colorama:&lt;a href="http://pypi.python.org/pypi/colorama"&gt;\
+perhaps a bit obsessive of me. I think I'm all done now.&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>terminal</category><guid>https://www.tartley.com/more-colored-terminal-text-on-windows-ansicon/</guid><pubDate>Thu, 08 Jul 2010 19:07:09 GMT</pubDate></item><item><title>colorama: Simple cross-platform Python API for colored terminal text</title><link>https://www.tartley.com/colorama-simple-cross-platform-python-api-for-colored-terminal-text/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Announcing new Python package, colorama:&lt;a href="http://pypi.python.org/pypi/colorama"&gt;\
 http://pypi.python.org/pypi/colorama&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;ANSI escape character sequences have long been used to produce colored
 terminal text on Unix and Macs. Colorama makes this work on Windows,
@@ -233,7 +223,7 @@ on gnome-terminal:&lt;/p&gt;
 which have since been fixed. The only outstanding issue is that colorama
 does not support 'dim' text on Windows - it looks just the same as
 'normal' text, and as far as I know, will never be able to.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://pypi.python.org/pypi/colorama"&gt;http://pypi.python.org/pypi/colorama&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><guid>https://www.tartley.com/posts/2010/4/21/colorama-simple-cross-platform-python-api-for-colored-terminal-text/</guid><pubDate>Wed, 21 Apr 2010 15:18:30 GMT</pubDate></item><item><title>Acceptance Testing .NET Applications using IronPython</title><link>https://www.tartley.com/posts/2010/3/16/acceptance-testing-net-applications-using-ironpython/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://pypi.python.org/pypi/colorama"&gt;http://pypi.python.org/pypi/colorama&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><guid>https://www.tartley.com/colorama-simple-cross-platform-python-api-for-colored-terminal-text/</guid><pubDate>Wed, 21 Apr 2010 15:18:30 GMT</pubDate></item><item><title>Acceptance Testing .NET Applications using IronPython</title><link>https://www.tartley.com/acceptance-testing-net-applications-using-ironpython/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
 &lt;p&gt;The following was originally published in the excellent &lt;a href="http://pythonmagazine.com/"&gt;Python
 Magazine&lt;/a&gt;. Thier contractual exclusivity
 period has now long expired, so here it comes again. Many thanks to my
@@ -358,7 +348,6 @@ derived from Python's &lt;code&gt;unittest.TestCase&lt;/code&gt;.&lt;/p&gt;
     &lt;span class="n"&gt;run_test&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;The call to &lt;code&gt;fail()&lt;/code&gt; at the end of this test is a good habit to develop.
 It stops unfinished tests like this one from passing, making them easy
 to accidentally overlook and be forgotten, invisible amongst a large
@@ -374,13 +363,11 @@ manually, either by setting an environment variable:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;set IRONPYTHONPATH=C:\Python25\Lib&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;or by appending this directory to &lt;code&gt;sys.path&lt;/code&gt; inside your IronPython
 install's &lt;code&gt;Lib\site.py&lt;/code&gt; file:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
 &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'C:\Python25\Lib'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Note that different versions of IronPython require different versions of
 the CPython standard library:&lt;/p&gt;
@@ -392,7 +379,6 @@ the CPython standard library:&lt;/p&gt;
 &lt;p&gt;Once this is done, test it out by starting &lt;code&gt;ipy.exe&lt;/code&gt;, and typing:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;unittest&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;If this works without complaint, exit &lt;em&gt;ipy.exe&lt;/em&gt;, and run the nascent
 acceptance test above, using the DOS command-line:&lt;/p&gt;
@@ -411,7 +397,6 @@ acceptance test above, using the DOS command-line:&lt;/p&gt;
 
 &lt;span class="n"&gt;FAILED&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;failures&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;h3&gt;About IronPython&lt;/h3&gt;
 &lt;p&gt;IronPython is a .NET based reimplementation of the Python language. It
@@ -432,7 +417,6 @@ module, which is built-in to IronPython:&lt;/p&gt;
 &lt;span class="n"&gt;clr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddReference&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'System.Windows.Forms'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;This &lt;code&gt;AddReference()&lt;/code&gt; function behaves just the same regardless of
 whether you are referencing assemblies from the .NET standard library
 (as shown here), 3rd party DLLs, or your own .NET projects.&lt;/p&gt;
@@ -445,7 +429,6 @@ assembly is referenced, we can import code from the
 &lt;span class="n"&gt;form&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Form&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;form&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;This will display an instance of the .NET form class on screen. Note
 that the form does not yet respond to events. For that, we will add a
@@ -536,7 +519,6 @@ the main form.&lt;/p&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;&lt;em&gt;Program.cs&lt;/em&gt; and its respective forms can be compiled to a .NET
 assembly, &lt;em&gt;WizBang.dll&lt;/em&gt;. When the application is run normally by users,
 &lt;code&gt;Program.Start()&lt;/code&gt; is called by a second Visual Studio project,
@@ -569,7 +551,6 @@ handler on the main form's &lt;em&gt;Closed&lt;/em&gt; event ensures this:&lt;/p
     &lt;span class="n"&gt;Program&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Stop&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;h3&gt;Invoking the SUT on a New Thread&lt;/h3&gt;
 &lt;p&gt;If the test calls &lt;code&gt;Program.Start()&lt;/code&gt; directly, as described above, then
@@ -649,7 +630,6 @@ library we use.&lt;/p&gt;
         &lt;span class="n"&gt;TestCase&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tearDown&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Python's unittest module will call AcceptanceTest's &lt;code&gt;setUp()&lt;/code&gt; method
 before each test method is run, so this is an ideal place to create a
 new thread and invoke &lt;code&gt;Program.Start()&lt;/code&gt; on it. The new thread is given a
@@ -688,7 +668,6 @@ of the test method, before the fail:&lt;/p&gt;
     &lt;span class="n"&gt;run_test&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Running this test now displays the SUT's form for the duration of the
 sleep, and during that time it is responsive to move and resize events.
 Unlike the last version, this test proceeds to execute while the form is
@@ -715,7 +694,6 @@ requirement of the acceptance test as follows:&lt;/p&gt;
 &lt;span class="n"&gt;mainform&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AllForms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Visible&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'form should be visible'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;On first glance, this appears to work - you can run this and this assert
 will pass. However, there is an insidious problem here, because it
@@ -753,7 +731,6 @@ verbose:&lt;/p&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertTrue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;getVisible&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s1"&gt;'form not visible'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Note that the location of &lt;code&gt;CallTarget0&lt;/code&gt; was changed between IronPython
 versions 1 and 2. The location of the import will need to change for the
 above code to work on IronPython 1.&lt;/p&gt;
@@ -770,12 +747,10 @@ thread:&lt;/p&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CallTarget0&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Which can be used to reduce the length of our assertion to:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 1. Alice starts WizBang. The window appears.&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertTrue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;on_gui&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Visible&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s1"&gt;'form not visible'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Even so, wrapping access to each attribute individually like is still a
 little fiddly, especially if it is happening many times. To improve
@@ -785,7 +760,6 @@ example, consider the second user story requirement:&lt;/p&gt;
 &lt;span class="c1"&gt;#    'one', 'two', 'three'. Nothing is selected.&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;on_gui&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assert_list_at_startup&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;The function &lt;code&gt;assert_list_at_startup()&lt;/code&gt;, shown below, can now have
 access to properties on all controls without using &lt;code&gt;Invoke()&lt;/code&gt;, since it
@@ -798,7 +772,6 @@ runs entirely on the GUI thread:&lt;/p&gt;
     &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Items&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="s1"&gt;'two'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'list[1] wrong'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Items&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="s1"&gt;'three'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'list[2] wrong'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;If any of these assertions should fail, raised exceptions are correctly
 propagated back to our test thread. The only problem is that the stack
@@ -819,7 +792,6 @@ a decorator. This can be provided by our AcceptanceTest module:&lt;/p&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;wrapper&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;This decorator expects to be applied to methods on &lt;code&gt;AcceptanceTest&lt;/code&gt;, so
 that it can call &lt;code&gt;.on_gui()&lt;/code&gt; on this method's first parameter. if the
 decorated function is not a method on AcceptanceTest, the decorator will
@@ -833,14 +805,12 @@ access to properties of controls, can now be decorated:&lt;/p&gt;
     &lt;span class="c1"&gt;# etc&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Such a decorated method can then be conveniently called by the
 acceptance test:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 2. She sees the three default list entries:&lt;/span&gt;
 &lt;span class="c1"&gt;#    'one', 'two', 'three'. Nothing is selected.&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assert_list_at_startup&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;It is tempting at this point to simply decorate our entire test method
 with &lt;code&gt;@guithread&lt;/code&gt;, so that the whole thing can execute on the GUI thread
@@ -858,7 +828,6 @@ some input to the SUT, simulating the actions of a user:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 3. She clicks the 'AddButton'&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Buttons provide a method specifically to simulate being clicked, which
 our test can use. A small utility method on &lt;code&gt;AcceptanceTest&lt;/code&gt; calls this
 on the GUI thread:&lt;/p&gt;
@@ -867,12 +836,10 @@ on the GUI thread:&lt;/p&gt;
     &lt;span class="n"&gt;form&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Controls&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;buttonName&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PerformClick&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;This can be used in our acceptance test:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 3. She clicks the 'AddButton'&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;click_button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'addButton'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Running the test will now correctly click the &lt;em&gt;add item&lt;/em&gt; button.
 However, the Wizbang application does not yet have any button click
@@ -893,7 +860,6 @@ assertion will fail:&lt;/p&gt;
     &lt;span class="s1"&gt;'additem form should be visible'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;To make this requirement pass, the following click handler is attached
 to the &lt;em&gt;Add Item&lt;/em&gt; button on WizBang's main form. We're going to skip
 unit tests for this article, but on a real project, this is the perfect
@@ -908,7 +874,6 @@ acceptance test both pass looks like this:&lt;/p&gt;
     &lt;span class="n"&gt;AllForms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addItemForm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Show&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;In a real application, this handler would need to be a little more
 robust, able to handle multiple clicks of the button, and forms which
@@ -927,14 +892,12 @@ implemented using the techniques discussed thus far:&lt;/p&gt;
     &lt;span class="s2"&gt;"additem form should close"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Where &lt;code&gt;set_text()&lt;/code&gt; is a small helper function provided by
 &lt;code&gt;AcceptanceTest&lt;/code&gt;:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@guithread&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;set_text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;textbox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;textbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Running this test will successfully populate the TextBox with the word
 "hello". However, this is a fairly poor acceptance test. If the TextBox
@@ -955,7 +918,6 @@ for these conditions:&lt;/p&gt;
     &lt;span class="n"&gt;textbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Running this test does actually reveal a genuine error - the &lt;em&gt;add item&lt;/em&gt;
 form's textbox does not have focus. A real user, on running WizBang,
 would have to click or use the tab key to give the textbox focus, a step
@@ -969,13 +931,11 @@ prefer that our user didn't have to do this either, so we add an
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;This makes the acceptance test pass. Implementing the next test
 requirement is straightforward:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 6. The new item is at the end of the list, selected.&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assert_list_after_add&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;where:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@guithread&lt;/span&gt;
@@ -985,7 +945,6 @@ requirement is straightforward:&lt;/p&gt;
     &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Items&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="s1"&gt;'hello'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'list[3] wrong'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SelectedIndex&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'4th should be selected'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;This is asserting that the text we typed into the &lt;em&gt;add item&lt;/em&gt; form
 ("hello") is added to the end of the main form's list, and is selected.
@@ -1001,7 +960,6 @@ the &lt;em&gt;add item&lt;/em&gt; form:&lt;/p&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Finally, the test closes down the application and ends:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 7. She clicks the 'CloseButton'&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;click_button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainForm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'closeButton'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1009,7 +967,6 @@ the &lt;em&gt;add item&lt;/em&gt; form:&lt;/p&gt;
 &lt;span class="c1"&gt;# 8. The application closes&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertTrue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainForm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IsDisposed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'mainform should close'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Notice how access to &lt;code&gt;mainForm.IsDisposed&lt;/code&gt; is not invoked on the GUI
 thread. By this point in the test, all being well, the main form has
@@ -1023,7 +980,6 @@ form's &lt;em&gt;Close&lt;/em&gt; button:&lt;/p&gt;
     &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;h3&gt;Simulating Mouse and Keyboard Events&lt;/h3&gt;
 &lt;p&gt;Directly calling controls' methods and setting their properties, as
@@ -1068,7 +1024,6 @@ by declaring them as follows:&lt;/p&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;It turns out that populating the large &lt;code&gt;Input&lt;/code&gt; data structure to be
 passed to this function takes another 50 lines of code. Similar
@@ -1125,7 +1080,7 @@ project's current status and velocity.&lt;/p&gt;
 purposes, should check out &lt;a href="http://www.ironpythoninaction.com/"&gt;IronPython in
 Action&lt;/a&gt;, a pragmatic and densely
 informative new book by Michael Foord, which caters to both Python and
-.NET developers.&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/posts/2010/3/16/acceptance-testing-net-applications-using-ironpython/</guid><pubDate>Tue, 16 Mar 2010 17:13:15 GMT</pubDate></item><item><title>Howto bundle binary dependancies with py2exe, et al.</title><link>https://www.tartley.com/posts/2010/1/27/howto-bundle-binary-dependancies-with-py2exe-et-al/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Hey. I notice that
+.NET developers.&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/acceptance-testing-net-applications-using-ironpython/</guid><pubDate>Tue, 16 Mar 2010 17:13:15 GMT</pubDate></item><item><title>Howto bundle binary dependancies with py2exe, et al.</title><link>https://www.tartley.com/howto-bundle-binary-dependancies-with-py2exe-et-al/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Hey. I notice that
 &lt;a href="https://lists.sourceforge.net/lists/listinfo/py2exe-users"&gt;py2exe-users&lt;/a&gt;
 has a recent question that seems to be about how to correctly bundle the
 required Microsoft C runtime DLL with executables generated from Python
@@ -1135,7 +1090,7 @@ best as I was able. Since people are still asking questions about it, I
 figured I'd promote that change a little.&lt;/p&gt;
 &lt;p&gt;Check out the new, revamped &lt;a href="http://www.py2exe.org/index.cgi/Tutorial"&gt;py2exe tutorial
 page&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;That is all.&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><guid>https://www.tartley.com/posts/2010/1/27/howto-bundle-binary-dependancies-with-py2exe-et-al/</guid><pubDate>Thu, 28 Jan 2010 04:26:00 GMT</pubDate></item><item><title>MSWindows Programming : Propogating child process exit values out of .bat scripts</title><link>https://www.tartley.com/posts/2010/1/21/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;"God &lt;em&gt;dammit&lt;/em&gt;. Why won't you just DO what I WANT you hopeless pile of
+&lt;p&gt;That is all.&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><guid>https://www.tartley.com/howto-bundle-binary-dependancies-with-py2exe-et-al/</guid><pubDate>Thu, 28 Jan 2010 04:26:00 GMT</pubDate></item><item><title>MSWindows Programming : Propogating child process exit values out of .bat scripts</title><link>https://www.tartley.com/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;"God &lt;em&gt;dammit&lt;/em&gt;. Why won't you just DO what I WANT you hopeless pile of
 crap!"&lt;/p&gt;
 &lt;p&gt;So goes the refrain. I think you know where I'm coming from. Yet again,
 I have ended up learning far more about crappy DOS scripting than I ever
@@ -1152,13 +1107,12 @@ now be invoked by typing 'toolname', just like on other platforms, as
 opposed to 'toolname.py' or even 'python toolname.py'. So I wrap my
 Python script 'toolname.py' with a new file, 'toolname.bat', living in
 the same directory:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="k"&gt;first&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;our&lt;/span&gt; &lt;span class="n"&gt;tool&lt;/span&gt;
-&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="ss"&gt;"%~dp0%~n0.py"&lt;/span&gt; &lt;span class="o"&gt;%*&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;our&lt;/span&gt; &lt;span class="k"&gt;tool&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="s2"&gt;"%~dp0%~n0.py"&lt;/span&gt; &lt;span class="o"&gt;%*&lt;/span&gt;
 
-&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="k"&gt;any&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt;
-&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="n"&gt;THIS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;THAT&lt;/span&gt;
+&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="n"&gt;then&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;any&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt;
+&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;THIS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;THAT&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;The %\~dp0 and %\~n0 gobbledygook is a batch file way of referencing the
 same drive, path and filename (minus extension) as the current script,
@@ -1168,13 +1122,12 @@ depend on what goes on inside toolname.py. So I have that Python write a
 new batch file to the temp directory, containing all the 'set' commands
 which will replace the hardcoded 'set THIS=THAT' in the above script.
 Then we call that new temporary bat file from here:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="k"&gt;first&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;our&lt;/span&gt; &lt;span class="n"&gt;tool&lt;/span&gt;
-&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="ss"&gt;"%~dp0%~n0.py"&lt;/span&gt; &lt;span class="o"&gt;%*&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;our&lt;/span&gt; &lt;span class="k"&gt;tool&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="s2"&gt;"%~dp0%~n0.py"&lt;/span&gt; &lt;span class="o"&gt;%*&lt;/span&gt;
 
-&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="k"&gt;any&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt;
-&lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;Temp&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;%~&lt;/span&gt;&lt;span class="n"&gt;n0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;setvar&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bat&lt;/span&gt;
+&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="n"&gt;then&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;any&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt;
+&lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;Temp&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;\&lt;span class="o"&gt;%~&lt;/span&gt;&lt;span class="n"&gt;n0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;setvar&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bat&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Which is good enough. Presumably it will barf all over the place if run
 concurrently. But there's a more pressing problem. I need the exit value
@@ -1184,16 +1137,15 @@ command at the end is always successful.&lt;/p&gt;
 &lt;p&gt;One solution I've seen used is to remember the exit value from
 toolname.py, and then use the DOS exit command to propagate this value
 out to our caller:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="k"&gt;first&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;our&lt;/span&gt; &lt;span class="n"&gt;tool&lt;/span&gt;
-&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="ss"&gt;"%~dp0%~n0.py"&lt;/span&gt; &lt;span class="o"&gt;%*&lt;/span&gt;
-&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="n"&gt;EXITVAL&lt;/span&gt;&lt;span class="o"&gt;=%&lt;/span&gt;&lt;span class="n"&gt;ERRORLEVEL&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;our&lt;/span&gt; &lt;span class="k"&gt;tool&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="s2"&gt;"%~dp0%~n0.py"&lt;/span&gt; &lt;span class="o"&gt;%*&lt;/span&gt;
+&lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="n"&gt;EXITVAL&lt;/span&gt;&lt;span class="o"&gt;=%&lt;/span&gt;&lt;span class="n"&gt;ERRORLEVEL&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
 
-&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="k"&gt;any&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt;
-&lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;Temp&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;%~&lt;/span&gt;&lt;span class="n"&gt;n0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;setvar&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bat&lt;/span&gt;
+&lt;span class="p"&gt;::&lt;/span&gt; &lt;span class="n"&gt;then&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;any&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;environment&lt;/span&gt;
+&lt;span class="n"&gt;call&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;Temp&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;\&lt;span class="o"&gt;%~&lt;/span&gt;&lt;span class="n"&gt;n0&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;setvar&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bat&lt;/span&gt;
 
 &lt;span class="n"&gt;exit&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;EXITVAL&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;The problem with this is that 'exit' doesn't do what you think it does.
 It doesn't just stop interpreting the current script, rather it
@@ -1225,10 +1177,9 @@ need, and invoke it as the final command in your batch script:&lt;/p&gt;
 &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="s2"&gt;"import sys; sys.exit(&lt;/span&gt;&lt;span class="si"&gt;%E&lt;/span&gt;&lt;span class="s2"&gt;XITVAL%)"&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Bingo. I now have a Python process that can modify the environment of
 its invoking shell, and propagates the correct exit value out of the
-wrapping DOS script. [Short bow. Applause. Roses. etc.]&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>software</category><guid>https://www.tartley.com/posts/2010/1/21/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/</guid><pubDate>Fri, 22 Jan 2010 02:04:25 GMT</pubDate></item><item><title>My Fonts Look Crap. I blame Windows and ATI.</title><link>https://www.tartley.com/posts/2010/1/20/my-fonts-look-crap-i-blame-windows-and-ati/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I know, I &lt;em&gt;know&lt;/em&gt;. But I use Windows for 8 hours a day at work. So what
+wrapping DOS script. [Short bow. Applause. Roses. etc.]&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>software</category><guid>https://www.tartley.com/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/</guid><pubDate>Fri, 22 Jan 2010 02:04:25 GMT</pubDate></item><item><title>My Fonts Look Crap. I blame Windows and ATI.</title><link>https://www.tartley.com/my-fonts-look-crap-i-blame-windows-and-ati/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I know, I &lt;em&gt;know&lt;/em&gt;. But I use Windows for 8 hours a day at work. So what
 do you do?&lt;/p&gt;
 &lt;p&gt;Here's the poster-boy for programmer-friendly fonts, your friend and
 mine, everyone loves him, &lt;strong&gt;Inconsolata&lt;/strong&gt;:&lt;/p&gt;
@@ -1285,4 +1236,4 @@ might well give Opti a spin for a few days, see how it wears on me.
 Thanks for the suggestion Gerry!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Nowadays I use &lt;a href="https://github.com/ProgrammingFonts/ProgrammingFonts/tree/master/Dina"&gt;Dina&lt;/a&gt;,
 a monospaced bitmap font created by some obsessive with a penchant for
-microscopic fonts. It's absolutely perfect.&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>software</category><guid>https://www.tartley.com/posts/2010/1/20/my-fonts-look-crap-i-blame-windows-and-ati/</guid><pubDate>Thu, 21 Jan 2010 02:21:09 GMT</pubDate></item></channel></rss>
+microscopic fonts. It's absolutely perfect.&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>software</category><guid>https://www.tartley.com/my-fonts-look-crap-i-blame-windows-and-ati/</guid><pubDate>Thu, 21 Jan 2010 02:21:09 GMT</pubDate></item></channel></rss>

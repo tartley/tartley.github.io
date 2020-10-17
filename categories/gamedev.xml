@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about gamedev)</title><link>https://www.tartley.com/</link><description>Creating videogames.</description><atom:link href="https://www.tartley.com/categories/gamedev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 16 Oct 2020 00:44:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/posts/2010/8/3/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about gamedev)</title><link>https://www.tartley.com/</link><description>Creating videogames.</description><atom:link href="https://www.tartley.com/categories/gamedev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Oct 2020 18:54:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
 geometry to drive OpenGL from Python.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/flying-high-hobbyist-opengl-from-python"&gt;&lt;em&gt;&amp;lt;&amp;lt; Back to part 1&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Last time we got as far as creating some instances of our super-simple
@@ -21,7 +21,6 @@ existing ones, we need a simple composite shape:&lt;/p&gt;
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;children&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;child&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;matrices&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;orientation&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;A MultiShape contains a list of child Shapes, and a matrix for each
 child, indicating the child's position and orientation relative to the
@@ -51,7 +50,6 @@ the matrix of the relevant child shape:&lt;/p&gt;
     &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;There is an inefficiency to this. When MultiShapes are nested, I'm
 transforming each vertex once for every branch in the tree. It would be
 cheaper to just multiply the matrices of nested MultiShapes, and then
@@ -78,7 +76,6 @@ MultiShape:&lt;/p&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;&lt;img alt="A cluster of cubes, rendered in one glDrawElements call" src="https://www.tartley.com/files/2010/07/screen-cube-cluster2.png" title="A cluster of cubes, rendered in one glDrawElements call"&gt;&lt;/p&gt;
 &lt;p&gt;Another new factory function, &lt;em&gt;RingOf:&lt;/em&gt;&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;RingOf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;child&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -93,7 +90,6 @@ MultiShape:&lt;/p&gt;
         &lt;span class="n"&gt;multi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;child&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pos&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;orientation&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;returns copies of a given child shape, arranged in a ring, such as this
 ring of cubes:&lt;/p&gt;
@@ -115,7 +111,6 @@ into... um... &lt;em&gt;tri-axis-rings&lt;/em&gt;:&lt;/p&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;If you look carefully, you can make out some depth-buffer fighting where the
 three rings intersect, but I'm moving too fast to worry about that now.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Tri-axis rings" src="https://www.tartley.com/files/2010/07/screen-tri-ring.png"&gt;&lt;/p&gt;
@@ -129,7 +124,7 @@ affect the framerate? Let's investigate... How about a spherical glob of
 red blood cubes:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="A glob of red blood cubes" src="https://www.tartley.com/files/2010/08/screen-glob-red-cubes2.png"&gt;&lt;/p&gt;
 &lt;p&gt;It turns out I can get about 14,000 cubes (168,000 triangles)
-&lt;a href="https://www.tartley.com/posts/2010/8/3/flying-high-opengl-from-python-part-2/#update"&gt;[1]&lt;/a&gt; into a single MultiShape like this before the framerate
+&lt;a href="https://www.tartley.com/flying-high-opengl-from-python-part-2/#update"&gt;[1]&lt;/a&gt; into a single MultiShape like this before the framerate
 starts to drop. I'm still rendering these as regular ctypes arrays, not
 OpenGL vertex buffers (I don't think my hardware supports that), so all
 the geometry is being sent needlessly over the bus to the GPU every
@@ -150,7 +145,6 @@ frame.&lt;/p&gt;
         &lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;cluster&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;This creates a cluster of cubes, each one colored by its position in RGB
 space.&lt;/p&gt;
@@ -241,7 +235,7 @@ the best performance out of PyOpenGL. I've been back and updated the
 performance stats in this post, and hope to make another post about this
 at some point when I understand what I was doing wrong.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The demonstrated&lt;/em&gt; &lt;em&gt;code&lt;/em&gt; &lt;em&gt;is available at
-&lt;a href="https://github.com/tartley/gloopy"&gt;https://github.com/tartley/gloopy&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>graphics</category><category>presentations</category><category>python</category><guid>https://www.tartley.com/posts/2010/8/3/flying-high-opengl-from-python-part-2/</guid><pubDate>Tue, 03 Aug 2010 15:04:43 GMT</pubDate></item><item><title>Flying High: Hobbyist OpenGL from Python</title><link>https://www.tartley.com/posts/2010/7/31/flying-high-hobbyist-opengl-from-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;This is a transcript-from-memory (what I wish I'd said) of the talk I
+&lt;a href="https://github.com/tartley/gloopy"&gt;https://github.com/tartley/gloopy&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>graphics</category><category>presentations</category><category>python</category><guid>https://www.tartley.com/flying-high-opengl-from-python-part-2/</guid><pubDate>Tue, 03 Aug 2010 15:04:43 GMT</pubDate></item><item><title>Flying High: Hobbyist OpenGL from Python</title><link>https://www.tartley.com/flying-high-hobbyist-opengl-from-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;This is a transcript-from-memory (what I wish I'd said) of the talk I
 just gave at &lt;a href="http://www.europython.eu/"&gt;EuroPython&lt;/a&gt; 2010, for which I
 owe a debt of gratitude to Richard Jones for his last-minute moral
 support while wrestling with projectors and refresh rates; and to the
@@ -358,7 +352,6 @@ model coloured polyhedra using a simple Shape class:&lt;/p&gt;
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;face_colors&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;face_colors&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;An instance of this class, for example, might represent a yellow cube,
 or a tetrahedron with green and black faces, or any other coloured
 polyhedron we can imagine.&lt;/p&gt;
@@ -387,7 +380,6 @@ Shape:&lt;/p&gt;
     &lt;span class="n"&gt;face_colors&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;red&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;yellow&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
 &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;The integers in the 'faces' member are indices into the vertices list.
 So the triangular face, for example, is formed by linking vertices 2, 3
@@ -437,7 +429,6 @@ re-used vertex (including surface normals) are identical.&lt;/p&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;ArrayType&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;glverts&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;This uses a generator to produce the vertices in the order that we need
 them. 'ArrayType' shows the standard idiom to create a ctypes array - we
 take the datatype of the array elements, in this case GLfloat since our
@@ -472,7 +463,6 @@ considerably simpler algorithm:&lt;/p&gt;
     &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;We again use a generator, to simply join up the face's first vertex with
 all the other vertices, like this:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Tessellation of convex faces" src="https://www.tartley.com/files/2010/07/tessellation.png"&gt;&lt;/p&gt;
@@ -495,7 +485,6 @@ I need to take its length right afterwards anyway, so what the heck:&lt;/p&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;ArrayType&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;glindices&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;This is more complex than get_glvertices because it is performing both
 of the transformations described in steps 1 and 2. But it's still pretty
 straightforward. Note that the type of the index array will have change
@@ -515,7 +504,6 @@ vertex:&lt;/p&gt;
         &lt;span class="n"&gt;ArrayType&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;GLubyte&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num_glvertices&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;ArrayType&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;chain&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;glcolors&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;h3&gt;&lt;strong&gt;First Light&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;It's might seem like a teensy bit of a slog to get here, but it hasn't
@@ -538,7 +526,6 @@ Render.draw() method:&lt;/p&gt;
                 &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;glyph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;glindices&lt;/span&gt;
             &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;This is canonical OpenGL render code, so I'm not going to dissect it,
 but now we get some actual visible output:&lt;/p&gt;
@@ -566,7 +553,6 @@ straightforward, a tetrahedron (triangle-based pyramid):&lt;/p&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Shape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vertices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;faces&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;face_colors&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Which produces a tetrahedron:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="A tetrahedron" src="https://www.tartley.com/files/2010/07/screen-tetrahedron.png"&gt;&lt;/p&gt;
 &lt;p&gt;Then a cube factory:&lt;/p&gt;
@@ -584,7 +570,6 @@ straightforward, a tetrahedron (triangle-based pyramid):&lt;/p&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Shape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;verts&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;faces&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;face_colors&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;The six faces are quite evident, but the use of &lt;em&gt;itertools.product&lt;/em&gt; to
 produce the list of vertices perhaps deserves a bit of exposition. It's
 an inspired tip from &lt;a href="http://tzotzioy.blogspot.com/"&gt;Î¤Î–Î©Î¤Î–Î™ÎŸÎ¥&lt;/a&gt;.
@@ -594,7 +579,6 @@ Just to spell it out in longhand:&lt;/p&gt;
 &lt;span class="p"&gt;[(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;So there are the eight vertices of the cube, and that gets us the
 following:&lt;/p&gt;
@@ -634,7 +618,6 @@ Here's what Render.draw looks like when we fill that code in:&lt;/p&gt;
             &lt;span class="n"&gt;glPopMatrix&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Again, this is very standard OpenGL usage. To set an item's &lt;em&gt;position&lt;/em&gt;
 attribute, I'm going to use a bit of code that I already snuck into the
 demo without telling you about. It's the code that moves the camera
@@ -656,7 +639,6 @@ position is an orbit around the origin:&lt;/p&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Vec3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;The actual camera uses a slightly longer version I call WobblyOrbit (not
 shown), which operates in exactly the same way. Any 'mover' class, i.e.
 one that returns a Vec3 position when called, can be used to move the
@@ -675,7 +657,6 @@ camera, or any other item, around in space:&lt;/p&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mover&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;position&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mover&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Similarly, we can spin items using 'spinner' classes, that tweak an
 item's orientation as time goes by.&lt;/p&gt;
@@ -699,7 +680,7 @@ more complex shape. This will allow us to use algorithmic means to
 produce more fun geometry, and will also help us draw more complex
 shapes, composed of many simpler shapes, without requiring several
 separate OpenGL function calls for each of the simple shapes.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.tartley.com/flying-high-opengl-from-python-part-2"&gt;On to Part 2 &amp;gt;&amp;gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>graphics</category><category>presentations</category><category>python</category><guid>https://www.tartley.com/posts/2010/7/31/flying-high-hobbyist-opengl-from-python/</guid><pubDate>Sat, 31 Jul 2010 19:58:30 GMT</pubDate></item><item><title>Loving EuroPython Tutorials</title><link>https://www.tartley.com/posts/2010/7/19/loving-europython-tutorials/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've been loving the two days of tutorials preceding the EuroPython
+&lt;p&gt;&lt;a href="https://www.tartley.com/flying-high-opengl-from-python-part-2"&gt;On to Part 2 &amp;gt;&amp;gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>graphics</category><category>presentations</category><category>python</category><guid>https://www.tartley.com/flying-high-hobbyist-opengl-from-python/</guid><pubDate>Sat, 31 Jul 2010 19:58:30 GMT</pubDate></item><item><title>Loving EuroPython Tutorials</title><link>https://www.tartley.com/loving-europython-tutorials/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've been loving the two days of tutorials preceding the EuroPython
 conference. This morning I attended &lt;a href="http://www.mechanicalcat.net/richard/log"&gt;Richard
 Jones&lt;/a&gt;' splendid &lt;em&gt;Introduction
 to Game Programming&lt;/em&gt;. It was an absolute pleasure to be walked through
@@ -719,7 +700,7 @@ flickery animated engine thrust, that made me gurgle with delight.&lt;/p&gt;
 engine thrust, and created the asteroids themselves entirely from
 scratch in Gimp. They are just rotatable bitmaps, albeit designed in
 homage of vector graphics of yore, complete with simulated CRT glow.
-Brilliant!&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>graphics</category><category>python</category><guid>https://www.tartley.com/posts/2010/7/19/loving-europython-tutorials/</guid><pubDate>Mon, 19 Jul 2010 05:08:53 GMT</pubDate></item><item><title>Thief Level : Week 2</title><link>https://www.tartley.com/posts/2010/2/1/thief-level-week-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This week I spent a little while considering the backstory of the level,
+Brilliant!&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>graphics</category><category>python</category><guid>https://www.tartley.com/loving-europython-tutorials/</guid><pubDate>Mon, 19 Jul 2010 05:08:53 GMT</pubDate></item><item><title>Thief Level : Week 2</title><link>https://www.tartley.com/thief-level-week-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This week I spent a little while considering the backstory of the level,
 and now have at least a rudimentary scenario: Garrett the thief is
 taking an opportunistic foray into the local Shope of Curiosities,
 having heard that their prize exhibit, the McGuffin of Antioc, has been
@@ -794,7 +775,7 @@ rooms; staircase.) So at the current rate, it's roughly 28 weeks of
 work, which is double or triple what I'd planned on. Hopefully my rate
 of completing items will increase substantially as I get into the
 groove. I'll have to monitor this going forward, and slash scope if I
-can't drastically accelerate.&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>geek</category><guid>https://www.tartley.com/posts/2010/2/1/thief-level-week-2/</guid><pubDate>Mon, 01 Feb 2010 19:20:31 GMT</pubDate></item><item><title>Creating a Level for Thief 2</title><link>https://www.tartley.com/posts/2010/1/25/creating-a-level-for-thief-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;After &lt;a href="https://www.tartley.com/sinister-redux"&gt;Sinister Ducks&lt;/a&gt;, my &lt;a href="http://www.gamedevlessons.com/"&gt;videogame
+can't drastically accelerate.&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>geek</category><guid>https://www.tartley.com/thief-level-week-2/</guid><pubDate>Mon, 01 Feb 2010 19:20:31 GMT</pubDate></item><item><title>Creating a Level for Thief 2</title><link>https://www.tartley.com/creating-a-level-for-thief-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;After &lt;a href="https://www.tartley.com/sinister-redux"&gt;Sinister Ducks&lt;/a&gt;, my &lt;a href="http://www.gamedevlessons.com/"&gt;videogame
 creation mentor&lt;/a&gt; suggested that I create
 a mod for an existing game, in order to distance myself a little from
 the programming aspects of creating a game, and instead spend a little
@@ -870,4 +851,4 @@ makes it possible to fit a flight of stairs into a smaller space than
 would otherwise be possible, by allowing the bottom few steps to
 gracefully project out into the corridor.&lt;/p&gt;
 &lt;p&gt;Having finished this last night, I then dreamed about geometric
-operations on three dimensional spaces, which I think is a good sign.&lt;/p&gt;&lt;/div&gt;</description><category>creative</category><category>gamedev</category><category>geek</category><guid>https://www.tartley.com/posts/2010/1/25/creating-a-level-for-thief-2/</guid><pubDate>Mon, 25 Jan 2010 19:50:26 GMT</pubDate></item></channel></rss>
+operations on three dimensional spaces, which I think is a good sign.&lt;/p&gt;&lt;/div&gt;</description><category>creative</category><category>gamedev</category><category>geek</category><guid>https://www.tartley.com/creating-a-level-for-thief-2/</guid><pubDate>Mon, 25 Jan 2010 19:50:26 GMT</pubDate></item></channel></rss>

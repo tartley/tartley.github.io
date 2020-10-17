@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creating a Level for Thief 2 | tartley.com</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="https://www.tartley.com/creating-a-level-for-thief-2/">
+<link rel="icon" href="../welcome.gif" sizes="16x16">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
+<link rel="prev" href="../musicians-wake-up/" title="Musicians : wake up!" type="text/html">
+<link rel="next" href="../howto-bundle-binary-dependancies-with-py2exe-et-al/" title="Howto bundle binary dependancies with py2exe, et al." type="text/html">
+<meta property="og:site_name" content="tartley.com">
+<meta property="og:title" content="Creating a Level for Thief 2">
+<meta property="og:url" content="https://www.tartley.com/creating-a-level-for-thief-2/">
+<meta property="og:description" content="After Sinister Ducks, my videogame
+creation mentor suggested that I create
+a mod for an existing game, in order to distance myself a little from
+the programming aspects of creating a game, and instead">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2010-01-25T13:50:26-06:00">
+<meta property="article:tag" content="creative">
+<meta property="article:tag" content="gamedev">
+<meta property="article:tag" content="geek">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../categories/">Tags</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+                </li>
+<li>
+<a href="../pages/about/">About</a>
+
+                
+            </li>
+</ul>
+<!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Creating a Level for Thief 2</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2010-01-25T13:50:26-06:00" itemprop="datePublished" title="2010-01-25 13:50">2010-01-25 13:50</time></a>
+            </p>
+                <p class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/creating-a-level-for-thief-2.html">Comments</a>
+
+
+            
+        </p>
+</div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>After <a href="../sinister-redux">Sinister Ducks</a>, my <a href="http://www.gamedevlessons.com/">videogame
+creation mentor</a> suggested that I create
+a mod for an existing game, in order to distance myself a little from
+the programming aspects of creating a game, and instead spend a little
+time considering the gameplay and the art and the music from the
+perspective of the user. Sounds like useful advice.</p>
+<p>So, the last couple of weeks I've been working through the
+<a href="http://www.jasonotto.net/tutorials/CompleteTut.htm">tutorials</a> for
+<a href="http://en.wikipedia.org/wiki/DromEd">DromEd</a>, the notoriously cranky
+level editor for vintage sneak-em-up <a href="http://en.wikipedia.org/wiki/Thief:_The_Dark_Project">Thief: The Dark
+Project</a>.
+(Specifically for the sequel, <a href="http://en.wikipedia.org/wiki/Thief_II:_The_Metal_Age">Thief 2: The Metal
+Age</a>, which has a
+slightly improved engine and editor.) I chose this for three reasons:</p>
+<ol>
+<li>Released in 1998, <em>Thief</em> is old enough that the assets are simple
+    <a href="http://www.mobygames.com/game/windows/thief-ii-the-metal-age/screenshots/gameShotId,7666/">low-fidelity geometry and
+    bitmaps</a>.
+    These are easy enough for me to create and edit, plus if I
+    intersperse existing game assets with my own shoddy creations, there
+    won't be a tremendously jarring disparity in apparent quality.</li>
+<li>Even though <em>Thief</em> is ten years old and the company that created it
+    long gone, there's still <a href="http://www.ttlg.com/">a thriving
+    community</a> of amateur afficionados, churning
+    out <a href="http://www.ttlg.com/forums/showthread.php?p=1508201">new
+    missions</a> at
+    the rate of several per month, many of which are of exceedingly high
+    quality - in some cases exceeding that of the original game. I'll be
+    in good company, will have some meaningful feedback, and will have
+    forums to turn to when I get into difficulties.</li>
+<li>Last but not least, <em>Thief</em> is one of my favourite games of all
+    time. The emphasis on sneaking around and avoiding confrontation
+    suits my sensibilities. Your protagonist, Garrett, is a marvellous,
+    mercenary character. Best of all, in <em>Thief 1</em>, it reveals
+    unexpected depth halfway through - the player's expectations of a
+    succession of simple heists takes a strange twist when the powerful
+    storyline reveals itself.</li>
+</ol>
+<p>Having finished the tutorials, this weekend I broke ground on creating
+my own level, or 'fan-mission' (FM), in the parlance:</p>
+<p><img alt="Designing a Thief2 Level in DromEd" src="../files/2010/01/dromed-sm.png"></p>
+<p>I'm using the DromEd Toolkit, which is DromEd with some third-party
+patches and bugfixes applied to it. My first impressions with DromEd are
+that it's very clunky and ugly, and startlingly lacking in
+documentation. I've taken to dipping into the configuration files to see
+what keyboard commands exist to experiment with. There are a bewildering
+variety of binary patches to modify the executable in various exciting
+ways, and forum posts about it, although helpful and prolific, seem
+fragmentary and rife with broken links. I've still no idea whether I
+ought to be using <em>Dromed Delux</em> instead, nor where I should get that
+from. It's a glorious chaotic riot, and it's a little intimidating.</p>
+<p>Still, having said that, the binary patches have all worked fine for me,
+and the more I use the editor, the more it's starting to grow on me.</p>
+<p>I'm setting my FM in a museum. There's already an existing museum
+mission out there, but as opposed to its marble-halled austerity, I'm
+imagining this will be more like the cramped, cosy, wood-panneled
+chaotic collection of something like the wonderful <a href="http://www.britishtours.com/360/soane-museum.html">Sir John Soane's
+Museum</a> in London.</p>
+<p>So progress as of week 1 looks like this: I've carved out some very
+basic geometry to form a stocky museum building. Here you can just about
+make out a hole in the brick facade that will form the front entrance.
+This is not the entrance that the player will likely be using:</p>
+<p><img alt="" src="../files/2010/01/front-entrance.jpg"></p>
+<p>This is all very crude thus far - with repeating textures on large
+surfaces, and plain uniform lighting. There are a complete set of mostly
+rectangular ground-floor rooms, with interconnecting doorways. The
+highlight of my modelling to date is this stairway leading up to the
+(otherwise nonexistant) next floor.</p>
+<p><img alt="" src="../files/2010/01/stairway.jpg"></p>
+<p>I'm not so happy with the wood texture I chose - I'll go back and look
+for something more uniform. But I am happy with the way the stairs flair
+out at the bottom. I realised in the process of creating this that this
+makes it possible to fit a flight of stairs into a smaller space than
+would otherwise be possible, by allowing the bottom few steps to
+gracefully project out into the corridor.</p>
+<p>Having finished this last night, I then dreamed about geometric
+operations on three dimensional spaces, which I think is a good sign.</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/creative/" rel="tag">creative</a></li>
+            <li><a class="tag p-category" href="../categories/gamedev/" rel="tag">gamedev</a></li>
+            <li><a class="tag p-category" href="../categories/geek/" rel="tag">geek</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../musicians-wake-up/" rel="prev" title="Musicians : wake up!">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../howto-bundle-binary-dependancies-with-py2exe-et-al/" rel="next" title="Howto bundle binary dependancies with py2exe, et al.">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+                        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="tartley",
+            disqus_url="https://www.tartley.com/creating-a-level-for-thief-2/",
+        disqus_title="Creating a Level for Thief 2",
+        disqus_identifier="cache/posts/creating-a-level-for-thief-2.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="tartley";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer"></footer>
+</div>
+</div>
+
+            <script src="../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about git)</title><link>https://www.tartley.com/</link><description>Source code control.</description><atom:link href="https://www.tartley.com/categories/git.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Oct 2020 05:49:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/posts/2020/til-git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've previously only ever used git's regujlar &lt;em&gt;lightweight&lt;/em&gt; tags, created with
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about git)</title><link>https://www.tartley.com/</link><description>Source code control.</description><atom:link href="https://www.tartley.com/categories/git.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Oct 2020 18:54:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/til-git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've previously only ever used git's regujlar &lt;em&gt;lightweight&lt;/em&gt; tags, created with
 &lt;code&gt;git tag TAGNAME&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Today I learned about &lt;em&gt;annotated&lt;/em&gt; tags, created with &lt;code&gt;git tag -a -m "MESSAGE"
 TAGNAME&lt;/code&gt;. (If you don't specify &lt;code&gt;-m MESSAGE&lt;/code&gt;, git annoyingly prompts you for
@@ -27,19 +27,20 @@ issues by:&lt;/p&gt;
 &lt;/pre&gt;
 &lt;p&gt;Upshot: Use regular lightweight tags for private local state. Never &lt;code&gt;git push
 --tags&lt;/code&gt;. For public shared tagging, such as releases, use annotated tags,
-pushed either individually by name, or using &lt;code&gt;--follow-tags&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>tags</category><category>version-control</category><guid>https://www.tartley.com/posts/2020/til-git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>Git: When to use three dots vs two</title><link>https://www.tartley.com/posts/2015/8/25/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
+pushed either individually by name, or using &lt;code&gt;--follow-tags&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>tags</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/til-git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>Git: When to use three dots vs two</title><link>https://www.tartley.com/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
 today:&lt;/p&gt;
 &lt;p&gt;To see the commits or diffs introduced by a branch (the filled circles ●):&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;     f
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     f
     +●  m           git log m..f
      |  ○
     +●  |           git diff m...f
       \ ○
        \|
         ○
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;To see the commits or diffs between the tip of one branch and another:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;     f              git log m...f
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     f              git log m...f
     +●  m           All commits look the same,
      |  ●-          unless you use --left-right, which
     +●  |           shows where each commit comes from.
@@ -47,9 +48,10 @@ today:&lt;/p&gt;
        \|           git diff m..f
         ○           '-' commits are shown inverted,
                      i.e. additions as deletions.
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;To see the commits from 'f' back to the beginning of time:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;     f
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     f
     +●  m           git log f
      |  ○
     +●  |           (diffs back to start of time are just
@@ -58,31 +60,33 @@ today:&lt;/p&gt;
        +●
         |
        +●
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
 above that you almost always want:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;git diff m...f
-&lt;/pre&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git diff m...f
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;is the same as&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;git checkout f
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git checkout f
 git diff m...
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;or&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;git checkout m
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git checkout m
 git diff ...f
-&lt;/pre&gt;
-&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>git</category><category>version-control</category><guid>https://www.tartley.com/posts/2015/8/25/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>Understanding git rebase so it sticks</title><link>https://www.tartley.com/posts/2014/2/7/understanding-rebase-so-it-sticks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember how to use git rebase. That ends today. Here are
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>git</category><category>version-control</category><guid>https://www.tartley.com/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>Understanding git rebase so it sticks</title><link>https://www.tartley.com/understanding-rebase-so-it-sticks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember how to use git rebase. That ends today. Here are
 my notes to help me remember.&lt;/p&gt;
 &lt;p&gt;Rebase is traditionally documented as:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase &lt;span class="o"&gt;[&lt;/span&gt;--onto newbase&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;upstream &lt;span class="o"&gt;[&lt;/span&gt;branch&lt;span class="o"&gt;]]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;This is confusing for several reasons. A slight improvement is to rename
 the args:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase &lt;span class="o"&gt;[&lt;/span&gt;--onto target&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Where:&lt;/p&gt;
 &lt;ul&gt;
@@ -103,17 +107,14 @@ the args:&lt;/p&gt;
                 or include
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;                exclude
                 v
 o---o---o---o---o---1---2---3 current branch
                               or include
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;See how the commits to be transplanted start at &lt;code&gt;include&lt;/code&gt; and go back to
 the common ancestor of that and &lt;code&gt;exclude&lt;/code&gt;. Since &lt;code&gt;--onto&lt;/code&gt; isn't
@@ -127,10 +128,8 @@ specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the transplant desti
                    or include
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git rebase --onto target exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;                    target
                     v
@@ -141,10 +140,9 @@ specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the transplant desti
                   exclude
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Again, the commits to be transplanted are defined by &lt;code&gt;include&lt;/code&gt; and
 &lt;code&gt;exclude&lt;/code&gt;, but this time a separate destination is specified using
-&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>software</category><guid>https://www.tartley.com/posts/2014/2/7/understanding-rebase-so-it-sticks/</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item><item><title>Launch Gitk displaying all branches</title><link>https://www.tartley.com/posts/2010/12/31/launch-gitk-displaying-all-extant-branches/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; All of the below is made totally redundant by simply using
+&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>software</category><guid>https://www.tartley.com/understanding-rebase-so-it-sticks/</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item><item><title>Launch Gitk displaying all branches</title><link>https://www.tartley.com/launch-gitk-displaying-all-extant-branches/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; All of the below is made totally redundant by simply using
 &lt;code&gt;gitk --all&lt;/code&gt;. Thanks Russel!&lt;/p&gt;
 &lt;p&gt;When I launch Gitk, it just displays the current branch. To display
 other branches, you must name them on the command line. To display all
@@ -155,11 +153,9 @@ existing branches, you need to find out all the branch names:&lt;/p&gt;
 * master
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Then laboriously type them in to the gitk command line:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ gitk create-sql-dev formula-rewrite master
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Alternatively, save this Bash snippet in a script on your PATH. I call
 mine gitka, for 'all branches':&lt;/p&gt;
@@ -168,11 +164,10 @@ mine gitka, for 'all branches':&lt;/p&gt;
 &lt;span class="k"&gt;for&lt;/span&gt; b in &lt;span class="s2"&gt;"`git branch`"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$b&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; tr -d &lt;span class="s2"&gt;"*"&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; xargs gitk
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;&lt;img alt="Gitk displaying all branches, not just the current ('master' in bold)" src="https://www.tartley.com/files/2010/12/gitk-all-branches.png" title="gitk-all-branches"&gt;&lt;/p&gt;
 &lt;p&gt;This works on Windows too, if you save it as 'gitka.sh', and have Cygwin
 installed and associate the .sh filename extension with the Cygwin Bash
 executable. You can then run it as 'gitka' from a Windows command prompt
 thingy. If you then use 'ln -s gitka.sh gitka', then you can also run it
 as just 'gitka' from a Cygwin bash prompt too - without this you would
-have had to type out the full 'gitka.sh'.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>mswin-dev</category><category>software</category><guid>https://www.tartley.com/posts/2010/12/31/launch-gitk-displaying-all-extant-branches/</guid><pubDate>Fri, 31 Dec 2010 18:25:31 GMT</pubDate></item></channel></rss>
+have had to type out the full 'gitka.sh'.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>mswin-dev</category><category>software</category><guid>https://www.tartley.com/launch-gitk-displaying-all-extant-branches/</guid><pubDate>Fri, 31 Dec 2010 18:25:31 GMT</pubDate></item></channel></rss>

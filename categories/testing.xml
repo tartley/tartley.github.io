@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about testing)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/testing.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 16 Oct 2020 00:44:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Django testing 201 : Acceptance Tests vs Unit Tests</title><link>https://www.tartley.com/posts/2011/7/14/django-testing-201-acceptance-tests-vs-unit-tests/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I'm finding that our Django project's tests fall into an uncomfortable
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about testing)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/testing.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Oct 2020 18:54:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Django testing 201 : Acceptance Tests vs Unit Tests</title><link>https://www.tartley.com/django-testing-201-acceptance-tests-vs-unit-tests/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I'm finding that our Django project's tests fall into an uncomfortable
 middle-ground, halfway between end-to-end acceptance tests and proper
 unit tests. As such they don't exhibit the best qualities of either. I'd
 like to fix this.&lt;/p&gt;
@@ -86,7 +86,7 @@ approach.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; My &lt;a href="http://rangespan.com/"&gt;fabulous employer&lt;/a&gt; has given
 permission to release the test runner as open source:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/rangespan/django-alltestsrunner"&gt;https://github.com/rangespan/django-alltestsrunner&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update2:&lt;/strong&gt; I like this post's numeric ID (check the URL)&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>testing</category><guid>https://www.tartley.com/posts/2011/7/14/django-testing-201-acceptance-tests-vs-unit-tests/</guid><pubDate>Thu, 14 Jul 2011 21:19:43 GMT</pubDate></item><item><title>Rerun unit tests whenever files update</title><link>https://www.tartley.com/posts/2010/10/15/rerun-unit-tests-whenever-files-update/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;In which I once again indulge my obscure command-line fetish.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update2:&lt;/strong&gt; I like this post's numeric ID (check the URL)&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>testing</category><guid>https://www.tartley.com/django-testing-201-acceptance-tests-vs-unit-tests/</guid><pubDate>Thu, 14 Jul 2011 21:19:43 GMT</pubDate></item><item><title>Rerun unit tests whenever files update</title><link>https://www.tartley.com/rerun-unit-tests-whenever-files-update/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;In which I once again indulge my obscure command-line fetish.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I often spend hours of my day cycling through:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Edit code and its unit tests&lt;/li&gt;
@@ -108,7 +108,7 @@ save, the unit tests are re-run in the other window. All the while the
 focus stays on my editor. It's really sweet!&lt;/p&gt;
 &lt;p&gt;Thanks for the original idea goes to to the bash command &lt;code&gt;watch&lt;/code&gt;, and an
 old (now offline) blog post by Jeff Winkler.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://bitbucket.org/tartley/rerun"&gt;https://bitbucket.org/tartley/rerun&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/posts/2010/10/15/rerun-unit-tests-whenever-files-update/</guid><pubDate>Fri, 15 Oct 2010 06:43:33 GMT</pubDate></item><item><title>Acceptance Testing .NET Applications using IronPython</title><link>https://www.tartley.com/posts/2010/3/16/acceptance-testing-net-applications-using-ironpython/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://bitbucket.org/tartley/rerun"&gt;https://bitbucket.org/tartley/rerun&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/rerun-unit-tests-whenever-files-update/</guid><pubDate>Fri, 15 Oct 2010 06:43:33 GMT</pubDate></item><item><title>Acceptance Testing .NET Applications using IronPython</title><link>https://www.tartley.com/acceptance-testing-net-applications-using-ironpython/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
 &lt;p&gt;The following was originally published in the excellent &lt;a href="http://pythonmagazine.com/"&gt;Python
 Magazine&lt;/a&gt;. Thier contractual exclusivity
 period has now long expired, so here it comes again. Many thanks to my
@@ -233,7 +233,6 @@ derived from Python's &lt;code&gt;unittest.TestCase&lt;/code&gt;.&lt;/p&gt;
     &lt;span class="n"&gt;run_test&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;The call to &lt;code&gt;fail()&lt;/code&gt; at the end of this test is a good habit to develop.
 It stops unfinished tests like this one from passing, making them easy
 to accidentally overlook and be forgotten, invisible amongst a large
@@ -249,13 +248,11 @@ manually, either by setting an environment variable:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;set IRONPYTHONPATH=C:\Python25\Lib&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;or by appending this directory to &lt;code&gt;sys.path&lt;/code&gt; inside your IronPython
 install's &lt;code&gt;Lib\site.py&lt;/code&gt; file:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
 &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'C:\Python25\Lib'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Note that different versions of IronPython require different versions of
 the CPython standard library:&lt;/p&gt;
@@ -267,7 +264,6 @@ the CPython standard library:&lt;/p&gt;
 &lt;p&gt;Once this is done, test it out by starting &lt;code&gt;ipy.exe&lt;/code&gt;, and typing:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;unittest&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;If this works without complaint, exit &lt;em&gt;ipy.exe&lt;/em&gt;, and run the nascent
 acceptance test above, using the DOS command-line:&lt;/p&gt;
@@ -286,7 +282,6 @@ acceptance test above, using the DOS command-line:&lt;/p&gt;
 
 &lt;span class="n"&gt;FAILED&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;failures&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;h3&gt;About IronPython&lt;/h3&gt;
 &lt;p&gt;IronPython is a .NET based reimplementation of the Python language. It
@@ -307,7 +302,6 @@ module, which is built-in to IronPython:&lt;/p&gt;
 &lt;span class="n"&gt;clr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddReference&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'System.Windows.Forms'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;This &lt;code&gt;AddReference()&lt;/code&gt; function behaves just the same regardless of
 whether you are referencing assemblies from the .NET standard library
 (as shown here), 3rd party DLLs, or your own .NET projects.&lt;/p&gt;
@@ -320,7 +314,6 @@ assembly is referenced, we can import code from the
 &lt;span class="n"&gt;form&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Form&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;form&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;This will display an instance of the .NET form class on screen. Note
 that the form does not yet respond to events. For that, we will add a
@@ -411,7 +404,6 @@ the main form.&lt;/p&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;&lt;em&gt;Program.cs&lt;/em&gt; and its respective forms can be compiled to a .NET
 assembly, &lt;em&gt;WizBang.dll&lt;/em&gt;. When the application is run normally by users,
 &lt;code&gt;Program.Start()&lt;/code&gt; is called by a second Visual Studio project,
@@ -444,7 +436,6 @@ handler on the main form's &lt;em&gt;Closed&lt;/em&gt; event ensures this:&lt;/p
     &lt;span class="n"&gt;Program&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Stop&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;h3&gt;Invoking the SUT on a New Thread&lt;/h3&gt;
 &lt;p&gt;If the test calls &lt;code&gt;Program.Start()&lt;/code&gt; directly, as described above, then
@@ -524,7 +515,6 @@ library we use.&lt;/p&gt;
         &lt;span class="n"&gt;TestCase&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tearDown&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Python's unittest module will call AcceptanceTest's &lt;code&gt;setUp()&lt;/code&gt; method
 before each test method is run, so this is an ideal place to create a
 new thread and invoke &lt;code&gt;Program.Start()&lt;/code&gt; on it. The new thread is given a
@@ -563,7 +553,6 @@ of the test method, before the fail:&lt;/p&gt;
     &lt;span class="n"&gt;run_test&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Running this test now displays the SUT's form for the duration of the
 sleep, and during that time it is responsive to move and resize events.
 Unlike the last version, this test proceeds to execute while the form is
@@ -590,7 +579,6 @@ requirement of the acceptance test as follows:&lt;/p&gt;
 &lt;span class="n"&gt;mainform&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AllForms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Visible&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'form should be visible'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;On first glance, this appears to work - you can run this and this assert
 will pass. However, there is an insidious problem here, because it
@@ -628,7 +616,6 @@ verbose:&lt;/p&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertTrue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;getVisible&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s1"&gt;'form not visible'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Note that the location of &lt;code&gt;CallTarget0&lt;/code&gt; was changed between IronPython
 versions 1 and 2. The location of the import will need to change for the
 above code to work on IronPython 1.&lt;/p&gt;
@@ -645,12 +632,10 @@ thread:&lt;/p&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Invoke&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CallTarget0&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Which can be used to reduce the length of our assertion to:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 1. Alice starts WizBang. The window appears.&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertTrue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;on_gui&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Visible&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s1"&gt;'form not visible'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Even so, wrapping access to each attribute individually like is still a
 little fiddly, especially if it is happening many times. To improve
@@ -660,7 +645,6 @@ example, consider the second user story requirement:&lt;/p&gt;
 &lt;span class="c1"&gt;#    'one', 'two', 'three'. Nothing is selected.&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;on_gui&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assert_list_at_startup&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;The function &lt;code&gt;assert_list_at_startup()&lt;/code&gt;, shown below, can now have
 access to properties on all controls without using &lt;code&gt;Invoke()&lt;/code&gt;, since it
@@ -673,7 +657,6 @@ runs entirely on the GUI thread:&lt;/p&gt;
     &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Items&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="s1"&gt;'two'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'list[1] wrong'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Items&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="s1"&gt;'three'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'list[2] wrong'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;If any of these assertions should fail, raised exceptions are correctly
 propagated back to our test thread. The only problem is that the stack
@@ -694,7 +677,6 @@ a decorator. This can be provided by our AcceptanceTest module:&lt;/p&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;wrapper&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;This decorator expects to be applied to methods on &lt;code&gt;AcceptanceTest&lt;/code&gt;, so
 that it can call &lt;code&gt;.on_gui()&lt;/code&gt; on this method's first parameter. if the
 decorated function is not a method on AcceptanceTest, the decorator will
@@ -708,14 +690,12 @@ access to properties of controls, can now be decorated:&lt;/p&gt;
     &lt;span class="c1"&gt;# etc&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Such a decorated method can then be conveniently called by the
 acceptance test:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 2. She sees the three default list entries:&lt;/span&gt;
 &lt;span class="c1"&gt;#    'one', 'two', 'three'. Nothing is selected.&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assert_list_at_startup&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;It is tempting at this point to simply decorate our entire test method
 with &lt;code&gt;@guithread&lt;/code&gt;, so that the whole thing can execute on the GUI thread
@@ -733,7 +713,6 @@ some input to the SUT, simulating the actions of a user:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 3. She clicks the 'AddButton'&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Buttons provide a method specifically to simulate being clicked, which
 our test can use. A small utility method on &lt;code&gt;AcceptanceTest&lt;/code&gt; calls this
 on the GUI thread:&lt;/p&gt;
@@ -742,12 +721,10 @@ on the GUI thread:&lt;/p&gt;
     &lt;span class="n"&gt;form&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Controls&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;buttonName&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PerformClick&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;This can be used in our acceptance test:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 3. She clicks the 'AddButton'&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;click_button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainform&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'addButton'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Running the test will now correctly click the &lt;em&gt;add item&lt;/em&gt; button.
 However, the Wizbang application does not yet have any button click
@@ -768,7 +745,6 @@ assertion will fail:&lt;/p&gt;
     &lt;span class="s1"&gt;'additem form should be visible'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;To make this requirement pass, the following click handler is attached
 to the &lt;em&gt;Add Item&lt;/em&gt; button on WizBang's main form. We're going to skip
 unit tests for this article, but on a real project, this is the perfect
@@ -783,7 +759,6 @@ acceptance test both pass looks like this:&lt;/p&gt;
     &lt;span class="n"&gt;AllForms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addItemForm&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Show&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;In a real application, this handler would need to be a little more
 robust, able to handle multiple clicks of the button, and forms which
@@ -802,14 +777,12 @@ implemented using the techniques discussed thus far:&lt;/p&gt;
     &lt;span class="s2"&gt;"additem form should close"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Where &lt;code&gt;set_text()&lt;/code&gt; is a small helper function provided by
 &lt;code&gt;AcceptanceTest&lt;/code&gt;:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@guithread&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;set_text&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;textbox&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;textbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Running this test will successfully populate the TextBox with the word
 "hello". However, this is a fairly poor acceptance test. If the TextBox
@@ -830,7 +803,6 @@ for these conditions:&lt;/p&gt;
     &lt;span class="n"&gt;textbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Running this test does actually reveal a genuine error - the &lt;em&gt;add item&lt;/em&gt;
 form's textbox does not have focus. A real user, on running WizBang,
 would have to click or use the tab key to give the textbox focus, a step
@@ -844,13 +816,11 @@ prefer that our user didn't have to do this either, so we add an
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;This makes the acceptance test pass. Implementing the next test
 requirement is straightforward:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 6. The new item is at the end of the list, selected.&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assert_list_after_add&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;where:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nd"&gt;@guithread&lt;/span&gt;
@@ -860,7 +830,6 @@ requirement is straightforward:&lt;/p&gt;
     &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Items&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="s1"&gt;'hello'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'list[3] wrong'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wizList&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SelectedIndex&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'4th should be selected'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;This is asserting that the text we typed into the &lt;em&gt;add item&lt;/em&gt; form
 ("hello") is added to the end of the main form's list, and is selected.
@@ -876,7 +845,6 @@ the &lt;em&gt;add item&lt;/em&gt; form:&lt;/p&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Finally, the test closes down the application and ends:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# 7. She clicks the 'CloseButton'&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;click_button&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainForm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'closeButton'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -884,7 +852,6 @@ the &lt;em&gt;add item&lt;/em&gt; form:&lt;/p&gt;
 &lt;span class="c1"&gt;# 8. The application closes&lt;/span&gt;
 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertTrue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mainForm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IsDisposed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'mainform should close'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Notice how access to &lt;code&gt;mainForm.IsDisposed&lt;/code&gt; is not invoked on the GUI
 thread. By this point in the test, all being well, the main form has
@@ -898,7 +865,6 @@ form's &lt;em&gt;Close&lt;/em&gt; button:&lt;/p&gt;
     &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Close&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;h3&gt;Simulating Mouse and Keyboard Events&lt;/h3&gt;
 &lt;p&gt;Directly calling controls' methods and setting their properties, as
@@ -943,7 +909,6 @@ by declaring them as follows:&lt;/p&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;It turns out that populating the large &lt;code&gt;Input&lt;/code&gt; data structure to be
 passed to this function takes another 50 lines of code. Similar
@@ -1000,7 +965,7 @@ project's current status and velocity.&lt;/p&gt;
 purposes, should check out &lt;a href="http://www.ironpythoninaction.com/"&gt;IronPython in
 Action&lt;/a&gt;, a pragmatic and densely
 informative new book by Michael Foord, which caters to both Python and
-.NET developers.&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/posts/2010/3/16/acceptance-testing-net-applications-using-ironpython/</guid><pubDate>Tue, 16 Mar 2010 17:13:15 GMT</pubDate></item><item><title>Use of Asserts in Unit-Tested Code</title><link>https://www.tartley.com/posts/2009/11/27/use-of-asserts-in-unit-tested-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I pretty much abandoned the use of asserts in production code once I was
+.NET developers.&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/acceptance-testing-net-applications-using-ironpython/</guid><pubDate>Tue, 16 Mar 2010 17:13:15 GMT</pubDate></item><item><title>Use of Asserts in Unit-Tested Code</title><link>https://www.tartley.com/use-of-asserts-in-unit-tested-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I pretty much abandoned the use of asserts in production code once I was
 introduced to test driven development. Amongst their failings, assert
 statements are only suited to testing very localised conditions, such as
 within a particular function - it's not clear to me how they can be used
@@ -1029,7 +994,7 @@ asserted to be unchanged by the end of it.&lt;/p&gt;
 there any rules we can use to choose which things might be more
 productively tested using such asserts, rather than in unit tests?&lt;/p&gt;
 &lt;p&gt;I don't know. This is as far as I've got. Thoughts, speculations and
-anecdotes welcome.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/posts/2009/11/27/use-of-asserts-in-unit-tested-code/</guid><pubDate>Fri, 27 Nov 2009 20:47:32 GMT</pubDate></item><item><title>Testwatcher</title><link>https://www.tartley.com/posts/2009/4/29/testwatcher/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Sometimes when programming I like to leave unit tests running
+anecdotes welcome.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/use-of-asserts-in-unit-tested-code/</guid><pubDate>Fri, 27 Nov 2009 20:47:32 GMT</pubDate></item><item><title>Testwatcher</title><link>https://www.tartley.com/testwatcher/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Sometimes when programming I like to leave unit tests running
 repeatedly in one window while editing the code and tests in another.
 The bash command &lt;code&gt;watch&lt;/code&gt; is useful for this, and can highlight the
 differences between one invocation and the next in
@@ -1064,7 +1029,6 @@ FAILED &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;failures&lt;/s
 _
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;Incidentally, the above test makes it very clear that Python objects in
 successive processes get new addresses on Linux, but interestingly on
 Windows the same addresses seems to get re-used for different processes.&lt;/p&gt;
@@ -1073,7 +1037,6 @@ should only be a:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;command&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;but in order to shoehorn the inverse text and colors in, it's grown to
 300 lines - a hideous bloat for a minor superficial thrill. Plus the
@@ -1086,11 +1049,10 @@ library 'curses' module that would otherwise do the job is simply not
 implemented on Windows.) So maybe it's time I used this script as an
 excuse to figure this out. Suggestions welcome.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This idea may have now reached a viable fruition, documented
-&lt;a href="https://www.tartley.com/posts/2010/10/15/rerun-unit-tests-whenever-files-update.html"&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>testing</category><guid>https://www.tartley.com/posts/2009/4/29/testwatcher/</guid><pubDate>Thu, 30 Apr 2009 04:02:59 GMT</pubDate></item><item><title>Using assertAlmostEquals to compare to N Significant Figures</title><link>https://www.tartley.com/posts/2008/12/17/using-assertalmostequals-to-compare-to-n-significant-figures/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I want a Python unittest.assertAlmostEquals that compares numbers to N
+&lt;a href="https://www.tartley.com/posts/2010/10/15/rerun-unit-tests-whenever-files-update.html"&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>testing</category><guid>https://www.tartley.com/testwatcher/</guid><pubDate>Thu, 30 Apr 2009 04:02:59 GMT</pubDate></item><item><title>Using assertAlmostEquals to compare to N Significant Figures</title><link>https://www.tartley.com/using-assertalmostequals-to-compare-to-n-significant-figures/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I want a Python unittest.assertAlmostEquals that compares numbers to N
 significant figures, instead of N decimal places.&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertAlmostEquals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1e-8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;5e-14&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# passes&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;Even though these two numbers differ by a factor of 5 million, when
 comparing them to seven decimal places (assertAlmostEquals default
@@ -1153,7 +1115,6 @@ it some more. Isn't this problem already solved somewhere?&lt;/p&gt;
          &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
              &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="ne"&gt;AssertionError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt; no exception was raised"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;expected&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;And a test:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;unittest&lt;/span&gt;
@@ -1268,7 +1229,7 @@ it some more. Isn't this problem already solved somewhere?&lt;/p&gt;
 
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;"__main__"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;unittest&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><category>python</category><category>testing</category><guid>https://www.tartley.com/posts/2008/12/17/using-assertalmostequals-to-compare-to-n-significant-figures/</guid><pubDate>Wed, 17 Dec 2008 20:59:54 GMT</pubDate></item><item><title>Acceptance testing a pyglet application</title><link>https://www.tartley.com/posts/2008/7/4/acceptance-testing-a-pyglet-application/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've been trying to create a simple acceptance test for a
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><category>python</category><category>testing</category><guid>https://www.tartley.com/using-assertalmostequals-to-compare-to-n-significant-figures/</guid><pubDate>Wed, 17 Dec 2008 20:59:54 GMT</pubDate></item><item><title>Acceptance testing a pyglet application</title><link>https://www.tartley.com/acceptance-testing-a-pyglet-application/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've been trying to create a simple acceptance test for a
 &lt;a href="http://pyglet.org/"&gt;pyglet&lt;/a&gt; application. A thorough suite of acceptance
 tests, verifying the correctness of all the shapes drawn to the screen
 by OpenGL, sounds like far more work than I want to do. But a couple of
@@ -1295,7 +1256,6 @@ function - &lt;code&gt;try_condition()&lt;/code&gt; - on every frame:&lt;/p&gt;
                 &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"timeout on &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;condition&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;When &lt;code&gt;try_condition()&lt;/code&gt; gets called by pyglet on the first frame, it
 evaluates the value of &lt;code&gt;self.condition&lt;/code&gt;. If &lt;code&gt;True&lt;/code&gt;, then that first part
 of the test has passed, and it gets the next condition off the list. If
@@ -1319,7 +1279,6 @@ error.&lt;/p&gt;
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next_condition&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
         &lt;span class="n"&gt;clock&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;schedule&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;dt&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;try_condition&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dt&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;So &lt;code&gt;self.conditions&lt;/code&gt; is a list of lambdas that will be provided by the
 acceptance test. Calling &lt;code&gt;self.next_condition()&lt;/code&gt; merely plucks the next
@@ -1347,7 +1306,6 @@ to &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
     &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_windows&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;w&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;windows&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-
 
 &lt;p&gt;In future, I should probably allow the acceptance test code to specify a
 different timeout value for each condition.&lt;/p&gt;
@@ -1383,13 +1341,12 @@ conditions have passed and the test framework sets &lt;code&gt;window.has_exit&l
     &lt;span class="n"&gt;run_test&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-
 &lt;p&gt;The conditions don't simply have to be expressions to verify the
 application state. They could stimulate the application by raising mouse
 or keyboard events, etc, and then simply return &lt;code&gt;True&lt;/code&gt; so that the test
 harness would move right on to the next condition.&lt;/p&gt;
 &lt;p&gt;Early days with this idea, but it seems to work, and thus far I'm very
-happy with it.&lt;/p&gt;&lt;/div&gt;</description><category>graphics</category><category>python</category><category>testing</category><guid>https://www.tartley.com/posts/2008/7/4/acceptance-testing-a-pyglet-application/</guid><pubDate>Fri, 04 Jul 2008 22:30:58 GMT</pubDate></item><item><title>PyCon 2008, Chicago, USA</title><link>https://www.tartley.com/posts/2008/3/19/pycon-2008-chicago-usa/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="PyCon USA 2008" src="https://www.tartley.com/files/2008/03/pyconusa2008.jpg"&gt;&lt;/p&gt;
+happy with it.&lt;/p&gt;&lt;/div&gt;</description><category>graphics</category><category>python</category><category>testing</category><guid>https://www.tartley.com/acceptance-testing-a-pyglet-application/</guid><pubDate>Fri, 04 Jul 2008 22:30:58 GMT</pubDate></item><item><title>PyCon 2008, Chicago, USA</title><link>https://www.tartley.com/pycon-2008-chicago-usa/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="PyCon USA 2008" src="https://www.tartley.com/files/2008/03/pyconusa2008.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;PyCon 2008 has been absolutely amazing this week. The talks I've seen
 and the people I've met have been a real inspiration, and my head is
 a-whirl with ideas. Above all, as always, I'm impressed by the Python
@@ -1422,7 +1379,7 @@ tartley at the domain tartley.com (gosh I love love love
 &lt;a href="http://spamarest.com"&gt;http://spamarrest.com&lt;/a&gt;.) (&lt;strong&gt;Update:&lt;/strong&gt; email
 obfuscated - spamarrest is no more.)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; There are
-&lt;a href="https://photos.google.com/album/AF1QipMEYX-NIkv5JxXxabBdEBLkF9mwxMrXFCHEQlt_"&gt;photos!&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>journal</category><category>presentations</category><category>python</category><category>testing</category><guid>https://www.tartley.com/posts/2008/3/19/pycon-2008-chicago-usa/</guid><pubDate>Thu, 20 Mar 2008 03:14:13 GMT</pubDate></item><item><title>PyCon UK 2007</title><link>https://www.tartley.com/posts/2007/9/13/pycon-uk-2007/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="PyCon UK 2007 view from the front" src="https://www.tartley.com/files/2007/09/pycon.jpg"&gt;&lt;/p&gt;
+&lt;a href="https://photos.google.com/album/AF1QipMEYX-NIkv5JxXxabBdEBLkF9mwxMrXFCHEQlt_"&gt;photos!&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>journal</category><category>presentations</category><category>python</category><category>testing</category><guid>https://www.tartley.com/pycon-2008-chicago-usa/</guid><pubDate>Thu, 20 Mar 2008 03:14:13 GMT</pubDate></item><item><title>PyCon UK 2007</title><link>https://www.tartley.com/pycon-uk-2007/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="PyCon UK 2007 view from the front" src="https://www.tartley.com/files/2007/09/pycon.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Had a marvellous time at &lt;a href="http://pyconuk.org/index.html"&gt;PyCon UK
 2007&lt;/a&gt;, a conference about the
 &lt;a href="http://python.org"&gt;Python&lt;/a&gt; programming language. In the event everyone
@@ -1440,7 +1397,7 @@ test-driven development for beginners, which can be downloaded here:&lt;/p&gt;
     (871kb)&lt;/a&gt;
     (zip of the presentation and accompanying source code)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;My few &lt;a href="https://photos.google.com/album/AF1QipMCq2rBgyBpQLK596zqHJVTAdQu0yUe9ngrXWEb"&gt;photos&lt;/a&gt; are also online.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>presentations</category><category>python</category><category>testing</category><guid>https://www.tartley.com/posts/2007/9/13/pycon-uk-2007/</guid><pubDate>Thu, 13 Sep 2007 18:57:26 GMT</pubDate></item><item><title>Mocks Aren't (Just) Stubs</title><link>https://www.tartley.com/posts/2007/4/22/mocks-arent-just-stubs/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;My exposure to test-driven software development at Resolver Systems has
+&lt;p&gt;My few &lt;a href="https://photos.google.com/album/AF1QipMCq2rBgyBpQLK596zqHJVTAdQu0yUe9ngrXWEb"&gt;photos&lt;/a&gt; are also online.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>presentations</category><category>python</category><category>testing</category><guid>https://www.tartley.com/pycon-uk-2007/</guid><pubDate>Thu, 13 Sep 2007 18:57:26 GMT</pubDate></item><item><title>Mocks Aren't (Just) Stubs</title><link>https://www.tartley.com/mocks-arent-just-stubs/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;My exposure to test-driven software development at Resolver Systems has
 resulted in a tremendous enthusiasm for the idea. Doubtless a
 significant proportion of my zeal stems from my own over-compensation
 for arriving late to this particular party, but nevertheless, I truly
@@ -1508,4 +1465,4 @@ resultant state changes in the object-under-test. It is these state
 changes which are important, not the methods used to effect them.
 Asserting that various helper classes were used to make an internal
 state change only makes the test needlessly brittle to alternative
-implementations that achieve the same result.&lt;/p&gt;&lt;/div&gt;</description><category>software</category><category>testing</category><guid>https://www.tartley.com/posts/2007/4/22/mocks-arent-just-stubs/</guid><pubDate>Mon, 23 Apr 2007 02:28:07 GMT</pubDate></item></channel></rss>
+implementations that achieve the same result.&lt;/p&gt;&lt;/div&gt;</description><category>software</category><category>testing</category><guid>https://www.tartley.com/mocks-arent-just-stubs/</guid><pubDate>Mon, 23 Apr 2007 02:28:07 GMT</pubDate></item></channel></rss>
