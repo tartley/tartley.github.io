@@ -1,7 +1,7 @@
 # tartley.com
 
 Uses Nikola static site generator.
-See 'make' for some handy commands.
+See output of 'make', with no args, for some handy commands.
 
 # TODO
 
@@ -10,10 +10,8 @@ https://www.getnikola.com/path-handlers.html
 
 Embed ancient backed up tartley.com content, and link to it.
 
-Check my entry in planet python. Does it match my current:
-http://localhost:8000/categories/python.xml
-PR and email sent:
-https://github.com/python/planet/issues/439
+Next time I publish a Python post, check it appears
+on Planet Python.
 
 # Some commands
 
