@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about imho)</title><link>https://www.tartley.com/</link><description>In my humble opinion.</description><atom:link href="https://www.tartley.com/categories/imho.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Oct 2020 18:54:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>I am such a child</title><link>https://www.tartley.com/i-am-such-a-child/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Dear Julio,&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about imho)</title><link>https://www.tartley.com/</link><description>In my humble opinion.</description><atom:link href="https://www.tartley.com/categories/imho.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 18 Oct 2020 02:41:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>I am such a child</title><link>https://www.tartley.com/posts/i-am-such-a-child/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Dear Julio,&lt;/p&gt;
 &lt;p&gt;Many thanks for considering me for this opportunity. I feel as though my
 skills are a good match for the position, and would like you to consider
 my application.&lt;/p&gt;
@@ -21,7 +21,7 @@ earliest convenience.&lt;/p&gt;
   From:      &lt;a href="mailto:tartley@tartley.com"&gt;&lt;/a&gt;
   To:        &lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;My name is Julio YEPES, I am a hiring manager with ...&lt;/p&gt;&lt;/div&gt;</description><category>imho</category><guid>https://www.tartley.com/i-am-such-a-child/</guid><pubDate>Sat, 10 Jul 2010 18:36:20 GMT</pubDate></item><item><title>The Great Resolver IDE Anecdote</title><link>https://www.tartley.com/the-great-resolver-ide-anecdote/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Found myself telling this story yet again, so I figured I should just
+&lt;p&gt;My name is Julio YEPES, I am a hiring manager with ...&lt;/p&gt;&lt;/div&gt;</description><category>imho</category><guid>https://www.tartley.com/posts/i-am-such-a-child/</guid><pubDate>Sat, 10 Jul 2010 18:36:20 GMT</pubDate></item><item><title>The Great Resolver IDE Anecdote</title><link>https://www.tartley.com/posts/the-great-resolver-ide-anecdote/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Found myself telling this story yet again, so I figured I should just
 post it here and start linking to it, rather than remembering, retyping
 and re-embellishing it every time.&lt;/p&gt;
 &lt;p&gt;Ever since we started at &lt;a href="http://www.resolversystems.com/"&gt;Resolver&lt;/a&gt;,
@@ -87,7 +87,7 @@ Studio's convenient GUI designer all along, is it remotely possible that
 we might have considered our choice of GUI layer more thoroughly? If we
 hadn't been entranced by the "obviously right" convenience of the Visual
 Studio GUI designer, might our minds have been free enough to have made
-this decision right the first time around?&lt;/p&gt;&lt;/div&gt;</description><category>imho</category><category>software</category><guid>https://www.tartley.com/the-great-resolver-ide-anecdote/</guid><pubDate>Tue, 04 May 2010 17:56:47 GMT</pubDate></item><item><title>Musicians : wake up!</title><link>https://www.tartley.com/musicians-wake-up/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I left this as a comment &lt;a href="http://www.tbray.org/ongoing/When/201x/2010/01/21/On-Books"&gt;somewhere
+this decision right the first time around?&lt;/p&gt;&lt;/div&gt;</description><category>imho</category><category>software</category><guid>https://www.tartley.com/posts/the-great-resolver-ide-anecdote/</guid><pubDate>Tue, 04 May 2010 17:56:47 GMT</pubDate></item><item><title>Musicians : wake up!</title><link>https://www.tartley.com/posts/musicians-wake-up/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I left this as a comment &lt;a href="http://www.tbray.org/ongoing/When/201x/2010/01/21/On-Books"&gt;somewhere
 else&lt;/a&gt;, in
 response to someone complaining about how:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -164,7 +164,7 @@ reality like this. If they want to make money, and the means of making
 money from music are changing, then they will have to expend a little
 energy figuring out how they are going to get people to pay. If they
 don't want to think about that at all, then fine, they won't get paid.
-Adapt or die, we'll all be better off for it.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>gigs</category><category>imho</category><guid>https://www.tartley.com/musicians-wake-up/</guid><pubDate>Fri, 22 Jan 2010 15:43:24 GMT</pubDate></item><item><title>The ACM is pissing in the well</title><link>https://www.tartley.com/the-acm-is-pissing-in-the-well/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;An open letter I have sent to the ACM.&lt;/p&gt;
+Adapt or die, we'll all be better off for it.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>gigs</category><category>imho</category><guid>https://www.tartley.com/posts/musicians-wake-up/</guid><pubDate>Fri, 22 Jan 2010 15:43:24 GMT</pubDate></item><item><title>The ACM is pissing in the well</title><link>https://www.tartley.com/posts/the-acm-is-pissing-in-the-well/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;An open letter I have sent to the ACM.&lt;/p&gt;
 &lt;p&gt;I have recently been considering joining the ACM, as the most eminent
 international professional body of software engineers.&lt;/p&gt;
 &lt;p&gt;On reflection I have decided not to join, because of two actions by the
@@ -214,7 +214,7 @@ professional, moral software engineers everywhere.&lt;/p&gt;
 ACM until this is satisfactorily resolved.&lt;/p&gt;
 &lt;p&gt;Sincerely,&lt;/p&gt;
 &lt;p&gt;Jonathan Hartley&lt;br&gt;
-Software Engineer&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>imho</category><category>software</category><guid>https://www.tartley.com/the-acm-is-pissing-in-the-well/</guid><pubDate>Fri, 18 Dec 2009 21:45:00 GMT</pubDate></item><item><title>Result of MP visit - I suck</title><link>https://www.tartley.com/result-of-mp-visit-i-suck/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;So earlier tonight I turned up at the monthly 'surgery' of my MP, Frank
+Software Engineer&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>imho</category><category>software</category><guid>https://www.tartley.com/posts/the-acm-is-pissing-in-the-well/</guid><pubDate>Fri, 18 Dec 2009 21:45:00 GMT</pubDate></item><item><title>Result of MP visit - I suck</title><link>https://www.tartley.com/posts/result-of-mp-visit-i-suck/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;So earlier tonight I turned up at the monthly 'surgery' of my MP, Frank
 Dobson (Labour), to present my objections to the Digital Economy Bill.&lt;/p&gt;
 &lt;p&gt;For the benefit of others also going to tackle Mr Dobson on this issue,
 (and anyone going to see some other MP) here's a quick write up of my
@@ -316,7 +316,7 @@ demonstrated some real problems with the bill. He suggested that I write
 it to him in a letter instead.&lt;/p&gt;
 &lt;p&gt;Probable ten or fifteen minutes had elapsed. We exchanged cordial
 pleasantries and headed out for a lovely curry down the street with my
-awesome wife.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>imho</category><category>journal</category><guid>https://www.tartley.com/result-of-mp-visit-i-suck/</guid><pubDate>Sat, 05 Dec 2009 05:23:09 GMT</pubDate></item><item><title>My objections to the Digital Economy Bill</title><link>https://www.tartley.com/my-objections-to-the-digital-economy-bill/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This is pretty much a riff on what I posted yesterday, only this is my
+awesome wife.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>imho</category><category>journal</category><guid>https://www.tartley.com/posts/result-of-mp-visit-i-suck/</guid><pubDate>Sat, 05 Dec 2009 05:23:09 GMT</pubDate></item><item><title>My objections to the Digital Economy Bill</title><link>https://www.tartley.com/posts/my-objections-to-the-digital-economy-bill/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This is pretty much a riff on what I posted yesterday, only this is my
 draft for how I intend to present it to my MP tomorrow. I have no idea
 how much time I'll have, nor how receptive he'll be. This may all be a
 big waste of time, but just in case, this is my plan, such as it is.&lt;/p&gt;
@@ -504,7 +504,7 @@ their number of downloads" idea, merely to make it clear that there are
 alternatives courses of action which could be used to tackle this
 situation, which seem to come with real incentives to stimulate the
 digital and creative economies, and with smaller, more soluble problems
-than Digital Economy Bill in its current form.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>imho</category><guid>https://www.tartley.com/my-objections-to-the-digital-economy-bill/</guid><pubDate>Fri, 04 Dec 2009 06:32:58 GMT</pubDate></item><item><title>[SOLVED]UK Digital Economy Bill</title><link>https://www.tartley.com/solveduk-digital-economy-bill/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;So my splendid talented intelligent handsome friend Robert (who is also
+than Digital Economy Bill in its current form.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>imho</category><guid>https://www.tartley.com/posts/my-objections-to-the-digital-economy-bill/</guid><pubDate>Fri, 04 Dec 2009 06:32:58 GMT</pubDate></item><item><title>[SOLVED]UK Digital Economy Bill</title><link>https://www.tartley.com/posts/solveduk-digital-economy-bill/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;So my splendid talented intelligent handsome friend Robert (who is also
 my boss, of sorts) today shared this smashing post:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://gizmodo.com/5417318/my-6247-royalty-statement-how-major-labels-cook-the-books-with-digital-downloads"&gt;My \$62.47 Royalty Statement: How Major Labels Cook the Books with
 Digital
@@ -592,7 +592,7 @@ give it a try.&lt;/p&gt;
 interest in suggesting this to your own MP? Or at least pointing out the
 downsides of the current Bill? It would just be one evening out of your
 life. I'm visiting mine this weekend. Email me if you have any interest
-at all. I can lead you through the process, it's simple.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>imho</category><category>python</category><guid>https://www.tartley.com/solveduk-digital-economy-bill/</guid><pubDate>Thu, 03 Dec 2009 16:04:59 GMT</pubDate></item><item><title>A Layman's Philosophical Musings</title><link>https://www.tartley.com/a-laymans-philosophical-musings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;A quick response to to polymath Chris DeLeon's thoughtful post
+at all. I can lead you through the process, it's simple.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>imho</category><category>python</category><guid>https://www.tartley.com/posts/solveduk-digital-economy-bill/</guid><pubDate>Thu, 03 Dec 2009 16:04:59 GMT</pubDate></item><item><title>A Layman's Philosophical Musings</title><link>https://www.tartley.com/posts/a-laymans-philosophical-musings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;A quick response to to polymath Chris DeLeon's thoughtful post
 &lt;a href="http://cdgdl.com/lessons/philosophy.html"&gt;exhorting the virtues of
 Philosophy&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;A position of ignorance&lt;/strong&gt;&lt;/p&gt;
@@ -745,7 +745,7 @@ much searching and interpretation to find them. Rather, interpret the
 above as the painful transitions in my understanding of what philosophy
 &lt;em&gt;is&lt;/em&gt;, which parts of it are likely to be of value to me, and what I
 should expect from it. Thanks to Chris for his significant contributions
-towards my continuing education on this.&lt;/p&gt;&lt;/div&gt;</description><category>imho</category><guid>https://www.tartley.com/a-laymans-philosophical-musings/</guid><pubDate>Sat, 10 Oct 2009 20:09:20 GMT</pubDate></item><item><title>Copyright and the crowdsourcing of promotional materials</title><link>https://www.tartley.com/copyright-and-the-crowdsourcing-of-promotional-materials/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;There was &lt;a href="http://blog.facebook.com/blog.php?post=110636457130"&gt;a
+towards my continuing education on this.&lt;/p&gt;&lt;/div&gt;</description><category>imho</category><guid>https://www.tartley.com/posts/a-laymans-philosophical-musings/</guid><pubDate>Sat, 10 Oct 2009 20:09:20 GMT</pubDate></item><item><title>Copyright and the crowdsourcing of promotional materials</title><link>https://www.tartley.com/posts/copyright-and-the-crowdsourcing-of-promotional-materials/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;There was &lt;a href="http://blog.facebook.com/blog.php?post=110636457130"&gt;a
 rumour&lt;/a&gt; that
 Facebook was allowing third-party advertisers to use user's photos in
 promotional materials. I imagine a photo of me and my friends enjoying
@@ -826,7 +826,7 @@ BigCorp has earned my ill-will on this topic.&lt;/p&gt;
 for promotional purposes? It'll be funny and cool!" I have to reply "No
 you can't. I agree that it would be kinda funny and cool, but on this
 topic you have seriously annoyed me. We are not friends. You cannot use
-my photos. Now piss off."&lt;/p&gt;&lt;/div&gt;</description><category>imho</category><guid>https://www.tartley.com/copyright-and-the-crowdsourcing-of-promotional-materials/</guid><pubDate>Sat, 29 Aug 2009 18:08:59 GMT</pubDate></item><item><title>Letter to my Member of European Parliament : Proposed Copyright Extension</title><link>https://www.tartley.com/letter-to-my-member-of-european-parliament-proposed-copyright-extension/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Thursday 19 March 2009&lt;/p&gt;
+my photos. Now piss off."&lt;/p&gt;&lt;/div&gt;</description><category>imho</category><guid>https://www.tartley.com/posts/copyright-and-the-crowdsourcing-of-promotional-materials/</guid><pubDate>Sat, 29 Aug 2009 18:08:59 GMT</pubDate></item><item><title>Letter to my Member of European Parliament : Proposed Copyright Extension</title><link>https://www.tartley.com/posts/letter-to-my-member-of-european-parliament-proposed-copyright-extension/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Thursday 19 March 2009&lt;/p&gt;
 &lt;p&gt;Dear Baroness Ludford, (&lt;strong&gt;Update&lt;/strong&gt;: This was sent to all eleven of my
 MEPs)&lt;/p&gt;
 &lt;p&gt;I am writing with reference to the European Parliament's vote on
@@ -907,4 +907,4 @@ lackedcopyright protection for musical works."&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1336802"&gt;http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1336802&lt;/a&gt;
 The paper is summarised persuasively in an online news article here:&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.techdirt.com/articles/20090308/1022324034.shtml"&gt;http://www.techdirt.com/articles/20090308/1022324034.shtml&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>imho</category><guid>https://www.tartley.com/letter-to-my-member-of-european-parliament-proposed-copyright-extension/</guid><pubDate>Thu, 19 Mar 2009 19:32:20 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="http://www.techdirt.com/articles/20090308/1022324034.shtml"&gt;http://www.techdirt.com/articles/20090308/1022324034.shtml&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>imho</category><guid>https://www.tartley.com/posts/letter-to-my-member-of-european-parliament-proposed-copyright-extension/</guid><pubDate>Thu, 19 Mar 2009 19:32:20 GMT</pubDate></item></channel></rss>

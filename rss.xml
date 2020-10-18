@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://www.tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Oct 2020 18:56:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/til-git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've previously only ever used git's regujlar &lt;em&gt;lightweight&lt;/em&gt; tags, created with
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://www.tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 18 Oct 2020 02:58:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/posts/til-git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've previously only ever used git's regujlar &lt;em&gt;lightweight&lt;/em&gt; tags, created with
 &lt;code&gt;git tag TAGNAME&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Today I learned about &lt;em&gt;annotated&lt;/em&gt; tags, created with &lt;code&gt;git tag -a -m "MESSAGE"
 TAGNAME&lt;/code&gt;. (If you don't specify &lt;code&gt;-m MESSAGE&lt;/code&gt;, git annoyingly prompts you for
@@ -27,13 +27,13 @@ issues by:&lt;/p&gt;
 &lt;/pre&gt;
 &lt;p&gt;Upshot: Use regular lightweight tags for private local state. Never &lt;code&gt;git push
 --tags&lt;/code&gt;. For public shared tagging, such as releases, use annotated tags,
-pushed either individually by name, or using &lt;code&gt;--follow-tags&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>tags</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/til-git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>TIL: ‰ is per mille</title><link>https://www.tartley.com/til-per-mille/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;‰ or &lt;em&gt;'per mille'&lt;/em&gt; means parts per thousand.&lt;/p&gt;
+pushed either individually by name, or using &lt;code&gt;--follow-tags&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>tags</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/til-git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>TIL: ‰ is per mille</title><link>https://www.tartley.com/posts/til-per-mille/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;‰ or &lt;em&gt;'per mille'&lt;/em&gt; means parts per thousand.&lt;/p&gt;
 &lt;p&gt;I wasn't aware of it until today when I idly Googled "permil", my imagined
 variation on "percent", to find that this is one of the many spellings of
 a real thing. Rarely used in English, but more common in other European
 languages.&lt;/p&gt;
 &lt;p&gt;Now that I see the symbol, I remember seeing it as a child, on an old
-typewriter that my Grandfather used. What's old is new.&lt;/p&gt;&lt;/div&gt;</description><category>english</category><category>math</category><category>til</category><guid>https://www.tartley.com/til-per-mille/</guid><pubDate>Sat, 17 Oct 2020 05:25:45 GMT</pubDate></item><item><title>The Structure of Scientific Revolutions</title><link>https://www.tartley.com/the-structure-of-scientific-revolutions/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This post rescues content from a series of tweets I wrote in 2018.&lt;/p&gt;
+typewriter that my Grandfather used. What's old is new.&lt;/p&gt;&lt;/div&gt;</description><category>til</category><guid>https://www.tartley.com/posts/til-per-mille/</guid><pubDate>Sat, 17 Oct 2020 05:25:45 GMT</pubDate></item><item><title>The Structure of Scientific Revolutions</title><link>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This post rescues content from a series of tweets I wrote in 2018.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;I loved &lt;em&gt;The Structure of Scientfic Revolutions&lt;/em&gt;, a 1962 book by Thomas S.
 Kuhn. It was recommended to me as having similar impact to undergraduate
@@ -166,7 +166,7 @@ careers. The new paradigm will not achieve total dominance until the field is
 populated by a whole new generation.&lt;/p&gt;
 &lt;p&gt;I am reminded of the dark priesthood of command-line programmers, although
 I note with no little joy that our merry band includes some of the best and
-brightest of the next generation (as judged by my own paradigm's criteria.)&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>politics</category><category>science</category><category>writing</category><guid>https://www.tartley.com/the-structure-of-scientific-revolutions/</guid><pubDate>Sun, 14 Jun 2020 14:02:22 GMT</pubDate></item><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+brightest of the next generation (as judged by my own paradigm's criteria.)&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>politics</category><category>science</category><category>writing</category><guid>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</guid><pubDate>Sun, 14 Jun 2020 14:02:22 GMT</pubDate></item><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -195,7 +195,7 @@ gained much enthusiasm.&lt;/p&gt;
 &lt;li&gt;Passes the result to Black.&lt;/li&gt;
 &lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>software</category><guid>https://www.tartley.com/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>software</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;
@@ -308,7 +308,7 @@ is probably a simpler way.&lt;/p&gt;
 &lt;li&gt;Doubtless due to my own misunderstanding somewhere, in order to get working
    IPv4 connections to my containers, I had to disable IPv6 connections to
    them.&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>geek</category><category>linux</category><category>software</category><guid>https://www.tartley.com/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Dina font as an OTF.</title><link>https://www.tartley.com/dina-as-otf/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The Dina font, converted to an OpenType Font (see screenshots at the bottom of
+&lt;/ol&gt;&lt;/div&gt;</description><category>geek</category><category>linux</category><category>software</category><guid>https://www.tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Dina font as an OTF.</title><link>https://www.tartley.com/posts/dina-as-otf/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The Dina font, converted to an OpenType Font (see screenshots at the bottom of
 the page):&lt;/p&gt;
 &lt;h2&gt;&lt;a href="https://www.tartley.com/files/2020/Dina-v2.93-otf.tar.gz"&gt;&lt;span class="emoji"&gt;📦&lt;/span&gt; Dina-v2.93-otf.tar.gz&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://gitlab.gnome.org/GNOME/pango/issues/386"&gt;Pango dropped support for naive bitmap fonts&lt;/a&gt;
@@ -380,7 +380,7 @@ or at least filing an issue there to try and get some help.&lt;/p&gt;
 &lt;p&gt;But compare it with a regular vector font. Here's Ubuntu Mono, the &lt;em&gt;best&lt;/em&gt; of
 the vector fonts I could find at these sizes. Blurry and inconsistent and hard
 to read:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>fonts</category><category>linux</category><guid>https://www.tartley.com/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>Conky.</title><link>https://www.tartley.com/conky/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;In the typical mad-scientist thrills-per-minute that is the Linux way,
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>fonts</category><category>linux</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>Conky.</title><link>https://www.tartley.com/posts/conky/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;In the typical mad-scientist thrills-per-minute that is the Linux way,
 adding a CPU meter to my desktop involved crafting
 &lt;a href="https://www.tartley.com/files/2020/conky.conf"&gt;my own conky configuration file&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As always, building your own is a chore that crops up when you least expect
@@ -388,7 +388,7 @@ it. But on the other hand, the opportunity for functional and aesthetic
 work results in something artisnally crafted to exactly meet your own personal
 needs. Something you can feel a little pride about. An elegant weapon,
 for a more... civilized age.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="An elegant weapon, for a more... civilised age." src="https://www.tartley.com/files/2020/conky.jpg"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><guid>https://www.tartley.com/conky/</guid><pubDate>Wed, 15 Jan 2020 22:09:13 GMT</pubDate></item><item><title>Vonnegut on software development teams.</title><link>https://www.tartley.com/vonnegut-on-software-development-teams/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;So here's a thing. Spotted this in some of Kurt Vonnegut's personal
+&lt;p&gt;&lt;img alt="An elegant weapon, for a more... civilised age." src="https://www.tartley.com/files/2020/conky.jpg"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><guid>https://www.tartley.com/posts/conky/</guid><pubDate>Wed, 15 Jan 2020 22:09:13 GMT</pubDate></item><item><title>Vonnegut on software development teams.</title><link>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;So here's a thing. Spotted this in some of Kurt Vonnegut's personal
 correspondence, talking about an instructor of his named Slotkin:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;What Slotkin said was this: no man who achieved greatness in the arts operated
@@ -407,7 +407,7 @@ effectiveness in assembling great individuals to create a great team.&lt;/p&gt;
 &lt;p&gt;But in my personal experience, there is a whole lot &lt;em&gt;more&lt;/em&gt; value in creating a
 great team by instilling the right values, and then watching the members
 visibly level each other up, producing a succession of great individuals,
-and only subsequently attracting more of the same.&lt;/p&gt;&lt;/div&gt;</description><category>todo</category><guid>https://www.tartley.com/vonnegut-on-software-development-teams/</guid><pubDate>Mon, 01 Jul 2019 02:28:04 GMT</pubDate></item><item><title>Recent Books</title><link>https://www.tartley.com/june-books/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Notes about some books I read, for me to reminisce over.&lt;/p&gt;
+and only subsequently attracting more of the same.&lt;/p&gt;&lt;/div&gt;</description><category>todo</category><guid>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</guid><pubDate>Mon, 01 Jul 2019 02:28:04 GMT</pubDate></item><item><title>Recent Books</title><link>https://www.tartley.com/posts/june-books/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Notes about some books I read, for me to reminisce over.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://www.tartley.com/files/2019/06/miracleman.jpg" style="float: left; padding: 1em"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Miracleman, books 1, 2 &amp;amp; 3&lt;/em&gt; by Alan Moore, Alan Davies, &amp;amp; John Totleben.&lt;/p&gt;
 &lt;p&gt;I spent a little time digging out earlier works of Alan Moore. These
@@ -462,7 +462,7 @@ rationalized to a mathematical or computable topic is appealing to me, and
 kept the pages turning, but I didn't ultimately find it life-changing.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Nightwings&lt;/em&gt; by Robert Silverberg. A fantastical far-future tale of humanity
 split into occupational castes, guarding the world against prophesied
-invasion. Not my thing.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><guid>https://www.tartley.com/june-books/</guid><pubDate>Thu, 20 Jun 2019 15:17:46 GMT</pubDate></item><item><title>Installing Colout</title><link>https://www.tartley.com/installing-colout/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
+invasion. Not my thing.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><guid>https://www.tartley.com/posts/june-books/</guid><pubDate>Thu, 20 Jun 2019 15:17:46 GMT</pubDate></item><item><title>Installing Colout</title><link>https://www.tartley.com/posts/installing-colout/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
 &lt;p&gt;But &lt;code&gt;pip install colout&lt;/code&gt; from PyPI is broken, and has been for many months,
 due to a typo in the
 &lt;a href="https://pypi.org/project/colout/"&gt;latest (v0.5) PyPI release&lt;/a&gt;.&lt;/p&gt;
@@ -488,4 +488,4 @@ latest Github at the time:&lt;/p&gt;
 &lt;p&gt;Note that, throughout, we're using &lt;code&gt;--user&lt;/code&gt;, so that you can install
 development tools like this system-wide for the current user, without needing a
 virtualenv, without needing root access, and without modifying your installed
-Python system libraries.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>linux</category><guid>https://www.tartley.com/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item></channel></rss>
+Python system libraries.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>linux</category><guid>https://www.tartley.com/posts/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item></channel></rss>
