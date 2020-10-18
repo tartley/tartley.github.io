@@ -2,7 +2,7 @@
 .. title: TIL: ‰ is per mille
 .. slug: til-per-mille
 .. date: 2020-10-17 00:25:45 UTC-05:00
-.. tags: til,english,math
+.. tags: til
 .. category: 
 .. link: 
 .. description: 
