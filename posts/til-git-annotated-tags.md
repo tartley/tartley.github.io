@@ -9,27 +9,30 @@
 .. type: text
 -->
 
-I've previously only ever used git's regujlar _lightweight_ tags, created with
+I've previously only ever used git's regular _lightweight_ tags, created with
 `git tag TAGNAME`.
 
 Today I learned about _annotated_ tags, created with `git tag -a -m "MESSAGE"
-TAGNAME`. (If you don't specify `-m MESSAGE`, git annoyingly prompts you for
-one.)
+TAGNAME`. If you don't specify `-m MESSAGE`, git annoyingly prompts you for
+one, but it will accept `-m ""`.
 
 Annotated tags store the creator, created timestamp, and the message. This
 might occasionally be useful for understanding what happened. A release tagged
 this way shows us who created the release, and when, which might differ from
 when the commit was created.
 
-My habitual way of pushing tags to the sever:
+But more importantly is the different handling of lightweight versus
+annotated tags when pushing to the server.
+
+Habitually, I've been using:
 
 ```bash
 git push --tags
 ```
 
-is slightly broken, in that it pushes *all* tags. Some tags might be intended
-as private development state. Some of them might be unreachable in the origin
-repo.
+This is slightly broken, in that it pushes *all* tags. Some tags might be
+intended as my private local development state. Some of them might be
+unreachable in the origin repo.
 
 To fix this, git push introduced: `--follow-tags`, which aims to address these
 issues by:
@@ -45,7 +48,10 @@ Or alternatively, just push the tag name directly:
 git push TAGAME
 ```
 
-Upshot: Use regular lightweight tags for private local state. Never `git push
---tags`. For public shared tagging, such as releases, use annotated tags,
-pushed either individually by name, or using `--follow-tags`.
+Upshot:
+
+* For private local state, use regular lightweight tags.
+  Never push them. Hence never use `git push --tags`.
+* For public shared tagging, such as releases, use annotated tags,
+  pushed either individually by name, or by using `--follow-tags`.
 
