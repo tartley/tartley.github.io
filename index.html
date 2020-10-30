@@ -85,21 +85,23 @@
 </div>
     </header><div class="e-content entry-content">
     <div>
-<p>I've previously only ever used git's regujlar <em>lightweight</em> tags, created with
+<p>I've previously only ever used git's regular <em>lightweight</em> tags, created with
 <code>git tag TAGNAME</code>.</p>
 <p>Today I learned about <em>annotated</em> tags, created with <code>git tag -a -m "MESSAGE"
-TAGNAME</code>. (If you don't specify <code>-m MESSAGE</code>, git annoyingly prompts you for
-one.)</p>
+TAGNAME</code>. If you don't specify <code>-m MESSAGE</code>, git annoyingly prompts you for
+one, but it will accept <code>-m ""</code>.</p>
 <p>Annotated tags store the creator, created timestamp, and the message. This
 might occasionally be useful for understanding what happened. A release tagged
 this way shows us who created the release, and when, which might differ from
 when the commit was created.</p>
-<p>My habitual way of pushing tags to the sever:</p>
+<p>But more importantly is the different handling of lightweight versus
+annotated tags when pushing to the server.</p>
+<p>Habitually, I've been using:</p>
 <pre class="code literal-block">git push --tags
 </pre>
-<p>is slightly broken, in that it pushes <em>all</em> tags. Some tags might be intended
-as private development state. Some of them might be unreachable in the origin
-repo.</p>
+<p>This is slightly broken, in that it pushes <em>all</em> tags. Some tags might be
+intended as my private local development state. Some of them might be
+unreachable in the origin repo.</p>
 <p>To fix this, git push introduced: <code>--follow-tags</code>, which aims to address these
 issues by:</p>
 <ul>
@@ -111,9 +113,13 @@ issues by:</p>
 <p>Or alternatively, just push the tag name directly:</p>
 <pre class="code literal-block">git push TAGAME
 </pre>
-<p>Upshot: Use regular lightweight tags for private local state. Never <code>git push
---tags</code>. For public shared tagging, such as releases, use annotated tags,
-pushed either individually by name, or using <code>--follow-tags</code>.</p>
+<p>Upshot:</p>
+<ul>
+<li>For private local state, use regular lightweight tags.
+  Never push them. Hence never use <code>git push --tags</code>.</li>
+<li>For public shared tagging, such as releases, use annotated tags,
+  pushed either individually by name, or by using <code>--follow-tags</code>.</li>
+</ul>
 </div>
     </div>
     </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-per-mille/" class="u-url">TIL: ‰ is per mille</a></h1>
