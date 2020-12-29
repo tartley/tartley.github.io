@@ -11,11 +11,11 @@
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2020-10-30T15:58:00Z</lastmod>
+  <lastmod>2020-12-29T14:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/</loc>
-  <lastmod>2020-10-18T03:04:00Z</lastmod>
+  <lastmod>2020-11-02T22:22:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/bash/</loc>
@@ -38,12 +38,20 @@
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/categories/dnd/</loc>
+  <lastmod>2020-11-02T22:22:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/categories/draw/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/ds/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/dungeons-and-dragons/</loc>
+  <lastmod>2020-11-02T22:22:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/exhibits/</loc>
@@ -194,6 +202,10 @@
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/categories/tabletop/</loc>
+  <lastmod>2020-11-01T14:13:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/categories/tags/</loc>
   <lastmod>2020-10-17T05:43:00Z</lastmod>
  </url>
@@ -299,7 +311,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-20.html</loc>
-  <lastmod>2020-10-17T19:41:00Z</lastmod>
+  <lastmod>2020-12-29T14:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-21.html</loc>
@@ -311,7 +323,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-23.html</loc>
-  <lastmod>2020-10-17T19:41:00Z</lastmod>
+  <lastmod>2020-11-01T14:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-3.html</loc>
@@ -564,6 +576,10 @@
  <url>
   <loc>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</loc>
   <lastmod>2020-10-17T19:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/dungeons-dragons-for-7-year-olds/</loc>
+  <lastmod>2020-11-01T14:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/encrypted-zip-files-on-osx/</loc>

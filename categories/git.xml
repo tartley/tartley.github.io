@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about git)</title><link>https://www.tartley.com/</link><description>Source code control.</description><atom:link href="https://www.tartley.com/categories/git.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 30 Oct 2020 15:58:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/posts/til-git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about git)</title><link>https://www.tartley.com/</link><description>Source code control.</description><atom:link href="https://www.tartley.com/categories/git.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 29 Dec 2020 14:04:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/posts/til-git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
 &lt;code&gt;git tag TAGNAME&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Today I learned about &lt;em&gt;annotated&lt;/em&gt; tags, created with &lt;code&gt;git tag -a -m "MESSAGE"
 TAGNAME&lt;/code&gt;. If you don't specify &lt;code&gt;-m MESSAGE&lt;/code&gt;, git annoyingly prompts you for
@@ -176,4 +176,24 @@ installed and associate the .sh filename extension with the Cygwin Bash
 executable. You can then run it as 'gitka' from a Windows command prompt
 thingy. If you then use 'ln -s gitka.sh gitka', then you can also run it
 as just 'gitka' from a Cygwin bash prompt too - without this you would
-have had to type out the full 'gitka.sh'.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>mswin-dev</category><category>software</category><guid>https://www.tartley.com/posts/launch-gitk-displaying-all-extant-branches/</guid><pubDate>Fri, 31 Dec 2010 18:25:31 GMT</pubDate></item></channel></rss>
+have had to type out the full 'gitka.sh'.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>mswin-dev</category><category>software</category><guid>https://www.tartley.com/posts/launch-gitk-displaying-all-extant-branches/</guid><pubDate>Fri, 31 Dec 2010 18:25:31 GMT</pubDate></item><item><title>A Guide to GIT using spatial analogies</title><link>https://www.tartley.com/posts/a-guide-to-git-using-spatial-analogies/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Some developers find Git takes a little getting used to, claiming that
+it is conceptually convoluted compared to other distributed version
+control systems. I used to number myself amongst them.&lt;/p&gt;
+&lt;p&gt;Happily, I've found that a couple of simple spatial analogies have made
+me proficient and fluent in using Git's command-line interface.&lt;/p&gt;
+&lt;p&gt;One of the things that tripped me up as a novice user was the way Git
+handles &lt;strong&gt;branches&lt;/strong&gt;. Unlike more primitive version control systems, git
+repositories are not linear, they support branching, and are thus best
+visualised as trees, upon the nodes of which your current commit may add
+new leaf nodes. To visualise this, it's simplest to think of the state
+of your repository as a point in a high-dimensional 'code-space', in
+which branches are represented as n-dimensional membranes, mapping the
+spatial loci of successive commits onto the projected manifold of each
+cloned repository.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Branches as n-branes" src="https://www.tartley.com/files/2010/12/I1546manifold.png" title="I1546manifold"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; There is, of course, a &lt;a href="http://www.reddit.com/r/programming/comments/embdf/git_complicated_of_course_not_commits_map_to/"&gt;fabulously insightful
+commentary&lt;/a&gt;
+on reddit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Thanks folks. You've made my usual one or two hundred daily
+visitors look kinda paltry:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="spike in daily traffic graph" src="https://www.tartley.com/files/2010/12/daily-traffic.png" title="daily-traffic"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>software</category><category>version-control</category><guid>https://www.tartley.com/posts/a-guide-to-git-using-spatial-analogies/</guid><pubDate>Wed, 15 Dec 2010 20:40:14 GMT</pubDate></item></channel></rss>
