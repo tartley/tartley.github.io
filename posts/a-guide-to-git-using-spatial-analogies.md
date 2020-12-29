@@ -2,7 +2,7 @@
 .. title: A Guide to GIT using spatial analogies
 .. slug: a-guide-to-git-using-spatial-analogies
 .. date: 2010-12-15 14:40:14-06:00
-.. tags: python,software
+.. tags: git,version-control,software
 .. link: 
 .. description: 
 .. type: text
