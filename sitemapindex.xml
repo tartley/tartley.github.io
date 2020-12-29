@@ -26,10 +26,6 @@
   <lastmod>2020-10-18T02:41:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/dnd.xml</loc>
-  <lastmod>2020-11-02T22:22:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/draw.xml</loc>
   <lastmod>2020-10-18T02:41:00Z</lastmod>
  </sitemap>
@@ -59,7 +55,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/games.xml</loc>
-  <lastmod>2020-11-04T18:14:00Z</lastmod>
+  <lastmod>2020-12-29T18:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/geek.xml</loc>
@@ -251,10 +247,10 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/rss.xml</loc>
-  <lastmod>2020-12-29T14:04:00Z</lastmod>
+  <lastmod>2020-12-29T18:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/sitemap.xml</loc>
-  <lastmod>2020-12-29T14:04:00Z</lastmod>
+  <lastmod>2020-12-29T18:10:00Z</lastmod>
  </sitemap>
 </sitemapindex>
