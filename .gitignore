@@ -4,4 +4,4 @@ __pycache__
 cache
 nikolaserve.pid
 output
-
+/logs/

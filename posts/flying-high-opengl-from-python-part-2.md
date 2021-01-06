@@ -12,7 +12,7 @@
 *This is second in a series of articles about algorithmically generating
 geometry to drive OpenGL from Python.*
 
-[*&lt;&lt; Back to part 1*](/flying-high-hobbyist-opengl-from-python)
+[*&lt;&lt; Back to part 1*](/posts/flying-high-hobbyist-opengl-from-python)
 
 *Last time we got as far as creating some instances of our super-simple
 Shape class, and having Glyph and Render classes convert those to arrays

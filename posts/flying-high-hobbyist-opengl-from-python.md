@@ -561,4 +561,4 @@ produce more fun geometry, and will also help us draw more complex
 shapes, composed of many simpler shapes, without requiring several
 separate OpenGL function calls for each of the simple shapes.
 
-[On to Part 2 &gt;&gt;](/flying-high-opengl-from-python-part-2)
+[On to Part 2 &gt;&gt;](/posts/flying-high-opengl-from-python-part-2)
