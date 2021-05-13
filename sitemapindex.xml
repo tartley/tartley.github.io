@@ -14,6 +14,10 @@
   <lastmod>2020-10-18T02:41:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://www.tartley.com/categories/chia.xml</loc>
+  <lastmod>2021-05-13T21:45:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://www.tartley.com/categories/chipmunk.xml</loc>
   <lastmod>2020-10-18T02:41:00Z</lastmod>
  </sitemap>
@@ -24,6 +28,10 @@
  <sitemap>
   <loc>https://www.tartley.com/categories/creative.xml</loc>
   <lastmod>2020-10-18T02:41:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://www.tartley.com/categories/crypto.xml</loc>
+  <lastmod>2021-05-13T21:45:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/draw.xml</loc>
@@ -95,7 +103,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/linux.xml</loc>
-  <lastmod>2020-10-18T02:41:00Z</lastmod>
+  <lastmod>2021-05-13T19:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/media.xml</loc>
@@ -111,7 +119,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/music.xml</loc>
-  <lastmod>2021-05-13T16:29:00Z</lastmod>
+  <lastmod>2021-05-13T19:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/nintendo.xml</loc>
@@ -199,7 +207,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/til.xml</loc>
-  <lastmod>2020-10-30T15:58:00Z</lastmod>
+  <lastmod>2021-05-13T19:25:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/todo.xml</loc>
@@ -239,10 +247,10 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/rss.xml</loc>
-  <lastmod>2021-05-13T16:29:00Z</lastmod>
+  <lastmod>2021-05-13T21:45:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/sitemap.xml</loc>
-  <lastmod>2021-05-13T16:29:00Z</lastmod>
+  <lastmod>2021-05-13T21:45:00Z</lastmod>
  </sitemap>
 </sitemapindex>

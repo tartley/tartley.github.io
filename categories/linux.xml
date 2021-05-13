@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 18 Oct 2020 02:41:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 13 May 2021 19:25:53 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Create mp3 from YouTube video</title><link>https://www.tartley.com/posts/til-create-mp3-from-youtube-video/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Install &lt;code&gt;youtube-dl&lt;/code&gt;, a tool to download YouTube videos. Using &lt;code&gt;apt&lt;/code&gt; installs a
+version that's too old to work, so:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;pipsi install youtube-dl
+&lt;/pre&gt;
+&lt;p&gt;Download the video from YouTube:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;youtube-dl https://www.youtube.com/watch?v&lt;span class="o"&gt;=&lt;/span&gt;nyU1Pt2IXyE
+&lt;/pre&gt;
+&lt;p&gt;This results in a webm file. I have no idea what that is, and am relieved
+to discover that converting it into an mp3 requires just:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;ffmpeg -I MyVideoFile.webm -vn MyAudioFile.mp3
+&lt;/pre&gt;
+&lt;p&gt;Where &lt;code&gt;-vn&lt;/code&gt; disables video in the output.&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>music</category><category>til</category><guid>https://www.tartley.com/posts/til-create-mp3-from-youtube-video/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;

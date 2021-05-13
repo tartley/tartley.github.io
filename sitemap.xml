@@ -11,11 +11,11 @@
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2021-05-13T16:29:00Z</lastmod>
+  <lastmod>2021-05-13T21:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/</loc>
-  <lastmod>2020-12-29T18:10:00Z</lastmod>
+  <lastmod>2021-05-13T21:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/bash/</loc>
@@ -24,6 +24,10 @@
  <url>
   <loc>https://www.tartley.com/categories/books/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/chia/</loc>
+  <lastmod>2021-05-13T21:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/chipmunk/</loc>
@@ -36,6 +40,10 @@
  <url>
   <loc>https://www.tartley.com/categories/creative/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/crypto/</loc>
+  <lastmod>2021-05-13T21:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/draw/</loc>
@@ -311,7 +319,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-23.html</loc>
-  <lastmod>2021-05-13T16:26:00Z</lastmod>
+  <lastmod>2021-05-13T21:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-3.html</loc>
@@ -1208,6 +1216,10 @@
  <url>
   <loc>https://www.tartley.com/posts/til-create-mp3-from-youtube-video/</loc>
   <lastmod>2021-05-13T16:26:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/til-cryptocurrency-per-transaction-energy-use/</loc>
+  <lastmod>2021-05-13T21:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/til-git-annotated-tags/</loc>
