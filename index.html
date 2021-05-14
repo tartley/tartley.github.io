@@ -69,7 +69,7 @@
     
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-cryptocurrency-per-transaction-energy-use/" class="u-url">TIL: Cryptocurrency per transaction energy use</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-cryptocurrency-per-transaction-energy-use/" class="u-url">TIL: Energy use per transaction for cryptocurrencies vs Visa</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -86,62 +86,73 @@
     </header><div class="e-content entry-content">
     <div>
 <p>For my own calibration, approximate current energy use for a single transaction
-in various cryptocurrencies:</p>
+in various cryptocurrencies, compared with using Visa:</p>
 <table>
 <thead><tr>
-<th>Currency</th>
-<th>Symbol</th>
-<th>Energy use<br>per txn(kWh)</th>
-<th>Equivalent to</th>
+<th>Currency </th>
+<th>Symbol </th>
+<th align="right">Energy use<br>per txn(kWh) </th>
+<th>Equivalent</th>
 </tr></thead>
 <tbody>
 <tr>
 <td>Bitcoin</td>
 <td>BTC</td>
-<td>710</td>
-<td>Hot tub, 120 hours</td>
+<td align="right">1,000.000 </td>
+<td>(ie. one thousand point zero) Hot tub, 150 hours</td>
 </tr>
 <tr>
 <td>Ethereum</td>
 <td>ETH</td>
-<td>62</td>
+<td align="right">62.000 </td>
 <td>Nissan Leaf, 1.5 charges</td>
 </tr>
 <tr>
 <td>Litecoin</td>
 <td>LTC</td>
-<td>19</td>
+<td align="right">19.000 </td>
 <td>Clothes washer, 8 loads</td>
 </tr>
 <tr>
 <td>Chia</td>
 <td>XCH</td>
-<td>2</td>
+<td align="right">2.000 </td>
 <td>Dishwasher, 1 hour</td>
 </tr>
 <tr>
 <td>Cardano</td>
 <td>ADA</td>
-<td>0.5</td>
+<td align="right">0.500 </td>
 <td>Computer &amp; monitor, 1 hour</td>
 </tr>
 <tr>
 <td>Dogecoin</td>
 <td>DOGE</td>
-<td>0.12</td>
+<td align="right">0.120 </td>
 <td>Humidifier, 1 hour</td>
 </tr>
 <tr>
 <td>Ripple</td>
 <td>XRP</td>
-<td>0.0079</td>
+<td align="right">0.079 </td>
 <td>Amazon echo telling 2 jokes</td>
+</tr>
+<tr>
+<td>Visa</td>
+<td></td>
+<td align="right">0.001 </td>
+<td>Buying with a Visa card</td>
 </tr>
 </tbody>
 </table>
-<p>Sources:</p>
+<p><br>
+Sources</p>
 <ul>
 <li>I got most crypto energy use from <a href="https://www.benzinga.com/markets/cryptocurrency/21/05/21098323/elon-musk-says-tesla-looking-at-other-cryptos-who-use-less-than-1-of-bitcoins-energy-which">this roundup</a>.</li>
+<li>For Visa, I used the figures from <a href="https://digiconomist.net/bitcoin-energy-consumption">this breakdown</a>
+  which calculates Visa uses 750,000 times less energy per transaction than Bitcoin.</li>
+<li>For Bitcoin, I took a rounded figure roughly between those quoted on the above two sources
+  (710kWh and 1,123kWh). A single figure precision is probably most appropriate anyhow.</li>
 <li>For Chia, I did my own hacky calculation.
   <a href="https://chiapower.org/">Chia Power</a> estimates 6MW in
   total is used by the Chia network, at current size of 4EiB.
