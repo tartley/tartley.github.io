@@ -21,7 +21,7 @@ in various cryptocurrencies, compared with using Visa:
 | Cardano        | ADA          |       500&nbsp;                 | Computer & monitor, 1 hour
 | Dogecoin       | DOGE         |       120&nbsp;                 | Humidifier, 1 hour
 | Ripple         | XRP          |        79&nbsp;                 | Amazon echo telling 2 jokes
-| Visa           |              |         1&nbsp;                 | Buying with a Visa card
+| Visa           |              |         1&nbsp;                 | One Visa card purchase
 
 <br />
 Sources
@@ -38,4 +38,17 @@ Sources
   6 Megawatts divided by 3k per hour gives an energy use per transaction
   of 2kW.
 * For equivalent household energy uses, I used [this](https://electricityplans.com/kwh-kilowatt-hour-can-power/) and [this](http://www.wrecc.com/what-uses-watts-in-your-home/).
+
+Something's not quite right here though. The Chia whitepaper estimates 10,000
+times better energy efficiency than Bitcoin. They probably know how to
+calculate that better than I do. So my figure for Chia is perhaps high? I hear
+the value per transaction will come down as Chia starts handling more
+transactions, which seems reasonable. Perhaps the white paper was referring to
+that future hypothetical efficiency?
+
+On the other hand, many of the other cryptocurrencies listed above will
+become more efficient in the future too (e.g. Bitcoin is in the process
+of deploying its lightning network, which will reduce per transaction
+energy use.)  So I think it's fair to leave the above figures as they are,
+as a snapshot of current reality.
 
