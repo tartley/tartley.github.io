@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about gamedev)</title><link>https://www.tartley.com/</link><description>Creating videogames.</description><atom:link href="https://www.tartley.com/categories/gamedev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 06 Jan 2021 02:58:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about gamedev)</title><link>https://www.tartley.com/</link><description>Creating videogames.</description><atom:link href="https://www.tartley.com/categories/gamedev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 17 May 2021 22:19:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
 geometry to drive OpenGL from Python.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python"&gt;&lt;em&gt;&amp;lt;&amp;lt; Back to part 1&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Last time we got as far as creating some instances of our super-simple
@@ -832,4 +832,29 @@ makes it possible to fit a flight of stairs into a smaller space than
 would otherwise be possible, by allowing the bottom few steps to
 gracefully project out into the corridor.&lt;/p&gt;
 &lt;p&gt;Having finished this last night, I then dreamed about geometric
-operations on three dimensional spaces, which I think is a good sign.&lt;/p&gt;&lt;/div&gt;</description><category>creative</category><category>gamedev</category><category>geek</category><guid>https://www.tartley.com/posts/creating-a-level-for-thief-2/</guid><pubDate>Mon, 25 Jan 2010 19:50:26 GMT</pubDate></item></channel></rss>
+operations on three dimensional spaces, which I think is a good sign.&lt;/p&gt;&lt;/div&gt;</description><category>creative</category><category>gamedev</category><category>geek</category><guid>https://www.tartley.com/posts/creating-a-level-for-thief-2/</guid><pubDate>Mon, 25 Jan 2010 19:50:26 GMT</pubDate></item><item><title>Beginning Game Development With Python and PyGame</title><link>https://www.tartley.com/posts/beginning-game-development-with-python-and-pygame/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2009/01/beginning-game-development-with-python-and-pygame.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Will McGugan&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Introduces Python, PyGame and game development ideas from the ground up,
+in a really pleasant writing style which is both unintimidating, clear
+and covers all the bases. It's definitely a book for beginners though,
+walking through high-school topics like bitmaps and vectors and
+matrices, but having laid the foundations, it works up to an excellent
+hands-on overview of using OpenGL in the final three chapters, including
+lighting, textures and fog. It makes all the topics very accessible, and
+does an incredible job of putting all the various topics to work
+together to form a cohesive and illustrating whole.&lt;/p&gt;
+&lt;p&gt;Nothing extremely hardcore is covered though. An 'ants chasing spiders'
+state machine is probably the most involved example in here, barring the
+latter parts of the OpenGL section, with four-state creatures
+beautifully explained and presented. If you're already doing OpenGL or
+game development, even as a piss-poor amateur like myself, you likely
+already know many of the things between these covers, aside from the
+PyGame specifics, which are generally transparent enough to figure out
+yourself.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; In the months since I wrote this review, I've found my
+thoughts returning to this book time and again, and have come to the
+conclusion that I gained more from its extremely clear exposition than I
+realised at the time. I'm revising the review scores significantly
+upwards to reflect this.&lt;/p&gt;
+&lt;p&gt;Rating: 10/10 for beginners. 5/10 for experts. Consider yourself
+somewhere between the two.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>gamedev</category><category>media</category><category>non-fiction</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/beginning-game-development-with-python-and-pygame/</guid><pubDate>Mon, 12 Jan 2009 06:17:54 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about math)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/math.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 17 May 2021 23:31:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Man Who Knew Too Much</title><link>https://www.tartley.com/posts/the-man-who-knew-too-much/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2008/08/the-man-who-knew-too-much.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by David Leavitt&lt;/em&gt;, 2006.&lt;/p&gt;
+&lt;p&gt;An impulse buy, and it was good but not great. The barbaric treatment
+Turing received over being gay seems to be the thing that initially
+attracted the author's interest in Turing's life, and while that is a
+worthwhile and thought-provoking topic, it is a little over-played here.
+While Turing's mathematical contributions are covered quite commendably,
+I'd pretty much read all of it before, and it somehow seemed to be
+lacking a tiny sparkle of passion that made me suspect the author had
+done his absolute damnedest to cover the mathematical side of Turing,
+because no book about him would be complete without it, but without
+really ever wanting to.&lt;/p&gt;
+&lt;p&gt;Rating: 7/10. Solid but not much that was new to me.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>math</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/the-man-who-knew-too-much/</guid><pubDate>Tue, 19 Aug 2008 10:24:01 GMT</pubDate></item><item><title>Everything and More: A compact history of ∞</title><link>https://www.tartley.com/posts/everything-and-more/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="Cover: Everything and More" src="https://www.tartley.com/files/2007/02/everything-and-more.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by David Foster Wallace.&lt;/em&gt; 2003.
+&lt;a href="http://www.amazon.co.uk/Everything-More-Compact-History-Infinity/dp/0753818825"&gt;On Amazon.co.uk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Short and Unnecessary Foreword&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Before I describe the book I should like to set the scene, as it were,
+by describing how it was recommended to me in glowing terms by my new
+friend, viz. Xtian&lt;em&gt;[1]&lt;/em&gt;, whom I hold in high regard w.r.t. both
+intellectual pursuits and such matters of taste as one's reading
+material. Such an introduction lead me to have high expectations of E&amp;amp;M,
+and I shall now relate the extent to which these were fulfilled.&lt;em&gt;[2]&lt;/em&gt;
+But first, for your convenience, a glossary of abbreviations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;E&amp;amp;M&lt;/strong&gt; - Everything and More&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DSP&lt;/strong&gt; - Digital signal processing&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NZ&lt;/strong&gt; - New Zealand&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;YMMV&lt;/strong&gt; - Your mileage may vary&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;[1]&lt;/em&gt; Who hails from NZ, which is known, amongst other things, for its
+geographical isolation, being some 2,000km from its nearest neighbour,
+SE Australia.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;[2]&lt;/em&gt; See &lt;em&gt;(a)&lt;/em&gt; below.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;§1a.&lt;/strong&gt; It is probably appropriate, when writing about a book such as
+this, to describe my own mathematical background, which is that I have a
+ten-year-old B.Sc in Physics and Electronics, following which I spent a
+couple of years using stuff like Fourier and digital domain
+transformations fairly heavily, working in R&amp;amp;D on the software analysis
+of radar echoes from "non-co-operative targets". Since then, however, my
+math usage dropped off pretty much to zero, leading to the present day
+in which I find myself so completely rusty that, while I'm happy and
+comfortable arm-waving around the concepts &lt;em&gt;[3]&lt;/em&gt;, I'd have
+&lt;em&gt;substantial&lt;/em&gt; revision to do in order to be able to coax out any kind of
+actually useful derivations &lt;em&gt;[4]&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;[3]&lt;/em&gt; For example, I once abandoned an otherwise delightful pub crawl
+halfway through, when I received a last-minute invite to attend a math
+lecture by Prof. "chaos theory" Mandelbrot across town instead.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;[4]&lt;/em&gt; Beyond the basics, that is. Obviously I could still limp through
+some fundamentals.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;§2a.&lt;/strong&gt; So, the first thing to relate is that Mr. Wallace's
+descriptions of the nature of, and relationships between, all the
+&lt;em&gt;transfinites&lt;/em&gt;** brought me genuinely thrilling moments of
+heart-racing excitement and revelatory wonder - not once, but several
+times. The subject matter is indeed a captivating one, and made all the
+more so for me because it covers topics which I have not previously
+studied, namely the central one of infinity itself, but also peripheral
+ones such as the difficulties the Ancient Greeks had in wresting with
+abstraction, as hinted at by their lack of a verb meaning 'to exist'.
+This, of course, caused them no end of problems mathematically, which is
+arguably nothing but abstractions, and they therefore had problems not
+just with infinity, but also with significantly more mundane concepts
+such as zero &lt;em&gt;[5]&lt;/em&gt; and irrationals &lt;em&gt;[6]&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;[5]&lt;/em&gt; which they didn't have and apparently never missed&lt;/p&gt;
+&lt;p&gt;** due to Cantor, et al,&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;[6]&lt;/em&gt; which, if I were Bill Bryson, I would describe as "all the
+fiddly fractions &lt;em&gt;[7]&lt;/em&gt; that exist in the gaps between the familiar,
+round-number fractions*** such as 3/4, 1/8 and 34/978."&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;[7]&lt;/em&gt; The A.Greeks refused to believe irrationals &lt;em&gt;[6]&lt;/em&gt; existed, and
+when they eventually realised that even some of the most basic
+measurements from geometry&lt;em&gt;(a)&lt;/em&gt; could not ever be expressed as the ratio
+of two whole numbers, it shook their mathematical confidence in ways
+from which they arguably never really recovered.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(a)&lt;/em&gt; (such as the diagonal of a unit square)&lt;/p&gt;
+&lt;p&gt;*** viz. the &lt;em&gt;rationals&lt;/em&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;The negatives&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;§2b.&lt;/strong&gt; However, there is one other factor about the book which
+&lt;em&gt;(B)&lt;/em&gt; I should probably mention, and that is that I have never, in all
+my life, read a document of any description which was as poorly
+organised, as haphazardly ordered, and ridiculously and unnecessarily
+over-footnoted, as inconsistently titled and annotated and bracketed
+by section headings and end-of-section headings, as pointlessly
+cross-referenced, and as littered with notes to the effect that his
+editor suggested he should make the following changes. It is in the
+exact state that I would expect to find it if I had found a first
+draft abandoned on a park bench, heavily marked with red biro as the
+result of several furious exchanges with an increasingly antagonistic
+publisher. And reading an entire paperback of this idiocy almost drove
+me BATSHIT SCREAMING INSANE.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;End of the negatives&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;(B)&lt;/em&gt; in the interests of fairness&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;§3.&lt;/strong&gt; So there you have it. YMMV. I'm am glad I read it, but god I
+found it hard work - not because the math was hard to follow, just
+simply because the shambolic prose annoyed the living snot out of me. If
+you have a potential interest in the subject matter, and the style of
+this review doesn't make your hackles stand on end, then this book is
+for you &lt;em&gt;(c)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(c)&lt;/em&gt; probably&lt;/p&gt;
+&lt;p&gt;Rating: ∞ x 0. Er... 6?&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>math</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/everything-and-more/</guid><pubDate>Thu, 22 Feb 2007 16:07:17 GMT</pubDate></item></channel></rss>
