@@ -2,7 +2,7 @@
 .. title: jPod
 .. slug: jpod
 .. date: 2008-05-07 14:37:24-05:00
-.. tags: books,fiction
+.. tags: media,books,fiction
 .. link: 
 .. description: 
 .. type: text

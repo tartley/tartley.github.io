@@ -2,7 +2,7 @@
 .. title: Fahrenheit 451
 .. slug: fahrenheit-451
 .. date: 2009-01-27 16:15:47-06:00
-.. tags: books,science-fiction
+.. tags: media,books,fiction,science-fiction,novel
 .. link: 
 .. description: 
 .. type: text

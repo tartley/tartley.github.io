@@ -2,7 +2,7 @@
 .. title: This Gaming Life: Travels in Three Cities
 .. slug: this-gaming-life-travels-in-three-cities
 .. date: 2014-02-03 20:31:29-06:00
-.. tags: books,games
+.. tags: media,books,non-fiction,games
 .. link: 
 .. description: 
 .. type: text

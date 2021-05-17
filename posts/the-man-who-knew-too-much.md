@@ -2,7 +2,7 @@
 .. title: The Man Who Knew Too Much
 .. slug: the-man-who-knew-too-much
 .. date: 2008-08-19 05:24:01-05:00
-.. tags: books
+.. tags: media,books,non-fiction,math,software
 .. link: 
 .. description: 
 .. type: text
@@ -24,4 +24,4 @@ done his absolute damnedest to cover the mathematical side of Turing,
 because no book about him would be complete without it, but without
 really ever wanting to.
 
-Rating: 5/10. Solid but not much that is new.
+Rating: 7/10. Solid but not much that was new to me.

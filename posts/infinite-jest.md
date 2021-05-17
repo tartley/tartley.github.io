@@ -2,7 +2,7 @@
 .. title: Infinite Jest
 .. slug: infinite-jest
 .. date: 2009-03-28 16:26:49-05:00
-.. tags: books,fiction
+.. tags: media,books,fiction,novel,drugs
 .. link: 
 .. description: 
 .. type: text

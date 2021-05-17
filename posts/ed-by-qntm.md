@@ -2,7 +2,7 @@
 .. title: Ed, by qntm
 .. slug: ed-by-qntm
 .. date: 2021-05-17 10:48:53 UTC-05:00
-.. tags: media,books,novella,science-fiction,epub,free-to-read
+.. tags: media,books,novella,science-fiction,fiction,epub,free-to-read
 .. category: 
 .. link: 
 .. description: 

@@ -2,7 +2,7 @@
 .. title: Opengl Shading Language
 .. slug: opengl-shading-language
 .. date: 2009-05-11 22:19:26-05:00
-.. tags: books,graphics
+.. tags: media,books,non-fiction,software,graphics
 .. link: 
 .. description: 
 .. type: text

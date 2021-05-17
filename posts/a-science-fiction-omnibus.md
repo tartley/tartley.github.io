@@ -2,7 +2,7 @@
 .. title: A Science-Fiction Omnibus
 .. slug: a-science-fiction-omnibus
 .. date: 2008-12-14 17:32:47-06:00
-.. tags: books,science-fiction
+.. tags: media,books,fiction,science-fiction,shorts
 .. link: 
 .. description: 
 .. type: text
@@ -31,6 +31,8 @@ been dulled by the passage of time and events, to expose the lackluster
 writing beneath. Multiple tales of supreme computers achieving godhood,
 for better or for worse. Tales of malfunctioning machinery that barely
 held my interest.
+
+## Great Work of Time
 
 Imagine, then, my surprise, when the final story of the collection,
 [John Crowley](http://en.wikipedia.org/wiki/John_Crowley)'s [*Great Work

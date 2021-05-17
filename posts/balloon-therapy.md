@@ -2,7 +2,7 @@
 .. title: Balloon Therapy
 .. slug: balloon-therapy
 .. date: 2008-09-03 21:44:50-05:00
-.. tags: books
+.. tags: media,books,non-fiction,mental-health
 .. link: 
 .. description: 
 .. type: text

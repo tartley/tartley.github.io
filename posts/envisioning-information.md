@@ -2,7 +2,7 @@
 .. title: Envisioning Information
 .. slug: envisioning-information
 .. date: 2009-04-14 13:07:07-05:00
-.. tags: books,graphics
+.. tags: media,books,non-fiction,graphics
 .. link: 
 .. description: 
 .. type: text

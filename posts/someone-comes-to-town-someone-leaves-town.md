@@ -2,7 +2,7 @@
 .. title: Someone Comes to Town, Someone Leaves Town
 .. slug: someone-comes-to-town-someone-leaves-town
 .. date: 2008-02-08 01:01:37-06:00
-.. tags: books,fiction
+.. tags: books,fiction,novel
 .. link: 
 .. description: 
 .. type: text
@@ -17,13 +17,9 @@ I just don't know about this one. I really wanted to like it. It starts
 out with an interesting, down-to-earth story about a guy establishing
 himself in a new neighbourhood, setting up an open wireless mesh net
 across the neighbourhood, back in a day when this was still a *really
-cool idea*. This tale is then peppered with disconcerting non-literal
-sounding references to his family, such as the cliffs and caves of his
-Father, the mountain. By the time I'd really gotten on board with this
-fantastic side of the emerging story, the scene changes were occurring
-so swiftly between paragraphs that I began to wonder whether the text
-hadn't got jumbled up somewhere between Cory's word processor and [my
-screen](http://tartley.com/?p=217).
+cool idea*. This tale is then peppered with initially disconcerting non-literal
+sounding references to his family, such as the cliffs and caves of his Father,
+the mountain.
 
 Perhaps I embarked upon it too casually. It was certainly engaging, but
 by the last few pages I began to suspect that threads of the plot had
@@ -47,3 +43,4 @@ However, I've read a bunch of discussion about *Someone Comes to
 Town...*, and I don't seem to have missed much that anyone else has been
 getting out of it. So while I'm looking forward to other stuff by him,
 I'm sticking by my low rating for this.
+

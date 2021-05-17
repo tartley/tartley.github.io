@@ -2,7 +2,7 @@
 .. title: Broken Open: How Difficult Times Can Help Us Grow
 .. slug: broken-open-how-difficult-times-can-help-us-grow
 .. date: 2007-03-20 13:11:38-05:00
-.. tags: books
+.. tags: media,books,non-fiction,mental-health
 .. link: 
 .. description: 
 .. type: text

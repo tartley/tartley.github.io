@@ -2,7 +2,7 @@
 .. title: OpenGL Programming Guide, 6th ed.
 .. slug: opengl-programming-guide-6th-ed
 .. date: 2008-11-03 18:48:55-06:00
-.. tags: books,software,graphics
+.. tags: media,books,non-fiction,software,graphics
 .. link: 
 .. description: 
 .. type: text

@@ -2,7 +2,7 @@
 .. title: Everything and More: A compact history of ∞
 .. slug: everything-and-more
 .. date: 2007-02-22 10:07:17-06:00
-.. tags: books
+.. tags: media,books,non-fiction,math
 .. link: 
 .. description: 
 .. type: text
