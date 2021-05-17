@@ -40,11 +40,13 @@ Sources
 * For equivalent household energy uses, I used [this](https://electricityplans.com/kwh-kilowatt-hour-can-power/) and [this](http://www.wrecc.com/what-uses-watts-in-your-home/).
 
 Something's not quite right here though. The Chia whitepaper estimates 10,000
-times better energy efficiency than Bitcoin. They probably know how to
-calculate that better than I do. So my figure for Chia is perhaps high? I hear
-the value per transaction will come down as Chia starts handling more
-transactions, which seems reasonable. Perhaps the white paper was referring to
-that future hypothetical efficiency?
+times better energy efficiency than Bitcoin, by my figures above only show
+1,000.
+
+They probably know how to calculate that better than I do. So perhaps my figure
+for Chia is high? I hear the value per transaction will come down as
+Chia starts handling more transactions, which seems reasonable. Perhaps the
+white paper refers to that future hypothetical efficiency?
 
 On the other hand, many of the other cryptocurrencies listed above will
 become more efficient in the future too (e.g. Bitcoin is in the process
