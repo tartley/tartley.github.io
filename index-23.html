@@ -70,7 +70,163 @@
     
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/june-books/" class="u-url">Recent Books</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/dina-as-otf/" class="u-url">Dina font as an OTF.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/dina-as-otf/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-02-05T14:51:33-06:00" itemprop="datePublished" title="2020-02-05 14:51">2020-02-05 14:51</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/dina-as-otf/#disqus_thread" data-disqus-identifier="cache/posts/dina-as-otf.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>The Dina font, converted to an OpenType Font (see screenshots at the bottom of
+the page):</p>
+<h2><a href="files/2020/Dina-v2.93-otf.tar.gz"><span class="emoji">📦</span> Dina-v2.93-otf.tar.gz</a></h2>
+<p><a href="https://gitlab.gnome.org/GNOME/pango/issues/386">Pango dropped support for naive bitmap fonts</a>
+in v1.44 -- i.e. from Ubuntu 20.04, <em>Focal</em>, onwards.</p>
+<p>So all bitmap fonts need to be converted into a format that will render,
+ie. a vector format such as OpenType that allows bitmaps to be embedded.
+(Not a conversion of the bitmap into an outline, losing the advantages of
+the crisp, tiny bitmaps.)</p>
+<p>For most bitmap fonts, this conversion will be done for you, by packagers
+or font authors.</p>
+<p>But you'll need to do it yourself for any peripheral fonts that you love
+more than your distribution does. Here's how I did it for my
+<a href="http://www.dcmembers.com/jibsen/download/61/">beloved Dina</a>.</p>
+<h3>1. Identify the font file.</h3>
+<pre class="code literal-block">fc-list <span class="p">|</span> grep Dina
+</pre>
+<h3>2. Convert.</h3>
+<p>Use either command line tools, or fontforge.</p>
+<h4>2.1 Using fontforge</h4>
+<p>A GUI tool.</p>
+<ol>
+<li>
+<p>Open up fontforge, paste the font path in.</p>
+</li>
+<li>
+<p>File / generate fonts.</p>
+</li>
+<li>
+<p>Select:</p>
+</li>
+<li>
+<p>Left dropdown: "OpenType (CFF)"</p>
+</li>
+<li>Right dropdown: "In TTF/OTF"</li>
+<li>Generate</li>
+</ol>
+<p>The results have some problems. I'm using it in gnome-terminal:</p>
+<ul>
+<li>People converting other fonts report issues with ugly gaps between
+  characters. But I don't see that, perhaps because it's a monospace font?</li>
+<li>The converted font is invisible in font selection dialogs, making it look
+  like the process did not work. But once selected, by clicking around blindly,
+  then the font displays fine in applications.</li>
+<li>Using a font size which is not defined in the font displays a blank terminal,
+  instead of falling back to some other font.</li>
+<li>Using ctrl-+/- to select font sizes cycles through three of the four
+  defined sizes. I don't know why it skips one. But all four are usable if
+  you explicitly select a size.</li>
+</ul>
+<h3>2.2 Using command-line tools</h3>
+<p>The process is described at
+https://fedoraproject.org/wiki/BitmapFontConversion.</p>
+<p>Ubuntu's released version of fonttosfnt (1.0.4) produces unusable results:
+* Only the 1st and 2nd smallest font sizes are preserved.
+* In the 2nd smallest size, all variations are too bold, so that 'bold'
+  variations look 'double-bold'. (Italics looks really ugly too, this may
+  just be a result of the enboldening.)</p>
+<p>TODO: Consider trying the latest fonttosfnt (1.1.0)
+https://gitlab.freedesktop.org/xorg/app/fonttosfnt
+or at least filing an issue there to try and get some help.</p>
+<h3>3. Install</h3>
+<ul>
+<li>Copy to <code>~/.local/share/fonts</code> (or <code>~/.fonts</code>, right?)</li>
+<li><code>fc-cache -f</code></li>
+</ul>
+<h3>The result</h3>
+<p>I know, it doesn't look like much.</p>
+<p><img alt="" src="files/2020/terminal-dina-small-ll.png"></p>
+<p>But compare it with a regular vector font. Here's Ubuntu Mono, the <em>best</em> of
+the vector fonts I could find at these sizes. Blurry and inconsistent and hard
+to read:</p>
+<p><img alt="" src="files/2020/terminal-ubuntumono-small-ll.png"></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/conky/" class="u-url">Conky.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/conky/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-01-15T16:09:13-06:00" itemprop="datePublished" title="2020-01-15 16:09">2020-01-15 16:09</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/conky/#disqus_thread" data-disqus-identifier="cache/posts/conky.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>In the typical mad-scientist thrills-per-minute that is the Linux way,
+adding a CPU meter to my desktop involved crafting
+<a href="files/2020/conky.conf">my own conky configuration file</a>.</p>
+<p>As always, building your own is a chore that crops up when you least expect
+it. But on the other hand, the opportunity for functional and aesthetic
+work results in something artisnally crafted to exactly meet your own personal
+needs. Something you can feel a little pride about. An elegant weapon,
+for a more... civilized age.</p>
+<p><img alt="An elegant weapon, for a more... civilised age." src="files/2020/conky.jpg"></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/vonnegut-on-software-development-teams/" class="u-url">Vonnegut on software development teams.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/vonnegut-on-software-development-teams/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-06-30T21:28:04-05:00" itemprop="datePublished" title="2019-06-30 21:28">2019-06-30 21:28</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/vonnegut-on-software-development-teams/#disqus_thread" data-disqus-identifier="cache/posts/vonnegut-on-software-development-teams.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>So here's a thing. Spotted this in some of Kurt Vonnegut's personal
+correspondence, talking about an instructor of his named Slotkin:</p>
+<blockquote>
+<p>What Slotkin said was this: no man who achieved greatness in the arts operated
+by himself; he was top man in a group of like-minded individuals. This works
+out fine for the cubists, and Slotkin had plenty of good evidence for its
+applying to Goethe, Thoreau, Hemingway, and just about anybody you care to
+name.</p>
+<p>If this isn't 100% true, it's true enough to be interesting—and maybe helpful.</p>
+<p>The school gives a man, Slotkin said, the fantastic amount of guts it takes to
+add to culture. It gives him morale, esprit de corps, the resources of many
+brains, and—maybe most important—one-sidedness with assurance.</p>
+</blockquote>
+<p>Reminds me powerfully of my growing impressions of the environment a person
+needs to be in in order to do great things in software. There is no doubt some
+effectiveness in assembling great individuals to create a great team.</p>
+<p>But in my personal experience, there is a whole lot <em>more</em> value in creating a
+great team by instilling the right values, and then watching the members
+visibly level each other up, producing a succession of great individuals,
+and only subsequently attracting more of the same.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/june-books/" class="u-url">Recent Books</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley

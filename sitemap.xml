@@ -11,15 +11,19 @@
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2021-05-14T19:37:00Z</lastmod>
+  <lastmod>2021-05-17T20:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/</loc>
-  <lastmod>2021-05-13T21:45:00Z</lastmod>
+  <lastmod>2021-05-17T18:26:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/bash/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/book/</loc>
+  <lastmod>2021-05-17T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/books/</loc>
@@ -54,6 +58,10 @@
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/categories/epub/</loc>
+  <lastmod>2021-05-17T18:26:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/categories/exhibits/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
@@ -64,6 +72,10 @@
  <url>
   <loc>https://www.tartley.com/categories/fonts/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/free-to-read/</loc>
+  <lastmod>2021-05-17T18:26:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/gamedev/</loc>
@@ -138,6 +150,14 @@
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/categories/novel/</loc>
+  <lastmod>2021-05-17T17:23:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/novella/</loc>
+  <lastmod>2021-05-17T15:51:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/categories/osx-dev/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
@@ -192,6 +212,10 @@
  <url>
   <loc>https://www.tartley.com/categories/science/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/sciene-fiction/</loc>
+  <lastmod>2021-05-17T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/shows/</loc>
@@ -319,7 +343,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-23.html</loc>
-  <lastmod>2021-05-13T21:45:00Z</lastmod>
+  <lastmod>2021-05-17T18:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-3.html</loc>
@@ -572,6 +596,10 @@
  <url>
   <loc>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</loc>
   <lastmod>2020-10-17T19:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/ed-by-qntm/</loc>
+  <lastmod>2021-05-17T15:51:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/encrypted-zip-files-on-osx/</loc>
@@ -1010,6 +1038,10 @@
   <lastmod>2020-10-17T19:41:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/posts/ra-by-qntm/</loc>
+  <lastmod>2021-05-17T17:22:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/posts/random-wallpaper-for-linux-gnome-desktop/</loc>
   <lastmod>2020-10-17T19:41:00Z</lastmod>
  </url>
@@ -1196,6 +1228,10 @@
  <url>
   <loc>https://www.tartley.com/posts/the-suze/</loc>
   <lastmod>2020-10-17T19:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/there-is-no-antimemetics-division/</loc>
+  <lastmod>2021-05-17T18:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/thief-level-week-2/</loc>

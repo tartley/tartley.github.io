@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about chia)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/chia.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 14 May 2021 19:37:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Energy use per transaction for cryptocurrencies vs Visa</title><link>https://www.tartley.com/posts/til-cryptocurrency-per-transaction-energy-use/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;For my own calibration, approximate current energy use for a single transaction
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about chia)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/chia.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 17 May 2021 20:12:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Energy use per transaction for cryptocurrencies vs Visa</title><link>https://www.tartley.com/posts/til-cryptocurrency-per-transaction-energy-use/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;For my own calibration, approximate current energy use for a single transaction
 in various cryptocurrencies, compared with using Visa:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -78,11 +78,12 @@ Sources&lt;/p&gt;
 &lt;li&gt;For equivalent household energy uses, I used &lt;a href="https://electricityplans.com/kwh-kilowatt-hour-can-power/"&gt;this&lt;/a&gt; and &lt;a href="http://www.wrecc.com/what-uses-watts-in-your-home/"&gt;this&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Something's not quite right here though. The Chia whitepaper estimates 10,000
-times better energy efficiency than Bitcoin. They probably know how to
-calculate that better than I do. So my figure for Chia is perhaps high? I hear
-the value per transaction will come down as Chia starts handling more
-transactions, which seems reasonable. Perhaps the white paper was referring to
-that future hypothetical efficiency?&lt;/p&gt;
+times better energy efficiency than Bitcoin, by my figures above only show
+1,000.&lt;/p&gt;
+&lt;p&gt;They probably know how to calculate that better than I do. So perhaps my figure
+for Chia is high? I hear the value per transaction will come down as
+Chia starts handling more transactions, which seems reasonable. Perhaps the
+white paper refers to that future hypothetical efficiency?&lt;/p&gt;
 &lt;p&gt;On the other hand, many of the other cryptocurrencies listed above will
 become more efficient in the future too (e.g. Bitcoin is in the process
 of deploying its lightning network, which will reduce per transaction
