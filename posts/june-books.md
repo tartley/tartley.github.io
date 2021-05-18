@@ -41,21 +41,7 @@ Miracleman one last time, never to change back.
 
 Yes, this is more uneven than Moore's later works. Yes, it's unashamedly an
 underwear-on-the-outside superhero story. But nonetheless I loved it, and
-scenes like the above have stayed with me for months.
-
-<br style="clear: both" />
-
-<img src="/files/2019/06/hull-zero-three.jpg"
-style="float: left; padding: 1em">
-
-_Hull Zero Three_ by Greg Bear.
-
-A smashing hard SF tale, about the existential mystery of life aboard a
-generation starship that has lost its way. Following in the footsteps of
-classic variations, such as _Non-Stop_, _Methusalah's Children_, and _Tau
-Zero_, it centers around the character's revelations as they uncover their
-situation and origins, being decanted to order by warring factions amongst
-high technology ruins.
+scenes like the above stayed with me for months.
 
 <br style="clear: both" />
 <img src="/files/2019/06/station-eleven.jpg"
