@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 17 May 2021 23:26:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 03:22:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -141,7 +141,26 @@ is probably a simpler way.&lt;/p&gt;
 &lt;li&gt;Doubtless due to my own misunderstanding somewhere, in order to get working
    IPv4 connections to my containers, I had to disable IPv6 connections to
    them.&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>geek</category><category>linux</category><category>software</category><guid>https://www.tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
+&lt;/ol&gt;&lt;/div&gt;</description><category>geek</category><category>linux</category><category>software</category><guid>https://www.tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Vonnegut on software development teams.</title><link>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;So here's a thing. Spotted this in some of Kurt Vonnegut's personal
+correspondence, talking about an instructor of his named Slotkin:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What Slotkin said was this: no man who achieved greatness in the arts operated
+by himself; he was top man in a group of like-minded individuals. This works
+out fine for the cubists, and Slotkin had plenty of good evidence for its
+applying to Goethe, Thoreau, Hemingway, and just about anybody you care to
+name.&lt;/p&gt;
+&lt;p&gt;If this isn't 100% true, it's true enough to be interesting—and maybe helpful.&lt;/p&gt;
+&lt;p&gt;The school gives a man, Slotkin said, the fantastic amount of guts it takes to
+add to culture. It gives him morale, esprit de corps, the resources of many
+brains, and—maybe most important—one-sidedness with assurance.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Reminds me powerfully of my growing impressions of the environment a person
+needs to be in in order to do great things in software. There is no doubt some
+effectiveness in assembling great individuals to create a great team.&lt;/p&gt;
+&lt;p&gt;But in my personal experience, there is a whole lot &lt;em&gt;more&lt;/em&gt; value in creating a
+great team by instilling the right values, and then watching the members
+visibly level each other up, producing a succession of great individuals,
+and only subsequently attracting more of the same.&lt;/p&gt;&lt;/div&gt;</description><category>culture</category><category>greatness</category><category>literature</category><category>software</category><guid>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</guid><pubDate>Mon, 01 Jul 2019 02:28:04 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
 for it, called "Announce":&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/tartley/rhythmbox-plugin-announce"&gt;https://github.com/tartley/rhythmbox-plugin-announce&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Every time a new song starts to play, it announces the title using
@@ -396,52 +415,40 @@ years. It's top of my list for 'books to bring in and talk about at
 work'.&lt;/p&gt;
 &lt;p&gt;Rating:&lt;/p&gt;
 &lt;p&gt;10/10 if you're a programmer, or work with programmers.&lt;/p&gt;
-&lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item><item><title>Launch Gitk displaying all branches</title><link>https://www.tartley.com/posts/launch-gitk-displaying-all-extant-branches/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; All of the below is made totally redundant by simply using
-&lt;code&gt;gitk --all&lt;/code&gt;. Thanks Russel!&lt;/p&gt;
-&lt;p&gt;When I launch Gitk, it just displays the current branch. To display
-other branches, you must name them on the command line. To display all
-existing branches, you need to find out all the branch names:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ git branch
-  create-sql-dev
-  formula-rewrite
-* master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then laboriously type them in to the gitk command line:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ gitk create-sql-dev formula-rewrite master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Alternatively, save this Bash snippet in a script on your PATH. I call
-mine gitka, for 'all branches':&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/usr/bin/bash&lt;/span&gt;
-&lt;span class="c1"&gt;# run gitk, displaying all existing branches&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; b in &lt;span class="s2"&gt;"`git branch`"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$b&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; tr -d &lt;span class="s2"&gt;"*"&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; xargs gitk
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img alt="Gitk displaying all branches, not just the current ('master' in bold)" src="https://www.tartley.com/files/2010/12/gitk-all-branches.png" title="gitk-all-branches"&gt;&lt;/p&gt;
-&lt;p&gt;This works on Windows too, if you save it as 'gitka.sh', and have Cygwin
-installed and associate the .sh filename extension with the Cygwin Bash
-executable. You can then run it as 'gitka' from a Windows command prompt
-thingy. If you then use 'ln -s gitka.sh gitka', then you can also run it
-as just 'gitka' from a Cygwin bash prompt too - without this you would
-have had to type out the full 'gitka.sh'.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>mswin-dev</category><category>software</category><guid>https://www.tartley.com/posts/launch-gitk-displaying-all-extant-branches/</guid><pubDate>Fri, 31 Dec 2010 18:25:31 GMT</pubDate></item><item><title>A Guide to GIT using spatial analogies</title><link>https://www.tartley.com/posts/a-guide-to-git-using-spatial-analogies/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Some developers find Git takes a little getting used to, claiming that
-it is conceptually convoluted compared to other distributed version
-control systems. I used to number myself amongst them.&lt;/p&gt;
-&lt;p&gt;Happily, I've found that a couple of simple spatial analogies have made
-me proficient and fluent in using Git's command-line interface.&lt;/p&gt;
-&lt;p&gt;One of the things that tripped me up as a novice user was the way Git
-handles &lt;strong&gt;branches&lt;/strong&gt;. Unlike more primitive version control systems, git
-repositories are not linear, they support branching, and are thus best
-visualised as trees, upon the nodes of which your current commit may add
-new leaf nodes. To visualise this, it's simplest to think of the state
-of your repository as a point in a high-dimensional 'code-space', in
-which branches are represented as n-dimensional membranes, mapping the
-spatial loci of successive commits onto the projected manifold of each
-cloned repository.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Branches as n-branes" src="https://www.tartley.com/files/2010/12/I1546manifold.png" title="I1546manifold"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; There is, of course, a &lt;a href="http://www.reddit.com/r/programming/comments/embdf/git_complicated_of_course_not_commits_map_to/"&gt;fabulously insightful
-commentary&lt;/a&gt;
-on reddit.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Thanks folks. You've made my usual one or two hundred daily
-visitors look kinda paltry:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="spike in daily traffic graph" src="https://www.tartley.com/files/2010/12/daily-traffic.png" title="daily-traffic"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>software</category><category>version-control</category><guid>https://www.tartley.com/posts/a-guide-to-git-using-spatial-analogies/</guid><pubDate>Wed, 15 Dec 2010 20:40:14 GMT</pubDate></item></channel></rss>
+&lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>geek</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item><item><title>pip install : Lightspeed and Bulletproof</title><link>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I saw a post about &lt;a href="http://www.scottisheyes.com/how-to-fix-slow-pip-install"&gt;speeding up the Python packaging command "pip
+install"&lt;/a&gt;, by
+specifying more responsive mirrors for querying and downloading
+packages. For my situation, a better tactic is this.&lt;/p&gt;
+&lt;p&gt;Step one: Download all your project's dependencies into a local
+'packages' dir, but don't install them yet:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;mkdir packages
+pip install --download&lt;span class="o"&gt;=&lt;/span&gt;packages -r requirements.txt
+&lt;/pre&gt;
+&lt;p&gt;Step two, install from the 'packages' dir:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;pip install --no-index --find-links&lt;span class="o"&gt;=&lt;/span&gt;packages -r requirements.txt
+&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;(The above syntax works on pip 1.3, released yesterday. Docs for older
+versions of pip claim to support this, but in practice, for pip 1.2,
+I've had to use "&lt;code&gt;--find-links=file://$PWD/packages&lt;/code&gt;")&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Step 2 works even if PyPI is unreachable. It works even if some of your
+dependencies are self-hosted by the authors, and that website is
+unreachable. It works even if the version you have pinned of one of your
+dependencies has been deleted by the author (some packages do this
+routinely after security updates.) It works even if you have no network
+connection at all. In short, it makes creation of your virtualenv
+bulletproof.&lt;/p&gt;
+&lt;p&gt;As a nice side effect, it runs really fast, because it isn't downloading
+the packages across the internet, nor is it attempting to scan a remote
+index to check for matching or newer versions of each package. This is
+much quicker than just using a Pip download cache, especially for large
+projects with many dependencies which only change occasionally.&lt;/p&gt;
+&lt;p&gt;At &lt;a href="http://rangespan.com"&gt;Rangespan&lt;/a&gt;, we check the 'packages' directory
+into source control, so that once you've checked out a project's repo,
+you have everything you need to deploy locally and run, even if you have
+no network. You might choose to treat 'packages' as ephemeral.&lt;/p&gt;
+&lt;p&gt;It was pointed out to me recently by
+&lt;a href="https://twitter.com/jezdez"&gt;@jezdez&lt;/a&gt;, Pip maintainer, this usage
+pattern has now been &lt;a href="http://www.pip-installer.org/en/latest/cookbook.html#fast-local-installs"&gt;explicitly called out in the
+documentation&lt;/a&gt;,
+which was substantially reorganised and improved with the recent 1.3
+release.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</guid><pubDate>Fri, 08 Mar 2013 15:29:09 GMT</pubDate></item></channel></rss>

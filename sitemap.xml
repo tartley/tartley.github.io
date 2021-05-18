@@ -7,15 +7,15 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://www.tartley.com/</loc>
-  <lastmod>2020-10-17T18:55:00Z</lastmod>
+  <lastmod>2021-05-18T03:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2021-05-17T23:37:00Z</lastmod>
+  <lastmod>2021-05-18T03:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/</loc>
-  <lastmod>2021-05-17T23:24:00Z</lastmod>
+  <lastmod>2021-05-18T03:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/audiobook/</loc>
@@ -54,16 +54,16 @@
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://www.tartley.com/categories/computing/</loc>
-  <lastmod>2021-05-17T22:15:00Z</lastmod>
- </url>
- <url>
   <loc>https://www.tartley.com/categories/creative/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/crypto/</loc>
   <lastmod>2021-05-13T21:45:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/cryptocurrency/</loc>
+  <lastmod>2021-05-18T03:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/culture/</loc>
@@ -138,6 +138,10 @@
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/categories/greatness/</loc>
+  <lastmod>2021-05-18T03:22:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/categories/gumby/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
@@ -172,6 +176,10 @@
  <url>
   <loc>https://www.tartley.com/categories/linux/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/literature/</loc>
+  <lastmod>2021-05-18T03:22:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/madness/</loc>
@@ -354,10 +362,6 @@
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://www.tartley.com/categories/writing/</loc>
-  <lastmod>2020-10-16T00:44:00Z</lastmod>
- </url>
- <url>
   <loc>https://www.tartley.com/index-1.html</loc>
   <lastmod>2021-05-17T23:37:00Z</lastmod>
  </url>
@@ -411,15 +415,19 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-21.html</loc>
-  <lastmod>2020-10-17T19:41:00Z</lastmod>
+  <lastmod>2021-05-18T02:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-22.html</loc>
-  <lastmod>2021-05-17T22:19:00Z</lastmod>
+  <lastmod>2021-05-18T03:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-23.html</loc>
-  <lastmod>2021-05-17T21:38:00Z</lastmod>
+  <lastmod>2021-05-18T03:20:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/index-24.html</loc>
+  <lastmod>2021-05-18T03:22:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-3.html</loc>
@@ -443,7 +451,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-8.html</loc>
-  <lastmod>2021-05-17T23:19:00Z</lastmod>
+  <lastmod>2021-05-18T02:47:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-9.html</loc>
@@ -822,6 +830,10 @@
   <lastmod>2020-10-17T19:41:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/posts/hull-zero-three/</loc>
+  <lastmod>2021-05-18T02:59:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/posts/i-am-legend/</loc>
   <lastmod>2020-10-17T19:41:00Z</lastmod>
  </url>
@@ -851,10 +863,6 @@
  </url>
  <url>
   <loc>https://www.tartley.com/posts/jpod/</loc>
-  <lastmod>2020-10-17T19:41:00Z</lastmod>
- </url>
- <url>
-  <loc>https://www.tartley.com/posts/june-books/</loc>
   <lastmod>2020-10-17T19:41:00Z</lastmod>
  </url>
  <url>
@@ -936,6 +944,10 @@
  <url>
   <loc>https://www.tartley.com/posts/minerva-metastasis/</loc>
   <lastmod>2020-10-17T19:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/miracleman/</loc>
+  <lastmod>2021-05-18T03:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/mocks-arent-just-stubs/</loc>
@@ -1202,6 +1214,10 @@
   <lastmod>2020-10-17T19:41:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/posts/station-eleven/</loc>
+  <lastmod>2021-05-18T03:05:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/posts/stretching-pyglets-wings/</loc>
   <lastmod>2020-10-17T19:41:00Z</lastmod>
  </url>
@@ -1212,6 +1228,10 @@
  <url>
   <loc>https://www.tartley.com/posts/sunshine/</loc>
   <lastmod>2020-10-17T19:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/swamp-thing/</loc>
+  <lastmod>2021-05-18T02:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/testing-extreme-programming/</loc>

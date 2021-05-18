@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about culture)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/culture.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 17 May 2021 23:23:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makers</title><link>https://www.tartley.com/posts/makers/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;by Cory Doctorow&lt;/em&gt; (not yet published.)&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about culture)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/culture.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 03:22:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Vonnegut on software development teams.</title><link>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;So here's a thing. Spotted this in some of Kurt Vonnegut's personal
+correspondence, talking about an instructor of his named Slotkin:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What Slotkin said was this: no man who achieved greatness in the arts operated
+by himself; he was top man in a group of like-minded individuals. This works
+out fine for the cubists, and Slotkin had plenty of good evidence for its
+applying to Goethe, Thoreau, Hemingway, and just about anybody you care to
+name.&lt;/p&gt;
+&lt;p&gt;If this isn't 100% true, it's true enough to be interesting—and maybe helpful.&lt;/p&gt;
+&lt;p&gt;The school gives a man, Slotkin said, the fantastic amount of guts it takes to
+add to culture. It gives him morale, esprit de corps, the resources of many
+brains, and—maybe most important—one-sidedness with assurance.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Reminds me powerfully of my growing impressions of the environment a person
+needs to be in in order to do great things in software. There is no doubt some
+effectiveness in assembling great individuals to create a great team.&lt;/p&gt;
+&lt;p&gt;But in my personal experience, there is a whole lot &lt;em&gt;more&lt;/em&gt; value in creating a
+great team by instilling the right values, and then watching the members
+visibly level each other up, producing a succession of great individuals,
+and only subsequently attracting more of the same.&lt;/p&gt;&lt;/div&gt;</description><category>culture</category><category>greatness</category><category>literature</category><category>software</category><guid>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</guid><pubDate>Mon, 01 Jul 2019 02:28:04 GMT</pubDate></item><item><title>Makers</title><link>https://www.tartley.com/posts/makers/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;by Cory Doctorow&lt;/em&gt; (not yet published.)&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://craphound.com/"&gt;Cory&lt;/a&gt; very kindly brought an early manuscript of
 this as a gift to &lt;a href="http://www.voidspace.org.uk/"&gt;Michael&lt;/a&gt;,
 &lt;a href="http://www.gilesthomas.com/"&gt;Giles&lt;/a&gt; and I when we met him a while ago,
@@ -115,7 +134,7 @@ online realm.&lt;/p&gt;
 &lt;p&gt;This whole tale is laced with many entertaining insights into the quirks
 and motives of the colorful individuals involved, and this makes the
 whole thing an enjoyable romp through a serious topic.&lt;/p&gt;
-&lt;p&gt;Rating: 8/10 - I only wish I'd read it ten years ago&lt;/p&gt;&lt;/div&gt;</description><category>audiobook</category><category>books</category><category>culture</category><category>internet</category><category>law</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/the-hacker-crackdown-law-and-disorder-on-the-electronic-frontier/</guid><pubDate>Sat, 02 Feb 2008 22:15:49 GMT</pubDate></item><item><title>12 Books That Changed The World</title><link>https://www.tartley.com/posts/12-books-that-changed-the-world/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="12 Books That Changed The World" src="https://www.tartley.com/files/2007/06/12books-that-changed-the-world.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Rating: 8/10 - I only wish I'd read it ten years ago&lt;/p&gt;&lt;/div&gt;</description><category>audiobook</category><category>books</category><category>culture</category><category>internet</category><category>law</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/the-hacker-crackdown-law-and-disorder-on-the-electronic-frontier/</guid><pubDate>Sat, 02 Feb 2008 22:15:49 GMT</pubDate></item><item><title>12 Books That Changed The World</title><link>https://www.tartley.com/posts/12-books-that-changed-the-world/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="12 Books That Changed The World" src="https://www.tartley.com/files/2007/06/12books-that-changed-the-world.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Melvyn Bragg&lt;/em&gt;, 2006.
 &lt;a href="http://www.amazon.co.uk/12-Books-That-Changed-World/dp/0340839821"&gt;On Amazon.co.uk&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;A brilliant assembly of potted snippets of history, ideal for someone

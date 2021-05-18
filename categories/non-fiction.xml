@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about non-fiction)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/non-fiction.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 17 May 2021 23:37:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Structure of Scientific Revolutions</title><link>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This post rescues content from a series of tweets I wrote in 2018.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about non-fiction)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/non-fiction.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 03:48:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Structure of Scientific Revolutions</title><link>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This post rescues content from a series of tweets I wrote in 2018.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;I loved &lt;em&gt;The Structure of Scientfic Revolutions&lt;/em&gt;, a 1962 book by Thomas S.
-Kuhn. It was recommended to me as having similar impact to undergraduate
+&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="The Structure of Scientific Revolutions cover" src="https://www.tartley.com/files/2020/the-structure-of-scientific-revolutions-cover.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Thomas S. Kuhn, 1962.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I loved &lt;em&gt;The Structure of Scientfic Revolutions&lt;/em&gt;.
+It was recommended to me as having similar impact to undergraduate
 classics like &lt;em&gt;Godel, Escher, Bach&lt;/em&gt;, or &lt;em&gt;The Blind Watchmaker.&lt;/em&gt; I'm going
 to just summarize the content here, so: Spoilers.&lt;/p&gt;
 &lt;p&gt;It begins by observing that discredited scientific theories, even those
@@ -132,7 +136,10 @@ careers. The new paradigm will not achieve total dominance until the field is
 populated by a whole new generation.&lt;/p&gt;
 &lt;p&gt;I am reminded of the dark priesthood of command-line programmers, although
 I note with no little joy that our merry band includes some of the best and
-brightest of the next generation (as judged by my own paradigm's criteria.)&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>media</category><category>non-fiction</category><category>politics</category><category>science</category><guid>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</guid><pubDate>Sun, 14 Jun 2020 14:02:22 GMT</pubDate></item><item><title>This Gaming Life: Travels in Three Cities</title><link>https://www.tartley.com/posts/this-gaming-life-travels-in-three-cities/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="gaminglife" src="https://www.tartley.com/files/2014/02/gaminglife.jpg"&gt;&lt;/p&gt;
+brightest of the next generation (as judged by my own paradigm's criteria.)&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>media</category><category>non-fiction</category><category>politics</category><category>science</category><guid>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</guid><pubDate>Sun, 14 Jun 2020 14:02:22 GMT</pubDate></item><item><title>This Gaming Life: Travels in Three Cities</title><link>https://www.tartley.com/posts/this-gaming-life-travels-in-three-cities/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="gaminglife" src="https://www.tartley.com/files/2014/02/gaminglife.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Jim Rossignol&lt;/em&gt; (2009)&lt;/p&gt;
 &lt;p&gt;A gorgeous insider's look at videogaming culture, by an author who,
 after an unfulfilling stint as a financial journalist, has built his
@@ -149,7 +156,8 @@ felt welcomed to his world. Join us - we'll be on the sofa.&lt;/p&gt;
 &lt;p&gt;Rating:&lt;/p&gt;
 &lt;p&gt;10/10 if you understand that games have the potential to become the
 dominant art form of the 21st century.&lt;/p&gt;
-&lt;p&gt;0/10 if it's just for kids, innit?&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>games</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/this-gaming-life-travels-in-three-cities/</guid><pubDate>Tue, 04 Feb 2014 02:31:29 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://www.tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="object-oriented-sofware-engineering" src="https://www.tartley.com/files/2014/02/object-oriented-sofware-engineering.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;0/10 if it's just for kids, innit?&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>games</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/this-gaming-life-travels-in-three-cities/</guid><pubDate>Tue, 04 Feb 2014 02:31:29 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://www.tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="object-oriented-sofware-engineering" src="https://www.tartley.com/files/2014/02/object-oriented-sofware-engineering.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Ivar Jacobsen&lt;/em&gt; (1992, 4th revision)&lt;/p&gt;
 &lt;p&gt;You might wonder if there's anything left to say about
 object-orientation that hasn't already been discussed to death. I was
@@ -273,7 +281,7 @@ years. It's top of my list for 'books to bring in and talk about at
 work'.&lt;/p&gt;
 &lt;p&gt;Rating:&lt;/p&gt;
 &lt;p&gt;10/10 if you're a programmer, or work with programmers.&lt;/p&gt;
-&lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item><item><title>IronPython in Action</title><link>https://www.tartley.com/posts/ironpython-in-action/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://www.amazon.co.uk/IronPython-Action-Michael-Foord/dp/1933988339"&gt;&lt;img alt="ironpython-in-action" src="https://www.tartley.com/files/2009/07/ironpython-in-action.jpg" title="ironpython-in-action"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>geek</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item><item><title>IronPython in Action</title><link>https://www.tartley.com/posts/ironpython-in-action/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://www.amazon.co.uk/IronPython-Action-Michael-Foord/dp/1933988339"&gt;&lt;img alt="ironpython-in-action" src="https://www.tartley.com/files/2009/07/ironpython-in-action.jpg" title="ironpython-in-action"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Michael Foord and Christian Muirhead&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Disclaimer: I'm friends with both the authors and was sent a freebie
 review copy by the publisher, so I'm bound to be breathlessly gushing in

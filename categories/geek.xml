@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 17 May 2021 23:20:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 02:17:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;
@@ -314,7 +314,120 @@ ready. Apologies for the inevitable shoddyness.&lt;/p&gt;&lt;/div&gt;</descripti
 &lt;span class="nb"&gt;trap&lt;/span&gt; cleanup EXIT
 
 sleep infinity
-&lt;/code&gt;&lt;/pre&gt;</description><category>bash</category><category>geek</category><guid>https://www.tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</guid><pubDate>Sun, 15 Mar 2015 15:50:09 GMT</pubDate></item><item><title>£ key in Windows on a US laptop keyboard, done right.</title><link>https://www.tartley.com/posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The usual solution to typing non-US characters on a US keyboard in
+&lt;/code&gt;&lt;/pre&gt;</description><category>bash</category><category>geek</category><guid>https://www.tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</guid><pubDate>Sun, 15 Mar 2015 15:50:09 GMT</pubDate></item><item><title>Domain Driven Design: Tackling Complexity in the Heart of Software</title><link>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="domaindrivendesign" src="https://www.tartley.com/files/2014/01/domaindrivendesign.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Eric Evans (2004)&lt;/em&gt; &lt;a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215"&gt;on Amazon&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It's a big, dense book -- possibly the most important of the technical
+books I've read in a flurry over the last few months, catching up after
+recovering a modicum of sanity in our lives after our kid's first year.
+I finish it feeling changed, invigorated, and given new direction.&lt;/p&gt;
+&lt;p&gt;At its core is a simple idea, which sounds neither new nor revolutionary
+on the surface. Software projects, Evans maintains, should work closely
+with business experts to create and maintain a domain model. The model
+might be expressed as a class diagram of core business concerns, and
+should also correspond directly to a body of code modelling these
+business entities. This forms a set of core business entities which are
+clearly analogous to things like the core enterprise entities of the
+hexagonal or clean architectures.&lt;/p&gt;
+&lt;p&gt;However it's created, the terminology and notation used in the class
+diagram (or it's equivalent) should be well understood by individuals on
+both side of the tech/business divide. In the past I think I've made the
+mistake of believing that only developers needed to understand it, and
+therefore the model only needed to be expressed in code.&lt;/p&gt;
+&lt;p&gt;This model should be displayed prominently, referred to continually, and
+in a healthy project should very directly correspond to the specialised
+language that evolves within the organisation. Where the team's language
+doesn't match the model - for example, your business experts' use of
+plurals betrays that the cardinality of relationships are modelled
+wrongly, then the model - and the underlying code - should be
+aggressively refactored to match reality.&lt;/p&gt;
+&lt;p&gt;Evans makes a persuasive case that the appropriate management of this
+complexity at the heart of your software will be a major influence on
+the success of the project. To be fair, this is a viewpoint that I
+already believed in, so I was a sucker for all of this. Without an
+appropriate approach to these central design concerns, over time
+developers will find they are no longer able to understand the code
+thoroughly enough to be able to modify or extend it easily, unless they
+deliberately or inadvertently use design-breaking hacks like redundancy
+or mislocated chunks of code. This forms a vicious cycle of technical
+debt accrual, and creates an upper limit on the size or complexity which
+can be achieved by any project before productivity begins to slump.
+Other metrics like reliability then also suffer.&lt;/p&gt;
+&lt;p&gt;To counter this, conquering these central design issues requires a
+pro-active and multi-pronged effort. Firstly, the existing design must
+be understood by all parties. In order for this to remain true, the
+design needs to be kept up to date and be easily understood by new team
+members. The code must be kept directly in sync with the model, and kept
+understandable - inappropriate dependencies must be ruthlessly pruned.
+Simultaneously, the "correct" design must be discovered iteratively,
+throughout the life of the project, and this can only be done by
+encouraging continual conversations between developers and business
+folks to discuss the potential inadequacies of the current design and
+possible alternatives.&lt;/p&gt;
+&lt;p&gt;When managed correctly, this lends an agility and suppleness to project.
+Developers find it easy to integrate subsequent parts of code because
+they 'fit naturally' into the existing design, and when the design is
+found wanting, it's relatively easy to modify it to incorporate new
+concerns.&lt;/p&gt;
+&lt;p&gt;There are times when I've struggled to convey the message about how the
+resulting trade off works between time spent refactoring versus time
+saved over the long term. Evans describes this in an interesting way.
+Instead of trying to model team productivity by applying a multiplier to
+describe drag caused by technical debt, he simply contrasts the normal
+way projects slow down as they become larger and more complex, with a
+project that instead &lt;em&gt;speeds up&lt;/em&gt; over time, as developers, unhindered by
+a cycle of technical debt, are instead empowered by the creation of
+powerful and expressive abstractions, which can then be relatively
+easily reconfigured into unanticipated configurations.&lt;/p&gt;
+&lt;p&gt;To counter-balance this idealistic hand-waving, the next section dives
+right into some specific design practices which embody these ideas.
+These are valuable and insightful, stock-in-trade, such as
+distinguishing between entity and value types. But many of the ideas
+were completely new to me, such as the concept of &lt;em&gt;aggregates&lt;/em&gt;, which
+define subsets of the domain model which are always atomically retrieved
+from (or updated in) a data store.&lt;/p&gt;
+&lt;p&gt;In short, I really loved this book. It stretched and inspired me. It's
+in a very small set of books I've flagged to re-read in a couple of
+years. It's top of my list for 'books to bring in and talk about at
+work'.&lt;/p&gt;
+&lt;p&gt;Rating:&lt;/p&gt;
+&lt;p&gt;10/10 if you're a programmer, or work with programmers.&lt;/p&gt;
+&lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>geek</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item><item><title>pip install : Lightspeed and Bulletproof</title><link>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I saw a post about &lt;a href="http://www.scottisheyes.com/how-to-fix-slow-pip-install"&gt;speeding up the Python packaging command "pip
+install"&lt;/a&gt;, by
+specifying more responsive mirrors for querying and downloading
+packages. For my situation, a better tactic is this.&lt;/p&gt;
+&lt;p&gt;Step one: Download all your project's dependencies into a local
+'packages' dir, but don't install them yet:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;mkdir packages
+pip install --download&lt;span class="o"&gt;=&lt;/span&gt;packages -r requirements.txt
+&lt;/pre&gt;
+&lt;p&gt;Step two, install from the 'packages' dir:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;pip install --no-index --find-links&lt;span class="o"&gt;=&lt;/span&gt;packages -r requirements.txt
+&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;(The above syntax works on pip 1.3, released yesterday. Docs for older
+versions of pip claim to support this, but in practice, for pip 1.2,
+I've had to use "&lt;code&gt;--find-links=file://$PWD/packages&lt;/code&gt;")&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Step 2 works even if PyPI is unreachable. It works even if some of your
+dependencies are self-hosted by the authors, and that website is
+unreachable. It works even if the version you have pinned of one of your
+dependencies has been deleted by the author (some packages do this
+routinely after security updates.) It works even if you have no network
+connection at all. In short, it makes creation of your virtualenv
+bulletproof.&lt;/p&gt;
+&lt;p&gt;As a nice side effect, it runs really fast, because it isn't downloading
+the packages across the internet, nor is it attempting to scan a remote
+index to check for matching or newer versions of each package. This is
+much quicker than just using a Pip download cache, especially for large
+projects with many dependencies which only change occasionally.&lt;/p&gt;
+&lt;p&gt;At &lt;a href="http://rangespan.com"&gt;Rangespan&lt;/a&gt;, we check the 'packages' directory
+into source control, so that once you've checked out a project's repo,
+you have everything you need to deploy locally and run, even if you have
+no network. You might choose to treat 'packages' as ephemeral.&lt;/p&gt;
+&lt;p&gt;It was pointed out to me recently by
+&lt;a href="https://twitter.com/jezdez"&gt;@jezdez&lt;/a&gt;, Pip maintainer, this usage
+pattern has now been &lt;a href="http://www.pip-installer.org/en/latest/cookbook.html#fast-local-installs"&gt;explicitly called out in the
+documentation&lt;/a&gt;,
+which was substantially reorganised and improved with the recent 1.3
+release.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</guid><pubDate>Fri, 08 Mar 2013 15:29:09 GMT</pubDate></item><item><title>£ key in Windows on a US laptop keyboard, done right.</title><link>https://www.tartley.com/posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The usual solution to typing non-US characters on a US keyboard in
 Windows is to hold left-alt, then type on the numeric keypad:&lt;/p&gt;
 &lt;p&gt;£   Left-alt + 0163&lt;/p&gt;
 &lt;p&gt;€   Left-alt + 0128&lt;/p&gt;
@@ -342,35 +455,4 @@ which is exactly like 'US', but with the addition of £ on the key
 right-alt + 3:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/files/2011/07/windows-US-keyboard-layout-with-pound-on-right-alt-3.zip"&gt;windows-US-keyboard-layout-with-pound-on-right-alt-3&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The source .klc file is in there, so you could add your own tweaks on
-top of that.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><guid>https://www.tartley.com/posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</guid><pubDate>Sun, 10 Jul 2011 18:06:34 GMT</pubDate></item><item><title>Converting any repository from Svn to Hg on Windows</title><link>https://www.tartley.com/posts/converting-any-repository-fom-svn-to-hg-on-windows/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;There's been a lot of
-&lt;a href="http://www.voidspace.org.uk/python/weblog/index.shtml"&gt;blather&lt;/a&gt; of late
-about this supposedly-fiddly conversion process. Personally I've found
-that working on the Windows operating system, the transition is a lot
-smoother. Simply first install Cygwin, cd to the root of your
-repository, and then:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;find . -name .svn -exec rm -fr &lt;span class="o"&gt;{}&lt;/span&gt; &lt;span class="se"&gt;\;&lt;/span&gt;
-hg init
-hg add .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and you're done. There may be a few &lt;em&gt;nuances&lt;/em&gt; this doesn't address, but
-come on, let's not expect miracles.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><guid>https://www.tartley.com/posts/converting-any-repository-fom-svn-to-hg-on-windows/</guid><pubDate>Wed, 20 Oct 2010 15:26:02 GMT</pubDate></item><item><title>My own competency</title><link>https://www.tartley.com/posts/my-own-competancy/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;My single degree was in Electronics and Physics, so although that
-covered a considerable amount of digital electronics and CPU design,
-I've pretty much picked up everything I know about software in my own
-time or on the job. Consequentially, there are aspects of computer
-science I feel I don't know as well as I could. I'm thinking especially
-of areas which are less frequently used in practice, but often cited as
-fundamental and important, such as compiler design.&lt;/p&gt;
-&lt;p&gt;I stumbled on this '&lt;a href="http://www.indiangeek.net/wp-content/uploads/Programmer%20competency%20matrix.htm"&gt;programmer competancy
-matrix&lt;/a&gt;'
-the other week, and thought it would be a good first iteration of my own
-syllabus of areas I'd like learn more about. So I cut'n'paste it into &lt;a href="http://spreadsheets.google.com/ccc?key=0AmOF8t-e3EyzdE1FdW5BcDFuVURKOEZSY1NfQW5NS1E&amp;amp;hl=en"&gt;a
-spreadsheet&lt;/a&gt;,
-and starting annotating it with how confident I feel in each different
-area, along with the next steps I'll need to strengthen my knowledge in
-each area.&lt;/p&gt;
-&lt;p&gt;Startlingly but perhaps unsurprisingly, the tentative next step I
-arrived at in almost all areas I feel deficient was to &lt;em&gt;finish working
-through
-&lt;a href="http://www.amazon.co.uk/Structure-Interpretation-Computer-Electrical-Engineering/dp/0262510871"&gt;SICP&lt;/a&gt;&lt;/em&gt;.
-Alright, alright, my path is clear.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>software</category><guid>https://www.tartley.com/posts/my-own-competancy/</guid><pubDate>Wed, 07 Apr 2010 16:41:50 GMT</pubDate></item></channel></rss>
+top of that.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><guid>https://www.tartley.com/posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</guid><pubDate>Sun, 10 Jul 2011 18:06:34 GMT</pubDate></item></channel></rss>

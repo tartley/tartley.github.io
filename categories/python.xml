@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about python)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 17 May 2021 22:19:39 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about python)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 02:17:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -176,14 +176,12 @@ specifying more responsive mirrors for querying and downloading
 packages. For my situation, a better tactic is this.&lt;/p&gt;
 &lt;p&gt;Step one: Download all your project's dependencies into a local
 'packages' dir, but don't install them yet:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;mkdir packages
+&lt;pre class="code literal-block"&gt;mkdir packages
 pip install --download&lt;span class="o"&gt;=&lt;/span&gt;packages -r requirements.txt
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/pre&gt;
 &lt;p&gt;Step two, install from the 'packages' dir:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install --no-index --find-links&lt;span class="o"&gt;=&lt;/span&gt;packages -r requirements.txt
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class="code literal-block"&gt;pip install --no-index --find-links&lt;span class="o"&gt;=&lt;/span&gt;packages -r requirements.txt
+&lt;/pre&gt;
 &lt;p&gt;&lt;em&gt;(The above syntax works on pip 1.3, released yesterday. Docs for older
 versions of pip claim to support this, but in practice, for pip 1.2,
 I've had to use "&lt;code&gt;--find-links=file://$PWD/packages&lt;/code&gt;")&lt;/em&gt;&lt;/p&gt;
@@ -208,7 +206,7 @@ no network. You might choose to treat 'packages' as ephemeral.&lt;/p&gt;
 pattern has now been &lt;a href="http://www.pip-installer.org/en/latest/cookbook.html#fast-local-installs"&gt;explicitly called out in the
 documentation&lt;/a&gt;,
 which was substantially reorganised and improved with the recent 1.3
-release.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</guid><pubDate>Fri, 08 Mar 2013 15:29:09 GMT</pubDate></item><item><title>Hexagonal Django</title><link>https://www.tartley.com/posts/hexagonal-django/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The last few weeks I've been thinking about the architectural pattern
+release.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</guid><pubDate>Fri, 08 Mar 2013 15:29:09 GMT</pubDate></item><item><title>Hexagonal Django</title><link>https://www.tartley.com/posts/hexagonal-django/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The last few weeks I've been thinking about the architectural pattern
 known as &lt;a href="http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html"&gt;Clean, Onion, Hexagonal, or
 Ports'n'Adaptors&lt;/a&gt;.
 I'm curious if many people are applying it in the Django world.&lt;/p&gt;
