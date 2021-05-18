@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 16:18:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Create mp3 from YouTube video</title><link>https://www.tartley.com/posts/til-create-mp3-from-youtube-video/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Install &lt;code&gt;youtube-dl&lt;/code&gt;, a tool to download YouTube videos. Using &lt;code&gt;apt&lt;/code&gt; installs a
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 21:14:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Create mp3 from YouTube video</title><link>https://www.tartley.com/posts/til-create-mp3-from-youtube-video/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Install &lt;code&gt;youtube-dl&lt;/code&gt;, a tool to download YouTube videos. Using &lt;code&gt;apt&lt;/code&gt; installs a
 version that's too old to work, so:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;pipsi install youtube-dl
 &lt;/pre&gt;
@@ -293,7 +293,7 @@ workstation setup bucket:&lt;/p&gt;
     calendar and notifications window, which shadows my 'toggle window
     maximize vertically'.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
 
 &lt;span class="nv"&gt;kb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'org.gnome.desktop.wm.keybindings'&lt;/span&gt;
 
@@ -328,8 +328,7 @@ gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;
 gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ name &lt;span class="s2"&gt;"terminal"&lt;/span&gt;
 gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ &lt;span class="nb"&gt;command&lt;/span&gt; &lt;span class="s2"&gt;"terminal"&lt;/span&gt;
 gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ binding &lt;span class="s2"&gt;"t"&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/pre&gt;
 &lt;p&gt;Embedded in that is the ultimate solution to my longstanding irk with
 Unity and Gnome's default window switcher (alt-tab.) By default it
 groups windows of a single application together, requiring some extra
@@ -342,9 +341,9 @@ madness.&lt;/p&gt;
 &lt;p&gt;The above modifies alt-tab to just cycle through all windows, ungrouped,
 which fixes the ability to toggle between last two windows. Also,
 alt-grave is provided as an alternative to cycle backwards through the
-windows, which is easier to hit than shift-alt-tab.&lt;/p&gt;&lt;/div&gt;</description><category>bash</category><category>linux</category><guid>https://www.tartley.com/posts/automate-gnome-keybindings/</guid><pubDate>Thu, 05 Oct 2017 01:06:47 GMT</pubDate></item><item><title>Postscript formatted man pages</title><link>https://www.tartley.com/posts/postscript-formatted-man-pages/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;code&gt;man&lt;/code&gt; and its &lt;code&gt;troff&lt;/code&gt; formatting can be asked to produce postscript
+windows, which is easier to hit than shift-alt-tab.&lt;/p&gt;&lt;/div&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/automate-gnome-keybindings/</guid><pubDate>Thu, 05 Oct 2017 01:06:47 GMT</pubDate></item><item><title>Postscript formatted man pages</title><link>https://www.tartley.com/posts/postscript-formatted-man-pages/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;code&gt;man&lt;/code&gt; and its &lt;code&gt;troff&lt;/code&gt; formatting can be asked to produce postscript
 output. Define a Bash function, e.g. in your .bashrc:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;function&lt;/span&gt; psman &lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;function&lt;/span&gt; psman &lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
     &lt;span class="nv"&gt;SLUG&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$@&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; tr &lt;span class="s1"&gt;' '&lt;/span&gt; &lt;span class="s1"&gt;'-'&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
     &lt;span class="nv"&gt;FNAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"/tmp/man-&lt;/span&gt;&lt;span class="nv"&gt;$SLUG&lt;/span&gt;&lt;span class="s2"&gt;.pdf"&lt;/span&gt;
     &lt;span class="nb"&gt;set&lt;/span&gt; -o pipefail
@@ -352,8 +351,7 @@ output. Define a Bash function, e.g. in your .bashrc:&lt;/p&gt;
       nohup evince &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$FNAME&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &amp;gt;/dev/null &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null
     &lt;span class="nb"&gt;set&lt;/span&gt; +o pipefail
 &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/pre&gt;
 &lt;p&gt;(I tried to do this without tempfiles, using process substitution, &lt;a href="https://superuser.com/questions/1243405"&gt;but
 failed. Anyone got better
 Bash-fu&lt;/a&gt;?)&lt;/p&gt;
@@ -365,8 +363,7 @@ fails, the exit code is preserved as the exit of `man|ps2pdf`, which
 causes the `&amp;amp;&amp;amp;` to short-circuit, preventing evince from being run on
 an empty pdf document. We restore `+o pipefail` again at the end.&lt;/p&gt;
 &lt;p&gt;Then, from the command line:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ psman tr
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class="code literal-block"&gt;$ psman tr
+&lt;/pre&gt;
 &lt;p&gt;produces&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;img alt="" src="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>bash</category><category>linux</category><guid>https://www.tartley.com/posts/postscript-formatted-man-pages/</guid><pubDate>Wed, 23 Aug 2017 01:34:02 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;img alt="" src="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/postscript-formatted-man-pages/</guid><pubDate>Wed, 23 Aug 2017 01:34:02 GMT</pubDate></item></channel></rss>

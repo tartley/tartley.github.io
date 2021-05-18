@@ -24,6 +24,7 @@ function psman () {
 <meta property="article:published_time" content="2017-08-22T20:34:02-05:00">
 <meta property="article:tag" content="bash">
 <meta property="article:tag" content="linux">
+<meta property="article:tag" content="terminal">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -99,7 +100,7 @@ function psman () {
     <div>
 <p><code>man</code> and its <code>troff</code> formatting can be asked to produce postscript
 output. Define a Bash function, e.g. in your .bashrc:</p>
-<pre class="code literal-block"><span></span><code><span class="k">function</span> psman <span class="o">()</span> <span class="o">{</span>
+<pre class="code literal-block"><span class="k">function</span> psman <span class="o">()</span> <span class="o">{</span>
     <span class="nv">SLUG</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$@</span> <span class="p">|</span> tr <span class="s1">' '</span> <span class="s1">'-'</span><span class="k">)</span>
     <span class="nv">FNAME</span><span class="o">=</span><span class="s2">"/tmp/man-</span><span class="nv">$SLUG</span><span class="s2">.pdf"</span>
     <span class="nb">set</span> -o pipefail
@@ -107,8 +108,7 @@ output. Define a Bash function, e.g. in your .bashrc:</p>
       nohup evince <span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span> &gt;/dev/null <span class="m">2</span>&gt;/dev/null
     <span class="nb">set</span> +o pipefail
 <span class="o">}</span>
-</code></pre>
-
+</pre>
 <p>(I tried to do this without tempfiles, using process substitution, <a href="https://superuser.com/questions/1243405">but
 failed. Anyone got better
 Bash-fu</a>?)</p>
@@ -120,9 +120,8 @@ fails, the exit code is preserved as the exit of `man|ps2pdf`, which
 causes the `&amp;&amp;` to short-circuit, preventing evince from being run on
 an empty pdf document. We restore `+o pipefail` again at the end.</p>
 <p>Then, from the command line:</p>
-<pre class="code literal-block"><span></span><code>$ psman tr
-</code></pre>
-
+<pre class="code literal-block">$ psman tr
+</pre>
 <p>produces</p>
 <p><a href="../../files/2017/08/pman-tr.png"><img alt="" src="../../files/2017/08/pman-tr.png"></a></p>
 </div>
@@ -130,6 +129,7 @@ an empty pdf document. We restore `+o pipefail` again at the end.</p>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/bash/" rel="tag">bash</a></li>
             <li><a class="tag p-category" href="../../categories/linux/" rel="tag">linux</a></li>
+            <li><a class="tag p-category" href="../../categories/terminal/" rel="tag">terminal</a></li>
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">

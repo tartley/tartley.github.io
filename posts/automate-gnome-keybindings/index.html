@@ -25,6 +25,7 @@ works great on RHEL">
 <meta property="article:published_time" content="2017-10-04T20:06:47-05:00">
 <meta property="article:tag" content="bash">
 <meta property="article:tag" content="linux">
+<meta property="article:tag" content="terminal">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -111,7 +112,7 @@ workstation setup bucket:</p>
     calendar and notifications window, which shadows my 'toggle window
     maximize vertically'.</li>
 </ul>
-<pre class="code literal-block"><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+<pre class="code literal-block"><span class="ch">#!/usr/bin/env bash</span>
 
 <span class="nv">kb</span><span class="o">=</span><span class="s1">'org.gnome.desktop.wm.keybindings'</span>
 
@@ -146,8 +147,7 @@ gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybind
 gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ name <span class="s2">"terminal"</span>
 gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ <span class="nb">command</span> <span class="s2">"terminal"</span>
 gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ binding <span class="s2">"t"</span>
-</code></pre>
-
+</pre>
 <p>Embedded in that is the ultimate solution to my longstanding irk with
 Unity and Gnome's default window switcher (alt-tab.) By default it
 groups windows of a single application together, requiring some extra
@@ -166,6 +166,7 @@ windows, which is easier to hit than shift-alt-tab.</p>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/bash/" rel="tag">bash</a></li>
             <li><a class="tag p-category" href="../../categories/linux/" rel="tag">linux</a></li>
+            <li><a class="tag p-category" href="../../categories/terminal/" rel="tag">terminal</a></li>
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
