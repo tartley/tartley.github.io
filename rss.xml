@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://www.tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 14:34:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ed, by qntm</title><link>https://www.tartley.com/posts/ed-by-qntm/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://www.tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 15:59:21 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ed, by qntm</title><link>https://www.tartley.com/posts/ed-by-qntm/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Ed cover" src="https://www.tartley.com/files/2021/ed-by-qntm-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;It took me a few pages to shift gears to match the provocatively casual style,
@@ -185,13 +185,33 @@ including Amazon links, EPUBs, or free-to-read online,
 their thinking powers, Very data driven, and by necessity, largely driven by
 consideration of how to measure different aspects of intelligence, and
 therefore what aspects intelligence can be teased apart into, such as working
-memory, or speed of operation.&lt;/p&gt;
-&lt;p&gt;Each chapter tackles a key scientific question, such as the effects of
-genes vs the environment, or the ways in which intelligence declines as we
-age.&lt;/p&gt;
+memory, linguistic comprehension, perceptual organization, and speed of
+operation.&lt;/p&gt;
+&lt;p&gt;Each chapter tackles a key scientific question, describing the experiments
+that were done to determine the answers, showing the actual
+key experimental datasets.&lt;/p&gt;
+&lt;p&gt;Such questions include: Is intelligence determined by genes or the environment?
+The answer is 50/50, although surprisingly, little of the environmental
+influence is due to the family raising the child. Also, the effect of genetics
+increases with age.&lt;/p&gt;
+&lt;p&gt;How does a person's intelligence change as they age? Some skills show a
+straight decline from age 25 to 80, such as inductive reasoning, spatial
+awareness, perceptual speed and verbal memory. Other skills show a peak in
+middle-age, with only a small decline at high ages, such as verbal reasoning
+and numerical ability. The amount of mental decline with age is highly variable
+between different people. Those whose abilities decline the least have no
+cardio issues or chronic disease, have high social class, live in complex and
+stimulating environments, and are generally satisfied with life, and unstressed
+through middle age.&lt;/p&gt;
+&lt;p&gt;Does intelligence, especially as measured using existing tests, correlate with
+life outoutcomes such doing well at a job? It depends greatly on the job, but
+for some jobs, yes, a great deal. What sort of tests are good for discovering
+who will do well (work samples; structured interviews; psychometric tests all
+give slightly over 0.5 correlation with good job performance. Which isn't
+stellar, but it's the best we've got. At the other end of the scale, graphology
+(handwriting) and age rankings had no correlation.&lt;/p&gt;
 &lt;p&gt;It's a short book, with a lively style, densely packed with important
-conclusions, and descriptions of how researchers have arrived at them.
-Edifying and entertaining in equal measure.&lt;/p&gt;
+conclusions, and descriptions of how researchers arrived at them. Edifying.&lt;/p&gt;
 &lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>cognition</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/intelligence-a-very-short-introduction/</guid><pubDate>Mon, 18 Jan 2021 11:58:23 GMT</pubDate></item><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/posts/til-git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
 &lt;code&gt;git tag TAGNAME&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Today I learned about &lt;em&gt;annotated&lt;/em&gt; tags, created with &lt;code&gt;git tag -a -m "MESSAGE"
