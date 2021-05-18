@@ -2,7 +2,7 @@
 .. title: Domain Driven Design: Tackling Complexity in the Heart of Software
 .. slug: domain-driven-design-tackling-complexity-in-the-heart-of-software
 .. date: 2014-01-27 11:05:53-06:00
-.. tags: media,books,non-fiction,software
+.. tags: media,books,non-fiction,software,geek
 .. link: 
 .. description: 
 .. type: text

@@ -10,7 +10,7 @@
 -->
 
 <img src="/files/2021/ed-by-qntm-cover.jpg"
-style="float: left; padding-right: 1em">
+style="float: left; padding-right: 1em; padding-bottom: 1em">
 
 It took me a few pages to shift gears to match the provocatively casual style,
 but once I did, it quickly became an engrossing and endearing read.

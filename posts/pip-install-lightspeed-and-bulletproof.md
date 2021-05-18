@@ -2,7 +2,7 @@
 .. title: pip install : Lightspeed and Bulletproof
 .. slug: pip-install-lightspeed-and-bulletproof
 .. date: 2013-03-08 09:29:09-06:00
-.. tags: python
+.. tags: geek,software,python
 .. link: 
 .. description: 
 .. type: text
