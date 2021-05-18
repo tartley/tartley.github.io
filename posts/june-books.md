@@ -11,8 +11,9 @@
 
 Notes about some books I read, for me to reminisce over.
 
-<img src="/files/2019/06/miracleman.jpg"
-style="float: left; padding: 1em">
+<span style="float: left">
+![Miracleman cover](/files/2019/06/miracleman.jpg)
+</span>
 
 _Miracleman, books 1, 2 & 3_ by Alan Moore, Alan Davies, & John Totleben.
 
@@ -43,22 +44,7 @@ underwear-on-the-outside superhero story. But nonetheless I loved it, and
 scenes like the above have stayed with me for months.
 
 <br style="clear: both" />
-<img src="/files/2019/06/swamp-thing-vol-1.jpg"
-style="float: left; padding: 1em">
 
-_Swamp Thing, Vol 1: Saga of the Swamp Thing_ by Alan Moore, John Totleben, & Steve Bissette.
-
-Moore's deconstruction of existing characters continues. Originally Swamp
-Thing was Alec Holland, miraculously transformed by in infusion of
-artificially stimulated plant matter. When Alan Moore takes over the writing,
-Swamp Thing's ostracization and existential dread is compounded by the
-discovery that this origins story has been a delusion all along. Alec Holland
-was killed outright in the accident, and an accumulation of plant matter grew
-around his decaying form, integrating the physical remains of his memories
-into a creature that yearned to recapture its human form, but was never human
-in the first place.
-
-<br style="clear: both" />
 <img src="/files/2019/06/hull-zero-three.jpg"
 style="float: left; padding: 1em">
 
