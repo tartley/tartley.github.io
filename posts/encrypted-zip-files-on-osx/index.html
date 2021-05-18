@@ -15,11 +15,10 @@
 <meta property="og:site_name" content="tartley.com">
 <meta property="og:title" content="Encrypted zip files on OSX">
 <meta property="og:url" content="https://www.tartley.com/posts/encrypted-zip-files-on-osx/">
-<meta property="og:description" content="My passwords and other miscellany are in a plain text file within an
-encrypted zip. Since starting to use OSX I've been looking for a way to
-access my passwords such that:
+<meta property="og:description" content="Update: I've since switched to KeePassXC, the community fork of KeePassX,
+an open source, cross-platorm, local-first, encrypted password storage program.
 
-I get prompted for the decr">
+My passwords and other miscellany are in a pl">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2012-10-09T10:17:07-05:00">
 <meta property="article:tag" content="osx-dev">
@@ -96,6 +95,9 @@ I get prompted for the decr">
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
+<p><strong>Update:</strong> I've since switched to KeePassXC, the community fork of KeePassX,
+an open source, cross-platorm, local-first, encrypted password storage program.</p>
+<hr>
 <p>My passwords and other miscellany are in a plain text file within an
 encrypted zip. Since starting to use OSX I've been looking for a way to
 access my passwords such that:</p>
@@ -115,7 +117,7 @@ access my passwords such that:</p>
 <p>I failed to find an existing app which would do all this (although I had
 no trouble on Linux or even on Windows.) Hence, resorting to good old
 Bash:</p>
-<pre class="code literal-block"><span></span><code><span class="ch">#!/bin/bash</span>
+<pre class="code literal-block"><span class="ch">#!/bin/bash</span>
 
 <span class="nv">ZIPDIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/docs/org"</span>
 
@@ -136,8 +138,7 @@ touch passwords.datestamp
 
 rm passwords.txt
 rm passwords.datestamp
-</code></pre>
-
+</pre>
 <p>I don't expect this to be watertight, but seems good enough for today.
 I'm happy to hear suggestions.</p>
 </div>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about non-fiction)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/non-fiction.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 15:59:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Intelligence: A Very Short Introduction</title><link>https://www.tartley.com/posts/intelligence-a-very-short-introduction/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about non-fiction)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/non-fiction.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 21:06:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Intelligence: A Very Short Introduction</title><link>https://www.tartley.com/posts/intelligence-a-very-short-introduction/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Intelligence cover" src="https://www.tartley.com/files/2021/intelligence-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Ian J. Deary (1st Ed, 2001)&lt;/em&gt;&lt;/p&gt;
@@ -192,7 +192,9 @@ felt welcomed to his world. Join us - we'll be on the sofa.&lt;/p&gt;
 &lt;p&gt;10/10 if you understand that games have the potential to become the
 dominant art form of the 21st century.&lt;/p&gt;
 &lt;p&gt;0/10 if it's just for kids, innit?&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>games</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/this-gaming-life-travels-in-three-cities/</guid><pubDate>Tue, 04 Feb 2014 02:31:29 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://www.tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="object-oriented-sofware-engineering" src="https://www.tartley.com/files/2014/02/object-oriented-sofware-engineering.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>games</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/this-gaming-life-travels-in-three-cities/</guid><pubDate>Tue, 04 Feb 2014 02:31:29 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://www.tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Object Oriented Software Engineering cover" src="https://www.tartley.com/files/2014/02/object-oriented-sofware-engineering.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Ivar Jacobsen&lt;/em&gt; (1992, 4th revision)&lt;/p&gt;
 &lt;p&gt;You might wonder if there's anything left to say about
 object-orientation that hasn't already been discussed to death. I was
@@ -239,8 +241,11 @@ days.&lt;/p&gt;
 &lt;p&gt;Rating:&lt;/p&gt;
 &lt;p&gt;10/10 if you're going to enjoy 500 pages of software design principles
 and case studies.&lt;/p&gt;
-&lt;p&gt;0/10 if you're not.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</guid><pubDate>Sun, 02 Feb 2014 20:26:43 GMT</pubDate></item><item><title>Domain Driven Design: Tackling Complexity in the Heart of Software</title><link>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="domaindrivendesign" src="https://www.tartley.com/files/2014/01/domaindrivendesign.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Eric Evans (2004)&lt;/em&gt; &lt;a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215"&gt;on Amazon&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;0/10 if you're not.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</guid><pubDate>Sun, 02 Feb 2014 20:26:43 GMT</pubDate></item><item><title>Domain Driven Design: Tackling Complexity in the Heart of Software</title><link>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Domain Driven Design cover" src="https://www.tartley.com/files/2014/01/domaindrivendesign.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Eric Evans (2004)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;It's a big, dense book -- possibly the most important of the technical
 books I've read in a flurry over the last few months, catching up after
 recovering a modicum of sanity in our lives after our kid's first year.
@@ -316,8 +321,11 @@ years. It's top of my list for 'books to bring in and talk about at
 work'.&lt;/p&gt;
 &lt;p&gt;Rating:&lt;/p&gt;
 &lt;p&gt;10/10 if you're a programmer, or work with programmers.&lt;/p&gt;
-&lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>geek</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item><item><title>IronPython in Action</title><link>https://www.tartley.com/posts/ironpython-in-action/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://www.amazon.co.uk/IronPython-Action-Michael-Foord/dp/1933988339"&gt;&lt;img alt="ironpython-in-action" src="https://www.tartley.com/files/2009/07/ironpython-in-action.jpg" title="ironpython-in-action"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Michael Foord and Christian Muirhead&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>geek</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item><item><title>IronPython in Action</title><link>https://www.tartley.com/posts/ironpython-in-action/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="IronPython in Action cover" src="https://www.tartley.com/files/2009/07/ironpython-in-action.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Michael Foord and Christian Muirhead (2009)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Disclaimer: I'm friends with both the authors and was sent a freebie
 review copy by the publisher, so I'm bound to be breathlessly gushing in
 this review. Fortunately, that's easy to do, because the book really is
@@ -475,9 +483,12 @@ right this second and buy it.&lt;/p&gt;
 you need this book.&lt;/p&gt;
 &lt;p&gt;0/10 if dynamic languages make you break out in hives, or if .NET makes
 you think of Darth Vader, then you shouldn't touch this book with a
-barge pole.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>media</category><category>non-fiction</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/ironpython-in-action/</guid><pubDate>Sat, 18 Jul 2009 17:03:31 GMT</pubDate></item><item><title>Opengl Shading Language</title><link>https://www.tartley.com/posts/opengl-shading-language/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://www.amazon.co.uk/Opengl-Shading-Language-Randi-Rost/dp/0321334892"&gt;&lt;img alt="OpenGL Shading Language cover" src="https://www.tartley.com/files/2009/05/opengl-shading-language.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Randi J. Rost.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;I've had a passing interest in computer graphics for years, but had
+barge pole.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>geek</category><category>media</category><category>non-fiction</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/ironpython-in-action/</guid><pubDate>Sat, 18 Jul 2009 17:03:31 GMT</pubDate></item><item><title>Opengl Shading Language</title><link>https://www.tartley.com/posts/opengl-shading-language/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="OpenGL Shading Language cover" src="https://www.tartley.com/files/2009/05/opengl-shading-language.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Randi J. Rost (2nd Edtion, 2006)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I've had a hobbyist interest in computer graphics for years, but had
 avoided the technology of &lt;em&gt;shaders&lt;/em&gt; these last few years, thinking that
 they were just another layer of complexity which I didn't need to embark
 upon while I was still getting to grips with the standard OpenGL API.&lt;/p&gt;
@@ -521,7 +532,10 @@ bloody use to me.&lt;/p&gt;
 &lt;p&gt;Rating (oh, how I love my new rating system. Check this one out:)&lt;/p&gt;
 &lt;p&gt;10/10 if you want to learn &lt;em&gt;the theory of&lt;/em&gt; how to use the OpenGL shader
 language.&lt;/p&gt;
-&lt;p&gt;0/10 if you don't.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>graphics</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/opengl-shading-language/</guid><pubDate>Tue, 12 May 2009 03:19:26 GMT</pubDate></item><item><title>Envisioning Information</title><link>https://www.tartley.com/posts/envisioning-information/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="Envisioning Information cover" src="https://www.tartley.com/files/2009/04/envisioning_information.gif"&gt;&lt;/p&gt;
+&lt;p&gt;0/10 if you don't.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>graphics</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/opengl-shading-language/</guid><pubDate>Tue, 12 May 2009 03:19:26 GMT</pubDate></item><item><title>Envisioning Information</title><link>https://www.tartley.com/posts/envisioning-information/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Envisioning Information cover" src="https://www.tartley.com/files/2009/04/envisioning_information.gif"&gt;
+&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Edward R. Tufte&lt;/em&gt; (1990)&lt;/p&gt;
 &lt;p&gt;In much the same vein as Tufte's &lt;em&gt;The Visual Display of Quantitative
 Information&lt;/em&gt;, and displaying the same calibre of deeply incisive
@@ -535,7 +549,10 @@ you.&lt;/p&gt;
 &lt;p&gt;10/10 If bad diagrams make you cringe, and good ones make you laugh out
 loud.&lt;/p&gt;
 &lt;p&gt;0/10 If you only care about beauty, but not about usefulness. Or if you
-don't have eyes.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>graphics</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/envisioning-information/</guid><pubDate>Tue, 14 Apr 2009 18:07:07 GMT</pubDate></item><item><title>Remix</title><link>https://www.tartley.com/posts/remix/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="remix" src="https://www.tartley.com/files/2009/04/remix.jpg"&gt;&lt;/p&gt;
+don't have eyes.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>graphics</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/envisioning-information/</guid><pubDate>Tue, 14 Apr 2009 18:07:07 GMT</pubDate></item><item><title>Remix</title><link>https://www.tartley.com/posts/remix/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left; padding: 1em"&gt;
+&lt;img alt="remix" src="https://www.tartley.com/files/2009/04/remix.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Lawrence Lessig&lt;/em&gt;, 2008.&lt;/p&gt;
 &lt;p&gt;Is creating a mix CD for a friend an act of creativity, or a criminal
 offence? When you shoot a home video of your child which has a TV on in
@@ -561,7 +578,10 @@ loss to any interested party.&lt;/p&gt;
 &lt;p&gt;10/10 If you have any interest in the forces that are reshaping our
 society and turning industries upside-down within the space of years.&lt;/p&gt;
 &lt;p&gt;0/10 If you dislike freedom or free markets, or are a big fan of
-overbearing government regulation and monopolies.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>culture</category><category>internet</category><category>law</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/remix/</guid><pubDate>Wed, 08 Apr 2009 04:42:58 GMT</pubDate></item><item><title>Beginning Game Development With Python and PyGame</title><link>https://www.tartley.com/posts/beginning-game-development-with-python-and-pygame/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2009/01/beginning-game-development-with-python-and-pygame.jpg"&gt;&lt;/p&gt;
+overbearing government regulation and monopolies.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>culture</category><category>internet</category><category>law</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/remix/</guid><pubDate>Wed, 08 Apr 2009 04:42:58 GMT</pubDate></item><item><title>Beginning Game Development With Python and PyGame</title><link>https://www.tartley.com/posts/beginning-game-development-with-python-and-pygame/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="" src="https://www.tartley.com/files/2009/01/beginning-game-development-with-python-and-pygame.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Will McGugan&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Introduces Python, PyGame and game development ideas from the ground up,
 in a really pleasant writing style which is both unintimidating, clear
@@ -586,4 +606,5 @@ conclusion that I gained more from its extremely clear exposition than I
 realised at the time. I'm revising the review scores significantly
 upwards to reflect this.&lt;/p&gt;
 &lt;p&gt;Rating: 10/10 for beginners. 5/10 for experts. Consider yourself
-somewhere between the two.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>gamedev</category><category>media</category><category>non-fiction</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/beginning-game-development-with-python-and-pygame/</guid><pubDate>Mon, 12 Jan 2009 06:17:54 GMT</pubDate></item></channel></rss>
+somewhere between the two.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>gamedev</category><category>geek</category><category>media</category><category>non-fiction</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/beginning-game-development-with-python-and-pygame/</guid><pubDate>Mon, 12 Jan 2009 06:17:54 GMT</pubDate></item></channel></rss>

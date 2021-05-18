@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about mswin-dev)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/mswin-dev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 18 Oct 2020 02:41:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>£ key in Windows on a US laptop keyboard, done right.</title><link>https://www.tartley.com/posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The usual solution to typing non-US characters on a US keyboard in
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about mswin-dev)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/mswin-dev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 16:42:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>£ key in Windows on a US laptop keyboard, done right.</title><link>https://www.tartley.com/posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The usual solution to typing non-US characters on a US keyboard in
 Windows is to hold left-alt, then type on the numeric keypad:&lt;/p&gt;
 &lt;p&gt;£   Left-alt + 0163&lt;/p&gt;
 &lt;p&gt;€   Left-alt + 0128&lt;/p&gt;
@@ -65,13 +65,11 @@ on your PATH. Recent releases are much improved for Python.&lt;/p&gt;
 will need to be created or updated whenever you make significant
 changes. Either get used to manually running the following command a
 lot:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ctags -R .
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class="code literal-block"&gt;ctags -R .
+&lt;/pre&gt;
 &lt;p&gt;or bind it to a key in your \~/.vimrc:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;map  :&lt;span class="p"&gt;!&lt;/span&gt;&lt;span class="k"&gt;start&lt;/span&gt; /min ctags &lt;span class="p"&gt;-&lt;/span&gt;R .
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;pre class="code literal-block"&gt;map  :&lt;span class="p"&gt;!&lt;/span&gt;&lt;span class="k"&gt;start&lt;/span&gt; /min ctags &lt;span class="p"&gt;-&lt;/span&gt;R .
+&lt;/pre&gt;
 &lt;p&gt;I like to set Vim's current working directory equal to the root of
 whatever project I'm working in, so now I can press f12 to update the
 tags file for the project. The 'start /min' part is a Windows-specific
@@ -88,11 +86,10 @@ actually make ctrl-] more inconvenient, because they increase the
 likelyhood of finding duplicate definitions of a tag, causing the menu
 to inconveniently pop up, rather than just jumping to the tag you want.&lt;/p&gt;
 &lt;p&gt;To fix this, create a \~/.ctags file:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;--python-kinds&lt;span class="o"&gt;=&lt;/span&gt;-iv
+&lt;pre class="code literal-block"&gt;--python-kinds&lt;span class="o"&gt;=&lt;/span&gt;-iv
 --exclude&lt;span class="o"&gt;=&lt;/span&gt;build
 --exclude&lt;span class="o"&gt;=&lt;/span&gt;dist
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/pre&gt;
 &lt;p&gt;The first line turns off tags generation for variables and imports. The
 second and third lines turn off generation of tags in the named dirs,
 since you almost certainly want to ignore source code in those
@@ -105,7 +102,7 @@ property &lt;em&gt;.matrix&lt;/em&gt; will present you with a menu asking you to
 between property &lt;em&gt;.matrix&lt;/em&gt; and class &lt;em&gt;Matrix&lt;/em&gt;, rather than just jumping
 to the property.&lt;/p&gt;
 &lt;p&gt;To fix this, add this to your .vimrc:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;" go to defn of tag under the cursor&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" go to defn of tag under the cursor&lt;/span&gt;
 &lt;span class="k"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; MatchCaseTag&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nb"&gt;ic&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;ic&lt;/span&gt;
     &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;noic&lt;/span&gt;
@@ -116,8 +113,7 @@ to the property.&lt;/p&gt;
     &lt;span class="k"&gt;endtry&lt;/span&gt;
 &lt;span class="k"&gt;endfun&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt;   :&lt;span class="k"&gt;call&lt;/span&gt; MatchCaseTag&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt;This Vim script was suggested in a comment by James Vega, in
 order to reliably restore the state of 'ignorecase' after doing the tag
 jump. Many thanks!&lt;/p&gt;
@@ -129,7 +125,7 @@ precisely the same name.&lt;/p&gt;
 &lt;p&gt;Much better.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Also see this post about adding stdlib and venv contents to
 your tags:
-&lt;a href="https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/"&gt;https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><category>vim</category><guid>https://www.tartley.com/posts/go-to-definition-in-vim-for-python-using-ctags-on-windows/</guid><pubDate>Fri, 17 Dec 2010 02:39:01 GMT</pubDate></item><item><title>Rerun unit tests whenever files update</title><link>https://www.tartley.com/posts/rerun-unit-tests-whenever-files-update/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;In which I once again indulge my obscure command-line fetish.&lt;/em&gt;&lt;/p&gt;
+&lt;a href="https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/"&gt;https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><category>python</category><category>software</category><category>vim</category><guid>https://www.tartley.com/posts/go-to-definition-in-vim-for-python-using-ctags-on-windows/</guid><pubDate>Fri, 17 Dec 2010 02:39:01 GMT</pubDate></item><item><title>Rerun unit tests whenever files update</title><link>https://www.tartley.com/posts/rerun-unit-tests-whenever-files-update/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;In which I once again indulge my obscure command-line fetish.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I often spend hours of my day cycling through:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Edit code and its unit tests&lt;/li&gt;
@@ -151,7 +147,7 @@ save, the unit tests are re-run in the other window. All the while the
 focus stays on my editor. It's really sweet!&lt;/p&gt;
 &lt;p&gt;Thanks for the original idea goes to to the bash command &lt;code&gt;watch&lt;/code&gt;, and an
 old (now offline) blog post by Jeff Winkler.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://bitbucket.org/tartley/rerun"&gt;https://bitbucket.org/tartley/rerun&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/posts/rerun-unit-tests-whenever-files-update/</guid><pubDate>Fri, 15 Oct 2010 06:43:33 GMT</pubDate></item><item><title>More Colored Terminal text on Windows: AnsiCon</title><link>https://www.tartley.com/posts/more-colored-terminal-text-on-windows-ansicon/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;A reminder for myself:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://bitbucket.org/tartley/rerun"&gt;https://bitbucket.org/tartley/rerun&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/posts/rerun-unit-tests-whenever-files-update/</guid><pubDate>Fri, 15 Oct 2010 06:43:33 GMT</pubDate></item><item><title>More Colored Terminal text on Windows: AnsiCon</title><link>https://www.tartley.com/posts/more-colored-terminal-text-on-windows-ansicon/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;A reminder for myself:&lt;/p&gt;
 &lt;p&gt;ANSI escape characters don't work properly in Windows terminals:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Before: Raw ANSI codes. Not nice." src="https://www.tartley.com/files/2010/07/ansicon00-before.png"&gt;&lt;/p&gt;
 &lt;p&gt;To make them work properly, use
@@ -223,7 +219,7 @@ on gnome-terminal:&lt;/p&gt;
 which have since been fixed. The only outstanding issue is that colorama
 does not support 'dim' text on Windows - it looks just the same as
 'normal' text, and as far as I know, will never be able to.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://pypi.python.org/pypi/colorama"&gt;http://pypi.python.org/pypi/colorama&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><guid>https://www.tartley.com/posts/colorama-simple-cross-platform-python-api-for-colored-terminal-text/</guid><pubDate>Wed, 21 Apr 2010 15:18:30 GMT</pubDate></item><item><title>Acceptance Testing .NET Applications using IronPython</title><link>https://www.tartley.com/posts/acceptance-testing-net-applications-using-ironpython/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://pypi.python.org/pypi/colorama"&gt;http://pypi.python.org/pypi/colorama&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/colorama-simple-cross-platform-python-api-for-colored-terminal-text/</guid><pubDate>Wed, 21 Apr 2010 15:18:30 GMT</pubDate></item><item><title>Acceptance Testing .NET Applications using IronPython</title><link>https://www.tartley.com/posts/acceptance-testing-net-applications-using-ironpython/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
 &lt;p&gt;The following was originally published in the excellent &lt;a href="http://pythonmagazine.com/"&gt;Python
 Magazine&lt;/a&gt;. Thier contractual exclusivity
 period has now long expired, so here it comes again. Many thanks to my
@@ -1080,7 +1076,7 @@ project's current status and velocity.&lt;/p&gt;
 purposes, should check out &lt;a href="http://www.ironpythoninaction.com/"&gt;IronPython in
 Action&lt;/a&gt;, a pragmatic and densely
 informative new book by Michael Foord, which caters to both Python and
-.NET developers.&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/posts/acceptance-testing-net-applications-using-ironpython/</guid><pubDate>Tue, 16 Mar 2010 17:13:15 GMT</pubDate></item><item><title>Howto bundle binary dependancies with py2exe, et al.</title><link>https://www.tartley.com/posts/howto-bundle-binary-dependancies-with-py2exe-et-al/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Hey. I notice that
+.NET developers.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/posts/acceptance-testing-net-applications-using-ironpython/</guid><pubDate>Tue, 16 Mar 2010 17:13:15 GMT</pubDate></item><item><title>Howto bundle binary dependancies with py2exe, et al.</title><link>https://www.tartley.com/posts/howto-bundle-binary-dependancies-with-py2exe-et-al/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Hey. I notice that
 &lt;a href="https://lists.sourceforge.net/lists/listinfo/py2exe-users"&gt;py2exe-users&lt;/a&gt;
 has a recent question that seems to be about how to correctly bundle the
 required Microsoft C runtime DLL with executables generated from Python
@@ -1090,7 +1086,7 @@ best as I was able. Since people are still asking questions about it, I
 figured I'd promote that change a little.&lt;/p&gt;
 &lt;p&gt;Check out the new, revamped &lt;a href="http://www.py2exe.org/index.cgi/Tutorial"&gt;py2exe tutorial
 page&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;That is all.&lt;/p&gt;&lt;/div&gt;</description><category>mswin-dev</category><category>python</category><guid>https://www.tartley.com/posts/howto-bundle-binary-dependancies-with-py2exe-et-al/</guid><pubDate>Thu, 28 Jan 2010 04:26:00 GMT</pubDate></item><item><title>MSWindows Programming : Propogating child process exit values out of .bat scripts</title><link>https://www.tartley.com/posts/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;"God &lt;em&gt;dammit&lt;/em&gt;. Why won't you just DO what I WANT you hopeless pile of
+&lt;p&gt;That is all.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/howto-bundle-binary-dependancies-with-py2exe-et-al/</guid><pubDate>Thu, 28 Jan 2010 04:26:00 GMT</pubDate></item><item><title>MSWindows Programming : Propogating child process exit values out of .bat scripts</title><link>https://www.tartley.com/posts/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;"God &lt;em&gt;dammit&lt;/em&gt;. Why won't you just DO what I WANT you hopeless pile of
 crap!"&lt;/p&gt;
 &lt;p&gt;So goes the refrain. I think you know where I'm coming from. Yet again,
 I have ended up learning far more about crappy DOS scripting than I ever

@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 02:17:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 19:39:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;But often you'd like to reformat just a section of the file, while leaving
+everything else intact. In principle, it's easy to tell Vim to just send the
+current visual selection:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the visual selection&lt;/span&gt;
+xnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;(Note that both the above Vim configuration snippets map the same key
+sequence -- leader (commonly comma) followed by lower case b. These can be
+defined simultaneously, because the second one uses 'xnoremap', meaning it is
+used only while a visual selection exists, while the first uses 'nnoremap', so
+is used all other times.)&lt;/p&gt;
+&lt;p&gt;But if the given code starts with an indent on the first line, for example if
+it comes from lines in the middle of a function, then this won't work. Black
+parses the given code into a Python abstract syntax tree (AST), and a leading
+indent is a syntax error - it's just not valid Python.&lt;/p&gt;
+&lt;p&gt;I filed a hopeful &lt;a href="https://github.com/psf/black/issues/1352"&gt;issue with Black&lt;/a&gt;,
+suggesting they could handle this case, but it was a long shot and hasn't
+gained much enthusiasm.&lt;/p&gt;
+&lt;p&gt;So, I present a tiny Python3 wrapper, &lt;em&gt;enblacken&lt;/em&gt;, which:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unindents the given code such that the first line has no indent.&lt;/li&gt;
+&lt;li&gt;Passes the result to Black.&lt;/li&gt;
+&lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;
@@ -125,16 +154,19 @@ new v0.6 version, although has not released any of that to PyPI.&lt;/p&gt;
 &lt;p&gt;So, in increasing order of desirability, you can either:&lt;/p&gt;
 &lt;p&gt;Clone the latest repo &lt;a href="https://github.com/nojhan/colout"&gt;from Github&lt;/a&gt;, and
 install from that:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# cd to the clone, then&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# cd to the clone, then&lt;/span&gt;
 python3 -m pip install --user .
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Or, pip install the version I uploaded to PyPI, which is a straight copy of the
 latest Github at the time:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;pip install --user colout-fix
-&lt;/pre&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install --user colout-fix
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Or, best of all, pip install straight from the original Github repo:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;pip install --user git+git://github.com/nojhan/colout.git
-&lt;/pre&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install --user git+git://github.com/nojhan/colout.git
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Note that, throughout, we're using &lt;code&gt;--user&lt;/code&gt;, so that you can install
 development tools like this system-wide for the current user, without needing a
 virtualenv, without needing root access, and without modifying your installed
@@ -185,10 +217,23 @@ to whichever profile you mark as default in the ProfileManager, but
 right clicking lets you select the home or work profile explicitly. Open
 each, and change the theme in one of them so the windows are visually
 distinct.&lt;/p&gt;
-&lt;p&gt;Tested on Ubuntu, RHEL 7.3, probably works on all Gnome3 desktops.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>linux</category><guid>https://www.tartley.com/posts/running-multiple-firefox-profiles/</guid><pubDate>Thu, 22 Feb 2018 00:40:55 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://www.tartley.com/posts/google-chrome-credit/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I just noticed: Open Chrome, go to &lt;chrome:&gt;&lt;/chrome:&gt;, search in page,
+&lt;p&gt;Tested on Ubuntu, RHEL 7.3, probably works on all Gnome3 desktops.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>linux</category><guid>https://www.tartley.com/posts/running-multiple-firefox-profiles/</guid><pubDate>Thu, 22 Feb 2018 00:40:55 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
+for it, called "Announce":&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/tartley/rhythmbox-plugin-announce"&gt;https://github.com/tartley/rhythmbox-plugin-announce&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Every time a new song starts to play, it announces the title using
+speech synthesis. I like it when I'm listening to some new music I'm not
+familiar with, but am away from the computer. Then I can still know
+which track is which.&lt;/p&gt;
+&lt;p&gt;If the album or artist names are different from the previous track, then
+it includes those in the announcement, too.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/rhythmbox-plugin-announce/</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://www.tartley.com/posts/google-chrome-credit/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I just noticed: Open Chrome, go to &lt;chrome:&gt;&lt;/chrome:&gt;, search in page,
 'show licence', and:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;img alt="chrome-credit" src="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>software</category><guid>https://www.tartley.com/posts/google-chrome-credit/</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>Git: When to use three dots vs two</title><link>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
+&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>software</category><guid>https://www.tartley.com/posts/google-chrome-credit/</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>PyRochesterMN</title><link>https://www.tartley.com/posts/pyrochestermn/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Announcing the world's newest Python User Group, PyRochesterMN, based in
+Rochester, Minnesota, USA.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; We've had a couple of name &amp;amp; hosting changes since:&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/PyRochesterMN"&gt;http://www.meetup.com/PyRochesterMN&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/RochesTech"&gt;http://www.meetup.com/RochesTech&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.reddit.com/r/rochestertech/"&gt;https://www.reddit.com/r/rochestertech/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>meetup</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pyrochestermn/</guid><pubDate>Thu, 21 Jan 2016 03:01:27 GMT</pubDate></item><item><title>Git: When to use three dots vs two</title><link>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
 today:&lt;/p&gt;
 &lt;p&gt;To see the commits or diffs introduced by a branch (the filled circles ●):&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     f
@@ -314,145 +359,4 @@ ready. Apologies for the inevitable shoddyness.&lt;/p&gt;&lt;/div&gt;</descripti
 &lt;span class="nb"&gt;trap&lt;/span&gt; cleanup EXIT
 
 sleep infinity
-&lt;/code&gt;&lt;/pre&gt;</description><category>bash</category><category>geek</category><guid>https://www.tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</guid><pubDate>Sun, 15 Mar 2015 15:50:09 GMT</pubDate></item><item><title>Domain Driven Design: Tackling Complexity in the Heart of Software</title><link>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="domaindrivendesign" src="https://www.tartley.com/files/2014/01/domaindrivendesign.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Eric Evans (2004)&lt;/em&gt; &lt;a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215"&gt;on Amazon&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It's a big, dense book -- possibly the most important of the technical
-books I've read in a flurry over the last few months, catching up after
-recovering a modicum of sanity in our lives after our kid's first year.
-I finish it feeling changed, invigorated, and given new direction.&lt;/p&gt;
-&lt;p&gt;At its core is a simple idea, which sounds neither new nor revolutionary
-on the surface. Software projects, Evans maintains, should work closely
-with business experts to create and maintain a domain model. The model
-might be expressed as a class diagram of core business concerns, and
-should also correspond directly to a body of code modelling these
-business entities. This forms a set of core business entities which are
-clearly analogous to things like the core enterprise entities of the
-hexagonal or clean architectures.&lt;/p&gt;
-&lt;p&gt;However it's created, the terminology and notation used in the class
-diagram (or it's equivalent) should be well understood by individuals on
-both side of the tech/business divide. In the past I think I've made the
-mistake of believing that only developers needed to understand it, and
-therefore the model only needed to be expressed in code.&lt;/p&gt;
-&lt;p&gt;This model should be displayed prominently, referred to continually, and
-in a healthy project should very directly correspond to the specialised
-language that evolves within the organisation. Where the team's language
-doesn't match the model - for example, your business experts' use of
-plurals betrays that the cardinality of relationships are modelled
-wrongly, then the model - and the underlying code - should be
-aggressively refactored to match reality.&lt;/p&gt;
-&lt;p&gt;Evans makes a persuasive case that the appropriate management of this
-complexity at the heart of your software will be a major influence on
-the success of the project. To be fair, this is a viewpoint that I
-already believed in, so I was a sucker for all of this. Without an
-appropriate approach to these central design concerns, over time
-developers will find they are no longer able to understand the code
-thoroughly enough to be able to modify or extend it easily, unless they
-deliberately or inadvertently use design-breaking hacks like redundancy
-or mislocated chunks of code. This forms a vicious cycle of technical
-debt accrual, and creates an upper limit on the size or complexity which
-can be achieved by any project before productivity begins to slump.
-Other metrics like reliability then also suffer.&lt;/p&gt;
-&lt;p&gt;To counter this, conquering these central design issues requires a
-pro-active and multi-pronged effort. Firstly, the existing design must
-be understood by all parties. In order for this to remain true, the
-design needs to be kept up to date and be easily understood by new team
-members. The code must be kept directly in sync with the model, and kept
-understandable - inappropriate dependencies must be ruthlessly pruned.
-Simultaneously, the "correct" design must be discovered iteratively,
-throughout the life of the project, and this can only be done by
-encouraging continual conversations between developers and business
-folks to discuss the potential inadequacies of the current design and
-possible alternatives.&lt;/p&gt;
-&lt;p&gt;When managed correctly, this lends an agility and suppleness to project.
-Developers find it easy to integrate subsequent parts of code because
-they 'fit naturally' into the existing design, and when the design is
-found wanting, it's relatively easy to modify it to incorporate new
-concerns.&lt;/p&gt;
-&lt;p&gt;There are times when I've struggled to convey the message about how the
-resulting trade off works between time spent refactoring versus time
-saved over the long term. Evans describes this in an interesting way.
-Instead of trying to model team productivity by applying a multiplier to
-describe drag caused by technical debt, he simply contrasts the normal
-way projects slow down as they become larger and more complex, with a
-project that instead &lt;em&gt;speeds up&lt;/em&gt; over time, as developers, unhindered by
-a cycle of technical debt, are instead empowered by the creation of
-powerful and expressive abstractions, which can then be relatively
-easily reconfigured into unanticipated configurations.&lt;/p&gt;
-&lt;p&gt;To counter-balance this idealistic hand-waving, the next section dives
-right into some specific design practices which embody these ideas.
-These are valuable and insightful, stock-in-trade, such as
-distinguishing between entity and value types. But many of the ideas
-were completely new to me, such as the concept of &lt;em&gt;aggregates&lt;/em&gt;, which
-define subsets of the domain model which are always atomically retrieved
-from (or updated in) a data store.&lt;/p&gt;
-&lt;p&gt;In short, I really loved this book. It stretched and inspired me. It's
-in a very small set of books I've flagged to re-read in a couple of
-years. It's top of my list for 'books to bring in and talk about at
-work'.&lt;/p&gt;
-&lt;p&gt;Rating:&lt;/p&gt;
-&lt;p&gt;10/10 if you're a programmer, or work with programmers.&lt;/p&gt;
-&lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>geek</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item><item><title>pip install : Lightspeed and Bulletproof</title><link>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I saw a post about &lt;a href="http://www.scottisheyes.com/how-to-fix-slow-pip-install"&gt;speeding up the Python packaging command "pip
-install"&lt;/a&gt;, by
-specifying more responsive mirrors for querying and downloading
-packages. For my situation, a better tactic is this.&lt;/p&gt;
-&lt;p&gt;Step one: Download all your project's dependencies into a local
-'packages' dir, but don't install them yet:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;mkdir packages
-pip install --download&lt;span class="o"&gt;=&lt;/span&gt;packages -r requirements.txt
-&lt;/pre&gt;
-&lt;p&gt;Step two, install from the 'packages' dir:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;pip install --no-index --find-links&lt;span class="o"&gt;=&lt;/span&gt;packages -r requirements.txt
-&lt;/pre&gt;
-&lt;p&gt;&lt;em&gt;(The above syntax works on pip 1.3, released yesterday. Docs for older
-versions of pip claim to support this, but in practice, for pip 1.2,
-I've had to use "&lt;code&gt;--find-links=file://$PWD/packages&lt;/code&gt;")&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Step 2 works even if PyPI is unreachable. It works even if some of your
-dependencies are self-hosted by the authors, and that website is
-unreachable. It works even if the version you have pinned of one of your
-dependencies has been deleted by the author (some packages do this
-routinely after security updates.) It works even if you have no network
-connection at all. In short, it makes creation of your virtualenv
-bulletproof.&lt;/p&gt;
-&lt;p&gt;As a nice side effect, it runs really fast, because it isn't downloading
-the packages across the internet, nor is it attempting to scan a remote
-index to check for matching or newer versions of each package. This is
-much quicker than just using a Pip download cache, especially for large
-projects with many dependencies which only change occasionally.&lt;/p&gt;
-&lt;p&gt;At &lt;a href="http://rangespan.com"&gt;Rangespan&lt;/a&gt;, we check the 'packages' directory
-into source control, so that once you've checked out a project's repo,
-you have everything you need to deploy locally and run, even if you have
-no network. You might choose to treat 'packages' as ephemeral.&lt;/p&gt;
-&lt;p&gt;It was pointed out to me recently by
-&lt;a href="https://twitter.com/jezdez"&gt;@jezdez&lt;/a&gt;, Pip maintainer, this usage
-pattern has now been &lt;a href="http://www.pip-installer.org/en/latest/cookbook.html#fast-local-installs"&gt;explicitly called out in the
-documentation&lt;/a&gt;,
-which was substantially reorganised and improved with the recent 1.3
-release.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</guid><pubDate>Fri, 08 Mar 2013 15:29:09 GMT</pubDate></item><item><title>£ key in Windows on a US laptop keyboard, done right.</title><link>https://www.tartley.com/posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The usual solution to typing non-US characters on a US keyboard in
-Windows is to hold left-alt, then type on the numeric keypad:&lt;/p&gt;
-&lt;p&gt;£   Left-alt + 0163&lt;/p&gt;
-&lt;p&gt;€   Left-alt + 0128&lt;/p&gt;
-&lt;p&gt;This is a pain on my (otherwise fabulous) Thinkpad laptop, because the
-numeric keypad is accessed by holding the blue 'Fn' key while you tap
-ScrLk, to toggle numeric keypad mode, and then doing the same again
-afterwards to turn it off.&lt;/p&gt;
-&lt;p&gt;One inadequate alternative (on WindowsXP, YMMV) is to go into control
-panel; Regional and Language Options; Languages; Details; Settings. Add
-a new keyboard configuration, "United States-International", which
-should be grouped under your existing language ("English (United
-Kingdom)" for me.) OK all the dialogs, restart your applications.&lt;/p&gt;
-&lt;p&gt;Now you can simply type:&lt;/p&gt;
-&lt;p&gt;£   Right-alt + Shift + 4&lt;/p&gt;
-&lt;p&gt;€   Right-alt + 5&lt;/p&gt;
-&lt;p&gt;The downside of this solution is that the "UnitedStates-International"
-keyboard setting adds a bunch of other features, including 'dead-keys',
-whereby quotes and other punctuation are used to add accents to letters,
-which is overly intrusive if, like me, you hardly ever use accents.&lt;/p&gt;
-&lt;p&gt;Ultimate solution then, define your own personal keyboard layout.
-Download the Microsoft Keyboard Layout Creator from here:
-&lt;a href="http://msdn.microsoft.com/en-us/goglobal/bb964665"&gt;http://msdn.microsoft.com/en-us/goglobal/bb964665&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;My end result is an MSI with which I can install a new keyboard layout,
-which is exactly like 'US', but with the addition of £ on the key
-right-alt + 3:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.tartley.com/files/2011/07/windows-US-keyboard-layout-with-pound-on-right-alt-3.zip"&gt;windows-US-keyboard-layout-with-pound-on-right-alt-3&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The source .klc file is in there, so you could add your own tweaks on
-top of that.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><guid>https://www.tartley.com/posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</guid><pubDate>Sun, 10 Jul 2011 18:06:34 GMT</pubDate></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;</description><category>bash</category><category>geek</category><guid>https://www.tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</guid><pubDate>Sun, 15 Mar 2015 15:50:09 GMT</pubDate></item></channel></rss>

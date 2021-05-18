@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about math)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/math.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 17 May 2021 23:31:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Man Who Knew Too Much</title><link>https://www.tartley.com/posts/the-man-who-knew-too-much/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2008/08/the-man-who-knew-too-much.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by David Leavitt&lt;/em&gt;, 2006.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about math)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/math.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 21:03:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Man Who Knew Too Much</title><link>https://www.tartley.com/posts/the-man-who-knew-too-much/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="" src="https://www.tartley.com/files/2008/08/the-man-who-knew-too-much.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by David Leavitt (2006)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;An impulse buy, and it was good but not great. The barbaric treatment
 Turing received over being gay seems to be the thing that initially
 attracted the author's interest in Turing's life, and while that is a
@@ -11,9 +13,11 @@ lacking a tiny sparkle of passion that made me suspect the author had
 done his absolute damnedest to cover the mathematical side of Turing,
 because no book about him would be complete without it, but without
 really ever wanting to.&lt;/p&gt;
-&lt;p&gt;Rating: 7/10. Solid but not much that was new to me.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>math</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/the-man-who-knew-too-much/</guid><pubDate>Tue, 19 Aug 2008 10:24:01 GMT</pubDate></item><item><title>Everything and More: A compact history of ∞</title><link>https://www.tartley.com/posts/everything-and-more/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="Cover: Everything and More" src="https://www.tartley.com/files/2007/02/everything-and-more.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by David Foster Wallace.&lt;/em&gt; 2003.
-&lt;a href="http://www.amazon.co.uk/Everything-More-Compact-History-Infinity/dp/0753818825"&gt;On Amazon.co.uk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Rating: 7/10. Solid but not much that was new to me.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>math</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/the-man-who-knew-too-much/</guid><pubDate>Tue, 19 Aug 2008 10:24:01 GMT</pubDate></item><item><title>Everything and More: A compact history of ∞</title><link>https://www.tartley.com/posts/everything-and-more/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Cover: Everything and More" src="https://www.tartley.com/files/2007/02/everything-and-more.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by David Foster Wallace (2003)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Short and Unnecessary Foreword&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Before I describe the book I should like to set the scene, as it were,
 by describing how it was recommended to me in glowing terms by my new
@@ -22,6 +26,7 @@ intellectual pursuits and such matters of taste as one's reading
 material. Such an introduction lead me to have high expectations of E&amp;amp;M,
 and I shall now relate the extent to which these were fulfilled.&lt;em&gt;[2]&lt;/em&gt;
 But first, for your convenience, a glossary of abbreviations:&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;E&amp;amp;M&lt;/strong&gt; - Everything and More&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;DSP&lt;/strong&gt; - Digital signal processing&lt;/li&gt;

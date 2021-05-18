@@ -70,7 +70,178 @@
     
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/chaining-a-sequence-of-generators/" class="u-url">Chaining a sequence of generators</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/altered-carbon/" class="u-url">Altered Carbon</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/altered-carbon/" rel="bookmark">
+            <time class="published dt-published" datetime="2014-02-02T12:59:43-06:00" itemprop="datePublished" title="2014-02-02 12:59">2014-02-02 12:59</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/altered-carbon/#disqus_thread" data-disqus-identifier="cache/posts/altered-carbon.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><span style="float: left">
+<img alt="Altered Carbon cover" src="files/2014/02/richard-morgan-altered-carbon.jpg"></span></p>
+<p><em>by Richard Morgan</em> (2001)</p>
+<p>A romp through a hyperviolent cyberpunk future through the eyes of a
+character reluctantly press-ganged into the role of detective in a story
+woven around personality uploads, swaps, and backups. I did enjoy it,
+but was put off by the main character winning their victories
+by consecutive applications of remorseless violence. There's no cleverness
+or examinations of morality here, just that the character cast as the "goodie"
+triumphs by being better at beating people up.</p>
+<p>10/10 if you're looking to kick back on the couch with tea, cake, and
+some exciting SF.</p>
+<p>0/10 if you're not.</p>
+<p><br style="clear: both"></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/" class="u-url">Domain Driven Design: Tackling Complexity in the Heart of Software</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/" rel="bookmark">
+            <time class="published dt-published" datetime="2014-01-27T11:05:53-06:00" itemprop="datePublished" title="2014-01-27 11:05">2014-01-27 11:05</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/#disqus_thread" data-disqus-identifier="cache/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><span style="float: left">
+<img alt="Domain Driven Design cover" src="files/2014/01/domaindrivendesign.jpg"></span></p>
+<p><em>by Eric Evans (2004)</em></p>
+<p>It's a big, dense book -- possibly the most important of the technical
+books I've read in a flurry over the last few months, catching up after
+recovering a modicum of sanity in our lives after our kid's first year.
+I finish it feeling changed, invigorated, and given new direction.</p>
+<p>At its core is a simple idea, which sounds neither new nor revolutionary
+on the surface. Software projects, Evans maintains, should work closely
+with business experts to create and maintain a domain model. The model
+might be expressed as a class diagram of core business concerns, and
+should also correspond directly to a body of code modelling these
+business entities. This forms a set of core business entities which are
+clearly analogous to things like the core enterprise entities of the
+hexagonal or clean architectures.</p>
+<p>However it's created, the terminology and notation used in the class
+diagram (or it's equivalent) should be well understood by individuals on
+both side of the tech/business divide. In the past I think I've made the
+mistake of believing that only developers needed to understand it, and
+therefore the model only needed to be expressed in code.</p>
+<p>This model should be displayed prominently, referred to continually, and
+in a healthy project should very directly correspond to the specialised
+language that evolves within the organisation. Where the team's language
+doesn't match the model - for example, your business experts' use of
+plurals betrays that the cardinality of relationships are modelled
+wrongly, then the model - and the underlying code - should be
+aggressively refactored to match reality.</p>
+<p>Evans makes a persuasive case that the appropriate management of this
+complexity at the heart of your software will be a major influence on
+the success of the project. To be fair, this is a viewpoint that I
+already believed in, so I was a sucker for all of this. Without an
+appropriate approach to these central design concerns, over time
+developers will find they are no longer able to understand the code
+thoroughly enough to be able to modify or extend it easily, unless they
+deliberately or inadvertently use design-breaking hacks like redundancy
+or mislocated chunks of code. This forms a vicious cycle of technical
+debt accrual, and creates an upper limit on the size or complexity which
+can be achieved by any project before productivity begins to slump.
+Other metrics like reliability then also suffer.</p>
+<p>To counter this, conquering these central design issues requires a
+pro-active and multi-pronged effort. Firstly, the existing design must
+be understood by all parties. In order for this to remain true, the
+design needs to be kept up to date and be easily understood by new team
+members. The code must be kept directly in sync with the model, and kept
+understandable - inappropriate dependencies must be ruthlessly pruned.
+Simultaneously, the "correct" design must be discovered iteratively,
+throughout the life of the project, and this can only be done by
+encouraging continual conversations between developers and business
+folks to discuss the potential inadequacies of the current design and
+possible alternatives.</p>
+<p>When managed correctly, this lends an agility and suppleness to project.
+Developers find it easy to integrate subsequent parts of code because
+they 'fit naturally' into the existing design, and when the design is
+found wanting, it's relatively easy to modify it to incorporate new
+concerns.</p>
+<p>There are times when I've struggled to convey the message about how the
+resulting trade off works between time spent refactoring versus time
+saved over the long term. Evans describes this in an interesting way.
+Instead of trying to model team productivity by applying a multiplier to
+describe drag caused by technical debt, he simply contrasts the normal
+way projects slow down as they become larger and more complex, with a
+project that instead <em>speeds up</em> over time, as developers, unhindered by
+a cycle of technical debt, are instead empowered by the creation of
+powerful and expressive abstractions, which can then be relatively
+easily reconfigured into unanticipated configurations.</p>
+<p>To counter-balance this idealistic hand-waving, the next section dives
+right into some specific design practices which embody these ideas.
+These are valuable and insightful, stock-in-trade, such as
+distinguishing between entity and value types. But many of the ideas
+were completely new to me, such as the concept of <em>aggregates</em>, which
+define subsets of the domain model which are always atomically retrieved
+from (or updated in) a data store.</p>
+<p>In short, I really loved this book. It stretched and inspired me. It's
+in a very small set of books I've flagged to re-read in a couple of
+years. It's top of my list for 'books to bring in and talk about at
+work'.</p>
+<p>Rating:</p>
+<p>10/10 if you're a programmer, or work with programmers.</p>
+<p>0/10 if you're not, or don't.</p>
+<p><br style="clear: both"></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/brief-interviews-with-hideous-men/" class="u-url">Brief Interviews with Hideous Men</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/brief-interviews-with-hideous-men/" rel="bookmark">
+            <time class="published dt-published" datetime="2014-01-22T20:51:51-06:00" itemprop="datePublished" title="2014-01-22 20:51">2014-01-22 20:51</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/brief-interviews-with-hideous-men/#disqus_thread" data-disqus-identifier="cache/posts/brief-interviews-with-hideous-men.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><span style="float: left; padding: 1em">
+<img alt="Brief Interviews With Hideous Men cover" src="files/2014/01/brief-interviews-with-hideous-men.jpg"></span></p>
+<p><em>by David Foster Wallace (1999)</em></p>
+<p>A collection of creative essays, varying from playful to unflinchingly
+uncomfortable, shot through with Wallace's typical humour and
+introspection.</p>
+<p>I've tended to love and hate his <a href="infinite-jest">other</a>
+<a href="everything-and-more">writing</a> in equal measure, but with such
+ferocity that I unreservedly place him amongst my very favourite
+authors. There wasn't even much for me to hate in this one, relatively
+lacking as it is in labyrinthine footnotes.</p>
+<p>A couple of the essays left me cold (<em>Tri-Stan: I Sold Sissee Nar to
+Ecko</em> springs to mind - presumably I'm missing the point entirely),
+but most of them I found thoroughly engaging and
+thought provoking. I'm tempted to read up on those that seemed most
+challenging to me (<em>Church Not Made With Hands</em>, say), and give them
+another try.</p>
+<p>It's been a while. Rating:</p>
+<p>0/10 if you don't want to delve deeply into sometimes uncomfortable
+subjects, such as depression, unconventional sex acts, and rape.</p>
+<p>10/10 if you like to be stretched, or at least stirred around, in
+interesting directions.</p>
+<p><br style="clear: both"></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/chaining-a-sequence-of-generators/" class="u-url">Chaining a sequence of generators</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -92,19 +263,17 @@ Systems Programmers</a>.'</p>
 <p>This results in the outer level of my code calling one generator after
 another, terminating in something that consumes the rows, pulling data
 one row at a time through each of the generators:</p>
-<pre class="code literal-block"><span></span><code><span class="n">inputRows</span> <span class="o">=</span> <span class="n">read</span><span class="p">()</span>
+<pre class="code literal-block"><span class="n">inputRows</span> <span class="o">=</span> <span class="n">read</span><span class="p">()</span>
 <span class="n">parsedRows</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">inputRows</span><span class="p">)</span>
 <span class="n">processedRows</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="n">parsedRows</span><span class="p">)</span>
 <span class="n">outputRows</span> <span class="o">=</span> <span class="n">format_</span><span class="p">(</span><span class="n">processedRows</span><span class="p">)</span>
 <span class="n">output</span><span class="p">(</span><span class="n">outputRows</span><span class="p">)</span>
-</code></pre>
-
+</pre>
 <p>where each called function except the last is actually a generator, e.g:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+<pre class="code literal-block"><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
         <span class="k">yield</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-</code></pre>
-
+</pre>
 <p>This is great. But my itch is that the top level code above is a bit
 wordy, given that what it does is so simple. The reader has to check
 each temporary variable quite carefully to be sure it's doing the right
@@ -113,18 +282,16 @@ thing.</p>
 intermediate
 variables</a>,
 which results in:</p>
-<pre class="code literal-block"><span></span><code><span class="n">output</span><span class="p">(</span> <span class="n">format_</span><span class="p">(</span> <span class="n">process</span><span class="p">(</span> <span class="n">parse</span><span class="p">(</span> <span class="n">read</span><span class="p">()</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
-</code></pre>
-
+<pre class="code literal-block"><span class="n">output</span><span class="p">(</span> <span class="n">format_</span><span class="p">(</span> <span class="n">process</span><span class="p">(</span> <span class="n">parse</span><span class="p">(</span> <span class="n">read</span><span class="p">()</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+</pre>
 <p>This is certainly less wordy, and expresses what's happening very
 directly, but it annoys some of my colleagues that the called functions
 are listed in reverse order from what one might intuitively expect.</p>
 <p>I've had this idea in my head to create a decorator for generators which
 allows one to chain them in an intuitive order, possibly using some
 unconventional notation such as:</p>
-<pre class="code literal-block"><span></span><code><span class="n">read</span><span class="p">()</span> <span class="o">|</span> <span class="n">parse</span> <span class="o">|</span> <span class="n">process</span> <span class="o">|</span> <span class="n">format_</span> <span class="o">|</span> <span class="n">output</span>
-</code></pre>
-
+<pre class="code literal-block"><span class="n">read</span><span class="p">()</span> <span class="o">|</span> <span class="n">parse</span> <span class="o">|</span> <span class="n">process</span> <span class="o">|</span> <span class="n">format_</span> <span class="o">|</span> <span class="n">output</span>
+</pre>
 <p>where 'parse', et al, are now decorated with '@chainable' or somesuch,
 which returns an instance of a class that stores the wrapped generator,
 and overrides __or__ to do its magic. Maybe 'read' doesn't need to
@@ -133,13 +300,12 @@ thought this through.</p>
 <p>Luckily, before embarking on that, I realised today I've been
 over-complicating the whole thing. There's no need for decorators, nor
 for the cute '|' syntax. I just need a plain old function:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">link</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="o">*</span><span class="n">transforms</span><span class="p">):</span>
+<pre class="code literal-block"><span class="k">def</span> <span class="nf">link</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="o">*</span><span class="n">transforms</span><span class="p">):</span>
     <span class="n">args</span> <span class="o">=</span> <span class="n">source</span>
     <span class="k">for</span> <span class="n">transform</span> <span class="ow">in</span> <span class="n">transforms</span><span class="p">:</span>
         <span class="n">args</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">args</span>
-</code></pre>
-
+</pre>
 <p><strong>Update</strong>: This code has been improved thanks to suggestions in the
 comments from Daniel Pope (eliminate the 'first' variable) and Xtian
 (take an iterable rather than a callable for the source.)</p>
@@ -148,16 +314,14 @@ subsequent item is a generator that takes the result of the item before.</p>
 <p>If the final item in the sequence passed to 'link' is a generator, then
 this returns a generator which is the composite of all the ones passed
 in:</p>
-<pre class="code literal-block"><span></span><code><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">link</span><span class="p">(</span><span class="n">read</span><span class="p">(),</span> <span class="n">parse</span><span class="p">,</span> <span class="n">process</span><span class="p">,</span> <span class="n">format_</span><span class="p">):</span>
+<pre class="code literal-block"><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">link</span><span class="p">(</span><span class="n">read</span><span class="p">(),</span> <span class="n">parse</span><span class="p">,</span> <span class="n">process</span><span class="p">,</span> <span class="n">format_</span><span class="p">):</span>
     <span class="nb">print</span> <span class="n">item</span>
-</code></pre>
-
+</pre>
 <p>Or if the final item passed to 'link' is a regular function, which
 consumes the preceding generators, then calling 'link' will invoke the
 generators, i.e. the following is the same as the above 'for' loop:</p>
-<pre class="code literal-block"><span></span><code><span class="n">link</span><span class="p">(</span><span class="n">read</span><span class="p">(),</span> <span class="n">parse</span><span class="p">,</span> <span class="n">process</span><span class="p">,</span> <span class="n">format_</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
-</code></pre>
-
+<pre class="code literal-block"><span class="n">link</span><span class="p">(</span><span class="n">read</span><span class="p">(),</span> <span class="n">parse</span><span class="p">,</span> <span class="n">process</span><span class="p">,</span> <span class="n">format_</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+</pre>
 <p>There's some rough edges, such as determining what to do if different
 generators require other args. Presumably 'partial' could help here. But
 in general, 'link' only needs to be written once, and I'm liking it.</p>
@@ -226,12 +390,14 @@ specifying more responsive mirrors for querying and downloading
 packages. For my situation, a better tactic is this.</p>
 <p>Step one: Download all your project's dependencies into a local
 'packages' dir, but don't install them yet:</p>
-<pre class="code literal-block">mkdir packages
+<pre class="code literal-block"><span></span><code>mkdir packages
 pip install --download<span class="o">=</span>packages -r requirements.txt
-</pre>
+</code></pre>
+
 <p>Step two, install from the 'packages' dir:</p>
-<pre class="code literal-block">pip install --no-index --find-links<span class="o">=</span>packages -r requirements.txt
-</pre>
+<pre class="code literal-block"><span></span><code>pip install --no-index --find-links<span class="o">=</span>packages -r requirements.txt
+</code></pre>
+
 <p><em>(The above syntax works on pip 1.3, released yesterday. Docs for older
 versions of pip claim to support this, but in practice, for pip 1.2,
 I've had to use "<code>--find-links=file://$PWD/packages</code>")</em></p>
@@ -350,6 +516,9 @@ idea for myself.</p>
 </div>
     </header><div class="e-content entry-content">
     <div>
+<p><strong>Update:</strong> I've since switched to KeePassXC, the community fork of KeePassX,
+an open source, cross-platorm, local-first, encrypted password storage program.</p>
+<hr>
 <p>My passwords and other miscellany are in a plain text file within an
 encrypted zip. Since starting to use OSX I've been looking for a way to
 access my passwords such that:</p>
@@ -369,7 +538,7 @@ access my passwords such that:</p>
 <p>I failed to find an existing app which would do all this (although I had
 no trouble on Linux or even on Windows.) Hence, resorting to good old
 Bash:</p>
-<pre class="code literal-block"><span></span><code><span class="ch">#!/bin/bash</span>
+<pre class="code literal-block"><span class="ch">#!/bin/bash</span>
 
 <span class="nv">ZIPDIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/docs/org"</span>
 
@@ -390,8 +559,7 @@ touch passwords.datestamp
 
 rm passwords.txt
 rm passwords.datestamp
-</code></pre>
-
+</pre>
 <p>I don't expect this to be watertight, but seems good enough for today.
 I'm happy to hear suggestions.</p>
 </div>
@@ -422,7 +590,7 @@ set literals. These are marked as a syntax errors, which prevents the
 rest of the file from being parsed.</p>
 <p>The solution is to compile your own MacVim, using Python 2.7 instead of
 the system Python. The following commands got MacVim compiled for me:</p>
-<pre class="code literal-block"><span></span><code><span class="ch">#!/bin/bash</span>
+<pre class="code literal-block"><span class="ch">#!/bin/bash</span>
 git clone git://github.com/b4winckler/macvim.git
 <span class="nb">cd</span> macvim/src
 <span class="nb">export</span> <span class="nv">LDFLAGS</span><span class="o">=</span>-L/usr/lib
@@ -436,8 +604,7 @@ git clone git://github.com/b4winckler/macvim.git
 make
 open MacVim/build/Release
 <span class="nb">echo</span> Drag MacVim.app to your Applications directory
-</code></pre>
-
+</pre>
 <p>Without the LDFLAGS setting, I was missing some symbols at link. The
 --with-python-config-dir entry came from typing 'which python' to find
 where my Python 2.7 install lives, and modifying that result to find its
@@ -446,10 +613,9 @@ where my Python 2.7 install lives, and modifying that result to find its
 macvim/src/MacVim/build/Release/MacVim.app into your Applications
 directory.</p>
 <p>Open up MacVim, and check out the built-in Python version:</p>
-<pre class="code literal-block"><span></span><code><span class="p">:</span><span class="n">python</span> <span class="kn">import</span> <span class="nn">sys</span><span class="p">;</span> <span class="k">print</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span>
+<pre class="code literal-block"><span class="p">:</span><span class="n">python</span> <span class="kn">import</span> <span class="nn">sys</span><span class="p">;</span> <span class="k">print</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span>
 <span class="mf">2.7</span><span class="o">.</span><span class="mi">1</span> <span class="p">(</span><span class="n">r271</span><span class="p">:</span><span class="mi">86882</span><span class="n">M</span><span class="p">,</span> <span class="n">Nov</span> <span class="mi">30</span> <span class="mi">2010</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">34</span><span class="p">)</span>
-</code></pre>
-
+</pre>
 <p>And files with set literals are now correctly parsed for errors.</p>
 <p><strong>Update:</strong> This only works if the Python 2.7 is your default 'python'
 executable. Otherwise, or if you get "ImportError: No module named
@@ -484,197 +650,6 @@ site"?, see Richard's comments below.</p>
 cheatsheet</a>
 (click this link or the image for the most up-to-date PDF from github.)</p>
 <p><a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf"><img alt="" src="files/2011/10/Python-regular-expression-cheatsheet-0.3.0.png" title="Python regular expression cheatsheet 0.3.3"></a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/django-testing-201-acceptance-tests-vs-unit-tests/" class="u-url">Django testing 201 : Acceptance Tests vs Unit Tests</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/django-testing-201-acceptance-tests-vs-unit-tests/" rel="bookmark">
-            <time class="published dt-published" datetime="2011-07-14T16:19:43-05:00" itemprop="datePublished" title="2011-07-14 16:19">2011-07-14 16:19</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/django-testing-201-acceptance-tests-vs-unit-tests/#disqus_thread" data-disqus-identifier="cache/posts/django-testing-201-acceptance-tests-vs-unit-tests.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>I'm finding that our Django project's tests fall into an uncomfortable
-middle-ground, halfway between end-to-end acceptance tests and proper
-unit tests. As such they don't exhibit the best qualities of either. I'd
-like to fix this.</p>
-<p>We're testing our Django application in what I believe is the canonical
-way, as described by the <a href="https://docs.djangoproject.com/en/dev/topics/testing/">excellent
-documentation</a>.
-We have a half-dozen Django applications, with a mixture of
-<code>unittest.TestCase</code> and <code>django.test.TestCase</code> subclasses in each
-application's tests.py module. They generally use fixtures or the Django
-ORM to set up data for the test, then invoke the function-under-test,
-and then make assertions about return values or side-effects, often
-using the ORM again to assert about the new state of the database.</p>
-<h3>Not an Acceptance Test</h3>
-<p>Such a test doesn't provide the primary benefit of an acceptance test,
-namely proof that the application actually works, because it isn't quite
-end-to-end enough. Instead of calling methods-under-test, we should be
-using the Django testing client to make HTTP requests to our web
-services, and maybe incorporating Selenium tests to drive our web UI.
-This change is a lot of work, but at least the path forward seems clear.</p>
-<p>However, an additional problem is that acceptance tests ought to be
-associated with features that are visible to an end user. A single user
-story might involve calls to several views, potentially spread across
-different Django apps. Because of this, I don't think it's appropriate
-for an acceptance test to live within a single Django app's directory.</p>
-<h3>Not a Unit Test</h3>
-<p>On the other hand, our existing tests are also not proper unit tests.
-They hit the (test) database and the filesystem, and they currently
-don't do any mocking out of expensive or complicated function calls. As
-a result, they are slow to run, and will only get slower as we ramp up
-our feature set and our test coverage. This is a cardinal sin for unit
-tests, and it discourages developers from running the tests frequently
-enough. In addition, tests like this often require extensive setup of
-test data, and are therefore hard to write, so it's very
-labour-intensive to provide adequate test coverage.</p>
-<h3>My Solution</h3>
-<p><strong>1) I've created a top-level acceptancetests directory.</strong> Most of our
-current tests will be moved into this directory, because they are closer
-to acceptance tests than unit tests, and will gradually be modified to
-be more end-to-end.</p>
-<p>These acceptance tests need to be run by the Django testrunner, since
-they rely on lots of things that it does, such as creating the test
-database and rolling back after each test method. However, the Django
-testrunner won't find these tests unless I make 'acceptancetests' a new
-Django application, and import all acceptance test classes into its
-tests.py. I'm considering doing this, but for the moment I have another
-solution, which I'll describe in a moment.</p>
-<p>We also need to be able to create unit tests for all of our code,
-regardless of whether that code is within a Django model, or somewhere
-else in a Django app, or in another top-level directory that isn't a
-Django app. Such unit tests should live in a 'tests' package right next
-to the code they test. I'm puzzled as to why Django's testrunner doesn't
-look for unit tests throughout the project and just run them all, along
-with the Django-specific tests.</p>
-<p><strong>2) My solution to this is to augment the Django test runner</strong>, by
-inheriting from it. My test runner, instead of just looking for tests in
-each app's models.py and tests.py, looks for subclasses of
-unittest.TestCase in every module throughout the whole project. Setting
-Django's settings.TEST_RUNNER causes this custom test runner to be used
-by 'manage.py test'. Thanks to the Django contributors for this
-flexibility!</p>
-<p>So the new test runner finds and runs all the tests which the default
-Django runner runs, and it also finds our unit tests from all over the
-project, and it also includes our new top-level 'acceptancetests'
-directory. This is great!</p>
-<p>One surprise is that the number of tests which get run has actually
-decreased. On closer inspection, this is because the standard Django
-test runner includes all the tests for every Django app, and this
-includes not just my project's apps, but also the built-in and
-middleware Django apps. We are no longer running these tests. Is this
-important? I'm not sure: After all, we are not modifying the code in
-django.contrib, so I don't expect these tests to start failing. On the
-other hand, maybe those tests help to demonstrate that our Django
-settings are not broken?</p>
-<h3>An appeal for sanity</h3>
-<p>My solutions seem to work, but I'm suspicious that I'm swimming against
-the current, because I haven't found much discussion about these issues,
-so maybe I'm just well off the beaten path. Have many other people
-already written a similar extension to Django's test runner? If so,
-where are they all? If not, why not? How else is everyone running their
-Django project tests in locations other than models.py or tests.py? Or
-do they not have tests outside these locations? If not, why not? I'd
-love to hear about it if I'm doing it wrong, or if there's an easier
-approach.</p>
-<p><strong>Update:</strong> My <a href="http://rangespan.com/">fabulous employer</a> has given
-permission to release the test runner as open source:</p>
-<p><a href="https://github.com/rangespan/django-alltestsrunner">https://github.com/rangespan/django-alltestsrunner</a></p>
-<p><strong>Update2:</strong> I like this post's numeric ID (check the URL)</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/" class="u-url">£ key in Windows on a US laptop keyboard, done right.</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/" rel="bookmark">
-            <time class="published dt-published" datetime="2011-07-10T13:06:34-05:00" itemprop="datePublished" title="2011-07-10 13:06">2011-07-10 13:06</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/#disqus_thread" data-disqus-identifier="cache/posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>The usual solution to typing non-US characters on a US keyboard in
-Windows is to hold left-alt, then type on the numeric keypad:</p>
-<p>£   Left-alt + 0163</p>
-<p>€   Left-alt + 0128</p>
-<p>This is a pain on my (otherwise fabulous) Thinkpad laptop, because the
-numeric keypad is accessed by holding the blue 'Fn' key while you tap
-ScrLk, to toggle numeric keypad mode, and then doing the same again
-afterwards to turn it off.</p>
-<p>One inadequate alternative (on WindowsXP, YMMV) is to go into control
-panel; Regional and Language Options; Languages; Details; Settings. Add
-a new keyboard configuration, "United States-International", which
-should be grouped under your existing language ("English (United
-Kingdom)" for me.) OK all the dialogs, restart your applications.</p>
-<p>Now you can simply type:</p>
-<p>£   Right-alt + Shift + 4</p>
-<p>€   Right-alt + 5</p>
-<p>The downside of this solution is that the "UnitedStates-International"
-keyboard setting adds a bunch of other features, including 'dead-keys',
-whereby quotes and other punctuation are used to add accents to letters,
-which is overly intrusive if, like me, you hardly ever use accents.</p>
-<p>Ultimate solution then, define your own personal keyboard layout.
-Download the Microsoft Keyboard Layout Creator from here:
-<a href="http://msdn.microsoft.com/en-us/goglobal/bb964665">http://msdn.microsoft.com/en-us/goglobal/bb964665</a>.</p>
-<p>My end result is an MSI with which I can install a new keyboard layout,
-which is exactly like 'US', but with the addition of £ on the key
-right-alt + 3:</p>
-<p><a href="files/2011/07/windows-US-keyboard-layout-with-pound-on-right-alt-3.zip">windows-US-keyboard-layout-with-pound-on-right-alt-3</a></p>
-<p>The source .klc file is in there, so you could add your own tweaks on
-top of that.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/python-port-of-modern-3d-graphics-using-opengl-tutorial/" class="u-url">Python port of Modern 3D Graphics using OpenGL tutorial</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/python-port-of-modern-3d-graphics-using-opengl-tutorial/" rel="bookmark">
-            <time class="published dt-published" datetime="2011-04-20T14:23:54-05:00" itemprop="datePublished" title="2011-04-20 14:23">2011-04-20 14:23</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/python-port-of-modern-3d-graphics-using-opengl-tutorial/#disqus_thread" data-disqus-identifier="cache/posts/python-port-of-modern-3d-graphics-using-opengl-tutorial.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>To my knowledge, there are three online OpenGL tutorials which stand
-head and shoulders above the rest:</p>
-<ul>
-<li>
-<a href="http://www.arcsynthesis.org/gltut/index.html">Learning Modern 3D Graphics Programming Through
-    OpenGL</a> (C)</li>
-<li>
-<a href="http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html">An intro to modern
-    OpenGL</a> (C)</li>
-<li>
-<a href="http://learningwebgl.com/blog/?category_name=lessons">Learning
-    WebGL</a>
-    (Javascript)</li>
-</ul>
-<p>I recently started porting the first of these from C to Python.</p>
-<p><a href="https://bitbucket.org/tartley/gltutpy">https://bitbucket.org/tartley/gltutpy</a></p>
-<p>This is primarily for my own benefit, and I've only done the first two
-chapters thus far, but others may find some use in seeing the
-translation. If anyone else is interested enough to want to contribute,
-drop me a line and I'll happily grant commit rights.</p>
 </div>
     </div>
     </article>

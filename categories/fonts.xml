@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about fonts)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/fonts.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 18 Oct 2020 02:41:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Dina font as an OTF.</title><link>https://www.tartley.com/posts/dina-as-otf/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The Dina font, converted to an OpenType Font (see screenshots at the bottom of
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about fonts)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/fonts.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 16:18:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Dina font as an OTF.</title><link>https://www.tartley.com/posts/dina-as-otf/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The Dina font, converted to an OpenType Font (see screenshots at the bottom of
 the page):&lt;/p&gt;
 &lt;h2&gt;&lt;a href="https://www.tartley.com/files/2020/Dina-v2.93-otf.tar.gz"&gt;&lt;span class="emoji"&gt;📦&lt;/span&gt; Dina-v2.93-otf.tar.gz&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://gitlab.gnome.org/GNOME/pango/issues/386"&gt;Pango dropped support for naive bitmap fonts&lt;/a&gt;
@@ -14,8 +14,9 @@ or font authors.&lt;/p&gt;
 more than your distribution does. Here's how I did it for my
 &lt;a href="http://www.dcmembers.com/jibsen/download/61/"&gt;beloved Dina&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;1. Identify the font file.&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;fc-list &lt;span class="p"&gt;|&lt;/span&gt; grep Dina
-&lt;/pre&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;fc-list &lt;span class="p"&gt;|&lt;/span&gt; grep Dina
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h3&gt;2. Convert.&lt;/h3&gt;
 &lt;p&gt;Use either command line tools, or fontforge.&lt;/p&gt;
 &lt;h4&gt;2.1 Using fontforge&lt;/h4&gt;

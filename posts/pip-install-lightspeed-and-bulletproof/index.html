@@ -104,12 +104,14 @@ specifying more responsive mirrors for querying and downloading
 packages. For my situation, a better tactic is this.</p>
 <p>Step one: Download all your project's dependencies into a local
 'packages' dir, but don't install them yet:</p>
-<pre class="code literal-block">mkdir packages
+<pre class="code literal-block"><span></span><code>mkdir packages
 pip install --download<span class="o">=</span>packages -r requirements.txt
-</pre>
+</code></pre>
+
 <p>Step two, install from the 'packages' dir:</p>
-<pre class="code literal-block">pip install --no-index --find-links<span class="o">=</span>packages -r requirements.txt
-</pre>
+<pre class="code literal-block"><span></span><code>pip install --no-index --find-links<span class="o">=</span>packages -r requirements.txt
+</code></pre>
+
 <p><em>(The above syntax works on pip 1.3, released yesterday. Docs for older
 versions of pip claim to support this, but in practice, for pip 1.2,
 I've had to use "<code>--find-links=file://$PWD/packages</code>")</em></p>

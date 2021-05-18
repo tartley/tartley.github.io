@@ -70,7 +70,133 @@
     
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/makers/" class="u-url">Makers</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/testwatcher/" class="u-url">Testwatcher</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/testwatcher/" rel="bookmark">
+            <time class="published dt-published" datetime="2009-04-29T23:02:59-05:00" itemprop="datePublished" title="2009-04-29 23:02">2009-04-29 23:02</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/testwatcher/#disqus_thread" data-disqus-identifier="cache/posts/testwatcher.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Sometimes when programming I like to leave unit tests running
+repeatedly in one window while editing the code and tests in another.
+The bash command <code>watch</code> is useful for this, and can highlight the
+differences between one invocation and the next in
+inverse.</p>
+<p>I wanted a version of <code>watch</code> for use on Windows, so I whipped up a
+quick Python script,
+<a href="http://code.google.com/p/testwatcher/">testwatcher</a>, which produces
+output very similar to watch, but is cross-platform, and features not
+just inverse text, but <em>yellow</em> inverse text. Woo-hoo!</p>
+<pre class="code literal-block"><span></span><code>$ python example_test.py
+F.F
+<span class="o">======================================================================</span>
+FAIL: testThat <span class="o">(</span>__main__.TestWatcherTest<span class="o">)</span>
+----------------------------------------------------------------------
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">"example_test.py"</span>, line <span class="m">12</span>, in testThat
+    self.assertEquals<span class="o">(</span><span class="m">0</span>, randint<span class="o">(</span><span class="m">0</span>, <span class="m">10</span><span class="o">))</span>
+AssertionError: <span class="m">0</span> !<span class="o">=</span> <span class="nv">4</span>
+
+<span class="o">======================================================================</span>
+FAIL: testThis <span class="o">(</span>__main__.TestWatcherTest<span class="o">)</span>
+----------------------------------------------------------------------
+Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">"example_test.py"</span>, line <span class="m">9</span>, in testThis
+    self.assertEquals<span class="o">(</span><span class="s1">'one'</span>, object<span class="o">())</span>
+AssertionError: <span class="s1">'one'</span> !<span class="o">=</span> d24460&gt;
+
+----------------------------------------------------------------------
+Ran <span class="m">3</span> tests in <span class="m">0</span>.001s
+
+FAILED <span class="o">(</span><span class="nv">failures</span><span class="o">=</span><span class="m">2</span><span class="o">)</span>
+_
+</code></pre>
+
+<p>Incidentally, the above test makes it very clear that Python objects in
+successive processes get new addresses on Linux, but interestingly on
+Windows the same addresses seems to get re-used for different processes.</p>
+<p>I can't help but suspect this is a dumb script to have written - it
+should only be a:</p>
+<pre class="code literal-block"><span></span><code> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">command</span>
+</code></pre>
+
+<p>but in order to shoehorn the inverse text and colors in, it's grown to
+300 lines - a hideous bloat for a minor superficial thrill. Plus the
+Windows version flickers terribly - I'm currently using <code>system('cls')</code>
+to clear the screen and then redraw it every second. I'll do some
+searching for better ways to do it.</p>
+<p>However - I've long wanted a Python interface to perform simple terminal
+actions like colors and animation on different platforms (the standard
+library 'curses' module that would otherwise do the job is simply not
+implemented on Windows.) So maybe it's time I used this script as an
+excuse to figure this out. Suggestions welcome.</p>
+<p><strong>Update:</strong> This idea may have now reached a viable fruition, documented
+<a href="posts/2010/10/15/rerun-unit-tests-whenever-files-update.html">here</a>.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/the-day-the-earth-stood-still/" class="u-url">The Day The Earth Stood Still</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/the-day-the-earth-stood-still/" rel="bookmark">
+            <time class="published dt-published" datetime="2009-04-29T22:17:24-05:00" itemprop="datePublished" title="2009-04-29 22:17">2009-04-29 22:17</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/the-day-the-earth-stood-still/#disqus_thread" data-disqus-identifier="cache/posts/the-day-the-earth-stood-still.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><img alt="2008" src="files/2009/04/day-the-earth-stood-still-2008.jpg"><img alt="1951" src="files/2009/04/day-the-earth-stood-still-1951.jpg"></p>
+<p>The Earth obligingly stood still for us twice this week, on back-to-back
+nights. In each, a lone alien man arrives in a spaceship with his giant
+robot buddy Gort, to tell humans that they must mend their destructive
+ways or be destroyed.</p>
+<p>The 1951 version was very Fifties - intrusively hopeless special
+effects, and seems to my eyes to be riddled with outlandish social
+etiquette and hopelessly naive politics. I suppose in the years
+following World War II any platform for preaching pacifism seemed worth
+a shot. If only more people considered it worth preaching today. I
+completely missed the Christian allegory that permeates the movie until
+it was pointed out to me: The alien comes from the heavens, and lives
+amongst common people, taking the name 'Carpenter' to blend in. He
+preaches peace to humankind, or else warns we will suffer a fiery
+apocalypse. He is our intermediary to 'Gort' (in fact the servant of
+Gort, in the original script) who later resurrects him from the dead, so
+that he may deliver his final message before being taken back up into
+the skies. Cute if you're into that, I guess.</p>
+<p>Equally predictably, the 2008 version was very Naughties. Intrusively
+overblown production values string together a mediochre script. The
+pacifism and Christian message of the original has been replaced with a
+more timely environmental message - the writers perhaps intuiting that
+modern Americans are not so receptive to anti-war talk. Otherwise the
+scope and potential of the ideas at play are completely wasted - lost
+amidst the creative wasteland of a budget that could no doubt have fed
+countries. Once provoked, Gort unleashes self-replicating insectile
+microbots, which swarm and consume Philly, spreading fast. At the last
+moment, Keanu / Klaatu sees some humans hugging and crying, and has a
+big change of heart - the Earth deserves to be spared, after all. What a
+crock.</p>
+<p>So there you have it. Watch this space for more reviews from me -
+wasting nights of my life, so that you don't have to. Final ratings:</p>
+<p>10/10 if you are a stump-sucking mealy-mouthed pig-dog with googly eyes.</p>
+<p>0/10 if you have any vestigial glimmers of taste or discernment.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/makers/" class="u-url">Makers</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -86,6 +212,8 @@
 </div>
     </header><div class="e-content entry-content">
     <div>
+<p><span style="float: left">
+<img alt="Makers cover" src="files/2009/makers-cover.jpg"></span></p>
 <p><em>by Cory Doctorow</em> (not yet published.)</p>
 <p><a href="http://craphound.com/">Cory</a> very kindly brought an early manuscript of
 this as a gift to <a href="http://www.voidspace.org.uk/">Michael</a>,
@@ -105,6 +233,7 @@ personal ramifications of the ways in which modern technology is
 changing the way people interact, organise and get things done.</p>
 <p>0/10: If you aren't interested in the ways society is changing under our
 feet.</p>
+<p><br style="clear: both"></p>
 </div>
     </div>
     </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/envisioning-information/" class="u-url">Envisioning Information</a></h1>
@@ -123,7 +252,8 @@ feet.</p>
 </div>
     </header><div class="e-content entry-content">
     <div>
-<p><img alt="Envisioning Information cover" src="files/2009/04/envisioning_information.gif"></p>
+<p><span style="float: left">
+<img alt="Envisioning Information cover" src="files/2009/04/envisioning_information.gif"></span></p>
 <p><em>by Edward R. Tufte</em> (1990)</p>
 <p>In much the same vein as Tufte's <em>The Visual Display of Quantitative
 Information</em>, and displaying the same calibre of deeply incisive
@@ -138,6 +268,7 @@ you.</p>
 loud.</p>
 <p>0/10 If you only care about beauty, but not about usefulness. Or if you
 don't have eyes.</p>
+<p><br style="clear: both"></p>
 </div>
     </div>
     </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/remix/" class="u-url">Remix</a></h1>
@@ -156,7 +287,8 @@ don't have eyes.</p>
 </div>
     </header><div class="e-content entry-content">
     <div>
-<p><img alt="remix" src="files/2009/04/remix.jpg"></p>
+<p><span style="float: left; padding: 1em">
+<img alt="remix" src="files/2009/04/remix.jpg"></span></p>
 <p><em>by Lawrence Lessig</em>, 2008.</p>
 <p>Is creating a mix CD for a friend an act of creativity, or a criminal
 offence? When you shoot a home video of your child which has a TV on in
@@ -183,6 +315,7 @@ loss to any interested party.</p>
 society and turning industries upside-down within the space of years.</p>
 <p>0/10 If you dislike freedom or free markets, or are a big fan of
 overbearing government regulation and monopolies.</p>
+<p><br style="clear: both"></p>
 </div>
     </div>
     </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/infinite-jest/" class="u-url">Infinite Jest</a></h1>
@@ -201,8 +334,9 @@ overbearing government regulation and monopolies.</p>
 </div>
     </header><div class="e-content entry-content">
     <div>
-<p><img alt="Inifinite Jest" src="files/2009/02/infinitejest.jpg"></p>
-<p><em>by David Foster Wallace</em></p>
+<p><span style="float: left">
+<img alt="Inifinite Jest" src="files/2009/02/infinitejest.jpg"></span></p>
+<p><em>by David Foster Wallace (1996)</em></p>
 <p>I've had such a diverse set of reactions to this, and how could I not?
 The writing is bold and idiosyncratic throughout. The novel's story is
 not presented in chronological order, and the timeline is obfuscated by
@@ -702,65 +836,6 @@ the barrys and the tears, in the end we're pleased as punch with the way
 it has turned out. It's already all over the Internets, but if you want
 to indulge us, you can buy a copy
 <a href="http://www.facebook.com/photo.php?pid=2212211&amp;id=589628893">here</a>.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/show-last-command-exit-value-in-bash-shell-prompt/" class="u-url">Show last command exit value in Bash shell prompt</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/show-last-command-exit-value-in-bash-shell-prompt/" rel="bookmark">
-            <time class="published dt-published" datetime="2009-02-05T12:11:57-06:00" itemprop="datePublished" title="2009-02-05 12:11">2009-02-05 12:11</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/show-last-command-exit-value-in-bash-shell-prompt/#disqus_thread" data-disqus-identifier="cache/posts/show-last-command-exit-value-in-bash-shell-prompt.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>Stick something like this in your .bashrc file:</p>
-<pre class="code literal-block"><span></span><code><span class="c1"># display red exit value if it isn't zero</span>
-<span class="nv">PROMPT_COMMAND</span><span class="o">=</span><span class="s1">'EXITVAL=$?; '</span><span class="nv">$PROMPT_COMMAND</span>
-<span class="nv">GET_EXITVAL</span><span class="o">=</span><span class="s1">'$(if [[ $EXITVAL != 0 ]]; then echo -n "\[\e[37;41;01m\] $EXITVAL \[\e[0m\] "; fi)'</span>
-<span class="nb">export</span> <span class="nv">PS1</span><span class="o">=</span><span class="s2">"</span><span class="nv">$GET_EXITVAL$PS1</span><span class="s2">"</span>
-</code></pre>
-
-<p>Command exit values other than zero are displayed in the subsequent
-prompt:</p>
-<p><img alt="Check out the little red '1'" src="files/2009/02/last-exit-value.png"></p>
-<p>(see the little red '1').</p>
-<p>It's the</p>
-<pre class="code literal-block"><span></span><code><span class="cp">${</span><span class="err">?</span><span class="c1">#0</span><span class="cp">}</span>
-</code></pre>
-
-<p>bit which includes the last command exit value in the prompt, unless the
-value is zero, in which case nothing is displayed.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/fargo/" class="u-url">Fargo</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/fargo/" rel="bookmark">
-            <time class="published dt-published" datetime="2009-01-27T17:09:56-06:00" itemprop="datePublished" title="2009-01-27 17:09">2009-01-27 17:09</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/fargo/#disqus_thread" data-disqus-identifier="cache/posts/fargo.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p><em>Directed: The Coen Brothers, 1996.</em></p>
-<p>Some brilliant performances, some lovely moments. Emminently watchable.
-Interesting point, I don't know about Fargo itself, or The Dakotas, but
-the fine residents of Minnesota will insist that they neither sound or
-act like the depicted characters, which is of course absolutely
-charming. (love you guys! :-)</p>
 </div>
     </div>
     </article>

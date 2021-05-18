@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 03:22:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 20:49:41 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -28,7 +28,7 @@ gained much enthusiasm.&lt;/p&gt;
 &lt;li&gt;Passes the result to Black.&lt;/li&gt;
 &lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>software</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;
@@ -168,10 +168,15 @@ speech synthesis. I like it when I'm listening to some new music I'm not
 familiar with, but am away from the computer. Then I can still know
 which track is which.&lt;/p&gt;
 &lt;p&gt;If the album or artist names are different from the previous track, then
-it includes those in the announcement, too.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>software</category><guid>https://www.tartley.com/posts/rhythmbox-plugin-announce/</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://www.tartley.com/posts/google-chrome-credit/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I just noticed: Open Chrome, go to &lt;chrome:&gt;&lt;/chrome:&gt;, search in page,
+it includes those in the announcement, too.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/rhythmbox-plugin-announce/</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://www.tartley.com/posts/google-chrome-credit/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I just noticed: Open Chrome, go to &lt;chrome:&gt;&lt;/chrome:&gt;, search in page,
 'show licence', and:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;img alt="chrome-credit" src="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>software</category><guid>https://www.tartley.com/posts/google-chrome-credit/</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://www.tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
+&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>software</category><guid>https://www.tartley.com/posts/google-chrome-credit/</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>PyRochesterMN</title><link>https://www.tartley.com/posts/pyrochestermn/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Announcing the world's newest Python User Group, PyRochesterMN, based in
+Rochester, Minnesota, USA.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; We've had a couple of name &amp;amp; hosting changes since:&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/PyRochesterMN"&gt;http://www.meetup.com/PyRochesterMN&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/RochesTech"&gt;http://www.meetup.com/RochesTech&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.reddit.com/r/rochestertech/"&gt;https://www.reddit.com/r/rochestertech/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>meetup</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pyrochestermn/</guid><pubDate>Thu, 21 Jan 2016 03:01:27 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://www.tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
 Code."&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The goals of making deployment consistent, reliable and fast are very
 laudable, and the conclusion involving creating Debian packages is just
@@ -291,7 +296,9 @@ specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the transplant desti
 
 &lt;p&gt;Again, the commits to be transplanted are defined by &lt;code&gt;include&lt;/code&gt; and
 &lt;code&gt;exclude&lt;/code&gt;, but this time a separate destination is specified using
-&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>software</category><guid>https://www.tartley.com/posts/understanding-rebase-so-it-sticks/</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://www.tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="object-oriented-sofware-engineering" src="https://www.tartley.com/files/2014/02/object-oriented-sofware-engineering.jpg"&gt;&lt;/p&gt;
+&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>software</category><guid>https://www.tartley.com/posts/understanding-rebase-so-it-sticks/</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://www.tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Object Oriented Software Engineering cover" src="https://www.tartley.com/files/2014/02/object-oriented-sofware-engineering.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Ivar Jacobsen&lt;/em&gt; (1992, 4th revision)&lt;/p&gt;
 &lt;p&gt;You might wonder if there's anything left to say about
 object-orientation that hasn't already been discussed to death. I was
@@ -338,8 +345,11 @@ days.&lt;/p&gt;
 &lt;p&gt;Rating:&lt;/p&gt;
 &lt;p&gt;10/10 if you're going to enjoy 500 pages of software design principles
 and case studies.&lt;/p&gt;
-&lt;p&gt;0/10 if you're not.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</guid><pubDate>Sun, 02 Feb 2014 20:26:43 GMT</pubDate></item><item><title>Domain Driven Design: Tackling Complexity in the Heart of Software</title><link>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="domaindrivendesign" src="https://www.tartley.com/files/2014/01/domaindrivendesign.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Eric Evans (2004)&lt;/em&gt; &lt;a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215"&gt;on Amazon&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;0/10 if you're not.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</guid><pubDate>Sun, 02 Feb 2014 20:26:43 GMT</pubDate></item><item><title>Domain Driven Design: Tackling Complexity in the Heart of Software</title><link>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Domain Driven Design cover" src="https://www.tartley.com/files/2014/01/domaindrivendesign.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Eric Evans (2004)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;It's a big, dense book -- possibly the most important of the technical
 books I've read in a flurry over the last few months, catching up after
 recovering a modicum of sanity in our lives after our kid's first year.
@@ -415,40 +425,5 @@ years. It's top of my list for 'books to bring in and talk about at
 work'.&lt;/p&gt;
 &lt;p&gt;Rating:&lt;/p&gt;
 &lt;p&gt;10/10 if you're a programmer, or work with programmers.&lt;/p&gt;
-&lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>geek</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item><item><title>pip install : Lightspeed and Bulletproof</title><link>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I saw a post about &lt;a href="http://www.scottisheyes.com/how-to-fix-slow-pip-install"&gt;speeding up the Python packaging command "pip
-install"&lt;/a&gt;, by
-specifying more responsive mirrors for querying and downloading
-packages. For my situation, a better tactic is this.&lt;/p&gt;
-&lt;p&gt;Step one: Download all your project's dependencies into a local
-'packages' dir, but don't install them yet:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;mkdir packages
-pip install --download&lt;span class="o"&gt;=&lt;/span&gt;packages -r requirements.txt
-&lt;/pre&gt;
-&lt;p&gt;Step two, install from the 'packages' dir:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;pip install --no-index --find-links&lt;span class="o"&gt;=&lt;/span&gt;packages -r requirements.txt
-&lt;/pre&gt;
-&lt;p&gt;&lt;em&gt;(The above syntax works on pip 1.3, released yesterday. Docs for older
-versions of pip claim to support this, but in practice, for pip 1.2,
-I've had to use "&lt;code&gt;--find-links=file://$PWD/packages&lt;/code&gt;")&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Step 2 works even if PyPI is unreachable. It works even if some of your
-dependencies are self-hosted by the authors, and that website is
-unreachable. It works even if the version you have pinned of one of your
-dependencies has been deleted by the author (some packages do this
-routinely after security updates.) It works even if you have no network
-connection at all. In short, it makes creation of your virtualenv
-bulletproof.&lt;/p&gt;
-&lt;p&gt;As a nice side effect, it runs really fast, because it isn't downloading
-the packages across the internet, nor is it attempting to scan a remote
-index to check for matching or newer versions of each package. This is
-much quicker than just using a Pip download cache, especially for large
-projects with many dependencies which only change occasionally.&lt;/p&gt;
-&lt;p&gt;At &lt;a href="http://rangespan.com"&gt;Rangespan&lt;/a&gt;, we check the 'packages' directory
-into source control, so that once you've checked out a project's repo,
-you have everything you need to deploy locally and run, even if you have
-no network. You might choose to treat 'packages' as ephemeral.&lt;/p&gt;
-&lt;p&gt;It was pointed out to me recently by
-&lt;a href="https://twitter.com/jezdez"&gt;@jezdez&lt;/a&gt;, Pip maintainer, this usage
-pattern has now been &lt;a href="http://www.pip-installer.org/en/latest/cookbook.html#fast-local-installs"&gt;explicitly called out in the
-documentation&lt;/a&gt;,
-which was substantially reorganised and improved with the recent 1.3
-release.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</guid><pubDate>Fri, 08 Mar 2013 15:29:09 GMT</pubDate></item></channel></rss>
+&lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>geek</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item></channel></rss>

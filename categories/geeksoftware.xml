@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek.software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/geeksoftware.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 16:42:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>pyglet week 3 : Some Pretty Flowers</title><link>https://www.tartley.com/posts/pyglet-week-3-some-pretty-flowers/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This is just a refinement of &lt;a href="https://www.tartley.com/pyglet-week-2-better-vertex-throughput"&gt;last week's
+script&lt;/a&gt;. No massively significant changes,
+just a bunch of minor tweaks.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The fans are replaced with slightly prettier flowers, with separate
+    vertex and color arrays for each one.&lt;/li&gt;
+&lt;li&gt;Running with the python -O flag means we can render 800 flowers at
+    30fps, no problem.&lt;/li&gt;
+&lt;li&gt;The camera can now be moved and rotated and zoomed. I just use this
+    to subtly zoom in after the screen has filled with flowers&lt;/li&gt;
+&lt;li&gt;I discovered that if I fail to clear the screen before rendering,
+    then I inherit the appearance of the desktop as a backdrop. No doubt
+    this cannot be relied upon, and presumably doesn't happen on some
+    other graphics hardware or operating systems, so YMMV (&lt;strong&gt;Update:&lt;/strong&gt;
+    yep - it looks CRAZY on Windows unless you uncomment the glClear()
+    call). I won't be relying on this trick in future, but for now, on
+    my machine at least, it looks like this:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="flowers1" src="https://www.tartley.com/files/2008/02/screenshot-flowers1.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="flowers2" src="https://www.tartley.com/files/2008/02/screenshot-flowers2.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="flowers3" src="https://www.tartley.com/files/2008/02/screenshot-flowers3.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="flowers4" src="https://www.tartley.com/files/2008/02/screenshot-flowers4.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="flowers5" src="https://www.tartley.com/files/2008/02/screenshot-flowers5.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="flowers6" src="https://www.tartley.com/files/2008/02/screenshot-flowers6.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2008/02/gameloop2c-flowerspy.zip" title="gameloop2c-flowers.py"&gt;gameloop2c-flowers.py&lt;img alt="Python
+file" src="https://www.tartley.com/files/2008/02/doc-python.png"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>geek.software</category><category>graphics</category><category>python</category><guid>https://www.tartley.com/posts/pyglet-week-3-some-pretty-flowers/</guid><pubDate>Mon, 25 Feb 2008 07:35:33 GMT</pubDate></item></channel></rss>
