@@ -3,13 +3,12 @@
 .. slug: this-gaming-life-travels-in-three-cities
 .. date: 2014-02-03 20:31:29-06:00
 .. tags: media,books,non-fiction,games
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![gaminglife](/files/2014/02/gaminglife.jpg)
+</span>
 
 *by Jim Rossignol* (2009)
 
@@ -34,3 +33,5 @@ Rating:
 dominant art form of the 21st century.
 
 0/10 if it's just for kids, innit?
+
+<br style="clear: left" />

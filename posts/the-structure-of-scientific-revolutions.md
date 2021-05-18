@@ -13,8 +13,14 @@ This post rescues content from a series of tweets I wrote in 2018.
 
 ---
 
-I loved *The Structure of Scientfic Revolutions*, a 1962 book by Thomas S.
-Kuhn. It was recommended to me as having similar impact to undergraduate
+<span style="float: left">
+![The Structure of Scientific Revolutions cover](/files/2020/the-structure-of-scientific-revolutions-cover.jpg)
+</span>
+
+_by Thomas S. Kuhn, 1962._
+
+I loved *The Structure of Scientfic Revolutions*.
+It was recommended to me as having similar impact to undergraduate
 classics like *Godel, Escher, Bach*, or *The Blind Watchmaker.* I'm going
 to just summarize the content here, so: Spoilers.
 
@@ -170,4 +176,6 @@ populated by a whole new generation.
 I am reminded of the dark priesthood of command-line programmers, although
 I note with no little joy that our merry band includes some of the best and
 brightest of the next generation (as judged by my own paradigm's criteria.)
+
+<br style="clear: left" />
 
