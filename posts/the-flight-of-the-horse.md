@@ -3,15 +3,14 @@
 .. slug: the-flight-of-the-horse
 .. date: 2007-03-20 01:22:18-05:00
 .. tags: media,books,fiction,science-fiction,shorts
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![The Flight of the Horse](/files/2007/03/the_flight_of_the_horse_f.jpeg)
+</span>
 
-*by Larry Niven*. 1969-1973. [On Amazon](http://www.amazon.co.uk/Flight-Horse-Larry-Niven/dp/1857238419).
+*by Larry Niven (1969-1973)*
 
 I just got this back from long-term loan to
 [Phil](http://frosties2.com/), and I just couldn't resist reading it
@@ -62,3 +61,5 @@ clarity of the tales shines through, weaving entertaining worlds of both
 humour and grandeur.
 
 Rating: 7/10
+
+<br style="clear: both" />

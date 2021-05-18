@@ -2,14 +2,14 @@
 .. title: Beginning Game Development With Python and PyGame
 .. slug: beginning-game-development-with-python-and-pygame
 .. date: 2009-01-12 00:17:54-06:00
-.. tags: media,books,non-fiction,software,python,gamedev
-.. link: 
-.. description: 
+.. tags: geek,software,media,books,non-fiction,software,python,gamedev
 .. type: text
 -->
 
 
+<span style="float: left">
 ![](/files/2009/01/beginning-game-development-with-python-and-pygame.jpg)
+</span>
 
 *by Will McGugan*
 
@@ -40,3 +40,5 @@ upwards to reflect this.
 
 Rating: 10/10 for beginners. 5/10 for experts. Consider yourself
 somewhere between the two.
+
+<br style="clear: both" />

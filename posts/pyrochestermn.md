@@ -2,7 +2,7 @@
 .. title: PyRochesterMN
 .. slug: pyrochestermn
 .. date: 2016-01-20 21:01:27-06:00
-.. tags: python
+.. tags: geek,software,python,meetup
 .. link: 
 .. description: 
 .. type: text

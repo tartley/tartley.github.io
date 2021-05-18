@@ -9,11 +9,13 @@
 -->
 
 
-[![OpenGL Shading Language cover](/files/2009/05/opengl-shading-language.jpg)](http://www.amazon.co.uk/Opengl-Shading-Language-Randi-Rost/dp/0321334892)
+<span style="float: left">
+![OpenGL Shading Language cover](/files/2009/05/opengl-shading-language.jpg)
+</span>
 
-*by Randi J. Rost.*
+*by Randi J. Rost (2nd Edtion, 2006)*
 
-I've had a passing interest in computer graphics for years, but had
+I've had a hobbyist interest in computer graphics for years, but had
 avoided the technology of *shaders* these last few years, thinking that
 they were just another layer of complexity which I didn't need to embark
 upon while I was still getting to grips with the standard OpenGL API.
@@ -65,3 +67,5 @@ Rating (oh, how I love my new rating system. Check this one out:)
 language.
 
 0/10 if you don't.
+
+<br style="clear: both" />

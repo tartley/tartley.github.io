@@ -2,14 +2,13 @@
 .. title: Cloverfield (2008)
 .. slug: cloverfield-2008
 .. date: 2009-04-30 08:15:58-05:00
-.. tags: movies
-.. link: 
-.. description: 
+.. tags: media,movies,science-fiction
 .. type: text
 -->
 
-
-![cloverfield](/files/2009/04/cloverfield.jpg "cloverfield")
+<span style="float: left">
+![Cloverfield cover](/files/2009/04/cloverfield.jpg)
+</span>
 
 Against my better
 judgement I couldn't help but snag a torrent of this. Sure enough, as
@@ -52,3 +51,5 @@ Rating:
 vomit.
 
 10/10 If you fancy being scared silly by a giant alien monster.
+
+<br style="clear: both;" />

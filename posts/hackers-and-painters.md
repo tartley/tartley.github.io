@@ -3,15 +3,13 @@
 .. slug: hackers-and-painters
 .. date: 2008-08-27 15:06:48-05:00
 .. tags: media,geek,books,non-fiction,essays,culture,internet,startups
-.. link: 
-.. description: 
 .. type: text
 -->
 
+<span style="float: left">
+![](/files/2008/08/hackers__painters2.jpg)
 
-[![](/files/2008/08/hackers__painters2.jpg "hackers and painters")](/files/2008/08/hackers__painters2.jpg)
-
-_by Paul Graham, 2004._
+*by Paul Graham (2004)*
 
 I'd already stumbled across many of the [individual
 essays](http://www.paulgraham.com/articles.html) that this is comprised
@@ -22,3 +20,5 @@ quality, but generally they are extremely engaging. I only regret having
 to grab them in dead-tree format since I lost my iPhone. Ohdeary.
 
 Rating: 8/10 - a brilliant read
+
+<br style="clear: both" />

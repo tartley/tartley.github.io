@@ -2,12 +2,9 @@
 .. title: Avenue Q
 .. slug: avenue-q
 .. date: 2007-03-21 10:00:20-05:00
-.. tags: shows
-.. link: 
-.. description: 
+.. tags: media,shows
 .. type: text
 -->
-
 
 ![](/files/2007/03/aveq-screen_ps01_big.jpg)
 

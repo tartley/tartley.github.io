@@ -9,6 +9,11 @@
 -->
 
 
+**Update:** I've since switched to KeePassXC, the community fork of KeePassX,
+an open source, cross-platorm, local-first, encrypted password storage program.
+
+---
+
 My passwords and other miscellany are in a plain text file within an
 encrypted zip. Since starting to use OSX I've been looking for a way to
 access my passwords such that:

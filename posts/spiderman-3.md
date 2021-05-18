@@ -2,20 +2,19 @@
 .. title: Spiderman 3
 .. slug: spiderman-3
 .. date: 2007-06-12 12:44:13-05:00
-.. tags: movies
-.. link: 
-.. description: 
+.. tags: media,movies
 .. type: text
 -->
 
-
-[![spiderman3.jpg](/files/2007/06/spiderman3.jpg)](http://imdb.com/title/tt0413300/ "Power corrupts")
+<span style="padding: 1em">
+![spiderman3.jpg](/files/2007/06/spiderman3.jpg)
+*: Power corrupts*
+</span>
 
 | *The battle within.*
 | Director: **Sam Raimi**
 | Writers: **Sam Raimi, Ivan Raimi**
 | Starring: **Tobey Maguire, Kirsten Dunst.**
-| [![Internet Movie Database](/files/2007/05/imdb.png)](http://imdb.com/title/tt0413300/)
 
 That review again in full: Pants.
 

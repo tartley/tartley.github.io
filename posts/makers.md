@@ -3,11 +3,12 @@
 .. slug: makers
 .. date: 2009-04-18 17:10:31-05:00
 .. tags: media,books,fiction,science-fiction,novel,internet,culture
-.. link: 
-.. description: 
 .. type: text
 -->
 
+<span style="float: left">
+![Makers cover](/files/2009/makers-cover.jpg)
+</span>
 
 *by Cory Doctorow* (not yet published.)
 
@@ -34,3 +35,5 @@ changing the way people interact, organise and get things done.
 
 0/10: If you aren't interested in the ways society is changing under our
 feet.
+
+<br style="clear: both" />

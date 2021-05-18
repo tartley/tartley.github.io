@@ -2,16 +2,15 @@
 .. title: IronPython in Action
 .. slug: ironpython-in-action
 .. date: 2009-07-18 12:03:31-05:00
-.. tags: media,books,non-fiction,software,python
-.. link: 
-.. description: 
+.. tags: geek,media,books,non-fiction,software,python
 .. type: text
 -->
 
+<span style="float: left">
+![IronPython in Action cover](/files/2009/07/ironpython-in-action.jpg)
+</span>
 
-[![ironpython-in-action](/files/2009/07/ironpython-in-action.jpg "ironpython-in-action")](http://www.amazon.co.uk/IronPython-Action-Michael-Foord/dp/1933988339)
-
-_by Michael Foord and Christian Muirhead_
+_by Michael Foord and Christian Muirhead (2009)_
 
 Disclaimer: I'm friends with both the authors and was sent a freebie
 review copy by the publisher, so I'm bound to be breathlessly gushing in
@@ -181,3 +180,5 @@ you need this book.
 0/10 if dynamic languages make you break out in hives, or if .NET makes
 you think of Darth Vader, then you shouldn't touch this book with a
 barge pole.
+
+<br style="clear: both" />

@@ -8,8 +8,9 @@
 .. type: text
 -->
 
-
+<span style="float: left">
 ![The Hacker Crackdown](/files/2008/01/hacker-crackdown.jpg)
+</span>
 
 *by Bruce Sterling, [read aloud by Cory Doctorow](http://www.archive.org/search.php?query=hacker%20crackdown%20AND%20mediatype%3Aaudio%20AND%20collection%3Aopensource_audio)*
 
@@ -51,3 +52,5 @@ and motives of the colorful individuals involved, and this makes the
 whole thing an enjoyable romp through a serious topic.
 
 Rating: 8/10 - I only wish I'd read it ten years ago
+
+<br style="clear: both" />

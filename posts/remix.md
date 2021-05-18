@@ -3,13 +3,12 @@
 .. slug: remix
 .. date: 2009-04-07 23:42:58-05:00
 .. tags: media,books,non-fiction,internet,culture,law
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left; padding: 1em">
 ![remix](/files/2009/04/remix.jpg)
+</span>
 
 *by Lawrence Lessig*, 2008.
 
@@ -43,3 +42,5 @@ society and turning industries upside-down within the space of years.
 
 0/10 If you dislike freedom or free markets, or are a big fan of
 overbearing government regulation and monopolies.
+
+<br style="clear: both" />

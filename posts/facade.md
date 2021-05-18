@@ -2,14 +2,15 @@
 .. title: Façade
 .. slug: facade
 .. date: 2007-06-28 14:43:48-05:00
-.. tags: games
-.. link: 
-.. description: 
+.. tags: media,games
 .. type: text
 -->
 
+<span style="float: left">
+![](/files/2007/06/facade-game.jpg)
+</span>
 
-*by Procedural Arts*, 2006. PC (freeware).
+*by Procedural Arts (PC, 2006)*
 
 <http://www.interactivestory.net/>
 
@@ -27,8 +28,8 @@ possibly a gaming first.
 Awkward social situations are nothing new in other media, but the
 *complicity* engendered by interactivity and first-person immersion
 enhances the effect. It's a rich vein, and the ensuing interactive drama
-mines it deeply - starting with the knock, upon which a female voice
-fiercely whispers "He's here *already*? I thought you said 8 o'clock?"
+mines it deeply - starting with the knock, upon which a voice fiercely
+whispers "He's here *already*? I thought you said 8 o'clock?"
 
 Your hosts Trip and Grace do their best to welcome you gracefully, but
 there's clearly tension in the air. You can speak to them at any point

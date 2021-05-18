@@ -3,13 +3,12 @@
 .. slug: power
 .. date: 2008-11-28 11:32:00-06:00
 .. tags: media,books,non-fiction
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
-[![](/files/2008/11/power.jpg "power")](/files/2008/11/power.jpg)
+<span style="float: left">
+![](/files/2008/11/power.jpg "power")
+</span>
 
 *by Bertrand Russell, 1937*
 
@@ -25,3 +24,5 @@ heartfelt appeal to sanity in an attempt to avoid war, misery and
 subjugation. An entirely worthy tome in all senses of the word.
 
 Rating 8/10.
+
+<br style="clear: both" />

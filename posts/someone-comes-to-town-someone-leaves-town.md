@@ -8,8 +8,9 @@
 .. type: text
 -->
 
-
-[![Someone Comes to Town, Someone Leaves Town](/files/2008/02/someone-comes-to-town.jpg)](http://www.amazon.co.uk/Someone-Comes-Town-Leaves/dp/0765312808 "Someone Comes to Town, Someone Leaves Town")
+<span style="float: left">
+![Someone Comes to Town, Someone Leaves Town](/files/2008/02/someone-comes-to-town.jpg)
+</span>
 
 *by Cory Doctorow*
 
@@ -44,3 +45,4 @@ Town...*, and I don't seem to have missed much that anyone else has been
 getting out of it. So while I'm looking forward to other stuff by him,
 I'm sticking by my low rating for this.
 
+<br style="clear: both" />

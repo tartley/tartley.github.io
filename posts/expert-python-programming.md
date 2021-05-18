@@ -2,15 +2,13 @@
 .. title: Expert Python Programming
 .. slug: expert-python-programming
 .. date: 2009-01-11 22:58:26-06:00
-.. tags: media,books,non-fiction,software,python
-.. link: 
-.. description: 
+.. tags: geek,media,books,non-fiction,software,python
 .. type: text
 -->
 
-
-[![expert-python-programming](/files/2009/01/expert-python-programming.jpg "expert-python-programming")](http://www.packtpub.com/expert-python-programming/book)
-
+<span style="float: left">
+![Expert Python Programming cover](/files/2009/01/expert-python-programming.jpg)
+</span>
 
 *by Tarek Ziadé*, 2008. ([on Packt](http://www.packtpub.com/expert-python-programming/book))
 
@@ -206,3 +204,5 @@ deeply familiar with, if you have any interest in discovering your own
 deficiencies as a Python programmer, I can highly recommend it.
 
 Rating: 7.5/10 - Made concrete improvements to the way I work every day.
+
+<br style="clear: both" />

@@ -3,13 +3,12 @@
 .. slug: a-science-fiction-omnibus
 .. date: 2008-12-14 17:32:47-06:00
 .. tags: media,books,fiction,science-fiction,shorts
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![a-science-fiction-omnibus](/files/2008/12/a-science-fiction-omnibus.jpg "a-science-fiction-omnibus")
+</span>
 
 *Editor: Brian Aldiss, 2007*
 
@@ -64,3 +63,5 @@ otherwise.
 **Update:** A Great Work of Time is available as a stand-alone 75 page
 book on Amazon Kindle for £2.99, and Calibre with the DeDRM plugin will
 convert this into an epub which can be read on any device.
+
+<br style="clear: both" />

@@ -3,13 +3,13 @@
 .. slug: altered-carbon
 .. date: 2014-02-02 12:59:43-06:00
 .. tags: media,books,novel,fiction,science-fiction
-.. link: 
-.. description: 
 .. type: text
 -->
 
 
-![richard-morgan-altered-carbon](/files/2014/02/richard-morgan-altered-carbon.jpg)
+<span style="float: left">
+![Altered Carbon cover](/files/2014/02/richard-morgan-altered-carbon.jpg)
+</span>
 
 *by Richard Morgan* (2001)
 
@@ -25,3 +25,5 @@ triumphs by being better at beating people up.
 some exciting SF.
 
 0/10 if you're not.
+
+<br style="clear: both" />

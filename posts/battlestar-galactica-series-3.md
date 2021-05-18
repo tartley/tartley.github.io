@@ -2,7 +2,7 @@
 .. title: Battlestar Galactica: Series 3
 .. slug: battlestar-galactica-series-3
 .. date: 2007-07-22 01:27:36-05:00
-.. tags: tv
+.. tags: media,tv,science-fiction
 .. link: 
 .. description: 
 .. type: text
@@ -12,7 +12,7 @@
 ![](/files/2007/07/starbuck.jpg)
 *"It's gonna be OK."*
 
-That's the new "reimagined" version, Dad. I don't really *do*
+That's the new "reimagined" version, Dad. I don't really do much
 television, and for 2006, downloads of Battlestar was pretty much the
 only exception. It's edgy and well-written, and it leaves me
 breathlessly excited, and yes it had that lull on New Caprica about five

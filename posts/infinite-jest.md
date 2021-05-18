@@ -3,15 +3,14 @@
 .. slug: infinite-jest
 .. date: 2009-03-28 16:26:49-05:00
 .. tags: media,books,fiction,novel,drugs
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![Inifinite Jest](/files/2009/02/infinitejest.jpg)
+</span>
 
-*by David Foster Wallace*
+*by David Foster Wallace (1996)*
 
 I've had such a diverse set of reactions to this, and how could I not?
 The writing is bold and idiosyncratic throughout. The novel's story is

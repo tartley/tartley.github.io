@@ -3,13 +3,12 @@
 .. slug: legend-of-zelda-the-phantom-hourglass
 .. date: 2009-01-16 14:36:05-06:00
 .. tags: games,videogame,nintendo,ds,review
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
-![](/files/2008/05/phantom-hourglass.jpg)
+<span style="float: left">
+![Phantom Hourglass](/files/2008/05/phantom-hourglass.jpg)
+</span>
 
 *Nintendo, 2008*
 
@@ -53,3 +52,5 @@ here.
 compelling and charming as this, and yearn for a resurgence in
 experimental originality to kick the gaming industry out of one or two
 ruts (such as having a blind spot for crappy dialog.)
+
+<br style="clear: both" />

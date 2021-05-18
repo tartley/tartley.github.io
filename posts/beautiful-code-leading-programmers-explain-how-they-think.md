@@ -8,9 +8,9 @@
 .. type: text
 -->
 
-
-![Beautiful
-Code](/files/2008/02/beautiful-code.jpg)
+<span style="float: left">
+![Beautiful Code](/files/2008/02/beautiful-code.jpg)
+</span>
 
 *33 essays, edited by Andy Oram*
 
@@ -32,3 +32,5 @@ designs that the code embodies, and of the features and capabilities of
 the languages themselves.
 
 Rating 6/10: Contains some gems, but generally falls between two stools.
+
+<br style="clear: both" />

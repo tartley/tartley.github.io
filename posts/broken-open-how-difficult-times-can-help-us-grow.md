@@ -3,16 +3,14 @@
 .. slug: broken-open-how-difficult-times-can-help-us-grow
 .. date: 2007-03-20 13:11:38-05:00
 .. tags: media,books,non-fiction,mental-health
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![Broken Open](/files/2007/03/broken-open.jpg)
+</span>
 
-*by Elizabeth Lesser,* 2004.
-[On Amazon.com](http://www.amazon.com/Broken-Open-Elizabeth-Lesser/dp/1844135616/)
+*by Elizabeth Lesser (2004)*
 
 It's the sort of nancy self-help psychobabble that would normally earn a
 derisive snort from my direction, but the onset of middle-age is
@@ -53,3 +51,5 @@ found me when it did.
 Rating: 6/10
 
 Alright, can I turn the smartalec cynicism back on now?
+
+<br style="clear: both" />

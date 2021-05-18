@@ -3,16 +3,14 @@
 .. slug: 12-books-that-changed-the-world
 .. date: 2007-06-12 08:14:17-05:00
 .. tags: media,books,non-fiction,history,culture
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![12 Books That Changed The World](/files/2007/06/12books-that-changed-the-world.jpg)
+</span>
 
-*by Melvyn Bragg*, 2006.
-[On Amazon.co.uk](http://www.amazon.co.uk/12-Books-That-Changed-World/dp/0340839821).
+*by Melvyn Bragg (2006)*
 
 A brilliant assembly of potted snippets of history, ideal for someone
 like myself with scarcely a glimmer of an education. By cunning omission
@@ -21,6 +19,8 @@ books, but is able to manipulate the list such that it is all about 12
 *British* books, a move I heartily approve of. Apparently written to
 accompany some television series, I neither knew nor cared. For the
 record, his selection is below:
+
+<br style="clear: both" />
 
 -   *Principia Mathematica* by Isaac Newton, 1687. "Will always have a
     pre-eminance above all the other works of human genius."
@@ -69,3 +69,4 @@ Rating:
 9/10 if you know nothing, like what I do.
 
 5/10 if you've already read all the entries in his list, like I haven't.
+

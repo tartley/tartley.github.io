@@ -2,14 +2,13 @@
 .. title: I am Legend
 .. slug: i-am-legend
 .. date: 2008-02-08 00:45:21-06:00
-.. tags: movies
-.. link: 
-.. description: 
+.. tags: media,movies,scient-fiction
 .. type: text
 -->
 
-
-[![I am Legend](/files/2008/02/i-am-legend.jpg)](http://www.imdb.com/title/tt0480249/ "I am Legend")
+<span style="float: left">
+![I am Legend](/files/2008/02/i-am-legend.jpg)
+</span>
 
 *Directed by Francis Lawrence.*
 
@@ -47,3 +46,5 @@ than drinking himself into oblivion. It's *Robinson Crusoe* all over
 again.
 
 Rating: 5/10 - not great.
+
+<br style="clear: both" />

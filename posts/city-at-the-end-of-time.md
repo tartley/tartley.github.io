@@ -3,13 +3,12 @@
 .. slug: city-at-the-end-of-time
 .. date: 2008-12-14 16:56:38-06:00
 .. tags: media,books,fiction,science-fiction,novel
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![city-at-the-end-of-time](/files/2008/12/city-at-the-end-of-time.jpg)
+</span>
 
 *by Greg Bear, 2008*
 
@@ -30,3 +29,5 @@ to see if they really were as well-crafted as I remember them. Whether I
 love or loathe the exercise should decide the issue.
 
 Rating: 6.5/10 Why all the X-point-five scores recently?
+
+<br style="clear: both" />

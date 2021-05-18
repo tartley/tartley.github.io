@@ -8,8 +8,9 @@
 .. type: text
 -->
 
-
+<span style="float: left">
 ![jPod](/files/2008/05/jpodcover.jpg "jpodcover")
+</span>
 
 *by Douglas Coupland*
 
@@ -38,3 +39,5 @@ virtue of harping on about a worldview that the target audience has all
 taken as read for as long as we can remember.
 
 Rating: 6/10 - A mixed bag.
+
+<br style="clear: both" />

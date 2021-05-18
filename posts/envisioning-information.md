@@ -3,13 +3,12 @@
 .. slug: envisioning-information
 .. date: 2009-04-14 13:07:07-05:00
 .. tags: media,books,non-fiction,graphics
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![Envisioning Information cover](/files/2009/04/envisioning_information.gif)
+</span>
 
 *by Edward R. Tufte* (1990)
 
@@ -30,3 +29,5 @@ loud.
 
 0/10 If you only care about beauty, but not about usefulness. Or if you
 don't have eyes.
+
+<br style="clear: both" />

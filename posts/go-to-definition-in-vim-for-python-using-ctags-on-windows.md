@@ -2,7 +2,7 @@
 .. title: 'Go to Definition' in Vim for Python using Ctags, Done Right
 .. slug: go-to-definition-in-vim-for-python-using-ctags-on-windows
 .. date: 2010-12-16 20:39:01-06:00
-.. tags: python,mswin-dev,vim
+.. tags: geek,software,python,mswin-dev,vim
 .. link: 
 .. description: 
 .. type: text

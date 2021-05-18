@@ -3,16 +3,14 @@
 .. slug: everything-and-more
 .. date: 2007-02-22 10:07:17-06:00
 .. tags: media,books,non-fiction,math
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![Cover: Everything and More](/files/2007/02/everything-and-more.jpg)
+</span>
 
-*by David Foster Wallace.* 2003.
-[On Amazon.co.uk](http://www.amazon.co.uk/Everything-More-Compact-History-Infinity/dp/0753818825)
+*by David Foster Wallace (2003)*
 
 **Short and Unnecessary Foreword**
 
@@ -23,6 +21,8 @@ intellectual pursuits and such matters of taste as one's reading
 material. Such an introduction lead me to have high expectations of E&M,
 and I shall now relate the extent to which these were fulfilled.*\[2\]*
 But first, for your convenience, a glossary of abbreviations:
+
+<br style="clear: both" />
 
 -   **E&M** - Everything and More
 -   **DSP** - Digital signal processing

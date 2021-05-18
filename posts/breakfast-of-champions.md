@@ -3,15 +3,14 @@
 .. slug: breakfast-of-champions
 .. date: 2008-08-27 15:45:56-05:00
 .. tags: media,books,fiction
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![](/files/2008/08/breakfast-of-champions.jpg)
+</span>
 
-*by Kurt Vonnegut*, 1973.
+*by Kurt Vonnegut (1973)*
 
 I've always loved Vonnegut (who doesn't?) but I'd avoided this since
 seeing the [painful 1999 movie](http://www.imdb.com/title/tt0120618/)
@@ -25,3 +24,5 @@ rumination on the nature of sanity, and the author's own relationship
 with it, in the insane world we find ourselves in.
 
 Rating: 7/10 - and so on.
+
+<br style="clear: both" />

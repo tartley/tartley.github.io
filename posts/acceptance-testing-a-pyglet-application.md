@@ -2,7 +2,7 @@
 .. title: Acceptance testing a pyglet application
 .. slug: acceptance-testing-a-pyglet-application
 .. date: 2008-07-04 17:30:58-05:00
-.. tags: python,testing,graphics
+.. tags: software,python,testing,graphics
 .. link: 
 .. description: 
 .. type: text

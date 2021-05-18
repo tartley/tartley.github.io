@@ -2,9 +2,7 @@
 .. title: Writing C/C++ on Windows using g++ under Cygwin
 .. slug: writing-cc-on-windows-using-g-under-cygwin
 .. date: 2008-07-09 22:57:50-05:00
-.. tags: software
-.. link: 
-.. description: 
+.. tags: software,c
 .. type: text
 -->
 
@@ -21,7 +19,7 @@ any good to anyone sitting there, so here it is, just in case.
 This article outlines one method of using the open source C/C++
 compiler, Gcc to compile C/C++ programs on a Windows PC. It uses Cygwin,
 which emulates a Linux-like command-line environment, which is many
-times more useful and powerful than the DOS command line that comes out
+times more useful and powerful tha the DOS command line that comes out
 of the box with Windows.
 
 Of course, if you don't like all this free-as-in-beer,

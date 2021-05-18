@@ -3,13 +3,12 @@
 .. slug: balloon-therapy
 .. date: 2008-09-03 21:44:50-05:00
 .. tags: media,books,non-fiction,mental-health
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![](/files/2008/09/balloon.jpg)
+</span>
 
 *by Ivan Idso*, 2007.
 
@@ -27,3 +26,5 @@ disposition of Ivan, his family and friends. As a result, it's a
 thoroughly personal and heart-warming read, engrossing and explanatory
 and fulfilling throughout, that left me feeling closer to the author,
 and with more of an understanding of him and his lifestyle.
+
+<br style="clear: both" />

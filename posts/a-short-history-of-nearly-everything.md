@@ -8,11 +8,11 @@
 .. type: text
 -->
 
-
+<span style="float: left">
 ![](/files/2007/02/short-history-of-nearly-everything.jpg)
+</span>
 
-*by Bill Bryson.* 2003.
-[Amazon](http://www.amazon.co.uk/Short-History-Nearly-Everything/dp/0552997048)
+*by Bill Bryson (2003)*
 
 Bryson's unassuming style make this a joy to read - welcoming,
 continually interesting, and with warm and often laugh-out-loud humour
@@ -35,3 +35,5 @@ we know what we know, and the sheer jolliness with which it is
 presented.
 
 Rating: 8/10
+
+<br style="clear: both" />

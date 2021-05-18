@@ -22,9 +22,8 @@ worse, one that claims to be about logic and reasoning, topics that
 ostensibly should be right up my alley. I read Bertrand Russel's
 *History of Western Philosophy* last year, and although that was a
 fabulous, educational romp through the field, [my complaints about
-it](/history-of-western-philisophu) still stand. Now I'm reading a second
-book, *Think : A Compelling Introduction to Philosophy* by Simon
-Blackburn.
+it](/posts/history-of-western-philisophy) still stand. Now I'm reading a second
+book, *Think : A Compelling Introduction to Philosophy* by Simon Blackburn.
 
 **The Process**
 

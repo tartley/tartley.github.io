@@ -3,15 +3,14 @@
 .. slug: freakonomics-a-rogue-economist-explores-the-yada-yada
 .. date: 2007-03-21 14:35:25-05:00
 .. tags: media,books,non-fiction,economics
-.. link: 
-.. description: 
 .. type: text
 -->
 
+<span style="float: left">
+![](/files/2007/03/freakonomics.jpg)
+</span>
 
-![](/files/2007/03/freakonomics.jpg "Rogue economist indeed.")
-
-*by Steven D. Levitt and Stephen J. Dubner*, 2005. [On Amazon.co.uk](http://www.amazon.co.uk/Freakonomics-Economist-Explores-Hidden-Everything/dp/0141019018/).
+*by Steven D. Levitt and Stephen J. Dubner (2005)*
 
 It was a bit of a phenomenon when it first came out, and I'm well known
 for my curmudgeonly resistance to popular phenomena, so forgive me for
@@ -31,4 +30,6 @@ to patiently explain that 'correlation is not causation!', and then
 illustrate it with pages of examples, and you'll see why I quickly lost
 patience.
 
-Rating: 4/10. Would have been great had it been 1/4 the length.
+Rating: 4/10. Rogue economist, indeed.
+
+<br style="clear: both" />

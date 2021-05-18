@@ -2,7 +2,7 @@
 .. title: Hexagonal Django
 .. slug: hexagonal-django
 .. date: 2012-12-04 14:42:01-06:00
-.. tags: python
+.. tags: geek,software,python
 .. link: 
 .. description: 
 .. type: text

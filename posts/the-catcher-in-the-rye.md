@@ -3,15 +3,14 @@
 .. slug: the-catcher-in-the-rye
 .. date: 2008-09-03 17:41:00-05:00
 .. tags: media,books,fiction,novel
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![](/files/2008/09/catcher-in-the-rye.jpg)
+</span>
 
-*by Jerome D. Salinger*, 1951.
+*by Jerome D. Salinger (1951)*
 
 Of course, people make such a fuss over it, they really do. You ask
 anyone. It's that Salinger's fault. He never listens to anyone.
@@ -39,3 +38,5 @@ stylistic experience, at any rate. Very '*A Portrait of the Artist as a
 Young Man*' I'm sure, and you've got to give him his due.
 
 Rating: 7/10 - Bloody Salinger, he never listens to anyone, him.
+
+<br style="clear: both" />

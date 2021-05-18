@@ -2,9 +2,7 @@
 .. title: lang.name, lang.desc for lang in self.languages
 .. slug: a-bit-of-fun
 .. date: 2008-09-30 19:44:25-05:00
-.. tags: software
-.. link: 
-.. description: 
+.. tags: geek,software
 .. type: text
 -->
 
@@ -70,7 +68,7 @@ have known:
     made me do it.
 -   **Python**, including **IronPython** (Python as a dot Net language.)
     Nirvana at last. Apart from BASH, it's the only entry on the list
-    that I still use frequently and gleefully today.
+    that I still use daily today, and unlike BASH, the usage is gleeful.
 -   **GLSL**, for hobbyist graphics and games.
 -   **Scheme** to the extent that I worked through SICP, twice.
 -   **Go**, for a new service in IBM Cloud.

@@ -2,12 +2,9 @@
 .. title: Hot Fuzz
 .. slug: hot-fuzz
 .. date: 2007-02-21 11:00:51-06:00
-.. tags: movies
-.. link: 
-.. description: 
+.. tags: media,movies
 .. type: text
 -->
-
 
 ![Cleaning up the aisles](/files/2007/02/hotfuzz1.jpg)
 

@@ -3,13 +3,12 @@
 .. slug: halting-state
 .. date: 2008-08-19 05:50:19-05:00
 .. tags: media,books,fiction,science-fiction,novel
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
-[![](/files/2008/08/halting-state.jpg "halting-state")](/files/2008/08/halting-state.jpg)
+<span style="float: left">
+![](/files/2008/08/halting-state.jpg)
+</span>
 
 *by Charles Stross*, 2007.
 
@@ -38,3 +37,5 @@ expectations were just set too high. Can this really be from the same
 author, and written a scant 12 months afterwards?
 
 Rating: 3/10. Letdown.
+
+<br style="clear: both" />

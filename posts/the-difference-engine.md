@@ -3,13 +3,12 @@
 .. slug: the-difference-engine
 .. date: 2008-12-11 09:19:16-06:00
 .. tags: geek,journal,media,books,exhibits,fiction,science-fiction,novel
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![differenceengine](/files/2008/12/differenceengine.jpg)
+</span>
 
 *by William Gibson and Bruce Sterling, 1990*
 
@@ -60,3 +59,5 @@ meritocratous social revolutions, and as a result was better equipped to
 continue its expansion across the globe.
 
 Rating 7.5/10 - a splendid ripping yarn.
+
+<br style="clear: both" />

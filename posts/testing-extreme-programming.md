@@ -3,15 +3,14 @@
 .. slug: testing-extreme-programming
 .. date: 2007-03-20 09:52:39-05:00
 .. tags: media,books,non-fiction,testing,software
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![Testing Extreme Programming](/files/2007/03/testing-extreme-programming.jpg)
+</span>
 
-*by Lisa Crispin & Trip House.* 2003. [On Amazon](http://www.amazon.com/Testing-Extreme-Programming-Lisa-Crispin/dp/0321113551/).
+*by Lisa Crispin & Trip House (2003)*
 
 I grabbed this hoping that it might be the authoritative reference that
 its position in the 'Xtreme Programming' series suggests, and it does
@@ -47,3 +46,5 @@ with these guys. :)
 Rating:
 9/10 if you don't know how to do test-driven development.
 3/10 if you're already doing it.
+
+<br style="clear: both" />

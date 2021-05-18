@@ -2,14 +2,13 @@
 .. title: The Simpsons Movie / Goodbye Forever
 .. slug: the-simpsons-movie-goodbye-forever
 .. date: 2008-05-08 12:48:12-05:00
-.. tags: imho,movies
-.. link: 
-.. description: 
+.. tags: media,movies,imho
 .. type: text
 -->
 
-
+<span style="float: left">
 ![The Simpsons Movie](/files/2008/05/simpsonsmovie.jpg)
+</span>
 
 There is, of course,
 no point whatsoever in me posting a belated review of the Simpsons
@@ -46,3 +45,5 @@ comprehensively about the entire experience, however your collective
 reactions to that will remain forever unknown to me. Henceforth you
 should consider me to be a purely one-way conduit of information.
 Goodbye forever.
+
+<br style="clear: both" />

@@ -2,16 +2,15 @@
 .. title: Shadow of the Colossus
 .. slug: shadow-of-the-colossus
 .. date: 2009-01-15 19:33:59-06:00
-.. tags: games
-.. link: 
-.. description: 
+.. tags: media,games
 .. type: text
 -->
 
+<span style="float: left">
+![](/files/2009/01/sotc4-300x225.jpg)
+</span>
 
-![](/files/2009/01/sotc4-300x225.jpg "Fight or flight?")
-
-*PS2, Team ICO, 2005.*
+*Team ICO, PS2, 2005.*
 
 As is common for a title released in the autumn years of a console's
 lifetime, the programmers at Team ICO have mastered the PS2 hardware,
@@ -78,3 +77,5 @@ Rating: Position yourself appropriately somewhere between:
 medium are capable of.
 
 0/10 if you are incapable of appreciating beauty or have no soul.
+
+<br style="clear: both" />

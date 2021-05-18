@@ -8,10 +8,11 @@
 .. type: text
 -->
 
-
+<span style="float: left">
 ![historyofwesternphilosophy.jpg](/files/2007/07/historyofwesternphilosophy.jpg)
+</span>
 
-*by Bertrand Russel, 1946.*
+*by Bertrand Russel (1946)*
 
 I've clearly been putting off this post for *months*, no doubt
 intimidated by my assumption that my review would have to be as weighty
@@ -120,3 +121,5 @@ any knowledge of which ones are meaningful, and which ones are purely
 fanciful. It may be great fun, but it's masturbation.
 
 Rating: 8/10: The box with which to call me *philistine* is below:
+
+<br style="clear: both" />

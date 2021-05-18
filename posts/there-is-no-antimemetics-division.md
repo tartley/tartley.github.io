@@ -9,7 +9,7 @@
 .. type: text
 -->
 
-<span style="float: left">
+<span style="float: left; padding-bottom: 1em">
 ![There is No Antimemetics Division cover](/files/2021/there-is-no-antimemetics-division-cover.jpg)
 </span>
 

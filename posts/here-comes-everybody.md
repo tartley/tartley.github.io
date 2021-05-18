@@ -3,15 +3,14 @@
 .. slug: here-comes-everybody
 .. date: 2008-09-16 17:58:57-05:00
 .. tags: media,media,books,non-fiction,internet,culture
-.. link: 
-.. description: 
 .. type: text
 -->
 
+<span style="float: left">
+![Here Comes Everybody cover](/files/2008/09/herecomeeverybody.jpg)
+</span>
 
-![Front Cover](/files/2008/09/herecomeeverybody.jpg)
-
-*by Clay Shirky*, 2008.
+*by Clay Shirky (2008)*
 
 Shirky has thrown a few beautiful and insightful essays over the wall
 the last few months. He is the guy who penned the '[Gin, Television and
@@ -36,3 +35,5 @@ press, in terms of its ability to transform societal institutions. We do
 indeed live in interesting times.
 
 Rating 10/10 - everyone should read it.
+
+<br style="clear: both" />

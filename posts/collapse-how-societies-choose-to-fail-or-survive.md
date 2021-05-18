@@ -3,13 +3,12 @@
 .. slug: collapse-how-societies-choose-to-fail-or-survive
 .. date: 2008-01-30 11:22:00-06:00
 .. tags: media,books,non-fiction,civilisation,sustainability
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![collapse.jpg](/files/2008/01/collapse.jpg "collapse.jpg")
+</span>
 
 *by Jared Diamond*
 
@@ -35,3 +34,5 @@ consequences of our actions, and to change our course before it's too
 late.
 
 Rating: 8/10 - a fascinating and important read.
+
+<br style="clear: both" />

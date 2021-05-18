@@ -3,15 +3,14 @@
 .. slug: free-culture
 .. date: 2008-02-25 14:08:18-06:00
 .. tags: media,books,non-fiction,law,internet,culture
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![Free Culture](/files/2008/02/free-culture.jpg)
+</span>
 
-*by Lawrence Lessig, 2004.*
+*by Lawrence Lessig (2004)*
 
 Accessible, entertaining, rich with historical perspective, and cuts
 incisively to the core of modern society's conflict over intellectual
@@ -21,3 +20,5 @@ built-in ebooks installer, or
 [as a pdf](http://www.free-culture.cc/freecontent/).
 
 Rating: 10/10. Blimey.
+
+<br style="clear: both" />

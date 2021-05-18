@@ -2,12 +2,9 @@
 .. title: London Geek Night : Game Dev
 .. slug: london-geek-night-game-dev
 .. date: 2008-11-22 14:19:48-06:00
-.. tags: games,software
-.. link: 
-.. description: 
+.. tags: geek,games,software,meetup
 .. type: text
 -->
-
 
 Last night was Game Dev night at the London Geek meet in the
 ThoughtWorks offices. It was really enjoyable, I really enjoyed the

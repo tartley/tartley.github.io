@@ -3,18 +3,14 @@
 .. slug: from-hell
 .. date: 2007-07-21 22:34:22-05:00
 .. tags: media,books,comics,fiction,madness
-.. link: 
-.. description: 
 .. type: text
 -->
 
+<span style="float: left">
+![From Hell](/files/2007/07/fromhellsm.jpg)
+</span>
 
-![From Hell](/files/2007/07/fromhellsm.jpg)]
-
-*by Alan Moore (author)*,
-*and Eddie Campbell (artist)*,
-1989.
-[On amazon.co.uk](http://www.amazon.co.uk/Hell-Alan-Moore/dp/0861661419 "From Hell").
+*by Alan Moore (author), Eddie Campbell (artist) (1989)*
 
 Moore has almost single-handedly transformed the definition of the comic
 industry in the last 20 years, and this fetishistically researched
@@ -71,3 +67,5 @@ animal past, and with it, our very humanity.
 
 Rating: 10/10.
 Cor blimey it's a classic.
+
+<br style="clear: both" />

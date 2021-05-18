@@ -2,12 +2,9 @@
 .. title: Wall-E
 .. slug: wall-e
 .. date: 2009-01-11 23:39:38-06:00
-.. tags: movies
-.. link: 
-.. description: 
+.. tags: media,movies
 .. type: text
 -->
-
 
 ![wall-e](/files/2009/01/wall-e.jpg)
 

@@ -3,13 +3,12 @@
 .. slug: brief-interviews-with-hideous-men
 .. date: 2014-01-22 20:51:51-06:00
 .. tags: media,books,essays,fiction
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
-![brief-interviews-with-hideous-men](/files/2014/01/brief-interviews-with-hideous-men.jpg)
+<span style="float: left; padding: 1em">
+![Brief Interviews With Hideous Men cover](/files/2014/01/brief-interviews-with-hideous-men.jpg)
+</span>
 
 *by David Foster Wallace (1999)*
 
@@ -37,3 +36,5 @@ subjects, such as depression, unconventional sex acts, and rape.
 
 10/10 if you like to be stretched, or at least stirred around, in
 interesting directions.
+
+<br style="clear: both" />

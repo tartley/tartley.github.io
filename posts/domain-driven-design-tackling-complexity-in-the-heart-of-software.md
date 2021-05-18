@@ -3,15 +3,14 @@
 .. slug: domain-driven-design-tackling-complexity-in-the-heart-of-software
 .. date: 2014-01-27 11:05:53-06:00
 .. tags: media,books,non-fiction,software,geek
-.. link: 
-.. description: 
 .. type: text
 -->
 
+<span style="float: left">
+![Domain Driven Design cover](/files/2014/01/domaindrivendesign.jpg)
+</span>
 
-![domaindrivendesign](/files/2014/01/domaindrivendesign.jpg)
-
-*by Eric Evans (2004)* [on Amazon](http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215)
+*by Eric Evans (2004)*
 
 It's a big, dense book -- possibly the most important of the technical
 books I've read in a flurry over the last few months, catching up after
@@ -101,3 +100,5 @@ Rating:
 10/10 if you're a programmer, or work with programmers.
 
 0/10 if you're not, or don't.
+
+<br style="clear: both" />

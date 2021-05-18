@@ -2,19 +2,21 @@
 .. title: Onegin vs New Super Mario Bros
 .. slug: onegin-vs-new-super-mario-bros
 .. date: 2007-03-26 23:40:04-05:00
-.. tags: games,shows
-.. link: 
-.. description: 
+.. tags: media,games,shows
 .. type: text
 -->
 
+The match:
 
-|---------------------------------------------------------------------:| |:--------------------------------------------------------------------:
-| ![](/files/2007/03/onegin.jpg)                                      | |![](/files/2007/03/new-super-mario-bros.jpg)
-| **Onegin**                                                           | |**New Super Mario Brothers**
-| *Company:* [The Royal Ballet](http://info.royaloperahouse.org/Home/).| ![](/files/2007/03/vs1.jpg) |*Developer:* Nintendo
-| *Music:* Pyotr Il'yich Tchaikovsky.                                  | |*Format:* Nintendo DS
-| *Choreography & libretto:* John Cranko                               | |*Released:* 2006
+| | | |
+|:------------------------------:|:---------------------------:|:------------------------:|
+| ![](/files/2007/03/onegin.jpg) | ![](/files/2007/03/vs1.jpg) | ![](/files/2007/03/new-super-mario-bros.jpg) |
+| **Onegin**                     |                             | **New Super Mario Brothers** |
+| *Company:* [The Royal Ballet](http://info.royaloperahouse.org/Home/) |  | *Developer:* Nintendo |
+| *Music:* Pyotr Il'yich Tchaikovsky |  | *Format:* Nintendo DS |
+| *Choreography & libretto:* John Cranko |  | *Released:* 2006 |
+
+<br />
 
 **Introduction**
 
@@ -22,12 +24,12 @@ Last week was full of great artistic experiences, but none so sublime as
 these two masterpieces, which I was lucky enough to witness and
 complete, respectively, in the last few days. For reasons that I'm sure
 need no explanation, I've opted to review them side-by-side in a single
-post.\
+post.
 
 **History**
 
 ![](/files/2007/03/nes_super_mario_bros.png)
-*Pushkin's original novel, seen here in the English translation.*
+*: Pushkin's original novel, seen here in the English translation.*
 
 The story of Onegin derives from a Russian novel-in-verse, *Eugene
 Onegin* written by Aleksandr Pushkin over the period from 1823 to 1837.
@@ -40,7 +42,7 @@ this that is now playing at the Royal Opera House in London's Covent
 Garden.
 
 ![](/files/2007/03/eugeneonegin-book.jpg)
-*Super Mario Bros. on the NES*
+*: Super Mario Bros. on the NES*
 
 New Super Mario Bros, similarly, represents the culmination of a
 venerated franchise. The character of Mario first appeared as a nameless
@@ -61,7 +63,7 @@ certainly the most influential, videogame series of all time.
 **Form**
 
 ![](/files/2007/03/jump.jpg)
-*Flawlessly timed triple jumps result in extra height.*
+*: Flawlessly timed triple jumps result in extra height.*
 
 Like so many other DS outings, New Super Mario Bros. is very much a
 return to form for the champion platformer. It makes solid, competent
@@ -86,7 +88,7 @@ Both works have in common the attempt to convey a narrative without the
 aid of verbiage, with significant difficulties encountered in each case.
 
 ![](/files/2007/03/1703471_onegin_150a.jpg)
-*Dumb, as in mime.*
+*: Dumb, as in mime.*
 
 Ballet suffers from an inexpressiveness in this regard, insomuch as the
 tools at the dancer's disposal are not capable of depicting much in the
@@ -103,7 +105,7 @@ considered to be in need of supplementing with a written synopsis in the
 program.
 
 ![](/files/2007/03/newsupermario.jpg)
-*Disrupting the narrative direction.*
+*: Disrupting the narrative direction.*
 
 Similarly, videogames revolve around the participation of the player,
 who thus has the means to disrupt any narrative direction or pacing

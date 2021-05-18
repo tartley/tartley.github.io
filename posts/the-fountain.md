@@ -2,23 +2,18 @@
 .. title: The Fountain
 .. slug: the-fountain
 .. date: 2007-03-13 11:09:11-05:00
-.. tags: movies
-.. link: 
-.. description: 
+.. tags: media,movies,science-fiction
 .. type: text
 -->
 
+|   |
+|:---:|
+| ![](/files/2007/03/the-fountain.jpg) |
+| Tommy prepares for the ultimate lesson in personal mortality. |
 
-![](/files/2007/03/the-fountain.jpg)
+<br />
 
-*Tommy prepares for the ultimate lesson in personal mortality.*
-
-*Director: Darren Aronofsky.
-Writing: Darren Aronofsky.
-Starring: Hugh Jackman, Rachel Weisz.
-2006.*
-
-[![Internet Movie Database](/files/2007/03/imdb.png)](http://imdb.com/title/tt0414993/)
+*Writer/Director: Darren Aronofsky.Starring: Hugh Jackman, Rachel Weisz. (2006)* [![Internet Movie Database](/files/2007/03/imdb.png)](http://imdb.com/title/tt0414993/)
 
 *What if you could live forever?*
 
@@ -58,6 +53,3 @@ year. And if you love it too, then then maybe one day we will find, that
 Well, maybe. But at the very least, it would make for a smashing film.
 
 Rating: 9/10
-
-**Update:** It wasn't until 6 weeks later that I got to find out [what
-was *really* going on](http://tartley.com/?p=96).

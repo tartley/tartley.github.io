@@ -3,15 +3,15 @@
 .. slug: fahrenheit-451
 .. date: 2009-01-27 16:15:47-06:00
 .. tags: media,books,fiction,science-fiction,novel
-.. link: 
-.. description: 
 .. type: text
 -->
 
 
+<span style="float: left">
 ![Farneheit 451](/files/2009/01/farneheit_451.jpg)
+</span>
 
-*by Ray Bradbury*, 1953.
+*by Ray Bradbury (1953)*
 
 A tale of future urban America, in which political or critical thought
 is suppressed by overwhelming popular entertainment and by burning all
@@ -53,3 +53,5 @@ phrase
 or meaning in life is a big waste of time, especially if it's done by
 way of science-fiction metaphors and hyperthetical future scenarios.
 Let's go shopping!
+
+<br style="clear: both" />

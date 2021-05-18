@@ -3,13 +3,12 @@
 .. slug: the-doors-of-perception
 .. date: 2008-11-28 11:45:00-06:00
 .. tags: media,books,non-fiction,drugs
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![](/files/2008/11/doors-of-perception.jpg "doors-of-perception")
+</span>
 
 *by Aldus Huxley, 1954*
 
@@ -29,3 +28,5 @@ named after. Did everyone know this except me?
 
 Rating 6/10 : No truer nor more deeply insightful word has ever been
 written in the English language. Yawn.
+
+<br style="clear: both" />

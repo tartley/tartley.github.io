@@ -2,7 +2,7 @@
 .. title: Chaining a sequence of generators
 .. slug: chaining-a-sequence-of-generators
 .. date: 2013-10-15 15:09:54-05:00
-.. tags: python
+.. tags: geek,software,python
 .. link: 
 .. description: 
 .. type: text

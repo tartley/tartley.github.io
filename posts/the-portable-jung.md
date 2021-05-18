@@ -3,15 +3,14 @@
 .. slug: the-portable-jung
 .. date: 2008-05-27 13:51:13-05:00
 .. tags: media,books,non-fiction,psychology,essays
-.. link: 
-.. description: 
 .. type: text
 -->
 
+<span style="float: left">
+![](/files/2008/05/portable-jung.jpg)
+</span>
 
-[![](/files/2008/05/portable-jung.jpg "The Portable Jung")](http://www.amazon.co.uk/Portable-Jung-Viking-Library/dp/0140150706)
-
-*Carl G. Jung (Author), Joseph Campbell (Editor), R. F. C. Hull (Translator)*
+*Carl G. Jung (Author), Joseph Campbell (Editor), R. F. C. Hull (Translator) (written 1920s & '30s, published 1971)*
 
 I didn't quite know what to make of Jung when KT first handed me this
 collection of his essays, many moons ago. Some sort of 19th-century
@@ -84,3 +83,5 @@ concept of synchronicity, but overall it was thoroughly enjoyable and
 insightful.
 
 Rating: 8/10
+
+<br style="clear: both" />

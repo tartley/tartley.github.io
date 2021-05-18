@@ -3,13 +3,12 @@
 .. slug: opengl-programming-guide-6th-ed
 .. date: 2008-11-03 18:48:55-06:00
 .. tags: media,books,non-fiction,software,graphics
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
-![](/files/2008/10/opengl-programming-guide.jpg "opengl-programming-guide")
+<span style="float: left">
+![](/files/2008/10/opengl-programming-guide.jpg)
+</span>
 
 Written by none other
 than the OpenGL architecture review board themselves, this is the de
@@ -51,3 +50,5 @@ Rating: 6/10.
 I bought the 'Orange' Shader Language book next. Can anyone recommend
 one of the other OpenGL books that are out there? Since they are all 800
 pages I'd rather not wade through them all to find the best one.
+
+<br style="clear: both" />

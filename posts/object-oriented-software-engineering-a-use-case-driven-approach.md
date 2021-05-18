@@ -3,13 +3,12 @@
 .. slug: object-oriented-software-engineering-a-use-case-driven-approach
 .. date: 2014-02-02 14:26:43-06:00
 .. tags: media,books,non-fiction,software
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
-![object-oriented-sofware-engineering](/files/2014/02/object-oriented-sofware-engineering.jpg)
+<span style="float: left">
+![Object Oriented Software Engineering cover](/files/2014/02/object-oriented-sofware-engineering.jpg)
+</span>
 
 *by Ivar Jacobsen* (1992, 4th revision)
 
@@ -65,3 +64,5 @@ Rating:
 and case studies.
 
 0/10 if you're not.
+
+<br style="clear: both" />

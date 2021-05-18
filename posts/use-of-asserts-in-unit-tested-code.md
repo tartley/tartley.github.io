@@ -2,7 +2,7 @@
 .. title: Use of Asserts in Unit-Tested Code
 .. slug: use-of-asserts-in-unit-tested-code
 .. date: 2009-11-27 14:47:32-06:00
-.. tags: python,testing,software
+.. tags: geek,software,python,testing
 .. link: 
 .. description: 
 .. type: text

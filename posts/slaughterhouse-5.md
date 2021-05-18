@@ -3,13 +3,12 @@
 .. slug: slaughterhouse-5
 .. date: 2007-07-22 00:08:34-05:00
 .. tags: media,books,fiction,science-fiction,novel
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![Slaughterhouse 5, cover](/files/2007/07/slaughterhouse5.jpg)
+</span>
 
 *by Kurt Vonnegut*, 1969.
 [on amazon.co.uk](http://www.amazon.co.uk/Slaughterhouse-5-Kurt-Vonnegut/dp/0099800209).
@@ -21,3 +20,5 @@ otherwise get around to. This fell off the shelf into my hands once more
 upon the news of his death in April. *So it goes.*
 
 Still touching and funny and brilliant. 8/10.
+
+<br style="clear: both" />

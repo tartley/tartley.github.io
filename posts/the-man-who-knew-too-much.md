@@ -3,15 +3,14 @@
 .. slug: the-man-who-knew-too-much
 .. date: 2008-08-19 05:24:01-05:00
 .. tags: media,books,non-fiction,math,software
-.. link: 
-.. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![](/files/2008/08/the-man-who-knew-too-much.jpg)
+</span>
 
-*by David Leavitt*, 2006.
+*by David Leavitt (2006)*
 
 An impulse buy, and it was good but not great. The barbaric treatment
 Turing received over being gay seems to be the thing that initially
@@ -25,3 +24,5 @@ because no book about him would be complete without it, but without
 really ever wanting to.
 
 Rating: 7/10. Solid but not much that was new to me.
+
+<br style="clear: both" />

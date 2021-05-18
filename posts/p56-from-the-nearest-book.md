@@ -2,7 +2,7 @@
 .. title: p56 from <the nearest book>
 .. slug: p56-from-the-nearest-book
 .. date: 2008-11-24 14:52:51-06:00
-.. tags: python
+.. tags: geek,software,python
 .. link: 
 .. description: 
 .. type: text

@@ -2,15 +2,16 @@
 .. title: Deja Vu
 .. slug: deja-vu
 .. date: 2007-03-13 14:56:58-05:00
-.. tags: movies
-.. link: 
-.. description: 
+.. tags: media,movies,science-fiction
 .. type: text
 -->
 
+|   |
+|:-------------------------------:|
+| ![](/files/2007/03/deja-vu.jpg) |
+| A typical hardass cop - with time goggles. In a Hummer. |
 
-![A typical hardass cop - with time goggles. In a
-Hummer.](/files/2007/03/deja-vu.jpg)
+<br />
 
 *Director: Tony Scott.
 Writer: Bill Marsilii & Terry Rossio.
