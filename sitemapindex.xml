@@ -19,7 +19,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/books.xml</loc>
-  <lastmod>2021-05-18T03:48:00Z</lastmod>
+  <lastmod>2021-05-18T12:16:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/chia.xml</loc>
@@ -35,7 +35,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/cognition.xml</loc>
-  <lastmod>2021-05-17T23:21:00Z</lastmod>
+  <lastmod>2021-05-18T12:16:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/comics.xml</loc>
@@ -44,10 +44,6 @@
  <sitemap>
   <loc>https://www.tartley.com/categories/creative.xml</loc>
   <lastmod>2020-10-18T02:41:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/crypto.xml</loc>
-  <lastmod>2021-05-18T03:23:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/cryptocurrency.xml</loc>
@@ -179,7 +175,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/media.xml</loc>
-  <lastmod>2021-05-18T03:48:00Z</lastmod>
+  <lastmod>2021-05-18T12:16:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/mental-health.xml</loc>
@@ -203,7 +199,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/non-fiction.xml</loc>
-  <lastmod>2021-05-18T03:48:00Z</lastmod>
+  <lastmod>2021-05-18T12:16:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/novel.xml</loc>
@@ -318,10 +314,6 @@
   <lastmod>2021-05-18T03:24:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/todo.xml</loc>
-  <lastmod>2020-10-18T02:41:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/tv.xml</loc>
   <lastmod>2020-10-18T02:41:00Z</lastmod>
  </sitemap>
@@ -351,10 +343,10 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/rss.xml</loc>
-  <lastmod>2021-05-18T03:48:00Z</lastmod>
+  <lastmod>2021-05-18T12:16:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/sitemap.xml</loc>
-  <lastmod>2021-05-18T03:49:00Z</lastmod>
+  <lastmod>2021-05-18T12:16:00Z</lastmod>
  </sitemap>
 </sitemapindex>

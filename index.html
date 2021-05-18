@@ -337,6 +337,38 @@ including Amazon links, EPUBs, or free-to-read online,
 <p><br style="clear: left"></p>
 </div>
     </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/intelligence-a-very-short-introduction/" class="u-url">Intelligence: A Very Short Introduction</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/intelligence-a-very-short-introduction/" rel="bookmark">
+            <time class="published dt-published" datetime="2021-01-18T06:58:23-05:00" itemprop="datePublished" title="2021-01-18 06:58">2021-01-18 06:58</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/intelligence-a-very-short-introduction/#disqus_thread" data-disqus-identifier="cache/posts/intelligence-a-very-short-introduction.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><span style="float: left">
+<img alt="Intelligence cover" src="files/2021/intelligence-cover.jpg"></span></p>
+<p>An expert's overview for the layman, describing how and why people differ in
+their thinking powers, Very data driven, and by necessity, largely driven by
+consideration of how to measure different aspects of intelligence, and
+therefore what aspects intelligence can be teased apart into, such as working
+memory, or speed of operation.</p>
+<p>Each chapter tackles a key scientific question, such as the effects of
+genes vs the environment, or the ways in which intelligence declines as we
+age.</p>
+<p>It's a short book, with a lively style, densely packed with important
+conclusions, and descriptions of how researchers have arrived at them.
+Edifying and entertaining in equal measure.</p>
+<p><br style="clear: left"></p>
+</div>
+    </div>
     </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-git-annotated-tags/" class="u-url">TIL: Git Annotated Tags</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
@@ -617,138 +649,6 @@ gained much enthusiasm.</p>
 <li>Reindents Black's output, by the same amount as the original unindent.</li>
 </ul>
 <p>See <a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken">enblacken on github</a>.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/lxd-for-dev-env/" class="u-url">LXD for Development Environments.</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/lxd-for-dev-env/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-04-20T13:57:47-05:00" itemprop="datePublished" title="2020-04-20 13:57">2020-04-20 13:57</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/lxd-for-dev-env/#disqus_thread" data-disqus-identifier="cache/posts/lxd-for-dev-env.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p><a href="https://twitter.com/hjwp/status/1249636076660174849">@hjwp asks</a>:</p>
-<blockquote>
-<p>I would be interested in seeing some example lxd config files,
-bash command history when creating, etc?</p>
-</blockquote>
-<p>Here goes then.</p>
-<p>I have one LXD container running for each nontrivial development project I'm
-working on.</p>
-<pre class="code literal-block">$ lxc ls
-<span class="p">|</span>    NAME     <span class="p">|</span>  STATE  <span class="p">|</span>        IPV4         <span class="p">|</span> IPV6 <span class="p">|</span>   TYPE    <span class="p">|</span> SNAPSHOTS <span class="p">|</span>
-<span class="p">|</span> devicegw    <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.228 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-<span class="p">|</span> ident       <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.4 <span class="o">(</span>eth0<span class="o">)</span>   <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-<span class="p">|</span> revs        <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.151 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-<span class="p">|</span> siab        <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.128 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-<span class="p">|</span> tartley-com <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.161 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-</pre>
-<p>Out of the gate we see one source of confusion. "LXD", the daemon, is a
-newer project that builds on top of "LXC" the containers. However the user
-interface to all the new LXD-goodness is through a command-line called "lxc",
-which replaces the older command line tool called "lxd". :-/</p>
-<p>To create a new one:</p>
-<pre class="code literal-block">$ <span class="nb">time</span> lxc launch ubuntu:16.04 -p default -p jhartley demo
-Creating demo
-Starting demo
-real    0m9.593s
-</pre>
-<p>Once created, they take about 3 seconds to stop and 0.5 seconds to start.</p>
-<p>Those "-p" options cause the container to use two <em>profiles</em>. They are:</p>
-<ol>
-<li>
-<p>The <em>default</em> profile, which I've never touched. It's just doing whatever it
-   always does.</p>
-</li>
-<li>
-<p>The <em>jhartley</em> profile, I created in a one-off step by running a Bash script
-   derived from instructions one of my colleagues passed around. I'll describe
-   it at the end.</p>
-</li>
-</ol>
-<p>Once a new container is up, we can execute commands directly on it:</p>
-<pre class="code literal-block"><span></span><code>$ lxc <span class="nb">exec</span> demo hostname
-demo
-$ lxc <span class="nb">exec</span> demo whoami
-root
-</code></pre>
-
-<p>Or SSH to them using their IP address:</p>
-<pre class="code literal-block">jhartley@t460 $ lxc ls demo
-<span class="p">|</span> NAME <span class="p">|</span>  STATE  <span class="p">|</span>        IPV4         <span class="p">|</span> IPV6 <span class="p">|</span>   TYPE    <span class="p">|</span> SNAPSHOTS <span class="p">|</span>
-<span class="p">|</span> demo <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.162 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-jhartley@t460 $ ssh <span class="m">10</span>.44.99.162
-...
-Warning: Permanently added <span class="s1">'10.44.99.162'</span> <span class="o">(</span>ECDSA<span class="o">)</span> to the list of known hosts.
-Welcome to Ubuntu <span class="m">16</span>.04.6 LTS <span class="o">(</span>GNU/Linux <span class="m">5</span>.4.0-25-generic x86_64<span class="o">)</span>
-jhartley@demo $
-</pre>
-<p>Better than using IP addresses, you can run a DNS server to recognize
-<code>{containername}.lxd</code> hostnames. (This part is from
-<a href="https://discuss.linuxcontainers.org/t/a-way-to-resolve-container-lxd-from-host-in-all-cases/3698">here</a>.)</p>
-<p>Find your lxd bridge IPv4 address</p>
-<pre class="code literal-block">lxc network show lxdbr0
-</pre>
-<p>Create file <code>/etc/systemd/network/lxd.network</code>:</p>
-<pre class="code literal-block"><span></span><code><span class="k">[Match]</span>
-<span class="na">Name</span><span class="o">=</span><span class="s">lxdbr0</span>
-
-<span class="k">[Network]</span>
-<span class="na">Address</span><span class="o">=</span><span class="s">IPADDR/24</span>
-<span class="na">DNS</span><span class="o">=</span><span class="s">IPADDR</span>
-<span class="na">Domains</span><span class="o">=</span><span class="s">~lxd</span>
-</code></pre>
-
-<p>Where IPADDR is the lxdbr0 IPv4 address.</p>
-<pre class="code literal-block">sudo systemctl <span class="nb">enable</span> systemd-networkd
-sudo reboot now
-</pre>
-<p>Then:</p>
-<pre class="code literal-block">jhartley@t460 $ ssh demo.lxd
-jhartley@demo $ <span class="c1"># \o/</span>
-</pre>
-<p>One nice thing is that DNS works both from the host and on the containers,
-so your services can be configured by default to talk to each other at
-SERVICE1.lxd, SERVICE2.lxd. Then running them in containers on your host
-they would just find each other. We don't actually do this, but it seems
-trivially easy to do. I should ask why we don't.</p>
-<p>In practice I wrap up the ssh command with my accumulated foibles:</p>
-<pre class="code literal-block">jhartley@demo $ <span class="nb">type</span> -a lssh
-lssh is a <span class="k">function</span>
-lssh <span class="o">()</span>
-<span class="o">{</span>
-    <span class="nv">TERM</span><span class="o">=</span>xterm-color ssh -A -t <span class="s2">"</span><span class="nv">$1</span><span class="s2">.lxd"</span> -- <span class="s2">"cd </span><span class="nv">$PWD</span><span class="s2"> &amp;&amp; exec </span><span class="nv">$SHELL</span><span class="s2"> -l"</span><span class="p">;</span>
-<span class="o">}</span>
-</pre>
-<p>I forget why -A and -t were required. The rest is mostly just to start the
-shell on the container in the same directory as I was in on the host. There
-is probably a simpler way.</p>
-<hr>
-<p>The booooooring bits:</p>
-<p>When we started the container, we mentioned
-<a href="files/2020/setup-lxd-profile.sh">a one-off setup script</a>.</p>
-<p>The script does a few things:</p>
-<ol>
-<li>Creates a new key pair specifically to SSH to the container.</li>
-<li>Creates the custom <em>jhartley</em> profile, which causes all containers started
-   with it to:</li>
-<li>Create a new user on the container with user and group ID mapped to
-      those of my user on the host, presumably so that file permissions work
-      for...</li>
-<li>Mount my $HOME directory on the container. Might not always be what you
-      want, but works for me right now.</li>
-<li>Doubtless due to my own misunderstanding somewhere, in order to get working
-   IPv4 connections to my containers, I had to disable IPv6 connections to
-   them.</li>
-</ol>
 </div>
     </div>
     </article>

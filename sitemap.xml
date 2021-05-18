@@ -11,11 +11,11 @@
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2021-05-18T03:48:00Z</lastmod>
+  <lastmod>2021-05-18T12:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/</loc>
-  <lastmod>2021-05-18T03:24:00Z</lastmod>
+  <lastmod>2021-05-18T03:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/audiobook/</loc>
@@ -56,10 +56,6 @@
  <url>
   <loc>https://www.tartley.com/categories/creative/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
- </url>
- <url>
-  <loc>https://www.tartley.com/categories/crypto/</loc>
-  <lastmod>2021-05-13T21:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/cryptocurrency/</loc>
@@ -330,10 +326,6 @@
   <lastmod>2020-10-17T05:32:00Z</lastmod>
  </url>
  <url>
-  <loc>https://www.tartley.com/categories/todo/</loc>
-  <lastmod>2020-10-16T00:44:00Z</lastmod>
- </url>
- <url>
   <loc>https://www.tartley.com/categories/tv/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
@@ -427,7 +419,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-24.html</loc>
-  <lastmod>2021-05-18T03:22:00Z</lastmod>
+  <lastmod>2021-05-18T12:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-3.html</loc>
@@ -852,6 +844,10 @@
  <url>
   <loc>https://www.tartley.com/posts/installing-colout/</loc>
   <lastmod>2020-10-17T19:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/intelligence-a-very-short-introduction/</loc>
+  <lastmod>2021-05-18T12:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/ironpython-at-resolver-systems/</loc>
