@@ -2,7 +2,7 @@
 .. title: Writing C/C++ on Windows using g++ under Cygwin
 .. slug: writing-cc-on-windows-using-g-under-cygwin
 .. date: 2008-07-09 22:57:50-05:00
-.. tags: software,c
+.. tags: software,c,terminal
 .. type: text
 -->
 

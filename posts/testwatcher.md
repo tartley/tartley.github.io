@@ -2,12 +2,9 @@
 .. title: Testwatcher
 .. slug: testwatcher
 .. date: 2009-04-29 23:02:59-05:00
-.. tags: geek,software,python,testing
-.. link: 
-.. description: 
+.. tags: geek,software,python,testing,terminal
 .. type: text
 -->
-
 
 Sometimes when programming I like to leave unit tests running
 repeatedly in one window while editing the code and tests in another.
@@ -71,5 +68,5 @@ library 'curses' module that would otherwise do the job is simply not
 implemented on Windows.) So maybe it's time I used this script as an
 excuse to figure this out. Suggestions welcome.
 
-**Update:** This idea may have now reached a viable fruition, documented
-[here](/posts/2010/10/15/rerun-unit-tests-whenever-files-update.html).
+**Update:** This idea may have now reached a viable fruition
+[here](https://github.com/tartley/rerun2/).

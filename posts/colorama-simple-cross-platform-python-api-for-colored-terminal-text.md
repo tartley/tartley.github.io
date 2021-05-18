@@ -2,15 +2,12 @@
 .. title: colorama: Simple cross-platform Python API for colored terminal text
 .. slug: colorama-simple-cross-platform-python-api-for-colored-terminal-text
 .. date: 2010-04-21 10:18:30-05:00
-.. tags: geek,software,python,mswin-dev
-.. link: 
-.. description: 
+.. tags: geek,software,python,mswin-dev,terminal
 .. type: text
 -->
 
-
-Announcing new Python package, colorama:[\
-http://pypi.python.org/pypi/colorama](http://pypi.python.org/pypi/colorama)
+Announcing new Python package,
+[Colorama](http://pypi.python.org/pypi/colorama).
 
 ANSI escape character sequences have long been used to produce colored
 terminal text on Unix and Macs. Colorama makes this work on Windows,

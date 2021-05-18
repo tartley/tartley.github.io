@@ -14,7 +14,7 @@ Theatre: Wyndham's.*
 
 After a lengthy run at the National Theatre, and then a national tour,
 this production marks the play's return to the West End, enlivened by a
-whole new cast.
+new cast.
 
 The tale revolves around a class of bright and boisterous schoolboys,
 under the tutelage of two particular teachers; Hector, a middle-aged

@@ -2,7 +2,7 @@
 .. title: Façade
 .. slug: facade
 .. date: 2007-06-28 14:43:48-05:00
-.. tags: media,games
+.. tags: media,games,pc
 .. type: text
 -->
 
