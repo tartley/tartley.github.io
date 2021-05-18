@@ -2,7 +2,7 @@
 .. title: TIL: Energy use per transaction for cryptocurrencies vs Visa
 .. slug: til-cryptocurrency-per-transaction-energy-use
 .. date: 2021-05-13 16:09:33 UTC-05:00
-.. tags: crypto,chia
+.. tags: til,cryptocurrency,chia
 .. category: 
 .. link: 
 .. description: 
@@ -43,8 +43,8 @@ Something's not quite right here though. The Chia whitepaper estimates 10,000
 times better energy efficiency than Bitcoin, by my figures above only show
 1,000.
 
-They probably know how to calculate that better than I do. So perhaps my figure
-for Chia is high? I hear the value per transaction will come down as
+They probably know how to calculate this better than I do. So perhaps my figure
+for Chia is high? I understand the value per transaction will come down as
 Chia starts handling more transactions, which seems reasonable. Perhaps the
 white paper refers to that future hypothetical efficiency?
 
