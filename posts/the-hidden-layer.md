@@ -2,14 +2,15 @@
 .. title: The Hidden Layer
 .. slug: the-hidden-layer
 .. date: 2008-01-30 11:47:37-06:00
-.. tags: books,fiction,science-fiction,novel
+.. tags: media,books,fiction,science-fiction,novel
 .. link: 
 .. description: 
 .. type: text
 -->
 
-
+<span style="float: left">
 ![The Hidden Layer](/files/2008/01/the-hidden-layerjpy.jpg)
+</span>
 
 *by Chris Nordberg*
 
@@ -33,5 +34,7 @@ Rating: 2/10 - Feels like I wrote it.
 
 **Update**: For years afterwards, I have felt guilty about this scathing
 review, mortified by the idea that the author stumbled across it and was
-genuinely upset. I'm so sorry! It's me, it's not you.
+genuinely upset. I'm so sorry! It's me, it's not you. You've written a
+novel, of that you should be proud. I've written a crappy blog, of which I
+should be ashamed.
 
