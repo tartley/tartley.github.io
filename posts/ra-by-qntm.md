@@ -9,8 +9,9 @@
 .. type: text
 -->
 
-<img src="/files/2021/ra-by-qntm-cover.jpg"
-style="float: left; padding-right: 1em">
+<span style="float: left">
+![Ra cover](/files/2021/ra-by-qntm-cover.jpg)
+</span>
 
 I bought all four of [qntm's books](https://qntm.org/fiction)
 when I discovered the fantastic
@@ -33,5 +34,5 @@ For those like me with an epub fetish, you can buy *Ra* in many formats,
 including Amazon links, EPUBs, or free-to-read online,
 [at the author's site](https://qntm.org/ra).
 
-<p style="clear: left" />
+<br style="clear: left" />
 

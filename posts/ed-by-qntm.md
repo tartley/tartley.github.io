@@ -9,8 +9,9 @@
 .. type: text
 -->
 
-<img src="/files/2021/ed-by-qntm-cover.jpg"
-style="float: left; padding-right: 1em; padding-bottom: 1em">
+<span style="float: left">
+![Ed cover](/files/2021/ed-by-qntm-cover.jpg)
+</span>
 
 It took me a few pages to shift gears to match the provocatively casual style,
 but once I did, it quickly became an engrossing and endearing read.
@@ -31,5 +32,5 @@ For those like me with an epub fetish, you can buy *Ed* in many formats,
 including Amazon links, EPUBs, or free-to-read online,
 [at the author's site](https://qntm.org/ed).
 
-<p style="clear: left" />
+<br style="clear: left" />
 
