@@ -1,5 +1,5 @@
 <!--
-.. title: Recent Books
+.. title: Miracleman, books 1, 2 & 3
 .. slug: june-books
 .. date: 2019-06-20 10:17:46-05:00
 .. tags: media,books,fiction,science-fiction,comics,novel
@@ -8,14 +8,11 @@
 .. type: text
 -->
 
-
-Notes about some books I read, for me to reminisce over.
-
 <span style="float: left">
 ![Miracleman cover](/files/2019/06/miracleman.jpg)
 </span>
 
-_Miracleman, books 1, 2 & 3_ by Alan Moore, Alan Davies, & John Totleben.
+_by Alan Moore, Alan Davies, & John Totleben._
 
 I spent a little time digging out earlier works of Alan Moore. These
 inter-library loans didn't disappoint.
@@ -43,21 +40,15 @@ Yes, this is more uneven than Moore's later works. Yes, it's unashamedly an
 underwear-on-the-outside superhero story. But nonetheless I loved it, and
 scenes like the above stayed with me for months.
 
-<br style="clear: both" />
-<img src="/files/2019/06/station-eleven.jpg"
-style="float: left; padding: 1em">
+Also this month:
 
-_Station Eleven_ by Emily St. John Mendel.
-
-An evocative tale of intertwined lives, before and after the sudden fall of
-contemporary civilisation due to a global pandemic.
-
-<br style="clear: both" />
-
-_The Atrocity Archive_ by Charles Stross. The conceit of Lovecraftian horror
+**The Atrocity Archive** by Charles Stross. The conceit of Lovecraftian horror
 rationalized to a mathematical or computable topic is appealing to me, and
 kept the pages turning, but I didn't ultimately find it life-changing.
 
-_Nightwings_ by Robert Silverberg. A fantastical far-future tale of humanity
+**Nightwings** by Robert Silverberg. A fantastical far-future tale of humanity
 split into occupational castes, guarding the world against prophesied
 invasion. Not my thing.
+
+<br style="clear: both" />
+
