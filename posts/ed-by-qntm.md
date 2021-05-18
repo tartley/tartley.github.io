@@ -28,6 +28,10 @@ brilliance. I thought being a comic was an essential part of that formula. But
 *Ed* proves me wrong by achieving the same velocity of verve and vigor,
 rendered in prose. A delight.
 
+The Epilogue reminds me gleefully of
+[this stackoverflow worldbuilding answer](https://worldbuilding.stackexchange.com/a/151964/13496)
+I gave a few months ago.
+
 For those like me with an epub fetish, you can buy *Ed* in many formats,
 including Amazon links, EPUBs, or free-to-read online,
 [at the author's site](https://qntm.org/ed).
