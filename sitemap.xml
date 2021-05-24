@@ -11,11 +11,11 @@
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2021-05-18T21:49:00Z</lastmod>
+  <lastmod>2021-05-24T18:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/</loc>
-  <lastmod>2021-05-18T21:26:00Z</lastmod>
+  <lastmod>2021-05-24T18:23:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/arcade/</loc>
@@ -32,6 +32,10 @@
  <url>
   <loc>https://www.tartley.com/categories/biography/</loc>
   <lastmod>2021-05-17T23:20:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/book/</loc>
+  <lastmod>2021-05-24T18:23:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/books/</loc>
@@ -124,10 +128,6 @@
  <url>
   <loc>https://www.tartley.com/categories/geek/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
- </url>
- <url>
-  <loc>https://www.tartley.com/categories/geeksoftware/</loc>
-  <lastmod>2021-05-18T16:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/gigs/</loc>
@@ -226,10 +226,6 @@
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://www.tartley.com/categories/nintendo/</loc>
-  <lastmod>2020-10-16T00:44:00Z</lastmod>
- </url>
- <url>
   <loc>https://www.tartley.com/categories/non-fiction/</loc>
   <lastmod>2021-05-17T21:36:00Z</lastmod>
  </url>
@@ -294,10 +290,6 @@
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
  <url>
-  <loc>https://www.tartley.com/categories/review/</loc>
-  <lastmod>2020-10-16T00:44:00Z</lastmod>
- </url>
- <url>
   <loc>https://www.tartley.com/categories/rigid-body/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
@@ -308,10 +300,6 @@
  <url>
   <loc>https://www.tartley.com/categories/science/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
- </url>
- <url>
-  <loc>https://www.tartley.com/categories/scient-fiction/</loc>
-  <lastmod>2021-05-18T19:10:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/short/</loc>
@@ -358,6 +346,10 @@
   <lastmod>2020-10-17T05:32:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/categories/time-travel/</loc>
+  <lastmod>2021-05-24T18:23:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/categories/tv/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
@@ -367,10 +359,6 @@
  </url>
  <url>
   <loc>https://www.tartley.com/categories/version-control/</loc>
-  <lastmod>2020-10-16T00:44:00Z</lastmod>
- </url>
- <url>
-  <loc>https://www.tartley.com/categories/videogame/</loc>
   <lastmod>2020-10-16T00:44:00Z</lastmod>
  </url>
  <url>
@@ -451,7 +439,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-24.html</loc>
-  <lastmod>2021-05-18T21:25:00Z</lastmod>
+  <lastmod>2021-05-24T18:23:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-3.html</loc>
@@ -484,6 +472,10 @@
  <url>
   <loc>https://www.tartley.com/pages/about/</loc>
   <lastmod>2020-10-17T19:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/112263-by-steven-king/</loc>
+  <lastmod>2021-05-24T18:23:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/12-books-that-changed-the-world/</loc>
@@ -748,6 +740,10 @@
  <url>
   <loc>https://www.tartley.com/posts/fargo/</loc>
   <lastmod>2020-10-17T19:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/fine-structure-by-qntm/</loc>
+  <lastmod>2021-05-24T18:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/first-post/</loc>
