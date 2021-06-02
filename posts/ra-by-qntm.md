@@ -16,9 +16,9 @@
 I bought all four of [qntm's books](https://qntm.org/fiction)
 when I discovered the fantastic
 [There is no Antimemetics Division](link://slug/there-is-no-antimemetics-division).
-I didn't really expect to like all of them, but was delighted to support an
-emerging author who had contributed to the genius of SCP. But then the books
-that arrived turned out to be bloody brilliant.
+I didn't really expect to like all of them, sight unseen, but was delighted to
+support an emerging author who had contributed to the genius of SCP. But then
+the books that arrived turned out to be bloody brilliant.
 
 This one tells a tale in which magic was discovered to be real in the 1970s,
 becoming a new, arcane branch of physics. From there, it piles on the twists
