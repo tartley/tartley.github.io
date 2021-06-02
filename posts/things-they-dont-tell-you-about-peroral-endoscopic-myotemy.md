@@ -68,7 +68,7 @@ unplanned, was to test whether I could perform square and cube roots in my
 head. Apparently that's my brain's idea of a power-on self test. I could do
 small integers, like 27 -> 3, but had the presence of mind enough to see that's
 just relying on remembered sequences. I was able to envision the process to do
-the calculation for something which isn't a cube, like 2 , but I failed to
+the calculation for something which isn't a cube, like 28, but I failed to
 actually execute any iterations of it.
 
 I said hello to a nurse sat beside me, but resisted the urge to chatter at her
@@ -76,7 +76,7 @@ about my mental state. Somehow, even I could see that from her perspective,
 that would be like talking to drunk people. So now I'm doing it at you instead.
 
 After a while they rolled me into my own room, and stuck a big pad over my
-butt. Foreshadowing! I fuzzily thought. I stayed in hospital overnight, for
+butt. *Foreshadowing!* I fuzzily thought. I stayed in hospital overnight, for
 tests the next day. Forever grateful for Suze's visits even though I wasn't
 the best of company. :-)
 
