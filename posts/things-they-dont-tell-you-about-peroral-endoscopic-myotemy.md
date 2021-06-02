@@ -49,19 +49,19 @@ point, in London's splendid Imperial College Hospital, I discovered the cheat
 code is to ask to do these unsedated. It's a few minutes of slightly
 nightmarish discomfort, to watch a burly gentleman hand-over-hand several feet
 of black rubber garden hose directly into your mouth. But the payoffs are that
-without any anesthetic, the fasting requirements are much reduced, the surgeons
-have a slightly simpler and safer procedure, and best of all, recovery time is
-much reduced. Given a few minutes to compose yourself, you can cycle or drive
-yourself home right afterwards, making it a 45 minute appointment, instead of
-writing off most of the day.
+without any anesthetic, there's no need to fast, the procedure itself is
+simpler and safer, and best of all, recovery time is much reduced. Given a
+few minutes to compose yourself, you can cycle or drive yourself home right
+afterwards, making it a 45 minute appointment, instead of writing off most of
+the day.
 
-However, going unsedated for a POEM obviously isn't an option, and it
-requires more than the simple sedation I've experienced before, since
-apparently there's a phase at the end where they check you're regaining
+However, going unsedated for the more substantial POEM obviously isn't an
+option. It requires more than the simple sedation I've experienced before,
+since apparently there's a phase at the end where they check you're regaining
 consciousness and are able to breathe for yourself before they remove the
 apparatus that's been breathing for you while you are paralyzed for the
 procedure. This is the sort of detail that is kindly elided from the regular
-patient briefing. It only came up because we were asking pointed questions.
+patient briefing, which only came up because we were asking questions.
 
 I only remember coming around sometime after that point, and my first thought,
 unplanned, was to test whether I could perform square and cube roots in my
