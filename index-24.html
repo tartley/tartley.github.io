@@ -70,7 +70,113 @@
     
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-per-mille/" class="u-url">TIL: ‰ is per mille</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/intelligence-a-very-short-introduction/" class="u-url">Intelligence: A Very Short Introduction</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/intelligence-a-very-short-introduction/" rel="bookmark">
+            <time class="published dt-published" datetime="2021-01-18T06:58:23-05:00" itemprop="datePublished" title="2021-01-18 06:58">2021-01-18 06:58</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/intelligence-a-very-short-introduction/#disqus_thread" data-disqus-identifier="cache/posts/intelligence-a-very-short-introduction.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><span style="float: left">
+<img alt="Intelligence cover" src="files/2021/intelligence-cover.jpg"></span></p>
+<p><em>by Ian J. Deary (1st Ed, 2001)</em></p>
+<p>An expert's overview for the layman, describing how and why people differ in
+their thinking powers, Very data driven, and by necessity, largely driven by
+consideration of how to measure different aspects of intelligence, and
+therefore what aspects intelligence can be teased apart into, such as working
+memory, linguistic comprehension, perceptual organization, and speed of
+operation.</p>
+<p>Each chapter tackles a key scientific question, describing the experiments
+that were done to determine the answers, showing the actual
+key experimental datasets.</p>
+<p>Such questions include: Is intelligence determined by genes or the environment?
+The answer is 50/50, although surprisingly, little of the environmental
+influence is due to the family raising the child. Also, the effect of genetics
+increases with age.</p>
+<p>How does a person's intelligence change as they age? Some skills show a
+straight decline from age 25 to 80, such as inductive reasoning, spatial
+awareness, perceptual speed and verbal memory. Other skills show a peak in
+middle-age, with only a small decline at high ages, such as verbal reasoning
+and numerical ability. The amount of mental decline with age is highly variable
+between different people. Those whose abilities decline the least have no
+cardio issues or chronic disease, have high social class, live in complex and
+stimulating environments, and are generally satisfied with life, and unstressed
+through middle age.</p>
+<p>Does intelligence, especially as measured using existing tests, correlate with
+life outoutcomes such doing well at a job? It depends greatly on the job, but
+for some jobs, yes, a great deal. What sort of tests are good for discovering
+who will do well (work samples; structured interviews; psychometric tests all
+give slightly over 0.5 correlation with good job performance. Which isn't
+stellar, but it's the best we've got. At the other end of the scale, graphology
+(handwriting) and age rankings had no correlation.</p>
+<p>It's a short book, with a lively style, densely packed with important
+conclusions, and descriptions of how researchers arrived at them. Edifying.</p>
+<p><br style="clear: left"></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-git-annotated-tags/" class="u-url">TIL: Git Annotated Tags</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/til-git-annotated-tags/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-10-17T00:40:24-05:00" itemprop="datePublished" title="2020-10-17 00:40">2020-10-17 00:40</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/til-git-annotated-tags/#disqus_thread" data-disqus-identifier="cache/posts/til-git-annotated-tags.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>I've previously only ever used git's regular <em>lightweight</em> tags, created with
+<code>git tag TAGNAME</code>.</p>
+<p>Today I learned about <em>annotated</em> tags, created with <code>git tag -a -m "MESSAGE"
+TAGNAME</code>. If you don't specify <code>-m MESSAGE</code>, git annoyingly prompts you for
+one, but it will accept <code>-m ""</code>.</p>
+<p>Annotated tags store the creator, created timestamp, and the message. This
+might occasionally be useful for understanding what happened. A release tagged
+this way shows us who created the release, and when, which might differ from
+when the commit was created.</p>
+<p>But more importantly is the different handling of lightweight versus
+annotated tags when pushing to the server.</p>
+<p>Habitually, I've been using:</p>
+<pre class="code literal-block">git push --tags
+</pre>
+<p>This is slightly broken, in that it pushes <em>all</em> tags. Some tags might be
+intended as my private local development state. Some of them might be
+unreachable in the origin repo.</p>
+<p>To fix this, git push introduced: <code>--follow-tags</code>, which aims to address these
+issues by:</p>
+<ul>
+<li>Only pushing annotated tags (hence, lightweight tags can be used as local,
+  private state)</li>
+<li>Only pushing tags that are on an ancestor of the commit being pushed. Hence
+  no unreachable tags are created on the origin.</li>
+</ul>
+<p>Or alternatively, just push the tag name directly:</p>
+<pre class="code literal-block">git push TAGAME
+</pre>
+<p>Upshot:</p>
+<ul>
+<li>For private local state, use regular lightweight tags.
+  Never push them. Hence never use <code>git push --tags</code>.</li>
+<li>For public shared tagging, such as releases, use annotated tags,
+  pushed either individually by name, or by using <code>--follow-tags</code>.</li>
+</ul>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-per-mille/" class="u-url">TIL: ‰ is per mille</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
