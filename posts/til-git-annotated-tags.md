@@ -24,34 +24,19 @@ when the commit was created.
 But more importantly is the different handling of lightweight versus
 annotated tags when pushing to the server.
 
-Habitually, I've been using:
+Habitually, I've been using `git push --tags`. But this is slightly broken, in
+that it pushes *all* tags. Some tags might be intended as my private local
+development state. Some of them might be unreachable in the origin repo.
 
-```bash
-git push --tags
-```
+To address these issues, newer versions of `git push` introduced
+`--follow-tags`, which only pushes annotated tags which are on ancestors
+of the commit being pushed, so that no unreachable tags are created on origin.
 
-This is slightly broken, in that it pushes *all* tags. Some tags might be
-intended as my private local development state. Some of them might be
-unreachable in the origin repo.
+Hence, a better workflow is:
 
-To fix this, git push introduced: `--follow-tags`, which aims to address these
-issues by:
-
-* Only pushing annotated tags (hence, lightweight tags can be used as local,
-  private state)
-* Only pushing tags that are on an ancestor of the commit being pushed. Hence
-  no unreachable tags are created on the origin.
-
-Or alternatively, just push the tag name directly:
-
-```bash
-git push TAGAME
-```
-
-Upshot:
-
-* For private local state, use regular lightweight tags.
-  Never push them. Hence never use `git push --tags`.
-* For public shared tagging, such as releases, use annotated tags,
-  pushed either individually by name, or by using `--follow-tags`.
+1. Use regular lightweight tags for local state.
+   Keep them private by never using `git push --tags`.
+2. Use annotated tags to share state with other developers.
+3. To share annotated tags, either push them directly, with `git push TAGNAME`,
+   or use `git push --follow-tags`.
 
