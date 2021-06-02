@@ -39,15 +39,15 @@ stimulating environments, and are generally satisfied with life, and unstressed
 through middle age.
 
 Does intelligence, especially as measured using existing tests, correlate with
-life outoutcomes such doing well at a job? It depends greatly on the job, but
-for some jobs, yes, a great deal. What sort of tests are good for discovering
-who will do well (work samples; structured interviews; psychometric tests all
-give slightly over 0.5 correlation with good job performance. Which isn't
-stellar, but it's the best we've got. At the other end of the scale, graphology
-(handwriting) and age rankings had no correlation.
+life outoutcomes such doing well at a job? Depending on the job, yes, a great
+deal. What sort of tests are good for predicting who will do well? Work
+samples, structured interviews, and psychometric tests all give slightly over
+0.5 correlations. Which isn't stellar, but it's the best we've got. At the
+other end of the scale, graphology (handwriting) and age rankings had no
+correlation.
 
 It's a short book, with a lively style, densely packed with important
-conclusions, and descriptions of how researchers arrived at them. Edifying.
+conclusions, and descriptions of how the field has arrived at them. Edifying.
 
 <br style="clear: left" />
 
