@@ -7,7 +7,7 @@
 -->
 
 <span style="float: left">
-![Ra cover](/files/2021/fine-structure-cover.jpg)
+![Fine Structure cover](/files/2021/fine-structure-cover.jpg)
 </span>
 
 Another fabulously enjoyable science fiction adventure from qntm. Like their
