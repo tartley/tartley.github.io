@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about git)</title><link>https://www.tartley.com/</link><description>Source code control.</description><atom:link href="https://www.tartley.com/categories/git.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 May 2021 16:18:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/posts/til-git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about git)</title><link>https://www.tartley.com/</link><description>Source code control.</description><atom:link href="https://www.tartley.com/categories/git.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 02 Jun 2021 21:00:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/posts/til-git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
 &lt;code&gt;git tag TAGNAME&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Today I learned about &lt;em&gt;annotated&lt;/em&gt; tags, created with &lt;code&gt;git tag -a -m "MESSAGE"
 TAGNAME&lt;/code&gt;. If you don't specify &lt;code&gt;-m MESSAGE&lt;/code&gt;, git annoyingly prompts you for
@@ -10,30 +10,20 @@ this way shows us who created the release, and when, which might differ from
 when the commit was created.&lt;/p&gt;
 &lt;p&gt;But more importantly is the different handling of lightweight versus
 annotated tags when pushing to the server.&lt;/p&gt;
-&lt;p&gt;Habitually, I've been using:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;git push --tags
-&lt;/pre&gt;
-&lt;p&gt;This is slightly broken, in that it pushes &lt;em&gt;all&lt;/em&gt; tags. Some tags might be
-intended as my private local development state. Some of them might be
-unreachable in the origin repo.&lt;/p&gt;
-&lt;p&gt;To fix this, git push introduced: &lt;code&gt;--follow-tags&lt;/code&gt;, which aims to address these
-issues by:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Only pushing annotated tags (hence, lightweight tags can be used as local,
-  private state)&lt;/li&gt;
-&lt;li&gt;Only pushing tags that are on an ancestor of the commit being pushed. Hence
-  no unreachable tags are created on the origin.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Or alternatively, just push the tag name directly:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;git push TAGAME
-&lt;/pre&gt;
-&lt;p&gt;Upshot:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;For private local state, use regular lightweight tags.
-  Never push them. Hence never use &lt;code&gt;git push --tags&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;For public shared tagging, such as releases, use annotated tags,
-  pushed either individually by name, or by using &lt;code&gt;--follow-tags&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>git</category><category>tags</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/til-git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>Git: When to use three dots vs two</title><link>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
+&lt;p&gt;Habitually, I've been using &lt;code&gt;git push --tags&lt;/code&gt;. But this is slightly broken, in
+that it pushes &lt;em&gt;all&lt;/em&gt; tags. Some tags might be intended as my private local
+development state. Some of them might be unreachable in the origin repo.&lt;/p&gt;
+&lt;p&gt;To address these issues, newer versions of &lt;code&gt;git push&lt;/code&gt; introduced
+&lt;code&gt;--follow-tags&lt;/code&gt;, which only pushes annotated tags which are on ancestors
+of the commit being pushed, so that no unreachable tags are created on origin.&lt;/p&gt;
+&lt;p&gt;Hence, a better workflow is:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Use regular lightweight tags for local state.
+   Keep them private by never using &lt;code&gt;git push --tags&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Use annotated tags to share state with other developers.&lt;/li&gt;
+&lt;li&gt;To share annotated tags, either push them directly, with &lt;code&gt;git push TAGNAME&lt;/code&gt;,
+   or use &lt;code&gt;git push --follow-tags&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>git</category><category>tags</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/til-git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>Git: When to use three dots vs two</title><link>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
 today:&lt;/p&gt;
 &lt;p&gt;To see the commits or diffs introduced by a branch (the filled circles ●):&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;     f

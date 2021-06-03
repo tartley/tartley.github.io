@@ -109,30 +109,20 @@ this way shows us who created the release, and when, which might differ from
 when the commit was created.</p>
 <p>But more importantly is the different handling of lightweight versus
 annotated tags when pushing to the server.</p>
-<p>Habitually, I've been using:</p>
-<pre class="code literal-block">git push --tags
-</pre>
-<p>This is slightly broken, in that it pushes <em>all</em> tags. Some tags might be
-intended as my private local development state. Some of them might be
-unreachable in the origin repo.</p>
-<p>To fix this, git push introduced: <code>--follow-tags</code>, which aims to address these
-issues by:</p>
-<ul>
-<li>Only pushing annotated tags (hence, lightweight tags can be used as local,
-  private state)</li>
-<li>Only pushing tags that are on an ancestor of the commit being pushed. Hence
-  no unreachable tags are created on the origin.</li>
-</ul>
-<p>Or alternatively, just push the tag name directly:</p>
-<pre class="code literal-block">git push TAGAME
-</pre>
-<p>Upshot:</p>
-<ul>
-<li>For private local state, use regular lightweight tags.
-  Never push them. Hence never use <code>git push --tags</code>.</li>
-<li>For public shared tagging, such as releases, use annotated tags,
-  pushed either individually by name, or by using <code>--follow-tags</code>.</li>
-</ul>
+<p>Habitually, I've been using <code>git push --tags</code>. But this is slightly broken, in
+that it pushes <em>all</em> tags. Some tags might be intended as my private local
+development state. Some of them might be unreachable in the origin repo.</p>
+<p>To address these issues, newer versions of <code>git push</code> introduced
+<code>--follow-tags</code>, which only pushes annotated tags which are on ancestors
+of the commit being pushed, so that no unreachable tags are created on origin.</p>
+<p>Hence, a better workflow is:</p>
+<ol>
+<li>Use regular lightweight tags for local state.
+   Keep them private by never using <code>git push --tags</code>.</li>
+<li>Use annotated tags to share state with other developers.</li>
+<li>To share annotated tags, either push them directly, with <code>git push TAGNAME</code>,
+   or use <code>git push --follow-tags</code>.</li>
+</ol>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">

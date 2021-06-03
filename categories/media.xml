@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about media)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/media.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 02 Jun 2021 18:27:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Demon</title><link>https://www.tartley.com/posts/demon/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about media)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/media.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 03 Jun 2021 15:35:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Self-Calm</title><link>https://www.tartley.com/posts/self-calm/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Self Calm cover" src="https://www.tartley.com/files/2021/self-calm-cover.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Chris DeLeon (2018)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Roman Emperor Marcus Auralias' notes, traditionally titled &lt;em&gt;Meditations&lt;/em&gt;,
+are a foundational text for practical Stoicism. They comprise a multitude of
+observations and recommendations, grouped into sections such as "Keeping
+thoughts tranquil", and "Cooperation, collaberation and contribution". They
+offer advice for living a contented life, with less regret, sorrow, anger and
+fear.&lt;/p&gt;
+&lt;p&gt;Several translations exist, themselves dated from through the ages. This book
+combines them, to synthesize a text which doesn't hew as precisely to the
+original as a straight translation might, but is instead intended to have the
+most relevance to modern ears.&lt;/p&gt;
+&lt;p&gt;Confession: It's taken me &lt;em&gt;months&lt;/em&gt; to get through it. Partly this is because
+I've allowed myself to be distracted by more gaudy and immediate books along
+the way. Partly it's because I found the best way to read this was &lt;em&gt;slowly&lt;/em&gt;.
+Practically every paragraph is worth reflecting upon, to consider how it
+applies to my own life, and ponder what practical, specific next steps are
+implied.&lt;/p&gt;
+&lt;p&gt;If I had to criticize, it would only be the superficial wrinkle that there's
+a lot of repetition, such as hundreds of suggestions to not fear death.
+Apparently the original documents were accumulated over decades of Auralias'
+life.&lt;/p&gt;
+&lt;p&gt;Genuinely life changing.&lt;/p&gt;
+&lt;p&gt;You can get the epub for free from
+&lt;a href="https://gumroad.com/l/self-calm"&gt;the author's gumroad page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>history</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/self-calm/</guid><pubDate>Thu, 03 Jun 2021 12:38:57 GMT</pubDate></item><item><title>Demon</title><link>https://www.tartley.com/posts/demon/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Demon cover" src="https://www.tartley.com/files/2021/demon-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Jason Shiga (2016)&lt;/em&gt;&lt;/p&gt;
@@ -16,7 +43,7 @@ a regular linear webcomic.&lt;/p&gt;
 is - intense, absolute, ruthless, narrative exploration of logical
 implications, while continually, dizzyingly, escalating to the next level.&lt;/p&gt;
 &lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>comic</category><category>free-to-read</category><category>media</category><guid>https://www.tartley.com/posts/demon/</guid><pubDate>Mon, 31 May 2021 16:08:52 GMT</pubDate></item><item><title>Fine Structure, by qntm</title><link>https://www.tartley.com/posts/fine-structure-by-qntm/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Ra cover" src="https://www.tartley.com/files/2021/fine-structure-cover.jpg"&gt;
+&lt;img alt="Fine Structure cover" src="https://www.tartley.com/files/2021/fine-structure-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Another fabulously enjoyable science fiction adventure from qntm. Like their
 other novels, it does a tremendous job of exploring the implications and
@@ -161,14 +188,14 @@ cardio issues or chronic disease, have high social class, live in complex and
 stimulating environments, and are generally satisfied with life, and unstressed
 through middle age.&lt;/p&gt;
 &lt;p&gt;Does intelligence, especially as measured using existing tests, correlate with
-life outoutcomes such doing well at a job? It depends greatly on the job, but
-for some jobs, yes, a great deal. What sort of tests are good for discovering
-who will do well (work samples; structured interviews; psychometric tests all
-give slightly over 0.5 correlation with good job performance. Which isn't
-stellar, but it's the best we've got. At the other end of the scale, graphology
-(handwriting) and age rankings had no correlation.&lt;/p&gt;
+life outoutcomes such doing well at a job? Depending on the job, yes, a great
+deal. What sort of tests are good for predicting who will do well? Work
+samples, structured interviews, and psychometric tests all give slightly over
+0.5 correlations. Which isn't stellar, but it's the best we've got. At the
+other end of the scale, graphology (handwriting) and age rankings had no
+correlation.&lt;/p&gt;
 &lt;p&gt;It's a short book, with a lively style, densely packed with important
-conclusions, and descriptions of how researchers arrived at them. Edifying.&lt;/p&gt;
+conclusions, and descriptions of how the field has arrived at them. Edifying.&lt;/p&gt;
 &lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>cognition</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/intelligence-a-very-short-introduction/</guid><pubDate>Mon, 18 Jan 2021 11:58:23 GMT</pubDate></item><item><title>The Structure of Scientific Revolutions</title><link>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This post rescues content from a series of tweets I wrote in 2018.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;span style="float: left"&gt;
@@ -307,16 +334,4 @@ populated by a whole new generation.&lt;/p&gt;
 &lt;p&gt;I am reminded of the dark priesthood of command-line programmers, although
 I note with no little joy that our merry band includes some of the best and
 brightest of the next generation (as judged by my own paradigm's criteria.)&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>media</category><category>non-fiction</category><category>politics</category><category>science</category><guid>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</guid><pubDate>Sun, 14 Jun 2020 14:02:22 GMT</pubDate></item><item><title>Swamp Thing, Vol 1: Saga of the Swamp Thing</title><link>https://www.tartley.com/posts/swamp-thing/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Swamp Thing cover" src="https://www.tartley.com/files/2019/06/swamp-thing-vol-1.jpg"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Alan Moore, Jogn Totleben, &amp;amp; Steve Bissette&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Moore's deconstruction of existing characters continues. Originally Swamp Thing
-was Alec Holland, miraculously transformed by an infusion of artificially
-stimulated plant matter. When Alan Moore takes over the writing, Swamp Thing's
-ostracization and existential dread is compounded by the discovery that this
-origins story has been a delusion all along. Alec Holland was killed outright
-in the accident, and an accumulation of plant matter grew around his decaying
-form, integrating the physical remains of his memories into a creature that
-yearned to recapture its human form, but was never human in the first place.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>comics</category><category>fiction</category><category>media</category><category>science-fiction</category><guid>https://www.tartley.com/posts/swamp-thing/</guid><pubDate>Mon, 24 Jun 2019 02:50:43 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>books</category><category>media</category><category>non-fiction</category><category>politics</category><category>science</category><guid>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</guid><pubDate>Sun, 14 Jun 2020 14:02:22 GMT</pubDate></item></channel></rss>
