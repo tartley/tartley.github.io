@@ -2,7 +2,7 @@
 .. title: Wall-E
 .. slug: wall-e
 .. date: 2009-01-11 23:39:38-06:00
-.. tags: media,movies
+.. tags: media,movie
 .. type: text
 -->
 

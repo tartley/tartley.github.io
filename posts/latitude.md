@@ -2,7 +2,7 @@
 .. title: Latitude
 .. slug: latitude
 .. date: 2007-07-16 10:48:46-05:00
-.. tags: movies,gig
+.. tags: movie,gig
 .. link: 
 .. description: 
 .. type: text

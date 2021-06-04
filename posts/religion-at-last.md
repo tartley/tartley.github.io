@@ -2,7 +2,7 @@
 .. title: Religion, at last.
 .. slug: religion-at-last
 .. date: 2007-04-29 07:36:26-05:00
-.. tags: movies
+.. tags: movie
 .. link: 
 .. description: 
 .. type: text
