@@ -2,7 +2,7 @@
 .. title: Miracleman, books 1, 2 & 3
 .. slug: miracleman
 .. date: 2019-06-20 10:17:46-05:00
-.. tags: media,book,fiction,science-fiction,comics,novel
+.. tags: media,book,fiction,science-fiction,comic,novel
 .. link: 
 .. description: 
 .. type: text
