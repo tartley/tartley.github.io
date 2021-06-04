@@ -2,7 +2,7 @@
 .. title: Musicians : wake up!
 .. slug: musicians-wake-up
 .. date: 2010-01-22 09:43:24-06:00
-.. tags: geek,imho,gigs
+.. tags: geek,imho,gig
 .. link: 
 .. description: 
 .. type: text
