@@ -2,7 +2,7 @@
 .. title: The Hidden Layer
 .. slug: the-hidden-layer
 .. date: 2008-01-30 11:47:37-06:00
-.. tags: media,books,fiction,science-fiction,novel
+.. tags: media,book,fiction,science-fiction,novel
 .. link: 
 .. description: 
 .. type: text

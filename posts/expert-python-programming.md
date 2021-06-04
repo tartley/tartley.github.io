@@ -2,7 +2,7 @@
 .. title: Expert Python Programming
 .. slug: expert-python-programming
 .. date: 2009-01-11 22:58:26-06:00
-.. tags: geek,media,books,non-fiction,software,python
+.. tags: geek,media,book,non-fiction,software,python
 .. type: text
 -->
 

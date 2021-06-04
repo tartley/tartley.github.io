@@ -23,3 +23,9 @@ Make all tags lower case
 
     find posts -type f | xargs sed -i 's/^\.\. tags: .*/\L&/g'
 
+Change tag 'books' to 'book':
+
+    for post in posts/*; do
+         sed -i 's/tags:\(.\+\)books/tags:\1book/' "$post"
+    done
+

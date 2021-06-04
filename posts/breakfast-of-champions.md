@@ -2,7 +2,7 @@
 .. title: Breakfast of Champions
 .. slug: breakfast-of-champions
 .. date: 2008-08-27 15:45:56-05:00
-.. tags: media,books,fiction
+.. tags: media,book,fiction
 .. type: text
 -->
 

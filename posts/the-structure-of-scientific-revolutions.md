@@ -2,7 +2,7 @@
 .. title: The Structure of Scientific Revolutions
 .. slug: the-structure-of-scientific-revolutions
 .. date: 2020-06-14 09:02:22 UTC-05:00
-.. tags: media,books,non-fiction,science,politics
+.. tags: media,book,non-fiction,science,politics
 .. category: 
 .. link: 
 .. description: 

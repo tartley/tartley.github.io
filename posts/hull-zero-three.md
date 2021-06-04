@@ -2,7 +2,7 @@
 .. title: Hull Zero Three
 .. slug: hull-zero-three
 .. date: 2019-06-17 10:17:46-05:00
-.. tags: media,books,fiction,science-fiction,novel
+.. tags: media,book,fiction,science-fiction,novel
 .. type: text
 -->
 

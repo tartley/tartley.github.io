@@ -2,7 +2,7 @@
 .. title: Someone Comes to Town, Someone Leaves Town
 .. slug: someone-comes-to-town-someone-leaves-town
 .. date: 2008-02-08 01:01:37-06:00
-.. tags: media,books,fiction,novel
+.. tags: media,book,fiction,novel
 .. link: 
 .. description: 
 .. type: text

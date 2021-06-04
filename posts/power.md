@@ -2,7 +2,7 @@
 .. title: Power
 .. slug: power
 .. date: 2008-11-28 11:32:00-06:00
-.. tags: media,books,non-fiction
+.. tags: media,book,non-fiction
 .. type: text
 -->
 

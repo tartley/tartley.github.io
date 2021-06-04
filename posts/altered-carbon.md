@@ -2,7 +2,7 @@
 .. title: Altered Carbon
 .. slug: altered-carbon
 .. date: 2014-02-02 12:59:43-06:00
-.. tags: media,books,novel,fiction,science-fiction
+.. tags: media,book,novel,fiction,science-fiction
 .. type: text
 -->
 

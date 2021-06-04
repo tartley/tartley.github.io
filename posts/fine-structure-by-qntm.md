@@ -2,7 +2,7 @@
 .. title: Fine Structure, by qntm
 .. slug: fine-structure-by-qntm
 .. date: 2021-05-24 11:55:26 UTC-05:00
-.. tags: media,books,novel,science-fiction
+.. tags: media,book,novel,science-fiction
 .. type: text
 -->
 

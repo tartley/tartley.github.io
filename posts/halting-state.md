@@ -2,7 +2,7 @@
 .. title: Halting State
 .. slug: halting-state
 .. date: 2008-08-19 05:50:19-05:00
-.. tags: media,books,fiction,science-fiction,novel
+.. tags: media,book,fiction,science-fiction,novel
 .. type: text
 -->
 

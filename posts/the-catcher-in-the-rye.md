@@ -2,7 +2,7 @@
 .. title: The Catcher in the Rye
 .. slug: the-catcher-in-the-rye
 .. date: 2008-09-03 17:41:00-05:00
-.. tags: media,books,fiction,novel
+.. tags: media,book,fiction,novel
 .. type: text
 -->
 

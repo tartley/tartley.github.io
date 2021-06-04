@@ -2,7 +2,7 @@
 .. title: From Hell
 .. slug: from-hell
 .. date: 2007-07-21 22:34:22-05:00
-.. tags: media,books,comics,fiction,madness
+.. tags: media,book,comics,fiction,madness
 .. type: text
 -->
 

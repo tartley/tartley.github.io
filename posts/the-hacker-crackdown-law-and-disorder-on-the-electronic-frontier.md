@@ -2,7 +2,7 @@
 .. title: The Hacker Crackdown : Law and Disorder on the Electronic Frontier
 .. slug: the-hacker-crackdown-law-and-disorder-on-the-electronic-frontier
 .. date: 2008-02-02 16:15:49-06:00
-.. tags: media,books,non-fiction,audiobook,culture,internet,software,law
+.. tags: media,book,non-fiction,audiobook,culture,internet,software,law
 .. link: 
 .. description: 
 .. type: text
