@@ -2,7 +2,7 @@
 .. title: Daniel Kitson
 .. slug: daniel-kitson
 .. date: 2007-06-11 15:40:35-05:00
-.. tags: journal,shows
+.. tags: journal,show
 .. link: 
 .. description: 
 .. type: text

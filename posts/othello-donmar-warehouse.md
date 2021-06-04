@@ -2,7 +2,7 @@
 .. title: Othello : Donmar Warehouse
 .. slug: othello-donmar-warehouse
 .. date: 2008-01-23 20:04:30-06:00
-.. tags: shows
+.. tags: show
 .. link: 
 .. description: 
 .. type: text
