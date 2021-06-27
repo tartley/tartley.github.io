@@ -17,11 +17,12 @@ ve=${HOME}/.virtualenvs/${name}
 ## Dependencies (apt)
 
 setup: ## Install required system packages using 'apt install'
-	cat requirements.apt | xargs sudo apt install -y --no-install-recommends
+	cat requirements.apt requirements-dev.apt | xargs sudo apt install -y --no-install-recommends
 	@echo "You might want 'make bootstrap' next."
 .PHONY: setup
 
 ## Dependencies (pip)
+# TODO consider how to split requirements[-dev] from .in and .txt
 
 pip=${ve}/bin/pip
 
