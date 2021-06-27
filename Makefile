@@ -10,11 +10,18 @@ clean: ## Delete generated files and virtualenv
 
 
 name=tartley.com
-syspython=python3.8
+syspython=python3.9
 ve=${HOME}/.virtualenvs/${name}
 
 
-## Virtualenv
+## Dependencies (apt)
+
+setup: ## Install required system packages using 'apt install'
+	cat requirements.apt | xargs sudo apt install -y --no-install-recommends
+	@echo "You might want 'make bootstrap' next."
+.PHONY: setup
+
+## Dependencies (pip)
 
 pip=${ve}/bin/pip
 
@@ -29,6 +36,7 @@ update: clean ${ve} ## Pip update packages, save versions to requirements.txt.
 
 bootstrap: ${ve} ## Create venv & pip install packages from requirements.txt.
 	${pip} install -r requirements.txt
+	@echo "You might want 'make serve' next."
 .PHONY: bootstrap
 
 
