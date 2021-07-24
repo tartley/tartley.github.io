@@ -101,13 +101,13 @@ Here's are some t">
 <a href="https://www.coolermaster.com/catalog/peripheral/keyboards/ck530/">CoolerMaster CK530</a>
 mechanical keyboard, which I love. It might have come with a small printed
 manual, but if it did, I no longer have it, and I'm failing to find one online.
-Here's are some things I've figured out. All of this is gleaned from
-experimentation. If there's a manual I've overlooked, or if you have
-corrections, <a href="https://twitter.com/tartley">let me know</a>.</p>
+Here's are some things I've gleaned from experimentation.
+If there's a manual I've overlooked, or if you have corrections,
+<a href="https://twitter.com/tartley">let me know</a>.</p>
 <p>The <a href="https://coolermaster.egnyte.com/dl/8NuIc843wQ/?">Quickstart guide</a>
 provides a list of key strokes, but no explanations. I've reproduced
-it here, with tweaks for understandability, and added deeper descriptions below
-the table.</p>
+the table here, with tweaks for understandability, and added more descriptions
+below.</p>
 <table>
 <thead><tr>
 <th></th>
@@ -150,7 +150,7 @@ the table.</p>
 </tr>
 <tr>
 <td><code>fn + F6</code></td>
-<td>Foreground color.</td>
+<td>Foreground color. (See <a href="#foreground-and-background-colors">below</a>.)</td>
 </tr>
 <tr>
 <td><code>fn + F7</code></td>
@@ -203,13 +203,11 @@ the table.</p>
 </tr>
 <tr>
 <td><code>fn + r</code></td>
-<td>Reset current profile to default appearance. <em>(Hold 3 secs.)</em>
-</td>
+<td>Reset current profile to default appearance. (Hold 3 secs.)</td>
 </tr>
 <tr>
 <td><code>fn + e</code></td>
-<td>Reset all profiles to default appearance. <em>(Hold 3 secs.)</em>
-</td>
+<td>Reset all profiles to default appearance. (Hold 3 secs.)</td>
 </tr>
 <tr>
 <td>Macros <br>
@@ -276,21 +274,22 @@ the table.</p>
 </tr>
 </tbody>
 </table>
+<p><br></p>
 <p>Many of these are self-explanatory. For the rest:</p>
 <h3>Using modes</h3>
 <p><code>fn</code> is the "coolermaster" key, on the bottom row key between right Windows and
 right Ctrl.</p>
-<p>When holding <code>fn</code>, then several keys might light up, depending on the current
+<p>When holding <code>fn</code>, several keys might light up, depending on the current
 mode:</p>
 <ul>
 <li>
-<code>ESC/1/2/3/4</code> - one of these keys flashes white to show which profile is
-  currently in use.</li>
+<code>ESC/1/2/3/4</code> - one of these keys flashes white to show which profile
+  (see <a href="#profiles">below</a>) is currently in use.</li>
 <li>If the current mode allows you to select a color to use, then <code>F2/F3/F4</code>
   will light up to show the currently selected color's levels of
   red/green/blue.</li>
 <li>If the current mode allows <em>two</em> colors to be set (foreground &amp; background),
-  then one of <code>F6/F7</code> will flash white, to show which is currently affected.</li>
+  then one of <code>F6/F7</code> will flash white, to show which is currently affected. (See <a href="#foreground-and-background-colors">below</a>.)</li>
 </ul>
 <p>Pressing <code>fn + F5</code> cycles through:</p>
 <table>
@@ -332,7 +331,7 @@ mode:</p>
 <td align="center">✅</td>
 </tr>
 <tr>
-<td>6. Custom</td>
+<td>6. Custom (see <a href="#custom-mode">below</a>)</td>
 <td align="center">✅</td>
 <td align="center">✅</td>
 <td align="center"></td>
@@ -411,32 +410,37 @@ mode:</p>
 </tr>
 </tbody>
 </table>
+<p><br></p>
+<p>Modes marked "reactive" react to keypresses. Mostly this lights up a pattern
+around the pressed key. In the case of "snake", you can play using the arrow
+keys.</p>
+<p><span id="foreground-and-background-colors"></span></p>
 <h3>Foreground &amp; background colors</h3>
-<p>Most or all of the modes, selected by <code>fn + F5</code>, have a foreground effect that
-you can change the color of. For example, in the <em>all-one-color</em> mode,
-(officially called "static", I think), you can select the color with which all
-keys are lit, using <code>fn + F2/F3/F4</code>.</p>
+<p>Many of the modes have a foreground effect that you can change the color of.
+For example, in the <em>all-one-color</em> mode (officially called "static")
+you can select the color with which all keys are lit, using <code>fn + F2/F3/F4</code>.</p>
 <p>Some of the modes also have a second color, the background, that you can set
 separately. You can see if a mode offers this by selecting the mode and holding
 <code>fn</code>. If this mode offers two settable colors, then either <code>F6</code> or <code>F7</code> will
 flash white, to show you which one you are currently setting.</p>
 <p>Press <code>fn + F6/F7</code> to choose foreground or background,
 then use <code>fn + F2/F3/F4</code> to set it.</p>
+<p><span id="custom-mode"></span></p>
 <h3>Custom mode</h3>
-<p>Custom mode lets the user assign a different color to each key.</p>
+<p>Custom (mode #6 above) lets the user assign a different color to each key.</p>
 <ol>
-<li>First, cycle through modes using <code>fn + F5</code> until you reach custom mode It
-   can be tricky to identify when you've reached it. Use the list of modes
+<li>First, cycle through modes using <code>fn + F5</code> until you reach custom mode.
+   It can be tricky to identify when you've reached it. Use the list of modes
    above to help.</li>
 <li>While in custom mode, press <code>fn + F10</code> to edit key colors.</li>
 <li>Select a color using <code>fn + F2/F3/F4</code>.</li>
 <li>Press all the keys you want lit in the selected color. Pressing the same key
    again turns it unlit.</li>
 <li>Repeat steps 3 &amp; 4 for other color/key combinations.</li>
-<li>Finally, save to your current profile by holding <code>fn</code> and pressing your
-   current profile key (whichever of <code>Esc/1/2/3/4</code> is flashing white.)</li>
+<li>Finally, save to your current profile (see <a href="#profiles">below</a>) by holding
+   <code>fn</code> and pressing your current profile key (whichever of <code>Esc/1/2/3/4</code> is
+   flashing white.)</li>
 </ol>
-<p>(see the section below for more about using profiles.)</p>
 <p>Some wrinkles:</p>
 <p>I can't manage to set a color for the FN key itself, which always appears unlit
 in this mode.</p>
@@ -445,18 +449,20 @@ Similarly, scroll lock seems to always be unlit for me in this mode,
 although it is lit in other modes.</p>
 <p>When you try to assign a color to whichever one of <code>Esc/1/2/3/4</code> is lit white,
 to indicate the active profile, then nothing visible happens, but it is
-working. You have to save, or cancel exit key color editing by loading
-a different profile.
-Then you can see whether you successfully assigned the color, or pressed
-the key one too many times and left it unlit.</p>
+working. You have to save, or cancel key color editing by loading a different
+profile.
+Then you can see whether you successfully assigned the color,
+or pressed the key one too many times and left it unlit.</p>
 <p>While editing key colors, if you wait, without exit/saving, pressing nothing
 for a minute or so, then it cancels all your changes since step 2.</p>
+<p><span id="profiles"></span></p>
 <h3>Profiles</h3>
 <p>There are five "profiles", each of which can be used to save the current
 state of the keyboard.</p>
 <p>The profiles are accessed using <code>fn + 1/2/3/4/Esc</code>. <code>Esc</code> is the "default"
-profile. I don't know what this means. (When plugging the keyboard USB into
-a computer, the last active profile is restored, so it isn't that.)</p>
+profile. I don't know what this means. (When turning the keyboard on, ie.
+plugging the USB cable into a computer, the last active profile is restored,
+so it isn't that.)</p>
 <p>The current profile is shown when you hold <code>fn</code>, by one of <code>1/2/3/4/Esc</code>
 flashing white. While keeping FN pressed:</p>
 <ul>
@@ -471,8 +477,8 @@ flashing white. While keeping FN pressed:</p>
 </ul>
 <p>Hence, to save changes to an arbitrary profile, you need to select that
 profile <em>before</em> making the changes.</p>
-<p>Each profile saves the configuration of every mode, plus which mode is
-currently selected. Are macros stored in a profile? Don't know.</p>
+<p>Each profile saves the configuration of every mode, plus it remembers which
+mode is currently selected. Are macros stored in a profile? Don't know.</p>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">

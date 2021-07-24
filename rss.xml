@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://www.tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 24 Jul 2021 02:49:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Keyboard CoolerMaster CK530's Missing Manual</title><link>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I have a
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://www.tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 24 Jul 2021 03:31:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Keyboard CoolerMaster CK530's Missing Manual</title><link>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I have a
 &lt;a href="https://www.coolermaster.com/catalog/peripheral/keyboards/ck530/"&gt;CoolerMaster CK530&lt;/a&gt;
 mechanical keyboard, which I love. It might have come with a small printed
 manual, but if it did, I no longer have it, and I'm failing to find one online.
-Here's are some things I've figured out. All of this is gleaned from
-experimentation. If there's a manual I've overlooked, or if you have
-corrections, &lt;a href="https://twitter.com/tartley"&gt;let me know&lt;/a&gt;.&lt;/p&gt;
+Here's are some things I've gleaned from experimentation.
+If there's a manual I've overlooked, or if you have corrections,
+&lt;a href="https://twitter.com/tartley"&gt;let me know&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The &lt;a href="https://coolermaster.egnyte.com/dl/8NuIc843wQ/?"&gt;Quickstart guide&lt;/a&gt;
 provides a list of key strokes, but no explanations. I've reproduced
-it here, with tweaks for understandability, and added deeper descriptions below
-the table.&lt;/p&gt;
+the table here, with tweaks for understandability, and added more descriptions
+below.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -52,7 +52,7 @@ the table.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;fn + F6&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Foreground color.&lt;/td&gt;
+&lt;td&gt;Foreground color. (See &lt;a href="https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#foreground-and-background-colors"&gt;below&lt;/a&gt;.)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;fn + F7&lt;/code&gt;&lt;/td&gt;
@@ -104,11 +104,11 @@ the table.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;fn + r&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Reset current profile to default appearance. &lt;em&gt;(Hold 3 secs.)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Reset current profile to default appearance. (Hold 3 secs.)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;fn + e&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Reset all profiles to default appearance. &lt;em&gt;(Hold 3 secs.)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Reset all profiles to default appearance. (Hold 3 secs.)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Macros &lt;br&gt;&lt;/td&gt;
@@ -172,20 +172,21 @@ the table.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Many of these are self-explanatory. For the rest:&lt;/p&gt;
 &lt;h3&gt;Using modes&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;fn&lt;/code&gt; is the "coolermaster" key, on the bottom row key between right Windows and
 right Ctrl.&lt;/p&gt;
-&lt;p&gt;When holding &lt;code&gt;fn&lt;/code&gt;, then several keys might light up, depending on the current
+&lt;p&gt;When holding &lt;code&gt;fn&lt;/code&gt;, several keys might light up, depending on the current
 mode:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ESC/1/2/3/4&lt;/code&gt; - one of these keys flashes white to show which profile is
-  currently in use.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ESC/1/2/3/4&lt;/code&gt; - one of these keys flashes white to show which profile
+  (see &lt;a href="https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#profiles"&gt;below&lt;/a&gt;) is currently in use.&lt;/li&gt;
 &lt;li&gt;If the current mode allows you to select a color to use, then &lt;code&gt;F2/F3/F4&lt;/code&gt;
   will light up to show the currently selected color's levels of
   red/green/blue.&lt;/li&gt;
 &lt;li&gt;If the current mode allows &lt;em&gt;two&lt;/em&gt; colors to be set (foreground &amp;amp; background),
-  then one of &lt;code&gt;F6/F7&lt;/code&gt; will flash white, to show which is currently affected.&lt;/li&gt;
+  then one of &lt;code&gt;F6/F7&lt;/code&gt; will flash white, to show which is currently affected. (See &lt;a href="https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#foreground-and-background-colors"&gt;below&lt;/a&gt;.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Pressing &lt;code&gt;fn + F5&lt;/code&gt; cycles through:&lt;/p&gt;
 &lt;table&gt;
@@ -229,7 +230,7 @@ mode:&lt;/p&gt;
 &lt;td align="center"&gt;✅&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;6. Custom&lt;/td&gt;
+&lt;td&gt;6. Custom (see &lt;a href="https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#custom-mode"&gt;below&lt;/a&gt;)&lt;/td&gt;
 &lt;td align="center"&gt;✅&lt;/td&gt;
 &lt;td align="center"&gt;✅&lt;/td&gt;
 &lt;td align="center"&gt;&lt;/td&gt;
@@ -308,32 +309,37 @@ mode:&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Modes marked "reactive" react to keypresses. Mostly this lights up a pattern
+around the pressed key. In the case of "snake", you can play using the arrow
+keys.&lt;/p&gt;
+&lt;p&gt;&lt;span id="foreground-and-background-colors"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h3&gt;Foreground &amp;amp; background colors&lt;/h3&gt;
-&lt;p&gt;Most or all of the modes, selected by &lt;code&gt;fn + F5&lt;/code&gt;, have a foreground effect that
-you can change the color of. For example, in the &lt;em&gt;all-one-color&lt;/em&gt; mode,
-(officially called "static", I think), you can select the color with which all
-keys are lit, using &lt;code&gt;fn + F2/F3/F4&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Many of the modes have a foreground effect that you can change the color of.
+For example, in the &lt;em&gt;all-one-color&lt;/em&gt; mode (officially called "static")
+you can select the color with which all keys are lit, using &lt;code&gt;fn + F2/F3/F4&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Some of the modes also have a second color, the background, that you can set
 separately. You can see if a mode offers this by selecting the mode and holding
 &lt;code&gt;fn&lt;/code&gt;. If this mode offers two settable colors, then either &lt;code&gt;F6&lt;/code&gt; or &lt;code&gt;F7&lt;/code&gt; will
 flash white, to show you which one you are currently setting.&lt;/p&gt;
 &lt;p&gt;Press &lt;code&gt;fn + F6/F7&lt;/code&gt; to choose foreground or background,
 then use &lt;code&gt;fn + F2/F3/F4&lt;/code&gt; to set it.&lt;/p&gt;
+&lt;p&gt;&lt;span id="custom-mode"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h3&gt;Custom mode&lt;/h3&gt;
-&lt;p&gt;Custom mode lets the user assign a different color to each key.&lt;/p&gt;
+&lt;p&gt;Custom (mode #6 above) lets the user assign a different color to each key.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;First, cycle through modes using &lt;code&gt;fn + F5&lt;/code&gt; until you reach custom mode It
-   can be tricky to identify when you've reached it. Use the list of modes
+&lt;li&gt;First, cycle through modes using &lt;code&gt;fn + F5&lt;/code&gt; until you reach custom mode.
+   It can be tricky to identify when you've reached it. Use the list of modes
    above to help.&lt;/li&gt;
 &lt;li&gt;While in custom mode, press &lt;code&gt;fn + F10&lt;/code&gt; to edit key colors.&lt;/li&gt;
 &lt;li&gt;Select a color using &lt;code&gt;fn + F2/F3/F4&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Press all the keys you want lit in the selected color. Pressing the same key
    again turns it unlit.&lt;/li&gt;
 &lt;li&gt;Repeat steps 3 &amp;amp; 4 for other color/key combinations.&lt;/li&gt;
-&lt;li&gt;Finally, save to your current profile by holding &lt;code&gt;fn&lt;/code&gt; and pressing your
-   current profile key (whichever of &lt;code&gt;Esc/1/2/3/4&lt;/code&gt; is flashing white.)&lt;/li&gt;
+&lt;li&gt;Finally, save to your current profile (see &lt;a href="https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#profiles"&gt;below&lt;/a&gt;) by holding
+   &lt;code&gt;fn&lt;/code&gt; and pressing your current profile key (whichever of &lt;code&gt;Esc/1/2/3/4&lt;/code&gt; is
+   flashing white.)&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;(see the section below for more about using profiles.)&lt;/p&gt;
 &lt;p&gt;Some wrinkles:&lt;/p&gt;
 &lt;p&gt;I can't manage to set a color for the FN key itself, which always appears unlit
 in this mode.&lt;/p&gt;
@@ -342,18 +348,20 @@ Similarly, scroll lock seems to always be unlit for me in this mode,
 although it is lit in other modes.&lt;/p&gt;
 &lt;p&gt;When you try to assign a color to whichever one of &lt;code&gt;Esc/1/2/3/4&lt;/code&gt; is lit white,
 to indicate the active profile, then nothing visible happens, but it is
-working. You have to save, or cancel exit key color editing by loading
-a different profile.
-Then you can see whether you successfully assigned the color, or pressed
-the key one too many times and left it unlit.&lt;/p&gt;
+working. You have to save, or cancel key color editing by loading a different
+profile.
+Then you can see whether you successfully assigned the color,
+or pressed the key one too many times and left it unlit.&lt;/p&gt;
 &lt;p&gt;While editing key colors, if you wait, without exit/saving, pressing nothing
 for a minute or so, then it cancels all your changes since step 2.&lt;/p&gt;
+&lt;p&gt;&lt;span id="profiles"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h3&gt;Profiles&lt;/h3&gt;
 &lt;p&gt;There are five "profiles", each of which can be used to save the current
 state of the keyboard.&lt;/p&gt;
 &lt;p&gt;The profiles are accessed using &lt;code&gt;fn + 1/2/3/4/Esc&lt;/code&gt;. &lt;code&gt;Esc&lt;/code&gt; is the "default"
-profile. I don't know what this means. (When plugging the keyboard USB into
-a computer, the last active profile is restored, so it isn't that.)&lt;/p&gt;
+profile. I don't know what this means. (When turning the keyboard on, ie.
+plugging the USB cable into a computer, the last active profile is restored,
+so it isn't that.)&lt;/p&gt;
 &lt;p&gt;The current profile is shown when you hold &lt;code&gt;fn&lt;/code&gt;, by one of &lt;code&gt;1/2/3/4/Esc&lt;/code&gt;
 flashing white. While keeping FN pressed:&lt;/p&gt;
 &lt;ul&gt;
@@ -368,8 +376,8 @@ flashing white. While keeping FN pressed:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Hence, to save changes to an arbitrary profile, you need to select that
 profile &lt;em&gt;before&lt;/em&gt; making the changes.&lt;/p&gt;
-&lt;p&gt;Each profile saves the configuration of every mode, plus which mode is
-currently selected. Are macros stored in a profile? Don't know.&lt;/p&gt;&lt;/div&gt;</description><category>hardware</category><category>keyboard</category><category>manual</category><guid>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</guid><pubDate>Fri, 23 Jul 2021 18:41:50 GMT</pubDate></item><item><title>Self-Calm</title><link>https://www.tartley.com/posts/self-calm/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;p&gt;Each profile saves the configuration of every mode, plus it remembers which
+mode is currently selected. Are macros stored in a profile? Don't know.&lt;/p&gt;&lt;/div&gt;</description><category>hardware</category><category>keyboard</category><category>manual</category><guid>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</guid><pubDate>Fri, 23 Jul 2021 18:41:50 GMT</pubDate></item><item><title>Self-Calm</title><link>https://www.tartley.com/posts/self-calm/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Self Calm cover" src="https://www.tartley.com/files/2021/self-calm-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Chris DeLeon (2018)&lt;/em&gt;&lt;/p&gt;
