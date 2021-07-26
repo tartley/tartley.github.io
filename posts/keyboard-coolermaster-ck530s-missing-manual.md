@@ -96,7 +96,7 @@ Pressing `fn + F5` cycles through:
 |  9. Color cycle            |            |              |             |
 | 10. Breathing              | ✅         |              |             |
 | 11. Ripple                 | ✅         | ✅           | ✅          |
-| 12. Reactive punch         |            |              |             |
+| 12. Reactive punch         |            |              | ✅          |
 | 13. Arcing                 | ✅         | ✅           | ✅          |
 | 15. Fireball               | ✅         | ✅           | ✅          |
 | 16. Tornado (color spin)   |            |              |             |
@@ -155,13 +155,13 @@ although it is lit in other modes.
 
 When you try to assign a color to whichever one of `Esc/1/2/3/4` is lit white,
 to indicate the active profile, then nothing visible happens, but it is
-working. You have to save, or cancel key color editing by loading a different
-profile.
+working. You have to save (step 6 above).
 Then you can see whether you successfully assigned the color,
 or pressed the key one too many times and left it unlit.
 
 While editing key colors, if you wait, without exit/saving, pressing nothing
-for a minute or so, then it cancels all your changes since step 2.
+for a minute or so, then key color editing times out, cancelling all your
+changes since step 2.
 
 <span id="profiles" />
 
@@ -171,9 +171,9 @@ There are five "profiles", each of which can be used to save the current
 state of the keyboard.
 
 The profiles are accessed using `fn + 1/2/3/4/Esc`. `Esc` is the "default"
-profile. I don't know what this means. (When turning the keyboard on, ie.
-plugging the USB cable into a computer, the last active profile is restored,
-so it isn't that.)
+profile. Current keyboard settings (e.g. illumination mode and customized
+colors) can be saved to one of the five profiles, and then loaded back later.
+Are macros stored in a profile? Don't know.
 
 The current profile is shown when you hold `fn`, by one of `1/2/3/4/Esc`
 flashing white. While keeping FN pressed:
@@ -187,6 +187,6 @@ flashing white. While keeping FN pressed:
 Hence, to save changes to an arbitrary profile, you need to select that
 profile *before* making the changes.
 
-Each profile saves the configuration of every mode, plus it remembers which
-mode is currently selected. Are macros stored in a profile? Don't know.
+When turning the keyboard on (ie. plugging the USB cable into a computer),
+the active profile will be whichever one was last active.
 
