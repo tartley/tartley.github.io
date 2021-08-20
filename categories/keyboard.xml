@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about keyboard)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/keyboard.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 24 Jul 2021 03:31:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Keyboard CoolerMaster CK530's Missing Manual</title><link>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I have a
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about keyboard)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/keyboard.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 20 Aug 2021 19:49:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Keyboard CoolerMaster CK530's Missing Manual</title><link>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I have a
 &lt;a href="https://www.coolermaster.com/catalog/peripheral/keyboards/ck530/"&gt;CoolerMaster CK530&lt;/a&gt;
 mechanical keyboard, which I love. It might have come with a small printed
 manual, but if it did, I no longer have it, and I'm failing to find one online.
@@ -269,7 +269,7 @@ mode:&lt;/p&gt;
 &lt;td&gt;12. Reactive punch&lt;/td&gt;
 &lt;td align="center"&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&lt;/td&gt;
-&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;✅&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;13. Arcing&lt;/td&gt;
@@ -348,20 +348,20 @@ Similarly, scroll lock seems to always be unlit for me in this mode,
 although it is lit in other modes.&lt;/p&gt;
 &lt;p&gt;When you try to assign a color to whichever one of &lt;code&gt;Esc/1/2/3/4&lt;/code&gt; is lit white,
 to indicate the active profile, then nothing visible happens, but it is
-working. You have to save, or cancel key color editing by loading a different
-profile.
+working. You have to save (step 6 above).
 Then you can see whether you successfully assigned the color,
 or pressed the key one too many times and left it unlit.&lt;/p&gt;
 &lt;p&gt;While editing key colors, if you wait, without exit/saving, pressing nothing
-for a minute or so, then it cancels all your changes since step 2.&lt;/p&gt;
+for a minute or so, then key color editing times out, cancelling all your
+changes since step 2.&lt;/p&gt;
 &lt;p&gt;&lt;span id="profiles"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h3&gt;Profiles&lt;/h3&gt;
 &lt;p&gt;There are five "profiles", each of which can be used to save the current
 state of the keyboard.&lt;/p&gt;
 &lt;p&gt;The profiles are accessed using &lt;code&gt;fn + 1/2/3/4/Esc&lt;/code&gt;. &lt;code&gt;Esc&lt;/code&gt; is the "default"
-profile. I don't know what this means. (When turning the keyboard on, ie.
-plugging the USB cable into a computer, the last active profile is restored,
-so it isn't that.)&lt;/p&gt;
+profile. Current keyboard settings (e.g. illumination mode and customized
+colors) can be saved to one of the five profiles, and then loaded back later.
+Are macros stored in a profile? Don't know.&lt;/p&gt;
 &lt;p&gt;The current profile is shown when you hold &lt;code&gt;fn&lt;/code&gt;, by one of &lt;code&gt;1/2/3/4/Esc&lt;/code&gt;
 flashing white. While keeping FN pressed:&lt;/p&gt;
 &lt;ul&gt;
@@ -376,5 +376,5 @@ flashing white. While keeping FN pressed:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Hence, to save changes to an arbitrary profile, you need to select that
 profile &lt;em&gt;before&lt;/em&gt; making the changes.&lt;/p&gt;
-&lt;p&gt;Each profile saves the configuration of every mode, plus it remembers which
-mode is currently selected. Are macros stored in a profile? Don't know.&lt;/p&gt;&lt;/div&gt;</description><category>hardware</category><category>keyboard</category><category>manual</category><guid>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</guid><pubDate>Fri, 23 Jul 2021 18:41:50 GMT</pubDate></item></channel></rss>
+&lt;p&gt;When turning the keyboard on (ie. plugging the USB cable into a computer),
+the active profile will be whichever one was last active.&lt;/p&gt;&lt;/div&gt;</description><category>hardware</category><category>keyboard</category><category>manual</category><guid>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</guid><pubDate>Fri, 23 Jul 2021 18:41:50 GMT</pubDate></item></channel></rss>
