@@ -70,7 +70,37 @@
     
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/112263-by-steven-king/" class="u-url">11/22/63, by Steven King</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-create-mp3-from-youtube-video/" class="u-url">TIL: Create mp3 from YouTube video</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/til-create-mp3-from-youtube-video/" rel="bookmark">
+            <time class="published dt-published" datetime="2021-05-13T11:18:33-05:00" itemprop="datePublished" title="2021-05-13 11:18">2021-05-13 11:18</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/til-create-mp3-from-youtube-video/#disqus_thread" data-disqus-identifier="cache/posts/til-create-mp3-from-youtube-video.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Install <code>youtube-dl</code>, a tool to download YouTube videos. Using <code>apt</code> installs a
+version that's too old to work, so:</p>
+<pre class="code literal-block">pipsi install youtube-dl
+</pre>
+<p>Download the video from YouTube:</p>
+<pre class="code literal-block">youtube-dl https://www.youtube.com/watch?v<span class="o">=</span>nyU1Pt2IXyE
+</pre>
+<p>This results in a webm file. I have no idea what that is, and am relieved
+to discover that converting it into an mp3 requires just:</p>
+<pre class="code literal-block">ffmpeg -I MyVideoFile.webm -vn MyAudioFile.mp3
+</pre>
+<p>Where <code>-vn</code> disables video in the output.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/112263-by-steven-king/" class="u-url">11/22/63, by Steven King</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley

@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about media)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/media.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 20 Aug 2021 19:57:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Glass Bead Game</title><link>https://www.tartley.com/posts/the-glass-bead-game-by-hermann-hesse-1943/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about media)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/media.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Oct 2021 03:31:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Manifold Garden</title><link>https://www.tartley.com/posts/manifold-garden/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Manifold Garden screenshot" src="https://www.tartley.com/files/2021/manifold-garden.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Windows, 2019. Completed.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This was always going to turn my head, marrying a marvellous geometric engine
+to an austere, flat-shaded renderer. Bewildering portals, seamlessly disguised
+as humble doorways, are the simplest of its tricks. More pervasive, levels are
+wraparound along all three spatial dimensions, as can be seen by the
+disorienting arrays of geometry - the current level, infinitely repeated,
+offset or re-oriented - marching to the vanishing points, dwindling to infinity
+in all directions.&lt;/p&gt;
+&lt;p&gt;This is no mere trippy backdrop. Gravity can be trivially flipped to lie along
+any cardinal axis, and one will routinely step off, into a yawning, infinite
+abyss, to fall through the entire level, and beyond, through and amongst the
+infinite constellations of geometry, airsteering all the way, to land,
+unharmed, anywhere that's exposed to the direction you're falling from. It
+becomes a form of teleportation, used to get from A to B almost as frequently
+as simply walking around.&lt;/p&gt;
+&lt;p&gt;This non-Euclidian wrapping is baked deeply into the visuals, the engine, and
+the gameplay. But for all that technical mastery, the puzzles themselves aren't
+as deep and creative and varied as those in the ostensibly similar, but
+less technically accomplished, &lt;em&gt;Antichamber&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Having said that, there's something entirely appropriate in this. The puzzles
+end up being as much rituals as a headscratchers, holy spatial rites one
+performs to unleash the deeply evocative visuals towards the end of each level
+- a faceted and angular psychadelic, coupled with unnerving reformulations of
+reality straight out of Farbrausch's
+&lt;em&gt;&lt;a href="https://www.youtube.com/watch?v=wqu_IpkOYBg"&gt;Debris&lt;/a&gt;&lt;/em&gt;. By the final level,
+this crescendos in scenes reminiscent of &lt;em&gt;2001: A Space Odyssey&lt;/em&gt;, profound in
+both the intimacy of my commune with godhood, and in my continued inability to
+understand what I had achieved. Created a universe, probably.&lt;/p&gt;&lt;/div&gt;</description><category>game</category><category>media</category><guid>https://www.tartley.com/posts/manifold-garden/</guid><pubDate>Tue, 05 Oct 2021 03:16:08 GMT</pubDate></item><item><title>The Glass Bead Game</title><link>https://www.tartley.com/posts/the-glass-bead-game-by-hermann-hesse-1943/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="The Glass Bead Game cover" src="https://www.tartley.com/files/2021/glass-bead-game-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Hermann Hesse (1943). Translated from German to English with evident
@@ -229,39 +259,4 @@ including Amazon links, EPUBs, or free-to-read online,
 &lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>epub</category><category>fiction</category><category>free-to-read</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/there-is-no-antimemetics-division/</guid><pubDate>Mon, 10 May 2021 18:50:52 GMT</pubDate></item><item><title>Lena</title><link>https://www.tartley.com/posts/lena/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Fabulous short story, &lt;a href="https://qntm.org/mmacevedo"&gt;Lena&lt;/a&gt; by qntm, riffs on
 &lt;a href="http://www.scpwiki.com/"&gt;SCP&lt;/a&gt;'s idea of a work of fiction as a wiki entry.
 But this is entirely standalone, not part of the SCP universe, and more
-resembles a Wikipedia entry. Seems both genuinely scary and almost inevitable.&lt;/p&gt;</description><category>media</category><category>science-fiction</category><category>short</category><guid>https://www.tartley.com/posts/lena/</guid><pubDate>Sun, 09 May 2021 21:25:51 GMT</pubDate></item><item><title>Intelligence: A Very Short Introduction</title><link>https://www.tartley.com/posts/intelligence-a-very-short-introduction/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Intelligence cover" src="https://www.tartley.com/files/2021/intelligence-cover.jpg"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Ian J. Deary (1st Ed, 2001)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;An expert's overview for the layman, describing how and why people differ in
-their thinking powers, Very data driven, and by necessity, largely driven by
-consideration of how to measure different aspects of intelligence, and
-therefore what aspects intelligence can be teased apart into, such as working
-memory, linguistic comprehension, perceptual organization, and speed of
-operation.&lt;/p&gt;
-&lt;p&gt;Each chapter tackles a key scientific question, describing the experiments
-that were done to determine the answers, showing the actual
-key experimental datasets.&lt;/p&gt;
-&lt;p&gt;Such questions include: Is intelligence determined by genes or the environment?
-The answer is 50/50, although surprisingly, little of the environmental
-influence is due to the family raising the child. Also, the effect of genetics
-increases with age.&lt;/p&gt;
-&lt;p&gt;How does a person's intelligence change as they age? Some skills show a
-straight decline from age 25 to 80, such as inductive reasoning, spatial
-awareness, perceptual speed and verbal memory. Other skills show a peak in
-middle-age, with only a small decline at high ages, such as verbal reasoning
-and numerical ability. The amount of mental decline with age is highly variable
-between different people. Those whose abilities decline the least have no
-cardio issues or chronic disease, have high social class, live in complex and
-stimulating environments, and are generally satisfied with life, and unstressed
-through middle age.&lt;/p&gt;
-&lt;p&gt;Does intelligence, especially as measured using existing tests, correlate with
-life outoutcomes such doing well at a job? Depending on the job, yes, a great
-deal. What sort of tests are good for predicting who will do well? Work
-samples, structured interviews, and psychometric tests all give slightly over
-0.5 correlations. Which isn't stellar, but it's the best we've got. At the
-other end of the scale, graphology (handwriting) and age rankings had no
-correlation.&lt;/p&gt;
-&lt;p&gt;It's a short book, with a lively style, densely packed with important
-conclusions, and descriptions of how the field has arrived at them. Edifying.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>cognition</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/intelligence-a-very-short-introduction/</guid><pubDate>Mon, 18 Jan 2021 11:58:23 GMT</pubDate></item></channel></rss>
+resembles a Wikipedia entry. Seems both genuinely scary and almost inevitable.&lt;/p&gt;</description><category>media</category><category>science-fiction</category><category>short</category><guid>https://www.tartley.com/posts/lena/</guid><pubDate>Sun, 09 May 2021 21:25:51 GMT</pubDate></item></channel></rss>

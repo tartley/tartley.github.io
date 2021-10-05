@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://www.tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 20 Aug 2021 19:57:41 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Glass Bead Game</title><link>https://www.tartley.com/posts/the-glass-bead-game-by-hermann-hesse-1943/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://www.tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Oct 2021 03:31:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Manifold Garden</title><link>https://www.tartley.com/posts/manifold-garden/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Manifold Garden screenshot" src="https://www.tartley.com/files/2021/manifold-garden.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Windows, 2019. Completed.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This was always going to turn my head, marrying a marvellous geometric engine
+to an austere, flat-shaded renderer. Bewildering portals, seamlessly disguised
+as humble doorways, are the simplest of its tricks. More pervasive, levels are
+wraparound along all three spatial dimensions, as can be seen by the
+disorienting arrays of geometry - the current level, infinitely repeated,
+offset or re-oriented - marching to the vanishing points, dwindling to infinity
+in all directions.&lt;/p&gt;
+&lt;p&gt;This is no mere trippy backdrop. Gravity can be trivially flipped to lie along
+any cardinal axis, and one will routinely step off, into a yawning, infinite
+abyss, to fall through the entire level, and beyond, through and amongst the
+infinite constellations of geometry, airsteering all the way, to land,
+unharmed, anywhere that's exposed to the direction you're falling from. It
+becomes a form of teleportation, used to get from A to B almost as frequently
+as simply walking around.&lt;/p&gt;
+&lt;p&gt;This non-Euclidian wrapping is baked deeply into the visuals, the engine, and
+the gameplay. But for all that technical mastery, the puzzles themselves aren't
+as deep and creative and varied as those in the ostensibly similar, but
+less technically accomplished, &lt;em&gt;Antichamber&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Having said that, there's something entirely appropriate in this. The puzzles
+end up being as much rituals as a headscratchers, holy spatial rites one
+performs to unleash the deeply evocative visuals towards the end of each level
+- a faceted and angular psychadelic, coupled with unnerving reformulations of
+reality straight out of Farbrausch's
+&lt;em&gt;&lt;a href="https://www.youtube.com/watch?v=wqu_IpkOYBg"&gt;Debris&lt;/a&gt;&lt;/em&gt;. By the final level,
+this crescendos in scenes reminiscent of &lt;em&gt;2001: A Space Odyssey&lt;/em&gt;, profound in
+both the intimacy of my commune with godhood, and in my continued inability to
+understand what I had achieved. Created a universe, probably.&lt;/p&gt;&lt;/div&gt;</description><category>game</category><category>media</category><guid>https://www.tartley.com/posts/manifold-garden/</guid><pubDate>Tue, 05 Oct 2021 03:16:08 GMT</pubDate></item><item><title>The Glass Bead Game</title><link>https://www.tartley.com/posts/the-glass-bead-game-by-hermann-hesse-1943/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="The Glass Bead Game cover" src="https://www.tartley.com/files/2021/glass-bead-game-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Hermann Hesse (1943). Translated from German to English with evident
@@ -756,15 +786,4 @@ white paper refers to that future hypothetical efficiency?&lt;/p&gt;
 become more efficient in the future too (e.g. Bitcoin is in the process
 of deploying its lightning network, which will reduce per transaction
 energy use.)  So I think it's fair to leave the above figures as they are,
-as a snapshot of current reality.&lt;/p&gt;&lt;/div&gt;</description><category>chia</category><category>cryptocurrency</category><category>til</category><guid>https://www.tartley.com/posts/til-cryptocurrency-per-transaction-energy-use/</guid><pubDate>Thu, 13 May 2021 21:09:33 GMT</pubDate></item><item><title>TIL: Create mp3 from YouTube video</title><link>https://www.tartley.com/posts/til-create-mp3-from-youtube-video/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Install &lt;code&gt;youtube-dl&lt;/code&gt;, a tool to download YouTube videos. Using &lt;code&gt;apt&lt;/code&gt; installs a
-version that's too old to work, so:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;pipsi install youtube-dl
-&lt;/pre&gt;
-&lt;p&gt;Download the video from YouTube:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;youtube-dl https://www.youtube.com/watch?v&lt;span class="o"&gt;=&lt;/span&gt;nyU1Pt2IXyE
-&lt;/pre&gt;
-&lt;p&gt;This results in a webm file. I have no idea what that is, and am relieved
-to discover that converting it into an mp3 requires just:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;ffmpeg -I MyVideoFile.webm -vn MyAudioFile.mp3
-&lt;/pre&gt;
-&lt;p&gt;Where &lt;code&gt;-vn&lt;/code&gt; disables video in the output.&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>music</category><category>til</category><guid>https://www.tartley.com/posts/til-create-mp3-from-youtube-video/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item></channel></rss>
+as a snapshot of current reality.&lt;/p&gt;&lt;/div&gt;</description><category>chia</category><category>cryptocurrency</category><category>til</category><guid>https://www.tartley.com/posts/til-cryptocurrency-per-transaction-energy-use/</guid><pubDate>Thu, 13 May 2021 21:09:33 GMT</pubDate></item></channel></rss>
