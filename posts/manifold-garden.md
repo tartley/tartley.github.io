@@ -10,7 +10,7 @@
 ![Manifold Garden screenshot](/files/2021/manifold-garden.jpg)
 </span>
 
-*Windows, 2019. Completed.*
+*Windows, published 2019. Completed.*
 
 This was always going to turn my head, marrying a marvellous geometric engine
 to an austere, flat-shaded renderer. Bewildering portals, seamlessly disguised
@@ -41,4 +41,4 @@ reality straight out of Farbrausch's
 *[Debris](https://www.youtube.com/watch?v=wqu_IpkOYBg)*. By the final level,
 this crescendos in scenes reminiscent of *2001: A Space Odyssey*, profound in
 both the intimacy of my commune with godhood, and in my continued inability to
-understand what I had achieved. Created a universe, probably.
+understand what I had achieved. Created a universe, probably? Yeah, probably.
