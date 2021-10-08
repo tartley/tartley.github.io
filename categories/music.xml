@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about music)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/music.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 06 Oct 2021 15:41:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Create mp3 from YouTube video</title><link>https://www.tartley.com/posts/til-create-mp3-from-youtube-video/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Install &lt;code&gt;youtube-dl&lt;/code&gt;, a tool to download YouTube videos. Using &lt;code&gt;apt&lt;/code&gt; installs a
-version that's too old to work, so:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;pipsi install youtube-dl
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about music)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/music.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 08 Oct 2021 02:57:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Download audio from YouTube</title><link>https://www.tartley.com/posts/til-create-mp3-from-youtube-video/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Install ffmpeg:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;sudo apt install ffmpeg
 &lt;/pre&gt;
+&lt;p&gt;Install &lt;code&gt;youtube-dl&lt;/code&gt;, a tool to download YouTube videos. Using &lt;code&gt;apt&lt;/code&gt; installs a
+version that's too old to work, so:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;pip install --user pipsi
+pipsi install youtube-dl
+&lt;/pre&gt;
+&lt;h3&gt;The best way&lt;/h3&gt;
+&lt;p&gt;Tell youtube-dl to download the audio:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;youtube-dl -x --audio-format&lt;span class="o"&gt;=&lt;/span&gt;best URL
+&lt;/pre&gt;
+&lt;p&gt;Where
+* &lt;code&gt;-x&lt;/code&gt; downloads just the audio part.
+* Audio format defaults to 'best', but can be "aac", "flac", "mp3", "m4a",
+  "opus", "vorbis", or "wav".&lt;/p&gt;
+&lt;p&gt;As I understand it, it downloads whatever audio format YouTube provides,
+then converts it locally using ffmpeg, so you're not really getting the
+benefit of those lossless formats - my3 is fine for
+&lt;a href="https://www.youtube.com/watch?v=VSJWvzLuGz8"&gt;my&lt;/a&gt;
+&lt;a href="https://www.youtube.com/watch?v=nyU1Pt2IXyE"&gt;needs&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;My previous inferior way&lt;/h3&gt;
+&lt;p&gt;This method is worse because it downloads the whole video file before
+extracting audio locally, and the download gets throttled by youtube in some
+way, which of late is very slow indeed.&lt;/p&gt;
 &lt;p&gt;Download the video from YouTube:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;youtube-dl https://www.youtube.com/watch?v&lt;span class="o"&gt;=&lt;/span&gt;nyU1Pt2IXyE
+&lt;pre class="code literal-block"&gt;youtube-dl URL
 &lt;/pre&gt;
 &lt;p&gt;This results in a webm file. I have no idea what that is, and am relieved
 to discover that converting it into an mp3 requires just:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;ffmpeg -I MyVideoFile.webm -vn MyAudioFile.mp3
+&lt;pre class="code literal-block"&gt;ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
 &lt;/pre&gt;
 &lt;p&gt;Where &lt;code&gt;-vn&lt;/code&gt; disables video in the output.&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>music</category><category>til</category><guid>https://www.tartley.com/posts/til-create-mp3-from-youtube-video/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>My Cacophony</title><link>https://www.tartley.com/posts/my-cacaphony/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Google Calendar tells me that I've now had 8 piano lessons with the
 esteemed Marios. It's been heaps of fun, and it's long past time I
