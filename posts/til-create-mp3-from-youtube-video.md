@@ -26,7 +26,7 @@ This results in a webm file. I have no idea what that is, and am relieved
 to discover that converting it into an mp3 requires just:
 
 ```bash
-ffmpeg -I MyVideoFile.webm -vn MyAudioFile.mp3
+ffmpeg -i MyVideoFile.webm -vn MyAudioFile.mp3
 ```
 
 Where `-vn` disables video in the output.
