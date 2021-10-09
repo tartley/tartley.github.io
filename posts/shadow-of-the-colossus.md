@@ -2,7 +2,7 @@
 .. title: Shadow of the Colossus
 .. slug: shadow-of-the-colossus
 .. date: 2009-01-15 19:33:59-06:00
-.. tags: media,game,ps2
+.. tags: media,game,ps2,completed
 .. type: text
 -->
 

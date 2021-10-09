@@ -2,7 +2,7 @@
 .. title: Manifold Garden
 .. slug: manifold-garden
 .. date: 2021-10-04 22:16:08 UTC-05:00
-.. tags: media,game
+.. tags: media,game,completed
 .. type: text
 -->
 
@@ -10,7 +10,7 @@
 ![Manifold Garden screenshot](/files/2021/manifold-garden.jpg)
 </span>
 
-*Windows, published 2019. Completed.*
+*Windows, 2019*
 
 This was always going to turn my head, marrying a marvellous geometric engine
 to an austere, flat-shaded renderer. Bewildering portals, seamlessly disguised
