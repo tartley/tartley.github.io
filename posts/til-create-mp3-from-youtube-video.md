@@ -35,7 +35,7 @@ Where
 
 As I understand it, it downloads whatever audio format YouTube provides,
 then converts it locally using ffmpeg, so you're not really getting the
-benefit of those lossless formats - my3 is fine for
+benefit of those lossless formats - mp3 is fine for
 [my](https://www.youtube.com/watch?v=VSJWvzLuGz8)
 [needs](https://www.youtube.com/watch?v=nyU1Pt2IXyE).
 
