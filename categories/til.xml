@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Today I learned)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 08 Oct 2021 02:57:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Energy use per transaction for cryptocurrencies vs Visa</title><link>https://www.tartley.com/posts/til-cryptocurrency-per-transaction-energy-use/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;For my own calibration, approximate current energy use for a single transaction
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Today I learned)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 09 Oct 2021 20:01:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Energy use per transaction for cryptocurrencies vs Visa</title><link>https://www.tartley.com/posts/til-cryptocurrency-per-transaction-energy-use/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;For my own calibration, approximate current energy use for a single transaction
 in various cryptocurrencies, compared with using Visa:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -131,7 +131,7 @@ pipsi install youtube-dl
   "opus", "vorbis", or "wav".&lt;/p&gt;
 &lt;p&gt;As I understand it, it downloads whatever audio format YouTube provides,
 then converts it locally using ffmpeg, so you're not really getting the
-benefit of those lossless formats - my3 is fine for
+benefit of those lossless formats - mp3 is fine for
 &lt;a href="https://www.youtube.com/watch?v=VSJWvzLuGz8"&gt;my&lt;/a&gt;
 &lt;a href="https://www.youtube.com/watch?v=nyU1Pt2IXyE"&gt;needs&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;My previous inferior way&lt;/h3&gt;

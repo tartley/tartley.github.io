@@ -50,6 +50,10 @@
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://www.tartley.com/categories/completed.xml</loc>
+  <lastmod>2021-10-09T20:01:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://www.tartley.com/categories/creative.xml</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </sitemap>
@@ -71,7 +75,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/ds.xml</loc>
-  <lastmod>2021-10-06T15:41:00Z</lastmod>
+  <lastmod>2021-10-09T20:01:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/economics.xml</loc>
@@ -103,7 +107,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/game.xml</loc>
-  <lastmod>2021-10-06T15:41:00Z</lastmod>
+  <lastmod>2021-10-09T20:01:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/gamedev.xml</loc>
@@ -179,7 +183,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/linux.xml</loc>
-  <lastmod>2021-10-08T02:57:00Z</lastmod>
+  <lastmod>2021-10-09T20:01:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/literature.xml</loc>
@@ -195,7 +199,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/media.xml</loc>
-  <lastmod>2021-10-06T15:41:00Z</lastmod>
+  <lastmod>2021-10-09T20:01:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/meetup.xml</loc>
@@ -215,7 +219,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/music.xml</loc>
-  <lastmod>2021-10-08T02:57:00Z</lastmod>
+  <lastmod>2021-10-09T20:01:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/non-fiction.xml</loc>
@@ -235,7 +239,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/pc.xml</loc>
-  <lastmod>2021-10-06T15:41:00Z</lastmod>
+  <lastmod>2021-10-09T20:01:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/personal.xml</loc>
@@ -259,7 +263,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/ps2.xml</loc>
-  <lastmod>2021-10-06T15:41:00Z</lastmod>
+  <lastmod>2021-10-09T20:01:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/psychology.xml</loc>
@@ -299,7 +303,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/show.xml</loc>
-  <lastmod>2021-10-06T15:41:00Z</lastmod>
+  <lastmod>2021-10-09T20:01:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/software.xml</loc>
@@ -331,7 +335,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/til.xml</loc>
-  <lastmod>2021-10-08T02:57:00Z</lastmod>
+  <lastmod>2021-10-09T20:01:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/time-travel.xml</loc>
@@ -363,10 +367,10 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/rss.xml</loc>
-  <lastmod>2021-10-08T02:57:00Z</lastmod>
+  <lastmod>2021-10-09T20:01:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/sitemap.xml</loc>
-  <lastmod>2021-10-08T02:57:00Z</lastmod>
+  <lastmod>2021-10-09T20:01:00Z</lastmod>
  </sitemap>
 </sitemapindex>
