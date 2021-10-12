@@ -1,0 +1,82 @@
+<!--
+.. title: Permanent Record
+.. slug: permanent-record
+.. date: 2021-10-10 11:18:16 UTC-05:00
+.. tags: media,book,non-fiction,memoir,law
+.. type: text
+-->
+
+*by Edward Snowden, 2019*
+
+<span style="float: left">
+![Permanent Record](/files/2021/permanent-record-cover.jpg)
+</span>
+
+I really enjoyed this memoir. The story is familiar, but intriguing to hear
+in the characteristically articulate words of Snowden himself.
+
+He recounts growing up as a computer nerd in a family dedicated to military
+service, punctuated by startling scenes such as being caught in the pandemonium
+outside NSA headquarters as it was evacuated during 9/11, and the subsequent
+overreach of surveillance capability that triggered.
+
+He describes the interesting parts of his ascent through jobs, and clearance
+levels, within the intelligence community, and how he came to slowly suspect —
+and later confirm — that the government was collecting all the communications
+and transactions, from everyone who touched a phone or computer, in America and
+across the world. A vast spying mechanism turned upon the populace, beyond the
+wildest dreams of the Stasi, who only surveilled one third of their population.
+
+At "Constitution Day" in the office, a forlorn desk in the cafeteria,
+handing out copies of the constitution, which his clearances had required that
+he — and everyone he worked with — swear an oath to uphold, he quoted the 4th
+amendment to colleagues:
+
+*"The right of the people to be secure in their persons, houses, papers, and
+effects, against unreasonable searches and seizures, shall not be violated."*
+
+The responses were dead-eyed shrugs - yeah, sure, but what can you do? What
+indeed.
+
+He describes the dangers of a government given too much power to spy on
+the everyday lives of its citizens, and the crisis of conscience that slowly
+lead to his decision to let the American people know that they were being spied
+upon, and his planning of how to go about it. How he slowly accumulated the
+hundreds of documents needed to reveal the full extent and capabilities of the
+spying apparatus. The extraction of those documents, hidden on his person on
+micro SD cards, concealed in places such as in a Rubik's cube he routinely
+carried through security. The months long process of selecting journalists who
+could both communicate the material coherently to the public, and vet the
+public releases to eliminate the risk to our undercover personnel.
+
+His recounts the preparations for flight, tying up his affairs like a man about
+to die. Emptying bank accounts, leaving cash for his girlfriend to find.
+Leaving the house tidy and repaired. The necessity of flight, to avoid a show
+trial, devoid of any meaningful defense. A whistle-blower is not allowed to
+argue that their disclosures were civilly beneficial. Even now, when Snowden's
+leaks have caused Congress to change laws regarding surveillance, or caused the
+courts to strike down types of mass surveillance programs as illegal, or caused
+both the Attorney General and the President of the United States to admit that
+the resulting debase over mass surveillance was a crucial one for the public to
+have. All these claims would be dismissed by the court as not just irrelevant,
+but inadmissible, leading to a sentence of up to ten years per leaked document.
+
+And finally, flight itself. A tense series of airplanes and delays, meeting the
+selected journalists in Hong Kong, selected for being sufficiently disjoint
+from Chinese rule so as not to taint his revelations with the suspicion of
+having sold out to China, but still sufficiently lawful, and under the auspices
+of the distant Chinese rule, that that the American government would not snatch
+him off the street with impunity.
+
+The indulgence of the Hong Kong government fell apart, as the US filed for
+extradition. He fled bound for Equador, but was pulled aside during a 20-hour
+layover in a Moscow airport, for a conversation with Russian intelligence,
+during which Snowden insists he will not work with them, he only wants to catch
+his flight out. They reveal to him that he cannot leave, since the US State
+department has cancelled his passport. He is stranded in Moscow airport for 40
+days, and eventually granted temporary asylum in Russia. Eventually, his
+girlfriend — who knew nothing about his plans — recovered from the shock of his
+unannounced departure, moved out to Moscow to be with him, and then a year
+later, they were married.
+
+<br style="clear: both" />
