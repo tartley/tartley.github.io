@@ -23,7 +23,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/book.xml</loc>
-  <lastmod>2021-10-06T15:41:00Z</lastmod>
+  <lastmod>2021-10-12T16:11:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/c.xml</loc>
@@ -63,7 +63,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/culture.xml</loc>
-  <lastmod>2021-10-06T15:41:00Z</lastmod>
+  <lastmod>2021-10-12T16:07:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/draw.xml</loc>
@@ -175,7 +175,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/law.xml</loc>
-  <lastmod>2021-10-06T15:41:00Z</lastmod>
+  <lastmod>2021-10-12T16:11:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/linking.xml</loc>
@@ -199,11 +199,15 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/media.xml</loc>
-  <lastmod>2021-10-09T20:01:00Z</lastmod>
+  <lastmod>2021-10-12T16:11:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/meetup.xml</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://www.tartley.com/categories/memoir.xml</loc>
+  <lastmod>2021-10-12T16:11:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/mental-health.xml</loc>
@@ -223,7 +227,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/non-fiction.xml</loc>
-  <lastmod>2021-10-06T15:41:00Z</lastmod>
+  <lastmod>2021-10-12T16:11:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/novel.xml</loc>
@@ -367,10 +371,10 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/rss.xml</loc>
-  <lastmod>2021-10-09T20:01:00Z</lastmod>
+  <lastmod>2021-10-12T16:11:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/sitemap.xml</loc>
-  <lastmod>2021-10-09T20:01:00Z</lastmod>
+  <lastmod>2021-10-12T16:11:00Z</lastmod>
  </sitemap>
 </sitemapindex>

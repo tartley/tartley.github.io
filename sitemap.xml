@@ -7,15 +7,15 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://www.tartley.com/</loc>
-  <lastmod>2021-10-06T15:42:00Z</lastmod>
+  <lastmod>2021-10-10T16:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2021-10-09T20:01:00Z</lastmod>
+  <lastmod>2021-10-12T16:11:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/</loc>
-  <lastmod>2021-10-09T20:01:00Z</lastmod>
+  <lastmod>2021-10-12T16:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/arcade/</loc>
@@ -216,6 +216,10 @@
  <url>
   <loc>https://www.tartley.com/categories/meetup/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/memoir/</loc>
+  <lastmod>2021-10-12T16:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/mental-health/</loc>
@@ -443,7 +447,11 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-24.html</loc>
-  <lastmod>2021-10-09T20:01:00Z</lastmod>
+  <lastmod>2021-10-10T16:20:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/index-25.html</loc>
+  <lastmod>2021-10-10T16:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-3.html</loc>
@@ -1100,6 +1108,10 @@
  <url>
   <loc>https://www.tartley.com/posts/perl-parody-of-itself/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/permanent-record/</loc>
+  <lastmod>2021-10-10T16:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</loc>
