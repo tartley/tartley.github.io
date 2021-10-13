@@ -27,10 +27,10 @@ and transactions, from everyone who touched a phone or computer, in America and
 across the world. A vast spying mechanism turned upon the populace, beyond the
 wildest dreams of the Stasi, who only surveilled one third of their population.
 
-At "Constitution Day" in the office, a forlorn desk in the cafeteria,
-handing out copies of the constitution, which his clearances had required that
-he — and everyone he worked with — swear an oath to uphold, he quoted the 4th
-amendment to colleagues:
+At "Constitution Day" in the office, a forlorn desk in the cafeteria hands
+out copies of the constitution, which his clearance had required that he, and
+his colleagues, swear an oath to uphold. He quoted the 4th amendment to
+colleagues:
 
 *"The right of the people to be secure in their persons, houses, papers, and
 effects, against unreasonable searches and seizures, shall not be violated."*
