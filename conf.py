@@ -540,7 +540,7 @@ HIDDEN_AUTHORS = ['Guest']
 # Optional HTML that displayed on “main” blog index.html files.
 # May be used for a greeting. (translatable)
 FRONT_INDEX_HEADER = {
-    DEFAULT_LANG: ''
+    DEFAULT_LANG: '<a rel="me" href="https://mastodon.social/@tartley"></a>'
 }
 
 # Create per-month archives instead of per-year
