@@ -1,8 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about book)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/book.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 19 Oct 2021 11:37:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Permanent Record</title><link>https://www.tartley.com/posts/permanent-record/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;by Edward Snowden, 2019&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about book)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/book.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 25 Oct 2021 19:28:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Buried Giant</title><link>https://www.tartley.com/posts/the-buried-giant/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="The Buried Giant cover" src="https://www.tartley.com/files/2021/the-buried-giant-cover.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Kazuo Ishiguro, 2015&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;A haunting and melancholic tale set in a mythical post-Arthurian England,
+populated by ragged peoples, affected by a pervasive amnesia. Elderly couple
+Axl and Beatrice abruptly decide to leave their village of damp, hobbit-like
+underground burrows to visit a son they'd forgotten they had.&lt;/p&gt;
+&lt;p&gt;Other characters are inspired by a variety of sources, from Beowulf to Arthur's
+knight and nephew Sir Gawain, now old and prone to quixotic rants - hinting at
+the subconscious conflict his code of honor has with the dark means by which he
+and other knights helped Arthur achieve the current uneasy peace between native
+Britons and invading Saxons, now occupying villages across the land.&lt;/p&gt;
+&lt;p&gt;The journey is perilous, encountering roaming ogres and deadly pixies, not
+to mention soldiers of the local lords, and deadly conflicts within the party
+itself.&lt;/p&gt;
+&lt;p&gt;But any action is relayed with cool distance. Either through the pervasive
+mental fog, or using expert fighters' clinical analysis of the minutia of
+stance or grip, or by foretelling the ebb and flow of a battle by analysing the
+terrain, then allowing the battle itself to take place off stage, only assumed
+to have happened, by characters who weren't there.&lt;/p&gt;
+&lt;p&gt;This muted indirectness is entirely in keeping with the ambiguous, dreamlike
+style of the book, which is heightened by the sing-song formalism of the
+characters' speech, and the narrator's occasional surreal hint of relating this
+tale to contemporaries who live in some other, unidentifiable, historic time.&lt;/p&gt;
+&lt;p&gt;The journey eventually comes to revolve around the dispatch - or defence - of a
+dragon that is said to be the source of everyone's forgetfulness, and as this
+goal approaches, vague fears surface of what might be remembered, when the
+mist lifts. Will Axl and Beatrice's treasured relationship survive the
+revelations of their pasts? Will the longstanding truce in the land survive
+the remembering of wartime battles and atrocities? Will Saxon resentment at
+Arthur's desperate misdeeds be stoked into resumption of the violent war of
+invasion? This is left unresolved by the novel's end, but as reader, we know
+that the Saxons did ultimately conquer all of England, displacing the Britons
+culturally and politically, and possibly murdering a good number of them along
+the way.&lt;/p&gt;
+&lt;p&gt;Personally, I'm minded to think of ancient England here as being the root of
+modern Western culture, and the mist as an allegory for the bland ignorance of
+our own culture's atrocities. The deliberate forgetting, like the mist, clouds
+all our conciousnesses, making it hard for us to remember who we are. Why we're
+here. The silent resentment of crushed minorities and genocide survivors forms
+a pressure, struggling against the placating narrative that everything's OK
+now. But, contained, the pressure builds.&lt;/p&gt;
+&lt;p&gt;Truly a buried giant, indeed.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>fantasy</category><category>fiction</category><category>media</category><category>novel</category><guid>https://www.tartley.com/posts/the-buried-giant/</guid><pubDate>Mon, 25 Oct 2021 15:16:53 GMT</pubDate></item><item><title>Permanent Record</title><link>https://www.tartley.com/posts/permanent-record/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Permanent Record" src="https://www.tartley.com/files/2021/permanent-record-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Edward Snowden, 2019&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I really enjoyed this memoir. The story is familiar, but intriguing to hear
 in the characteristically articulate words of Snowden himself.&lt;/p&gt;
 &lt;p&gt;He recounts growing up as a computer nerd in a family dedicated to military
@@ -306,142 +350,4 @@ other end of the scale, graphology (handwriting) and age rankings had no
 correlation.&lt;/p&gt;
 &lt;p&gt;It's a short book, with a lively style, densely packed with important
 conclusions, and descriptions of how the field has arrived at them. Edifying.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>cognition</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/intelligence-a-very-short-introduction/</guid><pubDate>Mon, 18 Jan 2021 11:58:23 GMT</pubDate></item><item><title>The Structure of Scientific Revolutions</title><link>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;This post rescues content from a series of tweets I wrote in 2018.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="The Structure of Scientific Revolutions cover" src="https://www.tartley.com/files/2020/the-structure-of-scientific-revolutions-cover.jpg"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Thomas S. Kuhn, 1962.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;I loved &lt;em&gt;The Structure of Scientfic Revolutions&lt;/em&gt;.
-It was recommended to me as having similar impact to undergraduate
-classics like &lt;em&gt;Godel, Escher, Bach&lt;/em&gt;, or &lt;em&gt;The Blind Watchmaker.&lt;/em&gt; I'm going
-to just summarize the content here, so: Spoilers.&lt;/p&gt;
-&lt;p&gt;It begins by observing that discredited scientific theories, even those
-which seem laughable today, such as phrenology, or the Ptolemaic model of the
-heavens, were not crackpot theories with shaky evidence. Earnest, hardworking
-practitioners refined them using sensible processes, which by the 17th century
-were converging on the modern scientific method.&lt;/p&gt;
-&lt;p&gt;This process of "normal" science excels at the incremental refinement of
-established scientific theories. But in practice, is unable to perform the
-revolutionary transitions required to overcome outmoded theories and replace
-them with others, no matter how bizarre and wrongheaded the initial theory
-looks to us now with hindsight.&lt;/p&gt;
-&lt;p&gt;So what is the unarticulated process that is responsible for these
-transitions, i.e. how do scientific revolutions happen? We have intuitive
-visions of this occurring overnight. An individual experiment yields unexpected
-results, contradicting conventional theory, while irrefutably supporting an
-alternate theory to take its place. But in practice, this &lt;em&gt;never&lt;/em&gt; happens.&lt;/p&gt;
-&lt;p&gt;At first, and often for years or centuries, no discrepancy between theory and
-experiment is noticed, because the prevailing theories of the time have a
-massive shaping effect on what questions it is valid to ask, what experiments
-are deemed useful to do.&lt;/p&gt;
-&lt;p&gt;For practitioners to turn their backs on an established theory in such a time
-is never productive. They are shunned for turning their backs on science
-itself.&lt;/p&gt;
-&lt;p&gt;We see this vividly today with homeopaths (my own example, not the book's).
-Often, and incorrectly, homeopathy is mocked because the theories sound
-ridiculous to one steeped in a conventional understanding of chemistry.
-People will jeer at how total dilution can 'obviously' have no effect,
-or at the idea of water exhibiting some sort of 'memory'. But such jeering is
-as scientifically illiterate as the quacks it contends with. The argument from
-personal incredulity has no place in determining scientific truth. No newer
-theory makes sense in the light of the more limited, and often contradictory,
-paradigm that it eventually replaces. The only useful criteria is to try it
-out. &lt;em&gt;Does it actually work?&lt;/em&gt; This is the axis upon which homeopathy should be
-judged. (and upon which it has decisively been found wanting.)&lt;/p&gt;
-&lt;p&gt;All contradictions to conventional science suffer a similar ignominious
-treatment, regardless of how right they might later turn out to be. Before any
-revolution of theory can overturn conventional understanding, the stage
-must be set, the community prepared.&lt;/p&gt;
-&lt;p&gt;The process begins as the incremental advances of "normal" science gradually
-increase the scope and precision of accepted theories. Until this point,
-measurements in which experiment does not conform to theory are either ignored
-as erroneous artifacts, or are dismissed as indicative of some separate,
-unknown phenomena. They are never interpreted to mean prevailing theory is
-wrong.&lt;/p&gt;
-&lt;p&gt;However the growing scope &amp;amp; precision of theory and measurement gradually
-uncovers more of these discrepancies, or reveals them in finer detail.
-Eventually they become too prominent to ignore, and a kind of phase transition
-occurs.&lt;/p&gt;
-&lt;p&gt;Eventually, the discrepancies become so prominent and concerning that they
-are judged to be a valid area of study in themselves, rather than just annoying
-aberrations. Leading practitioners devote themselves to the task. Foundations
-of the specialisation that were once accepted without question now come under
-scrutiny.&lt;/p&gt;
-&lt;p&gt;To partially explain the discrepancies, people introduce many incompatible
-variations on current theories. The once unified field divides into cliques,
-supporting different theoretical variations. The field, formerly a united mass,
-calves into fragments.&lt;/p&gt;
-&lt;p&gt;If one of these variations on existing theory manages to explain all
-observations, then this gradually gains mindshare, until the whole community
-has migrated to this new, incrementally improved theory.&lt;/p&gt;
-&lt;p&gt;However, in cases where a truly revolutionary change is required, such
-incrementalism is insufficient, and none of the theoretical variations are
-fully successful in explaining all observations. The factions' differing
-underlying assumptions give them no common ground upon which to arbitrate their
-differences, so their debates are irreconcilable. The fragments are melting,
-into a churning liquid of disagreement.&lt;/p&gt;
-&lt;p&gt;This state is notably similar to the state of a nascent field before any
-established scientific theories have taken hold.&lt;/p&gt;
-&lt;p&gt;All is chaos, with different groups supporting different ideas, agreeing on
-nothing. The field is in turmoil, its practitioners in genuine emotional
-distress. Their personal identities are undermined. What does it mean to be a
-practitioner when nobody can agree on what the field even is? Is what we do
-even &lt;em&gt;science&lt;/em&gt; at all? A crisis has arrived. We are at boiling point.&lt;/p&gt;
-&lt;p&gt;Kuhn compares this to individuals in psychological experiments, given cunningly
-contradictory sensual stimuli. At first they don't notice anything wrong about
-a brief glimpse of a playing card showing a red king of clubs. As the length of
-their glimpse expands, and the stimulation becomes more intrusive, the subject
-starts to hesitate, and stumble on words. Suddenly it impinges on their
-consciousness, and they cry out, distressed, uncertain of even basic facts. "My
-God! What did I see? Are clubs always red? What's happening here?"&lt;/p&gt;
-&lt;p&gt;Kuhn also compares scientific revolutions to their social and political
-counterparts, in a chillingly familiar passage:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;"Political revolutions aim to change political institutions in ways that
-those institutions themselves prohibit. Their success therefore necessitates
-the partial relinquishment of one set of institutions in favor of another, and
-in the interim society is not fully governed by institutions at all.&lt;/p&gt;
-&lt;p&gt;Initially it is crisis alone that attenuates the role of political
-institutions [...] In increasing numbers, individuals become increasingly
-estranged from political life, and behave more &amp;amp; more eccentrically within
-it.&lt;/p&gt;
-&lt;p&gt;Then, as the crisis deepens, many individuals commit themselves to [...] some
-new institutional framework. At that point, society is divided into competing
-camps or parties, one seeking to defend the old institutional constellation,
-others seeking to institute some new one.&lt;/p&gt;
-&lt;p&gt;Once that polarization has occurred, &lt;em&gt;political recourse fails&lt;/em&gt;. Because
-they differ about the political matrix within which political change is to be
-achieved and evaluated, and acknowledge no common supra-institutional framework
-for adjudication of differences, the parties to a revolutionary conflict must
-finally resort to the techniques of mass persuasion, often including force."&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;At any point, the &lt;em&gt;boldest&lt;/em&gt; practitioners, often those with least invested in
-the previous status quo, such as the relatively young, or those entering from
-adjacent fields, will introduce strikingly different sets of theories. But only
-now that the stage is set, amongst such distressing chaos, is the community
-ready to entertain truly revolutionary ideas.&lt;/p&gt;
-&lt;p&gt;Occasionally, one of these new ideas will succeed in explaining all the
-observations, but in order to do so, it requires incommensurable changes in the
-underlying philosophy of the field, from the axiomatic definitions, to the set
-of questions that are valid to ask. One can no longer ask, of a spherical
-Earth, "What happens if you fall off?"&lt;/p&gt;
-&lt;p&gt;Notably, many revolutionary changes are not an unalloyed good. Gains in
-explicative power in one area are often balanced by losses elsewhere.&lt;/p&gt;
-&lt;p&gt;As in evolution, the new theory is not necessarily more &lt;em&gt;correct&lt;/em&gt;, so much as
-it is a better fit for the current circumstances, i.e. providing greater
-predictive power in an area that is currently pertinent. Maybe scientific
-progress is more obviously useful to society in that area, or instruments are
-more capable of making measurements in that area. The two often coincide,
-since influences are are unable to detect or manipulate are also unlikely to
-be of much direct use to society. So as the social and technological context
-evolves, so does the relative fitness of potential competing paradigms.&lt;/p&gt;
-&lt;p&gt;Nobody understands this trade-off more deeply than the field's most
-invested practitioners, who feel the losses of losing the old model most
-keenly, and therefore may resist the new paradigm for the remainder of their
-careers. The new paradigm will not achieve total dominance until the field is
-populated by a whole new generation.&lt;/p&gt;
-&lt;p&gt;I am reminded of the dark priesthood of command-line programmers, although
-I note with no little joy that our merry band includes some of the best and
-brightest of the next generation (as judged by my own paradigm's criteria.)&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>media</category><category>non-fiction</category><category>politics</category><category>science</category><guid>https://www.tartley.com/posts/the-structure-of-scientific-revolutions/</guid><pubDate>Sun, 14 Jun 2020 14:02:22 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>cognition</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/intelligence-a-very-short-introduction/</guid><pubDate>Mon, 18 Jan 2021 11:58:23 GMT</pubDate></item></channel></rss>

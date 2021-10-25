@@ -1,8 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about media)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/media.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 19 Oct 2021 11:37:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Permanent Record</title><link>https://www.tartley.com/posts/permanent-record/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;by Edward Snowden, 2019&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about media)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/media.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 25 Oct 2021 19:28:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Buried Giant</title><link>https://www.tartley.com/posts/the-buried-giant/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="The Buried Giant cover" src="https://www.tartley.com/files/2021/the-buried-giant-cover.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Kazuo Ishiguro, 2015&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;A haunting and melancholic tale set in a mythical post-Arthurian England,
+populated by ragged peoples, affected by a pervasive amnesia. Elderly couple
+Axl and Beatrice abruptly decide to leave their village of damp, hobbit-like
+underground burrows to visit a son they'd forgotten they had.&lt;/p&gt;
+&lt;p&gt;Other characters are inspired by a variety of sources, from Beowulf to Arthur's
+knight and nephew Sir Gawain, now old and prone to quixotic rants - hinting at
+the subconscious conflict his code of honor has with the dark means by which he
+and other knights helped Arthur achieve the current uneasy peace between native
+Britons and invading Saxons, now occupying villages across the land.&lt;/p&gt;
+&lt;p&gt;The journey is perilous, encountering roaming ogres and deadly pixies, not
+to mention soldiers of the local lords, and deadly conflicts within the party
+itself.&lt;/p&gt;
+&lt;p&gt;But any action is relayed with cool distance. Either through the pervasive
+mental fog, or using expert fighters' clinical analysis of the minutia of
+stance or grip, or by foretelling the ebb and flow of a battle by analysing the
+terrain, then allowing the battle itself to take place off stage, only assumed
+to have happened, by characters who weren't there.&lt;/p&gt;
+&lt;p&gt;This muted indirectness is entirely in keeping with the ambiguous, dreamlike
+style of the book, which is heightened by the sing-song formalism of the
+characters' speech, and the narrator's occasional surreal hint of relating this
+tale to contemporaries who live in some other, unidentifiable, historic time.&lt;/p&gt;
+&lt;p&gt;The journey eventually comes to revolve around the dispatch - or defence - of a
+dragon that is said to be the source of everyone's forgetfulness, and as this
+goal approaches, vague fears surface of what might be remembered, when the
+mist lifts. Will Axl and Beatrice's treasured relationship survive the
+revelations of their pasts? Will the longstanding truce in the land survive
+the remembering of wartime battles and atrocities? Will Saxon resentment at
+Arthur's desperate misdeeds be stoked into resumption of the violent war of
+invasion? This is left unresolved by the novel's end, but as reader, we know
+that the Saxons did ultimately conquer all of England, displacing the Britons
+culturally and politically, and possibly murdering a good number of them along
+the way.&lt;/p&gt;
+&lt;p&gt;Personally, I'm minded to think of ancient England here as being the root of
+modern Western culture, and the mist as an allegory for the bland ignorance of
+our own culture's atrocities. The deliberate forgetting, like the mist, clouds
+all our conciousnesses, making it hard for us to remember who we are. Why we're
+here. The silent resentment of crushed minorities and genocide survivors forms
+a pressure, struggling against the placating narrative that everything's OK
+now. But, contained, the pressure builds.&lt;/p&gt;
+&lt;p&gt;Truly a buried giant, indeed.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>fantasy</category><category>fiction</category><category>media</category><category>novel</category><guid>https://www.tartley.com/posts/the-buried-giant/</guid><pubDate>Mon, 25 Oct 2021 15:16:53 GMT</pubDate></item><item><title>Permanent Record</title><link>https://www.tartley.com/posts/permanent-record/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Permanent Record" src="https://www.tartley.com/files/2021/permanent-record-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Edward Snowden, 2019&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I really enjoyed this memoir. The story is familiar, but intriguing to hear
 in the characteristically articulate words of Snowden himself.&lt;/p&gt;
 &lt;p&gt;He recounts growing up as a computer nerd in a family dedicated to military
@@ -278,43 +322,4 @@ chosen time-travel mechanic, and he declares this straightforwardly. When the
 main character asks "But what if I end up killing my own Grandfather?", his
 mentor shoots him a look of incomprehension, replying "Why in hell would you
 want to do a thing like that?" Subject closed, and fair enough.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>media</category><category>novel</category><category>science-fiction</category><category>time-travel</category><guid>https://www.tartley.com/posts/112263-by-steven-king/</guid><pubDate>Tue, 11 May 2021 18:23:19 GMT</pubDate></item><item><title>There is no Antimemetics Division, by qntm</title><link>https://www.tartley.com/posts/there-is-no-antimemetics-division/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left; padding-bottom: 1em"&gt;
-&lt;img alt="There is No Antimemetics Division cover" src="https://www.tartley.com/files/2021/there-is-no-antimemetics-division-cover.jpg"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;I first became aware of this book when I noticed that the good folks over
-at &lt;a href="http://www.scpwiki.com/"&gt;The SCP Foundation&lt;/a&gt; have kept themselves busy in
-the years since I last looked over their peerless and endlessly enthralling
-wiki of dry and tantalizing protocols with which to "Secure, Contain, and
-Protect" a catalog of creepy anomalous artifacts.&lt;/p&gt;
-&lt;p&gt;One of the arcs to break the churning surface of that crowdsourced
-fictional millieu is that of the
-&lt;a href="http://scp-wiki.wikidot.com/antimemetics-division-hub"&gt;Antimemetics Division&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;"An antimeme is an idea which, by its intrinsic nature, discourages people
-from spreading it. Think of ideas that you wouldn't share - passwords,
-taboos, shameful secrets.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Anomalous antimemes are another matter entirely. How do you contain
-something you can't record, or remember? How do you fight an enemy when you
-can never even know you're at war?&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Welcome to the Antimemetics Division.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;No, this is not your first day."&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Intruiged, I started clicking around, and as is the way of SCP, discovered
-many hours had passed. Shortly afterwards, I realized the arc has been
-collected into this book.&lt;/p&gt;
-&lt;p&gt;Occasional SCP entries, in the format we know and love, intertwine a short but
-intense tale of memetic hazards, populated by a few of the Division's
-finest - those rare individuals who can go from the standing start of a hint
-that their memories can't be trusted, to a well-executed plan based upon
-a stack of assumptions about what might be needed, and what might already have
-been done that they can count upon, even though they no longer remember any of
-it, without ever retaining any knowledge of their situation, or what they're up
-against. I don't think I've ever been so impressed by the sheer depth of a
-character's resourcefulness and initiative.&lt;/p&gt;
-&lt;p&gt;The journey does contain world-ending hellscapes, with some gore, which might
-not be everyone's cup of tea. But it's short and somehow manages to stay light
-in tone, so isn't emotionally arduous on that front.&lt;/p&gt;
-&lt;p&gt;Probably my favorite fiction of the year.&lt;/p&gt;
-&lt;p&gt;For those like me with an epub fetish,
-you can buy &lt;em&gt;There is No Antimememtics Division&lt;/em&gt; in many formats,
-including Amazon links, EPUBs, or free-to-read online,
-&lt;a href="https://qntm.org/scp"&gt;at the author's site&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>epub</category><category>fiction</category><category>free-to-read</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/there-is-no-antimemetics-division/</guid><pubDate>Mon, 10 May 2021 18:50:52 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>media</category><category>novel</category><category>science-fiction</category><category>time-travel</category><guid>https://www.tartley.com/posts/112263-by-steven-king/</guid><pubDate>Tue, 11 May 2021 18:23:19 GMT</pubDate></item></channel></rss>

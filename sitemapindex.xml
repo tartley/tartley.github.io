@@ -23,7 +23,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/book.xml</loc>
-  <lastmod>2021-10-19T11:37:00Z</lastmod>
+  <lastmod>2021-10-25T19:28:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/c.xml</loc>
@@ -94,8 +94,12 @@
   <lastmod>2021-10-19T11:37:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://www.tartley.com/categories/fantasy.xml</loc>
+  <lastmod>2021-10-25T19:27:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://www.tartley.com/categories/fiction.xml</loc>
-  <lastmod>2021-10-19T11:37:00Z</lastmod>
+  <lastmod>2021-10-25T19:27:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/fonts.xml</loc>
@@ -175,7 +179,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/law.xml</loc>
-  <lastmod>2021-10-19T11:37:00Z</lastmod>
+  <lastmod>2021-10-25T19:28:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/linking.xml</loc>
@@ -199,7 +203,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/media.xml</loc>
-  <lastmod>2021-10-19T11:37:00Z</lastmod>
+  <lastmod>2021-10-25T19:28:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/meetup.xml</loc>
@@ -207,7 +211,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/memoir.xml</loc>
-  <lastmod>2021-10-19T11:37:00Z</lastmod>
+  <lastmod>2021-10-25T19:28:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/mental-health.xml</loc>
@@ -227,11 +231,11 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/non-fiction.xml</loc>
-  <lastmod>2021-10-19T11:37:00Z</lastmod>
+  <lastmod>2021-10-25T19:28:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/novel.xml</loc>
-  <lastmod>2021-10-19T11:37:00Z</lastmod>
+  <lastmod>2021-10-25T19:27:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/novella.xml</loc>
@@ -371,10 +375,10 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/rss.xml</loc>
-  <lastmod>2021-10-19T11:37:00Z</lastmod>
+  <lastmod>2021-10-25T19:28:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/sitemap.xml</loc>
-  <lastmod>2021-10-19T11:57:00Z</lastmod>
+  <lastmod>2021-10-25T19:28:00Z</lastmod>
  </sitemap>
 </sitemapindex>
