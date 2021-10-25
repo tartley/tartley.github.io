@@ -47,7 +47,7 @@ nikola=${ve}/bin/nikola
 
 post: ## Create a new post, prompts for title, opens $EDITOR
 	${nikola} new_post -f markdown -e
-.PHONY: new-post
+.PHONY: post
 
 serve: ## Build site, start server, auto rebuild changes.
 	${nikola} auto
@@ -56,6 +56,5 @@ serve: ## Build site, start server, auto rebuild changes.
 deploy: ## Deploy site to Github
 	. ${ve}/bin/activate && \
 	${nikola} github_deploy -m "Automatic commit"
-
 .PHONY: deploy
 

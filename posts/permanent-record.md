@@ -6,11 +6,11 @@
 .. type: text
 -->
 
-*by Edward Snowden, 2019*
-
 <span style="float: left">
 ![Permanent Record](/files/2021/permanent-record-cover.jpg)
 </span>
+
+*by Edward Snowden, 2019*
 
 I really enjoyed this memoir. The story is familiar, but intriguing to hear
 in the characteristically articulate words of Snowden himself.
