@@ -9,7 +9,7 @@
 ![The Buried Giant cover](/files/2021/the-buried-giant-cover.jpg)
 </span>
 
-*by Kazuo Ishiguro, 2015*
+*by Kazuo Ishiguro, 2015* ![spoilers](/files/spoilers.svg)
 
 A haunting and melancholic tale set in a mythical post-Arthurian England,
 populated by ragged peoples, affected by a pervasive amnesia. Elderly couple
@@ -39,7 +39,7 @@ tale to contemporaries who live in some other, unidentifiable, historic time.
 
 The journey eventually comes to revolve around the dispatch - or defence - of a
 dragon that is said to be the source of everyone's forgetfulness, and as this
-goal approaches, vague fears surface of what might be remembered, when the
+goal approaches, vague fears surface of what might be remembered when the
 mist lifts. Will Axl and Beatrice's treasured relationship survive the
 revelations of their pasts? Will the longstanding truce in the land survive
 the remembering of wartime battles and atrocities? Will Saxon resentment at
