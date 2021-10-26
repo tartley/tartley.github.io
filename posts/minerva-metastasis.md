@@ -6,12 +6,9 @@
 .. type: text
 -->
 
+*PC, Mod of Half-Life 2. By Adam Foster, 2006.* ![spoilers](/files/spoilers.svg)
 
 ![Title screen](/files/2007/04/metastasis_1_background0000.jpg)]
-
-*by Adam Foster*, 2006.
-
-PC, Mod of Half-Life 2
 
 So the digital ink is barely dry on my assertions that videogames have
 problems telling a story, when what should fall into my lap but one of

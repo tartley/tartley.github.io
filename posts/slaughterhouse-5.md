@@ -10,8 +10,7 @@
 ![Slaughterhouse 5, cover](/files/2007/07/slaughterhouse5.jpg)
 </span>
 
-*by Kurt Vonnegut*, 1969.
-[on amazon.co.uk](http://www.amazon.co.uk/Slaughterhouse-5-Kurt-Vonnegut/dp/0099800209).
+*by Kurt Vonnegut, 1969.*
 
 I'm falling way behind in my avowed intention to write up all the books
 and movies I'm subjected to. Primarily for my own benefit, rather than

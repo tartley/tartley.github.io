@@ -10,7 +10,7 @@
 ![](/files/2007/06/facade-game.jpg)
 </span>
 
-*by Procedural Arts (PC, 2006)*
+*by Procedural Arts (PC, 2006)* ![spoilers](/files/spoilers.svg)
 
 <http://www.interactivestory.net/>
 

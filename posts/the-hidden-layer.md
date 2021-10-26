@@ -3,16 +3,13 @@
 .. slug: the-hidden-layer
 .. date: 2008-01-30 11:47:37-06:00
 .. tags: media,book,fiction,science-fiction,novel
-.. link: 
-.. description: 
-.. type: text
 -->
 
 <span style="float: left">
 ![The Hidden Layer](/files/2008/01/the-hidden-layerjpy.jpg)
 </span>
 
-*by Chris Nordberg*
+*by Chris Nordberg, 2012*
 
 Another iPhone read, selected because it's one of the handful of books
 downloadable through the community resources accessed by my hacked
