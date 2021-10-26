@@ -10,7 +10,7 @@
 ![From Hell](/files/2007/07/fromhellsm.jpg)
 </span>
 
-*by Alan Moore (author), Eddie Campbell (artist) (1989)*
+*by Alan Moore (author), Eddie Campbell (artist) (1989)* ![spoilers](/files/spoilers.svg)
 
 Moore has almost single-handedly transformed the definition of the comic
 industry in the last 20 years, and this fetishistically researched

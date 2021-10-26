@@ -10,7 +10,7 @@
 ![Station Eleven cover](/files/2019/06/station-eleven.jpg)
 </span>
 
-*by Emily St. John Mendel.*
+*by Emily St. John Mendel, 2014*
 
 An evocative tale of intertwined lives, before and after the sudden fall of
 contemporary civilisation due to a global pandemic.

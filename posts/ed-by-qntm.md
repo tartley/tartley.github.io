@@ -13,6 +13,8 @@
 ![Ed cover](/files/2021/ed-by-qntm-cover.jpg)
 </span>
 
+*by qntm, 2021*.
+
 It took me a few pages to shift gears to match the provocatively casual style,
 but once I did, it quickly became an engrossing and endearing read.
 The book collects a series of tiny but grand adventures, each riffing on one

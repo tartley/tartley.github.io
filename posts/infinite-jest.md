@@ -33,11 +33,11 @@ large swathes of the book which are, like, more than conversational in
 their familiarity. The combination gives rise to a relentlessly
 inventive stream of neology and malapropism.
 
-While the book resoundingly makes many insightful points by the
-conclusion, the story which serves as a vehicle for their delivery is,
-at best, a ramshackle collision of ideas, introducing entirely new and
-unexplored premises at the 11th hour, and then petering out, ignored and
-unresolved, by the final page.
+While the book resoundingly makes many insightful points by the conclusion, the
+story which serves as a vehicle for their delivery is, a collision of ideas,
+introducing entirely new and unexplored premises at the 11th hour, which
+peter out, ignored and unresolved, by the final page. The jest continues
+on, I suppose.
 
 The insidious footnotes for which Wallace's writings are well-known do
 not serve to streamline the prose by separating out incidental

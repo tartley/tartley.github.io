@@ -10,7 +10,7 @@
 ![Hull Zero Three cover](/files/2019/06/hull-zero-three.jpg)
 </span>
 
-*by Greg Bear*
+*by Greg Bear, 2010*
 
 A smashing hard SF tale, about the existential mystery of life aboard a
 generation starship that has lost its way. Following in the footsteps of

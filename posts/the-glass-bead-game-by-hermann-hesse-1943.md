@@ -11,7 +11,7 @@
 </span>
 
 *by Hermann Hesse (1943). Translated from German to English with evident
-devotion and expertise by Clara Winston & Richard Winston.*
+devotion and expertise by Clara Winston & Richard Winston.* ![spoilers](/files/spoilers.svg)
 
 This novel is described by some as the culmination of Hesse's career, for
 which he received a Nobel Prize for Literature. Many reviews on Goodreads

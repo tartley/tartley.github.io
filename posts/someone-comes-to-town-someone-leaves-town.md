@@ -3,16 +3,13 @@
 .. slug: someone-comes-to-town-someone-leaves-town
 .. date: 2008-02-08 01:01:37-06:00
 .. tags: media,book,fiction,novel
-.. link: 
-.. description: 
-.. type: text
 -->
 
 <span style="float: left">
 ![Someone Comes to Town, Someone Leaves Town](/files/2008/02/someone-comes-to-town.jpg)
 </span>
 
-*by Cory Doctorow*
+*by Cory Doctorow* ![spoilers](/files/spoilers.svg)
 
 I just don't know about this one. I really wanted to like it. It starts
 out with an interesting, down-to-earth story about a guy establishing

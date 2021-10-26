@@ -10,7 +10,7 @@
 ![The Flight of the Horse](/files/2007/03/the_flight_of_the_horse_f.jpeg)
 </span>
 
-*by Larry Niven (1969-1973)*
+*by Larry Niven (1969-1973)* ![spoilers](/files/spoilers.svg)
 
 I just got this back from long-term loan to
 [Phil](http://frosties2.com/), and I just couldn't resist reading it

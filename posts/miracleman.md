@@ -12,7 +12,7 @@
 ![Miracleman cover](/files/2019/06/miracleman.jpg)
 </span>
 
-_by Alan Moore, Alan Davies, & John Totleben._
+_by Alan Moore, Alan Davies, & John Totleben._  ![spoilers](/files/spoilers.svg)
 
 I spent a little time digging out earlier works of Alan Moore. These
 inter-library loans didn't disappoint.

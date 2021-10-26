@@ -3,15 +3,13 @@
 .. slug: there-is-no-antimemetics-division
 .. date: 2021-05-10 13:50:52 UTC-05:00
 .. tags: media,book,novel,science-fiction,fiction,epub,free-to-read
-.. category: 
-.. link: 
-.. description: 
-.. type: text
 -->
 
 <span style="float: left; padding-bottom: 1em">
 ![There is No Antimemetics Division cover](/files/2021/there-is-no-antimemetics-division-cover.jpg)
 </span>
+
+*by qntm, 2020*. ![spoilers](/files/spoilers.svg)
 
 I first became aware of this book when I noticed that the good folks over
 at [The SCP Foundation](http://www.scpwiki.com/) have kept themselves busy in

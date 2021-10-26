@@ -10,7 +10,7 @@
 ![](/files/2008/08/halting-state.jpg)
 </span>
 
-*by Charles Stross*, 2007.
+*by Charles Stross*, 2007. ![spoilers](/files/spoilers.svg)
 
 It's a tale of corporate shenanigans, online virtual reality computer
 gaming, scams, police on the beat, software contractors, and political

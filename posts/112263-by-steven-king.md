@@ -10,6 +10,8 @@
 ![Ra cover](/files/2021/112263-cover.jpg)
 </span>
 
+*by Steven King, 2011*
+
 Prompted by a conversation at work about favorite time travel stories,
 I snagged this from the library.
 
