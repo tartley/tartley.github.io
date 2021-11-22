@@ -23,8 +23,9 @@ In one future, humans have embraced machine-oriented augmentation, uploads,
 and all that that implies. In the other, transformation is wrought by
 biological means, accepting humankind's role as a part of a natural ecosystem,
 boostrapping the whole to greatness by a ruthless application of evolutionary
-principles. Each finds the other repulsive. From our perspective, they appear
-equally awe-inspiring and terrible to behold.
+principles. Each finds the other repulsive, and their existence is mutually
+exclusive. From our perspective, they appear equally awe-inspiring and terrible
+to behold.
 
 But, as intriguing as all that is, it's not why we're here. Instead we get
 the much more personal accounts of two omni-capable antagonists on the front
@@ -48,10 +49,13 @@ commanders. Losing the time war would mean they no longer — had never —
 existed. Winning the time war would mean the same for their opposite number.
 
 At which point, the novel cleverly folds back on itself - these are consummate
-masters of time and subtle but decisive influence, after all - to perform an
+masters of time, and subtle but decisive influence, after all - to perform an
 act of escapology, hinting to us that all their previous acts and letters could
 be re-construed as having left a trail, ready to be exploited once the moment
 was right.
+
+It's a long way from my usual preference of hard-as-nails SF, but I loved it
+nonetheless.
 
 <br style="clear: left" />
 
