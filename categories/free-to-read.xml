@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about free-to-read)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/free-to-read.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 26 Oct 2021 14:20:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Demon</title><link>https://www.tartley.com/posts/demon/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about free-to-read)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/free-to-read.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 23 Nov 2021 17:11:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Demon</title><link>https://www.tartley.com/posts/demon/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Demon cover" src="https://www.tartley.com/files/2021/demon-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Jason Shiga (2016)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I'm just discovering the works of &lt;a href="http://www.shigabooks.com"&gt;Jason Shiga&lt;/a&gt;,
 creator of mathematically-inspired nonlinear comic-books, e.g. stories drawn
 on complex origami structures, that can be folded in various ways to represent
-either branching storylines, or else to manage state such as 'inventory'.
+either branching story-lines, or else to manage state such as 'inventory'.
 Construction of these more elaborate paper constructions doesn't scale,
 (ie. I'm not likely to ever own one) but you can try some of his other
 creations on the web.&lt;/p&gt;
 &lt;p&gt;This is &lt;a href="http://www.shigabooks.com/index.php?page=001"&gt;Demon&lt;/a&gt;,
-a regular linear webcomic.&lt;/p&gt;
+a regular linear web-comic.&lt;/p&gt;
 &lt;p&gt;The storyline is 'math-inspired' too, in the same way that the movie &lt;em&gt;Primer&lt;/em&gt;
 is - intense, absolute, ruthless, narrative exploration of logical
 implications, while continually, dizzyingly, escalating to the next level.&lt;/p&gt;
@@ -33,7 +33,7 @@ brilliance. I thought being a comic was an essential part of that formula. But
 &lt;em&gt;Ed&lt;/em&gt; proves me wrong by achieving the same velocity of verve and vigor,
 rendered in prose. A delight.&lt;/p&gt;
 &lt;p&gt;The Epilogue reminds me gleefully of
-&lt;a href="https://worldbuilding.stackexchange.com/a/151964/13496"&gt;this stackoverflow worldbuilding answer&lt;/a&gt;
+&lt;a href="https://worldbuilding.stackexchange.com/a/151964/13496"&gt;this Stack Overflow World-building answer&lt;/a&gt;
 I gave a few months ago.&lt;/p&gt;
 &lt;p&gt;For those like me with an epub fetish, you can buy &lt;em&gt;Ed&lt;/em&gt; in many formats,
 including Amazon links, EPUBs, or free-to-read online,
@@ -67,8 +67,8 @@ at &lt;a href="http://www.scpwiki.com/"&gt;The SCP Foundation&lt;/a&gt; have kep
 the years since I last looked over their peerless and endlessly enthralling
 wiki of dry and tantalizing protocols with which to "Secure, Contain, and
 Protect" a catalog of creepy anomalous artifacts.&lt;/p&gt;
-&lt;p&gt;One of the arcs to break the churning surface of that crowdsourced
-fictional millieu is that of the
+&lt;p&gt;One of the arcs to break the churning surface of that crowd-sourced
+fictional milieu is that of the
 &lt;a href="http://scp-wiki.wikidot.com/antimemetics-division-hub"&gt;Antimemetics Division&lt;/a&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;"An antimeme is an idea which, by its intrinsic nature, discourages people
 from spreading it. Think of ideas that you wouldn't share - passwords,
@@ -78,7 +78,7 @@ something you can't record, or remember? How do you fight an enemy when you
 can never even know you're at war?&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Welcome to the Antimemetics Division.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;No, this is not your first day."&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Intruiged, I started clicking around, and as is the way of SCP, discovered
+&lt;p&gt;Intrigued, I started clicking around, and as is the way of SCP, discovered
 many hours had passed. Shortly afterwards, I realized the arc has been
 collected into this book.&lt;/p&gt;
 &lt;p&gt;Occasional SCP entries, in the format we know and love, intertwine a short but

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about comic)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/comic.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 26 Oct 2021 14:16:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Demon</title><link>https://www.tartley.com/posts/demon/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about comic)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/comic.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 23 Nov 2021 17:11:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Demon</title><link>https://www.tartley.com/posts/demon/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Demon cover" src="https://www.tartley.com/files/2021/demon-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Jason Shiga (2016)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I'm just discovering the works of &lt;a href="http://www.shigabooks.com"&gt;Jason Shiga&lt;/a&gt;,
 creator of mathematically-inspired nonlinear comic-books, e.g. stories drawn
 on complex origami structures, that can be folded in various ways to represent
-either branching storylines, or else to manage state such as 'inventory'.
+either branching story-lines, or else to manage state such as 'inventory'.
 Construction of these more elaborate paper constructions doesn't scale,
 (ie. I'm not likely to ever own one) but you can try some of his other
 creations on the web.&lt;/p&gt;
 &lt;p&gt;This is &lt;a href="http://www.shigabooks.com/index.php?page=001"&gt;Demon&lt;/a&gt;,
-a regular linear webcomic.&lt;/p&gt;
+a regular linear web-comic.&lt;/p&gt;
 &lt;p&gt;The storyline is 'math-inspired' too, in the same way that the movie &lt;em&gt;Primer&lt;/em&gt;
 is - intense, absolute, ruthless, narrative exploration of logical
 implications, while continually, dizzyingly, escalating to the next level.&lt;/p&gt;

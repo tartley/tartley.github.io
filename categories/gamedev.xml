@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about gamedev)</title><link>https://tartley.com/</link><description>Creating videogames.</description><atom:link href="https://www.tartley.com/categories/gamedev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 19 Oct 2021 11:37:29 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about gamedev)</title><link>https://tartley.com/</link><description>Creating videogames.</description><atom:link href="https://www.tartley.com/categories/gamedev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 23 Nov 2021 17:11:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
 geometry to drive OpenGL from Python.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python"&gt;&lt;em&gt;&amp;lt;&amp;lt; Back to part 1&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Last time we got as far as creating some instances of our super-simple
@@ -860,4 +860,79 @@ realised at the time. I'm revising the review scores significantly
 upwards to reflect this.&lt;/p&gt;
 &lt;p&gt;Rating: 10/10 for beginners. 5/10 for experts. Consider yourself
 somewhere between the two.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>gamedev</category><category>geek</category><category>media</category><category>non-fiction</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/beginning-game-development-with-python-and-pygame/</guid><pubDate>Mon, 12 Jan 2009 06:17:54 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>gamedev</category><category>geek</category><category>media</category><category>non-fiction</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/beginning-game-development-with-python-and-pygame/</guid><pubDate>Mon, 12 Jan 2009 06:17:54 GMT</pubDate></item><item><title>London Geek Night : Game Dev</title><link>https://www.tartley.com/posts/london-geek-night-game-dev/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Last night was Game Dev night at the London Geek meet in the
+ThoughtWorks offices. It was really enjoyable, I really enjoyed the
+talks, and meeting and chatting to everyone there.&lt;/p&gt;
+&lt;p&gt;Interestingly, there were a bunch of comments throughout the evening
+that confirmed some long-standing suspicions I've had about professional
+game development. I'm not pointedly directing this at any individuals -
+it really was a pleasure and an education talking to every person
+present. However, I couldn't help but notice that there seems to be a
+pervasive macho streak in the game industry, sustained by the belief
+that game development is considerably harder and more creative than any
+other form of software.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Not rocket science&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now, there's no doubt that different niches of the software industry
+vary in complexity, just as the commitment and experience of
+individuals, teams and organisations varies over an enormous range. I
+have no doubt that game development lies on the upper part of that
+spectrum rather than in the middle. But I also have no doubt that there
+are lots of other software industries which are just as complex,
+demanding and creative as game development.&lt;/p&gt;
+&lt;p&gt;Game dev is not special or unique in having many hard problems to solve.
+When game devs claim that it is, it simply looks like a defensive
+reaction to the pervasive belief outside the industry that games are
+trivial time-wasting distractions, and that creating them must therefore
+be one of the easiest and most lightweight aspects of IT.&lt;/p&gt;
+&lt;p&gt;This would be merely silly self-delusion if that was as far as it went,
+but this state of affairs actually has huge damaging knock-on effects.
+The belief that they are tackling projects which are harder than other
+software projects leads to an attitude verging on arrogance - an
+assumption of superiority, and that they have nothing to learn from the
+rest of the software industry. As a result, game dev shops don't even
+attempt to talk to other software engineers about their common craft,
+and as a result the engineering prowess of the game industry actually
+&lt;em&gt;lags behind&lt;/em&gt; the rest of the software industry by five or ten years.
+Practices and techniques which are &lt;em&gt;de rigour&lt;/em&gt; in the rest of the
+industry these days, such as test-driven development and continuous
+integration, are virtually unknown in the game industry. Examples during
+last night's discussion, which were held up as indicators of how
+difficult and complex game dev is, appeared to many people in the room
+to simply be symptoms of clearly bad design.&lt;/p&gt;
+&lt;p&gt;The legendary long hours and project burnout in the game industry is
+actually a symptom of this - far from being the most capable engineers
+amongst us, the reason they are working such ungodly hours is to
+compensate for poor software engineering. The rest of the software
+industry used to suffer from a similar overwork problem, but you know
+what? We figured it out, decades ago now. It's notable to me that other
+industries which suffer from overwork and burnout (eg. the finance
+industry) are also buzzing with arrogance and secrecy.&lt;/p&gt;
+&lt;p&gt;Humility and communication are pre-requisites for any learning. Jeez,
+get over yourselves and go learn how to run a software project.&lt;/p&gt;&lt;/div&gt;</description><category>gamedev</category><category>geek</category><category>meetup</category><category>software</category><guid>https://www.tartley.com/posts/london-geek-night-game-dev/</guid><pubDate>Sat, 22 Nov 2008 20:19:48 GMT</pubDate></item><item><title>Sole Scion project v0.1 : A 2D rigid-body Python game</title><link>https://www.tartley.com/posts/sole-scion-project-v01-a-2d-rigid-body-python-game/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="screenshot Sole Scion
+v1.0" src="https://www.tartley.com/files/2008/06/screenshot-sole-scion-v10.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://sethgodin.typepad.com/seths_blog/2008/06/is-it-worthy.html"&gt;Everyone&lt;/a&gt;
+today is &lt;a href="http://www.codinghorror.com/blog/archives/001134.html"&gt;abuzz&lt;/a&gt;
+with the 'release early, release often' sentiment, so I've decided to
+get in the spirit and upload the first iteration of 'Sole Scion', my
+summertime sabbatical game project.&lt;/p&gt;
+&lt;p&gt;Version 0.1 merely bounces some circles off an inclined plane
+(pictured.) I aim to transform this into a 2D graphical adventure game,
+in which I hope emergent fun will take place, once I populate the world
+with enough twisty corridors, uniquely-shaped objects that need slotting
+into the right places, and judicious instances of ornery fauna to
+contend with.&lt;/p&gt;
+&lt;p&gt;It's written in Python, using
+&lt;a href="http://wiki.slembcke.net/main/published/Chipmunk"&gt;Chipmunk&lt;/a&gt; for rigid
+body Newtonian dynamics, with Python bindings using
+&lt;a href="http://code.google.com/p/pymunk/"&gt;Pymunk&lt;/a&gt;. Rendering, gameloop, sounds,
+etc are handled by &lt;a href="http://pyglet.org"&gt;pyglet&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://code.google.com/p/sole-scion"&gt;Sole Scion is hosted on Google
+Code&lt;/a&gt;, with Subversion read-access
+and a source code tarball, including the redistributables for the above
+dependencies, should anyone be curious. It has a &lt;a href="http://www.opensource.org/licenses/bsd-license.php"&gt;New BSD
+License&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Feedback, thoughts and ideas, very welcome.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: I've only run it on Linux, but reportedly it also works on
+Windows. Thanks Xtian!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; It also reportedly works under PyPy, provided you install
+the 'functools' module. Thanks Maciej!&lt;/p&gt;&lt;/div&gt;</description><category>chipmunk</category><category>gamedev</category><category>geek</category><category>graphics</category><category>physics</category><category>pyglet</category><category>pymunk</category><category>python</category><category>rigid-body</category><category>software</category><guid>https://www.tartley.com/posts/sole-scion-project-v01-a-2d-rigid-body-python-game/</guid><pubDate>Wed, 18 Jun 2008 11:37:17 GMT</pubDate></item></channel></rss>

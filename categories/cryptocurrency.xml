@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about cryptocurrency)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/cryptocurrency.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 19 Oct 2021 11:37:32 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Energy use per transaction for cryptocurrencies vs Visa</title><link>https://www.tartley.com/posts/til-cryptocurrency-per-transaction-energy-use/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;For my own calibration, approximate current energy use for a single transaction
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about cryptocurrency)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/cryptocurrency.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 23 Nov 2021 17:11:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Energy use per transaction for cryptocurrencies vs Visa</title><link>https://www.tartley.com/posts/til-cryptocurrency-per-transaction-energy-use/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;For my own calibration, approximate current energy use for a single transaction
 in various cryptocurrencies, compared with using Visa:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -77,7 +77,7 @@ Sources&lt;/p&gt;
 &lt;li&gt;For Bitcoin, I took a rounded figure roughly between those quoted on the
   above two sources (710kWh and 1,123kWh). A single figure precision is
   probably most appropriate anyhow. &lt;strong&gt;Update&lt;/strong&gt;: The digiconomist article above
-  is updated as the bitcoin energy use increases over time with proof
+  is updated as the Bitcoin energy use increases over time with proof
   difficulty, and it's now at almost double the figure I quoted above,
   at 1,800 kWh/txn.&lt;/li&gt;
 &lt;li&gt;For Chia, I did my own hacky calculation.
@@ -95,13 +95,13 @@ Sources&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Notable standout here is NANO, which actually has an order of magnitude &lt;em&gt;lower&lt;/em&gt;
 energy use than Visa. There are other low-energy use cryptocurrencies in this
-bracket, such as IOTA and HBAR. They face some criticism from bitcoin
+bracket, such as IOTA and HBAR. They face some criticism from Bitcoin
 maximalists that reducing energy use undermines the value proposition, or
 reduces security. But to my layman's ears, these arguments don't hold water.
 Certainly communities like NANO seem much more open to honest discussion of
 NANO's shortfalls than most crypto communities, which is a healthy sign, and it
 makes me inclined to trust their counter-assertions that NANO's security is
-really ok.&lt;/p&gt;
+really OK.&lt;/p&gt;
 &lt;p&gt;Something's not quite right here though. The Chia whitepaper estimates 10,000
 times better energy efficiency than Bitcoin, by my figures above only show
 1,000.&lt;/p&gt;

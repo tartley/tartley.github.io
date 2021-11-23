@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about pc)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/pc.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 26 Oct 2021 14:29:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Façade</title><link>https://www.tartley.com/posts/facade/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about windows)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/windows.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 23 Nov 2021 17:16:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Manifold Garden</title><link>https://www.tartley.com/posts/manifold-garden/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Manifold Garden screenshot" src="https://www.tartley.com/files/2021/manifold-garden.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Windows, 2019&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This was always going to turn my head, marrying a marvellous geometric engine
+to an austere, flat-shaded renderer. Bewildering portals, seamlessly disguised
+as humble doorways, are the simplest of its tricks. More pervasive, levels are
+wraparound along all three spatial dimensions, as can be seen by the
+disorienting arrays of geometry - the current level, infinitely repeated,
+offset or re-oriented - marching to the vanishing points, dwindling to infinity
+in all directions.&lt;/p&gt;
+&lt;p&gt;This is no mere trippy backdrop. Gravity can be trivially flipped to lie along
+any cardinal axis, and one will routinely step off, into a yawning, infinite
+abyss, to fall through the entire level, and beyond, through and amongst the
+infinite constellations of geometry, airsteering all the way, to land,
+unharmed, anywhere that's exposed to the direction you're falling from. It
+becomes a form of teleportation, used to get from A to B almost as frequently
+as simply walking around.&lt;/p&gt;
+&lt;p&gt;This non-Euclidean wrapping is baked deeply into the visuals, the engine, and
+the gameplay. But for all that technical mastery, the puzzles themselves aren't
+as deep and creative and varied as those in the ostensibly similar, but
+less technically accomplished, &lt;em&gt;Antichamber&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Having said that, there's something entirely appropriate in this. The puzzles
+end up being as much rituals as a head-scratchers, holy spatial rites one
+performs to unleash the deeply evocative visuals towards the end of each level
+- a faceted and angular psychedelic, coupled with unnerving reformulations of
+reality straight out of Farbrausch's
+&lt;em&gt;&lt;a href="https://www.youtube.com/watch?v=wqu_IpkOYBg"&gt;Debris&lt;/a&gt;&lt;/em&gt;. By the final level,
+this crescendos in scenes reminiscent of &lt;em&gt;2001: A Space Odyssey&lt;/em&gt;, profound in
+both the intimacy of my commune with godhood, and in my continued inability to
+understand what I had achieved. Created a universe, probably? Yeah, probably.&lt;/p&gt;&lt;/div&gt;</description><category>completed</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/manifold-garden/</guid><pubDate>Tue, 05 Oct 2021 03:16:08 GMT</pubDate></item><item><title>Legend of Zelda : The Phantom Hourglass</title><link>https://www.tartley.com/posts/legend-of-zelda-the-phantom-hourglass/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Phantom Hourglass" src="https://www.tartley.com/files/2008/05/phantom-hourglass.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Nintendo, 2008&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Nintendo spin off a &lt;em&gt;fourteenth&lt;/em&gt; iteration of the familiar and
+oh-so-beloved franchise. I'd only previously played the
+preposterously-sub-titled &lt;em&gt;Ocarina of Time&lt;/em&gt; on the N64, of which I
+retain fond, sepia-coloured memories.&lt;/p&gt;
+&lt;p&gt;I found &lt;em&gt;Phantom Hourglass&lt;/em&gt; to be engaging, and played it to a
+thoroughly jolly completion over the course of a couple of months. The
+gameplay and plot are a tad more casual and lightweight than &lt;em&gt;Ocarina&lt;/em&gt;,
+as befitting play snatched while on-the-go on the handheld platform.&lt;/p&gt;
+&lt;p&gt;Using the DS stylus to control Link is delightfully transparent and
+intuitive. Just as for a mouse, however, expert users will eventually
+eschew it for many actions, preferring the speed, precision and
+tactility of distinct physical buttons.&lt;/p&gt;
+&lt;p&gt;On the down side, some of the puzzles are downright contrived. After
+introducing a handy little map, on which you can scrawl notes and
+reminders for yourself, the game then promptly takes it away again for
+&lt;em&gt;exactly&lt;/em&gt; the levels on which it would be of most use, proclaiming 'you
+can't use the map here, some sort of magic prevents it.' Right. Up
+yours.&lt;/p&gt;
+&lt;p&gt;Equally intrusive, the dialog is entirely Nintendo-esque cutesy Japanese
+schmultz, and it would have improved the game no end for it to have been
+entirely absent.&lt;/p&gt;
+&lt;p&gt;Such niggles are few and far between, though. Time for another go of the
+newfangled rating system.&lt;/p&gt;
+&lt;p&gt;Rating: Place yourself somewhere between...&lt;/p&gt;
+&lt;p&gt;10/10 if you're into a deftly executed handheld riff on the Zelda
+series, beautifully integrated with the affordances and sensibilities of
+the hosting hardware in that way that only Nintendo can do. Lots to love
+here.&lt;/p&gt;
+&lt;p&gt;0/10 if you're done with revisiting timeworn ideas, even ones as
+compelling and charming as this, and yearn for a resurgence in
+experimental originality to kick the gaming industry out of one or two
+ruts (such as having a blind spot for crappy dialog.)&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>completed</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/legend-of-zelda-the-phantom-hourglass/</guid><pubDate>Fri, 16 Jan 2009 20:36:05 GMT</pubDate></item><item><title>Façade</title><link>https://www.tartley.com/posts/facade/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="" src="https://www.tartley.com/files/2007/06/facade-game.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Procedural Arts (PC, 2006)&lt;/em&gt; &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
@@ -63,7 +129,7 @@ and emotional finesse to which that medium would one day soar? For all
 its faults, it's in increments such as &lt;em&gt;Façade&lt;/em&gt; that gaming moves in the
 same direction.&lt;/p&gt;
 &lt;p&gt;Rating: 9/10.
-Lets. Push. Things. Forward.&lt;/p&gt;&lt;/div&gt;</description><category>completed</category><category>game</category><category>media</category><category>pc</category><guid>https://www.tartley.com/posts/facade/</guid><pubDate>Thu, 28 Jun 2007 19:43:48 GMT</pubDate></item><item><title>Minerva: Metastasis</title><link>https://www.tartley.com/posts/minerva-metastasis/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;PC, Mod of Half-Life 2. By Adam Foster, 2006.&lt;/em&gt; &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+Lets. Push. Things. Forward.&lt;/p&gt;&lt;/div&gt;</description><category>completed</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/facade/</guid><pubDate>Thu, 28 Jun 2007 19:43:48 GMT</pubDate></item><item><title>Minerva: Metastasis</title><link>https://www.tartley.com/posts/minerva-metastasis/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;PC, Mod of Half-Life 2. By Adam Foster, 2006.&lt;/em&gt; &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Title screen" src="https://www.tartley.com/files/2007/04/metastasis_1_background0000.jpg"&gt;]&lt;/p&gt;
 &lt;p&gt;So the digital ink is barely dry on my assertions that videogames have
 problems telling a story, when what should fall into my lap but one of
@@ -117,4 +183,4 @@ indubitably the greatest PC game of 2005, possibly of all time, with
 such verve and imagination that I have to agree with a Metastasis forum
 posting: It might just be (&lt;em&gt;whisper it&lt;/em&gt;) better than the source.&lt;/p&gt;
 &lt;p&gt;Rating: 10/10.
-Bring on the third and final instalment, due later this month...&lt;/p&gt;&lt;/div&gt;</description><category>completed</category><category>game</category><category>media</category><category>pc</category><guid>https://www.tartley.com/posts/minerva-metastasis/</guid><pubDate>Thu, 05 Apr 2007 05:24:11 GMT</pubDate></item></channel></rss>
+Bring on the third and final instalment, due later this month...&lt;/p&gt;&lt;/div&gt;</description><category>completed</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/minerva-metastasis/</guid><pubDate>Thu, 05 Apr 2007 05:24:11 GMT</pubDate></item></channel></rss>

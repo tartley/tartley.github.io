@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about hardware)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/hardware.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 19 Oct 2021 11:37:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Keyboard CoolerMaster CK530's Missing Manual</title><link>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I have a
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about hardware)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/hardware.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 23 Nov 2021 17:11:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Keyboard CoolerMaster CK530's Missing Manual</title><link>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I have a
 &lt;a href="https://www.coolermaster.com/catalog/peripheral/keyboards/ck530/"&gt;CoolerMaster CK530&lt;/a&gt;
 mechanical keyboard, which I love. It might have come with a small printed
 manual, but if it did, I no longer have it, and I'm failing to find one online.
@@ -175,7 +175,7 @@ below.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Many of these are self-explanatory. For the rest:&lt;/p&gt;
 &lt;h3&gt;Using modes&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;fn&lt;/code&gt; is the "coolermaster" key, on the bottom row key between right Windows and
+&lt;p&gt;&lt;code&gt;fn&lt;/code&gt; is the "Coolermaster" key, on the bottom row key between right Windows and
 right Ctrl.&lt;/p&gt;
 &lt;p&gt;When holding &lt;code&gt;fn&lt;/code&gt;, several keys might light up, depending on the current
 mode:&lt;/p&gt;
@@ -310,7 +310,7 @@ mode:&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Modes marked "reactive" react to keypresses. Mostly this lights up a pattern
+&lt;p&gt;Modes marked "reactive" react to key-presses. Mostly this lights up a pattern
 around the pressed key. In the case of "snake", you can play using the arrow
 keys.&lt;/p&gt;
 &lt;p&gt;&lt;span id="foreground-and-background-colors"&gt;&lt;/span&gt;&lt;/p&gt;
@@ -341,8 +341,8 @@ then use &lt;code&gt;fn + F2/F3/F4&lt;/code&gt; to set it.&lt;/p&gt;
    flashing white.)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Some wrinkles:&lt;/p&gt;
-&lt;p&gt;I can't manage to set a color for the FN key itself, which always appears unlit
-in this mode.&lt;/p&gt;
+&lt;p&gt;I can't manage to set a color for the &lt;code&gt;fn&lt;/code&gt; key itself, which always appears
+unlit in this mode.&lt;/p&gt;
 &lt;p&gt;The caps lock key is unlit in this mode, unless caps lock is on.
 Similarly, scroll lock seems to always be unlit for me in this mode,
 although it is lit in other modes.&lt;/p&gt;
@@ -376,5 +376,5 @@ flashing white. While keeping FN pressed:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Hence, to save changes to an arbitrary profile, you need to select that
 profile &lt;em&gt;before&lt;/em&gt; making the changes.&lt;/p&gt;
-&lt;p&gt;When turning the keyboard on (ie. plugging the USB cable into a computer),
+&lt;p&gt;When turning the keyboard on (ie. Plugging the USB cable into a computer),
 the active profile will be whichever one was last active.&lt;/p&gt;&lt;/div&gt;</description><category>hardware</category><category>keyboard</category><category>manual</category><guid>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</guid><pubDate>Fri, 23 Jul 2021 18:41:50 GMT</pubDate></item></channel></rss>
