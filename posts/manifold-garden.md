@@ -28,15 +28,15 @@ unharmed, anywhere that's exposed to the direction you're falling from. It
 becomes a form of teleportation, used to get from A to B almost as frequently
 as simply walking around.
 
-This non-Euclidian wrapping is baked deeply into the visuals, the engine, and
+This non-Euclidean wrapping is baked deeply into the visuals, the engine, and
 the gameplay. But for all that technical mastery, the puzzles themselves aren't
 as deep and creative and varied as those in the ostensibly similar, but
 less technically accomplished, *Antichamber*.
 
 Having said that, there's something entirely appropriate in this. The puzzles
-end up being as much rituals as a headscratchers, holy spatial rites one
+end up being as much rituals as a head-scratchers, holy spatial rites one
 performs to unleash the deeply evocative visuals towards the end of each level
-- a faceted and angular psychadelic, coupled with unnerving reformulations of
+- a faceted and angular psychedelic, coupled with unnerving reformulations of
 reality straight out of Farbrausch's
 *[Debris](https://www.youtube.com/watch?v=wqu_IpkOYBg)*. By the final level,
 this crescendos in scenes reminiscent of *2001: A Space Odyssey*, profound in

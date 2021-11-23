@@ -3,10 +3,6 @@
 .. slug: til-cryptocurrency-per-transaction-energy-use
 .. date: 2021-05-13 16:09:33 UTC-05:00
 .. tags: til,cryptocurrency,chia
-.. category: 
-.. link: 
-.. description: 
-.. type: text
 -->
 
 For my own calibration, approximate current energy use for a single transaction
@@ -34,7 +30,7 @@ Sources
 * For Bitcoin, I took a rounded figure roughly between those quoted on the
   above two sources (710kWh and 1,123kWh). A single figure precision is
   probably most appropriate anyhow. **Update**: The digiconomist article above
-  is updated as the bitcoin energy use increases over time with proof
+  is updated as the Bitcoin energy use increases over time with proof
   difficulty, and it's now at almost double the figure I quoted above,
   at 1,800 kWh/txn.
 * For Chia, I did my own hacky calculation.
@@ -52,13 +48,13 @@ Sources
 
 Notable standout here is NANO, which actually has an order of magnitude *lower*
 energy use than Visa. There are other low-energy use cryptocurrencies in this
-bracket, such as IOTA and HBAR. They face some criticism from bitcoin
+bracket, such as IOTA and HBAR. They face some criticism from Bitcoin
 maximalists that reducing energy use undermines the value proposition, or
 reduces security. But to my layman's ears, these arguments don't hold water.
 Certainly communities like NANO seem much more open to honest discussion of
 NANO's shortfalls than most crypto communities, which is a healthy sign, and it
 makes me inclined to trust their counter-assertions that NANO's security is
-really ok.
+really OK.
 
 Something's not quite right here though. The Chia whitepaper estimates 10,000
 times better energy efficiency than Bitcoin, by my figures above only show

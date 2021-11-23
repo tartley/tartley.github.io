@@ -98,7 +98,7 @@ I'd brought a bunch of things for my two day hospital stay, books and media and
 headphones and my own cozy pajamas to wear while garrulously socializing with
 staff and adjacent patients. That was all a total waste of time. I was a write
 off the entire time I was there, not able to muster the bandwidth even to watch
-t.v. I saw a single episode of Schitt's Creek at one point because Suze kindly
+TV. I saw a single episode of Schitt's Creek at one point because Suze kindly
 propped it up in front of me, but I couldn't manage a 2nd. I just dozed, and
 was wheeled to a barium x-ray, to check I wasn't leaking anywhere untoward.
 
@@ -124,12 +124,12 @@ administrative nightmare. Nobody's fault, the system is broken. The concept of
 At home for five days of a clear liquid diet. This means water, strained fruit
 juices & drinks without suspensions (i.e. no particles floating in it to make
 it opaque), tea or coffee without milk, clear broths. Also, slightly bizarrely,
-jell-o, since it may be eaten while solid, but at room (or body) temperature,
+jello, since it may be eaten while solid, but at room (or body) temperature,
 it's a liquid. I demurred on Suze's threat to make jello shots.
 
 Ambitions for today were to rise from the sofa for a shower, and a walk or two
 around the inside of the house. Scoring 1,500 points on the breathe-o-meter.
-Importantly, I now have it together enough to be able to watch some dumb t.v.
+Importantly, I now have it together enough to be able to watch some dumb TV.
 
 ### Day 3. Outdoors.
 

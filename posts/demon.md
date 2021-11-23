@@ -15,13 +15,13 @@
 I'm just discovering the works of [Jason Shiga](http://www.shigabooks.com),
 creator of mathematically-inspired nonlinear comic-books, e.g. stories drawn
 on complex origami structures, that can be folded in various ways to represent
-either branching storylines, or else to manage state such as 'inventory'.
+either branching story-lines, or else to manage state such as 'inventory'.
 Construction of these more elaborate paper constructions doesn't scale,
 (ie. I'm not likely to ever own one) but you can try some of his other
 creations on the web.
 
 This is [Demon](http://www.shigabooks.com/index.php?page=001),
-a regular linear webcomic.
+a regular linear web-comic.
 
 The storyline is 'math-inspired' too, in the same way that the movie *Primer*
 is - intense, absolute, ruthless, narrative exploration of logical

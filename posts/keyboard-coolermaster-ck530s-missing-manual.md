@@ -66,7 +66,7 @@ Many of these are self-explanatory. For the rest:
 
 ## Using modes
 
-`fn` is the "coolermaster" key, on the bottom row key between right Windows and
+`fn` is the "Coolermaster" key, on the bottom row key between right Windows and
 right Ctrl.
 
 When holding `fn`, several keys might light up, depending on the current
@@ -106,7 +106,7 @@ Pressing `fn + F5` cycles through:
 
 <br />
 
-Modes marked "reactive" react to keypresses. Mostly this lights up a pattern
+Modes marked "reactive" react to key-presses. Mostly this lights up a pattern
 around the pressed key. In the case of "snake", you can play using the arrow
 keys.
 
@@ -146,8 +146,8 @@ Custom (mode #6 above) lets the user assign a different color to each key.
 
 Some wrinkles:
 
-I can't manage to set a color for the FN key itself, which always appears unlit
-in this mode.
+I can't manage to set a color for the `fn` key itself, which always appears
+unlit in this mode.
 
 The caps lock key is unlit in this mode, unless caps lock is on.
 Similarly, scroll lock seems to always be unlit for me in this mode,
@@ -187,6 +187,6 @@ flashing white. While keeping FN pressed:
 Hence, to save changes to an arbitrary profile, you need to select that
 profile *before* making the changes.
 
-When turning the keyboard on (ie. plugging the USB cable into a computer),
+When turning the keyboard on (ie. Plugging the USB cable into a computer),
 the active profile will be whichever one was last active.
 

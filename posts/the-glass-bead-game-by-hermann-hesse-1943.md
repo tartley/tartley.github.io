@@ -14,7 +14,8 @@
 devotion and expertise by Clara Winston & Richard Winston.* ![spoilers](/files/spoilers.svg)
 
 This novel is described by some as the culmination of Hesse's career, for
-which he received a Nobel Prize for Literature. Many reviews on Goodreads
+which he received a Nobel Prize for Literature. Many reviews on
+[Goodreads](https://www.goodreads.com/book/show/16634.The_Glass_Bead_Game)
 cite it as a life-changing novel, or as a singular all-time favorite book.
 
 I must confess with some sadness that I must have entirely missed the point. I

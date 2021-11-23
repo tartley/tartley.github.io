@@ -14,7 +14,7 @@
 Roman Emperor Marcus Auralias' notes, traditionally titled *Meditations*,
 are a foundational text for practical Stoicism. They comprise a multitude of
 observations and recommendations, grouped into sections such as "Keeping
-thoughts tranquil", and "Cooperation, collaberation and contribution". They
+thoughts tranquil", and "Cooperation, collaboration and contribution". They
 offer advice for living a contented life, with less regret, sorrow, anger and
 fear.
 

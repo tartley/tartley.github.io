@@ -31,7 +31,7 @@ brilliance. I thought being a comic was an essential part of that formula. But
 rendered in prose. A delight.
 
 The Epilogue reminds me gleefully of
-[this stackoverflow worldbuilding answer](https://worldbuilding.stackexchange.com/a/151964/13496)
+[this Stack Overflow World-building answer](https://worldbuilding.stackexchange.com/a/151964/13496)
 I gave a few months ago.
 
 For those like me with an epub fetish, you can buy *Ed* in many formats,

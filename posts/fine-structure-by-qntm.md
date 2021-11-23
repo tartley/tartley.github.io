@@ -16,7 +16,7 @@ consequences of big science fiction concepts.
 
 In this case, it's a story of human superheroes, whose powers derive from
 beings-beyond-comprehension, from the high-dimensional multiverse, the
-Structure, within which our paltry three-plus-one spacetime is naught but an
+Structure, within which our paltry three-plus-one space-time is naught but an
 embedded decal. Their struggles rewrite the fundamental physics of our
 universe, to fashion it into an inescapable trap, denying humanity access to
 advanced sciences, and to communion with the higher levels of the Structure.

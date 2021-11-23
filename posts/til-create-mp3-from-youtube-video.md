@@ -3,7 +3,6 @@
 .. slug: til-create-mp3-from-youtube-video
 .. date: 2021-05-13 11:18:33 UTC-05:00
 .. tags: linux,music,til
-.. type: text
 -->
 
 Install ffmpeg:
@@ -42,7 +41,7 @@ benefit of those lossless formats - mp3 is fine for
 ## My previous inferior way
 
 This method is worse because it downloads the whole video file before
-extracting audio locally, and the download gets throttled by youtube in some
+extracting audio locally, and the download gets throttled by YouTube in some
 way, which of late is very slow indeed.
 
 Download the video from YouTube:

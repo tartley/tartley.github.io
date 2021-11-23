@@ -17,8 +17,8 @@ the years since I last looked over their peerless and endlessly enthralling
 wiki of dry and tantalizing protocols with which to "Secure, Contain, and
 Protect" a catalog of creepy anomalous artifacts.
 
-One of the arcs to break the churning surface of that crowdsourced
-fictional millieu is that of the
+One of the arcs to break the churning surface of that crowd-sourced
+fictional milieu is that of the
 [Antimemetics Division](http://scp-wiki.wikidot.com/antimemetics-division-hub):
 
 *"An antimeme is an idea which, by its intrinsic nature, discourages people
@@ -33,7 +33,7 @@ can never even know you're at war?*
 
 *No, this is not your first day."*
 
-Intruiged, I started clicking around, and as is the way of SCP, discovered
+Intrigued, I started clicking around, and as is the way of SCP, discovered
 many hours had passed. Shortly afterwards, I realized the arc has been
 collected into this book.
 
