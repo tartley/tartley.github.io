@@ -2,7 +2,7 @@
 .. title: London Geek Night : Game Dev
 .. slug: london-geek-night-game-dev
 .. date: 2008-11-22 14:19:48-06:00
-.. tags: geek,game,software,meetup
+.. tags: geek,gamedev,software,meetup
 .. type: text
 -->
 
