@@ -57,7 +57,7 @@ argue that their disclosures were civilly beneficial. Even now, when Snowden's
 leaks have caused Congress to change laws regarding surveillance, or caused the
 courts to strike down types of mass surveillance programs as illegal, or caused
 both the Attorney General and the President of the United States to admit that
-the resulting debase over mass surveillance was a crucial one for the public to
+the resulting debate over mass surveillance was a crucial one for the public to
 have. All these claims would be dismissed by the court as not just irrelevant,
 but inadmissible, leading to a sentence of up to ten years per leaked document.
 
@@ -69,7 +69,7 @@ of the distant Chinese rule, that that the American government would not snatch
 him off the street with impunity.
 
 The indulgence of the Hong Kong government fell apart, as the US filed for
-extradition. He fled bound for Equador, but was pulled aside during a 20-hour
+extradition. He fled bound for Ecuador, but was pulled aside during a 20-hour
 layover in a Moscow airport, for a conversation with Russian intelligence,
 during which Snowden insists he will not work with them, he only wants to catch
 his flight out. They reveal to him that he cannot leave, since the US State

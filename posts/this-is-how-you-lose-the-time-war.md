@@ -42,11 +42,12 @@ their masters.
 
 Around these letters are formed the novel's tight, alternating structure,
 reminding me of Bank's *Use of Weapons*. Before you know it, their respect for
-each other's skills has grown to full-blown giddy all-out love. But where to
-from there? Their communications to date are already grounds for terminal
-repercussions. Nowhen in the multiverse are they safe from their respective
-commanders. Losing the time war would mean they no longer — had never —
-existed. Winning the time war would mean the same for their opposite number.
+each other's skills has grown to full-blown giddy all-out love. But where to,
+from there? Their communications to date are already traitorous - grounds for
+terminal repercussions. Nowhen in the multiverse are they safe from their
+respective commanders. Losing the time war would mean they no longer — had
+never — existed. Winning the time war would mean the same for their opposite
+number.
 
 At which point, the novel cleverly folds back on itself - these are consummate
 masters of time, and subtle but decisive influence, after all - to perform an
