@@ -11,16 +11,25 @@
 
 *by Kazuo Ishiguro, 2015* ![spoilers](/files/spoilers.svg)
 
-A haunting and melancholic tale set in a mythical post-Arthurian England,
-populated by ragged peoples, affected by a pervasive amnesia. Elderly couple
-Axl and Beatrice abruptly decide to leave their village of damp, hobbit-like
-underground burrows to visit a son they'd forgotten they had.
+A mythical tale, set in post-Arthurian England. Author Kazuo Ishiguro, Nobel
+prize winner for literature, is also famous for Klara and the Sun, Never Let
+Me Go, and The Remains of the Day (yes, that one about butlers.)
 
-Other characters are inspired by a variety of sources, from Beowulf to Arthur's
-knight and nephew Sir Gawain, now old and prone to quixotic rants - hinting at
-the subconscious conflict his code of honor has with the dark means by which he
-and other knights helped Arthur achieve the current uneasy peace between native
-Britons and invading Saxons, now occupying villages across the land.
+Ishiguro moved from Japan to England as a young child, and his insightful
+observation of English and Western culture and myth benefits from that
+transplant's perspective - at once deeply at home in England, and also
+an outsider to it.
+
+The tale is populated by ragged peoples, affected by a pervasive amnesia.
+Elderly couple Axl and Beatrice abruptly decide to leave their village of damp,
+hobbit-like underground burrows to visit a son they'd forgotten they had.
+
+Simlarly, other characters are inspired by a variety of classical sources, from
+Beowulf to Arthur's knight and nephew Sir Gawain, now old and prone to quixotic
+rants - hinting at the subconscious conflict his code of honor has with the
+dark means by which he and other knights formerly helped Arthur achieve the
+current uneasy peace between native Britons and invading Saxons, now occupying
+villages across the land.
 
 The journey is perilous, encountering roaming ogres and deadly pixies, not
 to mention soldiers of the local lords, and deadly conflicts within the party
@@ -34,8 +43,9 @@ to have happened, by characters who weren't there.
 
 This muted indirectness is entirely in keeping with the ambiguous, dreamlike
 style of the book, which is heightened by the sing-song formalism of the
-characters' speech, and the narrator's occasional surreal hint of relating this
-tale to contemporaries who live in some other, unidentifiable, historic time.
+characters' medieval speech, and the narrator's occasional surreal hint of
+relating this tale to contemporaries who live in some other, unidentifiable,
+historic time.
 
 The journey eventually comes to revolve around the dispatch - or defence - of a
 dragon that is said to be the source of everyone's forgetfulness, and as this
@@ -46,10 +56,10 @@ the remembering of wartime battles and atrocities? Will Saxon resentment at
 Arthur's desperate misdeeds be stoked into resumption of the violent war of
 invasion? This is left unresolved by the novel's end, but as reader, we know
 that the Saxons did ultimately conquer all of England, displacing the Britons
-culturally and politically, and possibly murdering a good number of them along
+culturally and politically, and probably murdering a good number of them along
 the way.
 
-Personally, I'm minded to think of ancient England here as being the root of
+Personally, I'm minded to think of ancient England here as being a root of
 modern Western culture, and the mist as an allegory for the bland ignorance of
 our own culture's atrocities. The deliberate forgetting, like the mist, clouds
 all our conciousnesses, making it hard for us to remember who we are. Why we're
