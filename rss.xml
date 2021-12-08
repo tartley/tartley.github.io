@@ -1,5 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 08 Dec 2021 18:14:41 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Subnautica: Below Zero</title><link>https://www.tartley.com/posts/subnautica-below-zero/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;on Windows, published 2021&lt;/em&gt;. &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 08 Dec 2021 22:58:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Got sick of navigating the limitations of various online services to create
+animated gif memes, finally figured out how to do it manually. Not a universal
+process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
+&lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
+show the commands as I used them, as I was figuring each step out.&lt;/p&gt;
+&lt;h4&gt;1. Download a video&lt;/h4&gt;
+&lt;p&gt;Starting from a video on YouTube:&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6-gJMs6DwuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;To download this locally,
+&lt;a href="https://github.com/ytdl-org/youtube-dl"&gt;install &lt;code&gt;youtube-dl&lt;/code&gt;&lt;/a&gt;,
+hit the YouTube &lt;em&gt;share&lt;/em&gt; button to grab the video's encoded URL,
+and:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;youtube-dl https://youtu.be/6-gJMs6DwuE -o Ash.mp4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This gives me an 850KB .mp4 video file.&lt;/p&gt;
+&lt;h4&gt;2. Split&lt;/h4&gt;
+&lt;p&gt;I only want the final few seconds. To remove the start of the video,
+keeping from 6.5 seconds until the end:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ffmpeg -hide_banner -i Ash.mp4 -acodec copy -vcodec libx264 -ss 00:00:06.5 Ash-split.mp4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Args to ffmpeg are position sensitive. Specifying '-ss' (to split the file)
+before the input ('-i') can't create the split at an accurate location, since
+it has to guess whereabouts in the file the given timestamp will occur. But
+putting it after the input (as done here) means it can split accurately on the
+given timestamp, since the file has been processed by the time this arg gets
+actioned, so accurate timestamp/frame conversion is known, at the cost of
+having had to process even the parts of the video that are then discarded.&lt;/p&gt;
+&lt;p&gt;Vcodec of libx264 is specified because, according to stackoverflow,
+"&lt;a href="https://stackoverflow.com/questions/5651654/ffmpeg-how-to-split-video-efficiently#comment85070704_13289426%22"&gt;scenes in mp4 are broken&lt;/a&gt;, whatever that means,
+and specifying "copy", as most people do, gives me an output with no video,
+only audio.&lt;/p&gt;
+&lt;p&gt;This results in a three second, 217KB .mp4 video file. (the following is just an
+image of it).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split.webp" src="https://www.tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
+&lt;h4&gt;3. Crop&lt;/h4&gt;
+&lt;p&gt;To crop out the black bars from the top and bottom:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ffmpeg -hide_banner -i Ash-split.mp4 -vf 'crop=iw:365' Ash-split-crop.mp4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here, we crop it to the input width "iw", and 365 high. In the absense of
+any offset ordinates for the crop, ffmpeg defaults to centering them, so this
+365 pixels are taken from the middle of the video, which is exactly what we
+want.&lt;/p&gt;
+&lt;p&gt;This results in a three second, 220KB .mp4 video file.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://www.tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
+&lt;h3&gt;4. Resize and convert to gif&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="s s-Atom"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;hide_banner&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;vf&lt;/span&gt; &lt;span class="s s-Atom"&gt;'scale=512:-1'&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;resize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;gif&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This results in a grainy-but-passable three second 750KB animated .gif:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
+&lt;p&gt;The file size can be smaller, if you care, most easily by splitting a shorter
+video clip, reducing the frame rate, or reducing the 'scale' in this step.&lt;/p&gt;
+&lt;p&gt;Alternately, this could be done using ImageMagik's 'convert', but the result
+of that was a very large (10MB) file and played very slowly, and I wasn't
+immediately sure how to fix that.&lt;/p&gt;
+&lt;h3&gt;5. Add text&lt;/h3&gt;
+&lt;p&gt;Using Imagemagik's 'convert':&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;convert \
+    Ash-split-crop-resize.gif \
+    -coalesce \
+    -font impact -pointsize 36 -fill white -stroke black -strokewidth 2 \
+    -gravity north -annotate +0+0 'I can''t lie about your chances, but' \
+    -gravity south -annotate +0+0 'you have my sympathies' \
+    -layers Optimize \
+    Ash-split-crop-resize-text.gif
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The '-coalesce' option removes all the .gif optimizations, then we apply the
+text labels, then the '-layers' option re-applies optimizations. Without this
+dance, the text is all twitchy and messy.&lt;/p&gt;
+&lt;p&gt;Voilà. Imagine sending it to a co-worker who is taking on a difficult task,
+like making changes to that thorny section of the codebase that nobody likes:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>bash</category><category>image</category><category>linux</category><category>til</category><category>video</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>Subnautica: Below Zero</title><link>https://www.tartley.com/posts/subnautica-below-zero/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;em&gt;on Windows, published 2021&lt;/em&gt;. &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://subnautica.fandom.com/wiki/Subnautica_Wiki"&gt;Subnautica&lt;/a&gt;,
 and its icy sequel,
 "&lt;a href="https://subnautica.fandom.com/wiki/Subnautica:_Below_Zero"&gt;Below Zero&lt;/a&gt;",
@@ -15,14 +93,50 @@ Zero's Glacial Basin region just to keep track of where we'd been. To make sure
 we visited all the locations, found all the MacGuffins (I'm looking at &lt;em&gt;you&lt;/em&gt;,
 pesky antidote), and experienced all that there was to experience.&lt;/p&gt;
 &lt;p&gt;But as those goals approached completion, I &lt;em&gt;finished&lt;/em&gt; drawing it because it
-had become a therapeutic experience. Happily exploring away, avoiding hostile
-wildlife, uncovering the ruins of ancient alien artifacts. Reckoning distances
-by eye, scribbling down what we found, updating and correcting the map as
-we went. Being lost in the experience. Simply a joy.&lt;/p&gt;
+had become a therapeutic experience. Happily exploring away, mesmerised by the
+scenery, avoiding hostile wildlife, uncovering the ruins of ancient alien
+artifacts. Reckoning distances by eye, scribbling down what we found, updating
+and correcting the map as we went. Being lost in the experience. Simply a joy.&lt;/p&gt;
 &lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Subnautica screenshot" src="https://www.tartley.com/files/2021/subnatica-below-zero-map-glacial-basin.png"&gt;
 &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>map</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/subnautica-below-zero/</guid><pubDate>Mon, 22 Nov 2021 22:24:22 GMT</pubDate></item><item><title>This Is How You Lose the Time War</title><link>https://www.tartley.com/posts/this-is-how-you-lose-the-time-war/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>map</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/subnautica-below-zero/</guid><pubDate>Mon, 22 Nov 2021 22:24:22 GMT</pubDate></item><item><title>Starship Troopers</title><link>https://www.tartley.com/posts/starship-troopers/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Starship Troopers cover" src="https://www.tartley.com/files/2021/starship-troopers-cover.webp"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Robert Heinlein, 1959.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;My first time reading this classic old Hugo winner. I'd seen the 1995 movie
+many years ago, which is clearly a satire, highlighting the fascistic
+tendencies of the dedicated military discipline required for humanity to
+survive in a dog-eat-dog galaxy.&lt;/p&gt;
+&lt;p&gt;But was that Heinlein's original intent? I don't detect that in my reading of
+it. The text seems, to my eyes, to be a straight-up endorsement and
+glorification of military discipline, corporal and capital punishment, and
+withholding citizenship from people who haven't served in the military.&lt;/p&gt;
+&lt;p&gt;I've seen people argue that, as an expert writer, Heinlein knew precisely what
+he was doing, and didn't need to draw attention to his critiques of fascism in
+the text in order for an astute reader to realize that not everything espoused
+by the novel is necessarily good, or corresponds with the author's viewpoint.
+We are still discussing the novel 60 years later, and its relationship to
+fascism, so he has achieved his goal of getting us to think about it. After
+all, didn't Heinlein write this partway through his drafting of what would
+become &lt;em&gt;Stranger in a Strange Land&lt;/em&gt;, which features hippy sexual freedom, and
+&lt;em&gt;Troopers&lt;/em&gt; itself contains nods to racial and gender equality (albeit these are
+somewhat ham-fisted.) Hence, say some, Heinlein was would not genuinely have
+intended to advocate militaristic or fascist views.&lt;/p&gt;
+&lt;p&gt;I'm not convinced. It seems entirely possible that Heinlein was in favor of
+sexual freedoms, while in other regards advocating staunch militarism. He
+wrote &lt;em&gt;Troopers&lt;/em&gt; directly in response to the US suspending nuclear weapons
+testing, which he wished to see resume. According to Wikipedia he stated at the
+time that he used the novel to clarify his military and political views, such
+as that the USA was too conciliatory in its dealings with China and the Soviet
+Union. In the book, the "bugs" - alien enemies, are explicitly referred to as
+communist, and depicted as mostly mindless drones, for which the only solution
+is eradication.&lt;/p&gt;
+&lt;p&gt;So. I don't agree with the author's outlook, and wasn't convinced by the book's
+interpretation of civics, and passages of moralizing. But it was an
+interesting, albeit naturally dated, read, to see what successful military
+SF looked like 60 years ago.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/starship-troopers/</guid><pubDate>Sat, 20 Nov 2021 18:19:44 GMT</pubDate></item><item><title>This Is How You Lose the Time War</title><link>https://www.tartley.com/posts/this-is-how-you-lose-the-time-war/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="This Is How You Lose the Time War cover" src="https://www.tartley.com/files/2021/this-is-how-you-lose-the-time-war-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Amal El-Mohtar &amp;amp; Max Gladstone, 2019&lt;/em&gt; &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
@@ -65,7 +179,28 @@ be re-construed as having left a trail, ready to be exploited once the moment
 was right.&lt;/p&gt;
 &lt;p&gt;It's a long way from my usual preference of hard-as-nails SF, but I loved it
 nonetheless.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>fiction</category><category>media</category><category>novella</category><category>science-fiction</category><guid>https://www.tartley.com/posts/this-is-how-you-lose-the-time-war/</guid><pubDate>Wed, 17 Nov 2021 20:49:26 GMT</pubDate></item><item><title>The Buried Giant</title><link>https://www.tartley.com/posts/the-buried-giant/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>fiction</category><category>media</category><category>novella</category><category>science-fiction</category><guid>https://www.tartley.com/posts/this-is-how-you-lose-the-time-war/</guid><pubDate>Wed, 17 Nov 2021 20:49:26 GMT</pubDate></item><item><title>Children of Time</title><link>https://www.tartley.com/posts/children-of-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Children of Time cover" src="https://www.tartley.com/files/2021/children-of-time-cover.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Adrian Tchaikovsky (2015)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Lots of people love this, and it was jolly enough, but it just isn't for me. A
+couple of times I toyed with the idea of invoking my new policy of abandoning
+any book that isn't absolutely knocking my socks off - something I haven't
+previously been in the habit of.&lt;/p&gt;
+&lt;p&gt;It's unfair of me to compare one book with another, but partly, I was irked by
+featuring an alien planet of spiders, that being so reminiscent of Vernor
+Vinge's 1999 novel &lt;em&gt;A Deepness in the Sky&lt;/em&gt; (and he can hardly be the first to
+play with that.)&lt;/p&gt;
+&lt;p&gt;To be fair, Tchaikovsky's spider civilization definitely exhibits more
+thought-out arachnid sensibilities, whereas Vinge's act more like a Dickensian
+family drama - "Button up warm, childlings!" "Yes, Daddy!". But Vinge was there
+first, and has such a high profile, being a sequel to a much-loved Hugo winner,
+that it casts a shadow on anything else following on the same path.&lt;/p&gt;
+&lt;p&gt;Partly, also, I've been spoiled by hard science fiction from people like
+Peter Watts - real scientists, who are devastatingly smart, and are not afraid
+to dazzle their readers with it, even if that makes it a little hard going at
+times. Something about Children of Time was just too easygoing for me.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/children-of-time/</guid><pubDate>Wed, 10 Nov 2021 20:58:50 GMT</pubDate></item><item><title>The Buried Giant</title><link>https://www.tartley.com/posts/the-buried-giant/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="The Buried Giant cover" src="https://www.tartley.com/files/2021/the-buried-giant-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Kazuo Ishiguro, 2015&lt;/em&gt; &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
@@ -655,168 +790,4 @@ flashing white. While keeping FN pressed:&lt;/p&gt;
 &lt;p&gt;Hence, to save changes to an arbitrary profile, you need to select that
 profile &lt;em&gt;before&lt;/em&gt; making the changes.&lt;/p&gt;
 &lt;p&gt;When turning the keyboard on (ie. Plugging the USB cable into a computer),
-the active profile will be whichever one was last active.&lt;/p&gt;&lt;/div&gt;</description><category>hardware</category><category>keyboard</category><category>manual</category><guid>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</guid><pubDate>Fri, 23 Jul 2021 18:41:50 GMT</pubDate></item><item><title>Self-Calm</title><link>https://www.tartley.com/posts/self-calm/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Self Calm cover" src="https://www.tartley.com/files/2021/self-calm-cover.jpg"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Chris DeLeon (2018)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Roman Emperor Marcus Auralias' notes, traditionally titled &lt;em&gt;Meditations&lt;/em&gt;,
-are a foundational text for practical Stoicism. They comprise a multitude of
-observations and recommendations, grouped into sections such as "Keeping
-thoughts tranquil", and "Cooperation, collaboration and contribution". They
-offer advice for living a contented life, with less regret, sorrow, anger and
-fear.&lt;/p&gt;
-&lt;p&gt;Several translations exist, themselves dated from through the ages. This book
-combines them, to synthesize a text which doesn't hew as precisely to the
-original as a straight translation might, but is instead intended to have the
-most relevance to modern ears.&lt;/p&gt;
-&lt;p&gt;Confession: It's taken me &lt;em&gt;months&lt;/em&gt; to get through it. Partly this is because
-I've allowed myself to be distracted by more gaudy and immediate books along
-the way. Partly it's because I found the best way to read this was &lt;em&gt;slowly&lt;/em&gt;.
-Practically every paragraph is worth reflecting upon, to consider how it
-applies to my own life, and ponder what practical, specific next steps are
-implied.&lt;/p&gt;
-&lt;p&gt;If I had to criticize, it would only be the superficial wrinkle that there's
-a lot of repetition, such as hundreds of suggestions to not fear death.
-Apparently the original documents were accumulated over decades of Auralias'
-life.&lt;/p&gt;
-&lt;p&gt;Genuinely life changing.&lt;/p&gt;
-&lt;p&gt;You can get the epub for free from
-&lt;a href="https://gumroad.com/l/self-calm"&gt;the author's gumroad page&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>history</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/self-calm/</guid><pubDate>Thu, 03 Jun 2021 12:38:57 GMT</pubDate></item><item><title>Things They Don't Tell You About Peroral Endoscopic Myotemy</title><link>https://www.tartley.com/posts/things-they-dont-tell-you-about-peroral-endoscopic-myotemy/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="P.O.E.M." src="https://www.tartley.com/files/2021/poem.jpg"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;h4&gt;The problem&lt;/h4&gt;
-&lt;p&gt;This year I was diagnosed with achalasia. It's a rare condition in which nerve
-damage causes weak and poorly coordinated swallowing in the esophagus,
-including a reluctance of the lower esophageal sphincter, leading to the
-stomach, to properly relax at the appropriate moment.&lt;/p&gt;
-&lt;p&gt;This leads to difficulty swallowing, regurgitation, and a column of liquid
-sitting in the esophagus, which becomes distended, losing elasticity and tone.
-The cause of the nerve damage is unknown, and has probably been accumulating
-for decades. It's reasonable to assume this is mixed up in some way with
-various ailments of my guts over the years (celiac, eosinophilic esophagitis,
-chronic hiccups), but causal relationships are unknown.&lt;/p&gt;
-&lt;h4&gt;A solution, of sorts&lt;/h4&gt;
-&lt;p&gt;Peroral endoscopic myotomy (POEM) is a surgical procedure intended to allow the
-esophagus to drain properly, avoiding further distension. Surgery happens
-through a tube down the throat, from where they cut into the muscle wall of the
-oesophagus, then tunnel down to the outside of the lower esophageal sphincter.
-There, they cut some of the muscle, making the sphincter less tightly clenched,
-so that food can pass more easily.&lt;/p&gt;
-&lt;p&gt;For me, my symptoms were a nuisance, but perfectly endurable. The main goal
-of the procedure was preventative - reduction in future damage to my esophagus.
-Plus, there's an outside chance that maybe eliminating that standing fluid
-might improve other matters, such as reducing irritation which maybe causes my
-hiccups? Long shot, but worth a try.&lt;/p&gt;
-&lt;p&gt;There's a lot of information given to the patient through the process, but
-these are the things that were still surprises to me.&lt;/p&gt;
-&lt;h4&gt;Day 0. The procedure.&lt;/h4&gt;
-&lt;p&gt;I've undergone a lot of regular endoscopic inspections or biopsies. At some
-point, in London's splendid Imperial College Hospital, I discovered the cheat
-code is to ask to do these unsedated. It's a few minutes of slightly
-nightmarish discomfort, to watch a burly gentleman hand-over-hand several feet
-of black rubber garden hose directly into your mouth. But the payoffs are that
-without any anesthetic, there's no need to fast, the procedure itself is
-simpler and safer, and best of all, recovery time is much reduced. Given a
-few minutes to compose yourself, you can cycle or drive yourself home right
-afterwards, making it a 45 minute appointment, instead of writing off most of
-the day.&lt;/p&gt;
-&lt;p&gt;However, going unsedated for the more substantial POEM obviously isn't an
-option. It requires more than the simple sedation I've experienced before,
-since apparently there's a phase at the end where they check you're regaining
-consciousness and are able to breathe for yourself before they remove the
-apparatus that's been breathing for you while you are paralyzed for the
-procedure. This is the sort of detail that is kindly elided from the regular
-patient briefing, which only came up because we were asking questions.&lt;/p&gt;
-&lt;p&gt;I only remember coming around sometime after that point, and my first thought,
-unplanned, was to test whether I could perform square and cube roots in my
-head. Apparently that's my brain's idea of a power-on self test. I could do
-small integers, like 27 -&amp;gt; 3, but had the presence of mind enough to see that's
-just relying on remembered sequences. I was able to envision the process to do
-the calculation for something which isn't a cube, like 28, but I failed to
-actually execute any iterations of it.&lt;/p&gt;
-&lt;p&gt;I said hello to a nurse sat beside me, but resisted the urge to chatter at her
-about my mental state. Somehow, even I could see that from her perspective,
-that would be like talking to drunk people. So now I'm doing it at you instead.&lt;/p&gt;
-&lt;p&gt;After a while they rolled me into my own room, and stuck a big pad over my
-butt. &lt;em&gt;Foreshadowing!&lt;/em&gt; I fuzzily thought. I stayed in hospital overnight, for
-tests the next day. Forever grateful for Suze's visits even though I wasn't
-the best of company. :-)&lt;/p&gt;
-&lt;p&gt;My hiccups didn't reappear through the first few hours of my recovery, even
-though I spent the time propped upright in bed. This is pretty unusual - they
-usually return within seconds of me sitting up. But when they did return, they
-were pretty painful. What I call "hiccups" is partly a spasm of the esophagus
-itself - precisely where I'd just been cut and then clamped and sutered back
-together. So I asked the nurse to dial up the pain meds, at first with breezy
-British grit, and then with increasingly wild eyes and white knuckles
-as they took a while to figure out a few local administrative issues, like
-where the person with the keys to the drugs locker had gone. Rode out the rest
-of the day in style.&lt;/p&gt;
-&lt;h4&gt;Day 1. Restart the line&lt;/h4&gt;
-&lt;p&gt;I'd brought a bunch of things for my two day hospital stay, books and media and
-headphones and my own cozy pajamas to wear while garrulously socializing with
-staff and adjacent patients. That was all a total waste of time. I was a write
-off the entire time I was there, not able to muster the bandwidth even to watch
-TV. I saw a single episode of Schitt's Creek at one point because Suze kindly
-propped it up in front of me, but I couldn't manage a 2nd. I just dozed, and
-was wheeled to a barium x-ray, to check I wasn't leaking anywhere untoward.&lt;/p&gt;
-&lt;p&gt;At some point during this day, my digestive tract started up again. It became
-apparent that it had just been on strike, inactive, since the surgery. I felt
-it ripple distressingly back into action, along with some impressive gurgles.
-The big pad they'd stuck on me the day before turned out not to be vital in
-this instance, but I can very much understand how it often might be.&lt;/p&gt;
-&lt;p&gt;The nurse introduced me to a plastic device for measuring and exercising my
-ability to inhale deeply, on which I could occasionally surpass the initial
-expectation of 1,000 points.&lt;/p&gt;
-&lt;p&gt;My ambitions for the day were to get out of bed and take a 2 minute walk, and
-later in the day to tolerate my first drinks, some water and fruit juices,
-sufficiently to get approved to go home. Leaving hospital with some
-prescription, gluten free, clear liquid pain killers proved to be an impossible
-administrative nightmare. Nobody's fault, the system is broken. The concept of
-"insurance" for healthcare is inherently dysfunctional.&lt;/p&gt;
-&lt;h4&gt;Day 2. Home again&lt;/h4&gt;
-&lt;p&gt;At home for five days of a clear liquid diet. This means water, strained fruit
-juices &amp;amp; drinks without suspensions (i.e. no particles floating in it to make
-it opaque), tea or coffee without milk, clear broths. Also, slightly bizarrely,
-jello, since it may be eaten while solid, but at room (or body) temperature,
-it's a liquid. I demurred on Suze's threat to make jello shots.&lt;/p&gt;
-&lt;p&gt;Ambitions for today were to rise from the sofa for a shower, and a walk or two
-around the inside of the house. Scoring 1,500 points on the breathe-o-meter.
-Importantly, I now have it together enough to be able to watch some dumb TV.&lt;/p&gt;
-&lt;h4&gt;Day 3. Outdoors.&lt;/h4&gt;
-&lt;p&gt;Ambitions today were to take a walk or two around our yard. Scoring 2,000
-points on the breathe-o-meter! Yay, progress. Able to concentrate enough to
-read.&lt;/p&gt;
-&lt;h4&gt;Day 4.&lt;/h4&gt;
-&lt;p&gt;Ambitions today were to take a couple of walks around the block. Scoring 3,500
-points on the breathe-o-meter. I have no idea what my baseline was.&lt;/p&gt;
-&lt;h4&gt;Day 5.&lt;/h4&gt;
-&lt;p&gt;First full day and night without any pain killers. Ambitions for today were to
-take it easy and not mow the lawn (check!). Might have to get someone in to do
-it for us. I'd be writhing in guilt if Suze had to go out and manhandle our
-temperamental mower around. 4,500 on the breathe-o-meter.&lt;/p&gt;
-&lt;h4&gt;Day 6.&lt;/h4&gt;
-&lt;p&gt;Back to work - from home, at a desk.&lt;/p&gt;
-&lt;p&gt;Over lunch I visit the hospital for an x-ray and more tests. I was hoping to
-graduate to a soft food diet today, but surgeon says that, although he's happy
-with my progress, out of an abundance of caution he's going to keep me on clear
-liquids until day 9. Then a soft food diet for six weeks. C'est la vie. Back
-home to more apple juice. At least I'm still under instructions to take it
-easy, so retain my excuse for not mowing the lawn...&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>journal</category><guid>https://www.tartley.com/posts/things-they-dont-tell-you-about-peroral-endoscopic-myotemy/</guid><pubDate>Wed, 02 Jun 2021 15:50:10 GMT</pubDate></item><item><title>Demon</title><link>https://www.tartley.com/posts/demon/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Demon cover" src="https://www.tartley.com/files/2021/demon-cover.jpg"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Jason Shiga (2016)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;I'm just discovering the works of &lt;a href="http://www.shigabooks.com"&gt;Jason Shiga&lt;/a&gt;,
-creator of mathematically-inspired nonlinear comic-books, e.g. stories drawn
-on complex origami structures, that can be folded in various ways to represent
-either branching story-lines, or else to manage state such as 'inventory'.
-Construction of these more elaborate paper constructions doesn't scale,
-(ie. I'm not likely to ever own one) but you can try some of his other
-creations on the web.&lt;/p&gt;
-&lt;p&gt;This is &lt;a href="http://www.shigabooks.com/index.php?page=001"&gt;Demon&lt;/a&gt;,
-a regular linear web-comic.&lt;/p&gt;
-&lt;p&gt;The storyline is 'math-inspired' too, in the same way that the movie &lt;em&gt;Primer&lt;/em&gt;
-is - intense, absolute, ruthless, narrative exploration of logical
-implications, while continually, dizzyingly, escalating to the next level.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>comic</category><category>free-to-read</category><category>media</category><guid>https://www.tartley.com/posts/demon/</guid><pubDate>Mon, 31 May 2021 16:08:52 GMT</pubDate></item></channel></rss>
+the active profile will be whichever one was last active.&lt;/p&gt;&lt;/div&gt;</description><category>hardware</category><category>keyboard</category><category>manual</category><guid>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</guid><pubDate>Fri, 23 Jul 2021 18:41:50 GMT</pubDate></item></channel></rss>

@@ -11,11 +11,11 @@
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2021-12-08T18:14:00Z</lastmod>
+  <lastmod>2021-12-08T22:58:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/</loc>
-  <lastmod>2021-12-08T18:07:00Z</lastmod>
+  <lastmod>2021-12-08T21:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/arcade/</loc>
@@ -210,10 +210,6 @@
   <lastmod>2021-12-08T18:07:00Z</lastmod>
  </url>
  <url>
-  <loc>https://www.tartley.com/categories/maps/</loc>
-  <lastmod>2021-12-08T18:07:00Z</lastmod>
- </url>
- <url>
   <loc>https://www.tartley.com/categories/math/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
@@ -330,10 +326,6 @@
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://www.tartley.com/categories/spoilers/</loc>
-  <lastmod>2021-12-08T17:59:00Z</lastmod>
- </url>
- <url>
   <loc>https://www.tartley.com/categories/startups/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
@@ -376,6 +368,10 @@
  <url>
   <loc>https://www.tartley.com/categories/version-control/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/video/</loc>
+  <lastmod>2021-12-08T21:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/videogame/</loc>
@@ -467,7 +463,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-25.html</loc>
-  <lastmod>2021-12-08T17:59:00Z</lastmod>
+  <lastmod>2021-12-08T21:32:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-3.html</loc>
@@ -630,6 +626,10 @@
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/posts/children-of-time/</loc>
+  <lastmod>2021-12-08T20:58:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/posts/city-at-the-end-of-time/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
@@ -680,6 +680,10 @@
  <url>
   <loc>https://www.tartley.com/posts/creating-a-level-for-thief-2/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</loc>
+  <lastmod>2021-12-08T21:32:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/cross-site-image-linking-vandalism/</loc>
@@ -1276,6 +1280,10 @@
  <url>
   <loc>https://www.tartley.com/posts/spiderman-3/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/starship-troopers/</loc>
+  <lastmod>2021-12-08T18:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/station-eleven/</loc>
