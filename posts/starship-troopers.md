@@ -1,7 +1,7 @@
 <!--
 .. title: Starship Troopers
 .. slug: starship-troopers
-.. date: 2021-12-08 12:19:44 UTC-06:00
+.. date: 2021-11-20 12:19:44 UTC-06:00
 .. tags: media,book,novel,science-fiction
 -->
 

@@ -24,10 +24,10 @@ we visited all the locations, found all the MacGuffins (I'm looking at *you*,
 pesky antidote), and experienced all that there was to experience.
 
 But as those goals approached completion, I *finished* drawing it because it
-had become a therapeutic experience. Happily exploring away, avoiding hostile
-wildlife, uncovering the ruins of ancient alien artifacts. Reckoning distances
-by eye, scribbling down what we found, updating and correcting the map as
-we went. Being lost in the experience. Simply a joy.
+had become a therapeutic experience. Happily exploring away, mesmerised by the
+scenery, avoiding hostile wildlife, uncovering the ruins of ancient alien
+artifacts. Reckoning distances by eye, scribbling down what we found, updating
+and correcting the map as we went. Being lost in the experience. Simply a joy.
 
 <span style="float: left">
 ![Subnautica screenshot](/files/2021/subnatica-below-zero-map-glacial-basin.png)
