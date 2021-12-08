@@ -363,6 +363,7 @@ TAG_DESCRIPTIONS = {
        "software": "",
        "tartley.com": "",
        "testing": "",
+       "til": "Today I learned",
        "todo": "",
        "tv": "",
        "vandalism": "",
@@ -377,9 +378,7 @@ TAG_DESCRIPTIONS = {
 
 # Set special titles for tag pages. The default is "Posts about TAG".
 TAG_TITLES = {
-   DEFAULT_LANG: {
-       "til": "Today I learned",
-   },
+   DEFAULT_LANG: {},
 }
 
 # If you do not want to display a tag publicly, you can mark it as hidden.
