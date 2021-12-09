@@ -2,10 +2,7 @@
 .. title: Format Python Snippets with Black.
 .. slug: format-python-snippets-with-black
 .. date: 2020-06-09 19:36:58+00:00
-.. tags: geek,python,software
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,python,software,command-line
 -->
 
 Black, the opinionated Python code formatter, can easily be invoked from your

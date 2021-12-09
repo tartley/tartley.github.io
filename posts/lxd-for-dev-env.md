@@ -2,10 +2,7 @@
 .. title: LXD for Development Environments.
 .. slug: lxd-for-dev-env
 .. date: 2020-04-20 13:57:47-05:00
-.. tags: linux,geek,software
-.. link:
-.. description:
-.. type: text
+.. tags: linux,geek,software,command-line
 -->
 
 
