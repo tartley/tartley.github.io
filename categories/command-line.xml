@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Dec 2021 19:07:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Got sick of navigating the limitations of various online services to create
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about command-line)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/command-line.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Dec 2021 19:07:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Got sick of navigating the limitations of various online services to create
 animated gif memes, finally figured out how to do it manually. Not a universal
 process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
 &lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
@@ -77,39 +77,60 @@ text labels, then the '-layers' option re-applies optimizations. Without this
 dance, the text is all twitchy and messy.&lt;/p&gt;
 &lt;p&gt;Voilà. Imagine sending it to a co-worker who is taking on a difficult task,
 like making changes to that thorny section of the codebase that nobody likes:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>image</category><category>linux</category><category>til</category><category>video</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>TIL: Download audio from YouTube</title><link>https://www.tartley.com/posts/til-create-mp3-from-youtube-video/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Install ffmpeg:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;sudo apt install ffmpeg
+&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>image</category><category>linux</category><category>til</category><category>video</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/posts/til-git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
+&lt;code&gt;git tag TAGNAME&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Today I learned about &lt;em&gt;annotated&lt;/em&gt; tags, created with &lt;code&gt;git tag -a -m "MESSAGE"
+TAGNAME&lt;/code&gt;. If you don't specify &lt;code&gt;-m MESSAGE&lt;/code&gt;, git annoyingly prompts you for
+one, but it will accept &lt;code&gt;-m ""&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Annotated tags store the creator, created timestamp, and the message. This
+might occasionally be useful for understanding what happened. A release tagged
+this way shows us who created the release, and when, which might differ from
+when the commit was created.&lt;/p&gt;
+&lt;p&gt;But more importantly is the different handling of lightweight versus
+annotated tags when pushing to the server.&lt;/p&gt;
+&lt;p&gt;Habitually, I've been using &lt;code&gt;git push --tags&lt;/code&gt;. But this is slightly broken, in
+that it pushes &lt;em&gt;all&lt;/em&gt; tags. Some tags might be intended as my private local
+development state. Some of them might be unreachable in the origin repo.&lt;/p&gt;
+&lt;p&gt;To address these issues, newer versions of &lt;code&gt;git push&lt;/code&gt; introduced
+&lt;code&gt;--follow-tags&lt;/code&gt;, which only pushes annotated tags which are on ancestors
+of the commit being pushed, so that no unreachable tags are created on origin.&lt;/p&gt;
+&lt;p&gt;Hence, a better workflow is:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Use regular lightweight tags for local state.
+   Keep them private by never using &lt;code&gt;git push --tags&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Use annotated tags to share state with other developers.&lt;/li&gt;
+&lt;li&gt;To share annotated tags, either push them directly, with &lt;code&gt;git push TAGNAME&lt;/code&gt;,
+   or use &lt;code&gt;git push --follow-tags&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>command-line</category><category>git</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/til-git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
-&lt;p&gt;Install &lt;code&gt;youtube-dl&lt;/code&gt;, a tool to download YouTube videos. Using &lt;code&gt;apt&lt;/code&gt; installs a
-version that's too old to work, so:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;pip install --user pipsi
-pipsi install youtube-dl
+&lt;p&gt;But often you'd like to reformat just a section of the file, while leaving
+everything else intact. In principle, it's easy to tell Vim to just send the
+current visual selection:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the visual selection&lt;/span&gt;
+xnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
-&lt;h3&gt;The best way&lt;/h3&gt;
-&lt;p&gt;Tell youtube-dl to download the audio:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;youtube-dl -x --audio-format&lt;span class="o"&gt;=&lt;/span&gt;best URL
-&lt;/pre&gt;
-&lt;p&gt;Where
-* &lt;code&gt;-x&lt;/code&gt; downloads just the audio part.
-* Audio format defaults to 'best', but can be "aac", "flac", "mp3", "m4a",
-  "opus", "vorbis", or "wav".&lt;/p&gt;
-&lt;p&gt;As I understand it, it downloads whatever audio format YouTube provides,
-then converts it locally using ffmpeg, so you're not really getting the
-benefit of those lossless formats - mp3 is fine for
-&lt;a href="https://www.youtube.com/watch?v=VSJWvzLuGz8"&gt;my&lt;/a&gt;
-&lt;a href="https://www.youtube.com/watch?v=nyU1Pt2IXyE"&gt;needs&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;My previous inferior way&lt;/h3&gt;
-&lt;p&gt;This method is worse because it downloads the whole video file before
-extracting audio locally, and the download gets throttled by YouTube in some
-way, which of late is very slow indeed.&lt;/p&gt;
-&lt;p&gt;Download the video from YouTube:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;youtube-dl URL
-&lt;/pre&gt;
-&lt;p&gt;This results in a webm file. I have no idea what that is, and am relieved
-to discover that converting it into an mp3 requires just:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
-&lt;/pre&gt;
-&lt;p&gt;Where &lt;code&gt;-vn&lt;/code&gt; disables video in the output.&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>music</category><category>til</category><guid>https://www.tartley.com/posts/til-create-mp3-from-youtube-video/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;(Note that both the above Vim configuration snippets map the same key
+sequence -- leader (commonly comma) followed by lower case b. These can be
+defined simultaneously, because the second one uses 'xnoremap', meaning it is
+used only while a visual selection exists, while the first uses 'nnoremap', so
+is used all other times.)&lt;/p&gt;
+&lt;p&gt;But if the given code starts with an indent on the first line, for example if
+it comes from lines in the middle of a function, then this won't work. Black
+parses the given code into a Python abstract syntax tree (AST), and a leading
+indent is a syntax error - it's just not valid Python.&lt;/p&gt;
+&lt;p&gt;I filed a hopeful &lt;a href="https://github.com/psf/black/issues/1352"&gt;issue with Black&lt;/a&gt;,
+suggesting they could handle this case, but it was a long shot and hasn't
+gained much enthusiasm.&lt;/p&gt;
+&lt;p&gt;So, I present a tiny Python3 wrapper, &lt;em&gt;enblacken&lt;/em&gt;, which:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unindents the given code such that the first line has no indent.&lt;/li&gt;
+&lt;li&gt;Passes the result to Black.&lt;/li&gt;
+&lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;
@@ -294,15 +315,7 @@ or at least filing an issue there to try and get some help.&lt;/p&gt;
 &lt;p&gt;But compare it with a regular vector font. Here's Ubuntu Mono, the &lt;em&gt;best&lt;/em&gt; of
 the vector fonts I could find at these sizes. Blurry and inconsistent and hard
 to read:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>fonts</category><category>linux</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>Conky.</title><link>https://www.tartley.com/posts/conky/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;In the typical mad-scientist thrills-per-minute that is the Linux way,
-adding a CPU meter to my desktop involved crafting
-&lt;a href="https://www.tartley.com/files/2020/conky.conf"&gt;my own conky configuration file&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;As always, building your own is a chore that crops up when you least expect
-it. But on the other hand, the opportunity for functional and aesthetic
-work results in something artisnally crafted to exactly meet your own personal
-needs. Something you can feel a little pride about. An elegant weapon,
-for a more... civilized age.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="An elegant weapon, for a more... civilised age." src="https://www.tartley.com/files/2020/conky.jpg"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><guid>https://www.tartley.com/posts/conky/</guid><pubDate>Wed, 15 Jan 2020 22:09:13 GMT</pubDate></item><item><title>Installing Colout</title><link>https://www.tartley.com/posts/installing-colout/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>fonts</category><category>linux</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>Installing Colout</title><link>https://www.tartley.com/posts/installing-colout/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
 &lt;p&gt;But &lt;code&gt;pip install colout&lt;/code&gt; from PyPI is broken, and has been for many months,
 due to a typo in the
 &lt;a href="https://pypi.org/project/colout/"&gt;latest (v0.5) PyPI release&lt;/a&gt;.&lt;/p&gt;
@@ -328,115 +341,7 @@ latest Github at the time:&lt;/p&gt;
 &lt;p&gt;Note that, throughout, we're using &lt;code&gt;--user&lt;/code&gt;, so that you can install
 development tools like this system-wide for the current user, without needing a
 virtualenv, without needing root access, and without modifying your installed
-Python system libraries.&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>geek</category><category>linux</category><guid>https://www.tartley.com/posts/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item><item><title>Running Multiple Firefox Profiles on Linux</title><link>https://www.tartley.com/posts/running-multiple-firefox-profiles/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I recently switched from Chrome to Firefox. It's so &lt;em&gt;fast&lt;/em&gt;, and easier
-to trust that Mozilla has my privacy and interests at heart than Google
-does.&lt;/p&gt;
-&lt;p&gt;I want to run a second profile at work, to keep a distinct set of open
-tabs, bookmarks, and the like. Here's how I did it:&lt;/p&gt;
-&lt;p&gt;Close all Firefox windows. Run the Profile Manager with &lt;code&gt;firefox -p&lt;/code&gt;.
-Create a second profile.&lt;/p&gt;
-&lt;p&gt;Open Firefox and find the directories your profiles live by browsing to
-&lt;code&gt;about:profiles&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Substitute those directories into this firefox.desktop file, where I've
-marked 'XXX':&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;# Gnome3 .desktop file for Firefox with multiple profiles&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Desktop&lt;/span&gt; &lt;span class="n"&gt;Entry&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;Version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.0&lt;/span&gt;
-&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;
-&lt;span class="n"&gt;Comment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Browse&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;web&lt;/span&gt;
-&lt;span class="n"&gt;GenericName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Web&lt;/span&gt; &lt;span class="n"&gt;Browser&lt;/span&gt;
-&lt;span class="n"&gt;Keywords&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Internet&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;WWW&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Browser&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Web&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Explorer&lt;/span&gt;
-&lt;span class="n"&gt;Type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Application&lt;/span&gt;
-&lt;span class="n"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;remote&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;
-&lt;span class="n"&gt;Terminal&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
-&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;MultipleArgs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
-&lt;span class="n"&gt;Icon&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;
-&lt;span class="n"&gt;Categories&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;GNOME&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;GTK&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Network&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;WebBrowser&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="n"&gt;Actions&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;work&lt;/span&gt;
-&lt;span class="n"&gt;MimeType&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xhtml&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;rss&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;rdf&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gif&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jpeg&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ftp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chrome&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;video&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;webm&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xpinstall&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="n"&gt;StartupNotify&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
-
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Desktop&lt;/span&gt; &lt;span class="n"&gt;Action&lt;/span&gt; &lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;profile&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mozilla&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;XXX&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;remote&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;
-
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Desktop&lt;/span&gt; &lt;span class="n"&gt;Action&lt;/span&gt; &lt;span class="n"&gt;work&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;work&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;profile&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mozilla&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;XXX&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;remote&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Save the above as firefox.desktop and install using:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ desktop-file-validate firefox.desktop
-$ desktop-file-install --dir&lt;span class="o"&gt;=&lt;/span&gt;.local/share/applications firefox.desktop
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This results in a Firefox icon in your applications menu that defaults
-to whichever profile you mark as default in the ProfileManager, but
-right clicking lets you select the home or work profile explicitly. Open
-each, and change the theme in one of them so the windows are visually
-distinct.&lt;/p&gt;
-&lt;p&gt;Tested on Ubuntu, RHEL 7.3, probably works on all Gnome3 desktops.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>linux</category><guid>https://www.tartley.com/posts/running-multiple-firefox-profiles/</guid><pubDate>Thu, 22 Feb 2018 00:40:55 GMT</pubDate></item><item><title>Automate Gnome keybindings</title><link>https://www.tartley.com/posts/automate-gnome-keybindings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Sick of manual GUI twiddling to fix inconsistent keybindings on various
-computers. Solved once and for all, by a new script in my personal
-workstation setup bucket:&lt;/p&gt;
-&lt;p&gt;Warning: This:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;works great on RHEL,&lt;/li&gt;
-&lt;li&gt;doesn't all work on Ubuntu&amp;lt;=17.04, I suspect because Unity has
-    it's own set of keybinds that are defined elsewhere.&lt;/li&gt;
-&lt;li&gt;works great on Ubuntu 17.10. especially if you go in manually to
-    disable the built-in keybinding for Super-V, which displays the
-    calendar and notifications window, which shadows my 'toggle window
-    maximize vertically'.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
-
-&lt;span class="nv"&gt;kb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'org.gnome.desktop.wm.keybindings'&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Switcher, between windows not apps, uses alt-tab and alt-grave&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; switch-windows &lt;span class="s2"&gt;"['Tab']"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; switch-windows-backward &lt;span class="s2"&gt;"['grave', 'Tab']"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; switch-applications &lt;span class="s2"&gt;"[]"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; switch-applications-backward &lt;span class="s2"&gt;"[]"&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Window maximize toggle, super-up&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; maximize &lt;span class="s2"&gt;"[]"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; toggle-maximized &lt;span class="s2"&gt;"['Up']"&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Window maximize vertically toggle, super-v&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; maximize-vertically &lt;span class="s2"&gt;"['v']"&lt;/span&gt;
-
-&lt;span class="c1"&gt;# run command, super-r&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; panel-run-dialog &lt;span class="s2"&gt;"['r', 'F2']"&lt;/span&gt;
-
-
-&lt;span class="c1"&gt;# Custom commands&lt;/span&gt;
-
-&lt;span class="nv"&gt;mk&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'org.gnome.settings-daemon.plugins.media-keys'&lt;/span&gt;
-&lt;span class="nv"&gt;ckb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings'&lt;/span&gt;
-
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt; custom-keybindings &lt;span class="s2"&gt;"['&lt;/span&gt;&lt;span class="nv"&gt;$ckb&lt;/span&gt;&lt;span class="s2"&gt;/custom0/', '&lt;/span&gt;&lt;span class="nv"&gt;$ckb&lt;/span&gt;&lt;span class="s2"&gt;/custom1/']"&lt;/span&gt;
-
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/ name &lt;span class="s2"&gt;"screen off"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/ &lt;span class="nb"&gt;command&lt;/span&gt; &lt;span class="s2"&gt;"screenoff"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/ binding &lt;span class="s2"&gt;"z"&lt;/span&gt;
-
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ name &lt;span class="s2"&gt;"terminal"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ &lt;span class="nb"&gt;command&lt;/span&gt; &lt;span class="s2"&gt;"terminal"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ binding &lt;span class="s2"&gt;"t"&lt;/span&gt;
-&lt;/pre&gt;
-&lt;p&gt;Embedded in that is the ultimate solution to my longstanding irk with
-Unity and Gnome's default window switcher (alt-tab.) By default it
-groups windows of a single application together, requiring some extra
--grave pressing to navigate between windows within an application.&lt;/p&gt;
-&lt;p&gt;This not only requires way more effort, but also breaks the expected
-behaviour of just tapping alt-tab to go back to the last used window.
-Instead it goes back to the last used application, so you can't toggle
-between two windows of the same application, eg. two terminals. Absolute
-madness.&lt;/p&gt;
-&lt;p&gt;The above modifies alt-tab to just cycle through all windows, ungrouped,
-which fixes the ability to toggle between last two windows. Also,
-alt-grave is provided as an alternative to cycle backwards through the
-windows, which is easier to hit than shift-alt-tab.&lt;/p&gt;&lt;/div&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/automate-gnome-keybindings/</guid><pubDate>Thu, 05 Oct 2017 01:06:47 GMT</pubDate></item><item><title>Postscript formatted man pages</title><link>https://www.tartley.com/posts/postscript-formatted-man-pages/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;code&gt;man&lt;/code&gt; and its &lt;code&gt;troff&lt;/code&gt; formatting can be asked to produce postscript
+Python system libraries.&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>geek</category><category>linux</category><guid>https://www.tartley.com/posts/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item><item><title>Postscript formatted man pages</title><link>https://www.tartley.com/posts/postscript-formatted-man-pages/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;code&gt;man&lt;/code&gt; and its &lt;code&gt;troff&lt;/code&gt; formatting can be asked to produce postscript
 output. Define a Bash function, e.g. in your .bashrc:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;function&lt;/span&gt; psman &lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
     &lt;span class="nv"&gt;SLUG&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$@&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; tr &lt;span class="s1"&gt;' '&lt;/span&gt; &lt;span class="s1"&gt;'-'&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
@@ -461,4 +366,126 @@ an empty pdf document. We restore `+o pipefail` again at the end.&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;$ psman tr
 &lt;/pre&gt;
 &lt;p&gt;produces&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;img alt="" src="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>bash</category><category>command-line</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/postscript-formatted-man-pages/</guid><pubDate>Wed, 23 Aug 2017 01:34:02 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;img alt="" src="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>bash</category><category>command-line</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/postscript-formatted-man-pages/</guid><pubDate>Wed, 23 Aug 2017 01:34:02 GMT</pubDate></item><item><title>Git: When to use three dots vs two</title><link>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
+today:&lt;/p&gt;
+&lt;p&gt;To see the commits or diffs introduced by a branch (the filled circles ●):&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;     f
+    +●  m           git log m..f
+     |  ○
+    +●  |           git diff m...f
+      \ ○
+       \|
+        ○
+&lt;/pre&gt;
+&lt;p&gt;To see the commits or diffs between the tip of one branch and another:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;     f              git log m...f
+    +●  m           All commits look the same,
+     |  ●-          unless you use --left-right, which
+    +●  |           shows where each commit comes from.
+      \ ●-
+       \|           git diff m..f
+        ○           '-' commits are shown inverted,
+                     i.e. additions as deletions.
+&lt;/pre&gt;
+&lt;p&gt;To see the commits from 'f' back to the beginning of time:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;     f
+    +●  m           git log f
+     |  ○
+    +●  |           (diffs back to start of time are just
+      \ ○            the contents of the working tree)
+       \|
+       +●
+        |
+       +●
+&lt;/pre&gt;
+&lt;p&gt;Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
+above that you almost always want:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;git diff m...f
+&lt;/pre&gt;
+&lt;p&gt;is the same as&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;git checkout f
+git diff m...
+&lt;/pre&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;git checkout m
+git diff ...f
+&lt;/pre&gt;
+&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>geek</category><category>git</category><category>version-control</category><guid>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>Listen to your phone through your PC speakers</title><link>https://www.tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Directs audio input (e.g. mic) to audio output (e.g. speakers),&lt;/span&gt;
+&lt;span class="c1"&gt;# then sleeps forever. Stops audio redirection when it is killed.&lt;/span&gt;
+&lt;span class="c1"&gt;# So, for example, plug your phone into the PC's mic, run 'listen',&lt;/span&gt;
+&lt;span class="c1"&gt;# and listen to phone audio through your computer's speakers.&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# Requires:&lt;/span&gt;
+&lt;span class="c1"&gt;# sudo apt-get install pactl # Ubuntu&lt;/span&gt;
+
+&lt;span class="nb"&gt;set&lt;/span&gt; -e
+
+&lt;span class="nv"&gt;module&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;pactl load-module module-loopback&lt;span class="k"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;function&lt;/span&gt; cleanup &lt;span class="o"&gt;{&lt;/span&gt;
+    pactl unload-module &lt;span class="nv"&gt;$module&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="nb"&gt;trap&lt;/span&gt; cleanup EXIT
+
+sleep infinity
+&lt;/pre&gt;</description><category>command-line</category><category>geek</category><guid>https://www.tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</guid><pubDate>Sun, 15 Mar 2015 15:50:09 GMT</pubDate></item><item><title>Understanding git rebase so it sticks</title><link>https://www.tartley.com/posts/understanding-rebase-so-it-sticks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I endlessly misremember how to use git rebase. That ends today. Here are
+my notes to help me remember.&lt;/p&gt;
+&lt;p&gt;Rebase is traditionally documented as:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;git rebase &lt;span class="o"&gt;[&lt;/span&gt;--onto newbase&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;upstream &lt;span class="o"&gt;[&lt;/span&gt;branch&lt;span class="o"&gt;]]&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;This is confusing for several reasons. A slight improvement is to rename
+the args:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;git rebase &lt;span class="o"&gt;[&lt;/span&gt;--onto target&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]]&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;include&lt;/code&gt; is the tip of the branch to be transplanted. If omitted,
+    it defaults to the current branch.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;exclude&lt;/code&gt; excludes all its ancestors from being transplanted. Hence
+    the transplanted branch will have its tip at &lt;code&gt;include&lt;/code&gt;, and its base
+    at the common ancestor of &lt;code&gt;include&lt;/code&gt; and &lt;code&gt;exclude&lt;/code&gt;. If &lt;code&gt;--onto&lt;/code&gt; isn't
+    specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the destination for the
+    transplant.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;target&lt;/code&gt; is the place to transplant the branch to. If not specified,
+    it defaults to the value of &lt;code&gt;exclude&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hence, a simple before and after:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;o---o---o---o---o---o exclude
+     \
+      1---2---3 current branch
+                or include
+&lt;/pre&gt;
+&lt;pre class="code literal-block"&gt;git rebase exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/pre&gt;
+&lt;pre class="code literal-block"&gt;                exclude
+                v
+o---o---o---o---o---1---2---3 current branch
+                              or include
+&lt;/pre&gt;
+&lt;p&gt;See how the commits to be transplanted start at &lt;code&gt;include&lt;/code&gt; and go back to
+the common ancestor of that and &lt;code&gt;exclude&lt;/code&gt;. Since &lt;code&gt;--onto&lt;/code&gt; isn't
+specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the transplant destination.&lt;/p&gt;
+&lt;p&gt;Or a more complex one:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt; o---o---o---o---o target
+      \
+       o---o---o exclude
+            \
+             1---2 current branch
+                   or include
+&lt;/pre&gt;
+&lt;pre class="code literal-block"&gt;git rebase --onto target exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/pre&gt;
+&lt;pre class="code literal-block"&gt;                    target
+                    v
+    o---o---o---o---o---1---2 current branch
+         \                    or include
+          o---o---o
+                  ^
+                  exclude
+&lt;/pre&gt;
+&lt;p&gt;Again, the commits to be transplanted are defined by &lt;code&gt;include&lt;/code&gt; and
+&lt;code&gt;exclude&lt;/code&gt;, but this time a separate destination is specified using
+&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>git</category><category>software</category><guid>https://www.tartley.com/posts/understanding-rebase-so-it-sticks/</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item></channel></rss>

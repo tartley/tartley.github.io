@@ -206,17 +206,16 @@ Rochester, Minnesota, USA.</p>
 <p>I endlessly misremember when to use '...' in git versus '..'. That ends
 today:</p>
 <p>To see the commits or diffs introduced by a branch (the filled circles ●):</p>
-<pre class="code literal-block"><span></span><code>     f
+<pre class="code literal-block">     f
     +●  m           git log m..f
      |  ○
     +●  |           git diff m...f
       \ ○
        \|
         ○
-</code></pre>
-
+</pre>
 <p>To see the commits or diffs between the tip of one branch and another:</p>
-<pre class="code literal-block"><span></span><code>     f              git log m...f
+<pre class="code literal-block">     f              git log m...f
     +●  m           All commits look the same,
      |  ●-          unless you use --left-right, which
     +●  |           shows where each commit comes from.
@@ -224,10 +223,9 @@ today:</p>
        \|           git diff m..f
         ○           '-' commits are shown inverted,
                      i.e. additions as deletions.
-</code></pre>
-
+</pre>
 <p>To see the commits from 'f' back to the beginning of time:</p>
-<pre class="code literal-block"><span></span><code>     f
+<pre class="code literal-block">     f
     +●  m           git log f
      |  ○
     +●  |           (diffs back to start of time are just
@@ -236,23 +234,19 @@ today:</p>
        +●
         |
        +●
-</code></pre>
-
+</pre>
 <p>Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
 above that you almost always want:</p>
-<pre class="code literal-block"><span></span><code>git diff m...f
-</code></pre>
-
+<pre class="code literal-block">git diff m...f
+</pre>
 <p>is the same as</p>
-<pre class="code literal-block"><span></span><code>git checkout f
+<pre class="code literal-block">git checkout f
 git diff m...
-</code></pre>
-
+</pre>
 <p>or</p>
-<pre class="code literal-block"><span></span><code>git checkout m
+<pre class="code literal-block">git checkout m
 git diff ...f
-</code></pre>
-
+</pre>
 <p>Is there a word for unicode ascii art?</p>
 </div>
     </div>
@@ -345,7 +339,7 @@ ready. Apologies for the inevitable shoddyness.</p>
         </p>
 </div>
     </header><div class="e-content entry-content">
-    <pre class="code literal-block"><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+    <pre class="code literal-block"><span class="ch">#!/usr/bin/env bash</span>
 
 <span class="c1"># Directs audio input (e.g. mic) to audio output (e.g. speakers),</span>
 <span class="c1"># then sleeps forever. Stops audio redirection when it is killed.</span>
@@ -366,7 +360,7 @@ ready. Apologies for the inevitable shoddyness.</p>
 <span class="nb">trap</span> cleanup EXIT
 
 sleep infinity
-</code></pre>
+</pre>
     </div>
     </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/understanding-rebase-so-it-sticks/" class="u-url">Understanding git rebase so it sticks</a></h1>
         <div class="metadata">
@@ -387,14 +381,12 @@ sleep infinity
 <p>I endlessly misremember how to use git rebase. That ends today. Here are
 my notes to help me remember.</p>
 <p>Rebase is traditionally documented as:</p>
-<pre class="code literal-block"><span></span><code>git rebase <span class="o">[</span>--onto newbase<span class="o">]</span> <span class="o">[</span>upstream <span class="o">[</span>branch<span class="o">]]</span>
-</code></pre>
-
+<pre class="code literal-block">git rebase <span class="o">[</span>--onto newbase<span class="o">]</span> <span class="o">[</span>upstream <span class="o">[</span>branch<span class="o">]]</span>
+</pre>
 <p>This is confusing for several reasons. A slight improvement is to rename
 the args:</p>
-<pre class="code literal-block"><span></span><code>git rebase <span class="o">[</span>--onto target<span class="o">]</span> <span class="o">[</span>exclude <span class="o">[</span>include<span class="o">]]</span>
-</code></pre>
-
+<pre class="code literal-block">git rebase <span class="o">[</span>--onto target<span class="o">]</span> <span class="o">[</span>exclude <span class="o">[</span>include<span class="o">]]</span>
+</pre>
 <p>Where:</p>
 <ul>
 <li>
@@ -411,45 +403,39 @@ the args:</p>
     it defaults to the value of <code>exclude</code>.</li>
 </ul>
 <p>Hence, a simple before and after:</p>
-<pre class="code literal-block"><span></span><code>o---o---o---o---o---o exclude
+<pre class="code literal-block">o---o---o---o---o---o exclude
      \
       1---2---3 current branch
                 or include
-</code></pre>
-
-<pre class="code literal-block"><span></span><code>git rebase exclude <span class="o">[</span>include<span class="o">]</span>
-</code></pre>
-
-<pre class="code literal-block"><span></span><code>                exclude
+</pre>
+<pre class="code literal-block">git rebase exclude <span class="o">[</span>include<span class="o">]</span>
+</pre>
+<pre class="code literal-block">                exclude
                 v
 o---o---o---o---o---1---2---3 current branch
                               or include
-</code></pre>
-
+</pre>
 <p>See how the commits to be transplanted start at <code>include</code> and go back to
 the common ancestor of that and <code>exclude</code>. Since <code>--onto</code> isn't
 specified, <code>exclude</code> is also used as the transplant destination.</p>
 <p>Or a more complex one:</p>
-<pre class="code literal-block"><span></span><code> o---o---o---o---o target
+<pre class="code literal-block"> o---o---o---o---o target
       \
        o---o---o exclude
             \
              1---2 current branch
                    or include
-</code></pre>
-
-<pre class="code literal-block"><span></span><code>git rebase --onto target exclude <span class="o">[</span>include<span class="o">]</span>
-</code></pre>
-
-<pre class="code literal-block"><span></span><code>                    target
+</pre>
+<pre class="code literal-block">git rebase --onto target exclude <span class="o">[</span>include<span class="o">]</span>
+</pre>
+<pre class="code literal-block">                    target
                     v
     o---o---o---o---o---1---2 current branch
          \                    or include
           o---o---o
                   ^
                   exclude
-</code></pre>
-
+</pre>
 <p>Again, the commits to be transplanted are defined by <code>include</code> and
 <code>exclude</code>, but this time a separate destination is specified using
 <code>--onto</code>.</p>

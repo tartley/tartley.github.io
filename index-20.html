@@ -349,6 +349,7 @@ networking, persistance) and scale up to support teraflop computing.</p>
     <div>
 <p><strong>Update:</strong> All of the below is made totally redundant by simply using
 <code>gitk --all</code>. Thanks Russel!</p>
+<hr>
 <p>When I launch Gitk, it just displays the current branch. To display
 other branches, you must name them on the command line. To display all
 existing branches, you need to find out all the branch names:</p>
@@ -366,7 +367,7 @@ existing branches, you need to find out all the branch names:</p>
 mine gitka, for 'all branches':</p>
 <pre class="code literal-block"><span></span><code><span class="ch">#!/usr/bin/bash</span>
 <span class="c1"># run gitk, displaying all existing branches</span>
-<span class="k">for</span> b in <span class="s2">"`git branch`"</span><span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$b</span><span class="s2">"</span><span class="p">;</span> <span class="k">done</span> <span class="p">|</span> tr -d <span class="s2">"*"</span> <span class="p">|</span> xargs gitk
+<span class="k">for</span> b <span class="k">in</span> <span class="s2">"`git branch`"</span><span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$b</span><span class="s2">"</span><span class="p">;</span> <span class="k">done</span> <span class="p">|</span> tr -d <span class="s2">"*"</span> <span class="p">|</span> xargs gitk
 </code></pre>
 
 <p><img alt="Gitk displaying all branches, not just the current ('master' in bold)" src="files/2010/12/gitk-all-branches.png" title="gitk-all-branches"></p>
