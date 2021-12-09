@@ -68,8 +68,8 @@ ffmpeg -hide_banner -i Ash-split.mp4 -vf 'crop=iw:365' Ash-split-crop.mp4
 
 Here, we crop it to the input width "iw", and 365 high. In the absense of
 any offset ordinates for the crop, ffmpeg defaults to centering them, so this
-365 pixels are taken from the middle of the video, which is exactly what we
-want.
+365 pixels are taken from the (spatial, vertical) middle of the video, which is
+exactly what we want.
 
 This results in a three second, 220KB .mp4 video file.
 

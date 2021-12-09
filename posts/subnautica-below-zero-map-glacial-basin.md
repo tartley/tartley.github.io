@@ -29,6 +29,9 @@ scenery, avoiding hostile wildlife, uncovering the ruins of ancient alien
 artifacts. Reckoning distances by eye, scribbling down what we found, updating
 and correcting the map as we went. Being lost in the experience. Simply a joy.
 
+[Reddit is encouraging me](https://www.reddit.com/r/Subnautica_Below_Zero/comments/qutkqz/hand_drawn_map_of_southern_glacial_region_wip/)
+to tackle the tricky Actic Spires area, too. *&lt;Rubs hands&gt;...*
+
 <span style="float: left">
 ![Subnautica screenshot](/files/2021/subnatica-below-zero-map-glacial-basin.png)
 </span>
