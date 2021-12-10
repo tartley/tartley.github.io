@@ -2,7 +2,7 @@
 .. title: Dina font as an OTF.
 .. slug: dina-as-otf
 .. date: 2020-02-05 14:51:33-06:00
-.. tags: linux,fonts,command-line
+.. tags: linux,fonts,terminal
 -->
 
 

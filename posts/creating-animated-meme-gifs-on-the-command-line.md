@@ -2,7 +2,7 @@
 .. title: Creating Animated Meme GIFs on the Command-Line
 .. slug: creating-animated-meme-gifs-on-the-command-line
 .. date: 2021-12-08 15:32:10 UTC-06:00
-.. tags: til,command-line,linux,video,image
+.. tags: til,terminal,linux,video,image
 -->
 
 Got sick of navigating the limitations of various online services to create
@@ -49,7 +49,7 @@ actioned, so accurate timestamp/frame conversion is known, at the cost of
 having had to process even the parts of the video that are then discarded.
 
 Vcodec of libx264 is specified because, according to stackoverflow,
-"[scenes in mp4 are broken](https://stackoverflow.com/questions/5651654/ffmpeg-how-to-split-video-efficiently#comment85070704_13289426"), whatever that means,
+"[scenes in mp4 are broken](https://stackoverflow.com/questions/5651654/ffmpeg-how-to-split-video-efficiently#comment85070704_13289426)", whatever that means,
 and specifying "copy", as most people do, gives me an output with no video,
 only audio.
 

@@ -2,7 +2,7 @@
 .. title: Compiling MacVim with Python 2.7
 .. slug: compiling-macvim-with-python-2-7
 .. date: 2011-10-18 12:25:03-05:00
-.. tags: geek,software,python,vim,osx-dev,command-line
+.. tags: geek,software,python,vim,osx-dev,terminal
 .. type: text
 -->
 

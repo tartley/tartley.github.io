@@ -2,10 +2,7 @@
 .. title: Rerun unit tests whenever files update
 .. slug: rerun-unit-tests-whenever-files-update
 .. date: 2010-10-15 01:43:33-05:00
-.. tags: geek,python,testing,software,mswin-dev
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,python,testing,software,mswin-dev,terminal
 -->
 
 
@@ -23,7 +20,9 @@ steps can now be banished forever, courtesy of `rerun`, a command line
 Python script that re-runs a given command whenever it detects changes
 to any of the files in the current directory, or its subdirectories.
 
-**Update**: It's Python 2.7, and works great on Windows XP, Macs and
+<https://github.com/tartley/rerun>
+
+**Update**: It's Python 2 & 3, and works great on Windows XP, Macs and
 Ubuntu.
 
 For example: I had previously bound f6 in Vim to 'run the current file's
@@ -35,5 +34,3 @@ focus stays on my editor. It's really sweet!
 
 Thanks for the original idea goes to to the bash command `watch`, and an
 old (now offline) blog post by Jeff Winkler.
-
-<https://bitbucket.org/tartley/rerun>

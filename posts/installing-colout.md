@@ -2,7 +2,7 @@
 .. title: Installing Colout
 .. slug: installing-colout
 .. date: 2019-01-25 18:40:55-06:00
-.. tags: geek,linux,command-line
+.. tags: geek,linux,terminal
 -->
 
 
