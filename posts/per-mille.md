@@ -1,12 +1,8 @@
 <!--
-.. title: TIL: ‰ is per mille
-.. slug: til-per-mille
+.. title: ‰ is per mille
+.. slug: per-mille
 .. date: 2020-10-17 00:25:45 UTC-05:00
 .. tags: til
-.. category: 
-.. link: 
-.. description: 
-.. type: text
 -->
 
 ‰ or _'per mille'_ means parts per thousand.

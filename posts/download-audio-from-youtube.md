@@ -1,6 +1,6 @@
 <!--
-.. title: TIL: Download audio from YouTube
-.. slug: til-create-mp3-from-youtube-video
+.. title: Download audio from YouTube
+.. slug: download-audio-from-youtube
 .. date: 2021-05-13 11:18:33 UTC-05:00
 .. tags: linux,music,til
 -->

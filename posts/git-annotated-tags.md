@@ -1,12 +1,8 @@
 <!--
-.. title: TIL: Git Annotated Tags
-.. slug: til-git-annotated-tags
+.. title: Git Annotated Tags
+.. slug: git-annotated-tags
 .. date: 2020-10-17 00:40:24 UTC-05:00
 .. tags: til,git,version-control,terminal
-.. category: 
-.. link: 
-.. description: 
-.. type: text
 -->
 
 I've previously only ever used git's regular _lightweight_ tags, created with
