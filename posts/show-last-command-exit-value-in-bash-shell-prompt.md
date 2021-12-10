@@ -2,10 +2,7 @@
 .. title: Show last command exit value in Bash shell prompt
 .. slug: show-last-command-exit-value-in-bash-shell-prompt
 .. date: 2009-02-05 12:11:57-06:00
-.. tags: geek
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,terminal,bash
 -->
 
 
@@ -27,7 +24,9 @@ prompt:
 
 It's the
 
-    ${?#0}
+``` bash
+${?#0}
+```
 
 bit which includes the last command exit value in the prompt, unless the
 value is zero, in which case nothing is displayed.
