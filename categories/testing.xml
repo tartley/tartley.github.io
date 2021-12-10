@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about testing)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/testing.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 08 Dec 2021 21:40:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Django testing 201 : Acceptance Tests vs Unit Tests</title><link>https://www.tartley.com/posts/django-testing-201-acceptance-tests-vs-unit-tests/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I'm finding that our Django project's tests fall into an uncomfortable
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about testing)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/testing.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 10 Dec 2021 14:50:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Django testing 201 : Acceptance Tests vs Unit Tests</title><link>https://www.tartley.com/posts/django-testing-201-acceptance-tests-vs-unit-tests/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I'm finding that our Django project's tests fall into an uncomfortable
 middle-ground, halfway between end-to-end acceptance tests and proper
 unit tests. As such they don't exhibit the best qualities of either. I'd
 like to fix this.&lt;/p&gt;
@@ -98,7 +98,8 @@ permission to release the test runner as open source:&lt;/p&gt;
 steps can now be banished forever, courtesy of &lt;code&gt;rerun&lt;/code&gt;, a command line
 Python script that re-runs a given command whenever it detects changes
 to any of the files in the current directory, or its subdirectories.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: It's Python 2.7, and works great on Windows XP, Macs and
+&lt;p&gt;&lt;a href="https://github.com/tartley/rerun"&gt;https://github.com/tartley/rerun&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: It's Python 2 &amp;amp; 3, and works great on Windows XP, Macs and
 Ubuntu.&lt;/p&gt;
 &lt;p&gt;For example: I had previously bound f6 in Vim to 'run the current file's
 unit tests. Now I've bound shift-f6 to &lt;code&gt;rerun&lt;/code&gt; the current file's
@@ -107,8 +108,7 @@ the test results. I then continue editing in Vim, and whenever I hit
 save, the unit tests are re-run in the other window. All the while the
 focus stays on my editor. It's really sweet!&lt;/p&gt;
 &lt;p&gt;Thanks for the original idea goes to to the bash command &lt;code&gt;watch&lt;/code&gt;, and an
-old (now offline) blog post by Jeff Winkler.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://bitbucket.org/tartley/rerun"&gt;https://bitbucket.org/tartley/rerun&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/posts/rerun-unit-tests-whenever-files-update/</guid><pubDate>Fri, 15 Oct 2010 06:43:33 GMT</pubDate></item><item><title>Acceptance Testing .NET Applications using IronPython</title><link>https://www.tartley.com/posts/acceptance-testing-net-applications-using-ironpython/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
+old (now offline) blog post by Jeff Winkler.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><category>python</category><category>software</category><category>terminal</category><category>testing</category><guid>https://www.tartley.com/posts/rerun-unit-tests-whenever-files-update/</guid><pubDate>Fri, 15 Oct 2010 06:43:33 GMT</pubDate></item><item><title>Acceptance Testing .NET Applications using IronPython</title><link>https://www.tartley.com/posts/acceptance-testing-net-applications-using-ironpython/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
 &lt;p&gt;The following was originally published in the excellent &lt;a href="http://pythonmagazine.com/"&gt;Python
 Magazine&lt;/a&gt;. Thier contractual exclusivity
 period has now long expired, so here it comes again. Many thanks to my
@@ -245,7 +245,7 @@ installed version 2+ of IronPython from the MSI installer, this is all
 taken care of automatically, using a copy of the standard library that
 is included with the install. Otherwise, you need to set this up
 manually, either by setting an environment variable:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;set IRONPYTHONPATH=C:\Python25\Lib&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;set IRONPYTHONPATH=C:\Python25\Lib
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;or by appending this directory to &lt;code&gt;sys.path&lt;/code&gt; inside your IronPython
@@ -267,20 +267,20 @@ the CPython standard library:&lt;/p&gt;
 
 &lt;p&gt;If this works without complaint, exit &lt;em&gt;ipy.exe&lt;/em&gt;, and run the nascent
 acceptance test above, using the DOS command-line:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ipy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exe&lt;/span&gt; &lt;span class="n"&gt;AT001_AddItems&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
-&lt;span class="n"&gt;F&lt;/span&gt;
-&lt;span class="o"&gt;======================================================================&lt;/span&gt;
-&lt;span class="n"&gt;FAIL&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;test_add_address&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;__main__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AT001_AddItems&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c1"&gt;----------------------------------------------------------------------&lt;/span&gt;
-&lt;span class="n"&gt;Traceback&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt; &lt;span class="n"&gt;recent&lt;/span&gt; &lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="k"&gt;last&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-  &lt;span class="n"&gt;File&lt;/span&gt; &lt;span class="ss"&gt;"AT001_AddItems.py"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;test_add_address&lt;/span&gt;
-    &lt;span class="k"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;"test not finished"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;AssertionError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="k"&gt;not&lt;/span&gt; &lt;span class="n"&gt;finished&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nv"&gt;&amp;gt;&lt;/span&gt;&lt;span class="c"&gt; ipy&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;exe AT001_AddItems&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;py&lt;/span&gt;
+&lt;span class="c"&gt;F&lt;/span&gt;
+&lt;span class="c"&gt;======================================================================&lt;/span&gt;
+&lt;span class="c"&gt;FAIL: test_add_address (__main__&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;AT001_AddItems)&lt;/span&gt;
+&lt;span class="nb"&gt;----------------------------------------------------------------------&lt;/span&gt;&lt;span class="c"&gt;&lt;/span&gt;
+&lt;span class="c"&gt;Traceback (most recent call last):&lt;/span&gt;
+&lt;span class="c"&gt;  File "AT001_AddItems&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;py"&lt;/span&gt;&lt;span class="nt"&gt;,&lt;/span&gt;&lt;span class="c"&gt; line 11&lt;/span&gt;&lt;span class="nt"&gt;,&lt;/span&gt;&lt;span class="c"&gt; in test_add_address&lt;/span&gt;
+&lt;span class="c"&gt;    self&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;fail("test not finished")&lt;/span&gt;
+&lt;span class="c"&gt;AssertionError: test not finished&lt;/span&gt;
 
-&lt;span class="c1"&gt;----------------------------------------------------------------------&lt;/span&gt;
-&lt;span class="n"&gt;Ran&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;141&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
+&lt;span class="nb"&gt;----------------------------------------------------------------------&lt;/span&gt;&lt;span class="c"&gt;&lt;/span&gt;
+&lt;span class="c"&gt;Ran 1 test in 0&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;141s&lt;/span&gt;
 
-&lt;span class="n"&gt;FAILED&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;failures&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;FAILED (failures=1)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3&gt;About IronPython&lt;/h3&gt;
@@ -965,7 +965,7 @@ project's current status and velocity.&lt;/p&gt;
 purposes, should check out &lt;a href="http://www.ironpythoninaction.com/"&gt;IronPython in
 Action&lt;/a&gt;, a pragmatic and densely
 informative new book by Michael Foord, which caters to both Python and
-.NET developers.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/posts/acceptance-testing-net-applications-using-ironpython/</guid><pubDate>Tue, 16 Mar 2010 17:13:15 GMT</pubDate></item><item><title>Use of Asserts in Unit-Tested Code</title><link>https://www.tartley.com/posts/use-of-asserts-in-unit-tested-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I pretty much abandoned the use of asserts in production code once I was
+.NET developers.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>mswin-dev</category><category>python</category><category>software</category><category>terminal</category><category>testing</category><guid>https://www.tartley.com/posts/acceptance-testing-net-applications-using-ironpython/</guid><pubDate>Tue, 16 Mar 2010 17:13:15 GMT</pubDate></item><item><title>Use of Asserts in Unit-Tested Code</title><link>https://www.tartley.com/posts/use-of-asserts-in-unit-tested-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I pretty much abandoned the use of asserts in production code once I was
 introduced to test driven development. Amongst their failings, assert
 statements are only suited to testing very localised conditions, such as
 within a particular function - it's not clear to me how they can be used

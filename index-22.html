@@ -70,7 +70,87 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/postscript-formatted-man-pages/" class="u-url">Postscript formatted man pages</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/automate-gnome-keybindings/" class="u-url">Automate Gnome keybindings</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/automate-gnome-keybindings/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-10-04T20:06:47-05:00" itemprop="datePublished" title="2017-10-04 20:06">2017-10-04 20:06</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/automate-gnome-keybindings/#disqus_thread" data-disqus-identifier="cache/posts/automate-gnome-keybindings.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Sick of manual GUI twiddling to fix inconsistent keybindings on various
+computers. Solved once and for all, by a new script in my personal
+workstation setup bucket:</p>
+<p>Warning: This:</p>
+<ul>
+<li>works great on RHEL,</li>
+<li>doesn't all work on Ubuntu&lt;=17.04, I suspect because Unity has
+    it's own set of keybinds that are defined elsewhere.</li>
+<li>works great on Ubuntu 17.10. especially if you go in manually to
+    disable the built-in keybinding for Super-V, which displays the
+    calendar and notifications window, which shadows my 'toggle window
+    maximize vertically'.</li>
+</ul>
+<pre class="code literal-block"><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="nv">kb</span><span class="o">=</span><span class="s1">'org.gnome.desktop.wm.keybindings'</span>
+
+<span class="c1"># Switcher, between windows not apps, uses alt-tab and alt-grave</span>
+gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-windows <span class="s2">"['Tab']"</span>
+gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-windows-backward <span class="s2">"['grave', 'Tab']"</span>
+gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-applications <span class="s2">"[]"</span>
+gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-applications-backward <span class="s2">"[]"</span>
+
+<span class="c1"># Window maximize toggle, super-up</span>
+gsettings <span class="nb">set</span> <span class="nv">$kb</span> maximize <span class="s2">"[]"</span>
+gsettings <span class="nb">set</span> <span class="nv">$kb</span> toggle-maximized <span class="s2">"['Up']"</span>
+
+<span class="c1"># Window maximize vertically toggle, super-v</span>
+gsettings <span class="nb">set</span> <span class="nv">$kb</span> maximize-vertically <span class="s2">"['v']"</span>
+
+<span class="c1"># run command, super-r</span>
+gsettings <span class="nb">set</span> <span class="nv">$kb</span> panel-run-dialog <span class="s2">"['r', 'F2']"</span>
+
+
+<span class="c1"># Custom commands</span>
+
+<span class="nv">mk</span><span class="o">=</span><span class="s1">'org.gnome.settings-daemon.plugins.media-keys'</span>
+<span class="nv">ckb</span><span class="o">=</span><span class="s1">'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings'</span>
+
+gsettings <span class="nb">set</span> <span class="nv">$mk</span> custom-keybindings <span class="s2">"['</span><span class="nv">$ckb</span><span class="s2">/custom0/', '</span><span class="nv">$ckb</span><span class="s2">/custom1/']"</span>
+
+gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/ name <span class="s2">"screen off"</span>
+gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/ <span class="nb">command</span> <span class="s2">"screenoff"</span>
+gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/ binding <span class="s2">"z"</span>
+
+gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ name <span class="s2">"terminal"</span>
+gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ <span class="nb">command</span> <span class="s2">"terminal"</span>
+gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ binding <span class="s2">"t"</span>
+</pre>
+<p>Embedded in that is the ultimate solution to my longstanding irk with
+Unity and Gnome's default window switcher (alt-tab.) By default it
+groups windows of a single application together, requiring some extra
+-grave pressing to navigate between windows within an application.</p>
+<p>This not only requires way more effort, but also breaks the expected
+behaviour of just tapping alt-tab to go back to the last used window.
+Instead it goes back to the last used application, so you can't toggle
+between two windows of the same application, eg. two terminals. Absolute
+madness.</p>
+<p>The above modifies alt-tab to just cycle through all windows, ungrouped,
+which fixes the ability to toggle between last two windows. Also,
+alt-grave is provided as an alternative to cycle backwards through the
+windows, which is easier to hit than shift-alt-tab.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/postscript-formatted-man-pages/" class="u-url">Postscript formatted man pages</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -88,7 +168,7 @@
     <div>
 <p><code>man</code> and its <code>troff</code> formatting can be asked to produce postscript
 output. Define a Bash function, e.g. in your .bashrc:</p>
-<pre class="code literal-block"><span class="k">function</span> psman <span class="o">()</span> <span class="o">{</span>
+<pre class="code literal-block"><span></span><code><span class="k">function</span> psman <span class="o">()</span> <span class="o">{</span>
     <span class="nv">SLUG</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$@</span> <span class="p">|</span> tr <span class="s1">' '</span> <span class="s1">'-'</span><span class="k">)</span>
     <span class="nv">FNAME</span><span class="o">=</span><span class="s2">"/tmp/man-</span><span class="nv">$SLUG</span><span class="s2">.pdf"</span>
     <span class="nb">set</span> -o pipefail
@@ -96,7 +176,8 @@ output. Define a Bash function, e.g. in your .bashrc:</p>
       nohup evince <span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span> &gt;/dev/null <span class="m">2</span>&gt;/dev/null
     <span class="nb">set</span> +o pipefail
 <span class="o">}</span>
-</pre>
+</code></pre>
+
 <p>(I tried to do this without tempfiles, using process substitution, <a href="https://superuser.com/questions/1243405">but
 failed. Anyone got better
 Bash-fu</a>?)</p>
@@ -108,8 +189,9 @@ fails, the exit code is preserved as the exit of `man|ps2pdf`, which
 causes the `&amp;&amp;` to short-circuit, preventing evince from being run on
 an empty pdf document. We restore `+o pipefail` again at the end.</p>
 <p>Then, from the command line:</p>
-<pre class="code literal-block">$ psman tr
-</pre>
+<pre class="code literal-block"><span></span><code>$ psman tr
+</code></pre>
+
 <p>produces</p>
 <p><a href="files/2017/08/pman-tr.png"><img alt="" src="files/2017/08/pman-tr.png"></a></p>
 </div>
@@ -206,16 +288,17 @@ Rochester, Minnesota, USA.</p>
 <p>I endlessly misremember when to use '...' in git versus '..'. That ends
 today:</p>
 <p>To see the commits or diffs introduced by a branch (the filled circles ●):</p>
-<pre class="code literal-block">     f
+<pre class="code literal-block"><span></span><code>     f
     +●  m           git log m..f
      |  ○
     +●  |           git diff m...f
       \ ○
        \|
         ○
-</pre>
+</code></pre>
+
 <p>To see the commits or diffs between the tip of one branch and another:</p>
-<pre class="code literal-block">     f              git log m...f
+<pre class="code literal-block"><span></span><code>     f              git log m...f
     +●  m           All commits look the same,
      |  ●-          unless you use --left-right, which
     +●  |           shows where each commit comes from.
@@ -223,9 +306,10 @@ today:</p>
        \|           git diff m..f
         ○           '-' commits are shown inverted,
                      i.e. additions as deletions.
-</pre>
+</code></pre>
+
 <p>To see the commits from 'f' back to the beginning of time:</p>
-<pre class="code literal-block">     f
+<pre class="code literal-block"><span></span><code>     f
     +●  m           git log f
      |  ○
     +●  |           (diffs back to start of time are just
@@ -234,19 +318,23 @@ today:</p>
        +●
         |
        +●
-</pre>
+</code></pre>
+
 <p>Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
 above that you almost always want:</p>
-<pre class="code literal-block">git diff m...f
-</pre>
+<pre class="code literal-block"><span></span><code>git diff m...f
+</code></pre>
+
 <p>is the same as</p>
-<pre class="code literal-block">git checkout f
+<pre class="code literal-block"><span></span><code>git checkout f
 git diff m...
-</pre>
+</code></pre>
+
 <p>or</p>
-<pre class="code literal-block">git checkout m
+<pre class="code literal-block"><span></span><code>git checkout m
 git diff ...f
-</pre>
+</code></pre>
+
 <p>Is there a word for unicode ascii art?</p>
 </div>
     </div>
@@ -339,7 +427,7 @@ ready. Apologies for the inevitable shoddyness.</p>
         </p>
 </div>
     </header><div class="e-content entry-content">
-    <pre class="code literal-block"><span class="ch">#!/usr/bin/env bash</span>
+    <pre class="code literal-block"><span></span><code><span class="ch">#!/usr/bin/env bash</span>
 
 <span class="c1"># Directs audio input (e.g. mic) to audio output (e.g. speakers),</span>
 <span class="c1"># then sleeps forever. Stops audio redirection when it is killed.</span>
@@ -360,7 +448,7 @@ ready. Apologies for the inevitable shoddyness.</p>
 <span class="nb">trap</span> cleanup EXIT
 
 sleep infinity
-</pre>
+</code></pre>
     </div>
     </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/understanding-rebase-so-it-sticks/" class="u-url">Understanding git rebase so it sticks</a></h1>
         <div class="metadata">
@@ -477,74 +565,6 @@ felt welcomed to his world. Join us - we'll be on the sofa.</p>
 dominant art form of the 21st century.</p>
 <p>0/10 if it's just for kids, innit?</p>
 <p><br style="clear: left"></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/object-oriented-software-engineering-a-use-case-driven-approach/" class="u-url">Object-Oriented Software Engineering : A Use Case Driven Approach</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/object-oriented-software-engineering-a-use-case-driven-approach/" rel="bookmark">
-            <time class="published dt-published" datetime="2014-02-02T14:26:43-06:00" itemprop="datePublished" title="2014-02-02 14:26">2014-02-02 14:26</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/object-oriented-software-engineering-a-use-case-driven-approach/#disqus_thread" data-disqus-identifier="cache/posts/object-oriented-software-engineering-a-use-case-driven-approach.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p><span style="float: left">
-<img alt="Object Oriented Software Engineering cover" src="files/2014/02/object-oriented-sofware-engineering.jpg"></span></p>
-<p><em>by Ivar Jacobsen</em> (1992, 4th revision)</p>
-<p>You might wonder if there's anything left to say about
-object-orientation that hasn't already been discussed to death. I was
-led to this 1992 book by Uncle Bob's talk "<a href="http://www.youtube.com/watch?v=WpkDN78P884">Architecture: The Lost
-Years</a>." In it Bob posits
-that in the 1990s, just as people like Ivar were completing their
-20-year journey of figuring out some fairly optimal ways to do
-object-orientation, along came the disruptive influence of the web,
-which turned everyone's priorities, methodologies and designs upside
-down. In the resulting stampede, some highly practical ideas have been
-lost, both in terms of design and process. This has substantially
-watered down OO's ability to deliver on its promises of reuse and
-maintainability. It has stranded a whole generation of applications with
-distorted architectures, inside-out designs, and less maintainable code.</p>
-<p>Aspects of these historical approaches do survive, such as the
-prominence Agile gives to use-cases as a way to concretely tie together
-requirements, design, testing, and acceptance. But some equally powerful
-ideas, such as appropriate ways to manage dependencies within an
-application, have seen relatively little use, and are only now being
-rediscovered in guises such as the clean and hexagonal architectures.</p>
-<p>Ivar's book can certainly lay claim to being one of the earliest
-published sources to lay out these ideas, and he does so with a style
-that is convincingly thoughtful. This is the work of an intelligent man,
-honed and refined over many years of practice. The omission of modern
-testing techniques are the only thing that substantially dates the
-content. Otherwise I found it exciting, insightful and revolutionary. It
-seems naive to claim that this book describes the One True Architecture
-which is applicable to all systems. But it certainly seems very widely
-applicable, and has deeply affected my thinking on all projects larger
-than a couple of weeks' work.</p>
-<p>The book also discusses software development methodology in an
-intriguingly meta way, constructing an object-oriented model of the
-process itself. Each software development team or organisation
-represents a particular implementation of this model. Parallels with the
-execution of software are drawn, with the output of one part of the
-process, e.g. design work, having to produce results that conform to the
-expectations of the downstream process, such as implementation. In this
-way, sections of the process can be removed and replaced by compatible
-alternatives, to better suit the application domain and the organisation
-within which the project is embedded. These ideas seem less immediately
-applicable and actionable. Maybe that's just my personal circumstance.
-Perhaps they are more applicable to larger projects, which I avoid these
-days.</p>
-<p>Rating:</p>
-<p>10/10 if you're going to enjoy 500 pages of software design principles
-and case studies.</p>
-<p>0/10 if you're not.</p>
-<p><br style="clear: both"></p>
 </div>
     </div>
     </article>

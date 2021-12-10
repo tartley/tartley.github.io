@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about fonts)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/fonts.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 08 Dec 2021 23:07:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Dina font as an OTF.</title><link>https://www.tartley.com/posts/dina-as-otf/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The Dina font, converted to an OpenType Font (see screenshots at the bottom of
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about fonts)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/fonts.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 10 Dec 2021 14:50:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Dina font as an OTF.</title><link>https://www.tartley.com/posts/dina-as-otf/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The Dina font, converted to an OpenType Font (see screenshots at the bottom of
 the page):&lt;/p&gt;
 &lt;h2&gt;&lt;a href="https://www.tartley.com/files/2020/Dina-v2.93-otf.tar.gz"&gt;&lt;span class="emoji"&gt;📦&lt;/span&gt; Dina-v2.93-otf.tar.gz&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://gitlab.gnome.org/GNOME/pango/issues/386"&gt;Pango dropped support for naive bitmap fonts&lt;/a&gt;
@@ -14,8 +14,9 @@ or font authors.&lt;/p&gt;
 more than your distribution does. Here's how I did it for my
 &lt;a href="http://www.dcmembers.com/jibsen/download/61/"&gt;beloved Dina&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;1. Identify the font file.&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;fc-list &lt;span class="p"&gt;|&lt;/span&gt; grep Dina
-&lt;/pre&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;fc-list &lt;span class="p"&gt;|&lt;/span&gt; grep Dina
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h3&gt;2. Convert.&lt;/h3&gt;
 &lt;p&gt;Use either command line tools, or fontforge.&lt;/p&gt;
 &lt;h4&gt;2.1 Using fontforge&lt;/h4&gt;
@@ -71,7 +72,7 @@ or at least filing an issue there to try and get some help.&lt;/p&gt;
 &lt;p&gt;But compare it with a regular vector font. Here's Ubuntu Mono, the &lt;em&gt;best&lt;/em&gt; of
 the vector fonts I could find at these sizes. Blurry and inconsistent and hard
 to read:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>fonts</category><category>linux</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>My Fonts Look Crap. I blame Windows and ATI.</title><link>https://www.tartley.com/posts/my-fonts-look-crap-i-blame-windows-and-ati/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I know, I &lt;em&gt;know&lt;/em&gt;. But I use Windows for 8 hours a day at work. So what
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>fonts</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>My Fonts Look Crap. I blame Windows and ATI.</title><link>https://www.tartley.com/posts/my-fonts-look-crap-i-blame-windows-and-ati/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I know, I &lt;em&gt;know&lt;/em&gt;. But I use Windows for 8 hours a day at work. So what
 do you do?&lt;/p&gt;
 &lt;p&gt;Here's the poster-boy for programmer-friendly fonts, your friend and
 mine, everyone loves him, &lt;strong&gt;Inconsolata&lt;/strong&gt;:&lt;/p&gt;

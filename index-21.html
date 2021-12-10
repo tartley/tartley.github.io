@@ -70,7 +70,75 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/altered-carbon/" class="u-url">Altered Carbon</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/object-oriented-software-engineering-a-use-case-driven-approach/" class="u-url">Object-Oriented Software Engineering : A Use Case Driven Approach</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/object-oriented-software-engineering-a-use-case-driven-approach/" rel="bookmark">
+            <time class="published dt-published" datetime="2014-02-02T14:26:43-06:00" itemprop="datePublished" title="2014-02-02 14:26">2014-02-02 14:26</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/object-oriented-software-engineering-a-use-case-driven-approach/#disqus_thread" data-disqus-identifier="cache/posts/object-oriented-software-engineering-a-use-case-driven-approach.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><span style="float: left">
+<img alt="Object Oriented Software Engineering cover" src="files/2014/02/object-oriented-sofware-engineering.jpg"></span></p>
+<p><em>by Ivar Jacobsen</em> (1992, 4th revision)</p>
+<p>You might wonder if there's anything left to say about
+object-orientation that hasn't already been discussed to death. I was
+led to this 1992 book by Uncle Bob's talk "<a href="http://www.youtube.com/watch?v=WpkDN78P884">Architecture: The Lost
+Years</a>." In it Bob posits
+that in the 1990s, just as people like Ivar were completing their
+20-year journey of figuring out some fairly optimal ways to do
+object-orientation, along came the disruptive influence of the web,
+which turned everyone's priorities, methodologies and designs upside
+down. In the resulting stampede, some highly practical ideas have been
+lost, both in terms of design and process. This has substantially
+watered down OO's ability to deliver on its promises of reuse and
+maintainability. It has stranded a whole generation of applications with
+distorted architectures, inside-out designs, and less maintainable code.</p>
+<p>Aspects of these historical approaches do survive, such as the
+prominence Agile gives to use-cases as a way to concretely tie together
+requirements, design, testing, and acceptance. But some equally powerful
+ideas, such as appropriate ways to manage dependencies within an
+application, have seen relatively little use, and are only now being
+rediscovered in guises such as the clean and hexagonal architectures.</p>
+<p>Ivar's book can certainly lay claim to being one of the earliest
+published sources to lay out these ideas, and he does so with a style
+that is convincingly thoughtful. This is the work of an intelligent man,
+honed and refined over many years of practice. The omission of modern
+testing techniques are the only thing that substantially dates the
+content. Otherwise I found it exciting, insightful and revolutionary. It
+seems naive to claim that this book describes the One True Architecture
+which is applicable to all systems. But it certainly seems very widely
+applicable, and has deeply affected my thinking on all projects larger
+than a couple of weeks' work.</p>
+<p>The book also discusses software development methodology in an
+intriguingly meta way, constructing an object-oriented model of the
+process itself. Each software development team or organisation
+represents a particular implementation of this model. Parallels with the
+execution of software are drawn, with the output of one part of the
+process, e.g. design work, having to produce results that conform to the
+expectations of the downstream process, such as implementation. In this
+way, sections of the process can be removed and replaced by compatible
+alternatives, to better suit the application domain and the organisation
+within which the project is embedded. These ideas seem less immediately
+applicable and actionable. Maybe that's just my personal circumstance.
+Perhaps they are more applicable to larger projects, which I avoid these
+days.</p>
+<p>Rating:</p>
+<p>10/10 if you're going to enjoy 500 pages of software design principles
+and case studies.</p>
+<p>0/10 if you're not.</p>
+<p><br style="clear: both"></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/altered-carbon/" class="u-url">Altered Carbon</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -588,7 +656,7 @@ set literals. These are marked as a syntax errors, which prevents the
 rest of the file from being parsed.</p>
 <p>The solution is to compile your own MacVim, using Python 2.7 instead of
 the system Python. The following commands got MacVim compiled for me:</p>
-<pre class="code literal-block"><span class="ch">#!/bin/bash</span>
+<pre class="code literal-block"><span></span><code><span class="ch">#!/bin/bash</span>
 git clone git://github.com/b4winckler/macvim.git
 <span class="nb">cd</span> macvim/src
 <span class="nb">export</span> <span class="nv">LDFLAGS</span><span class="o">=</span>-L/usr/lib
@@ -602,7 +670,8 @@ git clone git://github.com/b4winckler/macvim.git
 make
 open MacVim/build/Release
 <span class="nb">echo</span> Drag MacVim.app to your Applications directory
-</pre>
+</code></pre>
+
 <p>Without the LDFLAGS setting, I was missing some symbols at link. The
 --with-python-config-dir entry came from typing 'which python' to find
 where my Python 2.7 install lives, and modifying that result to find its
@@ -611,43 +680,14 @@ where my Python 2.7 install lives, and modifying that result to find its
 macvim/src/MacVim/build/Release/MacVim.app into your Applications
 directory.</p>
 <p>Open up MacVim, and check out the built-in Python version:</p>
-<pre class="code literal-block"><span class="p">:</span><span class="n">python</span> <span class="kn">import</span> <span class="nn">sys</span><span class="p">;</span> <span class="nb">print</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span>
+<pre class="code literal-block"><span></span><code><span class="p">:</span><span class="n">python</span> <span class="kn">import</span> <span class="nn">sys</span><span class="p">;</span> <span class="nb">print</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span>
 <span class="mf">2.7.1</span> <span class="p">(</span><span class="n">r271</span><span class="p">:</span><span class="mi">86882</span><span class="n">M</span><span class="p">,</span> <span class="n">Nov</span> <span class="mi">30</span> <span class="mi">2010</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">34</span><span class="p">)</span>
-</pre>
+</code></pre>
+
 <p>And files with set literals are now correctly parsed for errors.</p>
 <p><strong>Update:</strong> This only works if the Python 2.7 is your default 'python'
 executable. Otherwise, or if you get "ImportError: No module named
 site"?, see Richard's comments below.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/python-2-7-regular-expression-cheatsheet/" class="u-url">Python 2.7 regular expression cheatsheet</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/python-2-7-regular-expression-cheatsheet/" rel="bookmark">
-            <time class="published dt-published" datetime="2011-10-14T11:20:11-05:00" itemprop="datePublished" title="2011-10-14 11:20">2011-10-14 11:20</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/python-2-7-regular-expression-cheatsheet/#disqus_thread" data-disqus-identifier="cache/posts/python-2-7-regular-expression-cheatsheet.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>Couldn't find one of these, so I whipped one up.</p>
-<p>Bit of restructured text:</p>
-<p><a href="https://github.com/tartley/python-regex-cheatsheet/blob/master/cheatsheet.rst">https://github.com/tartley/python-regex-cheatsheet/blob/master/cheatsheet.rst</a></p>
-<p>Install some Python packages:</p>
-<p><a href="https://github.com/tartley/python-regex-cheatsheet/blob/master/requirements.txt">https://github.com/tartley/python-regex-cheatsheet/blob/master/requirements.txt</a></p>
-<p>Invoke rst2pdf:</p>
-<p><a href="https://github.com/tartley/python-regex-cheatsheet/blob/master/Makefile">https://github.com/tartley/python-regex-cheatsheet/blob/master/Makefile</a></p>
-<p>Get a nice PDF out:</p>
-<p><a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf">Python 2.7 regular expression
-cheatsheet</a>
-(click this link or the image for the most up-to-date PDF from github.)</p>
-<p><a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf"><img alt="" src="files/2011/10/Python-regular-expression-cheatsheet-0.3.0.png" title="Python regular expression cheatsheet 0.3.3"></a></p>
 </div>
     </div>
     </article>

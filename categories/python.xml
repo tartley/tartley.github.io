@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about python)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 08 Dec 2021 23:12:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about python)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 10 Dec 2021 15:06:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;But often you'd like to reformat just a section of the file, while leaving
 everything else intact. In principle, it's easy to tell Vim to just send the
 current visual selection:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the visual selection&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;" Black(Python) format the visual selection&lt;/span&gt;
 xnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;(Note that both the above Vim configuration snippets map the same key
 sequence -- leader (commonly comma) followed by lower case b. These can be
 defined simultaneously, because the second one uses 'xnoremap', meaning it is
@@ -28,7 +30,7 @@ gained much enthusiasm.&lt;/p&gt;
 &lt;li&gt;Passes the result to Black.&lt;/li&gt;
 &lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
 for it, called "Announce":&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/tartley/rhythmbox-plugin-announce"&gt;https://github.com/tartley/rhythmbox-plugin-announce&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Every time a new song starts to play, it announces the title using
@@ -199,7 +201,7 @@ no network. You might choose to treat 'packages' as ephemeral.&lt;/p&gt;
 pattern has now been &lt;a href="http://www.pip-installer.org/en/latest/cookbook.html#fast-local-installs"&gt;explicitly called out in the
 documentation&lt;/a&gt;,
 which was substantially reorganised and improved with the recent 1.3
-release.&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</guid><pubDate>Fri, 08 Mar 2013 15:29:09 GMT</pubDate></item><item><title>Hexagonal Django</title><link>https://www.tartley.com/posts/hexagonal-django/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The last few weeks I've been thinking about the architectural pattern
+release.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</guid><pubDate>Fri, 08 Mar 2013 15:29:09 GMT</pubDate></item><item><title>Hexagonal Django</title><link>https://www.tartley.com/posts/hexagonal-django/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The last few weeks I've been thinking about the architectural pattern
 known as &lt;a href="http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html"&gt;Clean, Onion, Hexagonal, or
 Ports'n'Adaptors&lt;/a&gt;.
 I'm curious if many people are applying it in the Django world.&lt;/p&gt;
@@ -265,7 +267,7 @@ set literals. These are marked as a syntax errors, which prevents the
 rest of the file from being parsed.&lt;/p&gt;
 &lt;p&gt;The solution is to compile your own MacVim, using Python 2.7 instead of
 the system Python. The following commands got MacVim compiled for me:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 git clone git://github.com/b4winckler/macvim.git
 &lt;span class="nb"&gt;cd&lt;/span&gt; macvim/src
 &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;LDFLAGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;-L/usr/lib
@@ -279,7 +281,8 @@ git clone git://github.com/b4winckler/macvim.git
 make
 open MacVim/build/Release
 &lt;span class="nb"&gt;echo&lt;/span&gt; Drag MacVim.app to your Applications directory
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Without the LDFLAGS setting, I was missing some symbols at link. The
 --with-python-config-dir entry came from typing 'which python' to find
 where my Python 2.7 install lives, and modifying that result to find its
@@ -288,13 +291,14 @@ where my Python 2.7 install lives, and modifying that result to find its
 macvim/src/MacVim/build/Release/MacVim.app into your Applications
 directory.&lt;/p&gt;
 &lt;p&gt;Open up MacVim, and check out the built-in Python version:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
 &lt;span class="mf"&gt;2.7.1&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r271&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;86882&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Nov&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="mi"&gt;2010&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;35&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;34&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;And files with set literals are now correctly parsed for errors.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This only works if the Python 2.7 is your default 'python'
 executable. Otherwise, or if you get "ImportError: No module named
-site"?, see Richard's comments below.&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>geek</category><category>osx-dev</category><category>python</category><category>software</category><category>vim</category><guid>https://www.tartley.com/posts/compiling-macvim-with-python-2-7/</guid><pubDate>Tue, 18 Oct 2011 17:25:03 GMT</pubDate></item><item><title>Python 2.7 regular expression cheatsheet</title><link>https://www.tartley.com/posts/python-2-7-regular-expression-cheatsheet/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Couldn't find one of these, so I whipped one up.&lt;/p&gt;
+site"?, see Richard's comments below.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>osx-dev</category><category>python</category><category>software</category><category>terminal</category><category>vim</category><guid>https://www.tartley.com/posts/compiling-macvim-with-python-2-7/</guid><pubDate>Tue, 18 Oct 2011 17:25:03 GMT</pubDate></item><item><title>Python 2.7 regular expression cheatsheet</title><link>https://www.tartley.com/posts/python-2-7-regular-expression-cheatsheet/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Couldn't find one of these, so I whipped one up.&lt;/p&gt;
 &lt;p&gt;Bit of restructured text:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/blob/master/cheatsheet.rst"&gt;https://github.com/tartley/python-regex-cheatsheet/blob/master/cheatsheet.rst&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Install some Python packages:&lt;/p&gt;
@@ -305,7 +309,7 @@ site"?, see Richard's comments below.&lt;/p&gt;&lt;/div&gt;</description><catego
 &lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf"&gt;Python 2.7 regular expression
 cheatsheet&lt;/a&gt;
 (click this link or the image for the most up-to-date PDF from github.)&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf"&gt;&lt;img alt="" src="https://www.tartley.com/files/2011/10/Python-regular-expression-cheatsheet-0.3.0.png" title="Python regular expression cheatsheet 0.3.3"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/python-2-7-regular-expression-cheatsheet/</guid><pubDate>Fri, 14 Oct 2011 16:20:11 GMT</pubDate></item><item><title>Django testing 201 : Acceptance Tests vs Unit Tests</title><link>https://www.tartley.com/posts/django-testing-201-acceptance-tests-vs-unit-tests/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I'm finding that our Django project's tests fall into an uncomfortable
+&lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf"&gt;&lt;img alt="" src="https://www.tartley.com/files/2011/10/Python-regular-expression-cheatsheet-0.3.0.png" title="Python regular expression cheatsheet 0.3.3"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/python-2-7-regular-expression-cheatsheet/</guid><pubDate>Fri, 14 Oct 2011 16:20:11 GMT</pubDate></item><item><title>Django testing 201 : Acceptance Tests vs Unit Tests</title><link>https://www.tartley.com/posts/django-testing-201-acceptance-tests-vs-unit-tests/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I'm finding that our Django project's tests fall into an uncomfortable
 middle-ground, halfway between end-to-end acceptance tests and proper
 unit tests. As such they don't exhibit the best qualities of either. I'd
 like to fix this.&lt;/p&gt;

@@ -70,16 +70,147 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-create-mp3-from-youtube-video/" class="u-url">TIL: Download audio from YouTube</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/energy-use-per-transaction-for-cryptocurrencies-vs-visa/" class="u-url">Energy use per transaction for cryptocurrencies vs Visa</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
             </span></p>
             <p class="dateline">
-            <a href="posts/til-create-mp3-from-youtube-video/" rel="bookmark">
+            <a href="posts/energy-use-per-transaction-for-cryptocurrencies-vs-visa/" rel="bookmark">
+            <time class="published dt-published" datetime="2021-05-13T16:09:33-05:00" itemprop="datePublished" title="2021-05-13 16:09">2021-05-13 16:09</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/energy-use-per-transaction-for-cryptocurrencies-vs-visa/#disqus_thread" data-disqus-identifier="cache/posts/energy-use-per-transaction-for-cryptocurrencies-vs-visa.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>For my own calibration, approximate current energy use for a single transaction
+in various cryptocurrencies, compared with using Visa:</p>
+<table>
+<thead><tr>
+<th>Currency </th>
+<th>Symbol </th>
+<th align="right">Energy use<br>per txn(Wh) </th>
+<th>Equivalent</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Bitcoin</td>
+<td>BTC</td>
+<td align="right">1,000,000 </td>
+<td>Hot tub, 150 hours</td>
+</tr>
+<tr>
+<td>Ethereum</td>
+<td>ETH</td>
+<td align="right">62,000 </td>
+<td>Nissan Leaf, 1.5 charges</td>
+</tr>
+<tr>
+<td>Litecoin</td>
+<td>LTC</td>
+<td align="right">19,000 </td>
+<td>Clothes washer, 8 loads</td>
+</tr>
+<tr>
+<td>Chia</td>
+<td>XCH</td>
+<td align="right">2,000 </td>
+<td>Dishwasher, 1 hour</td>
+</tr>
+<tr>
+<td>Cardano</td>
+<td>ADA</td>
+<td align="right">500 </td>
+<td>Computer &amp; monitor, 1 hour</td>
+</tr>
+<tr>
+<td>Dogecoin</td>
+<td>DOGE</td>
+<td align="right">120 </td>
+<td>Humidifier, 1 hour</td>
+</tr>
+<tr>
+<td>Ripple</td>
+<td>XRP</td>
+<td align="right">79 </td>
+<td>Amazon echo telling 2 jokes</td>
+</tr>
+<tr>
+<td><strong>Visa</strong></td>
+<td></td>
+<td align="right">1.5 </td>
+<td>LED light bulb for 9 minutes</td>
+</tr>
+<tr>
+<td>Nano</td>
+<td>NANO</td>
+<td align="right">0.1 </td>
+<td>LED light bulb for 30 seconds</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+Sources</p>
+<ul>
+<li>I got most crypto energy use from
+  <a href="https://www.benzinga.com/markets/cryptocurrency/21/05/21098323/elon-musk-says-tesla-looking-at-other-cryptos-who-use-less-than-1-of-bitcoins-energy-which">this roundup</a>.</li>
+<li>For Visa, I used the figures from <a href="https://digiconomist.net/bitcoin-energy-consumption">this breakdown</a>,
+  and <a href="https://digiconomist.net/bitcoin-energy-consumption">this one</a>, which agrees.</li>
+<li>For Bitcoin, I took a rounded figure roughly between those quoted on the
+  above two sources (710kWh and 1,123kWh). A single figure precision is
+  probably most appropriate anyhow. <strong>Update</strong>: The digiconomist article above
+  is updated as the Bitcoin energy use increases over time with proof
+  difficulty, and it's now at almost double the figure I quoted above,
+  at 1,800 kWh/txn.</li>
+<li>For Chia, I did my own hacky calculation.
+  <a href="https://chiapower.org/">Chia Power estimates 6MW</a>
+  in total is used by the Chia network, at current size of 4EiB.
+  Meanwhile, <a href="https://www.chiaexplorer.com/charts/transaction-volume">Chia Explorer shows a hard-to-read graph</a>
+  which I'm eyeballing to get a rough average of 3,000 transactions per hour.
+  6 Megawatts divided by 3k per hour gives an energy use per transaction
+  of 2kW.</li>
+<li>For Nano, I'm using commonly-cited figures in
+  <a href="https://www.reddit.com/r/nanocurrency/comments/7ucw1a/the_entire_nano_network_is_so_efficient_that/">Reddit posts</a>
+  (yuk), but the math seems to hold up as far as I can see.</li>
+<li>For equivalent household energy uses, I used
+  <a href="https://electricityplans.com/kwh-kilowatt-hour-can-power/">this</a> and <a href="http://www.wrecc.com/what-uses-watts-in-your-home/">this</a>.</li>
+</ul>
+<p>Notable standout here is NANO, which actually has an order of magnitude <em>lower</em>
+energy use than Visa. There are other low-energy use cryptocurrencies in this
+bracket, such as IOTA and HBAR. They face some criticism from Bitcoin
+maximalists that reducing energy use undermines the value proposition, or
+reduces security. But to my layman's ears, these arguments don't hold water.
+Certainly communities like NANO seem much more open to honest discussion of
+NANO's shortfalls than most crypto communities, which is a healthy sign, and it
+makes me inclined to trust their counter-assertions that NANO's security is
+really OK.</p>
+<p>Something's not quite right here though. The Chia whitepaper estimates 10,000
+times better energy efficiency than Bitcoin, by my figures above only show
+1,000.</p>
+<p>They probably know how to calculate this better than I do. So perhaps my figure
+for Chia is high? I understand the value per transaction will come down as
+Chia starts handling more transactions, which seems reasonable. Perhaps the
+white paper refers to that future hypothetical efficiency?</p>
+<p>On the other hand, many of the other cryptocurrencies listed above will
+become more efficient in the future too (e.g. Bitcoin is in the process
+of deploying its lightning network, which will reduce per transaction
+energy use.)  So I think it's fair to leave the above figures as they are,
+as a snapshot of current reality.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/download-audio-from-youtube/" class="u-url">Download audio from YouTube</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/download-audio-from-youtube/" rel="bookmark">
             <time class="published dt-published" datetime="2021-05-13T11:18:33-05:00" itemprop="datePublished" title="2021-05-13 11:18">2021-05-13 11:18</time></a>
             </p>
-                <p class="commentline">            <a href="posts/til-create-mp3-from-youtube-video/#disqus_thread" data-disqus-identifier="cache/posts/til-create-mp3-from-youtube-video.html">Comments</a>
+                <p class="commentline">            <a href="posts/download-audio-from-youtube/#disqus_thread" data-disqus-identifier="cache/posts/download-audio-from-youtube.html">Comments</a>
 
 
         </p>
@@ -309,16 +440,16 @@ conclusions, and descriptions of how the field has arrived at them. Edifying.</p
 <p><br style="clear: left"></p>
 </div>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-git-annotated-tags/" class="u-url">TIL: Git Annotated Tags</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/git-annotated-tags/" class="u-url">Git Annotated Tags</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
             </span></p>
             <p class="dateline">
-            <a href="posts/til-git-annotated-tags/" rel="bookmark">
+            <a href="posts/git-annotated-tags/" rel="bookmark">
             <time class="published dt-published" datetime="2020-10-17T00:40:24-05:00" itemprop="datePublished" title="2020-10-17 00:40">2020-10-17 00:40</time></a>
             </p>
-                <p class="commentline">            <a href="posts/til-git-annotated-tags/#disqus_thread" data-disqus-identifier="cache/posts/til-git-annotated-tags.html">Comments</a>
+                <p class="commentline">            <a href="posts/git-annotated-tags/#disqus_thread" data-disqus-identifier="cache/posts/git-annotated-tags.html">Comments</a>
 
 
         </p>
@@ -352,16 +483,16 @@ of the commit being pushed, so that no unreachable tags are created on origin.</
 </ol>
 </div>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-per-mille/" class="u-url">TIL: ‰ is per mille</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/per-mille/" class="u-url">‰ is per mille</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
             </span></p>
             <p class="dateline">
-            <a href="posts/til-per-mille/" rel="bookmark">
+            <a href="posts/per-mille/" rel="bookmark">
             <time class="published dt-published" datetime="2020-10-17T00:25:45-05:00" itemprop="datePublished" title="2020-10-17 00:25">2020-10-17 00:25</time></a>
             </p>
-                <p class="commentline">            <a href="posts/til-per-mille/#disqus_thread" data-disqus-identifier="cache/posts/til-per-mille.html">Comments</a>
+                <p class="commentline">            <a href="posts/per-mille/#disqus_thread" data-disqus-identifier="cache/posts/per-mille.html">Comments</a>
 
 
         </p>
@@ -551,15 +682,17 @@ brightest of the next generation (as judged by my own paradigm's criteria.)</p>
     <div>
 <p>Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:</p>
-<pre class="code literal-block"><span class="c">" Black(Python) format the whole file</span>
+<pre class="code literal-block"><span></span><code><span class="c">" Black(Python) format the whole file</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">b</span> :<span class="m">1</span><span class="p">,</span>$<span class="p">!</span>black <span class="p">-</span><span class="k">q</span> <span class="p">-&lt;</span>CR<span class="p">&gt;</span>
-</pre>
+</code></pre>
+
 <p>But often you'd like to reformat just a section of the file, while leaving
 everything else intact. In principle, it's easy to tell Vim to just send the
 current visual selection:</p>
-<pre class="code literal-block"><span class="c">" Black(Python) format the visual selection</span>
+<pre class="code literal-block"><span></span><code><span class="c">" Black(Python) format the visual selection</span>
 xnoremap <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">b</span> :<span class="p">!</span>black <span class="p">-</span><span class="k">q</span> <span class="p">-&lt;</span>CR<span class="p">&gt;</span>
-</pre>
+</code></pre>
+
 <p>(Note that both the above Vim configuration snippets map the same key
 sequence -- leader (commonly comma) followed by lower case b. These can be
 defined simultaneously, because the second one uses 'xnoremap', meaning it is
@@ -579,138 +712,6 @@ gained much enthusiasm.</p>
 <li>Reindents Black's output, by the same amount as the original unindent.</li>
 </ul>
 <p>See <a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken">enblacken on github</a>.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/lxd-for-dev-env/" class="u-url">LXD for Development Environments.</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/lxd-for-dev-env/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-04-20T13:57:47-05:00" itemprop="datePublished" title="2020-04-20 13:57">2020-04-20 13:57</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/lxd-for-dev-env/#disqus_thread" data-disqus-identifier="cache/posts/lxd-for-dev-env.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p><a href="https://twitter.com/hjwp/status/1249636076660174849">@hjwp asks</a>:</p>
-<blockquote>
-<p>I would be interested in seeing some example lxd config files,
-bash command history when creating, etc?</p>
-</blockquote>
-<p>Here goes then.</p>
-<p>I have one LXD container running for each nontrivial development project I'm
-working on.</p>
-<pre class="code literal-block">$ lxc ls
-<span class="p">|</span>    NAME     <span class="p">|</span>  STATE  <span class="p">|</span>        IPV4         <span class="p">|</span> IPV6 <span class="p">|</span>   TYPE    <span class="p">|</span> SNAPSHOTS <span class="p">|</span>
-<span class="p">|</span> devicegw    <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.228 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-<span class="p">|</span> ident       <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.4 <span class="o">(</span>eth0<span class="o">)</span>   <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-<span class="p">|</span> revs        <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.151 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-<span class="p">|</span> siab        <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.128 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-<span class="p">|</span> tartley-com <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.161 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-</pre>
-<p>Out of the gate we see one source of confusion. "LXD", the daemon, is a
-newer project that builds on top of "LXC" the containers. However the user
-interface to all the new LXD-goodness is through a command-line called "lxc",
-which replaces the older command line tool called "lxd". :-/</p>
-<p>To create a new one:</p>
-<pre class="code literal-block">$ <span class="nb">time</span> lxc launch ubuntu:16.04 -p default -p jhartley demo
-Creating demo
-Starting demo
-real    0m9.593s
-</pre>
-<p>Once created, they take about 3 seconds to stop and 0.5 seconds to start.</p>
-<p>Those "-p" options cause the container to use two <em>profiles</em>. They are:</p>
-<ol>
-<li>
-<p>The <em>default</em> profile, which I've never touched. It's just doing whatever it
-   always does.</p>
-</li>
-<li>
-<p>The <em>jhartley</em> profile, I created in a one-off step by running a Bash script
-   derived from instructions one of my colleagues passed around. I'll describe
-   it at the end.</p>
-</li>
-</ol>
-<p>Once a new container is up, we can execute commands directly on it:</p>
-<pre class="code literal-block"><span></span><code>$ lxc <span class="nb">exec</span> demo hostname
-demo
-$ lxc <span class="nb">exec</span> demo whoami
-root
-</code></pre>
-
-<p>Or SSH to them using their IP address:</p>
-<pre class="code literal-block">jhartley@t460 $ lxc ls demo
-<span class="p">|</span> NAME <span class="p">|</span>  STATE  <span class="p">|</span>        IPV4         <span class="p">|</span> IPV6 <span class="p">|</span>   TYPE    <span class="p">|</span> SNAPSHOTS <span class="p">|</span>
-<span class="p">|</span> demo <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.162 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-jhartley@t460 $ ssh <span class="m">10</span>.44.99.162
-...
-Warning: Permanently added <span class="s1">'10.44.99.162'</span> <span class="o">(</span>ECDSA<span class="o">)</span> to the list of known hosts.
-Welcome to Ubuntu <span class="m">16</span>.04.6 LTS <span class="o">(</span>GNU/Linux <span class="m">5</span>.4.0-25-generic x86_64<span class="o">)</span>
-jhartley@demo $
-</pre>
-<p>Better than using IP addresses, you can run a DNS server to recognize
-<code>{containername}.lxd</code> hostnames. (This part is from
-<a href="https://discuss.linuxcontainers.org/t/a-way-to-resolve-container-lxd-from-host-in-all-cases/3698">here</a>.)</p>
-<p>Find your lxd bridge IPv4 address</p>
-<pre class="code literal-block">lxc network show lxdbr0
-</pre>
-<p>Create file <code>/etc/systemd/network/lxd.network</code>:</p>
-<pre class="code literal-block"><span></span><code><span class="k">[Match]</span>
-<span class="na">Name</span><span class="o">=</span><span class="s">lxdbr0</span>
-
-<span class="k">[Network]</span>
-<span class="na">Address</span><span class="o">=</span><span class="s">IPADDR/24</span>
-<span class="na">DNS</span><span class="o">=</span><span class="s">IPADDR</span>
-<span class="na">Domains</span><span class="o">=</span><span class="s">~lxd</span>
-</code></pre>
-
-<p>Where IPADDR is the lxdbr0 IPv4 address.</p>
-<pre class="code literal-block">sudo systemctl <span class="nb">enable</span> systemd-networkd
-sudo reboot now
-</pre>
-<p>Then:</p>
-<pre class="code literal-block">jhartley@t460 $ ssh demo.lxd
-jhartley@demo $ <span class="c1"># \o/</span>
-</pre>
-<p>One nice thing is that DNS works both from the host and on the containers,
-so your services can be configured by default to talk to each other at
-SERVICE1.lxd, SERVICE2.lxd. Then running them in containers on your host
-they would just find each other. We don't actually do this, but it seems
-trivially easy to do. I should ask why we don't.</p>
-<p>In practice I wrap up the ssh command with my accumulated foibles:</p>
-<pre class="code literal-block">jhartley@demo $ <span class="nb">type</span> -a lssh
-lssh is a <span class="k">function</span>
-lssh <span class="o">()</span>
-<span class="o">{</span>
-    <span class="nv">TERM</span><span class="o">=</span>xterm-color ssh -A -t <span class="s2">"</span><span class="nv">$1</span><span class="s2">.lxd"</span> -- <span class="s2">"cd </span><span class="nv">$PWD</span><span class="s2"> &amp;&amp; exec </span><span class="nv">$SHELL</span><span class="s2"> -l"</span><span class="p">;</span>
-<span class="o">}</span>
-</pre>
-<p>I forget why -A and -t were required. The rest is mostly just to start the
-shell on the container in the same directory as I was in on the host. There
-is probably a simpler way.</p>
-<hr>
-<p>The booooooring bits:</p>
-<p>When we started the container, we mentioned
-<a href="files/2020/setup-lxd-profile.sh">a one-off setup script</a>.</p>
-<p>The script does a few things:</p>
-<ol>
-<li>Creates a new key pair specifically to SSH to the container.</li>
-<li>Creates the custom <em>jhartley</em> profile, which causes all containers started
-   with it to:</li>
-<li>Create a new user on the container with user and group ID mapped to
-      those of my user on the host, presumably so that file permissions work
-      for...</li>
-<li>Mount my $HOME directory on the container. Might not always be what you
-      want, but works for me right now.</li>
-<li>Doubtless due to my own misunderstanding somewhere, in order to get working
-   IPv4 connections to my containers, I had to disable IPv6 connections to
-   them.</li>
-</ol>
 </div>
     </div>
     </article>

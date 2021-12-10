@@ -25,6 +25,7 @@ technical reviewer Michael">
 <meta property="article:tag" content="mswin-dev">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="software">
+<meta property="article:tag" content="terminal">
 <meta property="article:tag" content="testing">
 </head>
 <body>
@@ -236,7 +237,7 @@ installed version 2+ of IronPython from the MSI installer, this is all
 taken care of automatically, using a copy of the standard library that
 is included with the install. Otherwise, you need to set this up
 manually, either by setting an environment variable:</p>
-<pre class="code literal-block"><span></span><code><span class="err">set IRONPYTHONPATH=C:\Python25\Lib</span>
+<pre class="code literal-block"><span></span><code>set IRONPYTHONPATH=C:\Python25\Lib
 </code></pre>
 
 <p>or by appending this directory to <code>sys.path</code> inside your IronPython
@@ -258,20 +259,20 @@ the CPython standard library:</p>
 
 <p>If this works without complaint, exit <em>ipy.exe</em>, and run the nascent
 acceptance test above, using the DOS command-line:</p>
-<pre class="code literal-block"><span></span><code><span class="o">&gt;</span> <span class="n">ipy</span><span class="p">.</span><span class="n">exe</span> <span class="n">AT001_AddItems</span><span class="p">.</span><span class="n">py</span>
-<span class="n">F</span>
-<span class="o">======================================================================</span>
-<span class="n">FAIL</span><span class="p">:</span> <span class="n">test_add_address</span> <span class="p">(</span><span class="n">__main__</span><span class="p">.</span><span class="n">AT001_AddItems</span><span class="p">)</span>
-<span class="c1">----------------------------------------------------------------------</span>
-<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="k">call</span> <span class="k">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="ss">"AT001_AddItems.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">11</span><span class="p">,</span> <span class="k">in</span> <span class="n">test_add_address</span>
-    <span class="k">self</span><span class="p">.</span><span class="n">fail</span><span class="p">(</span><span class="ss">"test not finished"</span><span class="p">)</span>
-<span class="n">AssertionError</span><span class="p">:</span> <span class="n">test</span> <span class="k">not</span> <span class="n">finished</span>
+<pre class="code literal-block"><span></span><code><span class="nv">&gt;</span><span class="c"> ipy</span><span class="nt">.</span><span class="c">exe AT001_AddItems</span><span class="nt">.</span><span class="c">py</span>
+<span class="c">F</span>
+<span class="c">======================================================================</span>
+<span class="c">FAIL: test_add_address (__main__</span><span class="nt">.</span><span class="c">AT001_AddItems)</span>
+<span class="nb">----------------------------------------------------------------------</span><span class="c"></span>
+<span class="c">Traceback (most recent call last):</span>
+<span class="c">  File "AT001_AddItems</span><span class="nt">.</span><span class="c">py"</span><span class="nt">,</span><span class="c"> line 11</span><span class="nt">,</span><span class="c"> in test_add_address</span>
+<span class="c">    self</span><span class="nt">.</span><span class="c">fail("test not finished")</span>
+<span class="c">AssertionError: test not finished</span>
 
-<span class="c1">----------------------------------------------------------------------</span>
-<span class="n">Ran</span> <span class="mi">1</span> <span class="n">test</span> <span class="k">in</span> <span class="mi">0</span><span class="p">.</span><span class="mi">141</span><span class="n">s</span>
+<span class="nb">----------------------------------------------------------------------</span><span class="c"></span>
+<span class="c">Ran 1 test in 0</span><span class="nt">.</span><span class="c">141s</span>
 
-<span class="n">FAILED</span> <span class="p">(</span><span class="n">failures</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c">FAILED (failures=1)</span>
 </code></pre>
 
 <h3>About IronPython</h3>
@@ -964,6 +965,7 @@ informative new book by Michael Foord, which caters to both Python and
             <li><a class="tag p-category" href="../../categories/mswin-dev/" rel="tag">mswin-dev</a></li>
             <li><a class="tag p-category" href="../../categories/python/" rel="tag">python</a></li>
             <li><a class="tag p-category" href="../../categories/software/" rel="tag">software</a></li>
+            <li><a class="tag p-category" href="../../categories/terminal/" rel="tag">terminal</a></li>
             <li><a class="tag p-category" href="../../categories/testing/" rel="tag">testing</a></li>
         </ul>
 <ul class="pager hidden-print">

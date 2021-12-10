@@ -3,29 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TIL: Download audio from YouTube | tartley.com</title>
+<title>‰ is per mille | tartley.com</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://www.tartley.com/posts/til-create-mp3-from-youtube-video/">
+<link rel="canonical" href="https://www.tartley.com/posts/per-mille/">
 <link rel="icon" href="../../welcome.gif" sizes="16x16">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
-<link rel="prev" href="../112263-by-steven-king/" title="11/22/63, by Steven King" type="text/html">
-<link rel="next" href="../til-cryptocurrency-per-transaction-energy-use/" title="TIL: Energy use per transaction for cryptocurrencies vs Visa" type="text/html">
+<link rel="prev" href="../the-structure-of-scientific-revolutions/" title="The Structure of Scientific Revolutions" type="text/html">
+<link rel="next" href="../git-annotated-tags/" title="Git Annotated Tags" type="text/html">
 <meta property="og:site_name" content="tartley.com">
-<meta property="og:title" content="TIL: Download audio from YouTube">
-<meta property="og:url" content="https://www.tartley.com/posts/til-create-mp3-from-youtube-video/">
-<meta property="og:description" content="Install ffmpeg:
-sudo apt install ffmpeg
-
-Install youtube-dl, a tool to download YouTube videos. Using apt installs a
-version that's too old to work, so:
-pip install --user pipsi
-pipsi install youtube-">
+<meta property="og:title" content="‰ is per mille">
+<meta property="og:url" content="https://www.tartley.com/posts/per-mille/">
+<meta property="og:description" content="‰ or 'per mille' means parts per thousand.
+I wasn't aware of it until today when I idly Googled &quot;permil&quot;, my imagined
+variation on &quot;percent&quot;, to find that this is one of the many spellings of
+a real t">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2021-05-13T11:18:33-05:00">
-<meta property="article:tag" content="linux">
-<meta property="article:tag" content="music">
+<meta property="article:published_time" content="2020-10-17T00:25:45-05:00">
 <meta property="article:tag" content="til">
 </head>
 <body>
@@ -81,7 +76,7 @@ pipsi install youtube-">
         <!--Body content-->
         <div class="row">
             
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">TIL: Download audio from YouTube</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">‰ is per mille</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
@@ -89,9 +84,9 @@ pipsi install youtube-">
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2021-05-13T11:18:33-05:00" itemprop="datePublished" title="2021-05-13 11:18">2021-05-13 11:18</time></a>
+            <time class="published dt-published" datetime="2020-10-17T00:25:45-05:00" itemprop="datePublished" title="2020-10-17 00:25">2020-10-17 00:25</time></a>
             </p>
-                <p class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/til-create-mp3-from-youtube-video.html">Comments</a>
+                <p class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/per-mille.html">Comments</a>
 
 
             
@@ -100,60 +95,32 @@ pipsi install youtube-">
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>Install ffmpeg:</p>
-<pre class="code literal-block">sudo apt install ffmpeg
-</pre>
-<p>Install <code>youtube-dl</code>, a tool to download YouTube videos. Using <code>apt</code> installs a
-version that's too old to work, so:</p>
-<pre class="code literal-block">pip install --user pipsi
-pipsi install youtube-dl
-</pre>
-<h3>The best way</h3>
-<p>Tell youtube-dl to download the audio:</p>
-<pre class="code literal-block">youtube-dl -x --audio-format<span class="o">=</span>best URL
-</pre>
-<p>Where
-* <code>-x</code> downloads just the audio part.
-* Audio format defaults to 'best', but can be "aac", "flac", "mp3", "m4a",
-  "opus", "vorbis", or "wav".</p>
-<p>As I understand it, it downloads whatever audio format YouTube provides,
-then converts it locally using ffmpeg, so you're not really getting the
-benefit of those lossless formats - mp3 is fine for
-<a href="https://www.youtube.com/watch?v=VSJWvzLuGz8">my</a>
-<a href="https://www.youtube.com/watch?v=nyU1Pt2IXyE">needs</a>.</p>
-<h3>My previous inferior way</h3>
-<p>This method is worse because it downloads the whole video file before
-extracting audio locally, and the download gets throttled by YouTube in some
-way, which of late is very slow indeed.</p>
-<p>Download the video from YouTube:</p>
-<pre class="code literal-block">youtube-dl URL
-</pre>
-<p>This results in a webm file. I have no idea what that is, and am relieved
-to discover that converting it into an mp3 requires just:</p>
-<pre class="code literal-block">ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
-</pre>
-<p>Where <code>-vn</code> disables video in the output.</p>
+<p>‰ or <em>'per mille'</em> means parts per thousand.</p>
+<p>I wasn't aware of it until today when I idly Googled "permil", my imagined
+variation on "percent", to find that this is one of the many spellings of
+a real thing. Rarely used in English, but more common in other European
+languages.</p>
+<p>Now that I see the symbol, I remember seeing it as a child, on an old
+typewriter that my Grandfather used. What's old is new.</p>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../categories/linux/" rel="tag">linux</a></li>
-            <li><a class="tag p-category" href="../../categories/music/" rel="tag">music</a></li>
-            <li><a class="tag p-category" href="../../categories/til/" rel="tag">til</a></li>
+<li><a class="tag p-category" href="../../categories/til/" rel="tag">til</a></li>
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../112263-by-steven-king/" rel="prev" title="11/22/63, by Steven King">Previous post</a>
+                <a href="../the-structure-of-scientific-revolutions/" rel="prev" title="The Structure of Scientific Revolutions">Previous post</a>
             </li>
             <li class="next">
-                <a href="../til-cryptocurrency-per-transaction-energy-use/" rel="next" title="TIL: Energy use per transaction for cryptocurrencies vs Visa">Next post</a>
+                <a href="../git-annotated-tags/" rel="next" title="Git Annotated Tags">Next post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
                         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="tartley",
-            disqus_url="https://www.tartley.com/posts/til-create-mp3-from-youtube-video/",
-        disqus_title="TIL: Download audio from YouTube",
-        disqus_identifier="cache/posts/til-create-mp3-from-youtube-video.html",
+            disqus_url="https://www.tartley.com/posts/per-mille/",
+        disqus_title="\u2030 is per mille",
+        disqus_identifier="cache/posts/per-mille.html",
         disqus_config = function () {
             this.language = "en";
         };

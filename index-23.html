@@ -70,7 +70,146 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/dina-as-otf/" class="u-url">Dina font as an OTF.</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/lxd-for-dev-env/" class="u-url">LXD for Development Environments.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/lxd-for-dev-env/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-04-20T13:57:47-05:00" itemprop="datePublished" title="2020-04-20 13:57">2020-04-20 13:57</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/lxd-for-dev-env/#disqus_thread" data-disqus-identifier="cache/posts/lxd-for-dev-env.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><a href="https://twitter.com/hjwp/status/1249636076660174849">@hjwp asks</a>:</p>
+<blockquote>
+<p>I would be interested in seeing some example lxd config files,
+bash command history when creating, etc?</p>
+</blockquote>
+<p>Here goes then.</p>
+<p>I have one LXD container running for each nontrivial development project I'm
+working on.</p>
+<pre class="code literal-block"><span></span><code>$ lxc ls
+<span class="p">|</span>    NAME     <span class="p">|</span>  STATE  <span class="p">|</span>        IPV4         <span class="p">|</span> IPV6 <span class="p">|</span>   TYPE    <span class="p">|</span> SNAPSHOTS <span class="p">|</span>
+<span class="p">|</span> devicegw    <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.228 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
+<span class="p">|</span> ident       <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.4 <span class="o">(</span>eth0<span class="o">)</span>   <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
+<span class="p">|</span> revs        <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.151 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
+<span class="p">|</span> siab        <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.128 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
+<span class="p">|</span> tartley-com <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.161 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
+</code></pre>
+
+<p>Out of the gate we see one source of confusion. "LXD", the daemon, is a
+newer project that builds on top of "LXC" the containers. However the user
+interface to all the new LXD-goodness is through a command-line called "lxc",
+which replaces the older command line tool called "lxd". :-/</p>
+<p>To create a new one:</p>
+<pre class="code literal-block"><span></span><code>$ <span class="nb">time</span> lxc launch ubuntu:16.04 -p default -p jhartley demo
+Creating demo
+Starting demo
+real    0m9.593s
+</code></pre>
+
+<p>Once created, they take about 3 seconds to stop and 0.5 seconds to start.</p>
+<p>Those "-p" options cause the container to use two <em>profiles</em>. They are:</p>
+<ol>
+<li>
+<p>The <em>default</em> profile, which I've never touched. It's just doing whatever it
+   always does.</p>
+</li>
+<li>
+<p>The <em>jhartley</em> profile, I created in a one-off step by running a Bash script
+   derived from instructions one of my colleagues passed around. I'll describe
+   it at the end.</p>
+</li>
+</ol>
+<p>Once a new container is up, we can execute commands directly on it:</p>
+<pre class="code literal-block"><span></span><code>$ lxc <span class="nb">exec</span> demo hostname
+demo
+$ lxc <span class="nb">exec</span> demo whoami
+root
+</code></pre>
+
+<p>Or SSH to them using their IP address:</p>
+<pre class="code literal-block"><span></span><code>jhartley@t460 $ lxc ls demo
+<span class="p">|</span> NAME <span class="p">|</span>  STATE  <span class="p">|</span>        IPV4         <span class="p">|</span> IPV6 <span class="p">|</span>   TYPE    <span class="p">|</span> SNAPSHOTS <span class="p">|</span>
+<span class="p">|</span> demo <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.162 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
+jhartley@t460 $ ssh <span class="m">10</span>.44.99.162
+...
+Warning: Permanently added <span class="s1">'10.44.99.162'</span> <span class="o">(</span>ECDSA<span class="o">)</span> to the list of known hosts.
+Welcome to Ubuntu <span class="m">16</span>.04.6 LTS <span class="o">(</span>GNU/Linux <span class="m">5</span>.4.0-25-generic x86_64<span class="o">)</span>
+jhartley@demo $
+</code></pre>
+
+<p>Better than using IP addresses, you can run a DNS server to recognize
+<code>{containername}.lxd</code> hostnames. (This part is from
+<a href="https://discuss.linuxcontainers.org/t/a-way-to-resolve-container-lxd-from-host-in-all-cases/3698">here</a>.)</p>
+<p>Find your lxd bridge IPv4 address</p>
+<pre class="code literal-block"><span></span><code>lxc network show lxdbr0
+</code></pre>
+
+<p>Create file <code>/etc/systemd/network/lxd.network</code>:</p>
+<pre class="code literal-block"><span></span><code><span class="k">[Match]</span>
+<span class="na">Name</span><span class="o">=</span><span class="s">lxdbr0</span>
+
+<span class="k">[Network]</span>
+<span class="na">Address</span><span class="o">=</span><span class="s">IPADDR/24</span>
+<span class="na">DNS</span><span class="o">=</span><span class="s">IPADDR</span>
+<span class="na">Domains</span><span class="o">=</span><span class="s">~lxd</span>
+</code></pre>
+
+<p>Where IPADDR is the lxdbr0 IPv4 address.</p>
+<pre class="code literal-block"><span></span><code>sudo systemctl <span class="nb">enable</span> systemd-networkd
+sudo reboot now
+</code></pre>
+
+<p>Then:</p>
+<pre class="code literal-block"><span></span><code>jhartley@t460 $ ssh demo.lxd
+jhartley@demo $ <span class="c1"># \o/</span>
+</code></pre>
+
+<p>One nice thing is that DNS works both from the host and on the containers,
+so your services can be configured by default to talk to each other at
+SERVICE1.lxd, SERVICE2.lxd. Then running them in containers on your host
+they would just find each other. We don't actually do this, but it seems
+trivially easy to do. I should ask why we don't.</p>
+<p>In practice I wrap up the ssh command with my accumulated foibles:</p>
+<pre class="code literal-block"><span></span><code>jhartley@demo $ <span class="nb">type</span> -a lssh
+lssh is a <span class="k">function</span>
+lssh <span class="o">()</span>
+<span class="o">{</span>
+    <span class="nv">TERM</span><span class="o">=</span>xterm-color ssh -A -t <span class="s2">"</span><span class="nv">$1</span><span class="s2">.lxd"</span> -- <span class="s2">"cd </span><span class="nv">$PWD</span><span class="s2"> &amp;&amp; exec </span><span class="nv">$SHELL</span><span class="s2"> -l"</span><span class="p">;</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>I forget why -A and -t were required. The rest is mostly just to start the
+shell on the container in the same directory as I was in on the host. There
+is probably a simpler way.</p>
+<hr>
+<p>The booooooring bits:</p>
+<p>When we started the container, we mentioned
+<a href="files/2020/setup-lxd-profile.sh">a one-off setup script</a>.</p>
+<p>The script does a few things:</p>
+<ol>
+<li>Creates a new key pair specifically to SSH to the container.</li>
+<li>Creates the custom <em>jhartley</em> profile, which causes all containers started
+   with it to:</li>
+<li>Create a new user on the container with user and group ID mapped to
+      those of my user on the host, presumably so that file permissions work
+      for...</li>
+<li>Mount my $HOME directory on the container. Might not always be what you
+      want, but works for me right now.</li>
+<li>Doubtless due to my own misunderstanding somewhere, in order to get working
+   IPv4 connections to my containers, I had to disable IPv6 connections to
+   them.</li>
+</ol>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/dina-as-otf/" class="u-url">Dina font as an OTF.</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -101,8 +240,9 @@ or font authors.</p>
 more than your distribution does. Here's how I did it for my
 <a href="http://www.dcmembers.com/jibsen/download/61/">beloved Dina</a>.</p>
 <h3>1. Identify the font file.</h3>
-<pre class="code literal-block">fc-list <span class="p">|</span> grep Dina
-</pre>
+<pre class="code literal-block"><span></span><code>fc-list <span class="p">|</span> grep Dina
+</code></pre>
+
 <h3>2. Convert.</h3>
 <p>Use either command line tools, or fontforge.</p>
 <h4>2.1 Using fontforge</h4>
@@ -386,16 +526,19 @@ new v0.6 version, although has not released any of that to PyPI.</p>
 <p>So, in increasing order of desirability, you can either:</p>
 <p>Clone the latest repo <a href="https://github.com/nojhan/colout">from Github</a>, and
 install from that:</p>
-<pre class="code literal-block"><span class="c1"># cd to the clone, then</span>
+<pre class="code literal-block"><span></span><code><span class="c1"># cd to the clone, then</span>
 python3 -m pip install --user .
-</pre>
+</code></pre>
+
 <p>Or, pip install the version I uploaded to PyPI, which is a straight copy of the
 latest Github at the time:</p>
-<pre class="code literal-block">pip install --user colout-fix
-</pre>
+<pre class="code literal-block"><span></span><code>pip install --user colout-fix
+</code></pre>
+
 <p>Or, best of all, pip install straight from the original Github repo:</p>
-<pre class="code literal-block">pip install --user git+git://github.com/nojhan/colout.git
-</pre>
+<pre class="code literal-block"><span></span><code>pip install --user git+git://github.com/nojhan/colout.git
+</code></pre>
+
 <p>Note that, throughout, we're using <code>--user</code>, so that you can install
 development tools like this system-wide for the current user, without needing a
 virtualenv, without needing root access, and without modifying your installed
@@ -466,86 +609,6 @@ right clicking lets you select the home or work profile explicitly. Open
 each, and change the theme in one of them so the windows are visually
 distinct.</p>
 <p>Tested on Ubuntu, RHEL 7.3, probably works on all Gnome3 desktops.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/automate-gnome-keybindings/" class="u-url">Automate Gnome keybindings</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/automate-gnome-keybindings/" rel="bookmark">
-            <time class="published dt-published" datetime="2017-10-04T20:06:47-05:00" itemprop="datePublished" title="2017-10-04 20:06">2017-10-04 20:06</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/automate-gnome-keybindings/#disqus_thread" data-disqus-identifier="cache/posts/automate-gnome-keybindings.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>Sick of manual GUI twiddling to fix inconsistent keybindings on various
-computers. Solved once and for all, by a new script in my personal
-workstation setup bucket:</p>
-<p>Warning: This:</p>
-<ul>
-<li>works great on RHEL,</li>
-<li>doesn't all work on Ubuntu&lt;=17.04, I suspect because Unity has
-    it's own set of keybinds that are defined elsewhere.</li>
-<li>works great on Ubuntu 17.10. especially if you go in manually to
-    disable the built-in keybinding for Super-V, which displays the
-    calendar and notifications window, which shadows my 'toggle window
-    maximize vertically'.</li>
-</ul>
-<pre class="code literal-block"><span class="ch">#!/usr/bin/env bash</span>
-
-<span class="nv">kb</span><span class="o">=</span><span class="s1">'org.gnome.desktop.wm.keybindings'</span>
-
-<span class="c1"># Switcher, between windows not apps, uses alt-tab and alt-grave</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-windows <span class="s2">"['Tab']"</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-windows-backward <span class="s2">"['grave', 'Tab']"</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-applications <span class="s2">"[]"</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-applications-backward <span class="s2">"[]"</span>
-
-<span class="c1"># Window maximize toggle, super-up</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> maximize <span class="s2">"[]"</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> toggle-maximized <span class="s2">"['Up']"</span>
-
-<span class="c1"># Window maximize vertically toggle, super-v</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> maximize-vertically <span class="s2">"['v']"</span>
-
-<span class="c1"># run command, super-r</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> panel-run-dialog <span class="s2">"['r', 'F2']"</span>
-
-
-<span class="c1"># Custom commands</span>
-
-<span class="nv">mk</span><span class="o">=</span><span class="s1">'org.gnome.settings-daemon.plugins.media-keys'</span>
-<span class="nv">ckb</span><span class="o">=</span><span class="s1">'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings'</span>
-
-gsettings <span class="nb">set</span> <span class="nv">$mk</span> custom-keybindings <span class="s2">"['</span><span class="nv">$ckb</span><span class="s2">/custom0/', '</span><span class="nv">$ckb</span><span class="s2">/custom1/']"</span>
-
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/ name <span class="s2">"screen off"</span>
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/ <span class="nb">command</span> <span class="s2">"screenoff"</span>
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/ binding <span class="s2">"z"</span>
-
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ name <span class="s2">"terminal"</span>
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ <span class="nb">command</span> <span class="s2">"terminal"</span>
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ binding <span class="s2">"t"</span>
-</pre>
-<p>Embedded in that is the ultimate solution to my longstanding irk with
-Unity and Gnome's default window switcher (alt-tab.) By default it
-groups windows of a single application together, requiring some extra
--grave pressing to navigate between windows within an application.</p>
-<p>This not only requires way more effort, but also breaks the expected
-behaviour of just tapping alt-tab to go back to the last used window.
-Instead it goes back to the last used application, so you can't toggle
-between two windows of the same application, eg. two terminals. Absolute
-madness.</p>
-<p>The above modifies alt-tab to just cycle through all windows, ungrouped,
-which fixes the ability to toggle between last two windows. Also,
-alt-grave is provided as an alternative to cycle backwards through the
-windows, which is easier to hit than shift-alt-tab.</p>
 </div>
     </div>
     </article>

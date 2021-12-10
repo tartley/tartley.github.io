@@ -11,11 +11,11 @@
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2021-12-09T19:31:00Z</lastmod>
+  <lastmod>2021-12-10T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/</loc>
-  <lastmod>2021-12-08T23:04:00Z</lastmod>
+  <lastmod>2021-12-09T19:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/arcade/</loc>
@@ -338,10 +338,6 @@
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://www.tartley.com/categories/tags/</loc>
-  <lastmod>2021-10-06T15:41:00Z</lastmod>
- </url>
- <url>
   <loc>https://www.tartley.com/categories/tartleycom/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
@@ -415,31 +411,31 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-13.html</loc>
-  <lastmod>2021-11-23T17:11:00Z</lastmod>
+  <lastmod>2021-12-10T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-14.html</loc>
-  <lastmod>2021-11-23T17:11:00Z</lastmod>
+  <lastmod>2021-12-10T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-15.html</loc>
-  <lastmod>2021-10-26T14:07:00Z</lastmod>
+  <lastmod>2021-12-10T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-16.html</loc>
-  <lastmod>2021-12-08T23:06:00Z</lastmod>
+  <lastmod>2021-12-10T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-17.html</loc>
-  <lastmod>2021-10-19T11:56:00Z</lastmod>
+  <lastmod>2021-12-10T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-18.html</loc>
-  <lastmod>2021-10-19T11:56:00Z</lastmod>
+  <lastmod>2021-12-10T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-19.html</loc>
-  <lastmod>2021-10-19T11:56:00Z</lastmod>
+  <lastmod>2021-12-10T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-2.html</loc>
@@ -447,27 +443,27 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-20.html</loc>
-  <lastmod>2021-12-09T16:04:00Z</lastmod>
+  <lastmod>2021-12-10T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-21.html</loc>
-  <lastmod>2021-12-08T23:12:00Z</lastmod>
+  <lastmod>2021-12-10T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-22.html</loc>
-  <lastmod>2021-12-08T23:10:00Z</lastmod>
+  <lastmod>2021-12-10T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-23.html</loc>
-  <lastmod>2021-12-08T23:08:00Z</lastmod>
+  <lastmod>2021-12-10T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-24.html</loc>
-  <lastmod>2021-12-08T23:07:00Z</lastmod>
+  <lastmod>2021-12-10T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-25.html</loc>
-  <lastmod>2021-12-08T21:32:00Z</lastmod>
+  <lastmod>2021-12-10T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-3.html</loc>
@@ -694,6 +690,10 @@
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/posts/cryptocurrency-per-transaction-energy-use/</loc>
+  <lastmod>2021-12-10T14:53:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/posts/daniel-kitson/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
@@ -738,12 +738,20 @@
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/posts/download-audio-from-youtube/</loc>
+  <lastmod>2021-12-10T14:56:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/posts/ed-by-qntm/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/encrypted-zip-files-on-osx/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/energy-use-per-transaction-for-cryptocurrencies-vs-visa/</loc>
+  <lastmod>2021-12-10T14:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/envisioning-information/</loc>
@@ -828,6 +836,10 @@
  <url>
   <loc>https://www.tartley.com/posts/generics-considered-harmful/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/git-annotated-tags/</loc>
+  <lastmod>2021-12-10T14:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</loc>
@@ -920,6 +932,10 @@
  <url>
   <loc>https://www.tartley.com/posts/ironpython-in-action/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/is-per-mille/</loc>
+  <lastmod>2021-12-10T14:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/jpod/</loc>
@@ -1128,6 +1144,10 @@
  <url>
   <loc>https://www.tartley.com/posts/patent-this/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/per-mille/</loc>
+  <lastmod>2021-12-10T14:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/perl-parody-of-itself/</loc>

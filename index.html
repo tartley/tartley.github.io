@@ -118,7 +118,7 @@ given timestamp, since the file has been processed by the time this arg gets
 actioned, so accurate timestamp/frame conversion is known, at the cost of
 having had to process even the parts of the video that are then discarded.</p>
 <p>Vcodec of libx264 is specified because, according to stackoverflow,
-"<a href="https://stackoverflow.com/questions/5651654/ffmpeg-how-to-split-video-efficiently#comment85070704_13289426%22">scenes in mp4 are broken</a>, whatever that means,
+"<a href="https://stackoverflow.com/questions/5651654/ffmpeg-how-to-split-video-efficiently#comment85070704_13289426">scenes in mp4 are broken</a>", whatever that means,
 and specifying "copy", as most people do, gives me an output with no video,
 only audio.</p>
 <p>This results in a three second, 217KB .mp4 video file. (the following is just an

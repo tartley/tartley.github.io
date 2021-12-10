@@ -70,7 +70,33 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/show-last-command-exit-value-in-bash-shell-prompt/" class="u-url">Show last command exit value in Bash shell prompt</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/you-invite-them-to-yourself/" class="u-url">You Invite Them To Yourself</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/you-invite-them-to-yourself/" rel="bookmark">
+            <time class="published dt-published" datetime="2009-03-01T23:24:57-06:00" itemprop="datePublished" title="2009-03-01 23:24">2009-03-01 23:24</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/you-invite-them-to-yourself/#disqus_thread" data-disqus-identifier="cache/posts/you-invite-them-to-yourself.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><a href="http://www.facebook.com/photo.php?pid=2212211&amp;id=589628893"><img alt="Cover Art" src="files/2009/03/cover.jpg"></a></p>
+<p>Me and the other Pillai's are very happy to announce that the album is
+finally done. This is the culmination of what turned out to be over two
+years of hard work for all of us, and despite or perhaps because of all
+the barrys and the tears, in the end we're pleased as punch with the way
+it has turned out. It's already all over the Internets, but if you want
+to indulge us, you can buy a copy
+<a href="http://www.facebook.com/photo.php?pid=2212211&amp;id=589628893">here</a>.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/show-last-command-exit-value-in-bash-shell-prompt/" class="u-url">Show last command exit value in Bash shell prompt</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -87,20 +113,18 @@
     </header><div class="e-content entry-content">
     <div>
 <p>Stick something like this in your .bashrc file:</p>
-<pre class="code literal-block"><span></span><code><span class="c1"># display red exit value if it isn't zero</span>
+<pre class="code literal-block"><span class="c1"># display red exit value if it isn't zero</span>
 <span class="nv">PROMPT_COMMAND</span><span class="o">=</span><span class="s1">'EXITVAL=$?; '</span><span class="nv">$PROMPT_COMMAND</span>
 <span class="nv">GET_EXITVAL</span><span class="o">=</span><span class="s1">'$(if [[ $EXITVAL != 0 ]]; then echo -n "\[\e[37;41;01m\] $EXITVAL \[\e[0m\] "; fi)'</span>
 <span class="nb">export</span> <span class="nv">PS1</span><span class="o">=</span><span class="s2">"</span><span class="nv">$GET_EXITVAL$PS1</span><span class="s2">"</span>
-</code></pre>
-
+</pre>
 <p>Command exit values other than zero are displayed in the subsequent
 prompt:</p>
 <p><img alt="Check out the little red '1'" src="files/2009/02/last-exit-value.png"></p>
 <p>(see the little red '1').</p>
 <p>It's the</p>
-<pre class="code literal-block"><span></span><code><span class="cp">${</span><span class="err">?</span><span class="c1">#0</span><span class="cp">}</span>
-</code></pre>
-
+<pre class="code literal-block"><span class="si">${</span><span class="p">?#0</span><span class="si">}</span>
+</pre>
 <p>bit which includes the last command exit value in the prompt, unless the
 value is zero, in which case nothing is displayed.</p>
 </div>
@@ -782,72 +806,6 @@ it some more. Isn't this problem already solved somewhere?</p>
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
     <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
 </code></pre>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/a-science-fiction-omnibus/" class="u-url">A Science-Fiction Omnibus</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/a-science-fiction-omnibus/" rel="bookmark">
-            <time class="published dt-published" datetime="2008-12-14T17:32:47-06:00" itemprop="datePublished" title="2008-12-14 17:32">2008-12-14 17:32</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/a-science-fiction-omnibus/#disqus_thread" data-disqus-identifier="cache/posts/a-science-fiction-omnibus.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p><span style="float: left">
-<img alt="a-science-fiction-omnibus" src="files/2008/12/a-science-fiction-omnibus.jpg" title="a-science-fiction-omnibus"></span></p>
-<p><em>Editor: Brian Aldiss, 2007</em></p>
-<p>A collection of short stories from 1941 to 2006. Most of my favourites
-in here are ones I've already read before: Asimov's <em>Nightfall</em>, Bear's
-<em>Blood Music</em>, Aldiss' own <em>Poor Little Warrior!</em></p>
-<p>Of the ones that are new to me, not many seemed to have much appeal. A
-few nicely crafted exceptions are worthy of special mention: Ward
-Moore's <em>Lot</em>, a tale of a family 's departure from home in the station
-wagon as civilisation ends around them; James Tiptree's <em>And I Awoke and
-Found Me Here on the Cold Hill's Side</em>, a tragic and visceral vision of
-humanity's emotional and charismatic failings amongst the sleek,
-sophisticated races of the galaxy.</p>
-<p>Amongst the others, there are instances where the collection's vintage
-lets it down, ideas that were once exciting and cutting edge, which have
-been dulled by the passage of time and events, to expose the lackluster
-writing beneath. Multiple tales of supreme computers achieving godhood,
-for better or for worse. Tales of malfunctioning machinery that barely
-held my interest.</p>
-<h3>Great Work of Time</h3>
-<p>Imagine, then, my surprise, when the final story of the collection,
-<a href="http://en.wikipedia.org/wiki/John_Crowley">John Crowley</a>'s <a href="http://en.wikipedia.org/wiki/Great_Work_of_Time"><em>Great Work
-of Time</em></a>, of which I
-have never heard until now, turned out to be an absolute triumph. 75
-pages of beautifully crafted prose, all by itself it is easily worth the
-cost of this collection, and a more than worthy reward for the time and
-effort of reading all the other stories in it.</p>
-<p>This final story is yet-another-novel-take on time-travel - at once bold
-and understated, a nostalgic and wistful story of alternate histories
-and the motives of the people charged with affecting the critical
-junctures of human civilisation. An exquisitely crafted scene lies
-embedded within the story's amber perfection, in which <a href="http://en.wikipedia.org/wiki/Cecil_rhodes">Cecil
-Rhodes</a>' 23 year-old would-be
-assassin is recruited for the job by none other than his elderly self,
-who persuades with a moving and cathartic retelling of how the events in
-question went for him. The reader at this point is already steeped in
-the bitter-sweet consequences that the outcome will have for each of
-their lives, for the mysterious organisation under who's auspices they
-act, for the British Empire's fading hopes of uniting the world under a
-single banner versus the looming spectre of future World Wars - it is so
-poignant and well constructed and performed that I immediately went back
-and read the whole story over again. Absolutely bloody marvellous.</p>
-<p>Rating 9/10, if you only read the last story in the book. Diluted
-otherwise.</p>
-<p><strong>Update:</strong> A Great Work of Time is available as a stand-alone 75 page
-book on Amazon Kindle for £2.99, and Calibre with the DeDRM plugin will
-convert this into an epub which can be read on any device.</p>
-<p><br style="clear: both"></p>
 </div>
     </div>
     </article>

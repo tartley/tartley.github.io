@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Dec 2021 16:04:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 10 Dec 2021 15:06:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;But often you'd like to reformat just a section of the file, while leaving
 everything else intact. In principle, it's easy to tell Vim to just send the
 current visual selection:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the visual selection&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;" Black(Python) format the visual selection&lt;/span&gt;
 xnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;(Note that both the above Vim configuration snippets map the same key
 sequence -- leader (commonly comma) followed by lower case b. These can be
 defined simultaneously, because the second one uses 'xnoremap', meaning it is
@@ -28,7 +30,7 @@ gained much enthusiasm.&lt;/p&gt;
 &lt;li&gt;Passes the result to Black.&lt;/li&gt;
 &lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;
@@ -36,24 +38,26 @@ bash command history when creating, etc?&lt;/p&gt;
 &lt;p&gt;Here goes then.&lt;/p&gt;
 &lt;p&gt;I have one LXD container running for each nontrivial development project I'm
 working on.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;$ lxc ls
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ lxc ls
 &lt;span class="p"&gt;|&lt;/span&gt;    NAME     &lt;span class="p"&gt;|&lt;/span&gt;  STATE  &lt;span class="p"&gt;|&lt;/span&gt;        IPV4         &lt;span class="p"&gt;|&lt;/span&gt; IPV6 &lt;span class="p"&gt;|&lt;/span&gt;   TYPE    &lt;span class="p"&gt;|&lt;/span&gt; SNAPSHOTS &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="p"&gt;|&lt;/span&gt; devicegw    &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.228 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="p"&gt;|&lt;/span&gt; ident       &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.4 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;   &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="p"&gt;|&lt;/span&gt; revs        &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.151 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="p"&gt;|&lt;/span&gt; siab        &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.128 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="p"&gt;|&lt;/span&gt; tartley-com &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.161 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Out of the gate we see one source of confusion. "LXD", the daemon, is a
 newer project that builds on top of "LXC" the containers. However the user
 interface to all the new LXD-goodness is through a command-line called "lxc",
 which replaces the older command line tool called "lxd". :-/&lt;/p&gt;
 &lt;p&gt;To create a new one:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;$ &lt;span class="nb"&gt;time&lt;/span&gt; lxc launch ubuntu:16.04 -p default -p jhartley demo
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ &lt;span class="nb"&gt;time&lt;/span&gt; lxc launch ubuntu:16.04 -p default -p jhartley demo
 Creating demo
 Starting demo
 real    0m9.593s
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Once created, they take about 3 seconds to stop and 0.5 seconds to start.&lt;/p&gt;
 &lt;p&gt;Those "-p" options cause the container to use two &lt;em&gt;profiles&lt;/em&gt;. They are:&lt;/p&gt;
 &lt;ol&gt;
@@ -75,7 +79,7 @@ root
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Or SSH to them using their IP address:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;jhartley@t460 $ lxc ls demo
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;jhartley@t460 $ lxc ls demo
 &lt;span class="p"&gt;|&lt;/span&gt; NAME &lt;span class="p"&gt;|&lt;/span&gt;  STATE  &lt;span class="p"&gt;|&lt;/span&gt;        IPV4         &lt;span class="p"&gt;|&lt;/span&gt; IPV6 &lt;span class="p"&gt;|&lt;/span&gt;   TYPE    &lt;span class="p"&gt;|&lt;/span&gt; SNAPSHOTS &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="p"&gt;|&lt;/span&gt; demo &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.162 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
 jhartley@t460 $ ssh &lt;span class="m"&gt;10&lt;/span&gt;.44.99.162
@@ -83,13 +87,15 @@ jhartley@t460 $ ssh &lt;span class="m"&gt;10&lt;/span&gt;.44.99.162
 Warning: Permanently added &lt;span class="s1"&gt;'10.44.99.162'&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;ECDSA&lt;span class="o"&gt;)&lt;/span&gt; to the list of known hosts.
 Welcome to Ubuntu &lt;span class="m"&gt;16&lt;/span&gt;.04.6 LTS &lt;span class="o"&gt;(&lt;/span&gt;GNU/Linux &lt;span class="m"&gt;5&lt;/span&gt;.4.0-25-generic x86_64&lt;span class="o"&gt;)&lt;/span&gt;
 jhartley@demo $
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Better than using IP addresses, you can run a DNS server to recognize
 &lt;code&gt;{containername}.lxd&lt;/code&gt; hostnames. (This part is from
 &lt;a href="https://discuss.linuxcontainers.org/t/a-way-to-resolve-container-lxd-from-host-in-all-cases/3698"&gt;here&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Find your lxd bridge IPv4 address&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;lxc network show lxdbr0
-&lt;/pre&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;lxc network show lxdbr0
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Create file &lt;code&gt;/etc/systemd/network/lxd.network&lt;/code&gt;:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[Match]&lt;/span&gt;
 &lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;lxdbr0&lt;/span&gt;
@@ -101,26 +107,29 @@ jhartley@demo $
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Where IPADDR is the lxdbr0 IPv4 address.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; systemd-networkd
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; systemd-networkd
 sudo reboot now
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Then:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;jhartley@t460 $ ssh demo.lxd
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;jhartley@t460 $ ssh demo.lxd
 jhartley@demo $ &lt;span class="c1"&gt;# \o/&lt;/span&gt;
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;One nice thing is that DNS works both from the host and on the containers,
 so your services can be configured by default to talk to each other at
 SERVICE1.lxd, SERVICE2.lxd. Then running them in containers on your host
 they would just find each other. We don't actually do this, but it seems
 trivially easy to do. I should ask why we don't.&lt;/p&gt;
 &lt;p&gt;In practice I wrap up the ssh command with my accumulated foibles:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;jhartley@demo $ &lt;span class="nb"&gt;type&lt;/span&gt; -a lssh
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;jhartley@demo $ &lt;span class="nb"&gt;type&lt;/span&gt; -a lssh
 lssh is a &lt;span class="k"&gt;function&lt;/span&gt;
 lssh &lt;span class="o"&gt;()&lt;/span&gt;
 &lt;span class="o"&gt;{&lt;/span&gt;
     &lt;span class="nv"&gt;TERM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xterm-color ssh -A -t &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.lxd"&lt;/span&gt; -- &lt;span class="s2"&gt;"cd &lt;/span&gt;&lt;span class="nv"&gt;$PWD&lt;/span&gt;&lt;span class="s2"&gt; &amp;amp;&amp;amp; exec &lt;/span&gt;&lt;span class="nv"&gt;$SHELL&lt;/span&gt;&lt;span class="s2"&gt; -l"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;I forget why -A and -t were required. The rest is mostly just to start the
 shell on the container in the same directory as I was in on the host. There
 is probably a simpler way.&lt;/p&gt;
@@ -141,7 +150,7 @@ is probably a simpler way.&lt;/p&gt;
 &lt;li&gt;Doubtless due to my own misunderstanding somewhere, in order to get working
    IPv4 connections to my containers, I had to disable IPv6 connections to
    them.&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>command-line</category><category>geek</category><category>linux</category><category>software</category><guid>https://www.tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Vonnegut on software development teams.</title><link>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;So here's a thing. Spotted this in some of Kurt Vonnegut's personal
+&lt;/ol&gt;&lt;/div&gt;</description><category>geek</category><category>linux</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Vonnegut on software development teams.</title><link>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;So here's a thing. Spotted this in some of Kurt Vonnegut's personal
 correspondence, talking about an instructor of his named Slotkin:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;What Slotkin said was this: no man who achieved greatness in the arts operated
@@ -288,7 +297,7 @@ specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the transplant desti
 &lt;/pre&gt;
 &lt;p&gt;Again, the commits to be transplanted are defined by &lt;code&gt;include&lt;/code&gt; and
 &lt;code&gt;exclude&lt;/code&gt;, but this time a separate destination is specified using
-&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>git</category><category>software</category><guid>https://www.tartley.com/posts/understanding-rebase-so-it-sticks/</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://www.tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/understanding-rebase-so-it-sticks/</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://www.tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Object Oriented Software Engineering cover" src="https://www.tartley.com/files/2014/02/object-oriented-sofware-engineering.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Ivar Jacobsen&lt;/em&gt; (1992, 4th revision)&lt;/p&gt;

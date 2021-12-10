@@ -70,7 +70,38 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/acceptance-testing-net-applications-using-ironpython/" class="u-url">Acceptance Testing .NET Applications using IronPython</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/opengl-draw-api-visualised/" class="u-url">OpenGL Draw API Visualised</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/opengl-draw-api-visualised/" rel="bookmark">
+            <time class="published dt-published" datetime="2010-03-20T13:15:54-05:00" itemprop="datePublished" title="2010-03-20 13:15">2010-03-20 13:15</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/opengl-draw-api-visualised/#disqus_thread" data-disqus-identifier="cache/posts/opengl-draw-api-visualised.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>To help me grok and remember the OpenGL 3.3 draw API, I drew them in a
+diagram. I hope this will help me see at a glance what I can and can't
+achieve with each function call.</p>
+<p><img alt="OpenGL array draw calls" src="files/2010/03/opengl-draw-calls.png"></p>
+<p>I haven't annotated any of the parameter types. These days I tend to be
+calling these functions from Python, so generally only care about the
+values. Interestingly, the most recent additions to the API, such as
+<code>glMultiDrawElements</code>, feature parameters such as
+'<code>const void ** indices</code>'. Apparently the OpenGL Architecture Review
+Board has also decided that they also no longer care about the types
+either. Wise choice. :-)</p>
+<p><strong>Updatate:</strong> I wanted to publish this diagram as SVG, but apparently
+these days that works in every browser except IE, surprise surprise.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/acceptance-testing-net-applications-using-ironpython/" class="u-url">Acceptance Testing .NET Applications using IronPython</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -223,7 +254,7 @@ installed version 2+ of IronPython from the MSI installer, this is all
 taken care of automatically, using a copy of the standard library that
 is included with the install. Otherwise, you need to set this up
 manually, either by setting an environment variable:</p>
-<pre class="code literal-block"><span></span><code><span class="err">set IRONPYTHONPATH=C:\Python25\Lib</span>
+<pre class="code literal-block"><span></span><code>set IRONPYTHONPATH=C:\Python25\Lib
 </code></pre>
 
 <p>or by appending this directory to <code>sys.path</code> inside your IronPython
@@ -245,20 +276,20 @@ the CPython standard library:</p>
 
 <p>If this works without complaint, exit <em>ipy.exe</em>, and run the nascent
 acceptance test above, using the DOS command-line:</p>
-<pre class="code literal-block"><span></span><code><span class="o">&gt;</span> <span class="n">ipy</span><span class="p">.</span><span class="n">exe</span> <span class="n">AT001_AddItems</span><span class="p">.</span><span class="n">py</span>
-<span class="n">F</span>
-<span class="o">======================================================================</span>
-<span class="n">FAIL</span><span class="p">:</span> <span class="n">test_add_address</span> <span class="p">(</span><span class="n">__main__</span><span class="p">.</span><span class="n">AT001_AddItems</span><span class="p">)</span>
-<span class="c1">----------------------------------------------------------------------</span>
-<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="k">call</span> <span class="k">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="ss">"AT001_AddItems.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">11</span><span class="p">,</span> <span class="k">in</span> <span class="n">test_add_address</span>
-    <span class="k">self</span><span class="p">.</span><span class="n">fail</span><span class="p">(</span><span class="ss">"test not finished"</span><span class="p">)</span>
-<span class="n">AssertionError</span><span class="p">:</span> <span class="n">test</span> <span class="k">not</span> <span class="n">finished</span>
+<pre class="code literal-block"><span></span><code><span class="nv">&gt;</span><span class="c"> ipy</span><span class="nt">.</span><span class="c">exe AT001_AddItems</span><span class="nt">.</span><span class="c">py</span>
+<span class="c">F</span>
+<span class="c">======================================================================</span>
+<span class="c">FAIL: test_add_address (__main__</span><span class="nt">.</span><span class="c">AT001_AddItems)</span>
+<span class="nb">----------------------------------------------------------------------</span><span class="c"></span>
+<span class="c">Traceback (most recent call last):</span>
+<span class="c">  File "AT001_AddItems</span><span class="nt">.</span><span class="c">py"</span><span class="nt">,</span><span class="c"> line 11</span><span class="nt">,</span><span class="c"> in test_add_address</span>
+<span class="c">    self</span><span class="nt">.</span><span class="c">fail("test not finished")</span>
+<span class="c">AssertionError: test not finished</span>
 
-<span class="c1">----------------------------------------------------------------------</span>
-<span class="n">Ran</span> <span class="mi">1</span> <span class="n">test</span> <span class="k">in</span> <span class="mi">0</span><span class="p">.</span><span class="mi">141</span><span class="n">s</span>
+<span class="nb">----------------------------------------------------------------------</span><span class="c"></span>
+<span class="c">Ran 1 test in 0</span><span class="nt">.</span><span class="c">141s</span>
 
-<span class="n">FAILED</span> <span class="p">(</span><span class="n">failures</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c">FAILED (failures=1)</span>
 </code></pre>
 
 <h3>About IronPython</h3>
@@ -1396,7 +1427,7 @@ need, and invoke it as the final command in your batch script:</p>
 <span class="p">::</span> <span class="n">then</span> <span class="n">make</span> <span class="nb">any</span> <span class="n">changes</span> <span class="n">to</span> <span class="n">the</span> <span class="n">environment</span>
 <span class="n">call</span> <span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span>
 
-<span class="p">::</span> <span class="ow">and</span> <span class="n">propagate</span> <span class="n">the</span> <span class="nb">exit</span> <span class="n">value</span> <span class="n">to</span> <span class="n">our</span> <span class="n">invoker</span>
+<span class="p">::</span> <span class="ow">and</span> <span class="n">propagate</span> <span class="n">the</span> <span class="n">exit</span> <span class="n">value</span> <span class="n">to</span> <span class="n">our</span> <span class="n">invoker</span>
 <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">"import sys; sys.exit(</span><span class="si">%E</span><span class="s2">XITVAL%)"</span>
 </code></pre>
 
@@ -1543,147 +1574,6 @@ double-click, without having to mess about installing Python first. Or a
 source release, which will run on Linux or Macs, but you'll have to
 download Python yourself, and possibly install the dependencies manually
 too, sorry.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures/" class="u-url">Use light-opacity RGBA to fix halo artifacts along edges of textures</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures/" rel="bookmark">
-            <time class="published dt-published" datetime="2010-01-03T15:33:10-06:00" itemprop="datePublished" title="2010-01-03 15:33">2010-01-03 15:33</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures/#disqus_thread" data-disqus-identifier="cache/posts/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>This is a quick post in response to the Vimeo video post <a href="http://vimeo.com/8444889">Getting Rid of
-White Halos in Transparent Textures</a> by
-FlashBang Studios (creators of the awesome <a href="http://blurst.com/raptor-safari/">Offroad Velociraptor
-Safari</a>).</p>
-<p>Thanks to FlashBang for the video - the fix you describe, and the
-plugins you use to achieve it, are good to know about. If I'm
-interpreting the cause of the white haloes you describe correctly, then
-your fix applies to more than just Unity development.</p>
-<p>Also, you might want to know that there is an alternative solution to
-this problem. This alternative solution requires small code changes, and
-is possibly slightly trickier to get your head around, but possibly has
-a small advantage in that it requires no ongoing effort by the artists
-(e.g. applying and undoing plugin actions to color transparent pixels)
-once in place. I don't use Unity, so this might not apply in that
-environment, but just in case, here goes:</p>
-<p>The alternative solution is to save textures using <em>light-opacity RGBA</em>
-(a.k.a. <em>pre-multiplied alpha</em>), and then blend them in the engine using
-a more appropriate OpenGL blending mode. I learned about this from
-<a href="http://http://groups.google.com/group/pyglet-users/tree/browse_frm/thread/7647b57bdec45235/60d2c57881b873e1?rnum=11&amp;q=premultiplied+alpha&amp;_done=%2Fgroup%2Fpyglet-users%2Fbrowse_frm%2Fthread%2F7647b57bdec45235%3Ftvc%3D1%26q%3Dpremultiplied%2Balpha%26#doc_bb176dcbd759ea4c">Brian Fisher's post on the pylget
-forums</a>.
-I aim to paraphrase his explanation of it here in order to cement my own
-understanding of it.</p>
-<p>To elaborate, as I understand it, the issue is caused by the bilinear
-interpolation between the RGBA of your transparent pixels, and your icon
-texture color. For example, for various transparencies of purple on top of 
-a blue background:</p>
-<p>| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="files/2010/01/opaque-purple.png" title="opaque-purple"></span> <strong>icon</strong> (1, 0, 1, 1) fully opaque purple
-| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="files/2010/01/halfwhite-purple.png" title="halfwhite-purple"></span> <strong>interpolation</strong> (1, 0.5, 1, 0.5) half-transparent whitish-purple
-| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="files/2010/01/transparent-white.png" title="transparent-white"></span> <strong>background</strong> (1, 1, 1, 0) fully transparent white</p>
-<p>(<em>Update: I think some CSS nuance has been lost in a website migration. On
-quick glance, this doesn't seem to look like I expect it to, any more.</em>)</p>
-<p>The intermediate color isn't actually very close to white, but in
-contrast to the pure purple it abuts against, it's significantly paler,
-and causes the 'white looking halo' effect around the edge of the purple
-icons, as shown in the video.</p>
-<p>Note that changing the color of the transparent pixels, from white to
-black for example, does not fix the problem - it just changes the color
-of the haloes from white to black.</p>
-<p>The video shows how to fix this, using a technique that I infer is very
-common - change your transparent pixels to be the same color as whatever
-colors they abut against. The background pixels are now
-fully-transparent purple, giving us:</p>
-<p>| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="files/2010/01/opaque-purple.png" title="opaque-purple"></span> <strong>icon</strong> (1, 0, 1, 1) fully opaque purple
-| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="files/2010/01/halftransparent-purple.png" title="halftransparent-purple"></span> <strong>interpolation</strong> (1, 0, 1, 0.5) half-transparent whitish-purple
-| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="files/2010/01/transparent-white.png" title="transparent-purple"></span> <strong>background</strong> (1, 0, 1, 0) fully transparent purple</p>
-<p>So now the interpolation ends up being half-transparent pure purple.
-This eliminates the white halo artefact, as demonstrated in the video.
-The only minor downside is that the artist has to make sure the
-transparent pixels are saved with the correct RGB values, and the plugin
-demonstrated in the video helps to automate this.</p>
-<p>The alternative solution, is to modify the RGBA values in the texture,
-by pre-multiplying the RGB values by the A value. ie:</p>
-<pre class="code literal-block"><span></span><code><span class="err">R = R * A</span>
-<span class="err">G = G * A</span>
-<span class="err">B = B * A</span>
-</code></pre>
-
-<p>(where all values range from 0.0 to 1.0)</p>
-<p>This can either be done in the saved texture file (eg. 3d Studio Max
-writes TGA files this way.) Or, if you'd rather continue to use standard
-RGBA values in your saved texture files, then your application could do
-this transformation when loading image files from disk.</p>
-<p>To use these alternate RGBA values in a texture, we have to display them
-on screen using a different OpenGL blending mode. We switch from using
-the traditional:</p>
-<pre class="code literal-block"><span></span><code><span class="n">dest</span> <span class="o">=</span> <span class="n">src</span> <span class="o">*</span> <span class="n">alpha</span> <span class="o">+</span> <span class="n">dest</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">)</span>
-</code></pre>
-
-<p>to using this instead:</p>
-<pre class="code literal-block"><span></span><code><span class="n">dest</span> <span class="o">=</span> <span class="n">src</span> <span class="o">+</span> <span class="n">dest</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">)</span>
-</code></pre>
-
-<p>Note how the difference between the two is that the src is no longer
-multiplied by the src alpha during blend. This is no longer required,
-because we have already done this multiplication in the RGBA of the src
-texture itself.</p>
-<p>Storing RGBA values in this format is known as <em>light-opacity RGBA,</em> and
-it gives us a new interpretation of the meaning of the RGBA values.
-Previously, the RGB told us the color of the texture's pixel, but did
-not tell us how much this color would be used to affect the destination.
-We have to look at the alpha to determine that.</p>
-<p>Now, using the new
-blending mode, we can interpret the RGB values to literally mean how
-much R and G and B is added to the destination. Similarly, the A value
-is now only used to diminish whatever existing color is currently at the
-destination. It is not used to scale the source RGB before applying it
-to the destination. The A value can now be interpreted to mean 'what
-proportion of the existing destination color is visible through the
-overwritten source color'.</p>
-<p>This implies that for pixels to be fully transparent, ie to have no
-effect on the destination, they must have an RGB of 0. So we must always
-use (0, 0, 0, 0) to represent fully transparent pixels. Note how with
-the new interpretation of RGBA, these are not 'black' transparent
-pixels, they are literally 'no-color' transparent pixels. This obviously
-has a neat logical correposondance to what 'pure transparency' really
-means.</p>
-<p>The pixels around the edge of the purple icon still get the same
-interpolation process, resulting in the same RGBA values as would have
-been calculated before, but now we have a different interpretation of
-what those values mean:</p>
-<p>| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="files/2010/01/opaque-purple.png" title="opaque-purple"></span> <strong>icon</strong> (1, 0, 1, 1) - pure purple that fully overwrites the previous color
-| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="files/2010/01/halftransparent-purple.png" title="halftransparent-purple"></span> <strong>interpolation</strong> (0.5, 0, 0.5, 0.5) - half-bright purple mixed with 50% of the prev dest color
-| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="files/2010/01/transparent-white.png" title="transparent-white"></span> <strong>background</strong> (0, 0, 0, 0) - fully transparent (no color)</p>
-<p>The interpolated color is now blended with the previous destination
-color using the new OpenGL blend mode:</p>
-<pre class="code literal-block"><span></span><code><span class="n">dest</span> <span class="o">=</span> <span class="n">src</span> <span class="o">+</span> <span class="n">dest</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">)</span>
-</code></pre>
-
-<p>The existing destination color is scaled by (1 - alpha), ie, is reduced
-to half intensity, and then the RGB from our interpolated texture (0.5,
-0, 0.5) is added to it. This results in a half-transparent purple - even
-though the transparent pixels in our texture had no purple at all in
-them. This results in a perfect blend between the transparent and pure
-purple colors. No haloes are visible.</p>
-<p><strong>Update</strong>: It crosses my mind to mention that the halo artefacts will
-be visible whenever textures are scaled, rotated, or positioned using
-sub-pixel co-ordinates. If you only ever display unrotated textures, at
-integer pixel co-ords, and at normal size, then you won't run into this
-problem. Since the icons on the radar on FlashBang's video don't seem to
-be scaled or rotated, maybe they could sidestep the problem by just
-displaying the icons at integer pixel co-ordinates? I don't really know
-anything about how their code works though, so I might be talking
-nonsense here.</p>
 </div>
     </div>
     </article>
