@@ -2,7 +2,7 @@
 .. title: Download audio from YouTube
 .. slug: download-audio-from-youtube
 .. date: 2021-05-13 11:18:33 UTC-05:00
-.. tags: linux,music,til,youtube
+.. tags: linux,music,til,youtube,command-line
 -->
 
 Install ffmpeg:
@@ -27,10 +27,13 @@ Tell youtube-dl to download the audio:
 youtube-dl -x --audio-format=best URL
 ```
 
-Where
+Where:
+
 * `-x` downloads just the audio part.
 * Audio format defaults to 'best', but can be "aac", "flac", "mp3", "m4a",
   "opus", "vorbis", or "wav".
+* URL is an encoded version of the video URL (youtu.be/XXX), obtained by
+  hitting the 'share' button on the youtube page.
 
 As I understand it, it downloads whatever audio format YouTube provides,
 then converts it locally using ffmpeg, so you're not really getting the
