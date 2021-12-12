@@ -18,15 +18,17 @@
 <meta property="og:description" content="Install ffmpeg:
 sudo apt install ffmpeg
 
+
 Install youtube-dl, a tool to download YouTube videos. Using apt installs a
 version that's too old to work, so:
 pip install --user pipsi
-pipsi install youtube-">
+pipsi install youtube">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2021-05-13T11:18:33-05:00">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="music">
 <meta property="article:tag" content="til">
+<meta property="article:tag" content="youtube">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -101,17 +103,20 @@ pipsi install youtube-">
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>Install ffmpeg:</p>
-<pre class="code literal-block">sudo apt install ffmpeg
-</pre>
+<pre class="code literal-block"><span></span><code>sudo apt install ffmpeg
+</code></pre>
+
 <p>Install <code>youtube-dl</code>, a tool to download YouTube videos. Using <code>apt</code> installs a
 version that's too old to work, so:</p>
-<pre class="code literal-block">pip install --user pipsi
+<pre class="code literal-block"><span></span><code>pip install --user pipsi
 pipsi install youtube-dl
-</pre>
+</code></pre>
+
 <h3>The best way</h3>
 <p>Tell youtube-dl to download the audio:</p>
-<pre class="code literal-block">youtube-dl -x --audio-format<span class="o">=</span>best URL
-</pre>
+<pre class="code literal-block"><span></span><code>youtube-dl -x --audio-format<span class="o">=</span>best URL
+</code></pre>
+
 <p>Where
 * <code>-x</code> downloads just the audio part.
 * Audio format defaults to 'best', but can be "aac", "flac", "mp3", "m4a",
@@ -126,12 +131,14 @@ benefit of those lossless formats - mp3 is fine for
 extracting audio locally, and the download gets throttled by YouTube in some
 way, which of late is very slow indeed.</p>
 <p>Download the video from YouTube:</p>
-<pre class="code literal-block">youtube-dl URL
-</pre>
+<pre class="code literal-block"><span></span><code>youtube-dl URL
+</code></pre>
+
 <p>This results in a webm file. I have no idea what that is, and am relieved
 to discover that converting it into an mp3 requires just:</p>
-<pre class="code literal-block">ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
-</pre>
+<pre class="code literal-block"><span></span><code>ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
+</code></pre>
+
 <p>Where <code>-vn</code> disables video in the output.</p>
 </div>
     </div>
@@ -139,6 +146,7 @@ to discover that converting it into an mp3 requires just:</p>
 <li><a class="tag p-category" href="../../categories/linux/" rel="tag">linux</a></li>
             <li><a class="tag p-category" href="../../categories/music/" rel="tag">music</a></li>
             <li><a class="tag p-category" href="../../categories/til/" rel="tag">til</a></li>
+            <li><a class="tag p-category" href="../../categories/youtube/" rel="tag">youtube</a></li>
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
