@@ -218,24 +218,26 @@ as a snapshot of current reality.</p>
     </header><div class="e-content entry-content">
     <div>
 <p>Install ffmpeg:</p>
-<pre class="code literal-block"><span></span><code>sudo apt install ffmpeg
-</code></pre>
-
+<pre class="code literal-block">sudo apt install ffmpeg
+</pre>
 <p>Install <code>youtube-dl</code>, a tool to download YouTube videos. Using <code>apt</code> installs a
 version that's too old to work, so:</p>
-<pre class="code literal-block"><span></span><code>pip install --user pipsi
+<pre class="code literal-block">pip install --user pipsi
 pipsi install youtube-dl
-</code></pre>
-
+</pre>
 <h3>The best way</h3>
 <p>Tell youtube-dl to download the audio:</p>
-<pre class="code literal-block"><span></span><code>youtube-dl -x --audio-format<span class="o">=</span>best URL
-</code></pre>
-
-<p>Where
-* <code>-x</code> downloads just the audio part.
-* Audio format defaults to 'best', but can be "aac", "flac", "mp3", "m4a",
-  "opus", "vorbis", or "wav".</p>
+<pre class="code literal-block">youtube-dl -x --audio-format<span class="o">=</span>best URL
+</pre>
+<p>Where:</p>
+<ul>
+<li>
+<code>-x</code> downloads just the audio part.</li>
+<li>Audio format defaults to 'best', but can be "aac", "flac", "mp3", "m4a",
+  "opus", "vorbis", or "wav".</li>
+<li>URL is an encoded version of the video URL (youtu.be/XXX), obtained by
+  hitting the 'share' button on the youtube page.</li>
+</ul>
 <p>As I understand it, it downloads whatever audio format YouTube provides,
 then converts it locally using ffmpeg, so you're not really getting the
 benefit of those lossless formats - mp3 is fine for
@@ -246,14 +248,12 @@ benefit of those lossless formats - mp3 is fine for
 extracting audio locally, and the download gets throttled by YouTube in some
 way, which of late is very slow indeed.</p>
 <p>Download the video from YouTube:</p>
-<pre class="code literal-block"><span></span><code>youtube-dl URL
-</code></pre>
-
+<pre class="code literal-block">youtube-dl URL
+</pre>
 <p>This results in a webm file. I have no idea what that is, and am relieved
 to discover that converting it into an mp3 requires just:</p>
-<pre class="code literal-block"><span></span><code>ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
-</code></pre>
-
+<pre class="code literal-block">ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
+</pre>
 <p>Where <code>-vn</code> disables video in the output.</p>
 </div>
     </div>
