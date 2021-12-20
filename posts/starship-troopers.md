@@ -23,15 +23,15 @@ withholding citizenship from people who haven't served in the military.
 
 I've seen people argue that, as an expert writer, Heinlein knew precisely what
 he was doing, and didn't need to draw attention to his critiques of fascism in
-the text in order for an astute reader to realize that not everything espoused
-by the novel is necessarily good, or corresponds with the author's viewpoint.
-We are still discussing the novel 60 years later, and its relationship to
-fascism, so he has achieved his goal of getting us to think about it. After
-all, didn't Heinlein write this partway through his drafting of what would
-become *Stranger in a Strange Land*, which features hippy sexual freedom, and
-*Troopers* itself contains nods to racial and gender equality (albeit these are
-somewhat ham-fisted.) Hence, say some, Heinlein was would not genuinely have
-intended to advocate militaristic or fascist views.
+order for an astute reader to realize that not everything espoused by the novel
+is necessarily good, or corresponds with the author's viewpoint. We are still
+discussing the novel 60 years later, and its relationship to fascism, so he has
+achieved his goal of getting us to think about it. After all, didn't Heinlein
+write this partway through his drafting of what would become *Stranger in a
+Strange Land*, which features hippy sexual freedom, and *Troopers* itself
+contains nods to racial and gender equality (albeit these are somewhat
+ham-fisted.) Hence, say some, Heinlein was would not genuinely have intended to
+advocate militaristic or fascist views.
 
 I'm not convinced. It seems entirely possible that Heinlein was in favor of
 sexual freedoms, while in other regards advocating staunch militarism. He
