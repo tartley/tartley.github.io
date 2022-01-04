@@ -2,7 +2,7 @@
 .. title: Hot Fuzz
 .. slug: hot-fuzz
 .. date: 2007-02-21 11:00:51-06:00
-.. tags: media,movie
+.. tags: media,movie,fiction
 .. type: text
 -->
 

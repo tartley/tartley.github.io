@@ -2,7 +2,7 @@
 .. title: 11/22/63, by Steven King
 .. slug: 112263-by-steven-king
 .. date: 2021-05-11 13:23:19 UTC-05:00
-.. tags: media,book,novel,science-fiction,time-travel
+.. tags: media,book,novel,science-fiction,time-travel,fiction
 -->
 
 <span style="float: left">

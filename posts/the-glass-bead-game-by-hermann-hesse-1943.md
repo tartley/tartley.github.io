@@ -2,7 +2,7 @@
 .. title: The Glass Bead Game
 .. slug: the-glass-bead-game-by-hermann-hesse-1943
 .. date: 2021-08-20 13:37:25 UTC-05:00
-.. tags: media,book,novel,science-fiction
+.. tags: media,book,novel,science-fiction,fiction
 .. type: text
 -->
 

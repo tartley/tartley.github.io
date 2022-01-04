@@ -2,7 +2,7 @@
 .. title: Lions for Lambs
 .. slug: lions-for-lambs
 .. date: 2008-03-19 23:15:18-05:00
-.. tags: movie
+.. tags: movie,fiction,media
 .. link: 
 .. description: 
 .. type: text

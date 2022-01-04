@@ -2,7 +2,7 @@
 .. title: The Day The Earth Stood Still
 .. slug: the-day-the-earth-stood-still
 .. date: 2009-04-29 22:17:24-05:00
-.. tags: movie
+.. tags: movie,media,fiction,science-fiction
 .. link: 
 .. description: 
 .. type: text

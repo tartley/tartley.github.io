@@ -2,7 +2,7 @@
 .. title: Onegin vs New Super Mario Bros
 .. slug: onegin-vs-new-super-mario-bros
 .. date: 2007-03-26 23:40:04-05:00
-.. tags: media,videogame,ds,show,completed
+.. tags: media,videogame,ds,show,completed,fiction
 .. type: text
 -->
 

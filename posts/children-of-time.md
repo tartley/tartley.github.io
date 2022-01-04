@@ -2,7 +2,7 @@
 .. title: Children of Time
 .. slug: children-of-time
 .. date: 2021-11-10 14:58:50 UTC-06:00
-.. tags: media,book,novel,science-fiction
+.. tags: media,book,novel,science-fiction,fiction
 -->
 
 <span style="float: left">
