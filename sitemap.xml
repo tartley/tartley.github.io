@@ -11,7 +11,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2022-01-05T19:38:00Z</lastmod>
+  <lastmod>2022-01-05T21:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/</loc>
@@ -479,7 +479,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-25.html</loc>
-  <lastmod>2022-01-05T01:03:00Z</lastmod>
+  <lastmod>2022-01-05T19:56:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-3.html</loc>
@@ -675,10 +675,6 @@
  </url>
  <url>
   <loc>https://www.tartley.com/posts/conky/</loc>
-  <lastmod>2021-10-06T15:41:00Z</lastmod>
- </url>
- <url>
-  <loc>https://www.tartley.com/posts/converting-any-repository-fom-svn-to-hg-on-windows/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
  <url>
@@ -883,10 +879,6 @@
  </url>
  <url>
   <loc>https://www.tartley.com/posts/hexagonal-django/</loc>
-  <lastmod>2021-10-06T15:41:00Z</lastmod>
- </url>
- <url>
-  <loc>https://www.tartley.com/posts/history-meme/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
  <url>
@@ -1250,10 +1242,6 @@
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
  <url>
-  <loc>https://www.tartley.com/posts/revolution-an-instruction-manual/</loc>
-  <lastmod>2021-10-06T15:41:00Z</lastmod>
- </url>
- <url>
   <loc>https://www.tartley.com/posts/rhythmbox-plugin-announce/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
  </url>
@@ -1412,6 +1400,10 @@
  <url>
   <loc>https://www.tartley.com/posts/the-hothouse/</loc>
   <lastmod>2021-10-06T15:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/the-incal/</loc>
+  <lastmod>2022-01-05T19:56:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/the-long-overdue-linkedin-backlash/</loc>
