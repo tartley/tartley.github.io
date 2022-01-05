@@ -70,7 +70,45 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/opengl-draw-api-visualised/" class="u-url">OpenGL Draw API Visualised</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/my-own-competancy/" class="u-url">My own competency</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/my-own-competancy/" rel="bookmark">
+            <time class="published dt-published" datetime="2010-04-07T11:41:50-05:00" itemprop="datePublished" title="2010-04-07 11:41">2010-04-07 11:41</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/my-own-competancy/#disqus_thread" data-disqus-identifier="cache/posts/my-own-competancy.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>My single degree was in Electronics and Physics, so although that
+covered a considerable amount of digital electronics and CPU design,
+I've pretty much picked up everything I know about software in my own
+time or on the job. Consequentially, there are aspects of computer
+science I feel I don't know as well as I could. I'm thinking especially
+of areas which are less frequently used in practice, but often cited as
+fundamental and important, such as compiler design.</p>
+<p>I stumbled on this '<a href="http://www.indiangeek.net/wp-content/uploads/Programmer%20competency%20matrix.htm">programmer competancy
+matrix</a>'
+the other week, and thought it would be a good first iteration of my own
+syllabus of areas I'd like learn more about. So I cut'n'paste it into <a href="http://spreadsheets.google.com/ccc?key=0AmOF8t-e3EyzdE1FdW5BcDFuVURKOEZSY1NfQW5NS1E&amp;hl=en">a
+spreadsheet</a>,
+and starting annotating it with how confident I feel in each different
+area, along with the next steps I'll need to strengthen my knowledge in
+each area.</p>
+<p>Startlingly but perhaps unsurprisingly, the tentative next step I
+arrived at in almost all areas I feel deficient was to <em>finish working
+through
+<a href="http://www.amazon.co.uk/Structure-Interpretation-Computer-Electrical-Engineering/dp/0262510871">SICP</a></em>.
+Alright, alright, my path is clear.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/opengl-draw-api-visualised/" class="u-url">OpenGL Draw API Visualised</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -1510,70 +1548,6 @@ Thanks for the suggestion Gerry!</p>
 <p><strong>Update:</strong> Nowadays I use <a href="https://github.com/ProgrammingFonts/ProgrammingFonts/tree/master/Dina">Dina</a>,
 a monospaced bitmap font created by some obsessive with a penchant for
 microscopic fonts. It's absolutely perfect.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/sinister-redux/" class="u-url">Sinister Redux</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/sinister-redux/" rel="bookmark">
-            <time class="published dt-published" datetime="2010-01-09T15:57:47-06:00" itemprop="datePublished" title="2010-01-09 15:57">2010-01-09 15:57</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/sinister-redux/#disqus_thread" data-disqus-identifier="cache/posts/sinister-redux.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>A few months ago, <a href="http://millenniumhand.co.uk/">Glenn</a> and
-<a href="http://www.babbageclunk.com/">Christian</a> and
-<a href="http://freshfoo.com">Menno</a> and myself created <em>Sinister Ducks</em>, a game
-with some quacking, for <a href="http://www.pyweek.org/9/">PyWeek 9</a>, a contest
-to write a game in Python in a week. It plays a little like a simplified
-version of the arcade classic
-<a href="http://en.wikipedia.org/wiki/Joust_%28video_game%29">Joust</a> - press
-fire to flap. When birds collide, the highest one wins, while the lowest
-one sheds feathers and plummets to the ground.</p>
-<p>Since the competition, I've been polishing and refactoring for my own
-edification in odd hours here and there, and I'm pleased to declare that
-process finished. Behold, Sinister Ducks 1.0.2:</p>
-<p><img alt="Sinister Ducks 1.0.2" src="https://raw.githubusercontent.com/tartley/sinister-ducks/master/docs/screenshots/screenshot-final-1.0.2.jpg" title="Sinister Ducks 1.0.2"></p>
-<p>Things I added since the competition include:</p>
-<ul>
-<li>Fixed the game being so ridiculously easy that one could play it
-    interminably</li>
-<li>There are now lives, and an actual Game Over screen and everything</li>
-<li>Completely reworked how the gameplay works in regard to attacking
-    ducks and collecting feathers - our previous mechanic didn't work
-    very well. The feathers now temporarily boost a score multiplier,
-    displayed top-left. Attacking other birds yields more points for
-    successful chained consecutive attacks, without collecting any
-    feathers along the way. But you can only <em>get</em> feathers in the first
-    place by attacking birds. It's your job to figure out the resulting
-    best-scoring dynamic.</li>
-<li>Understand and enjoying the scoring dynamic is aided with little
-    floating numbers showing the value of each bird you defeat.</li>
-<li>Enemy birds now come in larger waves as time goes on, and one or two
-    of the sinister ducks are angry and <em>fast</em>.</li>
-<li>The game speed is now scaled by the time between refreshes, so it
-    now runs perfectly fine on slow machines or VMs that can't make
-    60fps, or if your monitor has an unusual refresh rate, or even if
-    you disabled vsync in your graphics drivers to yield hundreds of
-    frames per second.</li>
-<li>Refactoring and OpenGL performance fixes (those sprites are
-    texture-mapped quads, under the covers.) so that it's now massively
-    faster than it should ever need to be. The refresh rate with vsync
-    disabled on my own 5 year old lappy is about 400fps.</li>
-</ul>
-<p>Repo at <a href="https://github.com/tartley/sinister-ducks/">https://github.com/tartley/sinister-ducks/</a>.</p>
-<p>From there, you can download a Windows 'release' to download, unzip and
-double-click, without having to mess about installing Python first. Or a
-source release, which will run on Linux or Macs, but you'll have to
-download Python yourself, and possibly install the dependencies manually
-too, sorry.</p>
 </div>
     </div>
     </article>

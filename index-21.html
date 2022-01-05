@@ -70,7 +70,162 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/object-oriented-software-engineering-a-use-case-driven-approach/" class="u-url">Object-Oriented Software Engineering : A Use Case Driven Approach</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/listen-to-your-phone-through-your-pc-speakers/" class="u-url">Listen to your phone through your PC speakers</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/listen-to-your-phone-through-your-pc-speakers/" rel="bookmark">
+            <time class="published dt-published" datetime="2015-03-15T10:50:09-05:00" itemprop="datePublished" title="2015-03-15 10:50">2015-03-15 10:50</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/listen-to-your-phone-through-your-pc-speakers/#disqus_thread" data-disqus-identifier="cache/posts/listen-to-your-phone-through-your-pc-speakers.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <pre class="code literal-block"><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="c1"># Directs audio input (e.g. mic) to audio output (e.g. speakers),</span>
+<span class="c1"># then sleeps forever. Stops audio redirection when it is killed.</span>
+<span class="c1"># So, for example, plug your phone into the PC's mic, run 'listen',</span>
+<span class="c1"># and listen to phone audio through your computer's speakers.</span>
+<span class="c1">#</span>
+<span class="c1"># Requires:</span>
+<span class="c1"># sudo apt-get install pactl # Ubuntu</span>
+
+<span class="nb">set</span> -e
+
+<span class="nv">module</span><span class="o">=</span><span class="k">$(</span>pactl load-module module-loopback<span class="k">)</span>
+
+<span class="k">function</span> cleanup <span class="o">{</span>
+    pactl unload-module <span class="nv">$module</span>
+<span class="o">}</span>
+
+<span class="nb">trap</span> cleanup EXIT
+
+sleep infinity
+</code></pre>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/understanding-rebase-so-it-sticks/" class="u-url">Understanding git rebase so it sticks</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/understanding-rebase-so-it-sticks/" rel="bookmark">
+            <time class="published dt-published" datetime="2014-02-07T10:28:37-06:00" itemprop="datePublished" title="2014-02-07 10:28">2014-02-07 10:28</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/understanding-rebase-so-it-sticks/#disqus_thread" data-disqus-identifier="cache/posts/understanding-rebase-so-it-sticks.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>I endlessly misremember how to use git rebase. That ends today. Here are
+my notes to help me remember.</p>
+<p>Rebase is traditionally documented as:</p>
+<pre class="code literal-block">git rebase <span class="o">[</span>--onto newbase<span class="o">]</span> <span class="o">[</span>upstream <span class="o">[</span>branch<span class="o">]]</span>
+</pre>
+<p>This is confusing for several reasons. A slight improvement is to rename
+the args:</p>
+<pre class="code literal-block">git rebase <span class="o">[</span>--onto target<span class="o">]</span> <span class="o">[</span>exclude <span class="o">[</span>include<span class="o">]]</span>
+</pre>
+<p>Where:</p>
+<ul>
+<li>
+<code>include</code> is the tip of the branch to be transplanted. If omitted,
+    it defaults to the current branch.</li>
+<li>
+<code>exclude</code> excludes all its ancestors from being transplanted. Hence
+    the transplanted branch will have its tip at <code>include</code>, and its base
+    at the common ancestor of <code>include</code> and <code>exclude</code>. If <code>--onto</code> isn't
+    specified, <code>exclude</code> is also used as the destination for the
+    transplant.</li>
+<li>
+<code>target</code> is the place to transplant the branch to. If not specified,
+    it defaults to the value of <code>exclude</code>.</li>
+</ul>
+<p>Hence, a simple before and after:</p>
+<pre class="code literal-block">o---o---o---o---o---o exclude
+     \
+      1---2---3 current branch
+                or include
+</pre>
+<pre class="code literal-block">git rebase exclude <span class="o">[</span>include<span class="o">]</span>
+</pre>
+<pre class="code literal-block">                exclude
+                v
+o---o---o---o---o---1---2---3 current branch
+                              or include
+</pre>
+<p>See how the commits to be transplanted start at <code>include</code> and go back to
+the common ancestor of that and <code>exclude</code>. Since <code>--onto</code> isn't
+specified, <code>exclude</code> is also used as the transplant destination.</p>
+<p>Or a more complex one:</p>
+<pre class="code literal-block"> o---o---o---o---o target
+      \
+       o---o---o exclude
+            \
+             1---2 current branch
+                   or include
+</pre>
+<pre class="code literal-block">git rebase --onto target exclude <span class="o">[</span>include<span class="o">]</span>
+</pre>
+<pre class="code literal-block">                    target
+                    v
+    o---o---o---o---o---1---2 current branch
+         \                    or include
+          o---o---o
+                  ^
+                  exclude
+</pre>
+<p>Again, the commits to be transplanted are defined by <code>include</code> and
+<code>exclude</code>, but this time a separate destination is specified using
+<code>--onto</code>.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/this-gaming-life-travels-in-three-cities/" class="u-url">This Gaming Life: Travels in Three Cities</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/this-gaming-life-travels-in-three-cities/" rel="bookmark">
+            <time class="published dt-published" datetime="2014-02-03T20:31:29-06:00" itemprop="datePublished" title="2014-02-03 20:31">2014-02-03 20:31</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/this-gaming-life-travels-in-three-cities/#disqus_thread" data-disqus-identifier="cache/posts/this-gaming-life-travels-in-three-cities.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><span style="float: left">
+<img alt="gaminglife" src="files/2014/02/gaminglife.jpg"></span></p>
+<p><em>by Jim Rossignol</em> (2009)</p>
+<p>A gorgeous insider's look at videogaming culture, by an author who,
+after an unfulfilling stint as a financial journalist, has built his
+life around games.</p>
+<p>Broken into sections corresponding with the author's experiences in
+London, Seoul and Reykjavik, it's thoughtful and manages to sidestep the
+patronising oversimplifications of mainstream media's gaming coverage.</p>
+<p>From <em>Tetris</em> and <em>Elite</em> to <em>Okami</em> and <em>Shadow of the Collossus</em>,
+stopping along the way to examine the modding and indie scenes, the
+massively multiplayer intricacies of <em>EVE Online</em>, and the insane
+heights of Korean real-time strategy matches. He knows the best <em>Prince
+of</em> <em>Persia</em> was <em>Sands of Time</em>, by a country mile. He's one of us. I
+felt welcomed to his world. Join us - we'll be on the sofa.</p>
+<p>Rating:</p>
+<p>10/10 if you understand that games have the potential to become the
+dominant art form of the 21st century.</p>
+<p>0/10 if it's just for kids, innit?</p>
+<p><br style="clear: left"></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/object-oriented-software-engineering-a-use-case-driven-approach/" class="u-url">Object-Oriented Software Engineering : A Use Case Driven Approach</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -395,47 +550,6 @@ generators require other args. Presumably 'partial' could help here. But
 in general, 'link' only needs to be written once, and I'm liking it.</p>
 </div>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/revolution-an-instruction-manual/" class="u-url">Revolution: An Instruction Manual</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/revolution-an-instruction-manual/" rel="bookmark">
-            <time class="published dt-published" datetime="2013-08-10T11:50:36-05:00" itemprop="datePublished" title="2013-08-10 11:50">2013-08-10 11:50</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/revolution-an-instruction-manual/#disqus_thread" data-disqus-identifier="cache/posts/revolution-an-instruction-manual.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>When you have a government that operates without limits, who proclaims
-the right to arrest, torture and kill anyone, anywhere, with no
-warrants, no trial, no due process...</p>
-<p>When you have a government that militarizes the police and grants the
-armed forces the power to operate with impunity within your own borders
-and beyond. A government that views you, the people, as the enemy, and
-treats you as such...</p>
-<p>When you have a government that lies to you takes you into wars of
-aggression, toppling country after country, killing hundreds of
-thousands of innocent civilians, and sending your sons and daughters and
-your fathers and your brothers home in flag draped coffins, or
-disfigured and broken in mind and body, their lives destroyed in wars
-that serve only to line the pockets of a unelected cartel of bankers and
-corporations...</p>
-<p>When you have all of this right in front of you, so blatant, so clear,
-you shouldn't have to be convinced that both parties in this political
-puppet show are owned and operated by the same interests. You shouldn't
-have to be convinced that these overrated corporate popularity contests
-that some call elections are distractions that will achieve nothing.
-With this understood, you shouldn't have to be convinced that the system
-you are living under must be brought to a halt.</p>
-<p><a href="http://stormcloudsgathering.com/revolution-an-instruction-manual">Read
-on...</a></p>
-</div>
-    </div>
     </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/pip-install-lightspeed-and-bulletproof/" class="u-url">pip install : Lightspeed and Bulletproof</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
@@ -564,130 +678,6 @@ Approach</a>
 out there doing this in Django? I plan to refactor a small vertical
 slice of our monster Django app into this style, to try and prove the
 idea for myself.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/encrypted-zip-files-on-osx/" class="u-url">Encrypted zip files on OSX</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/encrypted-zip-files-on-osx/" rel="bookmark">
-            <time class="published dt-published" datetime="2012-10-09T10:17:07-05:00" itemprop="datePublished" title="2012-10-09 10:17">2012-10-09 10:17</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/encrypted-zip-files-on-osx/#disqus_thread" data-disqus-identifier="cache/posts/encrypted-zip-files-on-osx.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p><strong>Update:</strong> I've since switched to KeePassXC, the community fork of KeePassX,
-an open source, cross-platorm, local-first, encrypted password storage program.</p>
-<hr>
-<p>My passwords and other miscellany are in a plain text file within an
-encrypted zip. Since starting to use OSX I've been looking for a way to
-access my passwords such that:</p>
-<ul>
-<li>I get prompted for the decryption password.</li>
-<li>The file gets unzipped, but not in the same directory, because
-    that's synced to Dropbox, so would send my plaintext passwords to
-    them every time I accessed them. Maybe to /tmp?</li>
-<li>The plaintext file within the zip is opened in \$EDITOR.</li>
-<li>Wait for me to close \$EDITOR, then remove my plaintext passwords
-    from the filesystem.</li>
-<li>Before deleting the passwords, check if I've updated them. If so,
-    put the new updated version back into the original zip file.</li>
-<li>Don't forget to keep the updated zip file encrypted, using the same
-    password as before, without prompting for it again.</li>
-</ul>
-<p>I failed to find an existing app which would do all this (although I had
-no trouble on Linux or even on Windows.) Hence, resorting to good old
-Bash:</p>
-<pre class="code literal-block"><span class="ch">#!/bin/bash</span>
-
-<span class="nv">ZIPDIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/docs/org"</span>
-
-<span class="nb">read</span> -s -p <span class="s2">"Password:"</span> key
-
-<span class="nb">cd</span> <span class="nv">$ZIPDIR</span>
-unzip -P <span class="nv">$key</span> passwords.zip passwords.txt -d <span class="nv">$TMPDIR</span>
-<span class="k">if</span> <span class="o">[[</span> <span class="nv">$?</span> !<span class="o">=</span> <span class="m">0</span> <span class="o">]]</span> <span class="p">;</span> <span class="k">then</span>
-    <span class="nb">exit</span> <span class="m">1</span>
-<span class="k">fi</span>
-
-<span class="nb">cd</span> <span class="s2">"</span><span class="nv">$TMPDIR</span><span class="s2">"</span>
-touch passwords.datestamp
-<span class="nv">$EDITOR</span> passwords.txt
-<span class="k">if</span> <span class="o">[[</span> passwords.txt -nt passwords.datestamp <span class="o">]]</span> <span class="p">;</span> <span class="k">then</span>
-    zip -P <span class="nv">$key</span> -r <span class="s2">"</span><span class="nv">$ZIPDIR</span><span class="s2">/passwords.zip"</span> passwords.txt
-<span class="k">fi</span>
-
-rm passwords.txt
-rm passwords.datestamp
-</pre>
-<p>I don't expect this to be watertight, but seems good enough for today.
-I'm happy to hear suggestions.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/compiling-macvim-with-python-2-7/" class="u-url">Compiling MacVim with Python 2.7</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/compiling-macvim-with-python-2-7/" rel="bookmark">
-            <time class="published dt-published" datetime="2011-10-18T12:25:03-05:00" itemprop="datePublished" title="2011-10-18 12:25">2011-10-18 12:25</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/compiling-macvim-with-python-2-7/#disqus_thread" data-disqus-identifier="cache/posts/compiling-macvim-with-python-2-7.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>I love the brilliant Vim plugin
-<a href="http://www.vim.org/scripts/script.php?script_id=2441">pyflakes-vim</a>,
-which highlights errors &amp; warnings, and since I got a MacBook for work,
-I've been using MacVim a lot.</p>
-<p>This combination has a problem, that MacVim uses the OSX system default
-Python 2.6, so pyflakes is unable to handle Python 2.7 syntax, such as
-set literals. These are marked as a syntax errors, which prevents the
-rest of the file from being parsed.</p>
-<p>The solution is to compile your own MacVim, using Python 2.7 instead of
-the system Python. The following commands got MacVim compiled for me:</p>
-<pre class="code literal-block"><span></span><code><span class="ch">#!/bin/bash</span>
-git clone git://github.com/b4winckler/macvim.git
-<span class="nb">cd</span> macvim/src
-<span class="nb">export</span> <span class="nv">LDFLAGS</span><span class="o">=</span>-L/usr/lib
-./configure <span class="se">\</span>
-    --with-features<span class="o">=</span>huge <span class="se">\</span>
-    --enable-rubyinterp <span class="se">\</span>
-    --enable-perlinterp <span class="se">\</span>
-    --enable-cscope <span class="se">\</span>
-    --enable-pythoninterp <span class="se">\</span>
-    --with-python-config-dir<span class="o">=</span>/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config
-make
-open MacVim/build/Release
-<span class="nb">echo</span> Drag MacVim.app to your Applications directory
-</code></pre>
-
-<p>Without the LDFLAGS setting, I was missing some symbols at link. The
---with-python-config-dir entry came from typing 'which python' to find
-where my Python 2.7 install lives, and modifying that result to find its
-'config' directory (whatever that is) near to the binary.</p>
-<p>As indicated, install by dragging the resulting
-macvim/src/MacVim/build/Release/MacVim.app into your Applications
-directory.</p>
-<p>Open up MacVim, and check out the built-in Python version:</p>
-<pre class="code literal-block"><span></span><code><span class="p">:</span><span class="n">python</span> <span class="kn">import</span> <span class="nn">sys</span><span class="p">;</span> <span class="nb">print</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span>
-<span class="mf">2.7.1</span> <span class="p">(</span><span class="n">r271</span><span class="p">:</span><span class="mi">86882</span><span class="n">M</span><span class="p">,</span> <span class="n">Nov</span> <span class="mi">30</span> <span class="mi">2010</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">34</span><span class="p">)</span>
-</code></pre>
-
-<p>And files with set literals are now correctly parsed for errors.</p>
-<p><strong>Update:</strong> This only works if the Python 2.7 is your default 'python'
-executable. Otherwise, or if you get "ImportError: No module named
-site"?, see Richard's comments below.</p>
 </div>
     </div>
     </article>

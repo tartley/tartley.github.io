@@ -70,7 +70,206 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/a-science-fiction-omnibus/" class="u-url">A Science-Fiction Omnibus</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/using-assertalmostequals-to-compare-to-n-significant-figures/" class="u-url">Using assertAlmostEquals to compare to N Significant Figures</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/using-assertalmostequals-to-compare-to-n-significant-figures/" rel="bookmark">
+            <time class="published dt-published" datetime="2008-12-17T14:59:54-06:00" itemprop="datePublished" title="2008-12-17 14:59">2008-12-17 14:59</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/using-assertalmostequals-to-compare-to-n-significant-figures/#disqus_thread" data-disqus-identifier="cache/posts/using-assertalmostequals-to-compare-to-n-significant-figures.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>I want a Python unittest.assertAlmostEquals that compares numbers to N
+significant figures, instead of N decimal places.</p>
+<pre class="code literal-block"><span></span><code><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="mf">1e-8</span><span class="p">,</span> <span class="mf">5e-14</span><span class="p">)</span> <span class="c1"># passes</span>
+</code></pre>
+
+<p>Even though these two numbers differ by a factor of 5 million, when
+comparing them to seven decimal places (assertAlmostEquals default
+behaviour) they are equal.</p>
+<p>I've made a first stab this by overriding assertAlmostEquals on a
+subclass of TestCase, which retains the behaviour of the original, but
+provides an extra keyword parameter <em>sigfig</em>.</p>
+<p>The code and a unittest for it are below. One of the tests currently
+fails, due to floating-point inaccuracy problems. I'll have to look at
+it some more. Isn't this problem already solved somewhere?</p>
+<pre class="code literal-block"><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="k">class</span> <span class="nc">TestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="s2">"Augments the assert methods of a unittest.TestCase"</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">"</span><span class="si">%s</span><span class="s2">.</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__testMethodName</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_assertAlmostEquals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">7</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">sigfig</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"assertAlmostEquals: 'sigfig' must be &gt;=1"</span><span class="p">)</span>
+
+        <span class="n">magarg</span> <span class="o">=</span> <span class="n">a</span> <span class="ow">or</span> <span class="n">b</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">magarg</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">((</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">return</span>
+
+        <span class="n">magnitude</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">magarg</span><span class="p">))))</span>
+        <span class="n">margin</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">magnitude</span> <span class="o">-</span> <span class="n">sigfig</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
+        <span class="n">diff_gt_margin</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="n">margin</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mf">1e-15</span>
+        <span class="k">if</span> <span class="n">diff_gt_margin</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s1">'</span><span class="si">%s</span><span class="s1"> != </span><span class="si">%s</span><span class="s1"> to </span><span class="si">%d</span><span class="s1"> significant figures'</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">sigfig</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">assertAlmostEquals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">places</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">places</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">sigfig</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"assertAlmostEquals: "</span>
+                <span class="s2">"cannot specify both 'places' and 'sigfig'"</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">places</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">places</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">sigfig</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_assertAlmostEquals</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">sigfig</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">assertRaisesWithMessage</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">exceptionType</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="n">expected</span> <span class="o">=</span> <span class="s2">"Expected </span><span class="si">%s</span><span class="s2">(</span><span class="si">%r</span><span class="s2">),"</span> <span class="o">%</span> <span class="p">(</span><span class="n">exceptionType</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">exceptionType</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="o">!=</span> <span class="n">message</span><span class="p">:</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="s2">"</span><span class="si">%s</span><span class="s2"> got </span><span class="si">%s</span><span class="s2">(</span><span class="si">%r</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span>
+                    <span class="n">expected</span><span class="p">,</span> <span class="n">exceptionType</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+               <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+         <span class="k">except</span> <span class="ne">Exception</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+             <span class="n">msg</span> <span class="o">=</span> <span class="s2">"</span><span class="si">%s</span><span class="s2"> got </span><span class="si">%s</span><span class="s2">(</span><span class="si">%r</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">expected</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+             <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+         <span class="k">else</span><span class="p">:</span>
+             <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="s2">"</span><span class="si">%s</span><span class="s2"> no exception was raised"</span> <span class="o">%</span> <span class="n">expected</span><span class="p">)</span>
+</code></pre>
+
+<p>And a test:</p>
+<pre class="code literal-block"><span></span><code><span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="kn">from</span> <span class="nn">TestCase</span> <span class="kn">import</span> <span class="n">TestCase</span>
+
+<span class="k">class</span> <span class="nc">TestableTestCase</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">testNothing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span> <span class="c1"># pun intended</span>
+
+<span class="k">class</span> <span class="nc">AssertAlmostEqualsTest</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test</span> <span class="o">=</span> <span class="n">TestableTestCase</span><span class="p">(</span><span class="s2">"testNothing"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">testPreservesUnittestBehaviour</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="mf">0.1234567</span>
+        <span class="n">eps1</span> <span class="o">=</span> <span class="mf">0.000000049</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">eps1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="n">eps1</span><span class="p">)</span>
+
+        <span class="n">eps2</span> <span class="o">=</span> <span class="mf">0.000000051</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">AssertionError</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">,</span>
+            <span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">eps2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">AssertionError</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">,</span>
+            <span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="n">eps2</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">testPreservesUnittestBehaviourWithPlaces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="mf">0.1234567</span>
+        <span class="n">eps1</span> <span class="o">=</span> <span class="mf">0.000049</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">eps1</span><span class="p">,</span> <span class="n">places</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="n">eps1</span><span class="p">,</span> <span class="n">places</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+        <span class="n">eps2</span> <span class="o">=</span> <span class="mf">0.000051</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">AssertionError</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">,</span>
+            <span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">eps2</span><span class="p">,</span> <span class="n">places</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">AssertionError</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">,</span>
+            <span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="n">eps2</span><span class="p">,</span> <span class="n">places</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">testRaisesIfPlacesAndSigfigSpecified</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaisesWithMessage</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span>
+            <span class="s2">"assertAlmostEquals: "</span>
+                <span class="s2">"cannot specify both 'places' and 'sigfig'"</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">,</span>
+            <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">places</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">assertSigFig</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">AssertionError</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">,</span>
+            <span class="mf">1.23</span> <span class="o">*</span> <span class="n">factor</span><span class="p">,</span> <span class="mf">1.225</span> <span class="o">*</span> <span class="n">factor</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="mf">1.23</span> <span class="o">*</span> <span class="n">factor</span><span class="p">,</span> <span class="mf">1.2251</span> <span class="o">*</span> <span class="n">factor</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="mf">1.23</span> <span class="o">*</span> <span class="n">factor</span><span class="p">,</span> <span class="mf">1.2349</span> <span class="o">*</span> <span class="n">factor</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">AssertionError</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">,</span>
+            <span class="mf">1.23</span> <span class="o">*</span> <span class="n">factor</span><span class="p">,</span> <span class="mf">1.235</span> <span class="o">*</span> <span class="n">factor</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">testSigfigNormal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertSigFig</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertSigFig</span><span class="p">(</span><span class="mf">1e-6</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertSigFig</span><span class="p">(</span><span class="mf">1e+6</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertSigFig</span><span class="p">(</span><span class="mf">1e+12</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertSigFig</span><span class="p">(</span><span class="mf">1e-12</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">testSigFigOfTwo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">AssertionError</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">,</span>
+            <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.15</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.151</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.249</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">AssertionError</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">,</span>
+            <span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.25</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">testSigFigOfOne</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">AssertionError</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">,</span>
+            <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.51</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.49</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaises</span><span class="p">(</span><span class="ne">AssertionError</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">,</span>
+            <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">testRaisesIfSigFigZeroOrLess</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaisesWithMessage</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span>
+            <span class="s2">"assertAlmostEquals: 'sigfig' must be &gt;=1"</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">,</span>
+            <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mf">0.99</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaisesWithMessage</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span>
+            <span class="s2">"assertAlmostEquals: 'sigfig' must be &gt;=1"</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">,</span>
+            <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRaisesWithMessage</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span>
+            <span class="s2">"assertAlmostEquals: 'sigfig' must be &gt;=1"</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">,</span>
+            <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">testHandlesArgsOfZero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">places</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">testHandlesIdenticalArgs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="mf">1.234</span><span class="p">,</span> <span class="mf">1.234</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="mf">1.234</span><span class="p">,</span> <span class="mf">1.234</span><span class="p">,</span> <span class="n">places</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEquals</span><span class="p">(</span><span class="mf">1.234</span><span class="p">,</span> <span class="mf">1.234</span><span class="p">,</span> <span class="n">sigfig</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</code></pre>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/a-science-fiction-omnibus/" class="u-url">A Science-Fiction Omnibus</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -1212,34 +1411,6 @@ pages I'd rather not wade through them all to find the best one.</p>
 </div>
     </header><div class="e-content entry-content">
     <p>Launches a new blog, at <a href="http://thesuze.com">a shiny new permenant URL</a>.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/scarface/" class="u-url">Scarface</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/scarface/" rel="bookmark">
-            <time class="published dt-published" datetime="2008-10-01T22:11:01-05:00" itemprop="datePublished" title="2008-10-01 22:11">2008-10-01 22:11</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/scarface/#disqus_thread" data-disqus-identifier="cache/posts/scarface.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p><span style="float: left">
-<img alt="" src="files/2008/10/scarfacepacino.jpg"></span></p>
-<p><em>Director: Brian de Palma (1983)</em></p>
-<p>Oh, I don't know, my expectations were too high or something. I expected
-an intense study of greed, corruption and criminal will. Maybe I'm
-desensitized. All I found was that it frequently descends into simply
-camp 1970s gunfight scenes. Amusing to note the influences it has had on
-other media, particularly the mansion in <em>Grand Theft Auto: Vice City</em>.
-I couldn't find much else to commend it.</p>
-<p><br style="clear: both"></p>
-</div>
     </div>
     </article>
 </div>

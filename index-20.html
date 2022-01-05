@@ -70,7 +70,131 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/python-2-7-regular-expression-cheatsheet/" class="u-url">Python 2.7 regular expression cheatsheet</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/encrypted-zip-files-on-osx/" class="u-url">Encrypted zip files on OSX</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/encrypted-zip-files-on-osx/" rel="bookmark">
+            <time class="published dt-published" datetime="2012-10-09T10:17:07-05:00" itemprop="datePublished" title="2012-10-09 10:17">2012-10-09 10:17</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/encrypted-zip-files-on-osx/#disqus_thread" data-disqus-identifier="cache/posts/encrypted-zip-files-on-osx.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><strong>Update:</strong> I've since switched to KeePassXC, the community fork of KeePassX,
+an open source, cross-platorm, local-first, encrypted password storage program.</p>
+<hr>
+<p>My passwords and other miscellany are in a plain text file within an
+encrypted zip. Since starting to use OSX I've been looking for a way to
+access my passwords such that:</p>
+<ul>
+<li>I get prompted for the decryption password.</li>
+<li>The file gets unzipped, but not in the same directory, because
+    that's synced to Dropbox, so would send my plaintext passwords to
+    them every time I accessed them. Maybe to /tmp?</li>
+<li>The plaintext file within the zip is opened in \$EDITOR.</li>
+<li>Wait for me to close \$EDITOR, then remove my plaintext passwords
+    from the filesystem.</li>
+<li>Before deleting the passwords, check if I've updated them. If so,
+    put the new updated version back into the original zip file.</li>
+<li>Don't forget to keep the updated zip file encrypted, using the same
+    password as before, without prompting for it again.</li>
+</ul>
+<p>I failed to find an existing app which would do all this (although I had
+no trouble on Linux or even on Windows.) Hence, resorting to good old
+Bash:</p>
+<pre class="code literal-block"><span class="ch">#!/bin/bash</span>
+
+<span class="nv">ZIPDIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/docs/org"</span>
+
+<span class="nb">read</span> -s -p <span class="s2">"Password:"</span> key
+
+<span class="nb">cd</span> <span class="nv">$ZIPDIR</span>
+unzip -P <span class="nv">$key</span> passwords.zip passwords.txt -d <span class="nv">$TMPDIR</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$?</span> !<span class="o">=</span> <span class="m">0</span> <span class="o">]]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="nb">cd</span> <span class="s2">"</span><span class="nv">$TMPDIR</span><span class="s2">"</span>
+touch passwords.datestamp
+<span class="nv">$EDITOR</span> passwords.txt
+<span class="k">if</span> <span class="o">[[</span> passwords.txt -nt passwords.datestamp <span class="o">]]</span> <span class="p">;</span> <span class="k">then</span>
+    zip -P <span class="nv">$key</span> -r <span class="s2">"</span><span class="nv">$ZIPDIR</span><span class="s2">/passwords.zip"</span> passwords.txt
+<span class="k">fi</span>
+
+rm passwords.txt
+rm passwords.datestamp
+</pre>
+<p>I don't expect this to be watertight, but seems good enough for today.
+I'm happy to hear suggestions.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/compiling-macvim-with-python-2-7/" class="u-url">Compiling MacVim with Python 2.7</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/compiling-macvim-with-python-2-7/" rel="bookmark">
+            <time class="published dt-published" datetime="2011-10-18T12:25:03-05:00" itemprop="datePublished" title="2011-10-18 12:25">2011-10-18 12:25</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/compiling-macvim-with-python-2-7/#disqus_thread" data-disqus-identifier="cache/posts/compiling-macvim-with-python-2-7.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>I love the brilliant Vim plugin
+<a href="http://www.vim.org/scripts/script.php?script_id=2441">pyflakes-vim</a>,
+which highlights errors &amp; warnings, and since I got a MacBook for work,
+I've been using MacVim a lot.</p>
+<p>This combination has a problem, that MacVim uses the OSX system default
+Python 2.6, so pyflakes is unable to handle Python 2.7 syntax, such as
+set literals. These are marked as a syntax errors, which prevents the
+rest of the file from being parsed.</p>
+<p>The solution is to compile your own MacVim, using Python 2.7 instead of
+the system Python. The following commands got MacVim compiled for me:</p>
+<pre class="code literal-block"><span></span><code><span class="ch">#!/bin/bash</span>
+git clone git://github.com/b4winckler/macvim.git
+<span class="nb">cd</span> macvim/src
+<span class="nb">export</span> <span class="nv">LDFLAGS</span><span class="o">=</span>-L/usr/lib
+./configure <span class="se">\</span>
+    --with-features<span class="o">=</span>huge <span class="se">\</span>
+    --enable-rubyinterp <span class="se">\</span>
+    --enable-perlinterp <span class="se">\</span>
+    --enable-cscope <span class="se">\</span>
+    --enable-pythoninterp <span class="se">\</span>
+    --with-python-config-dir<span class="o">=</span>/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config
+make
+open MacVim/build/Release
+<span class="nb">echo</span> Drag MacVim.app to your Applications directory
+</code></pre>
+
+<p>Without the LDFLAGS setting, I was missing some symbols at link. The
+--with-python-config-dir entry came from typing 'which python' to find
+where my Python 2.7 install lives, and modifying that result to find its
+'config' directory (whatever that is) near to the binary.</p>
+<p>As indicated, install by dragging the resulting
+macvim/src/MacVim/build/Release/MacVim.app into your Applications
+directory.</p>
+<p>Open up MacVim, and check out the built-in Python version:</p>
+<pre class="code literal-block"><span></span><code><span class="p">:</span><span class="n">python</span> <span class="kn">import</span> <span class="nn">sys</span><span class="p">;</span> <span class="nb">print</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span>
+<span class="mf">2.7.1</span> <span class="p">(</span><span class="n">r271</span><span class="p">:</span><span class="mi">86882</span><span class="n">M</span><span class="p">,</span> <span class="n">Nov</span> <span class="mi">30</span> <span class="mi">2010</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">34</span><span class="p">)</span>
+</code></pre>
+
+<p>And files with set literals are now correctly parsed for errors.</p>
+<p><strong>Update:</strong> This only works if the Python 2.7 is your default 'python'
+executable. Otherwise, or if you get "ImportError: No module named
+site"?, see Richard's comments below.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/python-2-7-regular-expression-cheatsheet/" class="u-url">Python 2.7 regular expression cheatsheet</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -539,78 +663,6 @@ on reddit.</p>
 <p><strong>Update:</strong> Thanks folks. You've made my usual one or two hundred daily
 visitors look kinda paltry:</p>
 <p><img alt="spike in daily traffic graph" src="files/2010/12/daily-traffic.png" title="daily-traffic"></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/converting-any-repository-fom-svn-to-hg-on-windows/" class="u-url">Converting any repository from Svn to Hg on Windows</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/converting-any-repository-fom-svn-to-hg-on-windows/" rel="bookmark">
-            <time class="published dt-published" datetime="2010-10-20T10:26:02-05:00" itemprop="datePublished" title="2010-10-20 10:26">2010-10-20 10:26</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/converting-any-repository-fom-svn-to-hg-on-windows/#disqus_thread" data-disqus-identifier="cache/posts/converting-any-repository-fom-svn-to-hg-on-windows.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>There's been a lot of
-<a href="http://www.voidspace.org.uk/python/weblog/index.shtml">blather</a> of late
-about this supposedly-fiddly conversion process. Personally I've found
-that working on the Windows operating system, the transition is a lot
-smoother. Simply first install Cygwin, cd to the root of your
-repository, and then:</p>
-<pre class="code literal-block"><span></span><code>find . -name .svn -exec rm -fr <span class="o">{}</span> <span class="se">\;</span>
-hg init
-hg add .
-</code></pre>
-
-<p>and you're done. There may be a few <em>nuances</em> this doesn't address, but
-come on, let's not expect miracles.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/rerun-unit-tests-whenever-files-update/" class="u-url">Rerun unit tests whenever files update</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/rerun-unit-tests-whenever-files-update/" rel="bookmark">
-            <time class="published dt-published" datetime="2010-10-15T01:43:33-05:00" itemprop="datePublished" title="2010-10-15 01:43">2010-10-15 01:43</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/rerun-unit-tests-whenever-files-update/#disqus_thread" data-disqus-identifier="cache/posts/rerun-unit-tests-whenever-files-update.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p><em>In which I once again indulge my obscure command-line fetish.</em></p>
-<p>I often spend hours of my day cycling through:</p>
-<ul>
-<li>Edit code and its unit tests</li>
-<li>Save my changes</li>
-<li>Push a button or change window focus to explicitly re-run the code's
-    unit tests.</li>
-</ul>
-<p>Oh frabjous day, the grinding manual labour of the last of these three
-steps can now be banished forever, courtesy of <code>rerun</code>, a command line
-Python script that re-runs a given command whenever it detects changes
-to any of the files in the current directory, or its subdirectories.</p>
-<p><a href="https://github.com/tartley/rerun">https://github.com/tartley/rerun</a></p>
-<p><strong>Update</strong>: It's Python 2 &amp; 3, and works great on Windows XP, Macs and
-Ubuntu.</p>
-<p>For example: I had previously bound f6 in Vim to 'run the current file's
-unit tests. Now I've bound shift-f6 to <code>rerun</code> the current file's
-unit tests in a new console window. This pops up a new window showing
-the test results. I then continue editing in Vim, and whenever I hit
-save, the unit tests are re-run in the other window. All the while the
-focus stays on my editor. It's really sweet!</p>
-<p>Thanks for the original idea goes to to the bash command <code>watch</code>, and an
-old (now offline) blog post by Jeff Winkler.</p>
 </div>
     </div>
     </article>

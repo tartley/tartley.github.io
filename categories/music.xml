@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about music)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/music.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 12 Dec 2021 17:19:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Download audio from YouTube</title><link>https://www.tartley.com/posts/download-audio-from-youtube/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Install ffmpeg:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about music)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/music.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 05 Jan 2022 01:03:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Download audio from YouTube</title><link>https://www.tartley.com/posts/download-audio-from-youtube/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Install ffmpeg:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;sudo apt install ffmpeg
 &lt;/pre&gt;
 &lt;p&gt;Install &lt;code&gt;youtube-dl&lt;/code&gt;, a tool to download YouTube videos. Using &lt;code&gt;apt&lt;/code&gt; installs a
@@ -133,4 +133,11 @@ Hence, a note which would represent 'C' on a treble clef stave is
 actually an 'E' when drawn on a bass clef stave. Presumably there's a
 reason for this, but I've yet to hear an explanation that sounds like
 anything other than a wart on the notation. Can any of my multitudinous
-readers enlighten me?&lt;/p&gt;&lt;/div&gt;</description><category>journal</category><category>music</category><guid>https://www.tartley.com/posts/music-101/</guid><pubDate>Mon, 14 May 2007 15:37:21 GMT</pubDate></item></channel></rss>
+readers enlighten me?&lt;/p&gt;&lt;/div&gt;</description><category>journal</category><category>music</category><guid>https://www.tartley.com/posts/music-101/</guid><pubDate>Mon, 14 May 2007 15:37:21 GMT</pubDate></item><item><title>Avenue Q</title><link>https://www.tartley.com/posts/avenue-q/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2007/03/aveq-screen_ps01_big.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Music and Lyrics: Robert Lopez and Jeff Marx.
+Director: Jason Moore.
+Noël Coward Theatre.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I promised myself I'd endure no more musicals, but somehow an exception
+seems appropriate for this beautiful idiocy. Sometimes muppets can say
+what men cannot.&lt;/p&gt;
+&lt;p&gt;Rating: 7/10&lt;/p&gt;&lt;/div&gt;</description><category>fiction</category><category>media</category><category>music</category><category>show</category><guid>https://www.tartley.com/posts/avenue-q/</guid><pubDate>Wed, 21 Mar 2007 15:00:20 GMT</pubDate></item></channel></rss>

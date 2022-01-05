@@ -70,7 +70,48 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/flying-high-opengl-from-python-part-2/" class="u-url">Flying High: OpenGL from Python, Part 2</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/rerun-unit-tests-whenever-files-update/" class="u-url">Rerun unit tests whenever files update</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/rerun-unit-tests-whenever-files-update/" rel="bookmark">
+            <time class="published dt-published" datetime="2010-10-15T01:43:33-05:00" itemprop="datePublished" title="2010-10-15 01:43">2010-10-15 01:43</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/rerun-unit-tests-whenever-files-update/#disqus_thread" data-disqus-identifier="cache/posts/rerun-unit-tests-whenever-files-update.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><em>In which I once again indulge my obscure command-line fetish.</em></p>
+<p>I often spend hours of my day cycling through:</p>
+<ul>
+<li>Edit code and its unit tests</li>
+<li>Save my changes</li>
+<li>Push a button or change window focus to explicitly re-run the code's
+    unit tests.</li>
+</ul>
+<p>Oh frabjous day, the grinding manual labour of the last of these three
+steps can now be banished forever, courtesy of <code>rerun</code>, a command line
+Python script that re-runs a given command whenever it detects changes
+to any of the files in the current directory, or its subdirectories.</p>
+<p><a href="https://github.com/tartley/rerun">https://github.com/tartley/rerun</a></p>
+<p><strong>Update</strong>: It's Python 2 &amp; 3, and works great on Windows XP, Macs and
+Ubuntu.</p>
+<p>For example: I had previously bound f6 in Vim to 'run the current file's
+unit tests. Now I've bound shift-f6 to <code>rerun</code> the current file's
+unit tests in a new console window. This pops up a new window showing
+the test results. I then continue editing in Vim, and whenever I hit
+save, the unit tests are re-run in the other window. All the while the
+focus stays on my editor. It's really sweet!</p>
+<p>Thanks for the original idea goes to to the bash command <code>watch</code>, and an
+old (now offline) blog post by Jeff Winkler.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/flying-high-opengl-from-python-part-2/" class="u-url">Flying High: OpenGL from Python, Part 2</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -1327,44 +1368,6 @@ which have since been fixed. The only outstanding issue is that colorama
 does not support 'dim' text on Windows - it looks just the same as
 'normal' text, and as far as I know, will never be able to.</p>
 <p><a href="http://pypi.python.org/pypi/colorama">http://pypi.python.org/pypi/colorama</a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/my-own-competancy/" class="u-url">My own competency</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/my-own-competancy/" rel="bookmark">
-            <time class="published dt-published" datetime="2010-04-07T11:41:50-05:00" itemprop="datePublished" title="2010-04-07 11:41">2010-04-07 11:41</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/my-own-competancy/#disqus_thread" data-disqus-identifier="cache/posts/my-own-competancy.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>My single degree was in Electronics and Physics, so although that
-covered a considerable amount of digital electronics and CPU design,
-I've pretty much picked up everything I know about software in my own
-time or on the job. Consequentially, there are aspects of computer
-science I feel I don't know as well as I could. I'm thinking especially
-of areas which are less frequently used in practice, but often cited as
-fundamental and important, such as compiler design.</p>
-<p>I stumbled on this '<a href="http://www.indiangeek.net/wp-content/uploads/Programmer%20competency%20matrix.htm">programmer competancy
-matrix</a>'
-the other week, and thought it would be a good first iteration of my own
-syllabus of areas I'd like learn more about. So I cut'n'paste it into <a href="http://spreadsheets.google.com/ccc?key=0AmOF8t-e3EyzdE1FdW5BcDFuVURKOEZSY1NfQW5NS1E&amp;hl=en">a
-spreadsheet</a>,
-and starting annotating it with how confident I feel in each different
-area, along with the next steps I'll need to strengthen my knowledge in
-each area.</p>
-<p>Startlingly but perhaps unsurprisingly, the tentative next step I
-arrived at in almost all areas I feel deficient was to <em>finish working
-through
-<a href="http://www.amazon.co.uk/Structure-Interpretation-Computer-Electrical-Engineering/dp/0262510871">SICP</a></em>.
-Alright, alright, my path is clear.</p>
 </div>
     </div>
     </article>
