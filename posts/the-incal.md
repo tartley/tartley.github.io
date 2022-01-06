@@ -38,10 +38,8 @@ contender for "the best comic in the medium's history".
 
 Echoes of all of these are visible throughout the consistently stunning
 artwork of The Incal, and it has been explicitly noted as an influence on the
-expansive decayed futurescapes of Akira and Blade Runner, the flamboyant
-visuals of the Star Wars prequels, and even the concept of that iconic
-technological terror, the "War Star", which can atomize a solar system in
-seconds.
+expansive decayed futurescapes of Akira and Blade Runner, and the flamboyant
+visuals of the Star Wars prequels.
 
 The writing really swings for the fences, a sprawling tale of a reluctant
 hero's journey, taking in societal commentary, intergalactic travel, spiritual
