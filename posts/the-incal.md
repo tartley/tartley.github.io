@@ -21,29 +21,31 @@
 ![The Incal 4 cover excerpt](/files/2022/the-incal-4-cover-part.webp)
 </span>
 
-*written by Alejandro Jodorowsky, art by Jean Giraud (aka Mœbius), 1980-88*
+*Written by Alejandro Jodorowsky, art by Jean Giraud (aka Mœbius), 1980-88*
 
-This creative pairing also worked together on the unproduced 1970s movie of
-Dune, the one that was to have featured Salvador Dali, and presumably would
-have been pretty trippy - I mean, *even more* trippy than the David Lynch
-one turned out to be. Mœbius has had a long and glorious career, knighted
-for his art in his native France, and he worked on other movies such as
-Alien, Tron, The Fifth Element, and The Abyss.
+This creative pairing also worked together on
+[the unproduced 1970s movie of Dune](https://en.wikipedia.org/wiki/Jodorowsky%27s_Dune),
+the one whose cast was to have included Salvador Dalí, Orson Welles,
+Gloria Swanson, and Mick Jagger, and presumably would have been pretty trippy -
+I mean, *even more* trippy than the David Lynch one turned out to be. The
+artist, Mœbius, has had a long and glorious career, knighted for his art in his
+native France, and he worked on other movies such as Alien, Tron, The Fifth
+Element, and The Abyss.
 
 I grabbed this in the English translation from the original French, having been
 intrigued by the *Pocket Essential Alan Moore*'s description of it as a
 contender for "the best comic in the medium's history".
 
 Echoes of all of these are visible throughout the consistently stunning
-artwork of The Incal, and it has been explicitly noted as an influence
-throughout the genre, from the expansive decayed futurescapes of Akira and
-Blade Runner, to the flamboyant visuals of the Star Wars prequels, and
-even the concept of that iconic technological terror, the "War Star", which can
-atomize a solar system in seconds.
+artwork of The Incal, and it has been explicitly noted as an influence on the
+expansive decayed futurescapes of Akira and Blade Runner, the flamboyant
+visuals of the Star Wars prequels, and even the concept of that iconic
+technological terror, the "War Star", which can atomize a solar system in
+seconds.
 
 The writing really swings for the fences, a sprawling tale of a reluctant
 hero's journey, taking in societal commentary, intergalactic travel, spiritual
-transformation, iconic representations of good and evil, and a deep thread of
+transformation, iconic incarnations of good and evil, and a deep thread of
 mysticism.
 
 For me, it does have a very evident "foreign" feeling - small social nuances
