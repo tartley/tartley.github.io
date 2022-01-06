@@ -23,6 +23,10 @@
 
 *Written by Alejandro Jodorowsky, art by Jean Giraud (aka Mœbius), 1980-88*
 
+I grabbed this in the English translation from the original French, having been
+intrigued by the *Pocket Essential Alan Moore*'s description of it as a
+contender for "the best comic in the medium's history".
+
 This creative pairing also worked together on
 [the unproduced 1970s movie of Dune](https://en.wikipedia.org/wiki/Jodorowsky%27s_Dune),
 the one whose cast was to have included Salvador Dalí, Orson Welles,
@@ -31,10 +35,6 @@ I mean, *even more* trippy than the David Lynch one turned out to be. The
 artist, Mœbius, has had a long and glorious career, knighted for his art in his
 native France, and he worked on other movies such as Alien, Tron, The Fifth
 Element, and The Abyss.
-
-I grabbed this in the English translation from the original French, having been
-intrigued by the *Pocket Essential Alan Moore*'s description of it as a
-contender for "the best comic in the medium's history".
 
 Echoes of all of these are visible throughout the consistently stunning
 artwork of The Incal, and it has been explicitly noted as an influence on the
