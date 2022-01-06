@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about journal)</title><link>https://tartley.com/</link><description>Events of my life.</description><atom:link href="https://www.tartley.com/categories/journal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 06 Jan 2022 17:15:29 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Things They Don't Tell You About Peroral Endoscopic Myotemy</title><link>https://www.tartley.com/posts/things-they-dont-tell-you-about-peroral-endoscopic-myotemy/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about journal)</title><link>https://tartley.com/</link><description>Events of my life.</description><atom:link href="https://www.tartley.com/categories/journal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 06 Jan 2022 21:20:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Rubik's Beginner</title><link>https://www.tartley.com/posts/rubiks-beginner/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Rubik's cube on table" src="https://www.tartley.com/files/2021/rubiks-cube-on-table.webp"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I've never before memorized the complete set of tricks needed to solve a
+rubik's cube... until today! My first completion with no reference to my notes
+took 3 minutes and 5 seconds. Wine and chocolate motivators as pictured.&lt;/p&gt;
+&lt;p&gt;Rubik's cubes first came out outside Hungary in 1980, when I was 9. A year or
+two after that, I got my hands on an nth generation photocopy of handwritten
+instructions for solving one, derived by a mathematically-inclined friend of a
+friend of my Dad. (The things we used to do before the internet!)&lt;/p&gt;
+&lt;p&gt;I memorized the first few phases, so have always been able to do the first two
+layers. But the last parts of that solution involved remembering a couple of 15
+or 20 move sequences, which apparently ten-year-old me got bored of, or
+distracted from, before ever committing to memory.&lt;/p&gt;
+&lt;p&gt;It turns out that
+&lt;a href="https://ruwix.com/the-rubiks-cube/how-to-solve-the-rubiks-cube-beginners-method/"&gt;the modern "beginner's method"&lt;/a&gt;
+that I'm reading about today is considerably simpler than that, and is
+much easier to understand and memorize. So now that lingering childhood
+inadequacy is vanquished.&lt;/p&gt;
+&lt;p&gt;(Discussion &lt;a href="https://www.facebook.com/tartley/posts/10159630917927040"&gt;on Facebook&lt;/a&gt;.)&lt;/p&gt;&lt;/div&gt;</description><category>journal</category><guid>https://www.tartley.com/posts/rubiks-beginner/</guid><pubDate>Mon, 27 Dec 2021 04:53:22 GMT</pubDate></item><item><title>Things They Don't Tell You About Peroral Endoscopic Myotemy</title><link>https://www.tartley.com/posts/things-they-dont-tell-you-about-peroral-endoscopic-myotemy/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="P.O.E.M." src="https://www.tartley.com/files/2021/poem.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;h4&gt;The problem&lt;/h4&gt;
@@ -411,17 +430,4 @@ cowbell&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; The scores are in. It was difficult to discern in the heat
 of battle, but a rigourous statistical analysis reveals that team UK
 absolutely dominated the laser quest:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.tartley.com/files/2008/03/lqods.zip" title="LQ"&gt;&lt;img alt="LQ" src="https://www.tartley.com/files/2008/03/lq.png"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>journal</category><guid>https://www.tartley.com/posts/denver-stagathon/</guid><pubDate>Mon, 24 Mar 2008 03:59:38 GMT</pubDate></item><item><title>Where you gonna be?</title><link>https://www.tartley.com/posts/where-you-gonna-be/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;[&lt;a href="http://www.vimeo.com/796747/l:embed_796747"&gt;Google Earth and
-whereyougonnabe&lt;/a&gt; from &lt;a href="http://www.vimeo.com/user365144/l:embed_796747"&gt;Peter
-Batty&lt;/a&gt; on
-&lt;a href="http://vimeo.com/l:embed_796747"&gt;Vimeo&lt;/a&gt;]&lt;/p&gt;
-&lt;p&gt;Peter Batty has a funky screencast of his incipient social networking
-slash geolocation application, &lt;a href="http://whereyougonnabe.com/"&gt;Where You Gonna
-Be?&lt;/a&gt; which allows you to see when your
-future itinerary crosses paths with other people you know. Initially
-implemented as a &lt;a href="http://apps.facebook.com/whereyougonnabe/"&gt;Facebook
-app&lt;/a&gt;, it now features Google
-Earth integration. It's currently restricted to beta testers, but should
-be opening up to all comers soon.&lt;/p&gt;
-&lt;p&gt;One day, functionality like this will be part of the ubiquitous and
-unobtrusive infrastructure of society. For now, there's WYGB.&lt;/p&gt;&lt;/div&gt;</description><category>gis</category><category>journal</category><category>web</category><guid>https://www.tartley.com/posts/where-you-gonna-be/</guid><pubDate>Thu, 20 Mar 2008 06:26:41 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2008/03/lqods.zip" title="LQ"&gt;&lt;img alt="LQ" src="https://www.tartley.com/files/2008/03/lq.png"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>journal</category><guid>https://www.tartley.com/posts/denver-stagathon/</guid><pubDate>Mon, 24 Mar 2008 03:59:38 GMT</pubDate></item></channel></rss>
