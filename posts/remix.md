@@ -2,8 +2,7 @@
 .. title: Remix
 .. slug: remix
 .. date: 2009-04-07 23:42:58-05:00
-.. tags: media,book,non-fiction,internet,culture,law
-.. type: text
+.. tags: media,book,non-fiction,internet,culture,law,lessig
 -->
 
 <span style="float: left; padding: 1em">

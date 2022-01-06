@@ -2,8 +2,7 @@
 .. title: Slaughterhouse 5
 .. slug: slaughterhouse-5
 .. date: 2007-07-22 00:08:34-05:00
-.. tags: media,book,fiction,science-fiction,novel
-.. type: text
+.. tags: media,book,fiction,science-fiction,novel,vonnegut
 -->
 
 <span style="float: left">

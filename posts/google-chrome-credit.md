@@ -9,7 +9,7 @@
 -->
 
 
-I just noticed: Open Chrome, go to <chrome://credits/>, search in page,
+I just noticed: Open Chrome, go to `chrome://credits/`, search in page,
 'show licence', and:
 
 [![chrome-credit](/files/2016/01/chrome-credit.png)](/files/2016/01/chrome-credit.png)

@@ -2,11 +2,7 @@
 .. title: Swamp Thing, Vol 1: Saga of the Swamp Thing
 .. slug: swamp-thing
 .. date: 2019-06-23 21:50:43 UTC-05:00
-.. tags: media,book,comic,fiction,science-fiction
-.. category: 
-.. link: 
-.. description: 
-.. type: text
+.. tags: media,book,comic,fiction,science-fiction,moore
 -->
 
 <span style="float: left">

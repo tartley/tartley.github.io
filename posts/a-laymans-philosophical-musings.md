@@ -19,7 +19,7 @@ Right off the bat I should qualify all this by saying that I don't know
 anything about Philosophy. I've never studied it. It seems at times to
 be an alien mismatch to the sensibilities of my left-brained mind, and
 worse, one that claims to be about logic and reasoning, topics that
-ostensibly should be right up my alley. I read Bertrand Russel's
+ostensibly should be right up my alley. I read Bertrand Russell's
 *History of Western Philosophy* last year, and although that was a
 fabulous, educational romp through the field, [my complaints about
 it](/posts/history-of-western-philisophy) still stand. Now I'm reading a second
@@ -44,7 +44,7 @@ this second book.
 **The Content**
 
 If anything, I have had more objections to *Think* than I had to
-Russel's book. At first, I thought that my issue was simply that the
+Russell's book. At first, I thought that my issue was simply that the
 discussed historical philosophers produced curiously shoddy work. Their
 premises seem shaky. Their arguments full of holes at best. Their
 conclusions entirely suspect. While there are some genuinely insightful
@@ -76,7 +76,7 @@ It seems to me that there are only three possibilities:
 
 1.  Professor Blackburn's thinking is entirely defective. I am sure this
     cannot be the case. He is a professor of his subject, his book,
-    while quite understandably not comparable to Russel, has garnered
+    while quite understandably not comparable to Russell, has garnered
     great reviews on Amazon and in the press, for whatever that's worth.
     As a layman I shall accord him the deference that is entirely his
     due.

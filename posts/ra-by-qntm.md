@@ -2,7 +2,7 @@
 .. title: Ra, by qntm
 .. slug: ra-by-qntm
 .. date: 2021-05-15 12:22:32 UTC-05:00
-.. tags: media,book,novel,science-fiction,fiction,epub,free-to-read
+.. tags: media,book,novel,science-fiction,fiction,qntm,epub,free-to-read
 -->
 
 <span style="float: left">

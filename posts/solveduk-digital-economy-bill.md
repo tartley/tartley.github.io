@@ -2,10 +2,7 @@
 .. title: [SOLVED]UK Digital Economy Bill
 .. slug: solveduk-digital-economy-bill
 .. date: 2009-12-03 10:04:59-06:00
-.. tags: geek,software,imho,python
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,software,imho,python,lessig
 -->
 
 

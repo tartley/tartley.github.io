@@ -2,8 +2,7 @@
 .. title: From Hell
 .. slug: from-hell
 .. date: 2007-07-21 22:34:22-05:00
-.. tags: media,book,comic,fiction,mental-health
-.. type: text
+.. tags: media,book,comic,fiction,mental-health,moore
 -->
 
 <span style="float: left">

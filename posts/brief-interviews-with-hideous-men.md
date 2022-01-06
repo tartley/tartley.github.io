@@ -2,8 +2,7 @@
 .. title: Brief Interviews with Hideous Men
 .. slug: brief-interviews-with-hideous-men
 .. date: 2014-01-22 20:51:51-06:00
-.. tags: media,book,essays,fiction
-.. type: text
+.. tags: media,book,essays,fiction,wallace
 -->
 
 <span style="float: left; padding: 1em">

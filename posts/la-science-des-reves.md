@@ -1,11 +1,8 @@
 <!--
-.. title: La Science des R&ecirc;ves
+.. title: La Science des Rêves
 .. slug: la-science-des-reves
 .. date: 2007-05-18 13:47:38-05:00
-.. tags: movie
-.. link: 
-.. description: 
-.. type: text
+.. tags: movie,fiction
 -->
 
 

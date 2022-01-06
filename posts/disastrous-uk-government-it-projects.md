@@ -3,9 +3,6 @@
 .. slug: disastrous-uk-government-it-projects
 .. date: 2008-01-10 14:50:05-06:00
 .. tags: journal,software
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

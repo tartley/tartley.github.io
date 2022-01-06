@@ -2,10 +2,7 @@
 .. title: Do a bit of helping out at EuroPython
 .. slug: do-a-bit-of-helping-out-at-europython
 .. date: 2009-06-09 15:13:40-05:00
-.. tags: geek,software,python
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,software,python,doctorow
 -->
 
 

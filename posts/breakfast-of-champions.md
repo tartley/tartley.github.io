@@ -2,8 +2,7 @@
 .. title: Breakfast of Champions
 .. slug: breakfast-of-champions
 .. date: 2008-08-27 15:45:56-05:00
-.. tags: media,book,novel,fiction,mental-health
-.. type: text
+.. tags: media,book,novel,fiction,mental-health,vonnegut
 -->
 
 <span style="float: left">
@@ -12,6 +11,7 @@
 
 *by Kurt Vonnegut (1973)*
 
+po
 I've always loved Vonnegut (who doesn't?) but I'd avoided this since
 seeing the [painful 1999 movie](http://www.imdb.com/title/tt0120618/)
 made of it, proof if ever it were needed that some books are simply

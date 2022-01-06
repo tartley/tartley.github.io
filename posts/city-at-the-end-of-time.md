@@ -2,8 +2,7 @@
 .. title: City at the End of Time
 .. slug: city-at-the-end-of-time
 .. date: 2008-12-14 16:56:38-06:00
-.. tags: media,book,fiction,science-fiction,novel
-.. type: text
+.. tags: media,book,fiction,science-fiction,novel,bear
 -->
 
 <span style="float: left">

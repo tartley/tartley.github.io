@@ -2,7 +2,7 @@
 .. title: The Incal
 .. slug: the-incal
 .. date: 2022-01-05 13:56:03 UTC-06:00
-.. tags: media,fiction,comic,science-fiction
+.. tags: media,book,fiction,comic,science-fiction
 -->
 
 <span style="float: left">

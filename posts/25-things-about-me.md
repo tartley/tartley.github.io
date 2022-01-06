@@ -106,7 +106,7 @@ except for the kind of indirect and abstract representation that comes
 from merely describing them, as opposed to truly, deeply believing them.
 (**Update**: These ideas had clearly been stirred up of late by my being
 halfway through [*Infinite
-Jest*](http://en.wikipedia.org/wiki/Infinite_jest) by David Foster
+Jest*](/posts/infinite-jest) by David Foster
 Wallace, a novel about addiction, related mental dysfunction and their
 relationship to freedom of will. Imagine my lack of surprise, then, when
 I reach page 1,048 (footnote 269, sub-footnote a, no joke) to discover

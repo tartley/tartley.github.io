@@ -2,7 +2,7 @@
 .. title: Lena
 .. slug: lena
 .. date: 2021-05-09 16:25:51 UTC-05:00
-.. tags: media,short,science-fiction,free-to-read,fiction
+.. tags: media,fiction,short,science-fiction,qntm,free-to-read
 -->
 
 <span style="float: left">
