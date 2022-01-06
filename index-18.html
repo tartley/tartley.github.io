@@ -70,7 +70,52 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/my-own-competancy/" class="u-url">My own competency</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/colorama-simple-cross-platform-python-api-for-colored-terminal-text/" class="u-url">colorama: Simple cross-platform Python API for colored terminal text</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/colorama-simple-cross-platform-python-api-for-colored-terminal-text/" rel="bookmark">
+            <time class="published dt-published" datetime="2010-04-21T10:18:30-05:00" itemprop="datePublished" title="2010-04-21 10:18">2010-04-21 10:18</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/colorama-simple-cross-platform-python-api-for-colored-terminal-text/#disqus_thread" data-disqus-identifier="cache/posts/colorama-simple-cross-platform-python-api-for-colored-terminal-text.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Announcing new Python package,
+<a href="http://pypi.python.org/pypi/colorama">Colorama</a>.</p>
+<p>ANSI escape character sequences have long been used to produce colored
+terminal text on Unix and Macs. Colorama makes this work on Windows,
+too. It also provides some shortcuts to help generate these ANSI
+sequences, and works fine in conjunction with any other ANSI sequence
+generation library, such as Termcolor
+(<a href="http://pypi.python.org/pypi/termcolor">http://pypi.python.org/pypi/termcolor</a>.)</p>
+<p>This has the upshot of providing a simple cross-platform API for
+printing colored terminal text from Python, and has the happy
+side-effect that existing applications or libraries which use ANSI
+sequences to produce colored output on Linux or Macs can now also work
+on Windows, simply by calling <code>colorama.init()</code>.</p>
+<p>I realise that printing colored terminal text is verging on
+pathalogically superficial, but it has long irked me that this didn't
+just work. Python should make this easy.</p>
+<p>My mapping of ANSI conventions to the equivalent Win32 calls is far from
+perfect. Currently it has the following results. ANSI codes under Ubuntu
+on gnome-terminal:</p>
+<p><img alt="" src="files/2010/04/screenshot-ubuntu-gnometerminal.png"></p>
+<p>and the exact same ANSI codes printed on Windows under Colorama:</p>
+<p><img alt="" src="files/2010/04/screenshot-winxp-console2.png"></p>
+<p><strong>Update:</strong> I previously wrote here about discrepancies between the two,
+which have since been fixed. The only outstanding issue is that colorama
+does not support 'dim' text on Windows - it looks just the same as
+'normal' text, and as far as I know, will never be able to.</p>
+<p><a href="http://pypi.python.org/pypi/colorama">http://pypi.python.org/pypi/colorama</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/my-own-competancy/" class="u-url">My own competency</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -1472,82 +1517,6 @@ need, and invoke it as the final command in your batch script:</p>
 <p>Bingo. I now have a Python process that can modify the environment of
 its invoking shell, and propagates the correct exit value out of the
 wrapping DOS script. [Short bow. Applause. Roses. etc.]</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/my-fonts-look-crap-i-blame-windows-and-ati/" class="u-url">My Fonts Look Crap. I blame Windows and ATI.</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/my-fonts-look-crap-i-blame-windows-and-ati/" rel="bookmark">
-            <time class="published dt-published" datetime="2010-01-20T20:21:09-06:00" itemprop="datePublished" title="2010-01-20 20:21">2010-01-20 20:21</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/my-fonts-look-crap-i-blame-windows-and-ati/#disqus_thread" data-disqus-identifier="cache/posts/my-fonts-look-crap-i-blame-windows-and-ati.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>I know, I <em>know</em>. But I use Windows for 8 hours a day at work. So what
-do you do?</p>
-<p>Here's the poster-boy for programmer-friendly fonts, your friend and
-mine, everyone loves him, <strong>Inconsolata</strong>:</p>
-<p><a href="files/2010/01/inconsolata-11.png"><img alt="inconsolata-11" src="files/2010/01/inconsolata-11.png" title="inconsolata-11"></a></p>
-<p>I don't know about you, but to me that looks unutterably crap. Wonky and
-irregular. On the right of the orange line is what it looks like with
-ClearType turned off. Meh. Presumably I'm doing it wrong, somehow, but
-unless I figure out how, Inconsolata can fuck right off.</p>
-<p>So then I fire up the trusty fallback, <strong>Consolas</strong>:</p>
-<p><a href="files/2010/01/consolas-10.png"><img alt="consolas-10" src="files/2010/01/consolas-10.png" title="consolas-10"></a></p>
-<p>This is better, certainly, but the letters look cramped. For the number
-of visible lines in a window that size, the letters are awful small.
-Again, on the right of the line is ClearType turned off - which in this
-case distinctly worse.</p>
-<p>So I continue peering at a succession of monospaced idiocy, eventually
-ending up on <strong>DejaVu Sans Mono</strong>:</p>
-<p><a href="files/2010/01/deja-vu-sans-mono-9.png"><img alt="deja-vu-sans-mono-9" src="files/2010/01/deja-vu-sans-mono-9.png" title="deja-vu-sans-mono-9"></a></p>
-<p>This still isn't perfect, but it's the best I can find. Note that it
-bears out my impression of Consolas being cramped - even though the
-letters are substantially larger, we still manage to fit an extra line
-of text in. This time, turning ClearType off (right of the line) makes
-it a little crisper, and a little more wonky, but not much.</p>
-<p>This isn't just in Vim. It looks like this in all applications. I've
-tried running the <a href="http://www.microsoft.com/typography/ClearTypePowerToy.mspx">ClearType Tuning
-Powertool</a>,
-to no avail. Admittedly, all these fonts start to look a damn sight
-better when I increase the size a few notches. But that's bugger all use
-really, isn't it? Maybe I should be digging out some mono fonts designed
-especially to be viewed at small sizes? Oooh, now that's actually not a
-bad idea: How about those Android fonts everyone's banging on about?
-<strong>Droid Sans Mono:</strong></p>
-<p><a href="files/2010/01/droid-sans-mono-101.png"><img alt="droid-sans-mono-10" src="files/2010/01/droid-sans-mono-101.png" title="droid-sans-mono-10"></a></p>
-<p>This isn't bad, but does contain all the old 'zero vs upper-case O' and
-'one versus lower-case L' ambiguities. I think I'll stick with DejaVu
-Sans Mono.</p>
-<p>Does Inconsolata work OK on Windows for everyone else?</p>
-<p><strong>Update</strong>: Gerry suggested trying out Proggy Fonts (thanks!). These are
-bitmap fonts (unless you want to do without extended characters) so they
-won't scale. Nevertheless, here's how some representative fonts from
-there look. First up, <strong>Proggy Clean slashed zero:</strong></p>
-<p><a href="files/2010/01/proggy-clean-sz.png"><img alt="proggy-clean-sz font" src="files/2010/01/proggy-clean-sz.png" title="proggy-clean-sz"></a></p>
-<p>I love the crisp clarity of a pixel-perfect bitmap font with no scaling
-or anti-aliasing. On the downside, I have a feeling that the characters'
-shapes aren't quite as well-formed and beautiful as <em>DejaVu</em>. Not sure
-whether or not this would bug me. Next up, <strong>Proggy Opti:</strong></p>
-<p><a href="files/2010/01/proggy-opti.png"><img alt="proggy-opti font" src="files/2010/01/proggy-opti.png" title="proggy-opti"></a></p>
-<p>Color me impressed. <em>Opti</em> still has the wonderful pixel-perfect clarity
-of <em>Proggy Clean</em>, and manages to fit four extra lines of text into the
-same sized window. Obviously in order to achieve this, the characters
-are smaller than <em>Deja Vu</em>, but this is no bad thing. I would have liked
-to scale Deja Vu down a tad from the size you see it above, but if I
-try, the letters start to become a little distorted and indistinct. I
-might well give Opti a spin for a few days, see how it wears on me.
-Thanks for the suggestion Gerry!</p>
-<p><strong>Update:</strong> Nowadays I use <a href="https://github.com/ProgrammingFonts/ProgrammingFonts/tree/master/Dina">Dina</a>,
-a monospaced bitmap font created by some obsessive with a penchant for
-microscopic fonts. It's absolutely perfect.</p>
 </div>
     </div>
     </article>

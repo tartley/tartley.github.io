@@ -70,7 +70,82 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/encrypted-zip-files-on-osx/" class="u-url">Encrypted zip files on OSX</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/hexagonal-django/" class="u-url">Hexagonal Django</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/hexagonal-django/" rel="bookmark">
+            <time class="published dt-published" datetime="2012-12-04T14:42:01-06:00" itemprop="datePublished" title="2012-12-04 14:42">2012-12-04 14:42</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/hexagonal-django/#disqus_thread" data-disqus-identifier="cache/posts/hexagonal-django.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>The last few weeks I've been thinking about the architectural pattern
+known as <a href="http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean, Onion, Hexagonal, or
+Ports'n'Adaptors</a>.
+I'm curious if many people are applying it in the Django world.</p>
+<p>The premise is for your core application entity classes and business
+rules to be plain old objects, with no dependencies. In particular, they
+are not dependent on the interfaces between your application and
+external systems, such as your persistence mechanism, or your web
+framework. Instead, external interface components depend upon your core
+business objects. This essentially moves the database from the 'bottom'
+layer of the old traditional 'three layer architecture', to form a part
+of the topmost layer - a sibling with the 'UI.'</p>
+<p>For inbound messages (e.g handling a web request) this is
+straightforward - Django calls your view code which calls your business
+layer, but keep your business layer separate from your Django code, so
+it is stand-alone and unit-testable. For outbound messages, such as then
+rendering the web page in response, it's slightly more complicated: Your
+business logic must pass the result (typically a pure data structure)
+back to your web-aware code, but without your business logic depending
+on the web-aware component. This requires an inversion of control.</p>
+<p>That way, all your business logic can easily be tested in unit tests,
+with no mocking required. You still need some end-to-end tests to verify
+integration, but you shouldn't need to involve your UI or database in
+testing every detail of your business logic.</p>
+<p>Also, you can easily switch out your external system interfaces, such as
+persistence, to use another RDBMS, another ORM, a NoSQL store, or an
+in-memory version for testing Since the core of your application doesn't
+have any dependency on these components, it is oblivious to the
+change. The business logic, because it doesn't depend on Django, is no
+longer riddled with Django's convenient ORM database access.</p>
+<p>Same thing goes for switching out your web framework, or calling the
+same logic from web UI or web API calls. And again, for switching out
+your UI: add a command line application, or a console UI. The core
+application logic is unaffected, and your new interface components
+contain only the code that is specific to that interface's concerns.</p>
+<p>Another side effect is that your web framework, if you're using one,
+becomes a peripheral detail which depends upon your core application,
+rather than the other way round. Your Django project would become a
+subdirectory of your project, rather than dominating your project
+directory structure. Since the business logic formerly contained within
+it is now elsewhere (in your core business objects) the Django project
+is now very thin. Views, for example, are delegations to single
+business-layer functions. The Django project now contains just the
+web-oriented aspects of your project, as it should.</p>
+<p>These ideas all seem like relatively straightforward software
+engineering, and I feel a bit foolish for not having been aware of them
+all these years. I console myself that I'm not alone.</p>
+<p>UncleBob's Ruby Midwest keynote "<a href="posts/hexagonal-django/%20http:/www.confreaks.com/videos/759-rubymidwest2011-keynote-architecture-the-lost-years">Architecture - The Lost
+Years</a>"
+attributes one source of this idea to Ivar Jacobsen's 1994 book <a href="posts/hexagonal-django/%20http:/www.amazon.co.uk/Object-oriented-Software-Engineering-Approach-Press/dp/0201544350">Object
+Oriented Software Engineering : A Use Case Driven
+Approach</a>
+(2nd-hand hardbacks cheap on Amazon.)</p>
+<p>I see a few people applying these ideas to Rails, but are many people
+out there doing this in Django? I plan to refactor a small vertical
+slice of our monster Django app into this style, to try and prove the
+idea for myself.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/encrypted-zip-files-on-osx/" class="u-url">Encrypted zip files on OSX</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -624,45 +699,6 @@ precisely the same name.</p>
 <p><strong>Update:</strong> Also see this post about adding stdlib and venv contents to
 your tags:
 <a href="https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/">https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/</a></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/a-guide-to-git-using-spatial-analogies/" class="u-url">A Guide to GIT using spatial analogies</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/a-guide-to-git-using-spatial-analogies/" rel="bookmark">
-            <time class="published dt-published" datetime="2010-12-15T14:40:14-06:00" itemprop="datePublished" title="2010-12-15 14:40">2010-12-15 14:40</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/a-guide-to-git-using-spatial-analogies/#disqus_thread" data-disqus-identifier="cache/posts/a-guide-to-git-using-spatial-analogies.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>Some developers find Git takes a little getting used to, claiming that
-it is conceptually convoluted compared to other distributed version
-control systems. I used to number myself amongst them.</p>
-<p>Happily, I've found that a couple of simple spatial analogies have made
-me proficient and fluent in using Git's command-line interface.</p>
-<p>One of the things that tripped me up as a novice user was the way Git
-handles <strong>branches</strong>. Unlike more primitive version control systems, git
-repositories are not linear, they support branching, and are thus best
-visualised as trees, upon the nodes of which your current commit may add
-new leaf nodes. To visualise this, it's simplest to think of the state
-of your repository as a point in a high-dimensional 'code-space', in
-which branches are represented as n-dimensional membranes, mapping the
-spatial loci of successive commits onto the projected manifold of each
-cloned repository.</p>
-<p><img alt="Branches as n-branes" src="files/2010/12/I1546manifold.png" title="I1546manifold"></p>
-<p><strong>Update:</strong> There is, of course, a <a href="http://www.reddit.com/r/programming/comments/embdf/git_complicated_of_course_not_commits_map_to/">fabulously insightful
-commentary</a>
-on reddit.</p>
-<p><strong>Update:</strong> Thanks folks. You've made my usual one or two hundred daily
-visitors look kinda paltry:</p>
-<p><img alt="spike in daily traffic graph" src="files/2010/12/daily-traffic.png" title="daily-traffic"></p>
 </div>
     </div>
     </article>

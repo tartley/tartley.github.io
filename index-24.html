@@ -70,7 +70,41 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/fine-structure-by-qntm/" class="u-url">Fine Structure, by qntm</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/demon/" class="u-url">Demon</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/demon/" rel="bookmark">
+            <time class="published dt-published" datetime="2021-05-31T11:08:52-05:00" itemprop="datePublished" title="2021-05-31 11:08">2021-05-31 11:08</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/demon/#disqus_thread" data-disqus-identifier="cache/posts/demon.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p><span style="float: left">
+<img alt="Demon cover" src="files/2021/demon-cover.jpg"></span></p>
+<p><em>by Jason Shiga (2016)</em></p>
+<p>I'm just discovering the works of <a href="http://www.shigabooks.com">Jason Shiga</a>,
+creator of mathematically-inspired nonlinear comic-books, e.g. stories drawn
+on complex origami structures, that can be folded in various ways to represent
+either branching story-lines, or else to manage state such as 'inventory'.
+Construction of these more elaborate paper constructions doesn't scale,
+(ie. I'm not likely to ever own one) but you can try some of his other
+creations on the web.</p>
+<p>This is <a href="http://www.shigabooks.com/index.php?page=001">Demon</a>,
+a regular linear web-comic.</p>
+<p>The storyline is 'math-inspired' too, in the same way that the movie <em>Primer</em>
+is - intense, absolute, ruthless, narrative exploration of logical
+implications, while continually, dizzyingly, escalating to the next level.</p>
+<p><br style="clear: left"></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/fine-structure-by-qntm/" class="u-url">Fine Structure, by qntm</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -556,49 +590,6 @@ correlation.</p>
 <p>It's a short book, with a lively style, densely packed with important
 conclusions, and descriptions of how the field has arrived at them. Edifying.</p>
 <p><br style="clear: left"></p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/git-annotated-tags/" class="u-url">Git Annotated Tags</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/git-annotated-tags/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-10-17T00:40:24-05:00" itemprop="datePublished" title="2020-10-17 00:40">2020-10-17 00:40</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/git-annotated-tags/#disqus_thread" data-disqus-identifier="cache/posts/git-annotated-tags.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>I've previously only ever used git's regular <em>lightweight</em> tags, created with
-<code>git tag TAGNAME</code>.</p>
-<p>Today I learned about <em>annotated</em> tags, created with <code>git tag -a -m "MESSAGE"
-TAGNAME</code>. If you don't specify <code>-m MESSAGE</code>, git annoyingly prompts you for
-one, but it will accept <code>-m ""</code>.</p>
-<p>Annotated tags store the creator, created timestamp, and the message. This
-might occasionally be useful for understanding what happened. A release tagged
-this way shows us who created the release, and when, which might differ from
-when the commit was created.</p>
-<p>But more importantly is the different handling of lightweight versus
-annotated tags when pushing to the server.</p>
-<p>Habitually, I've been using <code>git push --tags</code>. But this is slightly broken, in
-that it pushes <em>all</em> tags. Some tags might be intended as my private local
-development state. Some of them might be unreachable in the origin repo.</p>
-<p>To address these issues, newer versions of <code>git push</code> introduced
-<code>--follow-tags</code>, which only pushes annotated tags which are on ancestors
-of the commit being pushed, so that no unreachable tags are created on origin.</p>
-<p>Hence, a better workflow is:</p>
-<ol>
-<li>Use regular lightweight tags for local state.
-   Keep them private by never using <code>git push --tags</code>.</li>
-<li>Use annotated tags to share state with other developers.</li>
-<li>To share annotated tags, either push them directly, with <code>git push TAGNAME</code>,
-   or use <code>git push --follow-tags</code>.</li>
-</ol>
 </div>
     </div>
     </article>

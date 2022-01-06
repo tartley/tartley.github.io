@@ -70,7 +70,81 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/listen-to-your-phone-through-your-pc-speakers/" class="u-url">Listen to your phone through your PC speakers</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/thoughts-on-nylas-how-we-deploy-code/" class="u-url">Thoughts on Nylas' "How We Deploy Code"</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/thoughts-on-nylas-how-we-deploy-code/" rel="bookmark">
+            <time class="published dt-published" datetime="2015-07-21T19:06:02-05:00" itemprop="datePublished" title="2015-07-21 19:06">2015-07-21 19:06</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/thoughts-on-nylas-how-we-deploy-code/#disqus_thread" data-disqus-identifier="cache/posts/thoughts-on-nylas-how-we-deploy-code.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>Some thoughts on <a href="https://nylas.com/blog/packaging-deploying-python">Nylas' post "How We Deploy
+Code."</a></p>
+<p>The goals of making deployment consistent, reliable and fast are very
+laudable, and the conclusion involving creating Debian packages is just
+great. But in the spirit of geek nitpicking, I can't help but think the
+justifications given are misguided, and overlook a simpler solution.</p>
+<p><strong>&gt;&gt; pip does not offer a "revert deploy" strategy</strong></p>
+<p>Yes it does. Throw away the virtualenv and create a new one using the
+requirements.txt from an earlier release. This might be slow, but you
+can both speed it up (see below), and you can keep old versioned
+virtualenvs around, as a cache of the output of this slow step, so that
+reverts (the time when you really want deploys to go quickly) require
+only a couple of symlinks.</p>
+<p><strong>Update:</strong> Oooh, and I just had an idea. You could version virtualenvs
+using a hash of the requirements, so that deploys which do not change
+dependencies can share the same virtualenv. I've never tried that - it
+might work?!?!</p>
+<p><strong>&gt;&gt; Installing dependencies with pip can make deploys painfully
+slow</strong></p>
+<p>This is true. But it's not the final word on the matter.</p>
+<p>Firstly, don't grab the dependencies you're installing from PyPI. Have a
+local cache of them. That speeds up the install tremendously, not just
+because no download takes place, but also because no trawling of PyPI
+and author sites for possible alternate versions takes place. Some
+people use a local PyPI instance, but I like simply using a directory
+full of packages. Point pip at it using
+'<code>pip install --no-index --find-links=packages -r requirements</code>'. The
+'packages' directory could be checked into your project's repo, so that
+once you've checked a project out, you have everything you need to
+deploy to local VMs, even with no network connection at all. I wrote
+about this <a href="pip-install-lightspeed-and-bulletproof">a while ago</a>.</p>
+<p><strong>&gt;&gt; Building your code separately on each host will cause
+consistency issues</strong></p>
+<p>So don't install dependencies using source packages, use wheels instead.
+Then any slow or unreliable build step is done once, when you create the
+packages directory, while deployment is now reliable and requires no
+development tools on the production server such as compilers, headers,
+etc.</p>
+<p><strong>Update:</strong> As a bonus, this will again substantially speed up the
+creation of your virtualenv when deploying.</p>
+<p><strong>&gt;&gt; Deploys will fail if the PyPI or your git server are down</strong></p>
+<p>PyPI outages (or a package author deleting their package, which happens
+routinely) are not a problem if you're deploying from a local source of
+packages.</p>
+<p>I agree that application code deployment shouldn't be done using a 'git
+pull'. Accessibility to GitHub shouldn't be a single point of failure,
+and the fewer development tools needed on production servers the better.
+So export the code from git into a tar file when you cut a release, and
+then push it out using scp at deploy time.</p>
+<p>Having said all that, there are still advantages to having your whole
+app and its dependencies handled by a single mechanism like Debian
+packages, rather than more bug-prone ad-hoc scripts and Ansible config.
+So I'm not at all against the final conclusions of the Nylas article.
+(Hugs to you folks at Nylas!)</p>
+<p>Dashed this out in ten minutes between daycare pickup and dinner being
+ready. Apologies for the inevitable shoddyness.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/listen-to-your-phone-through-your-pc-speakers/" class="u-url">Listen to your phone through your PC speakers</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -603,81 +677,6 @@ pattern has now been <a href="http://www.pip-installer.org/en/latest/cookbook.ht
 documentation</a>,
 which was substantially reorganised and improved with the recent 1.3
 release.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/hexagonal-django/" class="u-url">Hexagonal Django</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/hexagonal-django/" rel="bookmark">
-            <time class="published dt-published" datetime="2012-12-04T14:42:01-06:00" itemprop="datePublished" title="2012-12-04 14:42">2012-12-04 14:42</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/hexagonal-django/#disqus_thread" data-disqus-identifier="cache/posts/hexagonal-django.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>The last few weeks I've been thinking about the architectural pattern
-known as <a href="http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean, Onion, Hexagonal, or
-Ports'n'Adaptors</a>.
-I'm curious if many people are applying it in the Django world.</p>
-<p>The premise is for your core application entity classes and business
-rules to be plain old objects, with no dependencies. In particular, they
-are not dependent on the interfaces between your application and
-external systems, such as your persistence mechanism, or your web
-framework. Instead, external interface components depend upon your core
-business objects. This essentially moves the database from the 'bottom'
-layer of the old traditional 'three layer architecture', to form a part
-of the topmost layer - a sibling with the 'UI.'</p>
-<p>For inbound messages (e.g handling a web request) this is
-straightforward - Django calls your view code which calls your business
-layer, but keep your business layer separate from your Django code, so
-it is stand-alone and unit-testable. For outbound messages, such as then
-rendering the web page in response, it's slightly more complicated: Your
-business logic must pass the result (typically a pure data structure)
-back to your web-aware code, but without your business logic depending
-on the web-aware component. This requires an inversion of control.</p>
-<p>That way, all your business logic can easily be tested in unit tests,
-with no mocking required. You still need some end-to-end tests to verify
-integration, but you shouldn't need to involve your UI or database in
-testing every detail of your business logic.</p>
-<p>Also, you can easily switch out your external system interfaces, such as
-persistence, to use another RDBMS, another ORM, a NoSQL store, or an
-in-memory version for testing Since the core of your application doesn't
-have any dependency on these components, it is oblivious to the
-change. The business logic, because it doesn't depend on Django, is no
-longer riddled with Django's convenient ORM database access.</p>
-<p>Same thing goes for switching out your web framework, or calling the
-same logic from web UI or web API calls. And again, for switching out
-your UI: add a command line application, or a console UI. The core
-application logic is unaffected, and your new interface components
-contain only the code that is specific to that interface's concerns.</p>
-<p>Another side effect is that your web framework, if you're using one,
-becomes a peripheral detail which depends upon your core application,
-rather than the other way round. Your Django project would become a
-subdirectory of your project, rather than dominating your project
-directory structure. Since the business logic formerly contained within
-it is now elsewhere (in your core business objects) the Django project
-is now very thin. Views, for example, are delegations to single
-business-layer functions. The Django project now contains just the
-web-oriented aspects of your project, as it should.</p>
-<p>These ideas all seem like relatively straightforward software
-engineering, and I feel a bit foolish for not having been aware of them
-all these years. I console myself that I'm not alone.</p>
-<p>UncleBob's Ruby Midwest keynote "<a href="posts/hexagonal-django/%20http:/www.confreaks.com/videos/759-rubymidwest2011-keynote-architecture-the-lost-years">Architecture - The Lost
-Years</a>"
-attributes one source of this idea to Ivar Jacobsen's 1994 book <a href="posts/hexagonal-django/%20http:/www.amazon.co.uk/Object-oriented-Software-Engineering-Approach-Press/dp/0201544350">Object
-Oriented Software Engineering : A Use Case Driven
-Approach</a>
-(2nd-hand hardbacks cheap on Amazon.)</p>
-<p>I see a few people applying these ideas to Rails, but are many people
-out there doing this in Django? I plan to refactor a small vertical
-slice of our monster Django app into this style, to try and prove the
-idea for myself.</p>
 </div>
     </div>
     </article>

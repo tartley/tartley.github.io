@@ -70,7 +70,64 @@
     
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/a-laymans-philosophical-musings/" class="u-url">A Layman's Philosophical Musings</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/pychoose-switch-between-installed-versions-of-python/" class="u-url">PyChoose: Switch between installed versions of Python</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/pychoose-switch-between-installed-versions-of-python/" rel="bookmark">
+            <time class="published dt-published" datetime="2009-11-11T16:07:10-06:00" itemprop="datePublished" title="2009-11-11 16:07">2009-11-11 16:07</time></a>
+            </p>
+                <p class="commentline">            <a href="posts/pychoose-switch-between-installed-versions-of-python/#disqus_thread" data-disqus-identifier="cache/posts/pychoose-switch-between-installed-versions-of-python.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>You can switch between different installed versions of Python by simply
+prepending to your PATH. However, this goes wrong in some scenarios,
+such as when a tool like 'virtualenv' is installed in one Python
+version, but not in another. Pretty soon you will be executing your
+project with one Python version, but referencing the site-packages of
+another. When switching, other versions of Python need to be stripped
+from your PATH.</p>
+<p>As a solution, I present a new Python module, <em>pychoose</em>. For the moment
+this is Windows only:</p>
+<pre class="code literal-block"><span></span><code>&gt;python -V
+Python 2.6.4
+&gt;easy_install pychoose
+...
+&gt;pychoose 24
+(Py24) &gt;python -V
+Python 2.4.4
+(Py24) &gt;exit
+&gt;python -V
+Python 2.6.4
+</code></pre>
+
+<p>It prepends to the PATH as above, but it also filters other Python
+versions out the PATH. It modifies the PROMPT to show the user they are
+operating in a modified environment. It works by spawning a new shell
+with the modified environment. To return to your default Python
+interpreter, type 'exit'.</p>
+<p>PyPI page: <a href="http://pypi.python.org/pypi/pychoose">http://pypi.python.org/pypi/pychoose</a></p>
+<p>Subversion repository:
+<a href="http://code.google.com/p/pychoose/">http://code.google.com/p/pychoose</a></p>
+<p>Preview the module <a href="http://code.google.com/p/pychoose/source/browse/trunk/pychoose_script.py">source
+code</a>.</p>
+<p>It seems to work for simple scenarios, but there are a bunch of known
+problems with it (see the PyPI page above), which I'd like to fix if
+people think this is useful. I just whipped this up and don't really
+understand the issues surrounding this. In particular is spawning a new
+shell the best way to modify the current console's environment? Is a
+less-instrusive alternative to generate .bat file which can be executed
+to change the current shell's environment?</p>
+<p>Feedback &amp; suggestions very welcome.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/a-laymans-philosophical-musings/" class="u-url">A Layman's Philosophical Musings</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -94,7 +151,7 @@ Philosophy</a>.</p>
 anything about Philosophy. I've never studied it. It seems at times to
 be an alien mismatch to the sensibilities of my left-brained mind, and
 worse, one that claims to be about logic and reasoning, topics that
-ostensibly should be right up my alley. I read Bertrand Russel's
+ostensibly should be right up my alley. I read Bertrand Russell's
 <em>History of Western Philosophy</em> last year, and although that was a
 fabulous, educational romp through the field, <a href="posts/history-of-western-philisophy">my complaints about
 it</a> still stand. Now I'm reading a second
@@ -115,7 +172,7 @@ of philosophy. Presumably this is why I have been drawn back to read
 this second book.</p>
 <p><strong>The Content</strong></p>
 <p>If anything, I have had more objections to <em>Think</em> than I had to
-Russel's book. At first, I thought that my issue was simply that the
+Russell's book. At first, I thought that my issue was simply that the
 discussed historical philosophers produced curiously shoddy work. Their
 premises seem shaky. Their arguments full of holes at best. Their
 conclusions entirely suspect. While there are some genuinely insightful
@@ -143,7 +200,7 @@ that?</p>
 <ol>
 <li>Professor Blackburn's thinking is entirely defective. I am sure this
     cannot be the case. He is a professor of his subject, his book,
-    while quite understandably not comparable to Russel, has garnered
+    while quite understandably not comparable to Russell, has garnered
     great reviews on Amazon and in the press, for whatever that's worth.
     As a layman I shall accord him the deference that is entirely his
     due.</li>
@@ -1057,69 +1114,6 @@ that time).</p>
 <p>from <a href="https://braydie.gitbooks.io/how-to-be-a-programmer/content/en/">How to be a
 Programmer</a>,
 by Robert L. Read.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/do-a-bit-of-helping-out-at-europython/" class="u-url">Do a bit of helping out at EuroPython</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/do-a-bit-of-helping-out-at-europython/" rel="bookmark">
-            <time class="published dt-published" datetime="2009-06-09T15:13:40-05:00" itemprop="datePublished" title="2009-06-09 15:13">2009-06-09 15:13</time></a>
-            </p>
-                <p class="commentline">            <a href="posts/do-a-bit-of-helping-out-at-europython/#disqus_thread" data-disqus-identifier="cache/posts/do-a-bit-of-helping-out-at-europython.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>Are you a <a href="http://python.org">Python</a> geek?</p>
-<p>For starters - you should totally be going to
-<a href="http://www.europython.eu/">EuroPython</a> at the end of June. Python
-conferences like this attract brilliant presentations from some real
-community and industry heavyweights. This year we've got <a href="http://en.wikipedia.org/wiki/Tony_Hoare">Professor Sir
-Tony Hoare</a> (that's the creator
-of <a href="http://en.wikipedia.org/wiki/Quicksort">quicksort</a> to you, amongst a
-venerable lifetime's worth of other
-things); <a href="http://blogs.msdn.com/hugunin/"></a> <a href="http://craphound.com/">Cory
-Doctorow</a> (everyone's favourite science-fiction
-author, blogger and all-round geek activist), <a href="http://www.mindviewinc.com/Index.php">Bruce
-Eckel</a> (author and renowned
-technical communicator); plus Dr Sue Black from code-breaking hothouse
-<a href="http://en.wikipedia.org/wiki/Bletchley_park">Bletchley Park</a>. The
-<a href="http://www.europython.eu/talks/timetable/">veritable horde</a> of over 100
-exciting and interesting talks makes up probably the strongest line-up
-EuroPython has ever had.</p>
-<p>Best of all, Python conferences like this one are organised and run at a
-grass-roots level. By enthusiasts, for enthusiasts, making them quite
-the most fun, educational and interestingly social conferences I've ever
-been to. Personally, I love the resultant absence of overriding
-commercial agendas - everything is done purely for the benefit of the
-delegates, and is pervaded by the community values that made you love
-Python in the first place.</p>
-<p>One upside of this is that the conference is cheap - only £190 to
-attend. Interested enthusiasts can easily pay their own way. As a
-result, this is one of the few technical conferences that still has a
-robust attendance this year - both of presenters and delegates. Many
-others have been decimated or even cancelled altogether.</p>
-<p>There is a downside though, and here's the rub:</p>
-<p>The good folks organising EuroPython in their spare time are desperately
-short of volunteers to be session chairs.</p>
-<p>If you're going to EuroPython, you could help out! Yes, YOU! You could
-sign up for the sessions you want to watch anyway, so you shouldn't miss
-anything. Just imagine the warm and fuzzies! The KUDOS of a roomful of
-eyes. The POWER of cutting off over-running speakers in mid-flow*. The
-WARMTH of a deftly-cupped microphone.</p>
-<p>(*anyone cutting the power on Sir Tony will be duly ejected from the
-premises)</p>
-<p>Responsibilities are described in loving detail here:
-<a href="http://wiki.europython.eu/SessionTeam">http://wiki.europython.eu/SessionTeam</a></p>
-<p>Please think about it, and if you fancy it, sign up soon (on the wiki
-page above) because we're currently all a-flutter wondering how the heck
-we're going to manage this. :-)</p>
-<p>Thanks!</p>
 </div>
     </div>
     </article>
