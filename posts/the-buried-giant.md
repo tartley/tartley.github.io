@@ -2,7 +2,7 @@
 .. title: The Buried Giant
 .. slug: the-buried-giant
 .. date: 2021-10-25 10:16:53 UTC-05:00
-.. tags: media,book,fiction,novel,fantasy
+.. tags: media,book,fiction,novel,fantasy,ishiguro
 -->
 
 <span style="float: left">

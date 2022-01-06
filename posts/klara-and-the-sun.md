@@ -2,7 +2,7 @@
 .. title: Klara and the Sun
 .. slug: klara-and-the-sun
 .. date: 2022-01-04 16:06:39 UTC-06:00
-.. tags: media,book,fiction,novel,science-fiction
+.. tags: media,book,fiction,novel,science-fiction,ishiguro
 -->
 
 <span style="float: left">
@@ -26,7 +26,7 @@ inexperienced observation conveys everything we need to know about the
 dysfunctions of her tragic new family. She describes
 herself as feeling emotions, so the story is partly a discussion of what it
 means to be concious, to feel, as the humans around her are forced by
-circumstance into desparate schemes that expose the self-protective
+circumstance into desperate schemes that expose the self-protective
 aspects of their love.
 
 For all that, though, I'm not sure what to take away from it. Clearly the
