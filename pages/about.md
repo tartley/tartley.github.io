@@ -10,7 +10,7 @@
 
 A website dedicated to oneself has been described as the greatest act of hubris. Welcome aboard!
 
-* [@tartley@mastadon.social](https://mastodon.social/web/@tartley)
+* Email tartley at the domain tartley.com
 * [twitter.com/tartley](https://twitter.com/tartley)
 * [github.com/tartley](https://github.com/tartley)
 
