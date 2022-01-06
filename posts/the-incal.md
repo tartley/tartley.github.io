@@ -21,14 +21,14 @@
 ![The Incal 4 cover excerpt](/files/2022/the-incal-4-cover-part.webp)
 </span>
 
+*written by Alejandro Jodorowsky, art by Jean Giraud (aka Mœbius), 1980-88*
+
 This creative pairing also worked together on the unproduced 1970s movie of
 Dune, the one that was to have featured Salvador Dali, and presumably would
 have been pretty trippy - I mean, *even more* trippy than the David Lynch
 one turned out to be. Mœbius has had a long and glorious career, knighted
 for his art in his native France, and he worked on other movies such as
 Alien, Tron, The Fifth Element, and The Abyss.
-
-*written by Alejandro Jodorowsky, art by Jean Giraud (aka Mœbius), 1980-88*
 
 I grabbed this in the English translation from the original French, having been
 intrigued by the *Pocket Essential Alan Moore*'s description of it as a
