@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Writing C/C++ on Windows using g++ under Cygwin | tartley.com</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="https://www.tartley.com/posts/writing-cc-on-windows-using-g-under-cygwin/">
@@ -189,13 +190,13 @@ You can invoke it from the command line if you wish.</p>
 </code></pre>
 
 <p>Enter and save the following minimal program:</p>
-<pre class="code literal-block"><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<pre class="code literal-block"><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">printf</span> <span class="p">(</span><span class="s">"Hello world</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"Hello world</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre>
 
 <p>Notice that, while notepad is still open, you can no longer type
@@ -264,7 +265,7 @@ GUI environments, the user would have no choice but to spend all
 afternoon loading each program in turn and clicking the [compile]
 button. Knowing a little command line magic, however, makes it a
 ten-second job:</p>
-<pre class="code literal-block"><span></span><code>$ <span class="k">for</span> SOURCE in *.c<span class="p">;</span>
+<pre class="code literal-block"><span></span><code>$ <span class="k">for</span> SOURCE <span class="k">in</span> *.c<span class="p">;</span>
 &gt; <span class="k">do</span>
 &gt;   gcc <span class="nv">$SOURCE</span> -o <span class="si">${</span><span class="nv">SOURCE</span><span class="p">%.c</span><span class="si">}</span><span class="p">;</span>
 &gt; <span class="k">done</span>

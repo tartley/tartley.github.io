@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about testing)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/testing.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 10 Dec 2021 14:50:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Django testing 201 : Acceptance Tests vs Unit Tests</title><link>https://www.tartley.com/posts/django-testing-201-acceptance-tests-vs-unit-tests/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I'm finding that our Django project's tests fall into an uncomfortable
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about testing)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/testing.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 14 Jan 2022 21:16:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Django testing 201 : Acceptance Tests vs Unit Tests</title><link>https://www.tartley.com/posts/django-testing-201-acceptance-tests-vs-unit-tests/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;I'm finding that our Django project's tests fall into an uncomfortable
 middle-ground, halfway between end-to-end acceptance tests and proper
 unit tests. As such they don't exhibit the best qualities of either. I'd
 like to fix this.&lt;/p&gt;
@@ -1004,29 +1004,29 @@ quick Python script,
 &lt;a href="http://code.google.com/p/testwatcher/"&gt;testwatcher&lt;/a&gt;, which produces
 output very similar to watch, but is cross-platform, and features not
 just inverse text, but &lt;em&gt;yellow&lt;/em&gt; inverse text. Woo-hoo!&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ python example_test.py
-F.F
-&lt;span class="o"&gt;======================================================================&lt;/span&gt;
-FAIL: testThat &lt;span class="o"&gt;(&lt;/span&gt;__main__.TestWatcherTest&lt;span class="o"&gt;)&lt;/span&gt;
-----------------------------------------------------------------------
-Traceback &lt;span class="o"&gt;(&lt;/span&gt;most recent call last&lt;span class="o"&gt;)&lt;/span&gt;:
-  File &lt;span class="s2"&gt;"example_test.py"&lt;/span&gt;, line &lt;span class="m"&gt;12&lt;/span&gt;, in testThat
-    self.assertEquals&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;, randint&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;, &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt;
-AssertionError: &lt;span class="m"&gt;0&lt;/span&gt; !&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;4&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;$ python example_test&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;py&lt;/span&gt;
+&lt;span class="c"&gt;F&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;F&lt;/span&gt;
+&lt;span class="c"&gt;======================================================================&lt;/span&gt;
+&lt;span class="c"&gt;FAIL: testThat (__main__&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;TestWatcherTest)&lt;/span&gt;
+&lt;span class="nb"&gt;----------------------------------------------------------------------&lt;/span&gt;&lt;span class="c"&gt;&lt;/span&gt;
+&lt;span class="c"&gt;Traceback (most recent call last):&lt;/span&gt;
+&lt;span class="c"&gt;  File "example_test&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;py"&lt;/span&gt;&lt;span class="nt"&gt;,&lt;/span&gt;&lt;span class="c"&gt; line 12&lt;/span&gt;&lt;span class="nt"&gt;,&lt;/span&gt;&lt;span class="c"&gt; in testThat&lt;/span&gt;
+&lt;span class="c"&gt;    self&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;assertEquals(0&lt;/span&gt;&lt;span class="nt"&gt;,&lt;/span&gt;&lt;span class="c"&gt; randint(0&lt;/span&gt;&lt;span class="nt"&gt;,&lt;/span&gt;&lt;span class="c"&gt; 10))&lt;/span&gt;
+&lt;span class="c"&gt;AssertionError: 0 != 4&lt;/span&gt;
 
-&lt;span class="o"&gt;======================================================================&lt;/span&gt;
-FAIL: testThis &lt;span class="o"&gt;(&lt;/span&gt;__main__.TestWatcherTest&lt;span class="o"&gt;)&lt;/span&gt;
-----------------------------------------------------------------------
-Traceback &lt;span class="o"&gt;(&lt;/span&gt;most recent call last&lt;span class="o"&gt;)&lt;/span&gt;:
-  File &lt;span class="s2"&gt;"example_test.py"&lt;/span&gt;, line &lt;span class="m"&gt;9&lt;/span&gt;, in testThis
-    self.assertEquals&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'one'&lt;/span&gt;, object&lt;span class="o"&gt;())&lt;/span&gt;
-AssertionError: &lt;span class="s1"&gt;'one'&lt;/span&gt; !&lt;span class="o"&gt;=&lt;/span&gt; d24460&amp;gt;
+&lt;span class="c"&gt;======================================================================&lt;/span&gt;
+&lt;span class="c"&gt;FAIL: testThis (__main__&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;TestWatcherTest)&lt;/span&gt;
+&lt;span class="nb"&gt;----------------------------------------------------------------------&lt;/span&gt;&lt;span class="c"&gt;&lt;/span&gt;
+&lt;span class="c"&gt;Traceback (most recent call last):&lt;/span&gt;
+&lt;span class="c"&gt;  File "example_test&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;py"&lt;/span&gt;&lt;span class="nt"&gt;,&lt;/span&gt;&lt;span class="c"&gt; line 9&lt;/span&gt;&lt;span class="nt"&gt;,&lt;/span&gt;&lt;span class="c"&gt; in testThis&lt;/span&gt;
+&lt;span class="c"&gt;    self&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;assertEquals('one'&lt;/span&gt;&lt;span class="nt"&gt;,&lt;/span&gt;&lt;span class="c"&gt; object())&lt;/span&gt;
+&lt;span class="c"&gt;AssertionError: 'one' != d24460&lt;/span&gt;&lt;span class="nv"&gt;&amp;gt;&lt;/span&gt;&lt;span class="c"&gt;&lt;/span&gt;
 
-----------------------------------------------------------------------
-Ran &lt;span class="m"&gt;3&lt;/span&gt; tests in &lt;span class="m"&gt;0&lt;/span&gt;.001s
+&lt;span class="nb"&gt;----------------------------------------------------------------------&lt;/span&gt;&lt;span class="c"&gt;&lt;/span&gt;
+&lt;span class="c"&gt;Ran 3 tests in 0&lt;/span&gt;&lt;span class="nt"&gt;.&lt;/span&gt;&lt;span class="c"&gt;001s&lt;/span&gt;
 
-FAILED &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;failures&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-_
+&lt;span class="c"&gt;FAILED (failures=2)&lt;/span&gt;
+&lt;span class="c"&gt;_&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Incidentally, the above test makes it very clear that Python objects in

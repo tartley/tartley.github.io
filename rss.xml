@@ -1,5 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 06 Jan 2022 21:26:32 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Incal</title><link>https://www.tartley.com/posts/the-incal/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 14 Jan 2022 21:16:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Termination Shock</title><link>https://www.tartley.com/posts/termination-shock/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Termination Shock cover" src="https://www.tartley.com/files/2022/termination-shock-cover.webp"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Neal Stephenson, 2021&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It's another 700-page doorstop from the much-beloved author. It was enjoyable,
+but not life changing. Not as compelling as some of his previous. Reads a lot
+like a narrative wrapped around the author's own personal justifications for
+pro-active geo-engineering projects. Which, I have to admit, I was pretty
+horrified by the idea when I first heard about it - meddling further with a
+critical and horrifically complex dynamic system that we don't undertand, and
+all that.&lt;/p&gt;
+&lt;p&gt;The story presents the the scenario of countering the temperature rise caused
+by CO2 in the atmosphere by releasing high altitude sulphur dioxide, to reflect
+sunlight back into space. This mitigates many of the most prominent effects of
+climate change, such as high-temperatures, storms, forest fires, and sea-level
+rises.&lt;/p&gt;
+&lt;p&gt;It further presents the idea that it's relatively easy and cheap to do, and
+some nation or part thereof that cares the most - e.g. The Netherlands, or
+Venice, amongst others, are going to take a crack at it. So we might as well
+get used to the idea.&lt;/p&gt;
+&lt;p&gt;I don't know if it's simply the story making me increasingly familiar with the
+idea, or whether the depiction of the mechanism used genuinely quells some of
+my worries, in that it seems easy to start at a small scale, monitor the
+results, and then scale up as required, and the fail-safe is that the sulphur
+should quickly fall out of the air allegedly harmlessly, if we realize this was
+a bad idea. I've at least tempered my initial harshly negative viewpoint
+somewhat. So, mission accomplished, I guess?&lt;/p&gt;
+&lt;p&gt;I've probably read more pages by Stephenson than any other writer. Hmmm.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th align="right"&gt;Pages&lt;/th&gt;
+&lt;th align="right"&gt;Times read&lt;/th&gt;
+&lt;th align="right"&gt;Effective pages&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/825.Zodiac"&gt;Zodiac&lt;/a&gt; (1988)&lt;/td&gt;
+&lt;td align="right"&gt;308&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;308&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/40651883-snow-crash"&gt;Snow Crash&lt;/a&gt; (1992)&lt;/td&gt;
+&lt;td align="right"&gt;559&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;1,118&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/828.Interface"&gt;Interface&lt;/a&gt; (1994)&lt;/td&gt;
+&lt;td align="right"&gt;640&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;640&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/827.The_Diamond_Age"&gt;The Diamond Age&lt;/a&gt; (1995)&lt;/td&gt;
+&lt;td align="right"&gt;499&lt;/td&gt;
+&lt;td align="right"&gt;3&lt;/td&gt;
+&lt;td align="right"&gt;1,497&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/824.The_Cobweb"&gt;The Cobweb&lt;/a&gt; (1996)&lt;/td&gt;
+&lt;td align="right"&gt;448&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;448&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/40383049-in-the-beginning-was-the-command-line"&gt;In the Beginning... Was the Command Line&lt;/a&gt; (1999)&lt;/td&gt;
+&lt;td align="right"&gt;160&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;320&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/816.Cryptonomicon"&gt;Cryptonomicon&lt;/a&gt; (1999)&lt;/td&gt;
+&lt;td align="right"&gt;1,152&lt;/td&gt;
+&lt;td align="right"&gt;3&lt;/td&gt;
+&lt;td align="right"&gt;3,456&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/823.Quicksilver"&gt;Quicksilver&lt;/a&gt; (2003)&lt;/td&gt;
+&lt;td align="right"&gt;927&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;927&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/822.The_Confusion"&gt;The Confusion&lt;/a&gt; (2004)&lt;/td&gt;
+&lt;td align="right"&gt;815&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;815&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/116257.The_System_of_the_World"&gt;The System of the World&lt;/a&gt; (2004)&lt;/td&gt;
+&lt;td align="right"&gt;908&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;908&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/2845024-anathem"&gt;Anathem&lt;/a&gt; (2008)&lt;/td&gt;
+&lt;td align="right"&gt;937&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;1,874&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/10552338-reamde"&gt;Reamde&lt;/a&gt; (2011)&lt;/td&gt;
+&lt;td align="right"&gt;1,044&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;1,044&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/22816087-seveneves"&gt;Seveneves&lt;/a&gt; (2015)&lt;/td&gt;
+&lt;td align="right"&gt;880&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;880&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/57094295-termination-shock"&gt;Termination Shock&lt;/a&gt; (2021)&lt;/td&gt;
+&lt;td align="right"&gt;720&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;720&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;total&lt;/strong&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;strong&gt;9,837&lt;/strong&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;strong&gt;14,955&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Ten thousand pages, all from one author, or fifteen thousand if you include re-reads. Not bad!&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>environment</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/termination-shock/</guid><pubDate>Fri, 14 Jan 2022 15:20:55 GMT</pubDate></item><item><title>The Incal</title><link>https://www.tartley.com/posts/the-incal/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="The Incal 4 cover" src="https://www.tartley.com/files/2022/the-incal-4-cover.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span style="clear: right; float: right"&gt;
@@ -338,56 +470,4 @@ that it casts a shadow on anything else following on the same path.&lt;/p&gt;
 Peter Watts - real scientists, who are devastatingly smart, and are not afraid
 to dazzle their readers with it, even if that makes it a little hard going at
 times. Something about Children of Time was just too easygoing for me.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/children-of-time/</guid><pubDate>Wed, 10 Nov 2021 20:58:50 GMT</pubDate></item><item><title>The Buried Giant</title><link>https://www.tartley.com/posts/the-buried-giant/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="The Buried Giant cover" src="https://www.tartley.com/files/2021/the-buried-giant-cover.jpg"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Kazuo Ishiguro, 2015&lt;/em&gt; &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
-&lt;p&gt;A mythical tale, set in post-Arthurian England. Author Kazuo Ishiguro, Nobel
-prize winner for literature, is also famous for Klara and the Sun, Never Let
-Me Go, and The Remains of the Day (yes, that one about butlers.)&lt;/p&gt;
-&lt;p&gt;Ishiguro moved from Japan to England as a young child, and his insightful
-observation of English and Western culture and myth benefits from that
-transplant's perspective - at once deeply at home in England, and also
-an outsider to it.&lt;/p&gt;
-&lt;p&gt;The tale is populated by ragged peoples, affected by a pervasive amnesia.
-Elderly couple Axl and Beatrice abruptly decide to leave their village of damp,
-hobbit-like underground burrows to visit a son they'd forgotten they had.&lt;/p&gt;
-&lt;p&gt;Simlarly, other characters are inspired by a variety of classical sources, from
-Beowulf to Arthur's knight and nephew Sir Gawain, now old and prone to quixotic
-rants - hinting at the subconscious conflict his code of honor has with the
-dark means by which he and other knights formerly helped Arthur achieve the
-current uneasy peace between native Britons and invading Saxons, now occupying
-villages across the land.&lt;/p&gt;
-&lt;p&gt;The journey is perilous, encountering roaming ogres and deadly pixies, not
-to mention soldiers of the local lords, and deadly conflicts within the party
-itself.&lt;/p&gt;
-&lt;p&gt;But any action is relayed with cool distance. Either through the pervasive
-mental fog, or using expert fighters' clinical analysis of the minutia of
-stance or grip, or by foretelling the ebb and flow of a battle by analysing the
-terrain, then allowing the battle itself to take place off stage, only assumed
-to have happened, by characters who weren't there.&lt;/p&gt;
-&lt;p&gt;This muted indirectness is entirely in keeping with the ambiguous, dreamlike
-style of the book, which is heightened by the sing-song formalism of the
-characters' medieval speech, and the narrator's occasional surreal hint of
-relating this tale to contemporaries who live in some other, unidentifiable,
-historic time.&lt;/p&gt;
-&lt;p&gt;The journey eventually comes to revolve around the dispatch - or defence - of a
-dragon that is said to be the source of everyone's forgetfulness, and as this
-goal approaches, vague fears surface of what might be remembered when the
-mist lifts. Will Axl and Beatrice's treasured relationship survive the
-revelations of their pasts? Will the longstanding truce in the land survive
-the remembering of wartime battles and atrocities? Will Saxon resentment at
-Arthur's desperate misdeeds be stoked into resumption of the violent war of
-invasion? This is left unresolved by the novel's end, but as reader, we know
-that the Saxons did ultimately conquer all of England, displacing the Britons
-culturally and politically, and probably murdering a good number of them along
-the way.&lt;/p&gt;
-&lt;p&gt;Personally, I'm minded to think of ancient England here as being a root of
-modern Western culture, and the mist as an allegory for the bland ignorance of
-our own culture's atrocities. The deliberate forgetting, like the mist, clouds
-all our conciousnesses, making it hard for us to remember who we are. Why we're
-here. The silent resentment of crushed minorities and genocide survivors forms
-a pressure, struggling against the placating narrative that everything's OK
-now. But, contained, the pressure builds.&lt;/p&gt;
-&lt;p&gt;Truly a buried giant, indeed.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>fantasy</category><category>fiction</category><category>ishiguro</category><category>media</category><category>novel</category><guid>https://www.tartley.com/posts/the-buried-giant/</guid><pubDate>Mon, 25 Oct 2021 15:16:53 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/children-of-time/</guid><pubDate>Wed, 10 Nov 2021 20:58:50 GMT</pubDate></item></channel></rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about bash)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/bash.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 10 Dec 2021 15:04:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Automate Gnome keybindings</title><link>https://www.tartley.com/posts/automate-gnome-keybindings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Sick of manual GUI twiddling to fix inconsistent keybindings on various
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about bash)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/bash.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 14 Jan 2022 21:16:36 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Automate Gnome keybindings</title><link>https://www.tartley.com/posts/automate-gnome-keybindings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Sick of manual GUI twiddling to fix inconsistent keybindings on various
 computers. Solved once and for all, by a new script in my personal
 workstation setup bucket:&lt;/p&gt;
 &lt;p&gt;Warning: This:&lt;/p&gt;
@@ -12,7 +12,7 @@ workstation setup bucket:&lt;/p&gt;
     calendar and notifications window, which shadows my 'toggle window
     maximize vertically'.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
 
 &lt;span class="nv"&gt;kb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'org.gnome.desktop.wm.keybindings'&lt;/span&gt;
 
@@ -47,7 +47,8 @@ gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;
 gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ name &lt;span class="s2"&gt;"terminal"&lt;/span&gt;
 gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ &lt;span class="nb"&gt;command&lt;/span&gt; &lt;span class="s2"&gt;"terminal"&lt;/span&gt;
 gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ binding &lt;span class="s2"&gt;"t"&lt;/span&gt;
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Embedded in that is the ultimate solution to my longstanding irk with
 Unity and Gnome's default window switcher (alt-tab.) By default it
 groups windows of a single application together, requiring some extra
@@ -88,17 +89,19 @@ an empty pdf document. We restore `+o pipefail` again at the end.&lt;/p&gt;
 
 &lt;p&gt;produces&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;img alt="" src="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/postscript-formatted-man-pages/</guid><pubDate>Wed, 23 Aug 2017 01:34:02 GMT</pubDate></item><item><title>Show last command exit value in Bash shell prompt</title><link>https://www.tartley.com/posts/show-last-command-exit-value-in-bash-shell-prompt/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Stick something like this in your .bashrc file:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# display red exit value if it isn't zero&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# display red exit value if it isn't zero&lt;/span&gt;
 &lt;span class="nv"&gt;PROMPT_COMMAND&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'EXITVAL=$?; '&lt;/span&gt;&lt;span class="nv"&gt;$PROMPT_COMMAND&lt;/span&gt;
 &lt;span class="nv"&gt;GET_EXITVAL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'$(if [[ $EXITVAL != 0 ]]; then echo -n "\[\e[37;41;01m\] $EXITVAL \[\e[0m\] "; fi)'&lt;/span&gt;
 &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PS1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$GET_EXITVAL$PS1&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Command exit values other than zero are displayed in the subsequent
 prompt:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Check out the little red '1'" src="https://www.tartley.com/files/2009/02/last-exit-value.png"&gt;&lt;/p&gt;
 &lt;p&gt;(see the little red '1').&lt;/p&gt;
 &lt;p&gt;It's the&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="p"&gt;?#0&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
-&lt;/pre&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="p"&gt;?#0&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;bit which includes the last command exit value in the prompt, unless the
 value is zero, in which case nothing is displayed.&lt;/p&gt;&lt;/div&gt;</description><category>bash</category><category>geek</category><category>terminal</category><guid>https://www.tartley.com/posts/show-last-command-exit-value-in-bash-shell-prompt/</guid><pubDate>Thu, 05 Feb 2009 18:11:57 GMT</pubDate></item></channel></rss>

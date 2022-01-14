@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 22) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://www.tartley.com/index-22.html">
@@ -182,29 +183,29 @@ Create a second profile.</p>
 <p>Substitute those directories into this firefox.desktop file, where I've
 marked 'XXX':</p>
 <pre class="code literal-block"><span></span><code><span class="cp"># Gnome3 .desktop file for Firefox with multiple profiles</span>
-<span class="p">[</span><span class="n">Desktop</span> <span class="n">Entry</span><span class="p">]</span>
-<span class="n">Version</span><span class="o">=</span><span class="mf">1.0</span>
-<span class="n">Name</span><span class="o">=</span><span class="n">Firefox</span>
-<span class="n">Comment</span><span class="o">=</span><span class="n">Browse</span> <span class="n">the</span> <span class="n">web</span>
-<span class="n">GenericName</span><span class="o">=</span><span class="n">Web</span> <span class="n">Browser</span>
-<span class="n">Keywords</span><span class="o">=</span><span class="n">Internet</span><span class="p">;</span><span class="n">WWW</span><span class="p">;</span><span class="n">Browser</span><span class="p">;</span><span class="n">Web</span><span class="p">;</span><span class="n">Explorer</span>
-<span class="n">Type</span><span class="o">=</span><span class="n">Application</span>
-<span class="n">Exec</span><span class="o">=</span><span class="n">firefox</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">remote</span> <span class="o">%</span><span class="n">u</span>
-<span class="n">Terminal</span><span class="o">=</span><span class="nb">false</span>
-<span class="n">X</span><span class="o">-</span><span class="n">MultipleArgs</span><span class="o">=</span><span class="nb">false</span>
-<span class="n">Icon</span><span class="o">=</span><span class="n">firefox</span>
-<span class="n">Categories</span><span class="o">=</span><span class="n">GNOME</span><span class="p">;</span><span class="n">GTK</span><span class="p">;</span><span class="n">Network</span><span class="p">;</span><span class="n">WebBrowser</span><span class="p">;</span>
-<span class="n">Actions</span><span class="o">=</span><span class="n">home</span><span class="p">;</span><span class="n">work</span>
-<span class="n">MimeType</span><span class="o">=</span><span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">;</span><span class="n">text</span><span class="o">/</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">xhtml</span><span class="o">+</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">rss</span><span class="o">+</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">rdf</span><span class="o">+</span><span class="n">xml</span><span class="p">;</span><span class="n">image</span><span class="o">/</span><span class="n">gif</span><span class="p">;</span><span class="n">image</span><span class="o">/</span><span class="n">jpeg</span><span class="p">;</span><span class="n">image</span><span class="o">/</span><span class="n">png</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">http</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">https</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">ftp</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">chrome</span><span class="p">;</span><span class="n">video</span><span class="o">/</span><span class="n">webm</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">x</span><span class="o">-</span><span class="n">xpinstall</span><span class="p">;</span>
-<span class="n">StartupNotify</span><span class="o">=</span><span class="nb">true</span>
+<span class="p">[</span><span class="n">Desktop</span><span class="w"> </span><span class="n">Entry</span><span class="p">]</span><span class="w"></span>
+<span class="n">Version</span><span class="o">=</span><span class="mf">1.0</span><span class="w"></span>
+<span class="n">Name</span><span class="o">=</span><span class="n">Firefox</span><span class="w"></span>
+<span class="n">Comment</span><span class="o">=</span><span class="n">Browse</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">web</span><span class="w"></span>
+<span class="n">GenericName</span><span class="o">=</span><span class="n">Web</span><span class="w"> </span><span class="n">Browser</span><span class="w"></span>
+<span class="n">Keywords</span><span class="o">=</span><span class="n">Internet</span><span class="p">;</span><span class="n">WWW</span><span class="p">;</span><span class="n">Browser</span><span class="p">;</span><span class="n">Web</span><span class="p">;</span><span class="n">Explorer</span><span class="w"></span>
+<span class="n">Type</span><span class="o">=</span><span class="n">Application</span><span class="w"></span>
+<span class="n">Exec</span><span class="o">=</span><span class="n">firefox</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">remote</span><span class="w"> </span><span class="o">%</span><span class="n">u</span><span class="w"></span>
+<span class="n">Terminal</span><span class="o">=</span><span class="nb">false</span><span class="w"></span>
+<span class="n">X</span><span class="o">-</span><span class="n">MultipleArgs</span><span class="o">=</span><span class="nb">false</span><span class="w"></span>
+<span class="n">Icon</span><span class="o">=</span><span class="n">firefox</span><span class="w"></span>
+<span class="n">Categories</span><span class="o">=</span><span class="n">GNOME</span><span class="p">;</span><span class="n">GTK</span><span class="p">;</span><span class="n">Network</span><span class="p">;</span><span class="n">WebBrowser</span><span class="p">;</span><span class="w"></span>
+<span class="n">Actions</span><span class="o">=</span><span class="n">home</span><span class="p">;</span><span class="n">work</span><span class="w"></span>
+<span class="n">MimeType</span><span class="o">=</span><span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">;</span><span class="n">text</span><span class="o">/</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">xhtml</span><span class="o">+</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">rss</span><span class="o">+</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">rdf</span><span class="o">+</span><span class="n">xml</span><span class="p">;</span><span class="n">image</span><span class="o">/</span><span class="n">gif</span><span class="p">;</span><span class="n">image</span><span class="o">/</span><span class="n">jpeg</span><span class="p">;</span><span class="n">image</span><span class="o">/</span><span class="n">png</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">http</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">https</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">ftp</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">chrome</span><span class="p">;</span><span class="n">video</span><span class="o">/</span><span class="n">webm</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">x</span><span class="o">-</span><span class="n">xpinstall</span><span class="p">;</span><span class="w"></span>
+<span class="n">StartupNotify</span><span class="o">=</span><span class="nb">true</span><span class="w"></span>
 
-<span class="p">[</span><span class="n">Desktop</span> <span class="n">Action</span> <span class="n">home</span><span class="p">]</span>
-<span class="n">Name</span><span class="o">=</span><span class="n">Firefox</span> <span class="p">(</span><span class="n">home</span><span class="p">)</span>
-<span class="n">Exec</span><span class="o">=</span><span class="n">firefox</span> <span class="o">--</span><span class="n">profile</span> <span class="p">.</span><span class="n">mozilla</span><span class="o">/</span><span class="n">firefox</span><span class="o">/</span><span class="n">XXX</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">remote</span> <span class="o">%</span><span class="n">u</span>
+<span class="p">[</span><span class="n">Desktop</span><span class="w"> </span><span class="n">Action</span><span class="w"> </span><span class="n">home</span><span class="p">]</span><span class="w"></span>
+<span class="n">Name</span><span class="o">=</span><span class="n">Firefox</span><span class="w"> </span><span class="p">(</span><span class="n">home</span><span class="p">)</span><span class="w"></span>
+<span class="n">Exec</span><span class="o">=</span><span class="n">firefox</span><span class="w"> </span><span class="o">--</span><span class="n">profile</span><span class="w"> </span><span class="p">.</span><span class="n">mozilla</span><span class="o">/</span><span class="n">firefox</span><span class="o">/</span><span class="n">XXX</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">remote</span><span class="w"> </span><span class="o">%</span><span class="n">u</span><span class="w"></span>
 
-<span class="p">[</span><span class="n">Desktop</span> <span class="n">Action</span> <span class="n">work</span><span class="p">]</span>
-<span class="n">Name</span><span class="o">=</span><span class="n">Firefox</span> <span class="p">(</span><span class="n">work</span><span class="p">)</span>
-<span class="n">Exec</span><span class="o">=</span><span class="n">firefox</span> <span class="o">--</span><span class="n">profile</span> <span class="p">.</span><span class="n">mozilla</span><span class="o">/</span><span class="n">firefox</span><span class="o">/</span><span class="n">XXX</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">remote</span> <span class="o">%</span><span class="n">u</span>
+<span class="p">[</span><span class="n">Desktop</span><span class="w"> </span><span class="n">Action</span><span class="w"> </span><span class="n">work</span><span class="p">]</span><span class="w"></span>
+<span class="n">Name</span><span class="o">=</span><span class="n">Firefox</span><span class="w"> </span><span class="p">(</span><span class="n">work</span><span class="p">)</span><span class="w"></span>
+<span class="n">Exec</span><span class="o">=</span><span class="n">firefox</span><span class="w"> </span><span class="o">--</span><span class="n">profile</span><span class="w"> </span><span class="p">.</span><span class="n">mozilla</span><span class="o">/</span><span class="n">firefox</span><span class="o">/</span><span class="n">XXX</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">remote</span><span class="w"> </span><span class="o">%</span><span class="n">u</span><span class="w"></span>
 </code></pre>
 
 <p>Save the above as firefox.desktop and install using:</p>
@@ -245,7 +246,7 @@ workstation setup bucket:</p>
     calendar and notifications window, which shadows my 'toggle window
     maximize vertically'.</li>
 </ul>
-<pre class="code literal-block"><span class="ch">#!/usr/bin/env bash</span>
+<pre class="code literal-block"><span></span><code><span class="ch">#!/usr/bin/env bash</span>
 
 <span class="nv">kb</span><span class="o">=</span><span class="s1">'org.gnome.desktop.wm.keybindings'</span>
 
@@ -280,7 +281,8 @@ gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybind
 gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ name <span class="s2">"terminal"</span>
 gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ <span class="nb">command</span> <span class="s2">"terminal"</span>
 gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ binding <span class="s2">"t"</span>
-</pre>
+</code></pre>
+
 <p>Embedded in that is the ultimate solution to my longstanding irk with
 Unity and Gnome's default window switcher (alt-tab.) By default it
 groups windows of a single application together, requiring some extra

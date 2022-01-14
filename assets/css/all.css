@@ -858,3 +858,15 @@ article.post-micro {
     }
 }
 
+
+table, th, td {
+    border: 1px solid #888888;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+

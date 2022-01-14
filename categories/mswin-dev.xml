@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about mswin-dev)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/mswin-dev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 10 Dec 2021 14:50:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>£ key in Windows on a US laptop keyboard, done right.</title><link>https://www.tartley.com/posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The usual solution to typing non-US characters on a US keyboard in
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about mswin-dev)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/mswin-dev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 14 Jan 2022 21:16:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>£ key in Windows on a US laptop keyboard, done right.</title><link>https://www.tartley.com/posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;The usual solution to typing non-US characters on a US keyboard in
 Windows is to hold left-alt, then type on the numeric keypad:&lt;/p&gt;
 &lt;p&gt;£   Left-alt + 0163&lt;/p&gt;
 &lt;p&gt;€   Left-alt + 0128&lt;/p&gt;
@@ -158,7 +158,7 @@ old (now offline) blog post by Jeff Winkler.&lt;/p&gt;&lt;/div&gt;</description>
 &lt;p&gt;To make them work properly, use
 &lt;a href="http://adoxa.110mb.com/ansicon/index.html"&gt;AnsiCon&lt;/a&gt;. Unzip it somewhere
 permanent (eg. &lt;code&gt;%ProgramFiles%\ansicon&lt;/code&gt;) and install it with:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;ansicon.exe -i&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ansicon.exe -i
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;start a new terminal, and lo:&lt;/p&gt;
@@ -192,7 +192,7 @@ machine-parsing of the text:&lt;/p&gt;
 codes&lt;/a&gt;
 into your &lt;a href="http://ss64.com/nt/prompt.html"&gt;prompt&lt;/a&gt;, by setting
 environment variable PROMPT:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;set PROMPT=$E[0;36m$P$_$E[36;1m$G$E[0m$S&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;set PROMPT=$E[0;36m$P$_$E[36;1m$G$E[0m$S
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img alt="Colored Prompt" src="https://www.tartley.com/files/2010/07/ansicon04-prompt.png"&gt;&lt;/p&gt;

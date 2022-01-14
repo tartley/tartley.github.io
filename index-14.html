@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 14) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://www.tartley.com/index-14.html">
@@ -382,18 +383,20 @@ to indulge us, you can buy a copy
     </header><div class="e-content entry-content">
     <div>
 <p>Stick something like this in your .bashrc file:</p>
-<pre class="code literal-block"><span class="c1"># display red exit value if it isn't zero</span>
+<pre class="code literal-block"><span></span><code><span class="c1"># display red exit value if it isn't zero</span>
 <span class="nv">PROMPT_COMMAND</span><span class="o">=</span><span class="s1">'EXITVAL=$?; '</span><span class="nv">$PROMPT_COMMAND</span>
 <span class="nv">GET_EXITVAL</span><span class="o">=</span><span class="s1">'$(if [[ $EXITVAL != 0 ]]; then echo -n "\[\e[37;41;01m\] $EXITVAL \[\e[0m\] "; fi)'</span>
 <span class="nb">export</span> <span class="nv">PS1</span><span class="o">=</span><span class="s2">"</span><span class="nv">$GET_EXITVAL$PS1</span><span class="s2">"</span>
-</pre>
+</code></pre>
+
 <p>Command exit values other than zero are displayed in the subsequent
 prompt:</p>
 <p><img alt="Check out the little red '1'" src="files/2009/02/last-exit-value.png"></p>
 <p>(see the little red '1').</p>
 <p>It's the</p>
-<pre class="code literal-block"><span class="si">${</span><span class="p">?#0</span><span class="si">}</span>
-</pre>
+<pre class="code literal-block"><span></span><code><span class="si">${</span><span class="p">?#0</span><span class="si">}</span>
+</code></pre>
+
 <p>bit which includes the last command exit value in the prompt, unless the
 value is zero, in which case nothing is displayed.</p>
 </div>
@@ -648,7 +651,8 @@ somewhere between the two.</p>
         </div>
     </header><div class="e-content entry-content">
     <div>
-<p><img alt="wall-e" src="files/2009/01/wall-e.jpg"></p>
+<p><span style="float: left">
+<img alt="wall-e" src="files/2009/01/wall-e.jpg"></span></p>
 <p><em>Director: Andrew Stanton</em></p>
 <p>I resisted for quite a while, expecting cloying superficiality. I was
 wrong. Or at least I <em>like</em> this kind of cloying superficiality. Clearly
@@ -661,6 +665,7 @@ Niven</a>
 reference and a serious environmental message in the background to boot.
 Huge fun. I watched it twice.</p>
 <p>Rating: 8/10 - Thoroughly engaging, emotive and humorous.</p>
+<p><br style="clear: left"></p>
 </div>
     </div>
     </article>

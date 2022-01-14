@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Understanding git rebase so it sticks | tartley.com</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="https://www.tartley.com/posts/understanding-rebase-so-it-sticks/">
@@ -20,7 +21,8 @@ my notes to help me remember.
 Rebase is traditionally documented as:
 git rebase [--onto newbase] [upstream [branch]]
 
-This is c">
+
+This is ">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2014-02-07T10:28:37-06:00">
 <meta property="article:tag" content="git">
@@ -98,12 +100,14 @@ This is c">
 <p>I endlessly misremember how to use git rebase. That ends today. Here are
 my notes to help me remember.</p>
 <p>Rebase is traditionally documented as:</p>
-<pre class="code literal-block">git rebase <span class="o">[</span>--onto newbase<span class="o">]</span> <span class="o">[</span>upstream <span class="o">[</span>branch<span class="o">]]</span>
-</pre>
+<pre class="code literal-block"><span></span><code>git rebase <span class="o">[</span>--onto newbase<span class="o">]</span> <span class="o">[</span>upstream <span class="o">[</span>branch<span class="o">]]</span>
+</code></pre>
+
 <p>This is confusing for several reasons. A slight improvement is to rename
 the args:</p>
-<pre class="code literal-block">git rebase <span class="o">[</span>--onto target<span class="o">]</span> <span class="o">[</span>exclude <span class="o">[</span>include<span class="o">]]</span>
-</pre>
+<pre class="code literal-block"><span></span><code>git rebase <span class="o">[</span>--onto target<span class="o">]</span> <span class="o">[</span>exclude <span class="o">[</span>include<span class="o">]]</span>
+</code></pre>
+
 <p>Where:</p>
 <ul>
 <li>
@@ -120,39 +124,45 @@ the args:</p>
     it defaults to the value of <code>exclude</code>.</li>
 </ul>
 <p>Hence, a simple before and after:</p>
-<pre class="code literal-block">o---o---o---o---o---o exclude
+<pre class="code literal-block"><span></span><code>o---o---o---o---o---o exclude
      \
       1---2---3 current branch
                 or include
-</pre>
-<pre class="code literal-block">git rebase exclude <span class="o">[</span>include<span class="o">]</span>
-</pre>
-<pre class="code literal-block">                exclude
+</code></pre>
+
+<pre class="code literal-block"><span></span><code>git rebase exclude <span class="o">[</span>include<span class="o">]</span>
+</code></pre>
+
+<pre class="code literal-block"><span></span><code>                exclude
                 v
 o---o---o---o---o---1---2---3 current branch
                               or include
-</pre>
+</code></pre>
+
 <p>See how the commits to be transplanted start at <code>include</code> and go back to
 the common ancestor of that and <code>exclude</code>. Since <code>--onto</code> isn't
 specified, <code>exclude</code> is also used as the transplant destination.</p>
 <p>Or a more complex one:</p>
-<pre class="code literal-block"> o---o---o---o---o target
+<pre class="code literal-block"><span></span><code> o---o---o---o---o target
       \
        o---o---o exclude
             \
              1---2 current branch
                    or include
-</pre>
-<pre class="code literal-block">git rebase --onto target exclude <span class="o">[</span>include<span class="o">]</span>
-</pre>
-<pre class="code literal-block">                    target
+</code></pre>
+
+<pre class="code literal-block"><span></span><code>git rebase --onto target exclude <span class="o">[</span>include<span class="o">]</span>
+</code></pre>
+
+<pre class="code literal-block"><span></span><code>                    target
                     v
     o---o---o---o---o---1---2 current branch
          \                    or include
           o---o---o
                   ^
                   exclude
-</pre>
+</code></pre>
+
 <p>Again, the commits to be transplanted are defined by <code>include</code> and
 <code>exclude</code>, but this time a separate destination is specified using
 <code>--onto</code>.</p>

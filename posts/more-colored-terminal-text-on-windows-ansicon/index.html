@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>More Colored Terminal text on Windows: AnsiCon | tartley.com</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="https://www.tartley.com/posts/more-colored-terminal-text-on-windows-ansicon/">
@@ -100,7 +101,7 @@ permanent (eg. %ProgramFiles%\ansicon) and install ">
 <p>To make them work properly, use
 <a href="http://adoxa.110mb.com/ansicon/index.html">AnsiCon</a>. Unzip it somewhere
 permanent (eg. <code>%ProgramFiles%\ansicon</code>) and install it with:</p>
-<pre class="code literal-block"><span></span><code><span class="err">ansicon.exe -i</span>
+<pre class="code literal-block"><span></span><code>ansicon.exe -i
 </code></pre>
 
 <p>start a new terminal, and lo:</p>
@@ -134,7 +135,7 @@ machine-parsing of the text:</p>
 codes</a>
 into your <a href="http://ss64.com/nt/prompt.html">prompt</a>, by setting
 environment variable PROMPT:</p>
-<pre class="code literal-block"><span></span><code><span class="err">set PROMPT=$E[0;36m$P$_$E[36;1m$G$E[0m$S</span>
+<pre class="code literal-block"><span></span><code>set PROMPT=$E[0;36m$P$_$E[36;1m$G$E[0m$S
 </code></pre>
 
 <p><img alt="Colored Prompt" src="../../files/2010/07/ansicon04-prompt.png"></p>

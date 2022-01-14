@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 17) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://www.tartley.com/index-17.html">
@@ -266,9 +267,9 @@ transparent pixels are saved with the correct RGB values, and the plugin
 demonstrated in the video helps to automate this.</p>
 <p>The alternative solution, is to modify the RGBA values in the texture,
 by pre-multiplying the RGB values by the A value. ie:</p>
-<pre class="code literal-block"><span></span><code><span class="err">R = R * A</span>
-<span class="err">G = G * A</span>
-<span class="err">B = B * A</span>
+<pre class="code literal-block"><span></span><code>R = R * A
+G = G * A
+B = B * A
 </code></pre>
 
 <p>(where all values range from 0.0 to 1.0)</p>

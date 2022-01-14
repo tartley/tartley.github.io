@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Download audio from YouTube | tartley.com</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="https://www.tartley.com/posts/download-audio-from-youtube/">
@@ -18,10 +19,11 @@
 <meta property="og:description" content="Install ffmpeg:
 sudo apt install ffmpeg
 
+
 Install youtube-dl, a tool to download YouTube videos. Using apt installs a
 version that's too old to work, so:
 pip install --user pipsi
-pipsi install youtube-">
+pipsi install youtube">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2021-05-13T11:18:33-05:00">
 <meta property="article:tag" content="command-line">
@@ -99,17 +101,20 @@ pipsi install youtube-">
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>Install ffmpeg:</p>
-<pre class="code literal-block">sudo apt install ffmpeg
-</pre>
+<pre class="code literal-block"><span></span><code>sudo apt install ffmpeg
+</code></pre>
+
 <p>Install <code>youtube-dl</code>, a tool to download YouTube videos. Using <code>apt</code> installs a
 version that's too old to work, so:</p>
-<pre class="code literal-block">pip install --user pipsi
+<pre class="code literal-block"><span></span><code>pip install --user pipsi
 pipsi install youtube-dl
-</pre>
+</code></pre>
+
 <h3>The best way</h3>
 <p>Tell youtube-dl to download the audio:</p>
-<pre class="code literal-block">youtube-dl -x --audio-format<span class="o">=</span>best URL
-</pre>
+<pre class="code literal-block"><span></span><code>youtube-dl -x --audio-format<span class="o">=</span>best URL
+</code></pre>
+
 <p>Where:</p>
 <ul>
 <li>
@@ -129,12 +134,14 @@ benefit of those lossless formats - mp3 is fine for
 extracting audio locally, and the download gets throttled by YouTube in some
 way, which of late is very slow indeed.</p>
 <p>Download the video from YouTube:</p>
-<pre class="code literal-block">youtube-dl URL
-</pre>
+<pre class="code literal-block"><span></span><code>youtube-dl URL
+</code></pre>
+
 <p>This results in a webm file. I have no idea what that is, and am relieved
 to discover that converting it into an mp3 requires just:</p>
-<pre class="code literal-block">ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
-</pre>
+<pre class="code literal-block"><span></span><code>ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
+</code></pre>
+
 <p>Where <code>-vn</code> disables video in the output.</p>
 </div>
     </div>

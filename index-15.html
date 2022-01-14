@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 15) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
 <link rel="canonical" href="https://www.tartley.com/index-15.html">
@@ -266,29 +267,29 @@ quick Python script,
 <a href="http://code.google.com/p/testwatcher/">testwatcher</a>, which produces
 output very similar to watch, but is cross-platform, and features not
 just inverse text, but <em>yellow</em> inverse text. Woo-hoo!</p>
-<pre class="code literal-block"><span></span><code>$ python example_test.py
-F.F
-<span class="o">======================================================================</span>
-FAIL: testThat <span class="o">(</span>__main__.TestWatcherTest<span class="o">)</span>
-----------------------------------------------------------------------
-Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
-  File <span class="s2">"example_test.py"</span>, line <span class="m">12</span>, in testThat
-    self.assertEquals<span class="o">(</span><span class="m">0</span>, randint<span class="o">(</span><span class="m">0</span>, <span class="m">10</span><span class="o">))</span>
-AssertionError: <span class="m">0</span> !<span class="o">=</span> <span class="nv">4</span>
+<pre class="code literal-block"><span></span><code><span class="c">$ python example_test</span><span class="nt">.</span><span class="c">py</span>
+<span class="c">F</span><span class="nt">.</span><span class="c">F</span>
+<span class="c">======================================================================</span>
+<span class="c">FAIL: testThat (__main__</span><span class="nt">.</span><span class="c">TestWatcherTest)</span>
+<span class="nb">----------------------------------------------------------------------</span><span class="c"></span>
+<span class="c">Traceback (most recent call last):</span>
+<span class="c">  File "example_test</span><span class="nt">.</span><span class="c">py"</span><span class="nt">,</span><span class="c"> line 12</span><span class="nt">,</span><span class="c"> in testThat</span>
+<span class="c">    self</span><span class="nt">.</span><span class="c">assertEquals(0</span><span class="nt">,</span><span class="c"> randint(0</span><span class="nt">,</span><span class="c"> 10))</span>
+<span class="c">AssertionError: 0 != 4</span>
 
-<span class="o">======================================================================</span>
-FAIL: testThis <span class="o">(</span>__main__.TestWatcherTest<span class="o">)</span>
-----------------------------------------------------------------------
-Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
-  File <span class="s2">"example_test.py"</span>, line <span class="m">9</span>, in testThis
-    self.assertEquals<span class="o">(</span><span class="s1">'one'</span>, object<span class="o">())</span>
-AssertionError: <span class="s1">'one'</span> !<span class="o">=</span> d24460&gt;
+<span class="c">======================================================================</span>
+<span class="c">FAIL: testThis (__main__</span><span class="nt">.</span><span class="c">TestWatcherTest)</span>
+<span class="nb">----------------------------------------------------------------------</span><span class="c"></span>
+<span class="c">Traceback (most recent call last):</span>
+<span class="c">  File "example_test</span><span class="nt">.</span><span class="c">py"</span><span class="nt">,</span><span class="c"> line 9</span><span class="nt">,</span><span class="c"> in testThis</span>
+<span class="c">    self</span><span class="nt">.</span><span class="c">assertEquals('one'</span><span class="nt">,</span><span class="c"> object())</span>
+<span class="c">AssertionError: 'one' != d24460</span><span class="nv">&gt;</span><span class="c"></span>
 
-----------------------------------------------------------------------
-Ran <span class="m">3</span> tests in <span class="m">0</span>.001s
+<span class="nb">----------------------------------------------------------------------</span><span class="c"></span>
+<span class="c">Ran 3 tests in 0</span><span class="nt">.</span><span class="c">001s</span>
 
-FAILED <span class="o">(</span><span class="nv">failures</span><span class="o">=</span><span class="m">2</span><span class="o">)</span>
-_
+<span class="c">FAILED (failures=2)</span>
+<span class="c">_</span>
 </code></pre>
 
 <p>Incidentally, the above test makes it very clear that Python objects in
