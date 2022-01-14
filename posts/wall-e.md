@@ -2,11 +2,13 @@
 .. title: Wall-E
 .. slug: wall-e
 .. date: 2009-01-11 23:39:38-06:00
-.. tags: media,movie,fiction,animation
+.. tags: media,movie,fiction,animation,environment
 .. type: text
 -->
 
+<span style="float: left">
 ![wall-e](/files/2009/01/wall-e.jpg)
+</span>
 
 *Director: Andrew Stanton*
 
@@ -22,3 +24,5 @@ reference and a serious environmental message in the background to boot.
 Huge fun. I watched it twice.
 
 Rating: 8/10 - Thoroughly engaging, emotive and humorous.
+
+<br style="clear: left" />
