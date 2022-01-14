@@ -17,7 +17,7 @@ This post rescues content from a series of tweets I wrote in 2018.
 ![The Structure of Scientific Revolutions cover](/files/2020/the-structure-of-scientific-revolutions-cover.jpg)
 </span>
 
-_by Thomas S. Kuhn, 1962._
+_by Thomas S. Kuhn, 1962._ ![spoilers](/files/spoilers.svg)
 
 I loved *The Structure of Scientfic Revolutions*.
 It was recommended to me as having similar impact to undergraduate
