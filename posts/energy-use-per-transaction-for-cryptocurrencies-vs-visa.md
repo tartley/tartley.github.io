@@ -2,7 +2,7 @@
 .. title: Energy use per transaction for cryptocurrencies vs Visa
 .. slug: energy-use-per-transaction-for-cryptocurrencies-vs-visa
 .. date: 2021-05-13 16:09:33 UTC-05:00
-.. tags: til,cryptocurrency,chia
+.. tags: til,cryptocurrency,environment
 -->
 
 For my own calibration, approximate current energy use for a single transaction
