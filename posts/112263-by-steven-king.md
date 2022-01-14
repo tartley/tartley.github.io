@@ -6,7 +6,7 @@
 -->
 
 <span style="float: left">
-![Ra cover](/files/2021/112263-cover.jpg)
+![11/22/63 cover](/files/2021/112263-cover.jpg)
 </span>
 
 *by Steven King, 2011*
