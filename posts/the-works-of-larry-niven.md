@@ -41,20 +41,21 @@ The aliens themselves weren't quite like any I've read before or since. The
 creepy sessile but sentient Grogs. The mysterious Outsiders, information
 brokers who are able to answer any question humanity has - if only we could
 afford the price. The warlike, carnivorous Kzin (surely an inspiration for
-Wing Commander's Kilrathi) - picture a species of vicious Chewbacca, forever
+Wing Commander's Kilrathi) - picture a species of vicious Chewbaccas, forever
 attacking humanity before they were ready. You can't help but almost feel sorry
 for them. By the times of Ringworld, representatives such as Speaker to Animals
 (named for his profession, interfacing with humans) are sufficiently adapted to
-working alongside humans to become a formidable ally.
+working alongside humans to become formidable allies.
 
 Perhaps Niven's greatest alien race was The Pierson's Puppeteers - like an
 ostrich with two necks, each topped with a single eye and dexterous mouth,
-while the brain resides safely in the body. The body plan makes so much sense
-in action. Mobile eyes mean they routinely view objects from both sides
-simultaneously, perfect for close-up detailed work, using the hand-like mouths.
-Or, spread the necks wide for amazing stereoscopic vision when distance
-estimation matters. And that gestural laugh - eyes turned inward to briefly
-gaze into one another, observing the self, no mirror required.
+while the brain resides safely in the body (pictured below, on the cover for
+Neutron star). The body plan makes so much sense in action. Mobile eyes mean
+they routinely view objects from both sides simultaneously, perfect for
+close-up detailed work, using the hand-like mouths. Or, spread the necks wide
+for amazing stereoscopic vision when distance estimation matters. And that
+gestural laugh - eyes turned inward to briefly gaze into one another, observing
+the self, no mirror required.
 
 The psychology is also exquisite. Herbivores and herd-beasts, the Puppeteers
 are inveterate cowards. No human has ever met a sane one - only their more
@@ -70,7 +71,8 @@ they are us. On humanity's original homeworld, long before introduction to
 planet Earth, a symbiotic plant grows which young humans find uninteresting,
 but in middle-age they develop a compulsion to binge on it. It activates genes
 that provoke startling physiological and psychological changes, transforming
-the human from a *breeder*, into a *protector* - stronger, tougher, much
+the human from a *breeder*, into a *protector* - stronger, and with large
+joints for better leverage, with a tough wrinkled armour-like skin, much
 smarter, with a second heart, and ruthlessly dedicated to just one goal -
 protecting their own offspring. It is protectors who, it turns out many novels
 later, originally built the Ringworld. The absence of the transforming plant on
@@ -84,18 +86,18 @@ Wonders like these, from the novels and short stories set in his Known Space
 universe kept me up at night, and shaped the way I thought. Although Niven's
 writing had some mildly conservative tendencies, especially when under the
 influence of his militaristic writing partner Jerry Pournelle, it is also
-permeated with a very liberal philosophy of non-judgemental tolerance of other
-lifestyles, a philosophy made explicit in one of *Niven's Laws*: "The only
-universal message in science fiction: There exist minds that think as well as
-you do, but differently."
+permeated with the necessity of a very liberal philosophy of non-judgemental
+tolerance of alien lifestyles, a philosophy made explicit in one of *Niven's
+Laws*: "The only universal message in science fiction: There exist minds that
+think as well as you do, but differently."
 
 It's clear I wasn't the only one spellbound. Niven's ideas have been
 influential throughout science fiction culture. Bank's Culture's Orbitals and
 the understandably much rarer full Rings are clear descendants, as is the
 eponymous megastructure/superweapon of the juggernaut *Halo* franchise, and
-countless other works. Niven's meticulous hard-SF approach to fantasy in *The
-Magic Goes Away*, and in particular his concept of the conservation of *mana*,
-was an influence on *Magic: The Gathering*, as acknowledged in the card
+countless other imitators. Niven's meticulous hard-SF approach to fantasy in
+*The Magic Goes Away*, and in particular his concept of the conservation of
+*mana*, was an influence on *Magic: The Gathering*, as acknowledged in the card
 Nevinyrral's Disk (Niven's name backwards), which uses magic to simultaneously
 accelerate it's own spin, and to hold itself together, thus rapidly using up
 all the mana in an area, rendering further magic unusable. Movies such as
@@ -156,7 +158,7 @@ the number of times I re-read each one, nearly twenty five thousand pages. What
 can I say, I was a teenager, with seemingly endless oceans of time.
 
 The following are just his books that I've read. He has many others, especially
-ones that are more recent than these.
+many that are more recent than these.
 
 | Title              | Pages | Times read | Effective pages |
 |-----------------------------------------|----:|--:|------:|
