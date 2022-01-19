@@ -11,13 +11,14 @@
 
 *by Neal Stephenson, 2021*
 
-It's another 700-page doorstop from the much-beloved author. It was enjoyable,
-but not life changing. Not as compelling as some of his previous. Reads a lot
-like a narrative wrapped around the author's own personal justifications for
-pro-active geo-engineering projects. Which, I have to admit, I was pretty
-horrified by the idea when I first heard about it - meddling further with a
-critical and horrifically complex dynamic system that we don't undertand, and
-all that.
+It's another 720-page doorstop from the much-beloved author (which is actually
+slightly slimmer than his average book, which would be 770 pages). It was
+enjoyable, but not life changing. Not as compelling as some of his previous.
+Reads a lot like a narrative wrapped around the author's own personal
+justifications for pro-active geo-engineering projects. Which, I have to admit,
+I was pretty horrified by the idea when I first heard about it - meddling
+further with a critical and horrifically complex dynamic system that we don't
+undertand, and all that.
 
 The story presents the the scenario of countering the temperature rise caused
 by CO2 in the atmosphere by releasing high altitude sulphur dioxide, to reflect
@@ -67,7 +68,7 @@ Ten thousand pages, all from one author, or fifteen thousand if you include
 re-reads. Not bad! The number of re-reads is a reasonable proxy for the impact
 each book had on me at the time.
 
-But on reflection, there is another contender...
+But on reflection, [there is another contender](/posts/the-works-of-larry-niven)...
 
 <br style="clear: left" />
 
