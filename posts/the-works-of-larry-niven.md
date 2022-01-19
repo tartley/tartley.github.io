@@ -21,6 +21,8 @@ wasn't convinced. But it *really was* was his brand of hard science fiction
 that I was there for (I protest too much!) - revolving around ideas rather than
 character arcs, and the ruthless application of consistent world-views.
 
+<span style="float: right; padding: 0.3em">![](/files/2022/nested-ringworlds.webp)</span>
+
 In inventing the Ringworld, Niven was inspired by Dyson spheres,
 [first described by Olaf Stapledon](https://en.wikipedia.org/wiki/Star_Maker),
 and [popularized by Freeman Dyson](https://web.archive.org/web/20140109033551/http://meaningoflife.tv/transcript.php?speaker=dyson).
@@ -40,12 +42,13 @@ than planet Earth.
 The aliens themselves weren't quite like any I've read before or since. The
 creepy sessile but sentient Grogs. The mysterious Outsiders, information
 brokers who are able to answer any question humanity has - if only we could
-afford the price. The warlike, carnivorous Kzin (surely an inspiration for
-Wing Commander's Kilrathi) - picture a species of vicious Chewbaccas, forever
-attacking humanity before they were ready. You can't help but almost feel sorry
-for them. By the times of Ringworld, representatives such as Speaker to Animals
-(named for his profession, interfacing with humans) are sufficiently adapted to
-working alongside humans to become formidable allies.
+afford the prices. The warlike, carnivorous Kzinti (picture a species of
+vicious feline Chewbaccas - surely an inspiration for Wing Commander's
+Kilrathi) forever attacking humanity before they were quite ready. You can't
+help but almost feel sorry for them. By the times of Ringworld, representatives
+such as Speaker to Animals (named for his profession, interfacing with humans)
+are sufficiently adapted to working alongside humans to become formidable
+allies.
 
 Perhaps Niven's greatest alien race was The Pierson's Puppeteers - like an
 ostrich with two necks, each topped with a single eye and dexterous mouth,
@@ -62,7 +65,7 @@ are inveterate cowards. No human has ever met a sane one - only their more
 unstable individuals would venture out alone to run the risks of space travel
 and meeting alien species. However, they are very intelligent, more so than
 humans, and industrious, and manipulative. It becomes clear over the course of
-the books that Puppeteers have selectively bred the Kzin into constructive
+the books that Puppeteers have selectively bred the Kzinti into constructive
 docility by engineering the many human-kzin wars, and their plans for everyone
 else are scarcely less manipulative.
 
