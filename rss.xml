@@ -1,32 +1,388 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 14 Jan 2022 21:16:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Termination Shock</title><link>https://www.tartley.com/posts/termination-shock/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 19 Jan 2022 18:37:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Works of Larry Niven</title><link>https://www.tartley.com/posts/the-works-of-larry-niven/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;A few days ago I mistakenly
+&lt;a href="https://www.tartley.com/posts/termination-shock"&gt;named Neal Stephenson as the author I'd read more of&lt;/a&gt;
+than any other. But I was forgetting about being young and inhaling books.
+On reflection, that title must surely belong to Larry Niven. As a teenager I
+read every last thing he did - or at least everything I could find in my
+hometown.&lt;/p&gt;
+&lt;p&gt;At one point my Mom picked up &lt;em&gt;World Out of Time&lt;/em&gt;, to see what craziness her
+son was always buried in, and she concluded over the dinner table that I was
+reading it for the sex scenes she'd found. I presumably objected inarticulately
+that I was so little interested in Larry Niven's brief depictions of space sex
+that I'd barely even noticed they were there, but I have the impression she
+wasn't convinced. But it &lt;em&gt;really was&lt;/em&gt; was his brand of hard science fiction
+that I was there for (I protest too much!) - revolving around ideas rather than
+character arcs, and the ruthless application of consistent world-views.&lt;/p&gt;
+&lt;p&gt;In inventing the Ringworld, Niven was inspired by Dyson spheres,
+&lt;a href="https://en.wikipedia.org/wiki/Star_Maker"&gt;first described by Olaf Stapledon&lt;/a&gt;,
+and &lt;a href="https://web.archive.org/web/20140109033551/http://meaningoflife.tv/transcript.php?speaker=dyson"&gt;popularized by Freeman Dyson&lt;/a&gt;.
+A full, solid Dyson sphere was, in some regards, inefficient. Dyson postulated
+miraculous gravity generators to make the inner surface of the sphere
+habitable. But this can be achieved much more feasibly by simply spinning the
+structure. However, all the matter inside the sphere, including any atmosphere,
+then pools at the equator. Niven observed that the superfluous surface of the
+sphere, away from the equator, can then be removed, given a suitable "wall"
+along each edge to keep the fringes of the atmosphere in - say 1,000km high.
+This vastly reduces the material needed to construct the megastructure. You
+would easily have enough from recycling all the planets in a solar system as
+building material, given miraculous elemental transmutation, while still
+providing a habitable interior surface something like a million time larger
+than planet Earth.&lt;/p&gt;
+&lt;p&gt;The aliens themselves weren't quite like any I've read before or since. The
+creepy sessile but sentient Grogs. The mysterious Outsiders, information
+brokers who are able to answer any question humanity has - if only we could
+afford the price. The warlike, carnivorous Kzin (surely an inspiration for
+Wing Commander's Kilrathi) - picture a species of vicious Chewbacca, forever
+attacking humanity before they were ready. You can't help but almost feel sorry
+for them. By the times of Ringworld, representatives such as Speaker to Animals
+(named for his profession, interfacing with humans) are sufficiently adapted to
+working alongside humans to become a formidable ally.&lt;/p&gt;
+&lt;p&gt;Perhaps Niven's greatest alien race was The Pierson's Puppeteers - like an
+ostrich with two necks, each topped with a single eye and dexterous mouth,
+while the brain resides safely in the body. The body plan makes so much sense
+in action. Mobile eyes mean they routinely view objects from both sides
+simultaneously, perfect for close-up detailed work, using the hand-like mouths.
+Or, spread the necks wide for amazing stereoscopic vision when distance
+estimation matters. And that gestural laugh - eyes turned inward to briefly
+gaze into one another, observing the self, no mirror required.&lt;/p&gt;
+&lt;p&gt;The psychology is also exquisite. Herbivores and herd-beasts, the Puppeteers
+are inveterate cowards. No human has ever met a sane one - only their more
+unstable individuals would venture out alone to run the risks of space travel
+and meeting alien species. However, they are very intelligent, more so than
+humans, and industrious, and manipulative. It becomes clear over the course of
+the books that Puppeteers have selectively bred the Kzin into constructive
+docility by engineering the many human-kzin wars, and their plans for everyone
+else are scarcely less manipulative.&lt;/p&gt;
+&lt;p&gt;Finally, my personal favorite was always the Pak. As alien as could be, and yet
+they are us. On humanity's original homeworld, long before introduction to
+planet Earth, a symbiotic plant grows which young humans find uninteresting,
+but in middle-age they develop a compulsion to binge on it. It activates genes
+that provoke startling physiological and psychological changes, transforming
+the human from a &lt;em&gt;breeder&lt;/em&gt;, into a &lt;em&gt;protector&lt;/em&gt; - stronger, tougher, much
+smarter, with a second heart, and ruthlessly dedicated to just one goal -
+protecting their own offspring. It is protectors who, it turns out many novels
+later, originally built the Ringworld. The absence of the transforming plant on
+Earth means our breeders grow without its benefits, leaving us with inadequate
+hearts, and an old-aged descent into feeble bodies and minds. This is all
+prehistorical backdrop. Then, on modern day Earth, an interstellar spaceship
+shows up, piloted by one protector, come to rescue the failed colony, with a
+hold full of strange plant roots...&lt;/p&gt;
+&lt;p&gt;Wonders like these, from the novels and short stories set in his Known Space
+universe kept me up at night, and shaped the way I thought. Although Niven's
+writing had some mildly conservative tendencies, especially when under the
+influence of his militaristic writing partner Jerry Pournelle, it is also
+permeated with a very liberal philosophy of non-judgemental tolerance of other
+lifestyles, a philosophy made explicit in one of &lt;em&gt;Niven's Laws&lt;/em&gt;: "The only
+universal message in science fiction: There exist minds that think as well as
+you do, but differently."&lt;/p&gt;
+&lt;p&gt;It's clear I wasn't the only one spellbound. Niven's ideas have been
+influential throughout science fiction culture. Bank's Culture's Orbitals and
+the understandably much rarer full Rings are clear descendants, as is the
+eponymous megastructure/superweapon of the juggernaut &lt;em&gt;Halo&lt;/em&gt; franchise, and
+countless other works. Niven's meticulous hard-SF approach to fantasy in &lt;em&gt;The
+Magic Goes Away&lt;/em&gt;, and in particular his concept of the conservation of &lt;em&gt;mana&lt;/em&gt;,
+was an influence on &lt;em&gt;Magic: The Gathering&lt;/em&gt;, as acknowledged in the card
+Nevinyrral's Disk (Niven's name backwards), which uses magic to simultaneously
+accelerate it's own spin, and to hold itself together, thus rapidly using up
+all the mana in an area, rendering further magic unusable. Movies such as
+Wall-E throw in sly nods - the Axiom is labelled in a passing graphic as using
+a "General Dynamics Type Three Hull", which is a similar size and shape to
+Niven's "General Products Number Three Hull".&lt;/p&gt;
+&lt;p&gt;For years I remember toting Niven's various doorstop 500 page novels to one
+place or another, such as being forbidden from carrying one into the Houses of
+Parliament viewing gallery. All the better that they usually had these crazy
+great '70s covers, mostly by artist
+&lt;a href="http://www.peterandrewjones.net/iacg.htm"&gt;Peter Andrew Jones&lt;/a&gt;,
+from whom you can buy prints of some of them.&lt;/p&gt;
+&lt;p&gt;Collecting these today by Google image search, I see today that these funky
+covers are relatively rare - the vast majority of Niven's sales were of
+editions with far less interesting and less skillfully put together covers. So
+I think it's appropriate to highlight and celebrate them here.&lt;/p&gt;
+&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/mote-in-gods-eye.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/footfall.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/oath-of-fealty.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/dream-park.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/patchwork-girl.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/convergent-series.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/magic-goes-away.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/lucifers-hammer.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/world-out-of-time.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/tales-of-known-space.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/hole-in-space.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/flight-of-the-horse.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/protector.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/inconstant-moon.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/ringworld.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/ringworld-engineers.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/long-arm-of-gil-hamilton.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/a-gift-from-earth.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/neutron-star.webp"&gt;&lt;/span&gt;
+&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/world-of-ptavvs.webp"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;
+&lt;p&gt;I've not even read half of what Niven wrote. By the '90s the crazy covers had
+been replaced by more conservative designs, and at the same time I drifted away
+to other things. At the time it felt more like Niven was drifting away from me,
+evolving in style over the years, losing something hard-to-characterize that
+I'd enjoyed, maybe just the rawness of his earlier works. Maybe his style was
+diluted through him writing so many books as partnerships, or, as I
+increasingly assumed, in an advisory role, lending his name to the cover for
+younger, less well-known authors, who did most of the work.&lt;/p&gt;
+&lt;p&gt;Still, while the affair lasted, it was fabulous. Goodreads page counts
+indicates it was eleven thousand pages, beating my Neal Stephenson consumption
+by a clear thousand pages. Combining that with a very conservative estimate of
+the number of times I re-read each one, nearly twenty five thousand pages. What
+can I say, I was a teenager, with seemingly endless oceans of time.&lt;/p&gt;
+&lt;p&gt;The following are just his books that I've read. He has many others, especially
+ones that are more recent than these.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th align="right"&gt;Pages&lt;/th&gt;
+&lt;th align="right"&gt;Times read&lt;/th&gt;
+&lt;th align="right"&gt;Effective pages&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100379.Rainbow_Mars"&gt;Rainbow Mars&lt;/a&gt; (1999)&lt;/td&gt;
+&lt;td align="right"&gt;477&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;477&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/64750.Destiny_s_Road"&gt;Destiny's Road&lt;/a&gt; (1997)&lt;/td&gt;
+&lt;td align="right"&gt;448&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;448&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/64467.The_Ringworld_Throne"&gt;The Ringworld Throne&lt;/a&gt; (1996)&lt;/td&gt;
+&lt;td align="right"&gt;368&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;368&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/69448.Beowulf_s_Children"&gt;Beowulf's Children&lt;/a&gt; (1995)&lt;/td&gt;
+&lt;td align="right"&gt;512&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;1,024&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/40932142-flatlander"&gt;Flatlander&lt;/a&gt; (1995)&lt;/td&gt;
+&lt;td align="right"&gt;369&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;369&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100347.Crashlander"&gt;Crashlander&lt;/a&gt; (1994)&lt;/td&gt;
+&lt;td align="right"&gt;281&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;281&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/218453.The_Gripping_Hand"&gt;The Gripping Hand&lt;/a&gt; (1993)&lt;/td&gt;
+&lt;td align="right"&gt;413&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;826&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/218470.The_Barsoom_Project"&gt;The Barsoom Project&lt;/a&gt; (1989)&lt;/td&gt;
+&lt;td align="right"&gt;352&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;352&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/899392.The_Legacy_of_Heorot"&gt;The Legacy of Heorot&lt;/a&gt; (1987)&lt;/td&gt;
+&lt;td align="right"&gt;383&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;766&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100351.The_Smoke_Ring"&gt;The Smoke Ring&lt;/a&gt; (1987)&lt;/td&gt;
+&lt;td align="right"&gt;323&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;646&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/116356.Footfall"&gt;Footfall&lt;/a&gt; (1985)&lt;/td&gt;
+&lt;td align="right"&gt;524&lt;/td&gt;
+&lt;td align="right"&gt;3&lt;/td&gt;
+&lt;td align="right"&gt;1,572&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/939740.The_Integral_Trees"&gt;The Integral Trees&lt;/a&gt; (1983)&lt;/td&gt;
+&lt;td align="right"&gt;272&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;544&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/583441.Oath_of_Fealty"&gt;Oath of Fealty&lt;/a&gt; (1981)&lt;/td&gt;
+&lt;td align="right"&gt;324&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;648&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/357922.Dream_Park"&gt;Dream Park&lt;/a&gt; (1981)&lt;/td&gt;
+&lt;td align="right"&gt;448&lt;/td&gt;
+&lt;td align="right"&gt;3&lt;/td&gt;
+&lt;td align="right"&gt;1,344&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/1124048.The_Patchwork_Girl"&gt;The Patchwork Girl&lt;/a&gt; (1980)&lt;/td&gt;
+&lt;td align="right"&gt;205&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;410&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/61181.The_Ringworld_Engineers"&gt;The Ringworld Engineers&lt;/a&gt; (1979)&lt;/td&gt;
+&lt;td align="right"&gt;307&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;614&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/1124090.Convergent_Series"&gt;Convergent Series&lt;/a&gt; (1979)&lt;/td&gt;
+&lt;td align="right"&gt;227&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;454&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/1002736.The_Magic_Goes_Away"&gt;The Magic Goes Away&lt;/a&gt; (1978)&lt;/td&gt;
+&lt;td align="right"&gt;212&lt;/td&gt;
+&lt;td align="right"&gt;5&lt;/td&gt;
+&lt;td align="right"&gt;1,060&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/218467.Lucifer_s_Hammer"&gt;Lucifer's Hammer&lt;/a&gt; (1977)&lt;/td&gt;
+&lt;td align="right"&gt;629&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;1,258&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/64725.A_World_Out_of_Time"&gt;A World Out of Time&lt;/a&gt; (1976)&lt;/td&gt;
+&lt;td align="right"&gt;246&lt;/td&gt;
+&lt;td align="right"&gt;3&lt;/td&gt;
+&lt;td align="right"&gt;738&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100359.Tales_of_Known_Space"&gt;Tales of Known Space&lt;/a&gt; (1975)&lt;/td&gt;
+&lt;td align="right"&gt;240&lt;/td&gt;
+&lt;td align="right"&gt;5&lt;/td&gt;
+&lt;td align="right"&gt;1,200&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100365.The_Mote_in_God_s_Eye"&gt;The Mote in God's Eye&lt;/a&gt; (1974)&lt;/td&gt;
+&lt;td align="right"&gt;596&lt;/td&gt;
+&lt;td align="right"&gt;3&lt;/td&gt;
+&lt;td align="right"&gt;1,788&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/218473.A_Hole_in_Space"&gt;A Hole in Space&lt;/a&gt; (1974)&lt;/td&gt;
+&lt;td align="right"&gt;196&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;392&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/378683.The_Flight_of_the_Horse"&gt;The Flight of the Horse&lt;/a&gt; (1973)&lt;/td&gt;
+&lt;td align="right"&gt;212&lt;/td&gt;
+&lt;td align="right"&gt;5&lt;/td&gt;
+&lt;td align="right"&gt;1,060&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100344.Protector"&gt;Protector&lt;/a&gt; (1973)&lt;/td&gt;
+&lt;td align="right"&gt;218&lt;/td&gt;
+&lt;td align="right"&gt;4&lt;/td&gt;
+&lt;td align="right"&gt;872&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/1255867.Inconstant_Moon"&gt;Inconstant Moon&lt;/a&gt; (1971)&lt;/td&gt;
+&lt;td align="right"&gt;200&lt;/td&gt;
+&lt;td align="right"&gt;4&lt;/td&gt;
+&lt;td align="right"&gt;800&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/61179.Ringworld"&gt;Ringworld&lt;/a&gt; (1970)&lt;/td&gt;
+&lt;td align="right"&gt;228&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;456&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100363.N_Space"&gt;N-Space&lt;/a&gt; (1969)&lt;/td&gt;
+&lt;td align="right"&gt;693&lt;/td&gt;
+&lt;td align="right"&gt;1&lt;/td&gt;
+&lt;td align="right"&gt;693&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/116355.The_Long_Arm_of_Gil_Hamilton"&gt;The Long Arm of Gil Hamilton&lt;/a&gt; (1969)&lt;/td&gt;
+&lt;td align="right"&gt;182&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;364&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/218479.All_the_Myriad_Ways"&gt;All the Myriad Ways&lt;/a&gt; (1968)&lt;/td&gt;
+&lt;td align="right"&gt;181&lt;/td&gt;
+&lt;td align="right"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;362&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/218461.A_Gift_from_Earth"&gt;A Gift from Earth&lt;/a&gt; (1968)&lt;/td&gt;
+&lt;td align="right"&gt;256&lt;/td&gt;
+&lt;td align="right"&gt;3&lt;/td&gt;
+&lt;td align="right"&gt;768&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100366.Neutron_Star"&gt;Neutron Star&lt;/a&gt; (1966)&lt;/td&gt;
+&lt;td align="right"&gt;285&lt;/td&gt;
+&lt;td align="right"&gt;4&lt;/td&gt;
+&lt;td align="right"&gt;1,140&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/218463.The_World_of_Ptavvs"&gt;The World of Ptavvs&lt;/a&gt; (1966)&lt;/td&gt;
+&lt;td align="right"&gt;188&lt;/td&gt;
+&lt;td align="right"&gt;4&lt;/td&gt;
+&lt;td align="right"&gt;752&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;total&lt;/strong&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;strong&gt;10,995&lt;/strong&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;strong&gt;24,842&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>fiction</category><category>media</category><category>niven</category><category>novel</category><category>science-fiction</category><category>short</category><guid>https://www.tartley.com/posts/the-works-of-larry-niven/</guid><pubDate>Fri, 14 Jan 2022 23:37:37 GMT</pubDate></item><item><title>Termination Shock</title><link>https://www.tartley.com/posts/termination-shock/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Termination Shock cover" src="https://www.tartley.com/files/2022/termination-shock-cover.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Neal Stephenson, 2021&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;It's another 700-page doorstop from the much-beloved author. It was enjoyable,
-but not life changing. Not as compelling as some of his previous. Reads a lot
-like a narrative wrapped around the author's own personal justifications for
-pro-active geo-engineering projects. Which, I have to admit, I was pretty
-horrified by the idea when I first heard about it - meddling further with a
-critical and horrifically complex dynamic system that we don't undertand, and
-all that.&lt;/p&gt;
+&lt;p&gt;It's another 720-page doorstop from the much-beloved author (which is actually
+slightly slimmer than his average book, which would be 770 pages). It was
+enjoyable, but not life changing. Not as compelling as some of his previous.
+Reads a lot like a narrative wrapped around the author's own personal
+justifications for pro-active geo-engineering projects. Which, I have to admit,
+I was pretty horrified by the idea when I first heard about it - meddling
+further with a critical and horrifically complex dynamic system that we don't
+undertand, and all that.&lt;/p&gt;
 &lt;p&gt;The story presents the the scenario of countering the temperature rise caused
 by CO2 in the atmosphere by releasing high altitude sulphur dioxide, to reflect
 sunlight back into space. This mitigates many of the most prominent effects of
 climate change, such as high-temperatures, storms, forest fires, and sea-level
 rises.&lt;/p&gt;
 &lt;p&gt;It further presents the idea that it's relatively easy and cheap to do, and
-some nation or part thereof that cares the most - e.g. The Netherlands, or
-Venice, amongst others, are going to take a crack at it. So we might as well
-get used to the idea.&lt;/p&gt;
+some nation or part thereof that cares the most - e.g. The Netherlands, or&lt;/p&gt;
+&lt;p&gt;Venice, amongst others, will either take a crack at it, or else will cease to
+exist. So we might as well get used to the idea and be prepared for what,
+geopolitically, happens after that.&lt;/p&gt;
 &lt;p&gt;I don't know if it's simply the story making me increasingly familiar with the
-idea, or whether the depiction of the mechanism used genuinely quells some of
-my worries, in that it seems easy to start at a small scale, monitor the
-results, and then scale up as required, and the fail-safe is that the sulphur
-should quickly fall out of the air allegedly harmlessly, if we realize this was
-a bad idea. I've at least tempered my initial harshly negative viewpoint
-somewhat. So, mission accomplished, I guess?&lt;/p&gt;
-&lt;p&gt;I've probably read more pages by Stephenson than any other writer. Hmmm.&lt;/p&gt;
+idea, or whether the depiction of the mechanism genuinely quells some of my
+worries, in that it seems easy to start at a small scale, monitor the results,
+scale up as required, and the fail-safe is that the sulphur should quickly fall
+out of the air, allegedly harmlessly, if we realize this was a bad idea. I've
+at least tempered my initial harshly negative viewpoint somewhat. So, mission
+accomplished, I guess?&lt;/p&gt;
+&lt;p&gt;I've probably read more text by Stephenson than any other writer. Hmmm. By
+Goodreads page counts:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -123,14 +479,17 @@ somewhat. So, mission accomplished, I guess?&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;total&lt;/strong&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;strong&gt;9,837&lt;/strong&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;strong&gt;9,997&lt;/strong&gt;&lt;/td&gt;
 &lt;td align="right"&gt;&lt;/td&gt;
 &lt;td align="right"&gt;&lt;strong&gt;14,955&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Ten thousand pages, all from one author, or fifteen thousand if you include re-reads. Not bad!&lt;/p&gt;
+&lt;p&gt;Ten thousand pages, all from one author, or fifteen thousand if you include
+re-reads. Not bad! The number of re-reads is a reasonable proxy for the impact
+each book had on me at the time.&lt;/p&gt;
+&lt;p&gt;But on reflection, &lt;a href="https://www.tartley.com/posts/the-works-of-larry-niven"&gt;there is another contender&lt;/a&gt;...&lt;/p&gt;
 &lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>environment</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/termination-shock/</guid><pubDate>Fri, 14 Jan 2022 15:20:55 GMT</pubDate></item><item><title>The Incal</title><link>https://www.tartley.com/posts/the-incal/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="The Incal 4 cover" src="https://www.tartley.com/files/2022/the-incal-4-cover.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
@@ -449,25 +808,4 @@ be re-construed as having left a trail, ready to be exploited once the moment
 was right.&lt;/p&gt;
 &lt;p&gt;It's a long way from my usual preference of hard-as-nails SF, but I loved it
 nonetheless.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>fiction</category><category>media</category><category>novella</category><category>science-fiction</category><guid>https://www.tartley.com/posts/this-is-how-you-lose-the-time-war/</guid><pubDate>Wed, 17 Nov 2021 20:49:26 GMT</pubDate></item><item><title>Children of Time</title><link>https://www.tartley.com/posts/children-of-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Children of Time cover" src="https://www.tartley.com/files/2021/children-of-time-cover.jpg"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Adrian Tchaikovsky (2015)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Lots of people love this, and it was jolly enough, but it just isn't for me. A
-couple of times I toyed with the idea of invoking my new policy of abandoning
-any book that isn't absolutely knocking my socks off - something I haven't
-previously been in the habit of.&lt;/p&gt;
-&lt;p&gt;It's unfair of me to compare one book with another, but partly, I was irked by
-featuring an alien planet of spiders, that being so reminiscent of Vernor
-Vinge's 1999 novel &lt;em&gt;A Deepness in the Sky&lt;/em&gt; (and he can hardly be the first to
-play with that.)&lt;/p&gt;
-&lt;p&gt;To be fair, Tchaikovsky's spider civilization definitely exhibits more
-thought-out arachnid sensibilities, whereas Vinge's act more like a Dickensian
-family drama - "Button up warm, childlings!" "Yes, Daddy!". But Vinge was there
-first, and has such a high profile, being a sequel to a much-loved Hugo winner,
-that it casts a shadow on anything else following on the same path.&lt;/p&gt;
-&lt;p&gt;Partly, also, I've been spoiled by hard science fiction from people like
-Peter Watts - real scientists, who are devastatingly smart, and are not afraid
-to dazzle their readers with it, even if that makes it a little hard going at
-times. Something about Children of Time was just too easygoing for me.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/children-of-time/</guid><pubDate>Wed, 10 Nov 2021 20:58:50 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>fiction</category><category>media</category><category>novella</category><category>science-fiction</category><guid>https://www.tartley.com/posts/this-is-how-you-lose-the-time-war/</guid><pubDate>Wed, 17 Nov 2021 20:49:26 GMT</pubDate></item></channel></rss>
