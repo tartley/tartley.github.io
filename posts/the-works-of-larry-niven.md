@@ -5,6 +5,8 @@
 .. tags: media,book,fiction,science-fiction,novel,short,niven
 -->
 
+<span style="float: left; padding: 0.3em">![](/files/2022/nested-ringworlds.webp)</span>
+
 A few days ago I mistakenly
 [named Neal Stephenson as the author I'd read more of](/posts/termination-shock)
 than any other. But I was forgetting about being young and inhaling books.
@@ -20,8 +22,6 @@ that I'd barely even noticed they were there, but I have the impression she
 wasn't convinced. But it *really was* was his brand of hard science fiction
 that I was there for (I protest too much!) - revolving around ideas rather than
 character arcs, and the ruthless application of consistent world-views.
-
-<span style="float: right; padding: 0.3em">![](/files/2022/nested-ringworlds.webp)</span>
 
 In inventing the Ringworld, Niven was inspired by Dyson spheres,
 [first described by Olaf Stapledon](https://en.wikipedia.org/wiki/Star_Maker),
@@ -78,12 +78,12 @@ the human from a *breeder*, into a *protector* - stronger, and with large
 joints for better leverage, with a tough wrinkled armour-like skin, much
 smarter, with a second heart, and ruthlessly dedicated to just one goal -
 protecting their own offspring. It is protectors who, it turns out many novels
-later, originally built the Ringworld. The absence of the transforming plant on
-Earth means our breeders grow without its benefits, leaving us with inadequate
-hearts, and an old-aged descent into feeble bodies and minds. This is all
-prehistorical backdrop. Then, on modern day Earth, an interstellar spaceship
-shows up, piloted by one protector, come to rescue the failed colony, with a
-hold full of strange plant roots...
+later, originally built the Ringworld. The absence of the transforming plant,
+which won't grow on Earth, means we grow without its benefits, leaving us with
+inadequate hearts, joints that fail with age, and an old-aged descent into
+feeble bodies and minds. Then, as the story begins, the first known
+interstellar spaceship shows up at Earth, piloted by one protector, come to
+rescue the failed colony, with a hold full of strange plant roots...
 
 Wonders like these, from the novels and short stories set in his Known Space
 universe kept me up at night, and shaped the way I thought. Although Niven's
@@ -118,7 +118,7 @@ from whom you can buy prints of some of them.
 Collecting these today by Google image search, I see today that these funky
 covers are relatively rare - the vast majority of Niven's sales were of
 editions with far less interesting and less skillfully put together covers. So
-I think it's appropriate to highlight and celebrate them here.
+I think it's appropriate to collect and celebrate them here.
 
 <span style="float: left">
 <span style="padding: 0.3em">![](/files/2022/mote-in-gods-eye.webp)</span>
@@ -163,42 +163,47 @@ can I say, I was a teenager, with seemingly endless oceans of time.
 The following are just his books that I've read. He has many others, especially
 many that are more recent than these.
 
-| Title              | Pages | Times read | Effective pages |
+| Title              | Pages | Times<br />read | Effective<br />pages |
 |-----------------------------------------|----:|--:|------:|
-| [Rainbow Mars](https://www.goodreads.com/book/show/100379.Rainbow_Mars) (1999)                 | 477 | 1 |   477 |
-| [Destiny's Road](https://www.goodreads.com/book/show/64750.Destiny_s_Road) (1997)               | 448 | 1 |   448 |
-| [The Ringworld Throne](https://www.goodreads.com/book/show/64467.The_Ringworld_Throne) (1996)         | 368 | 1 |   368 |
-| [Beowulf's Children](https://www.goodreads.com/book/show/69448.Beowulf_s_Children) (1995)           | 512 | 2 | 1,024 |
-| [Flatlander](https://www.goodreads.com/book/show/40932142-flatlander) (1995)                   | 369 | 1 |   369 |
-| [Crashlander](https://www.goodreads.com/book/show/100347.Crashlander) (1994)                  | 281 | 1 |   281 |
-| [The Gripping Hand](https://www.goodreads.com/book/show/218453.The_Gripping_Hand) (1993)            | 413 | 2 |   826 |
+| [Rainbow Mars](https://www.goodreads.com/book/show/100379.Rainbow_Mars) (1999)                       | 477 | 1 |   477 |
+| [Destiny's Road](https://www.goodreads.com/book/show/64750.Destiny_s_Road) (1997)                    | 448 | 1 |   448 |
+| [The Ringworld Throne](https://www.goodreads.com/book/show/64467.The_Ringworld_Throne) (1996)        | 368 | 1 |   368 |
+| [Beowulf's Children](https://www.goodreads.com/book/show/69448.Beowulf_s_Children) (1995)            | 512 | 2 | 1,024 |
+| [Flatlander](https://www.goodreads.com/book/show/40932142-flatlander) (1995)                         | 369 | 1 |   369 |
+| [Crashlander](https://www.goodreads.com/book/show/100347.Crashlander) (1994)                         | 281 | 1 |   281 |
+| [The Gripping Hand](https://www.goodreads.com/book/show/218453.The_Gripping_Hand) (1993)             | 413 | 2 |   826 |
 | [The Barsoom Project](https://www.goodreads.com/book/show/218470.The_Barsoom_Project) (1989)         | 352 | 1 |   352 |
-| [The Legacy of Heorot](https://www.goodreads.com/book/show/899392.The_Legacy_of_Heorot) (1987)         | 383 | 2 |   766 |
-| [The Smoke Ring](https://www.goodreads.com/book/show/100351.The_Smoke_Ring) (1987)               | 323 | 2 |   646 |
-| [Footfall](https://www.goodreads.com/book/show/116356.Footfall) (1985)                     | 524 | 3 | 1,572 |
+| [The Legacy of Heorot](https://www.goodreads.com/book/show/899392.The_Legacy_of_Heorot) (1987)       | 383 | 2 |   766 |
+| [The Smoke Ring](https://www.goodreads.com/book/show/100351.The_Smoke_Ring) (1987)                   | 323 | 2 |   646 |
+| [Footfall](https://www.goodreads.com/book/show/116356.Footfall) (1985)                               | 524 | 3 | 1,572 |
 | [The Integral Trees](https://www.goodreads.com/book/show/939740.The_Integral_Trees) (1983)           | 272 | 2 |   544 |
-| [Oath of Fealty](https://www.goodreads.com/book/show/583441.Oath_of_Fealty) (1981)               | 324 | 2 |   648 |
-| [Dream Park](https://www.goodreads.com/book/show/357922.Dream_Park) (1981)                   | 448 | 3 | 1,344 |
-| [The Patchwork Girl](https://www.goodreads.com/book/show/1124048.The_Patchwork_Girl) (1980)           | 205 | 2 |   410 |
-| [The Ringworld Engineers](https://www.goodreads.com/book/show/61181.The_Ringworld_Engineers) (1979)      | 307 | 2 |   614 |
+| [Oath of Fealty](https://www.goodreads.com/book/show/583441.Oath_of_Fealty) (1981)                   | 324 | 2 |   648 |
+| [Dream Park](https://www.goodreads.com/book/show/357922.Dream_Park) (1981)                           | 448 | 3 | 1,344 |
+| [The Patchwork Girl](https://www.goodreads.com/book/show/1124048.The_Patchwork_Girl) (1980)          | 205 | 2 |   410 |
+| [The Ringworld Engineers](https://www.goodreads.com/book/show/61181.The_Ringworld_Engineers) (1979)  | 307 | 2 |   614 |
 | [Convergent Series](https://www.goodreads.com/book/show/1124090.Convergent_Series) (1979)            | 227 | 2 |   454 |
-| [The Magic Goes Away](https://www.goodreads.com/book/show/1002736.The_Magic_Goes_Away) (1978)          | 212 | 5 | 1,060 |
-| [Lucifer's Hammer](https://www.goodreads.com/book/show/218467.Lucifer_s_Hammer) (1977)             | 629 | 2 | 1,258 |
+| [The Magic Goes Away](https://www.goodreads.com/book/show/1002736.The_Magic_Goes_Away) (1978)        | 212 | 5 | 1,060 |
+| [Lucifer's Hammer](https://www.goodreads.com/book/show/218467.Lucifer_s_Hammer) (1977)               | 629 | 2 | 1,258 |
 | [A World Out of Time](https://www.goodreads.com/book/show/64725.A_World_Out_of_Time) (1976)          | 246 | 3 |   738 |
-| [Tales of Known Space](https://www.goodreads.com/book/show/100359.Tales_of_Known_Space) (1975)         | 240 | 5 | 1,200 |
-| [The Mote in God's Eye](https://www.goodreads.com/book/show/100365.The_Mote_in_God_s_Eye) (1974)        | 596 | 3 | 1,788 |
-| [A Hole in Space](https://www.goodreads.com/book/show/218473.A_Hole_in_Space) (1974)              | 196 | 2 |   392 |
-| [The Flight of the Horse](https://www.goodreads.com/book/show/378683.The_Flight_of_the_Horse) (1973)      | 212 | 5 | 1,060 |
-| [Protector](https://www.goodreads.com/book/show/100344.Protector) (1973)                    | 218 | 4 |   872 |
-| [Inconstant Moon](https://www.goodreads.com/book/show/1255867.Inconstant_Moon) (1971)              | 200 | 4 |   800 |
-| [Ringworld](https://www.goodreads.com/book/show/61179.Ringworld) (1970)                    | 228 | 2 |   456 |
-| [N-Space](https://www.goodreads.com/book/show/100363.N_Space) (1969)                      | 693 | 1 |   693 |
+| [Tales of Known Space](https://www.goodreads.com/book/show/100359.Tales_of_Known_Space) (1975)       | 240 | 5 | 1,200 |
+| [The Mote in God's Eye](https://www.goodreads.com/book/show/100365.The_Mote_in_God_s_Eye) (1974)     | 596 | 3 | 1,788 |
+| [A Hole in Space](https://www.goodreads.com/book/show/218473.A_Hole_in_Space) (1974)                 | 196 | 2 |   392 |
+| [The Flight of the Horse](https://www.goodreads.com/book/show/378683.The_Flight_of_the_Horse) (1973) | 212 | 5 | 1,060 |
+| [Protector](https://www.goodreads.com/book/show/100344.Protector) (1973)                             | 218 | 4 |   872 |
+| [Inconstant Moon](https://www.goodreads.com/book/show/1255867.Inconstant_Moon) (1971)                | 200 | 4 |   800 |
+| [Ringworld](https://www.goodreads.com/book/show/61179.Ringworld) (1970)                              | 228 | 2 |   456 |
+| [N-Space](https://www.goodreads.com/book/show/100363.N_Space) (1969)                                 | 693 | 1 |   693 |
 | [The Long Arm of Gil Hamilton](https://www.goodreads.com/book/show/116355.The_Long_Arm_of_Gil_Hamilton) (1969) | 182 | 2 |   364 |
-| [All the Myriad Ways](https://www.goodreads.com/book/show/218479.All_the_Myriad_Ways) (1968)          | 181 | 2 |   362 |
-| [A Gift from Earth](https://www.goodreads.com/book/show/218461.A_Gift_from_Earth) (1968)            | 256 | 3 |   768 |
-| [Neutron Star](https://www.goodreads.com/book/show/100366.Neutron_Star) (1966)                 | 285 | 4 | 1,140 |
-| [The World of Ptavvs](https://www.goodreads.com/book/show/218463.The_World_of_Ptavvs) (1966)          | 188 | 4 |   752 |
-|                   **total** | **10,995** |   | **24,842** |
+| [All the Myriad Ways](https://www.goodreads.com/book/show/218479.All_the_Myriad_Ways) (1968)         | 181 | 2 |   362 |
+| [A Gift from Earth](https://www.goodreads.com/book/show/218461.A_Gift_from_Earth) (1968)             | 256 | 3 |   768 |
+| [Neutron Star](https://www.goodreads.com/book/show/100366.Neutron_Star) (1966)                       | 285 | 4 | 1,140 |
+| [The World of Ptavvs](https://www.goodreads.com/book/show/218463.The_World_of_Ptavvs) (1966)         | 188 | 4 |   752 |
+|                                                                               **totals** | **10,995** |   | **24,842** |
+
+<br />
+
+([Discussion](https://www.facebook.com/groups/324897304599197/permalink/1329010600854524 )
+on Damien Walter's *Science Fiction* Facebook group)
 
 <br style="clear: both" />
 

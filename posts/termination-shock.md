@@ -44,7 +44,7 @@ accomplished, I guess?
 I've probably read more text by Stephenson than any other writer. Hmmm. By
 Goodreads page counts:
 
-| Title                          | Pages | Times read | Effective pages |
+| Title                          | Pages | Times<br />read | Effective<br />pages |
 |--------------------------------|------:|-----------:|----------------:|
 | [Zodiac](https://www.goodreads.com/book/show/825.Zodiac) (1988)                   |   308 | 1          |   308           |
 | [Snow Crash](https://www.goodreads.com/book/show/40651883-snow-crash) (1992)      |   559 | 2          | 1,118           |
@@ -60,7 +60,7 @@ Goodreads page counts:
 | [Reamde](https://www.goodreads.com/book/show/10552338-reamde) (2011)              | 1,044 | 1          | 1,044           |
 | [Seveneves](https://www.goodreads.com/book/show/22816087-seveneves) (2015)        |   880 | 1          |   880           |
 | [Termination Shock](https://www.goodreads.com/book/show/57094295-termination-shock) (2021) |   720 | 1          |   720           |
-|                                                                     **total** | **9,997** |            | **14,955**      |
+|                                                                     **totals** | **9,997** |            | **14,955**      |
 
 <br />
 
