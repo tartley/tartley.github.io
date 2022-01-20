@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about fiction)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/fiction.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 19 Jan 2022 20:22:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Works of Larry Niven</title><link>https://www.tartley.com/posts/the-works-of-larry-niven/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;A few days ago I mistakenly
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about fiction)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/fiction.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 20 Jan 2022 16:16:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Works of Larry Niven</title><link>https://www.tartley.com/posts/the-works-of-larry-niven/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left; padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/nested-ringworlds.webp"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;A few days ago I mistakenly
 &lt;a href="https://www.tartley.com/posts/termination-shock"&gt;named Neal Stephenson as the author I'd read more of&lt;/a&gt;
 than any other. But I was forgetting about being young and inhaling books.
 On reflection, that title must surely belong to Larry Niven. As a teenager I
@@ -13,7 +14,6 @@ that I'd barely even noticed they were there, but I have the impression she
 wasn't convinced. But it &lt;em&gt;really was&lt;/em&gt; was his brand of hard science fiction
 that I was there for (I protest too much!) - revolving around ideas rather than
 character arcs, and the ruthless application of consistent world-views.&lt;/p&gt;
-&lt;p&gt;&lt;span style="float: right; padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/nested-ringworlds.webp"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;In inventing the Ringworld, Niven was inspired by Dyson spheres,
 &lt;a href="https://en.wikipedia.org/wiki/Star_Maker"&gt;first described by Olaf Stapledon&lt;/a&gt;,
 and &lt;a href="https://web.archive.org/web/20140109033551/http://meaningoflife.tv/transcript.php?speaker=dyson"&gt;popularized by Freeman Dyson&lt;/a&gt;.
@@ -65,12 +65,12 @@ the human from a &lt;em&gt;breeder&lt;/em&gt;, into a &lt;em&gt;protector&lt;/em
 joints for better leverage, with a tough wrinkled armour-like skin, much
 smarter, with a second heart, and ruthlessly dedicated to just one goal -
 protecting their own offspring. It is protectors who, it turns out many novels
-later, originally built the Ringworld. The absence of the transforming plant on
-Earth means our breeders grow without its benefits, leaving us with inadequate
-hearts, and an old-aged descent into feeble bodies and minds. This is all
-prehistorical backdrop. Then, on modern day Earth, an interstellar spaceship
-shows up, piloted by one protector, come to rescue the failed colony, with a
-hold full of strange plant roots...&lt;/p&gt;
+later, originally built the Ringworld. The absence of the transforming plant,
+which won't grow on Earth, means we grow without its benefits, leaving us with
+inadequate hearts, joints that fail with age, and an old-aged descent into
+feeble bodies and minds. Then, as the story begins, the first known
+interstellar spaceship shows up at Earth, piloted by one protector, come to
+rescue the failed colony, with a hold full of strange plant roots...&lt;/p&gt;
 &lt;p&gt;Wonders like these, from the novels and short stories set in his Known Space
 universe kept me up at night, and shaped the way I thought. Although Niven's
 writing had some mildly conservative tendencies, especially when under the
@@ -101,7 +101,7 @@ from whom you can buy prints of some of them.&lt;/p&gt;
 &lt;p&gt;Collecting these today by Google image search, I see today that these funky
 covers are relatively rare - the vast majority of Niven's sales were of
 editions with far less interesting and less skillfully put together covers. So
-I think it's appropriate to highlight and celebrate them here.&lt;/p&gt;
+I think it's appropriate to collect and celebrate them here.&lt;/p&gt;
 &lt;p&gt;&lt;span style="float: left"&gt;
 &lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/mote-in-gods-eye.webp"&gt;&lt;/span&gt;
 &lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/footfall.webp"&gt;&lt;/span&gt;
@@ -145,8 +145,8 @@ many that are more recent than these.&lt;/p&gt;
 &lt;tr&gt;
 &lt;th&gt;Title&lt;/th&gt;
 &lt;th align="right"&gt;Pages&lt;/th&gt;
-&lt;th align="right"&gt;Times read&lt;/th&gt;
-&lt;th align="right"&gt;Effective pages&lt;/th&gt;
+&lt;th align="right"&gt;Times&lt;br&gt;read&lt;/th&gt;
+&lt;th align="right"&gt;Effective&lt;br&gt;pages&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -349,13 +349,16 @@ many that are more recent than these.&lt;/p&gt;
 &lt;td align="right"&gt;752&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;total&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;totals&lt;/strong&gt;&lt;/td&gt;
 &lt;td align="right"&gt;&lt;strong&gt;10,995&lt;/strong&gt;&lt;/td&gt;
 &lt;td align="right"&gt;&lt;/td&gt;
 &lt;td align="right"&gt;&lt;strong&gt;24,842&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;(&lt;a href="https://www.facebook.com/groups/324897304599197/permalink/1329010600854524"&gt;Discussion&lt;/a&gt;
+on Damien Walter's &lt;em&gt;Science Fiction&lt;/em&gt; Facebook group)&lt;/p&gt;
 &lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>book</category><category>fiction</category><category>media</category><category>niven</category><category>novel</category><category>science-fiction</category><category>short</category><guid>https://www.tartley.com/posts/the-works-of-larry-niven/</guid><pubDate>Fri, 14 Jan 2022 23:37:37 GMT</pubDate></item><item><title>Termination Shock</title><link>https://www.tartley.com/posts/termination-shock/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Termination Shock cover" src="https://www.tartley.com/files/2022/termination-shock-cover.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
@@ -392,8 +395,8 @@ Goodreads page counts:&lt;/p&gt;
 &lt;tr&gt;
 &lt;th&gt;Title&lt;/th&gt;
 &lt;th align="right"&gt;Pages&lt;/th&gt;
-&lt;th align="right"&gt;Times read&lt;/th&gt;
-&lt;th align="right"&gt;Effective pages&lt;/th&gt;
+&lt;th align="right"&gt;Times&lt;br&gt;read&lt;/th&gt;
+&lt;th align="right"&gt;Effective&lt;br&gt;pages&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -482,7 +485,7 @@ Goodreads page counts:&lt;/p&gt;
 &lt;td align="right"&gt;720&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;total&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;totals&lt;/strong&gt;&lt;/td&gt;
 &lt;td align="right"&gt;&lt;strong&gt;9,997&lt;/strong&gt;&lt;/td&gt;
 &lt;td align="right"&gt;&lt;/td&gt;
 &lt;td align="right"&gt;&lt;strong&gt;14,955&lt;/strong&gt;&lt;/td&gt;
