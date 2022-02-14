@@ -17,11 +17,12 @@ hometown.
 At one point my Mom picked up *World Out of Time*, to see what craziness her
 son was always buried in, and she concluded over the dinner table that I was
 reading it for the sex scenes she'd found. I presumably objected inarticulately
-that I was so little interested in Larry Niven's brief depictions of space sex
-that I'd barely even noticed they were there, but I have the impression she
-wasn't convinced. But it *really was* was his brand of hard science fiction
-that I was there for (I protest too much!) - revolving around ideas rather than
-character arcs, and the ruthless application of consistent world-views.
+that I was so little interested in Larry Niven's brief nerdy depictions of
+space sex that I'd barely even noticed they were there, but I have the
+impression she wasn't convinced. But it *really was* was his brand of hard
+science fiction that I was there for (I protest too much!) - revolving around
+ideas rather than character arcs, and the ruthless application of consistent
+world-views.
 
 In inventing the Ringworld, Niven was inspired by Dyson spheres,
 [first described by Olaf Stapledon](https://en.wikipedia.org/wiki/Star_Maker),
@@ -31,13 +32,15 @@ miraculous gravity generators to make the inner surface of the sphere
 habitable. But this can be achieved much more feasibly by simply spinning the
 structure. However, all the matter inside the sphere, including any atmosphere,
 then pools at the equator. Niven observed that the superfluous surface of the
-sphere, away from the equator, can then be removed, given a suitable "wall"
-along each edge to keep the fringes of the atmosphere in - say 1,000km high.
-This vastly reduces the material needed to construct the megastructure. You
-would easily have enough from recycling all the planets in a solar system as
-building material, given miraculous elemental transmutation, while still
-providing a habitable interior surface something like a million times larger
-than planet Earth.
+sphere, away from the equator, can then be removed.
+
+This vastly reduces the material needed to construct the megastructure.
+Given miraculous elemental transmutation, one could easily gather enough
+matter by recycling all the planets in a solar system as building material,
+even with a 1,000km "wall" along each edge to keep the fringes of the
+atmosphere in. Although this yields a much smaller habitable interior surface
+area than a full sphere, it's still something like a million times larger than
+planet Earth.
 
 The aliens themselves weren't quite like any I've read before or since. The
 creepy sessile but sentient Grogs. The mysterious Outsiders, information
@@ -90,9 +93,9 @@ universe kept me up at night, and shaped the way I thought. Although Niven's
 writing had some mildly conservative tendencies, especially when under the
 influence of his militaristic writing partner Jerry Pournelle, it is also
 permeated with the necessity of a very liberal philosophy of non-judgemental
-tolerance of alien lifestyles, a philosophy made explicit in one of *Niven's
-Laws*: "The only universal message in science fiction: There exist minds that
-think as well as you do, but differently."
+tolerance of other lifestyles, both alien and human, a philosophy made explicit
+in one of *Niven's Laws*: "The only universal message in science fiction: There
+exist minds that think as well as you do, but differently."
 
 It's clear I wasn't the only one spellbound. Niven's ideas have been
 influential throughout science fiction culture. Bank's Culture's Orbitals and
@@ -154,6 +157,15 @@ diluted through him writing so many books as partnerships, or, as I
 increasingly assumed, in an advisory role, lending his name to the cover for
 younger, less well-known authors, who did most of the work.
 
+Looking back on it not, with 30-or-so year's hindsight, there are also
+components of Niven's writing that are lacking, and I was slowly growing out of
+it. Hard SF often celebrates the elevation of ideas over characters, and while
+there is a value to that, particularly for readers who are most vulnerable to
+the sensation of wonder, it also needlessly shuns other sspects, like the
+emotional impact of character-driven drama or individual psychological
+epiphany. A more skilled writer, I now think, would have a broader range of
+tools to imbue the story with more emotional resonance and meaning.
+
 Still, while the affair lasted, it was fabulous. Goodreads page counts
 indicates it was eleven thousand pages, beating my Neal Stephenson consumption
 by a clear thousand pages. Combining that with a very conservative estimate of
@@ -200,7 +212,6 @@ many that are more recent than these.
 | [The World of Ptavvs](https://www.goodreads.com/book/show/218463.The_World_of_Ptavvs) (1966)         | 188 | 4 |   752 |
 |                                                                               **totals** | **10,995** |   | **24,842** |
 
-<br />
 
 ([Discussion](https://www.facebook.com/groups/324897304599197/permalink/1329010600854524 )
 on Damien Walter's *Science Fiction* Facebook group)
