@@ -22,5 +22,12 @@ and all.
 
 Loved it.
 
+---
+
+Also this month: *The Emperess of Salt and Fortune* by Nghi Vo. I wanted to
+like this sooo much, and can see so many things about that are wonderful, but
+for some reason I just couldn't get in the mood. The problem is indubitably me,
+not you.
+
 <br style="clear: left" />
 
