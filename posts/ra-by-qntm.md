@@ -1,6 +1,6 @@
 <!--
-.. title: Ra, by qntm
-.. slug: ra-by-qntm
+.. title: Ra
+.. slug: ra
 .. date: 2021-05-15 12:22:32 UTC-05:00
 .. tags: media,book,novel,science-fiction,fiction,qntm,epub,free-to-read
 -->

@@ -1,6 +1,6 @@
 <!--
-.. title: Fine Structure, by qntm
-.. slug: fine-structure-by-qntm
+.. title: Fine Structure
+.. slug: fine-structure
 .. date: 2021-05-24 11:55:26 UTC-05:00
 .. tags: media,book,novel,science-fiction,qntm,free-to-read,epub
 .. type: text

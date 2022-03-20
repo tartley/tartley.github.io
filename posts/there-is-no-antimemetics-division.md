@@ -1,5 +1,5 @@
 <!--
-.. title: There is no Antimemetics Division, by qntm
+.. title: There is no Antimemetics Division
 .. slug: there-is-no-antimemetics-division
 .. date: 2021-05-10 13:50:52 UTC-05:00
 .. tags: media,book,novel,science-fiction,fiction,qntm,epub,free-to-read
