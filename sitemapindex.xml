@@ -35,7 +35,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/book.xml</loc>
-  <lastmod>2022-01-20T16:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/c.xml</loc>
@@ -107,11 +107,11 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/environment.xml</loc>
-  <lastmod>2022-01-20T15:52:00Z</lastmod>
+  <lastmod>2022-03-20T03:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/epub.xml</loc>
-  <lastmod>2022-01-14T21:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/essays.xml</loc>
@@ -123,11 +123,11 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/fantasy.xml</loc>
-  <lastmod>2022-01-14T21:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:01:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/fiction.xml</loc>
-  <lastmod>2022-01-20T16:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/fonts.xml</loc>
@@ -135,7 +135,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/free-to-read.xml</loc>
-  <lastmod>2022-01-14T21:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/gamedev.xml</loc>
@@ -180,6 +180,10 @@
  <sitemap>
   <loc>https://www.tartley.com/categories/history.xml</loc>
   <lastmod>2022-01-14T21:16:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://www.tartley.com/categories/illustrated.xml</loc>
+  <lastmod>2022-03-20T03:12:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/image.xml</loc>
@@ -239,7 +243,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/media.xml</loc>
-  <lastmod>2022-01-20T16:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/meetup.xml</loc>
@@ -270,8 +274,12 @@
   <lastmod>2022-01-14T21:16:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://www.tartley.com/categories/mythology.xml</loc>
+  <lastmod>2022-03-20T04:01:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://www.tartley.com/categories/niven.xml</loc>
-  <lastmod>2022-01-20T16:16:00Z</lastmod>
+  <lastmod>2022-02-14T01:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/non-fiction.xml</loc>
@@ -279,11 +287,11 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/novel.xml</loc>
-  <lastmod>2022-01-20T16:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/novella.xml</loc>
-  <lastmod>2022-01-14T21:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/osx-dev.xml</loc>
@@ -331,7 +339,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/qntm.xml</loc>
-  <lastmod>2022-01-14T21:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/refried.xml</loc>
@@ -347,7 +355,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/science-fiction.xml</loc>
-  <lastmod>2022-01-20T16:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/science.xml</loc>
@@ -355,7 +363,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/short.xml</loc>
-  <lastmod>2022-01-20T16:16:00Z</lastmod>
+  <lastmod>2022-02-14T01:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/show.xml</loc>
@@ -451,10 +459,10 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/rss.xml</loc>
-  <lastmod>2022-01-20T16:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/sitemap.xml</loc>
-  <lastmod>2022-01-20T16:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </sitemap>
 </sitemapindex>

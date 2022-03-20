@@ -7,15 +7,15 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://www.tartley.com/</loc>
-  <lastmod>2022-01-14T21:16:00Z</lastmod>
+  <lastmod>2022-03-20T03:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2022-01-20T16:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/</loc>
-  <lastmod>2022-01-14T23:38:00Z</lastmod>
+  <lastmod>2022-03-20T03:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/animation/</loc>
@@ -194,6 +194,10 @@
   <lastmod>2022-01-14T21:16:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/categories/illustrated/</loc>
+  <lastmod>2022-02-14T01:56:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/categories/image/</loc>
   <lastmod>2022-01-14T21:16:00Z</lastmod>
  </url>
@@ -280,6 +284,10 @@
  <url>
   <loc>https://www.tartley.com/categories/music/</loc>
   <lastmod>2022-01-14T21:16:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/categories/mythology/</loc>
+  <lastmod>2022-03-20T03:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/niven/</loc>
@@ -467,7 +475,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-10.html</loc>
-  <lastmod>2022-01-14T21:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-11.html</loc>
@@ -527,11 +535,15 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-24.html</loc>
-  <lastmod>2022-01-14T21:16:00Z</lastmod>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-25.html</loc>
-  <lastmod>2022-01-19T18:37:00Z</lastmod>
+  <lastmod>2022-03-20T03:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/index-26.html</loc>
+  <lastmod>2022-03-20T04:01:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-3.html</loc>
@@ -698,6 +710,10 @@
   <lastmod>2022-01-14T21:16:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/posts/circe/</loc>
+  <lastmod>2022-03-20T03:14:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/posts/city-at-the-end-of-time/</loc>
   <lastmod>2022-01-14T21:16:00Z</lastmod>
  </url>
@@ -728,6 +744,10 @@
  <url>
   <loc>https://www.tartley.com/posts/conky/</loc>
   <lastmod>2022-01-14T21:16:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/contact/</loc>
+  <lastmod>2022-03-20T04:01:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/copenhagen/</loc>
@@ -806,6 +826,10 @@
   <lastmod>2022-01-14T21:16:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/posts/ed/</loc>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/posts/encrypted-zip-files-on-osx/</loc>
   <lastmod>2022-01-14T21:16:00Z</lastmod>
  </url>
@@ -852,6 +876,10 @@
  <url>
   <loc>https://www.tartley.com/posts/fine-structure-by-qntm/</loc>
   <lastmod>2022-01-14T21:16:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/fine-structure/</loc>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/first-post/</loc>
@@ -1226,6 +1254,10 @@
   <lastmod>2022-01-14T21:16:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/posts/project-hail-mary/</loc>
+  <lastmod>2022-02-14T02:07:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/posts/pumping-iron-dynamic-languages-on-net/</loc>
   <lastmod>2022-01-14T21:16:00Z</lastmod>
  </url>
@@ -1268,6 +1300,10 @@
  <url>
   <loc>https://www.tartley.com/posts/ra-by-qntm/</loc>
   <lastmod>2022-01-14T21:16:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/ra/</loc>
+  <lastmod>2022-03-20T04:21:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/random-wallpaper-for-linux-gnome-desktop/</loc>
@@ -1426,6 +1462,10 @@
   <lastmod>2022-01-14T21:16:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/posts/the-electric-state/</loc>
+  <lastmod>2022-02-14T01:56:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/posts/the-flight-of-the-horse/</loc>
   <lastmod>2022-01-14T21:16:00Z</lastmod>
  </url>
@@ -1492,6 +1532,10 @@
  <url>
   <loc>https://www.tartley.com/posts/the-suze/</loc>
   <lastmod>2022-01-14T21:16:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/the-witches-heart/</loc>
+  <lastmod>2022-03-20T03:43:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/the-works-of-larry-niven/</loc>
