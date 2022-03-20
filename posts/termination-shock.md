@@ -28,7 +28,6 @@ rises.
 
 It further presents the idea that it's relatively easy and cheap to do, and
 some nation or part thereof that cares the most - e.g. The Netherlands, or
-
 Venice, amongst others, will either take a crack at it, or else will cease to
 exist. So we might as well get used to the idea and be prepared for what,
 geopolitically, happens after that.
