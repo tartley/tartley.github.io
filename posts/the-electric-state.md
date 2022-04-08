@@ -2,7 +2,7 @@
 .. title: The Electric State
 .. slug: the-electric-state
 .. date: 2022-02-13 19:32:45 UTC-06:00
-.. tags: media,fiction,book,illustrated,science-fiction
+.. tags: media,fiction,book,comic,science-fiction
 -->
 
 <span style="float: right">

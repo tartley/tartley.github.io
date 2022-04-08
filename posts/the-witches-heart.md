@@ -11,8 +11,6 @@
 
 *by Genevieve Gornichec, 2021.*
 
-Another fantastic Suze recommendation.
-
 Old Norse mythology only briefly mentions the witch
 [Angrboða](https://en.wikipedia.org/wiki/Angrbo%C3%B0a),
 as the mother of three "monsters", fathered by the trickster god, Loki. This
@@ -20,7 +18,7 @@ book explores her life, explicitly acknowledging her erasure as a woman, and
 resolves it, providing her a powerful story, in which she survives men, gods,
 and all.
 
-Loved it.
+Another fantastic Suze recommendation. Loved it.
 
 ---
 
