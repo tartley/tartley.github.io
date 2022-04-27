@@ -182,10 +182,6 @@
   <lastmod>2022-01-14T21:16:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/illustrated.xml</loc>
-  <lastmod>2022-03-22T18:13:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/image.xml</loc>
   <lastmod>2022-01-14T21:16:00Z</lastmod>
  </sitemap>
@@ -463,6 +459,6 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/sitemap.xml</loc>
-  <lastmod>2022-04-27T17:03:00Z</lastmod>
+  <lastmod>2022-04-27T17:38:00Z</lastmod>
  </sitemap>
 </sitemapindex>
