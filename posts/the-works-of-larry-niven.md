@@ -157,12 +157,12 @@ diluted through him writing so many books as partnerships, or, as I
 increasingly assumed, in an advisory role, lending his name to the cover for
 younger, less well-known authors, who did most of the work.
 
-Looking back on it not, with 30-or-so year's hindsight, there are also
+Looking back on it, with 30-or-so year's hindsight, there are also
 components of Niven's writing that are lacking, and I was slowly growing out of
 it. Hard SF often celebrates the elevation of ideas over characters, and while
-there is a value to that, particularly for readers who are most vulnerable to
-the sensation of wonder, it also needlessly shuns other sspects, like the
-emotional impact of character-driven drama or individual psychological
+there is a value to that, particularly for those readers who are the most
+vulnerable to the sensation of wonder, it also needlessly shuns other aspects,
+like the emotional impact of character-driven drama or individual psychological
 epiphany. A more skilled writer, I now think, would have a broader range of
 tools to imbue the story with more emotional resonance and meaning.
 
