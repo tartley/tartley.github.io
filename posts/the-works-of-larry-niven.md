@@ -5,7 +5,7 @@
 .. tags: media,book,fiction,science-fiction,novel,short,niven
 -->
 
-<span style="float: left; padding: 0.3em">![](/files/2022/nested-ringworlds.webp)</span>
+<span style="float: left">![](/files/2022/niven/view-from-the-surface-of-a-ringworld.webp)</span>
 
 A few days ago I mistakenly
 [named Neal Stephenson as the author I'd read more of](/posts/termination-shock)
