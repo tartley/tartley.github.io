@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about music)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/music.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 14 Jan 2022 21:16:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Download audio from YouTube</title><link>https://www.tartley.com/posts/download-audio-from-youtube/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Install ffmpeg:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about music)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/music.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 06 May 2022 16:02:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Download audio from YouTube</title><link>https://www.tartley.com/posts/download-audio-from-youtube/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Install ffmpeg:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install ffmpeg
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -40,7 +40,7 @@ to discover that converting it into an mp3 requires just:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Where &lt;code&gt;-vn&lt;/code&gt; disables video in the output.&lt;/p&gt;&lt;/div&gt;</description><category>command-line</category><category>linux</category><category>music</category><category>til</category><category>youtube</category><guid>https://www.tartley.com/posts/download-audio-from-youtube/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>My Cacophony</title><link>https://www.tartley.com/posts/my-cacaphony/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Google Calendar tells me that I've now had 8 piano lessons with the
+&lt;p&gt;Where &lt;code&gt;-vn&lt;/code&gt; disables video in the output.&lt;/p&gt;</description><category>command-line</category><category>linux</category><category>music</category><category>til</category><category>youtube</category><guid>https://www.tartley.com/posts/download-audio-from-youtube/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>My Cacophony</title><link>https://www.tartley.com/posts/my-cacaphony/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Google Calendar tells me that I've now had 8 piano lessons with the
 esteemed Marios. It's been heaps of fun, and it's long past time I
 shared my progress to date, in the form of some ghastly midi files.
 Download at your peril, they are truly awful - only of interest as a
@@ -72,12 +72,12 @@ will get better with practice.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/files/2007/07/07-07-16-tetris-terrible-struggle.mid" title="Tetris, 2007-07-16"&gt;&lt;img alt="MIDI icon" src="https://www.tartley.com/files/2007/07/midifile.jpg"&gt;&lt;/a&gt;
 16 Jul&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/files/2007/07/tetris-07-07-21-better.mid" title="Tetris, 2007-07-21"&gt;&lt;img alt="MIDI icon" src="https://www.tartley.com/files/2007/07/midifile.jpg"&gt;&lt;/a&gt;
-21 Jul&lt;/p&gt;&lt;/div&gt;</description><category>music</category><guid>https://www.tartley.com/posts/my-cacaphony/</guid><pubDate>Tue, 17 Jul 2007 03:01:18 GMT</pubDate></item><item><title>Music 101¾</title><link>https://www.tartley.com/posts/music-101c2be/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;Writing music out by hand is incredibly laborious. Or at least, it is
+21 Jul&lt;/p&gt;</description><category>music</category><guid>https://www.tartley.com/posts/my-cacaphony/</guid><pubDate>Tue, 17 Jul 2007 03:01:18 GMT</pubDate></item><item><title>Music 101¾</title><link>https://www.tartley.com/posts/music-101c2be/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Writing music out by hand is incredibly laborious. Or at least, it is
 for me. This is my first attempt to pen some notes by plonking around on
 the keyboard until it sounds right. Doubtless errors of all kinds
 abound, which I'd be much obliged if anyone pointed out to me, tar very
 much.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2007/06/score-largo.jpg"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>music</category><guid>https://www.tartley.com/posts/music-101c2be/</guid><pubDate>Tue, 19 Jun 2007 03:23:47 GMT</pubDate></item><item><title>Music 101½</title><link>https://www.tartley.com/posts/music-101c2bd/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;It's been said before by others, but I hadn't realised how insidious it
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2007/06/score-largo.jpg"&gt;&lt;/p&gt;</description><category>music</category><guid>https://www.tartley.com/posts/music-101c2be/</guid><pubDate>Tue, 19 Jun 2007 03:23:47 GMT</pubDate></item><item><title>Music 101½</title><link>https://www.tartley.com/posts/music-101c2bd/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;It's been said before by others, but I hadn't realised how insidious it
 is: When musicians talk about 'theory', they actually mean 'notation'.
 With reference to my &lt;a href="http://tartley.com/?p=100"&gt;previous whinging&lt;/a&gt;
 about music notation, I notice that the &lt;a href="http://www.mnma.org/"&gt;Music Notation Modernization
@@ -113,7 +113,7 @@ above ideas, and promote its use with the aim of gradually supplanting
 conventional notation. Unfortunately, this seems to be something they
 have singularly failed to do. By failing to adopt and recommend a single
 notation, they seem to be ensuring that none of their ideas will ever
-gain any traction.&lt;/p&gt;&lt;/div&gt;</description><category>music</category><guid>https://www.tartley.com/posts/music-101c2bd/</guid><pubDate>Mon, 11 Jun 2007 15:37:44 GMT</pubDate></item><item><title>Music 101</title><link>https://www.tartley.com/posts/music-101/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="Treble clef" src="https://www.tartley.com/files/2007/05/treble-clef.jpg"&gt;&lt;/p&gt;
+gain any traction.&lt;/p&gt;</description><category>music</category><guid>https://www.tartley.com/posts/music-101c2bd/</guid><pubDate>Mon, 11 Jun 2007 15:37:44 GMT</pubDate></item><item><title>Music 101</title><link>https://www.tartley.com/posts/music-101/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="Treble clef" src="https://www.tartley.com/files/2007/05/treble-clef.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;I've been riding high on the sheer joy that is Guitar Hero II (PS2) recently.
 Now that &lt;em&gt;Psychobilly Freakout&lt;/em&gt; is the only remaining song for which a
 five-star review performance is still eluding me, before unleashing the
@@ -138,11 +138,11 @@ Hence, a note which would represent 'C' on a treble clef stave is
 actually an 'E' when drawn on a bass clef stave. Presumably there's a
 reason for this, but I've yet to hear an explanation that sounds like
 anything other than a wart on the notation. Can any of my multitudinous
-readers enlighten me?&lt;/p&gt;&lt;/div&gt;</description><category>journal</category><category>music</category><guid>https://www.tartley.com/posts/music-101/</guid><pubDate>Mon, 14 May 2007 15:37:21 GMT</pubDate></item><item><title>Avenue Q</title><link>https://www.tartley.com/posts/avenue-q/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2007/03/aveq-screen_ps01_big.jpg"&gt;&lt;/p&gt;
+readers enlighten me?&lt;/p&gt;</description><category>journal</category><category>music</category><guid>https://www.tartley.com/posts/music-101/</guid><pubDate>Mon, 14 May 2007 15:37:21 GMT</pubDate></item><item><title>Avenue Q</title><link>https://www.tartley.com/posts/avenue-q/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2007/03/aveq-screen_ps01_big.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Music and Lyrics: Robert Lopez and Jeff Marx.
 Director: Jason Moore.
 Noël Coward Theatre.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I promised myself I'd endure no more musicals, but somehow an exception
 seems appropriate for this beautiful idiocy. Sometimes muppets can say
 what men cannot.&lt;/p&gt;
-&lt;p&gt;Rating: 7/10&lt;/p&gt;&lt;/div&gt;</description><category>fiction</category><category>media</category><category>music</category><category>show</category><guid>https://www.tartley.com/posts/avenue-q/</guid><pubDate>Wed, 21 Mar 2007 15:00:20 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Rating: 7/10&lt;/p&gt;</description><category>fiction</category><category>media</category><category>music</category><category>show</category><guid>https://www.tartley.com/posts/avenue-q/</guid><pubDate>Wed, 21 Mar 2007 15:00:20 GMT</pubDate></item></channel></rss>

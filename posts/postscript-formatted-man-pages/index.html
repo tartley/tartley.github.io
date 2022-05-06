@@ -94,8 +94,7 @@ function psman () {
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p><code>man</code> and its <code>troff</code> formatting can be asked to produce postscript
+    <p><code>man</code> and its <code>troff</code> formatting can be asked to produce postscript
 output. Define a Bash function, e.g. in your .bashrc:</p>
 <pre class="code literal-block"><span></span><code><span class="k">function</span> psman <span class="o">()</span> <span class="o">{</span>
     <span class="nv">SLUG</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$@</span> <span class="p">|</span> tr <span class="s1">' '</span> <span class="s1">'-'</span><span class="k">)</span>
@@ -123,7 +122,6 @@ an empty pdf document. We restore `+o pipefail` again at the end.</p>
 
 <p>produces</p>
 <p><a href="../../files/2017/08/pman-tr.png"><img alt="" src="../../files/2017/08/pman-tr.png"></a></p>
-</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/bash/" rel="tag">bash</a></li>

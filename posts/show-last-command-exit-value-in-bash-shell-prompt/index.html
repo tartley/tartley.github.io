@@ -93,8 +93,7 @@ GET_EXITVAL='$(if [[ $EXITVAL != 0 ]]; then echo -n &quot;\[\e[37;41;0">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>Stick something like this in your .bashrc file:</p>
+    <p>Stick something like this in your .bashrc file:</p>
 <pre class="code literal-block"><span></span><code><span class="c1"># display red exit value if it isn't zero</span>
 <span class="nv">PROMPT_COMMAND</span><span class="o">=</span><span class="s1">'EXITVAL=$?; '</span><span class="nv">$PROMPT_COMMAND</span>
 <span class="nv">GET_EXITVAL</span><span class="o">=</span><span class="s1">'$(if [[ $EXITVAL != 0 ]]; then echo -n "\[\e[37;41;01m\] $EXITVAL \[\e[0m\] "; fi)'</span>
@@ -111,7 +110,6 @@ prompt:</p>
 
 <p>bit which includes the last command exit value in the prompt, unless the
 value is zero, in which case nothing is displayed.</p>
-</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/bash/" rel="tag">bash</a></li>
