@@ -104,10 +104,11 @@ and what force destroyed the protomolecule creators, and why? And that's just
 series one's unresolved elements.
 
 So, lacking that, what the Expanse has to offer is its superlative
-world-building and sane, believable depictions of a gritty future. Which is no
-small feat - arguably nobody else has ever done it better. But, for me, it
-isn't enough. Maybe that's just because I'm a godless heathen who looks to get
-my spiritual fix through TV shows about spaceships. Or maybe it's because
-science fiction is where we show ourselves what to aim for, and I believe
-we can aim higher than just building an exciting technological dystopia.
+world-building and sane, believable depictions of a gritty interplanetary
+future. Which is no small feat - arguably nobody else has done it better. But,
+for me, it isn't enough. Maybe that's just because I'm a godless heathen who
+looks to get my spiritual fix through TV shows about spaceships. Or maybe it's
+because science fiction is where we show ourselves what we're capable of, what
+to aim for, and I believe we can aim higher than just exciting technological
+dystopias.
 
