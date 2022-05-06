@@ -10,7 +10,7 @@ clean: ## Delete generated files and virtualenv
 
 
 name=tartley.com
-syspython=python3.9
+syspython=python3.10
 ve=${HOME}/.virtualenvs/${name}
 
 
