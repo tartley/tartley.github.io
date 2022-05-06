@@ -79,17 +79,18 @@ spiritual adulthood, to graduate to whatever comes next, to meet and be
 transformed by the wise and powerful force that has shepherded humanity
 through our previous prehistorical transitions.
 
-I could go on with similar examples, but will just briefly mention the
-original Matrix movie, which is a story which resonates because it is
-absolutely soaked in allegory of both religious transcendence and Jungian
-archetypes - which are so on-the-nose that it cannot possibly be accidental, a
-fact acknowledged directly by the creators in the sequels, when they depict
-the Architect, ultimate villain encountered at the narrative peak of the
-story, as a prim, middle aged, white bearded gentleman, wearing an Edwardian
-suit. He speaks in a precise, almost Germanic manner. This is, unmistakably,
-Sigmund Freud. Why is Freud the villain of the Matrix? Because Freud was a
-contemporaneous antagonist to Jung, and his path to self actualization through
-reconciling the archetypes, the path Neo is on.
+I could go on with similar examples, but will just briefly mention the original
+Matrix movie, which is a story which resonates because it is absolutely soaked
+in allegory of both religious transcendence and Jungian archetypes - which are
+so on-the-nose that it cannot possibly be accidental, a fact acknowledged
+directly by the creators in the sequels, when they depict the Architect,
+ultimate villain encountered at the narrative peak of the story, as a prim,
+middle aged, white bearded gentleman, wearing an Edwardian suit. He speaks in a
+precise, almost Germanic manner. This is, unmistakably, Sigmund Freud. Why is
+Freud the villain of the Matrix? Because Freud was a contemporaneous antagonist
+to Jung, resisting Jung's ideas of self actualization through reconciliation of
+the archetypes, just as the Architect resists Neo's progression along that same
+path.
 
 It may be my own lack of imagination, but compared to examples like this, the
 Expanse starts to look a bit thin. I don't see any symbolism or allegory.
