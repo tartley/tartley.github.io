@@ -124,26 +124,26 @@ editions with far less interesting and less skillfully put together covers. So
 I think it's appropriate to collect and celebrate them here.
 
 <span style="float: left">
-<span style="padding: 0.3em">![](/files/2022/mote-in-gods-eye.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/footfall.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/oath-of-fealty.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/dream-park.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/patchwork-girl.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/convergent-series.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/magic-goes-away.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/lucifers-hammer.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/world-out-of-time.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/tales-of-known-space.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/hole-in-space.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/flight-of-the-horse.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/protector.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/inconstant-moon.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/ringworld.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/ringworld-engineers.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/long-arm-of-gil-hamilton.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/a-gift-from-earth.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/neutron-star.webp)</span>
-<span style="padding: 0.3em">![](/files/2022/world-of-ptavvs.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/mote-in-gods-eye.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/footfall.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/oath-of-fealty.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/dream-park.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/patchwork-girl.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/convergent-series.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/magic-goes-away.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/lucifers-hammer.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/world-out-of-time.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/tales-of-known-space.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/hole-in-space.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/flight-of-the-horse.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/protector.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/inconstant-moon.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/ringworld.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/ringworld-engineers.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/long-arm-of-gil-hamilton.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/a-gift-from-earth.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/neutron-star.webp)</span>
+<span style="padding: 0.3em">![](/files/2022/niven/world-of-ptavvs.webp)</span>
 </span>
 
 <br style="clear: both" />
