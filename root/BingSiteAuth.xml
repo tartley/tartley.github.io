@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
+<!-- this proves site ownership to Bing, which is apparently one of the
+sources from which duckduckgo pulls results -->
 <users>
 	<user>BB217A6245A6ACB6CB9365B2D2FB580C</user>
 </users>
