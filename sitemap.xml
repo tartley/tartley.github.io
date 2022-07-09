@@ -7,11 +7,11 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://www.tartley.com/</loc>
-  <lastmod>2022-06-14T16:25:00Z</lastmod>
+  <lastmod>2022-06-14T16:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2022-06-14T16:25:00Z</lastmod>
+  <lastmod>2022-07-09T17:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/categories/</loc>
@@ -539,7 +539,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-26.html</loc>
-  <lastmod>2022-05-09T11:22:00Z</lastmod>
+  <lastmod>2022-07-09T17:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-3.html</loc>
@@ -656,6 +656,10 @@
  <url>
   <loc>https://www.tartley.com/posts/balloon-therapy/</loc>
   <lastmod>2022-05-06T16:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/posts/basic-us-civics/</loc>
+  <lastmod>2022-07-09T17:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/battlestar-galactica-series-3/</loc>

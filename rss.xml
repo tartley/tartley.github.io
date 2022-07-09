@@ -1,5 +1,380 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 14 Jun 2022 16:25:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Journey</title><link>https://www.tartley.com/posts/journey/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/journey-screenshot.webp"&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sat, 09 Jul 2022 17:42:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>US Civics for Naturalization Quiz</title><link>https://www.tartley.com/posts/basic-us-civics/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I had to learn 100 questions and answers for my US Naturalization civics
+quiz this week, and my default way of learning something is to organize the information
+into an essay. Not the best work I've ever done, but it got me through the test, so
+good enough:&lt;/p&gt;
+&lt;h2&gt;History&lt;/h2&gt;
+&lt;p&gt;The region now occupied by the US was originally settled by Native Americans,
+probably travelling from the Far East, around 15,000 years ago.&lt;/p&gt;
+&lt;p&gt;Modern Native tribes include Apache, Arawak, Blackfeet, Cherokee, Cheyenne,
+Chippewa, Choctaw, Creek, Crow, Hopi, Huron, Inuit, Iroquois, Lakota, Mohegan,
+Navajo, Oneida, Pueblo, Seminole, Shawnee, Sioux, and Teton.&lt;/p&gt;
+&lt;p&gt;European colonists came to America to escape persecution, in pursuit of religious
+and political freedom, and economic opportunity.&lt;/p&gt;
+&lt;p&gt;The Atlantic slave trade took Africans to the American colonies as slaves. This
+practice was widespread by the time of the American Revolution.&lt;/p&gt;
+&lt;p&gt;The colonists decided to fight for freedom from British rule because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;They didn't want to pay high taxes to the British government without representation.&lt;/li&gt;
+&lt;li&gt;They did not like the British army being quartered in their houses.&lt;/li&gt;
+&lt;li&gt;They wanted self-government.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By the time of the declaration of independence, there were thirteen colonies that
+became the initial thirteen United States:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Connecticut&lt;/li&gt;
+&lt;li&gt;Delaware&lt;/li&gt;
+&lt;li&gt;Georgia&lt;/li&gt;
+&lt;li&gt;Maryland&lt;/li&gt;
+&lt;li&gt;Massachusetts&lt;/li&gt;
+&lt;li&gt;New Hampshire&lt;/li&gt;
+&lt;li&gt;New Jersey&lt;/li&gt;
+&lt;li&gt;New York&lt;/li&gt;
+&lt;li&gt;North Carolina&lt;/li&gt;
+&lt;li&gt;Pennsylvania&lt;/li&gt;
+&lt;li&gt;Rhode Island&lt;/li&gt;
+&lt;li&gt;South Carolina&lt;/li&gt;
+&lt;li&gt;Virginia&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These States fought the American Revolutionary War against Great Britain.&lt;/p&gt;
+&lt;p&gt;In 1803 (27 years after the declaration of independence), the United States
+bought the Louisiana territory from France.&lt;/p&gt;
+&lt;h2&gt;Founding&lt;/h2&gt;
+&lt;h3&gt;Declaration of Independence&lt;/h3&gt;
+&lt;p&gt;The &lt;em&gt;Declaration of Independence&lt;/em&gt; declared the United States to be independent
+of, and free from, the rule of Great Britain. It was written by Thomas
+Jefferson, and adopted on July 4th, 1776.&lt;/p&gt;
+&lt;p&gt;It notes the right of all men to enjoy life, liberty and the pursuit of
+happiness.&lt;/p&gt;
+&lt;h3&gt;The American Constitution&lt;/h3&gt;
+&lt;p&gt;The supreme law of the land is the &lt;em&gt;constitution&lt;/em&gt;. It sets up and defines the
+government, and also enumerates the basic rights of American citizens and
+residents.&lt;/p&gt;
+&lt;p&gt;The idea of self-government is represented in the constitution's first three
+words: "&lt;em&gt;We the people...&lt;/em&gt;".&lt;/p&gt;
+&lt;p&gt;The constitution was written at the &lt;em&gt;constitutional convention&lt;/em&gt; of 1787, by
+the &lt;em&gt;Founding Fathers&lt;/em&gt;. Its passage was supported by the Federalist Papers,
+written by James Madison, Alexander Hamilton, and John Jay, under the pseudonym
+"&lt;em&gt;Publius&lt;/em&gt;", after &lt;em&gt;Publius Valerius Poplicola&lt;/em&gt;, a Roman aristocrat who led the
+overthrow of the monarchy to found the Roman Republic in 509 BC.&lt;/p&gt;
+&lt;p&gt;Benjamin Franklin is known as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Oldest member of the constitutional convention,&lt;/li&gt;
+&lt;li&gt;The first Postmaster General of the United States,&lt;/li&gt;
+&lt;li&gt;Writer of "Poor Richard's Almanac",&lt;/li&gt;
+&lt;li&gt;Starter of the first free libraries,&lt;/li&gt;
+&lt;li&gt;A US diplomat.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;George Washington is known as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The first President&lt;/li&gt;
+&lt;li&gt;The "Father of our Country"&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The original text of the constitution has since been modified by twenty-seven
+&lt;em&gt;amendments&lt;/em&gt;, each of which is numbered, and takes the form of an addition to
+the existing text.&lt;/p&gt;
+&lt;h2&gt;Rights and Responsibilities&lt;/h2&gt;
+&lt;p&gt;The first ten amendments are known as &lt;em&gt;"the Bill of Rights"&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The first amendment prohibits the government from infringing on the right of
+residents in the US to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Establish or practice any religion, or no religion at all.&lt;/li&gt;
+&lt;li&gt;Free speech.&lt;/li&gt;
+&lt;li&gt;Freedom of the press.&lt;/li&gt;
+&lt;li&gt;Peaceably assemble.&lt;/li&gt;
+&lt;li&gt;Petition the government for a redress of grievances.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The final four items above are together known as "freedom of expression".&lt;/p&gt;
+&lt;p&gt;In addition, the constitution establishes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The right to bear arms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;US citizens are granted additional rights that do not apply to all residents,
+including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Running for federal office&lt;/li&gt;
+&lt;li&gt;Voting in federal elections&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And US citizens are additionally assigned responsibilities:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jury service&lt;/li&gt;
+&lt;li&gt;Voting in federal elections&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Voting in federal elections is thus established as both a right and a
+responsibility.&lt;/p&gt;
+&lt;p&gt;The pledge of allegiance declares loyalty to the US flag and the United States.&lt;/p&gt;
+&lt;p&gt;Ways for citizens to participate in their democracy include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Voting&lt;/li&gt;
+&lt;li&gt;Join a political party&lt;/li&gt;
+&lt;li&gt;Help with a political campaign&lt;/li&gt;
+&lt;li&gt;Join a civic or community group&lt;/li&gt;
+&lt;li&gt;Give opinions to elected officials, such as calling Senators or Representatives.&lt;/li&gt;
+&lt;li&gt;Publicly support or oppose an issue or policy.&lt;/li&gt;
+&lt;li&gt;Run for office&lt;/li&gt;
+&lt;li&gt;Write to a newspaper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When becoming a naturalized US citizen, the oath of allegiance declares one will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Give up loyalty to other countries&lt;/li&gt;
+&lt;li&gt;Be loyal to the United States&lt;/li&gt;
+&lt;li&gt;Obey the laws of the United States&lt;/li&gt;
+&lt;li&gt;Defend the constitution and laws of the United States&lt;/li&gt;
+&lt;li&gt;Serve in the US military (if the law demands it)&lt;/li&gt;
+&lt;li&gt;Serve civil projects for the nation (if the law demands it)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All men resident in the USA must register for &lt;em&gt;selective service&lt;/em&gt; (a list from which
+draftees are chosen should the need arise) between the ages of 18 and 26.&lt;/p&gt;
+&lt;p&gt;The last day to submit federal income tax forms is April 15th.&lt;/p&gt;
+&lt;h3&gt;Voting rights&lt;/h3&gt;
+&lt;p&gt;The enfranchisement and disenfranchisement of different groups has been a
+moral and political issue throughout United States history.&lt;/p&gt;
+&lt;p&gt;The original constitution did not explicitly specify who was able to vote,
+and states demonstrated considerable diversity in whom they did or did not grant
+suffrage. In particular, most states only granted the vote to white, male,
+property owners - about 6% of the population.&lt;/p&gt;
+&lt;p&gt;In the 1820s, attitudes and state laws shifted, to allow all white males to
+vote in most states, although some laws removing the poor's right to vote
+continued until the 20th century, and practices that disproportionately
+affect the poor's ability to vote continue today.&lt;/p&gt;
+&lt;p&gt;Several constitutional amendments successively modified who can vote,
+notably:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The 15th Amendment of 1870, in the wake of the Civil War and Emancipation
+  Proclamation, prevented the denial of voting rights based on a person's race.
+  This was effectively interpreted to mean that men of any race could vote.
+  However, states continued to prevent the majority of African Americans in the
+  United States from voting, via Jim Crow laws, poll taxes, literacy tests,
+  grandfather clauses and the like. Only later in the 20th century were these
+  laws ruled unconstitutional.&lt;/li&gt;
+&lt;li&gt;The 19th Amendment of 1920 allowed women to vote. However, in practice, women
+  — who were rarely in control of independent sources of income —
+  were usually still prevented from voting by the same discriminatory practices
+  that prevented voting by poor or non-white men.&lt;/li&gt;
+&lt;li&gt;The 24th amendment of 1964 prohibited using a poll tax to control who could
+  vote in federal elections.&lt;/li&gt;
+&lt;li&gt;The 26th amendment of 1971 lowered the voting age from 21 to 18. This was
+  passed in response to Vietnam War protest, which noted that if draftees were
+  considered old enough to be sent to fight, they should also be old enough to
+  vote.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following section was not part of the USCIS civics test. But I'm including it
+because it's clear that although the Declaration asserted "all men are created
+equal", subsequent laws and behavior has severely curtailed that assertion when it
+comes to issues such as being allowed to vote. So, who currently is, and is
+not, allowed to vote? Sometimes the best way to understand something is to
+trace its contours, by enumerating the exceptions.&lt;/p&gt;
+&lt;p&gt;Those who are currently legally denied the right to vote, for reasons that I
+personally find arguably understandable, are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Those aged under 18.&lt;/li&gt;
+&lt;li&gt;Those deemed mentally "incapacitated" or "incompetent" by a conservatorship
+  process.&lt;/li&gt;
+&lt;li&gt;Illegal or undocumented immigrants (16 million people).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following people are also legally denied the vote, for reasons that I personally
+find controversial or outright wrong:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;US Citizens and nationals who reside in the United States territories that are
+  not States, such as Puerto Rico.&lt;/li&gt;
+&lt;li&gt;Washington DC residents (718,000 people) have had the right to vote in
+  presidential elections since 1961, but no congressional elections have been
+  held there since 1801.&lt;/li&gt;
+&lt;li&gt;Non-citizen residents of the United States such as myself (13 million
+  people). This includes legal aliens in good standing, such as foreign
+  spouses, asylum claimants and refugees, who might reside within the US,
+  paying taxes, for years or decades. Contrast this with the United Kingdom,
+  for example, where people in the similar category "with leave to remain" &lt;em&gt;are&lt;/em&gt;
+  able to vote.&lt;/li&gt;
+&lt;li&gt;The homeless (580,000 people) are often excluded from voting by residency
+  requirements, or by the inability to register without a mailing address or proof
+  of identity.&lt;/li&gt;
+&lt;li&gt;Current prisoners, in almost all states (5.5 million people). Some states
+  impose a lifelong denial of voting rights to anyone with a previous felony
+  record, which affects another 5.9 million people.&lt;/li&gt;
+&lt;li&gt;US Citizens who have never established residence in the United States may be
+  denied the vote by various states.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The above categories represent 28.8 million people, around 11 percent of
+the adult population, who currently have no legal right to vote for US government
+positions due to reasons I personally find controversial or wrong.&lt;/p&gt;
+&lt;h3&gt;Civil Rights&lt;/h3&gt;
+&lt;p&gt;Susan B Anthony was a prominent activist for womens rights and civil rights.&lt;/p&gt;
+&lt;p&gt;Martin Luther King Jr. fought for civil rights, to try and provide equality for
+Americans of all races.&lt;/p&gt;
+&lt;h2&gt;Wars&lt;/h2&gt;
+&lt;p&gt;The United States has waged many wars, including:&lt;/p&gt;
+&lt;h4&gt;18th Century Wars&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;American Revolutionary War to free America from British rule.&lt;/li&gt;
+&lt;li&gt;Cherokee-American wars&lt;/li&gt;
+&lt;li&gt;Northwest Indian War&lt;/li&gt;
+&lt;li&gt;Quasi-War (a naval war, allied with Britain, against France &amp;amp; Guadeloupe)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;19th Century Wars&lt;/h4&gt;
+&lt;p&gt;56 official wars, mostly resulting in the genocide or internment of various
+indigenous Native American nations. Sometimes the United States was allied with
+or fighting against Great Britain, and sometimes on the soil of other foes such
+as the Ottoman Empire and Morocco, China, Mexico, Spanish Florida, the
+Philippines, Cuba, Puerto Rico, or Guam. Notable among these wars were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The War of 1812 against Great Britain&lt;/li&gt;
+&lt;li&gt;The Mexican-American war, in the disputed former Mexican territories of
+  Texas, New Mexico, California and regions of Mexico.&lt;/li&gt;
+&lt;li&gt;The American Civil War.&lt;/li&gt;
+&lt;li&gt;The Spanish-American war.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;The Civil War&lt;/h4&gt;
+&lt;p&gt;The American Civil War of 1861 to 1865 was fought between the United States and
+the Confederacy of Southern States, over the issues of whether slavery was to
+remain legal in the Southern States, upon which many southern white livelihoods
+and businesses depended. This is sometimes framed as an academic disagreement about
+"States Rights" to self-government, but I personally find it hard to interpret
+that as anything other than a disingenuous fig leaf.&lt;/p&gt;
+&lt;p&gt;Abraham Lincoln lead the Northern states to victory in the Civil War, and is praised
+for saving or preserving the Union. He presided over the Emancipation
+Proclamation which ostensibly freed the slaves, although many still suffer from
+ongoing repercussions and outright racism even up to the present day.&lt;/p&gt;
+&lt;h4&gt;20th Century Wars&lt;/h4&gt;
+&lt;p&gt;31 official wars, some against outstanding Native American nations, others in
+diverse locations such as Cuba, Nicaragua, Haiti, Dominican Republic, Russia,
+Mongolia, Korea, Vietnam, Laos, Lebanon, Cambodia, Grenada, Libya, Iran &amp;amp;
+Persian Gulf, Panama, Iraq, Kuwait, Saudi Arabia, Israel, Somalia, Bosnia,
+Herzegovina, Croatia, Haiti, and Serbia.&lt;/p&gt;
+&lt;p&gt;Notable amongst these were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;World War I, during which the president was Woodrow Wilson.&lt;/li&gt;
+&lt;li&gt;World War II, against Germany, Japan and Italy, during which the president
+  was Franklin D. Roosevelt. Eisenhower was a general in this war, and
+  subsequently went on to become President.&lt;/li&gt;
+&lt;li&gt;Korean War&lt;/li&gt;
+&lt;li&gt;Vietnam War&lt;/li&gt;
+&lt;li&gt;Persian Gulf War&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;During the Cold war, the main concern of the United States was communism.&lt;/p&gt;
+&lt;h4&gt;21st Century Wars&lt;/h4&gt;
+&lt;p&gt;11 thus far, including Afghanistan, Libya, Somalia, Syria and Iraq.&lt;/p&gt;
+&lt;h2&gt;Government&lt;/h2&gt;
+&lt;p&gt;The constitution grants the federal government power to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Print money.&lt;/li&gt;
+&lt;li&gt;Declare war.&lt;/li&gt;
+&lt;li&gt;Raise an army.&lt;/li&gt;
+&lt;li&gt;Make treaties.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The states are granted power to provide:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Protection in the form of police.&lt;/li&gt;
+&lt;li&gt;Fire departments.&lt;/li&gt;
+&lt;li&gt;Schooling and education.&lt;/li&gt;
+&lt;li&gt;Driver's licenses.&lt;/li&gt;
+&lt;li&gt;Zoning and land use.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The government defined by the constitution is divided into three branches:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The executive branch is formed by the President and their administration.&lt;/li&gt;
+&lt;li&gt;The legislative branch is formed by Congress.&lt;/li&gt;
+&lt;li&gt;The judicial branch is formed by the courts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The separation of powers between these three branches forms a system of checks
+and balances that prevents any one part of government from becoming too
+powerful.&lt;/p&gt;
+&lt;h3&gt;The Executive&lt;/h3&gt;
+&lt;p&gt;The President leads the executive branch. They sign bills into law, and have
+veto power over new laws. They are the Commander in Chief of the military.
+Presidents are elected for four year terms, in a vote that takes place in
+November.&lt;/p&gt;
+&lt;p&gt;The President appoints a Cabinet of advisors. If the President cannot serve,
+succession falls to the Vice President, and then to the Speaker of the House.&lt;/p&gt;
+&lt;p&gt;Other cabinet-level positions include Attorney General, and Secretaries of
+Agriculture, Commerce, Defence, Education, Energy, Health and Human Services,
+Homeland Security, Housing and Urban Development, the Interior, Labor,
+State, Transportation, the Treasury, and Veterans Affairs.&lt;/p&gt;
+&lt;p&gt;The President is currently Joseph Robinette Biden Jr (Democratic).&lt;/p&gt;
+&lt;p&gt;The Vice President is currently Kamala Harris (Democratic).&lt;/p&gt;
+&lt;p&gt;The Speaker of the House is currently Nancy Pelosi (Democratic).&lt;/p&gt;
+&lt;h3&gt;The Legislature&lt;/h3&gt;
+&lt;p&gt;Congress makes federal laws.&lt;/p&gt;
+&lt;p&gt;It comprises two parts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The Senate.&lt;/li&gt;
+&lt;li&gt;The House of Representatives.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;The Senate&lt;/h4&gt;
+&lt;p&gt;The Senate comprises two senators from each state, yielding 100 total senators.
+Each senator represents the entirety of their state. Senators are elected
+for six year terms.&lt;/p&gt;
+&lt;h4&gt;The House of Representatives&lt;/h4&gt;
+&lt;p&gt;Each state is divided into a number of &lt;em&gt;congressional districts&lt;/em&gt;, the number
+of which depends on the population of the state. Each district sends a single
+representative to the House, whose job is to represent the people of their
+specific district. Currently, this yields a total of 435 representatives.
+Representatives are elected for two year terms.&lt;/p&gt;
+&lt;h3&gt;The Judicial branch&lt;/h3&gt;
+&lt;p&gt;The courts review and explain laws, resolves disputes, and decides whether
+laws contravene the constitution.&lt;/p&gt;
+&lt;p&gt;The "rule of law" states that every individual, no matter how highly-placed,
+must obey the law, as must the government itself.&lt;/p&gt;
+&lt;p&gt;The highest court in the land is the Supreme Court, which comprises nine
+justices, lead by Chief Justice John Glover Roberts Jr.&lt;/p&gt;
+&lt;h2&gt;States, Territories, and Geography&lt;/h2&gt;
+&lt;p&gt;The United States of America contains 335 million people, of whom around 261
+million are adults. The regions of the country comprise:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;50 States (the 48 &lt;em&gt;contiguous&lt;/em&gt; States, plus Hawaii and Alaska)&lt;/li&gt;
+&lt;li&gt;Washington DC, the capital city and federal district (690,000 people).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus other territories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;American Samoa (43,000 people).&lt;/li&gt;
+&lt;li&gt;Guam (169,000 people).&lt;/li&gt;
+&lt;li&gt;Northern Mariana Islands (56,000 people).&lt;/li&gt;
+&lt;li&gt;Puerto Rico (3,286,000 people).&lt;/li&gt;
+&lt;li&gt;United States Virgin Islands (87,000 people).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For comparison, the least populated state, Wyoming, contains 581,000 people.&lt;/p&gt;
+&lt;p&gt;The Pacific Ocean is on the West Coast of the United States, while the Atlantic
+ocean is on the East Coast.&lt;/p&gt;
+&lt;p&gt;The two longest rivers within the United States are the Missouri and the Mississippi.&lt;/p&gt;
+&lt;p&gt;The Statue of Liberty is on Liberty Island, in New York Harbour, on the Hudson River
+near the south end of Manhattan in New York City.&lt;/p&gt;
+&lt;p&gt;States that border Canada are: Maine, New Hampshire, Vermont, New York, Pennsylvania,
+Ohio, Michigan, Minnesota, North Dakota, Montana, Idaho, Washington, and Alaska.&lt;/p&gt;
+&lt;p&gt;States that border Mexico are: California, Arizona, New Mexico, and Texas.&lt;/p&gt;
+&lt;p&gt;The flag has 50 stars to represent the 50 states, and 13 stripes to represent the
+initial 13 colonies.&lt;/p&gt;
+&lt;p&gt;The national anthem is &lt;em&gt;The Star-Spangled Banner&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Independence Day is celebrated every July 4th. Other national holidays are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;New Year's Day&lt;/li&gt;
+&lt;li&gt;Martin Luther King Jr. Day&lt;/li&gt;
+&lt;li&gt;Presidents' Day&lt;/li&gt;
+&lt;li&gt;Memorial Day&lt;/li&gt;
+&lt;li&gt;Independence Day&lt;/li&gt;
+&lt;li&gt;Labor Day&lt;/li&gt;
+&lt;li&gt;Columbus Day&lt;/li&gt;
+&lt;li&gt;Veterans Day&lt;/li&gt;
+&lt;li&gt;Thanksgiving&lt;/li&gt;
+&lt;li&gt;Christmas&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;My State, Minnesota&lt;/h2&gt;
+&lt;p&gt;The capital of Minnesota is St Paul.&lt;/p&gt;
+&lt;p&gt;The current Governor of Minnesota is Tim Waltz.&lt;/p&gt;
+&lt;p&gt;The current senators for Minnesota are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amy Klobuchar (Democratic)&lt;/li&gt;
+&lt;li&gt;Tina Smith (Democratic)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The current representative for my district, the first congressional district of
+Minnesota, is Jim Hagadorn (Republican).&lt;/p&gt;
+&lt;h2&gt;Miscellanea&lt;/h2&gt;
+&lt;p&gt;The economic system of the United States is a capitalist, free market economy.&lt;/p&gt;
+&lt;p&gt;The two major political parties in the US are the Democratic and Republican
+parties.&lt;/p&gt;
+&lt;p&gt;On 11th September 2001, terrorists attacked the United States by crashing
+commercial passenger airliners into the Pentagon in Virginia near Washington
+DC, and the twin towers of the World Trade Center, destroying them and killing
+almost 3,000 people.&lt;/p&gt;</description><guid>https://www.tartley.com/posts/basic-us-civics/</guid><pubDate>Fri, 08 Jul 2022 16:19:32 GMT</pubDate></item><item><title>Journey</title><link>https://www.tartley.com/posts/journey/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/journey-screenshot.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Released on PlayStation 3 by thatgamecompany in 2012. Played on Windows 10 in
 2022.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The slow-paced opening scenes, alternately trudging up and then surfing down
@@ -706,47 +1081,4 @@ Goodreads page counts:&lt;/p&gt;
 re-reads. Not bad! The number of re-reads is a reasonable proxy for the impact
 each book had on me at the time.&lt;/p&gt;
 &lt;p&gt;But on reflection, &lt;a href="https://www.tartley.com/posts/the-works-of-larry-niven"&gt;there is another contender&lt;/a&gt;...&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>environment</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/termination-shock/</guid><pubDate>Fri, 14 Jan 2022 15:20:55 GMT</pubDate></item><item><title>The Incal</title><link>https://www.tartley.com/posts/the-incal/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="The Incal 4 cover" src="https://www.tartley.com/files/2022/the-incal-4-cover.webp"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style="clear: right; float: right"&gt;
-&lt;img alt="The Incal The Fall " src="https://www.tartley.com/files/2022/the-incal-the-fall.webp"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style="clear: right; float: right"&gt;
-&lt;img alt="The Incal The Fall " src="https://www.tartley.com/files/2022/the-incal-divinity.webp"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style="clear: right; float: right"&gt;
-&lt;img alt="The Incal 4 cover excerpt" src="https://www.tartley.com/files/2022/the-incal-4-cover-part.webp"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Written by Alejandro Jodorowsky, art by Jean Giraud (aka Mœbius), 1980-88&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;I grabbed this in the English translation from the original French, having been
-intrigued by the &lt;em&gt;Pocket Essential Alan Moore&lt;/em&gt;'s description of it as a
-contender for "the best comic in the medium's history".&lt;/p&gt;
-&lt;p&gt;This creative pairing also worked together on
-&lt;a href="https://en.wikipedia.org/wiki/Jodorowsky%27s_Dune"&gt;the unproduced 1970s movie of Dune&lt;/a&gt;,
-the one whose cast was to have included Salvador Dalí, Orson Welles,
-Gloria Swanson, and Mick Jagger, and presumably would have been pretty trippy -
-I mean, &lt;em&gt;even more&lt;/em&gt; trippy than the David Lynch one turned out to be. The
-artist, Mœbius, has had a long and glorious career, knighted for his art in his
-native France, and he worked on other movies such as Alien, Tron, The Fifth
-Element, and The Abyss.&lt;/p&gt;
-&lt;p&gt;Echoes of all of these are visible throughout the consistently stunning
-artwork of The Incal, and it has been explicitly noted as an influence on the
-expansive decayed futurescapes of Akira and Blade Runner, and the flamboyant
-visuals of the Star Wars prequels.&lt;/p&gt;
-&lt;p&gt;The writing really swings for the fences, a sprawling tale of a reluctant
-hero's journey, taking in societal commentary, intergalactic travel, spiritual
-transformation, iconic incarnations of good and evil, and a deep thread of
-mysticism.&lt;/p&gt;
-&lt;p&gt;For me, it does have a very evident "foreign" feeling - small social nuances
-with which I'm unfamiliar. Equally clearly, this is part of its exotic charm.
-And while the story touches on, perhaps even consists of, deep themes, it
-doesn't so much articulately explore them, but instead simply incorporates
-them. This is not a comic for people who are not already comic fans.&lt;/p&gt;
-&lt;p&gt;In lesser hands, it might have been undisciplined. But wherever the story
-roams, the artwork is endlessly enthralling. I especially liked the touch of
-protagonist, John DiFool, starting out distinctly ugly, but being rendered more
-handsomely on the rare occasions he manages to get in touch with his more noble
-aspects. Jodorowsky manages to keep it all together, bringing it around to a
-splendidly satisfying theatrical close. &lt;em&gt;Bravo!&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>comic</category><category>fiction</category><category>media</category><category>science-fiction</category><guid>https://www.tartley.com/posts/the-incal/</guid><pubDate>Wed, 05 Jan 2022 19:56:03 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>environment</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/termination-shock/</guid><pubDate>Fri, 14 Jan 2022 15:20:55 GMT</pubDate></item></channel></rss>
