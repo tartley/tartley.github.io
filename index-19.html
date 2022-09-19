@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!">
+<meta name="description" content="A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 19) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -53,7 +53,7 @@
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -162,7 +162,7 @@ there's less code, and more pretty pictures.</em></p>
 <h3><strong>Composite Shapes</strong></h3>
 <p>In order to create more complex shapes by composing instances of
 existing ones, we need a simple composite shape:</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">MultiShape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">MultiShape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
@@ -171,7 +171,7 @@ existing ones, we need a simple composite shape:</p>
     <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">matrices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Matrix</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">orientation</span><span class="p">))</span>
-</code></pre>
+</pre></div>
 
 <p>A MultiShape contains a list of child Shapes, and a matrix for each
 child, indicating the child's position and orientation relative to the
@@ -192,14 +192,14 @@ very simple - it just needs to provide iterables of vertices, faces and
 face_colors. Here is how MultiShape provides a sequence of vertices, by
 chaining the vertices of all its children, each vertex transformed by
 the matrix of the relevant child shape:</p>
-<pre class="code literal-block"><span></span><code><span class="nd">@property</span>
+<div class="code"><pre class="code literal-block"><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">vertices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span>
         <span class="n">matrix</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">vertex</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">child</span><span class="p">,</span> <span class="n">matrix</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrices</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">vertex</span> <span class="ow">in</span> <span class="n">child</span><span class="o">.</span><span class="n">vertices</span>
     <span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>There is an inefficiency to this. When MultiShapes are nested, I'm
 transforming each vertex once for every branch in the tree. It would be
@@ -213,7 +213,7 @@ face indices and face_colors, by aggregating those of its children.</p>
 <p>Using MultiShape, we can now easily compose groups of our basic Shapes.
 A new factory function composes a bunch of cubes into the same
 MultiShape:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">CubeCorners</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">color1</span><span class="p">,</span> <span class="n">color2</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">CubeCorners</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">color1</span><span class="p">,</span> <span class="n">color2</span><span class="p">):</span>
     <span class="n">multi</span> <span class="o">=</span> <span class="n">MultiShape</span><span class="p">()</span>
     <span class="n">multi</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
         <span class="n">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">repeat</span><span class="p">(</span><span class="n">color1</span><span class="p">)),</span>
@@ -225,11 +225,11 @@ MultiShape:</p>
             <span class="n">position</span><span class="o">=</span><span class="n">Vec3</span><span class="p">(</span><span class="o">*</span><span class="n">pos</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">edge</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span>
         <span class="p">)</span>
     <span class="k">return</span> <span class="n">multi</span>
-</code></pre>
+</pre></div>
 
 <p><img alt="A cluster of cubes, rendered in one glDrawElements call" src="files/2010/07/screen-cube-cluster2.png" title="A cluster of cubes, rendered in one glDrawElements call"></p>
 <p>Another new factory function, <em>RingOf:</em></p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">RingOf</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">RingOf</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
     <span class="n">multi</span> <span class="o">=</span> <span class="n">MultiShape</span><span class="p">()</span>
     <span class="n">angle</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">orientation</span> <span class="o">=</span> <span class="n">Orientation</span><span class="p">()</span>
@@ -240,7 +240,7 @@ MultiShape:</p>
         <span class="n">orientation</span><span class="o">.</span><span class="n">pitch</span><span class="p">(</span><span class="n">delta_angle</span><span class="p">)</span>
         <span class="n">multi</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">orientation</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">multi</span>
-</code></pre>
+</pre></div>
 
 <p>returns copies of a given child shape, arranged in a ring, such as this
 ring of cubes:</p>
@@ -253,14 +253,14 @@ ring of cubes:</p>
 in this context I'm counting as a success.</p>
 <p>If we can compose basic shapes into rings, we can also compose rings
 into... um... <em>tri-axis-rings</em>:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">TriRing</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">colors</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">TriRing</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">colors</span><span class="p">):</span>
     <span class="n">multi</span> <span class="o">=</span> <span class="n">MultiShape</span><span class="p">()</span>
     <span class="n">ring</span> <span class="o">=</span> <span class="n">RingOf</span><span class="p">(</span><span class="n">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">colors</span><span class="p">),</span> <span class="n">radius</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
     <span class="n">multi</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ring</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="n">Orientation</span><span class="p">(</span><span class="n">XAxis</span><span class="p">))</span>
     <span class="n">multi</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ring</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="n">Orientation</span><span class="p">(</span><span class="n">YAxis</span><span class="p">))</span>
     <span class="n">multi</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ring</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="n">Orientation</span><span class="p">(</span><span class="n">ZAxis</span><span class="p">,</span> <span class="n">XAxis</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">multi</span>
-</code></pre>
+</pre></div>
 
 <p>If you look carefully, you can make out some depth-buffer fighting where the
 three rings intersect, but I'm moving too fast to worry about that now.</p>
@@ -281,7 +281,7 @@ OpenGL vertex buffers (I don't think my hardware supports that), so all
 the geometry is being sent needlessly over the bus to the GPU every
 frame.</p>
 <p>How about an alternative, the RgbCubeCluster:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">RgbCubeCluster</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">cluster_edge</span><span class="p">,</span> <span class="n">cube_count</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">RgbCubeCluster</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">cluster_edge</span><span class="p">,</span> <span class="n">cube_count</span><span class="p">):</span>
     <span class="n">cluster</span> <span class="o">=</span> <span class="n">MultiShape</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="n">cube_count</span><span class="p">):</span>
         <span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">Random</span><span class="p">()</span>
@@ -295,7 +295,7 @@ frame.</p>
             <span class="n">position</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="k">return</span> <span class="n">cluster</span>
-</code></pre>
+</pre></div>
 
 <p>This creates a cluster of cubes, each one colored by its position in RGB
 space.</p>
@@ -500,7 +500,7 @@ geometry from code, to see where that leads.</p>
 <h3><strong>Modelling Polyhedra</strong></h3>
 <p>A polyhedron is a 3D shape with flat faces and straight edges. We can
 model coloured polyhedra using a simple Shape class:</p>
-<pre class="code literal-block"><span></span><code><span class="n">Vec3</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">'Vec3'</span><span class="p">,</span> <span class="s1">'x y z'</span><span class="p">)</span>
+<div class="code"><pre class="code literal-block"><span class="n">Vec3</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">'Vec3'</span><span class="p">,</span> <span class="s1">'x y z'</span><span class="p">)</span>
 <span class="n">Color</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">'Color'</span><span class="p">,</span> <span class="s1">'r g b a'</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">Shape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -514,7 +514,7 @@ model coloured polyhedra using a simple Shape class:</p>
 
         <span class="c1"># List of colors, one per face</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">face_colors</span> <span class="o">=</span> <span class="n">face_colors</span>
-</code></pre>
+</pre></div>
 
 <p>An instance of this class, for example, might represent a yellow cube,
 or a tetrahedron with green and black faces, or any other coloured
@@ -526,7 +526,7 @@ square:</p>
 <p>You can see this geometry features five vertices (v0 to v4), which are
 used by the two faces. This might be represented by an instance of
 Shape:</p>
-<pre class="code literal-block"><span></span><code><span class="n">v0</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="code"><pre class="code literal-block"><span class="n">v0</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">v1</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">v2</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">v3</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -543,7 +543,7 @@ Shape:</p>
     <span class="p">],</span>
     <span class="n">face_colors</span><span class="o">=</span><span class="p">[</span><span class="n">red</span><span class="p">,</span> <span class="n">yellow</span><span class="p">],</span>
 <span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>The integers in the 'faces' member are indices into the vertices list.
 So the triangular face, for example, is formed by linking vertices 2, 3
@@ -581,7 +581,7 @@ normals will still differ. Don't sweat trying to eliminate these
 redundancies, they are necessary, unless every single attribute of the
 re-used vertex (including surface normals) are identical.</p>
 <p>The code in Glyph.get_glverts() performs this dereferencing step:</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Glyph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Glyph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">get_glverts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">num_glverts</span><span class="p">):</span>
         <span class="n">glverts</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span>
@@ -591,7 +591,7 @@ re-used vertex (including surface normals) are identical.</p>
         <span class="p">)</span>
         <span class="n">ArrayType</span> <span class="o">=</span> <span class="n">GLfloat</span> <span class="o">*</span> <span class="p">(</span><span class="n">num_glverts</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">ArrayType</span><span class="p">(</span><span class="o">*</span><span class="n">glverts</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>This uses a generator to produce the vertices in the order that we need
 them. 'ArrayType' shows the standard idiom to create a ctypes array - we
@@ -614,7 +614,7 @@ library, this can be done in about 150 lines of Python. But in the
 interests of keeping it simple, I decided to restrict our code to just
 handling convex faces. Tessellating these faces can be done using a
 considerably simpler algorithm:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">tessellate</span><span class="p">(</span><span class="n">face</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">tessellate</span><span class="p">(</span><span class="n">face</span><span class="p">):</span>
     <span class="sd">'''</span>
 <span class="sd">    Break the given face into triangles.</span>
 <span class="sd">    e.g. [0, 1, 2, 3, 4] -&gt;</span>
@@ -625,7 +625,7 @@ considerably simpler algorithm:</p>
         <span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">face</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">face</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]]</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">face</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
     <span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>We again use a generator, to simply join up the face's first vertex with
 all the other vertices, like this:</p>
@@ -636,7 +636,7 @@ smart enough to write this as a generator first time around, I presume
 it would require more than one generator to do it (anyone?), so I'm
 needlessly creating an in-memory copy of the sequence, but it turns out
 I need to take its length right afterwards anyway, so what the heck:</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Glyph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Glyph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">get_glindices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">):</span>
         <span class="n">glindices</span> <span class="o">=</span> <span class="p">[]</span>
@@ -647,7 +647,7 @@ I need to take its length right afterwards anyway, so what the heck:</p>
             <span class="n">face_offset</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">face</span><span class="p">)</span>
         <span class="n">ArrayType</span> <span class="o">=</span> <span class="n">GLubyte</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">glindices</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">ArrayType</span><span class="p">(</span><span class="n">glindices</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>This is more complex than get_glvertices because it is performing both
 of the transformations described in steps 1 and 2. But it's still pretty
@@ -658,7 +658,7 @@ above 256 (or 65,536.)</p>
 <p>Finally, we need an array of vertex colors. This is the simplest of the
 lot, generated by repeating the face_color for each face, once per
 vertex:</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Glyph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Glyph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">get_glcolors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">face_colors</span><span class="p">,</span> <span class="n">num_glvertices</span><span class="p">):</span>
         <span class="n">glcolors</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span>
@@ -667,14 +667,14 @@ vertex:</p>
         <span class="p">)</span>
         <span class="n">ArrayType</span> <span class="o">=</span> <span class="n">GLubyte</span> <span class="o">*</span> <span class="p">(</span><span class="n">num_glvertices</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">ArrayType</span><span class="p">(</span><span class="n">chain</span><span class="p">(</span><span class="o">*</span><span class="n">glcolors</span><span class="p">))</span>
-</code></pre>
+</pre></div>
 
 <h3><strong>First Light</strong></h3>
 <p>It's might seem like a teensy bit of a slog to get here, but it hasn't
 been more than sixty lines of code, and now we're in a position to pass
 our ctypes arrays into OpenGL's drawElements. This happens in our
 Render.draw() method:</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Render</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Render</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">world</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">world</span><span class="p">:</span>
@@ -689,7 +689,7 @@ Render.draw() method:</p>
                 <span class="n">GL_UNSIGNED_BYTE</span><span class="p">,</span>
                 <span class="n">item</span><span class="o">.</span><span class="n">glyph</span><span class="o">.</span><span class="n">glindices</span>
             <span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>This is canonical OpenGL render code, so I'm not going to dissect it,
 but now we get some actual visible output:</p>
@@ -705,7 +705,7 @@ will be on the inside of the polyhedron.</p>
 <p>So now we've got all our infrastructure in place, we can start creating
 factory functions to churn out some Shapes. Let's start with something
 straightforward, a tetrahedron (triangle-based pyramid):</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">Tetrahedron</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">face_colors</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">Tetrahedron</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">face_colors</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">size</span> <span class="o">=</span> <span class="n">edge</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
     <span class="n">vertices</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">(</span><span class="o">+</span><span class="n">size</span><span class="p">,</span> <span class="o">+</span><span class="n">size</span><span class="p">,</span> <span class="o">+</span><span class="n">size</span><span class="p">),</span>
@@ -715,12 +715,12 @@ straightforward, a tetrahedron (triangle-based pyramid):</p>
     <span class="p">]</span>
     <span class="n">faces</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="p">]</span>
     <span class="k">return</span> <span class="n">Shape</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">face_colors</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>Which produces a tetrahedron:</p>
 <p><img alt="A tetrahedron" src="files/2010/07/screen-tetrahedron.png"></p>
 <p>Then a cube factory:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">face_colors</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">face_colors</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">e2</span> <span class="o">=</span> <span class="n">edge</span> <span class="o">/</span> <span class="mi">2</span>
     <span class="n">verts</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="o">*</span><span class="n">repeat</span><span class="p">([</span><span class="o">-</span><span class="n">e2</span><span class="p">,</span> <span class="o">+</span><span class="n">e2</span><span class="p">],</span> <span class="mi">3</span><span class="p">)))</span>
     <span class="n">faces</span> <span class="o">=</span> <span class="p">[</span>
@@ -732,17 +732,17 @@ straightforward, a tetrahedron (triangle-based pyramid):</p>
         <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="c1"># bottom</span>
     <span class="p">]</span>
     <span class="k">return</span> <span class="n">Shape</span><span class="p">(</span><span class="n">verts</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">face_colors</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>The six faces are quite evident, but the use of <em>itertools.product</em> to
 produce the list of vertices perhaps deserves a bit of exposition. It's
 an inspired tip from <a href="http://tzotzioy.blogspot.com/">Î¤Î–Î©Î¤Î–Î™ÎŸÎ¥</a>.
 Just to spell it out in longhand:</p>
-<pre class="code literal-block"><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">repeat</span><span class="p">,</span> <span class="n">product</span>
+<div class="code"><pre class="code literal-block"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">repeat</span><span class="p">,</span> <span class="n">product</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">list</span><span class="p">(</span><span class="n">product</span><span class="p">(</span><span class="o">*</span><span class="n">repeat</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">)))</span>
 <span class="p">[(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
  <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
-</code></pre>
+</pre></div>
 
 <p>So there are the eight vertices of the cube, and that gets us the
 following:</p>
@@ -762,7 +762,7 @@ origin, they just sit there, embedded within one another:</p>
 <p>In our earlier Render.draw() method, we left a 'TODO' comment in place,
 to note that we weren't yet handling item positions and orientations.
 Here's what Render.draw looks like when we fill that code in:</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Render</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Render</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">world</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">world</span><span class="p">:</span>
@@ -780,7 +780,7 @@ Here's what Render.draw looks like when we fill that code in:</p>
                 <span class="n">item</span><span class="o">.</span><span class="n">glyph</span><span class="o">.</span><span class="n">glindices</span>
             <span class="p">)</span>
             <span class="n">glPopMatrix</span><span class="p">()</span>
-</code></pre>
+</pre></div>
 
 <p>Again, this is very standard OpenGL usage. To set an item's <em>position</em>
 attribute, I'm going to use a bit of code that I already snuck into the
@@ -788,7 +788,7 @@ demo without telling you about. It's the code that moves the camera
 around in space. A simplified version is here, class Orbit, which will
 return a new position each time it gets called. The locus of this
 position is an orbit around the origin:</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Orbit</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Orbit</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="n">phase</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">distance</span> <span class="o">=</span> <span class="n">distance</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">speed</span>
@@ -801,13 +801,13 @@ position is an orbit around the origin:</p>
         <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distance</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">bearing</span><span class="p">)</span>
         <span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distance</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">bearing</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">Vec3</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>The actual camera uses a slightly longer version I call WobblyOrbit (not
 shown), which operates in exactly the same way. Any 'mover' class, i.e.
 one that returns a Vec3 position when called, can be used to move the
 camera, or any other item, around in space:</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">GameItem</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">GameItem</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span> <span class="n">kwargs</span><span class="p">):</span>
        <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="o">**</span> <span class="n">kwargs</span><span class="p">)</span>
 
@@ -820,7 +820,7 @@ camera, or any other item, around in space:</p>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">mover</span><span class="p">:</span>
         <span class="n">item</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">mover</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>Similarly, we can spin items using 'spinner' classes, that tweak an
 item's orientation as time goes by.</p>
@@ -898,7 +898,7 @@ Python packages, if you will.</p>
 <p>It has a marvellous undocumented feature. Set the environment variable
 PIP_DOWNLOAD_CACHE to prevent re-downloading the same packages
 repeatedly when setting up environments on the same machine:</p>
-<pre class="code literal-block"><span></span><code><span class="o">&gt;</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">grep</span><span class="w"> </span><span class="n">PIP</span><span class="w"></span>
+<div class="code"><pre class="code literal-block"><span class="o">&gt;</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">grep</span><span class="w"> </span><span class="n">PIP</span><span class="w"></span>
 <span class="n">PIP_DOWNLOAD_CACHE</span><span class="o">=</span><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Documents</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">Settings</span><span class="err">\</span><span class="n">jhartley</span><span class="err">\</span><span class="p">.</span><span class="n">pip_download_cache</span><span class="w"></span>
 
 <span class="o">&gt;</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">mock</span><span class="w"></span>
@@ -918,7 +918,7 @@ repeatedly when setting up environments on the same machine:</p>
 <span class="w"> </span><span class="k">Using</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Documents</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">Settings</span><span class="err">\</span><span class="n">jhartley</span><span class="err">\</span><span class="p">.</span><span class="n">pip_download_cache</span><span class="err">\</span><span class="n">http</span><span class="o">%</span><span class="mi">3</span><span class="n">A</span><span class="o">%</span><span class="mi">2</span><span class="n">F</span><span class="o">%</span><span class="mi">2</span><span class="n">Fpypi</span><span class="p">.</span><span class="n">python</span><span class="p">.</span><span class="n">org</span><span class="o">%</span><span class="mi">2</span><span class="n">Fpackages</span><span class="o">%</span><span class="mi">2</span><span class="n">Fsource</span><span class="o">%</span><span class="mi">2</span><span class="n">Fm</span><span class="o">%</span><span class="mi">2</span><span class="n">Fmock</span><span class="o">%</span><span class="mi">2</span><span class="n">Fmock</span><span class="o">-</span><span class="mf">0.7.0</span><span class="n">b2</span><span class="p">.</span><span class="n">zip</span><span class="w"></span>
 <span class="o">[</span><span class="n">snip</span><span class="o">]</span><span class="w"></span>
 <span class="n">Successfully</span><span class="w"> </span><span class="n">installed</span><span class="w"> </span><span class="n">mock</span><span class="w"></span>
-</code></pre>
+</pre></div>
 
 <p>(This text is copied from my unholy bastardised shell of choice at work,
 Windows CMD shell with Cygwin binaries foremost on the PATH.)</p>
@@ -983,30 +983,30 @@ earliest convenience.</p>
 <p>To make them work properly, use
 <a href="http://adoxa.110mb.com/ansicon/index.html">AnsiCon</a>. Unzip it somewhere
 permanent (eg. <code>%ProgramFiles%\ansicon</code>) and install it with:</p>
-<pre class="code literal-block"><span></span><code>ansicon.exe -i
-</code></pre>
+<div class="code"><pre class="code literal-block">ansicon.exe -i
+</pre></div>
 
 <p>start a new terminal, and lo:</p>
 <p><img alt="After: Pretty." src="files/2010/07/ansicon01-working.png"></p>
 <p>Fine tune the appearance of the programs generating the color, for
 example customise 'hg diff' by editing \~/.hgrc:</p>
-<pre class="code literal-block"><span></span><code><span class="p p-Indicator">[</span><span class="nv">extensions</span><span class="p p-Indicator">]</span>
-<span class="l l-Scalar l-Scalar-Plain">color =</span>
+<div class="code"><pre class="code literal-block"><span class="p p-Indicator">[</span><span class="nv">extensions</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">color =</span><span class="w"></span>
 
-<span class="l l-Scalar l-Scalar-Plain">[color]</span>
-<span class="l l-Scalar l-Scalar-Plain">status.modified = yellow bold</span>
-<span class="l l-Scalar l-Scalar-Plain">status.unknown = white</span>
-<span class="l l-Scalar l-Scalar-Plain">status.deleted = red_background white bold</span>
+<span class="l l-Scalar l-Scalar-Plain">[color]</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">status.modified = yellow bold</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">status.unknown = white</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">status.deleted = red_background white bold</span><span class="w"></span>
 
-<span class="l l-Scalar l-Scalar-Plain">diff.deleted = red bold</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.inserted = green bold</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.file_a = white</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.file_b = white</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.diffline = white_background black</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.extended = yellow bold</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.hunk = underline black</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.changed = yellow bold</span>
-</code></pre>
+<span class="l l-Scalar l-Scalar-Plain">diff.deleted = red bold</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">diff.inserted = green bold</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">diff.file_a = white</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">diff.file_b = white</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">diff.diffline = white_background black</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">diff.extended = yellow bold</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">diff.hunk = underline black</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">diff.changed = yellow bold</span><span class="w"></span>
+</pre></div>
 
 <p><img alt="Fine-tuned" src="files/2010/07/ansicon02-tuned.png"></p>
 <p>ANSI is correctly stripped out if the output of a program is not a
@@ -1017,8 +1017,8 @@ machine-parsing of the text:</p>
 codes</a>
 into your <a href="http://ss64.com/nt/prompt.html">prompt</a>, by setting
 environment variable PROMPT:</p>
-<pre class="code literal-block"><span></span><code>set PROMPT=$E[0;36m$P$_$E[36;1m$G$E[0m$S
-</code></pre>
+<div class="code"><pre class="code literal-block">set PROMPT=$E[0;36m$P$_$E[36;1m$G$E[0m$S
+</pre></div>
 
 <p><img alt="Colored Prompt" src="files/2010/07/ansicon04-prompt.png"></p>
 <p><a href="http://tartley.com/?p=1062">Multiple</a>
@@ -1045,21 +1045,21 @@ interesting geometry. This is an area in which the flexibility and
 expressiveness of Python can really shine.</p>
 <p>I started with a quick Shape class, to model the vertices and faces of
 an arbitrary polyhedra (3D shapes with flat faces and straight edges):</p>
-<pre class="code literal-block"><span></span><code><span class="n">Position</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">'Position'</span><span class="p">,</span> <span class="s1">'x y z'</span><span class="p">)</span>
+<div class="code"><pre class="code literal-block"><span class="n">Position</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">'Position'</span><span class="p">,</span> <span class="s1">'x y z'</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">Shape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="p">[</span><span class="n">Position</span><span class="p">(</span><span class="o">*</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vertices</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">faces</span> <span class="o">=</span> <span class="n">faces</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
-</code></pre>
+</pre></div>
 
 <p>Each face of the shape is represented as a list of integer indices into
 the vertex list. The 'faces' attribute is a list of all faces. The color
 attributes is just a 4 element tuple: (r, g, b, alpha). This class can
 now be instantiated by factory functions to form particular 3D shapes,
 such as red cubes or blue tetrahedrons:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
     <span class="n">verts</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">(</span><span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
         <span class="p">(</span><span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
@@ -1079,7 +1079,7 @@ such as red cubes or blue tetrahedrons:</p>
         <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="c1"># bottom</span>
     <span class="p">]</span>
     <span class="k">return</span> <span class="n">Shape</span><span class="p">(</span><span class="n">verts</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>A class called 'Glyph' will convert a Shape instance into the set of
 ctypes arrays that need to be passed to OpenGL:</p>
@@ -1088,7 +1088,7 @@ well as vertices.</p>
 <p>Finally, we have a renderer, whose 'draw' method is invoked by our
 window draw event. This iterates through all items in our world that
 have a Glyph attribute, drawing each of them:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
         <span class="n">gl</span><span class="o">.</span><span class="n">glPushMatrix</span><span class="p">()</span>
 
@@ -1105,11 +1105,11 @@ have a Glyph attribute, drawing each of them:</p>
             <span class="n">glyph</span><span class="o">.</span><span class="n">glIndices</span><span class="p">)</span>      <span class="c1"># index array</span>
 
         <span class="n">gl</span><span class="o">.</span><span class="n">glPopMatrix</span><span class="p">()</span>
-</code></pre>
+</pre></div>
 
 <p>So we add a couple of interpenetrated Cube() shaped items into our
 world:</p>
-<pre class="code literal-block"><span></span><code><span class="n">white</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<div class="code"><pre class="code literal-block"><span class="n">white</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">red</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="n">world</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">GameItem</span><span class="p">(</span>
@@ -1122,7 +1122,7 @@ world:</p>
     <span class="n">shape</span><span class="o">=</span><span class="n">Cube</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">red</span><span class="p">),</span>
     <span class="n">glyph</span><span class="o">=</span><span class="n">Glyph</span><span class="p">(),</span>
 <span class="p">))</span>
-</code></pre>
+</pre></div>
 
 <p>and running the program renders them:</p>
 <p><img alt="" src="files/2010/06/two-cubes.png"></p>
@@ -1135,7 +1135,7 @@ call to glDrawElements. To do this, we create a CompositeShape object,
 that contains several Shapes, and exposes 'vertices' and 'faces'
 attributes just like a regular Shape, which aggregate the geometry of
 all their subordinate Shapes.</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">CompositeShape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">CompositeShape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1150,7 +1150,7 @@ all their subordinate Shapes.</p>
         <span class="k">return</span> <span class="p">(</span><span class="n">vert</span> <span class="o">+</span> <span class="n">offset</span>
                 <span class="k">for</span> <span class="n">shape</span><span class="p">,</span> <span class="n">offset</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span>
                 <span class="k">for</span> <span class="n">vert</span> <span class="ow">in</span> <span class="n">shape</span><span class="o">.</span><span class="n">vertices</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>(The real CompositeShape class also defines 'faces', which is elided
 here.) Instances of CompositeShape can be passed directly to our
@@ -1187,7 +1187,7 @@ shaded. Lighting needs to know normals, the vector at right angles to a
 face, so that it can figure out how how strongly each face is
 illuminated. So our Glyph needs to start generating an array of normals
 for each vertex.</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">get_normal</span><span class="p">(</span><span class="n">face</span><span class="p">,</span> <span class="n">vertices</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">get_normal</span><span class="p">(</span><span class="n">face</span><span class="p">,</span> <span class="n">vertices</span><span class="p">):</span>
     <span class="n">v0</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
     <span class="n">v1</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
     <span class="n">v2</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
@@ -1205,7 +1205,7 @@ for each vertex.</p>
                    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">face</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">gl_array</span><span class="p">(</span><span class="n">gl</span><span class="o">.</span><span class="n">GLfloat</span><span class="p">,</span> <span class="n">normals</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_glvertices</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>This generation of normals also affects the generation of vertex
 positions, colors and indices, since vertices can no longer be shared

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about vim)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/vim.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 06 May 2022 16:02:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Compiling MacVim with Python 2.7</title><link>https://www.tartley.com/posts/compiling-macvim-with-python-2-7/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I love the brilliant Vim plugin
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about vim)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/vim.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Sep 2022 15:37:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Compiling MacVim with Python 2.7</title><link>https://www.tartley.com/posts/compiling-macvim-with-python-2-7/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I love the brilliant Vim plugin
 &lt;a href="http://www.vim.org/scripts/script.php?script_id=2441"&gt;pyflakes-vim&lt;/a&gt;,
 which highlights errors &amp;amp; warnings, and since I got a MacBook for work,
 I've been using MacVim a lot.&lt;/p&gt;
@@ -9,7 +9,7 @@ set literals. These are marked as a syntax errors, which prevents the
 rest of the file from being parsed.&lt;/p&gt;
 &lt;p&gt;The solution is to compile your own MacVim, using Python 2.7 instead of
 the system Python. The following commands got MacVim compiled for me:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 git clone git://github.com/b4winckler/macvim.git
 &lt;span class="nb"&gt;cd&lt;/span&gt; macvim/src
 &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;LDFLAGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;-L/usr/lib
@@ -23,7 +23,7 @@ git clone git://github.com/b4winckler/macvim.git
 make
 open MacVim/build/Release
 &lt;span class="nb"&gt;echo&lt;/span&gt; Drag MacVim.app to your Applications directory
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Without the LDFLAGS setting, I was missing some symbols at link. The
 --with-python-config-dir entry came from typing 'which python' to find
@@ -33,9 +33,9 @@ where my Python 2.7 install lives, and modifying that result to find its
 macvim/src/MacVim/build/Release/MacVim.app into your Applications
 directory.&lt;/p&gt;
 &lt;p&gt;Open up MacVim, and check out the built-in Python version:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
 &lt;span class="mf"&gt;2.7.1&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r271&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;86882&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Nov&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="mi"&gt;2010&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;35&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;34&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;And files with set literals are now correctly parsed for errors.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This only works if the Python 2.7 is your default 'python'
@@ -50,12 +50,12 @@ on your PATH. Recent releases are much improved for Python.&lt;/p&gt;
 will need to be created or updated whenever you make significant
 changes. Either get used to manually running the following command a
 lot:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;ctags -R .
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ctags -R .
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;or bind it to a key in your \~/.vimrc:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;map  :&lt;span class="p"&gt;!&lt;/span&gt;&lt;span class="k"&gt;start&lt;/span&gt; /min ctags &lt;span class="p"&gt;-&lt;/span&gt;R .
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;map  :&lt;span class="p"&gt;!&lt;/span&gt;&lt;span class="k"&gt;start&lt;/span&gt; /min ctags &lt;span class="p"&gt;-&lt;/span&gt;R .
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;I like to set Vim's current working directory equal to the root of
 whatever project I'm working in, so now I can press f12 to update the
@@ -73,10 +73,10 @@ actually make ctrl-] more inconvenient, because they increase the
 likelyhood of finding duplicate definitions of a tag, causing the menu
 to inconveniently pop up, rather than just jumping to the tag you want.&lt;/p&gt;
 &lt;p&gt;To fix this, create a \~/.ctags file:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;--python-kinds&lt;span class="o"&gt;=&lt;/span&gt;-iv
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;--python-kinds&lt;span class="o"&gt;=&lt;/span&gt;-iv
 --exclude&lt;span class="o"&gt;=&lt;/span&gt;build
 --exclude&lt;span class="o"&gt;=&lt;/span&gt;dist
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The first line turns off tags generation for variables and imports. The
 second and third lines turn off generation of tags in the named dirs,
@@ -90,7 +90,7 @@ property &lt;em&gt;.matrix&lt;/em&gt; will present you with a menu asking you to
 between property &lt;em&gt;.matrix&lt;/em&gt; and class &lt;em&gt;Matrix&lt;/em&gt;, rather than just jumping
 to the property.&lt;/p&gt;
 &lt;p&gt;To fix this, add this to your .vimrc:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c"&gt;" go to defn of tag under the cursor&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" go to defn of tag under the cursor&lt;/span&gt;
 &lt;span class="k"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; MatchCaseTag&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nb"&gt;ic&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;ic&lt;/span&gt;
     &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;noic&lt;/span&gt;
@@ -101,7 +101,7 @@ to the property.&lt;/p&gt;
     &lt;span class="k"&gt;endtry&lt;/span&gt;
 &lt;span class="k"&gt;endfun&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt;   :&lt;span class="k"&gt;call&lt;/span&gt; MatchCaseTag&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt;This Vim script was suggested in a comment by James Vega, in
 order to reliably restore the state of 'ignorecase' after doing the tag

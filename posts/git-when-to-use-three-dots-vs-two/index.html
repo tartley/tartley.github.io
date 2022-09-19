@@ -67,7 +67,7 @@ To see the commits or diffs introduced by a branch (the filled circles ●):
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -99,17 +99,17 @@ To see the commits or diffs introduced by a branch (the filled circles ●):
     <p>I endlessly misremember when to use '...' in git versus '..'. That ends
 today:</p>
 <p>To see the commits or diffs introduced by a branch (the filled circles ●):</p>
-<pre class="code literal-block"><span></span><code>     f
+<div class="code"><pre class="code literal-block">     f
     +●  m           git log m..f
      |  ○
     +●  |           git diff m...f
       \ ○
        \|
         ○
-</code></pre>
+</pre></div>
 
 <p>To see the commits or diffs between the tip of one branch and another:</p>
-<pre class="code literal-block"><span></span><code>     f              git log m...f
+<div class="code"><pre class="code literal-block">     f              git log m...f
     +●  m           All commits look the same,
      |  ●-          unless you use --left-right, which
     +●  |           shows where each commit comes from.
@@ -117,10 +117,10 @@ today:</p>
        \|           git diff m..f
         ○           '-' commits are shown inverted,
                      i.e. additions as deletions.
-</code></pre>
+</pre></div>
 
 <p>To see the commits from 'f' back to the beginning of time:</p>
-<pre class="code literal-block"><span></span><code>     f
+<div class="code"><pre class="code literal-block">     f
     +●  m           git log f
      |  ○
     +●  |           (diffs back to start of time are just
@@ -129,22 +129,22 @@ today:</p>
        +●
         |
        +●
-</code></pre>
+</pre></div>
 
 <p>Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
 above that you almost always want:</p>
-<pre class="code literal-block"><span></span><code>git diff m...f
-</code></pre>
+<div class="code"><pre class="code literal-block">git diff m...f
+</pre></div>
 
 <p>is the same as</p>
-<pre class="code literal-block"><span></span><code>git checkout f
+<div class="code"><pre class="code literal-block">git checkout f
 git diff m...
-</code></pre>
+</pre></div>
 
 <p>or</p>
-<pre class="code literal-block"><span></span><code>git checkout m
+<div class="code"><pre class="code literal-block">git checkout m
 git diff ...f
-</code></pre>
+</pre></div>
 
 <p>Is there a word for unicode ascii art?</p>
     </div>

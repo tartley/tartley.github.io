@@ -62,7 +62,7 @@ with a che">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -97,28 +97,28 @@ install it - you can help then to do this by using an opt-out system
 with a checkbox checked by default</p>
 <p>To create the checkbox and control whether it is set you must use the
 following properties in your <strong>Product</strong> section:</p>
-<pre class="code literal-block"><span></span><code>Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT"
+<div class="code"><pre class="code literal-block">Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT"
 Value="Launch the cool program"
 Id="WIXUI_EXITDIALOGOPTIONALCHECKBOX"
 Value="1"
-</code></pre>
+</pre></div>
 
 <p>The value of <code>WIXUI_EXITDIALOGOPTIONALCHECKBOX</code> controls the
 checkboxes checkedness.</p>
 <p>You then need a custom action to do some launching:</p>
-<pre class="code literal-block"><span></span><code>Id="LaunchApplication"
+<div class="code"><pre class="code literal-block">Id="LaunchApplication"
 BinaryKey="WixCA"
 DllEntry="WixShellExec"
 Impersonate="yes"
-</code></pre>
+</pre></div>
 
 <p>and some UI wiring in the <strong>UI</strong> element under the <strong>Product</strong> element
 to get you custom action called.</p>
-<pre class="code literal-block"><span></span><code>Control="Finish"
+<div class="code"><pre class="code literal-block">Control="Finish"
 Event="DoAction"
 Value="LaunchApplication"<span class="ni">&amp;gt;</span>WIXUI\_EXITDIALOGOPTIONALCHECKBOX = 1 and
 NOT Installed
-</code></pre>
+</pre></div>
 
 <p>Huzzah - you now may have a working installer.</p>
     </div>

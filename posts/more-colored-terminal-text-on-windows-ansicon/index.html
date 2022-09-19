@@ -65,7 +65,7 @@ permanent (eg. %ProgramFiles%\ansicon) and install ">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -100,30 +100,30 @@ permanent (eg. %ProgramFiles%\ansicon) and install ">
 <p>To make them work properly, use
 <a href="http://adoxa.110mb.com/ansicon/index.html">AnsiCon</a>. Unzip it somewhere
 permanent (eg. <code>%ProgramFiles%\ansicon</code>) and install it with:</p>
-<pre class="code literal-block"><span></span><code>ansicon.exe -i
-</code></pre>
+<div class="code"><pre class="code literal-block">ansicon.exe -i
+</pre></div>
 
 <p>start a new terminal, and lo:</p>
 <p><img alt="After: Pretty." src="../../files/2010/07/ansicon01-working.png"></p>
 <p>Fine tune the appearance of the programs generating the color, for
 example customise 'hg diff' by editing \~/.hgrc:</p>
-<pre class="code literal-block"><span></span><code><span class="p p-Indicator">[</span><span class="nv">extensions</span><span class="p p-Indicator">]</span>
-<span class="l l-Scalar l-Scalar-Plain">color =</span>
+<div class="code"><pre class="code literal-block"><span class="p p-Indicator">[</span><span class="nv">extensions</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">color =</span><span class="w"></span>
 
-<span class="l l-Scalar l-Scalar-Plain">[color]</span>
-<span class="l l-Scalar l-Scalar-Plain">status.modified = yellow bold</span>
-<span class="l l-Scalar l-Scalar-Plain">status.unknown = white</span>
-<span class="l l-Scalar l-Scalar-Plain">status.deleted = red_background white bold</span>
+<span class="l l-Scalar l-Scalar-Plain">[color]</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">status.modified = yellow bold</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">status.unknown = white</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">status.deleted = red_background white bold</span><span class="w"></span>
 
-<span class="l l-Scalar l-Scalar-Plain">diff.deleted = red bold</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.inserted = green bold</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.file_a = white</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.file_b = white</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.diffline = white_background black</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.extended = yellow bold</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.hunk = underline black</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.changed = yellow bold</span>
-</code></pre>
+<span class="l l-Scalar l-Scalar-Plain">diff.deleted = red bold</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">diff.inserted = green bold</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">diff.file_a = white</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">diff.file_b = white</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">diff.diffline = white_background black</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">diff.extended = yellow bold</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">diff.hunk = underline black</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">diff.changed = yellow bold</span><span class="w"></span>
+</pre></div>
 
 <p><img alt="Fine-tuned" src="../../files/2010/07/ansicon02-tuned.png"></p>
 <p>ANSI is correctly stripped out if the output of a program is not a
@@ -134,8 +134,8 @@ machine-parsing of the text:</p>
 codes</a>
 into your <a href="http://ss64.com/nt/prompt.html">prompt</a>, by setting
 environment variable PROMPT:</p>
-<pre class="code literal-block"><span></span><code>set PROMPT=$E[0;36m$P$_$E[36;1m$G$E[0m$S
-</code></pre>
+<div class="code"><pre class="code literal-block">set PROMPT=$E[0;36m$P$_$E[36;1m$G$E[0m$S
+</pre></div>
 
 <p><img alt="Colored Prompt" src="../../files/2010/07/ansicon04-prompt.png"></p>
 <p><a href="http://tartley.com/?p=1062">Multiple</a>

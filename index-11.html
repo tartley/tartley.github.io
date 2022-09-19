@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!">
+<meta name="description" content="A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 11) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -53,7 +53,7 @@
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -287,9 +287,9 @@ uninspiring DOS-like text terminal in a window. Type the command 'ls',
 which lists the files in the current directory. From now on I'll show
 commands you should type in <code>monospace</code>, preceded by a dollar sign,
 possibly followed by expected output of the command, like this:</p>
-<pre class="code literal-block"><span></span><code>$ ls
+<div class="code"><pre class="code literal-block">$ ls
 My Pictures My eBooks My Music
-</code></pre>
+</pre></div>
 
 <p>With any luck, you should recognise the files listed as those residing
 in your My Documents directory.</p>
@@ -300,9 +300,9 @@ commands you need to type to get a C program compiled.</p>
 <p>Create a new directory within 'My Documents', where our C programs will
 live. You can use Linux commands if you know them, or use your Windows
 Explorer thing. I'm going to use Linux commands:</p>
-<pre class="code literal-block"><span></span><code>$ mkdir cprogs
+<div class="code"><pre class="code literal-block">$ mkdir cprogs
 $ <span class="nb">cd</span> cprogs
-</code></pre>
+</pre></div>
 
 <p>(The 'cd' changes directory into the new 'cprogs' directory. Note that
 the yellow '\~' above your dollar prompt has changed into a yellow
@@ -310,31 +310,31 @@ the yellow '\~' above your dollar prompt has changed into a yellow
 nothing - our new directory is empty.)</p>
 <p>Next we want to create our c source file. If you installed vi or emacs
 as part of the cygwin setup, then you can use these here:</p>
-<pre class="code literal-block"><span></span><code>$ vi myprog.c
-</code></pre>
+<div class="code"><pre class="code literal-block">$ vi myprog.c
+</pre></div>
 
 <p>Otherwise, you can just use notepad, or any other windows text editor.
 You can invoke it from the command line if you wish.</p>
-<pre class="code literal-block"><span></span><code>$ notepad myprog.c
-</code></pre>
+<div class="code"><pre class="code literal-block">$ notepad myprog.c
+</pre></div>
 
 <p>Enter and save the following minimal program:</p>
-<pre class="code literal-block"><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="code"><pre class="code literal-block"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"Hello world</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
-</code></pre>
+</pre></div>
 
 <p>Notice that, while notepad is still open, you can no longer type
 anything in your Cygwin terminal window. Cygwin is waiting for notepad
 to finish before it lets you type anything else. Save and quit notepad
 (now you can type again) and then run it once more, appending an
 ampersand at the end of the command:</p>
-<pre class="code literal-block"><span></span><code>$ notepad myprog.c <span class="p">&amp;</span>
-</code></pre>
+<div class="code"><pre class="code literal-block">$ notepad myprog.c <span class="p">&amp;</span>
+</pre></div>
 
 <p>The ampersand tells cygwin to run notepad 'in the background', while
 allowing the cygwin terminal to continue accepting input. For example,
@@ -343,8 +343,8 @@ program.</p>
 <h4>Compiling</h4>
 <p>To compile the program, we invoke the gcc program that we installed as
 part of cygwin setup:</p>
-<pre class="code literal-block"><span></span><code>$ gcc myprog.c -o myprog
-</code></pre>
+<div class="code"><pre class="code literal-block">$ gcc myprog.c -o myprog
+</pre></div>
 
 <p>This tells the program gcc to compile myprog.c, and to call the output
 file myprog. If this produces error messages, check the program in
@@ -353,15 +353,15 @@ you can re-issue the compile command by pressing the up arrow key, then
 return. If the compile command produces no error messages, nor any other
 kind of response, then the compilation has been successful. You can
 verify this:</p>
-<pre class="code literal-block"><span></span><code>$ ls myprog.c myprog.exe
-</code></pre>
+<div class="code"><pre class="code literal-block">$ ls myprog.c myprog.exe
+</pre></div>
 
 <p>(Note: on a real Unix/Linux box, the program would have no '.exe'
 extension. It would simply be called 'myprog'.)</p>
 <p>And to run your new program:</p>
-<pre class="code literal-block"><span></span><code>$ ./myprog
+<div class="code"><pre class="code literal-block">$ ./myprog
 Hello World
-</code></pre>
+</pre></div>
 
 <h4>Wrapup</h4>
 <p>That's the basics. You've got yourself a kick-ass C compiler (or C++
@@ -394,11 +394,11 @@ GUI environments, the user would have no choice but to spend all
 afternoon loading each program in turn and clicking the [compile]
 button. Knowing a little command line magic, however, makes it a
 ten-second job:</p>
-<pre class="code literal-block"><span></span><code>$ <span class="k">for</span> SOURCE <span class="k">in</span> *.c<span class="p">;</span>
+<div class="code"><pre class="code literal-block">$ <span class="k">for</span> SOURCE <span class="k">in</span> *.c<span class="p">;</span>
 &gt; <span class="k">do</span>
 &gt;   gcc <span class="nv">$SOURCE</span> -o <span class="si">${</span><span class="nv">SOURCE</span><span class="p">%.c</span><span class="si">}</span><span class="p">;</span>
 &gt; <span class="k">done</span>
-</code></pre>
+</pre></div>
 
 <p>Each method has it's strengths and should be used where they are most
 appropriate.</p>
@@ -432,14 +432,14 @@ tests.</p>
 threading. Instead, it takes a list of test conditions (as lambdas), and
 uses pyglet's own clock and scheduler to request a callback to a test
 function - <code>try_condition()</code> - on every frame:</p>
-<pre class="code literal-block"><span></span><code>    <span class="k">def</span> <span class="nf">try_condition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dt</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block">    <span class="k">def</span> <span class="nf">try_condition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dt</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="p">():</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">next_condition</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">+=</span> <span class="n">dt</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">fail</span><span class="p">(</span><span class="s2">"timeout on </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">condition</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>When <code>try_condition()</code> gets called by pyglet on the first frame, it
 evaluates the value of <code>self.condition</code>. If <code>True</code>, then that first part
@@ -452,7 +452,7 @@ time, it deems that condition to have failed, and raises an assertion
 error.</p>
 <p>Here is the rest of the class, which sets up the scheduled calls to
 <code>try_condition()</code>.</p>
-<pre class="code literal-block"><span></span><code><span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">TestCase</span>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">TestCase</span>
 <span class="kn">from</span> <span class="nn">pyglet</span> <span class="kn">import</span> <span class="n">app</span><span class="p">,</span> <span class="n">clock</span>
 
 <span class="k">class</span> <span class="nc">AcceptanceTest</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
@@ -463,7 +463,7 @@ error.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="o">=</span> <span class="n">conditions</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">next_condition</span><span class="p">()</span>
         <span class="n">clock</span><span class="o">.</span><span class="n">schedule</span><span class="p">(</span><span class="k">lambda</span> <span class="n">dt</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">try_condition</span><span class="p">(</span><span class="n">dt</span><span class="p">))</span>
-</code></pre>
+</pre></div>
 
 <p>So <code>self.conditions</code> is a list of lambdas that will be provided by the
 acceptance test. Calling <code>self.next_condition()</code> merely plucks the next
@@ -471,7 +471,7 @@ condition off the list, into <code>self.condition</code>. If there are no more
 conditions left, then the test has entirely passed and it requests the
 application to terminate, by setting the pyglet member <code>window.has_exit</code>
 to <code>True</code>.</p>
-<pre class="code literal-block"><span></span><code>    <span class="k">def</span> <span class="nf">next_condition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block">    <span class="k">def</span> <span class="nf">next_condition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conditions</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">condition</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="mf">0.0</span>
@@ -490,7 +490,7 @@ to <code>True</code>.</p>
 
     <span class="k">def</span> <span class="nf">get_windows</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">app</span><span class="o">.</span><span class="n">windows</span><span class="p">]</span>
-</code></pre>
+</pre></div>
 
 <p>In future, I should probably allow the acceptance test code to specify a
 different timeout value for each condition.</p>
@@ -500,7 +500,7 @@ then just calling the application's <code>main()</code> function. This function
 won't return until the application exits, either when one of the
 conditions times out and raises an assertion error, or else when all
 conditions have passed and the test framework sets <code>window.has_exit</code>.</p>
-<pre class="code literal-block"><span></span><code><span class="kn">from</span> <span class="nn">testutils.testcase</span> <span class="kn">import</span> <span class="n">run_test</span>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span> <span class="nn">testutils.testcase</span> <span class="kn">import</span> <span class="n">run_test</span>
 <span class="kn">from</span> <span class="nn">acceptance_test</span> <span class="kn">import</span> <span class="n">AcceptanceTest</span>
 <span class="kn">from</span> <span class="nn">sole_scion</span> <span class="kn">import</span> <span class="n">main</span>
 
@@ -524,7 +524,7 @@ conditions have passed and the test framework sets <code>window.has_exit</code>.
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
     <span class="n">run_test</span><span class="p">()</span>
-</code></pre>
+</pre></div>
 
 <p>The conditions don't simply have to be expressions to verify the
 application state. They could stimulate the application by raising mouse

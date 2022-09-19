@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!">
+<meta name="description" content="A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 8) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -53,7 +53,7 @@
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -224,7 +224,7 @@ penalty.</p>
 vertex list using the following new static member on class Entity. Note
 that I have coined the term <em>shard</em> to describe the individual triangles
 rendered by class Entity:</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Entity</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Entity</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="n">numShards</span> <span class="o">=</span> <span class="mi">5</span>
     <span class="n">vertsGl</span> <span class="o">=</span> <span class="kc">None</span>
@@ -242,7 +242,7 @@ rendered by class Entity:</p>
         <span class="n">Entity</span><span class="o">.</span><span class="n">vertsGl</span> <span class="o">=</span> <span class="p">(</span><span class="n">GLfloat</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">verts</span><span class="p">))(</span><span class="o">*</span><span class="n">verts</span><span class="p">)</span>
 
 <span class="n">Entity</span><span class="o">.</span><span class="n">_generateVerts</span><span class="p">()</span>
-</code></pre>
+</pre></div>
 
 <p>The for-loop simply creates the list of vertex co-ordinates, as
 illustrated above. The cryptic-looking penultimate line converts that
@@ -256,7 +256,7 @@ Entity.__init__(), and the resulting arrays are stored on the
 instance (not shown).</p>
 <p>This vertex and color arrays can then be rendered as a triangle fan
 using the following Entity.draw() method:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">glLoadIdentity</span><span class="p">()</span>
     <span class="n">glTranslatef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
     <span class="n">glRotatef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">rot</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -268,7 +268,7 @@ using the following Entity.draw() method:</p>
     <span class="n">glColorPointer</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">GL_FLOAT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">colorsGl</span><span class="p">)</span>
 
     <span class="n">glDrawArrays</span><span class="p">(</span><span class="n">GL_TRIANGLE_FAN</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vertsGl</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>With other minor tweaks to give a new background color, running this
 with 3 shards per Entity produces quite a pleasing effect:</p>
@@ -572,7 +572,7 @@ entities which are offset and rotated depending on the position of the
 camera, followed by a 'hudProjection', for drawing things that should be
 drawn in the style of a 'heads-up display', ie. always aligned with the
 screen, like text messages and frames-per-second (fps) counters.</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">App</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">App</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">world</span> <span class="o">=</span> <span class="n">World</span><span class="p">()</span>
@@ -598,7 +598,7 @@ screen, like text messages and frames-per-second (fps) counters.</p>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">App</span><span class="p">()</span>
 <span class="n">app</span><span class="o">.</span><span class="n">mainLoop</span><span class="p">()</span>
-</code></pre>
+</pre></div>
 
 <h4>World class (the model)</h4>
 <p>The world class is just a container for a collection of in-game
@@ -608,7 +608,7 @@ new Entity object at a random location every 0.25 seconds.</p>
 amount dependent on its size.</p>
 <p>Drawing the world merely clears the output buffer, resets the modelview
 matrix, and then asks each Entity to draw itself.</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">World</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">World</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ents</span> <span class="o">=</span> <span class="p">{}</span>
@@ -635,14 +635,14 @@ matrix, and then asks each Entity to draw itself.</p>
         <span class="n">glLoadIdentity</span><span class="p">();</span>
         <span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ents</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
             <span class="n">ent</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-</code></pre>
+</pre></div>
 
 <h4>Entity class</h4>
 <p>Each entity knows its own location, orientation and size in world-space.
 It also knows how to draw itself, using a series of OpenGL calls. For
 now, I just draw a triangle for each entity, pointing along its
 orientation.</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Entity</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Entity</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">rot</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
@@ -664,7 +664,7 @@ orientation.</p>
         <span class="n">glColor4f</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
         <span class="n">glVertex2f</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
         <span class="n">glEnd</span><span class="p">()</span>
-</code></pre>
+</pre></div>
 
 <h4>Camera class (the view)</h4>
 <p>The camera class sets the OpenGL projections required to either draw
@@ -675,7 +675,7 @@ world, and rotate.</p>
 <p>Note that the widthRatio calculated in worldProjection() will do an
 integer division by default. To fix it, I imported real division (ie.
 <code>from __future__ import division</code>)</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Camera</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Camera</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">win</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">win</span> <span class="o">=</span> <span class="n">win</span>
@@ -695,7 +695,7 @@ integer division by default. To fix it, I imported real division (ie.
         <span class="n">glMatrixMode</span><span class="p">(</span><span class="n">GL_PROJECTION</span><span class="p">)</span>
         <span class="n">glLoadIdentity</span><span class="p">()</span>
         <span class="n">gluOrtho2D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <h4>Hud class (also part of the view)</h4>
 <p>The Hud class initialises the text string 'Hello, World!', and creates
@@ -703,7 +703,7 @@ an fps counter. The draw() method renders both these to the screen. It
 is worth noting that pyglet handles text like this smartly, rasterising
 the Text object to a bitmap when it is first created, and then rapidly
 drawing that to the screen using a textured quad in the draw() method.</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">Hud</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Hud</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">win</span><span class="p">):</span>
         <span class="n">helv</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'Helvetica'</span><span class="p">,</span> <span class="n">win</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mf">15.0</span><span class="p">)</span>
@@ -723,7 +723,7 @@ drawing that to the screen using a textured quad in the draw() method.</p>
         <span class="n">glLoadIdentity</span><span class="p">();</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fps</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-</code></pre>
+</pre></div>
 
 <h4>The Payoff</h4>
 <p><img alt="Gameloop

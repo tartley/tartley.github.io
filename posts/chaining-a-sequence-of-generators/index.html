@@ -64,7 +64,7 @@ This results in the outer level of my code calling">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -99,18 +99,18 @@ Systems Programmers</a>.'</p>
 <p>This results in the outer level of my code calling one generator after
 another, terminating in something that consumes the rows, pulling data
 one row at a time through each of the generators:</p>
-<pre class="code literal-block"><span></span><code><span class="n">inputRows</span> <span class="o">=</span> <span class="n">read</span><span class="p">()</span>
+<div class="code"><pre class="code literal-block"><span class="n">inputRows</span> <span class="o">=</span> <span class="n">read</span><span class="p">()</span>
 <span class="n">parsedRows</span> <span class="o">=</span> <span class="n">parse</span><span class="p">(</span><span class="n">inputRows</span><span class="p">)</span>
 <span class="n">processedRows</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="n">parsedRows</span><span class="p">)</span>
 <span class="n">outputRows</span> <span class="o">=</span> <span class="n">format_</span><span class="p">(</span><span class="n">processedRows</span><span class="p">)</span>
 <span class="n">output</span><span class="p">(</span><span class="n">outputRows</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>where each called function except the last is actually a generator, e.g:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
         <span class="k">yield</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>This is great. But my itch is that the top level code above is a bit
 wordy, given that what it does is so simple. The reader has to check
@@ -120,8 +120,8 @@ thing.</p>
 intermediate
 variables</a>,
 which results in:</p>
-<pre class="code literal-block"><span></span><code><span class="n">output</span><span class="p">(</span> <span class="n">format_</span><span class="p">(</span> <span class="n">process</span><span class="p">(</span> <span class="n">parse</span><span class="p">(</span> <span class="n">read</span><span class="p">()</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
-</code></pre>
+<div class="code"><pre class="code literal-block"><span class="n">output</span><span class="p">(</span> <span class="n">format_</span><span class="p">(</span> <span class="n">process</span><span class="p">(</span> <span class="n">parse</span><span class="p">(</span> <span class="n">read</span><span class="p">()</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
 
 <p>This is certainly less wordy, and expresses what's happening very
 directly, but it annoys some of my colleagues that the called functions
@@ -129,8 +129,8 @@ are listed in reverse order from what one might intuitively expect.</p>
 <p>I've had this idea in my head to create a decorator for generators which
 allows one to chain them in an intuitive order, possibly using some
 unconventional notation such as:</p>
-<pre class="code literal-block"><span></span><code><span class="n">read</span><span class="p">()</span> <span class="o">|</span> <span class="n">parse</span> <span class="o">|</span> <span class="n">process</span> <span class="o">|</span> <span class="n">format_</span> <span class="o">|</span> <span class="n">output</span>
-</code></pre>
+<div class="code"><pre class="code literal-block"><span class="n">read</span><span class="p">()</span> <span class="o">|</span> <span class="n">parse</span> <span class="o">|</span> <span class="n">process</span> <span class="o">|</span> <span class="n">format_</span> <span class="o">|</span> <span class="n">output</span>
+</pre></div>
 
 <p>where 'parse', et al, are now decorated with '@chainable' or somesuch,
 which returns an instance of a class that stores the wrapped generator,
@@ -140,12 +140,12 @@ thought this through.</p>
 <p>Luckily, before embarking on that, I realised today I've been
 over-complicating the whole thing. There's no need for decorators, nor
 for the cute '|' syntax. I just need a plain old function:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">link</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="o">*</span><span class="n">transforms</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">link</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="o">*</span><span class="n">transforms</span><span class="p">):</span>
     <span class="n">args</span> <span class="o">=</span> <span class="n">source</span>
     <span class="k">for</span> <span class="n">transform</span> <span class="ow">in</span> <span class="n">transforms</span><span class="p">:</span>
         <span class="n">args</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">args</span>
-</code></pre>
+</pre></div>
 
 <p><strong>Update</strong>: This code has been improved thanks to suggestions in the
 comments from Daniel Pope (eliminate the 'first' variable) and Xtian
@@ -155,15 +155,15 @@ subsequent item is a generator that takes the result of the item before.</p>
 <p>If the final item in the sequence passed to 'link' is a generator, then
 this returns a generator which is the composite of all the ones passed
 in:</p>
-<pre class="code literal-block"><span></span><code><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">link</span><span class="p">(</span><span class="n">read</span><span class="p">(),</span> <span class="n">parse</span><span class="p">,</span> <span class="n">process</span><span class="p">,</span> <span class="n">format_</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">link</span><span class="p">(</span><span class="n">read</span><span class="p">(),</span> <span class="n">parse</span><span class="p">,</span> <span class="n">process</span><span class="p">,</span> <span class="n">format_</span><span class="p">):</span>
     <span class="nb">print</span> <span class="n">item</span>
-</code></pre>
+</pre></div>
 
 <p>Or if the final item passed to 'link' is a regular function, which
 consumes the preceding generators, then calling 'link' will invoke the
 generators, i.e. the following is the same as the above 'for' loop:</p>
-<pre class="code literal-block"><span></span><code><span class="n">link</span><span class="p">(</span><span class="n">read</span><span class="p">(),</span> <span class="n">parse</span><span class="p">,</span> <span class="n">process</span><span class="p">,</span> <span class="n">format_</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
-</code></pre>
+<div class="code"><pre class="code literal-block"><span class="n">link</span><span class="p">(</span><span class="n">read</span><span class="p">(),</span> <span class="n">parse</span><span class="p">,</span> <span class="n">process</span><span class="p">,</span> <span class="n">format_</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+</pre></div>
 
 <p>There's some rough edges, such as determining what to do if different
 generators require other args. Presumably 'partial' could help here. But

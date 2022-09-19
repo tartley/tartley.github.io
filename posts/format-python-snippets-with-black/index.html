@@ -65,7 +65,7 @@ nnoremap &lt;leader&gt;b :1,$!blac'>
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -96,16 +96,16 @@ nnoremap &lt;leader&gt;b :1,$!blac'>
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <p>Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:</p>
-<pre class="code literal-block"><span></span><code><span class="c">" Black(Python) format the whole file</span>
+<div class="code"><pre class="code literal-block"><span class="c">" Black(Python) format the whole file</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">b</span> :<span class="m">1</span><span class="p">,</span>$<span class="p">!</span>black <span class="p">-</span><span class="k">q</span> <span class="p">-&lt;</span>CR<span class="p">&gt;</span>
-</code></pre>
+</pre></div>
 
 <p>But often you'd like to reformat just a section of the file, while leaving
 everything else intact. In principle, it's easy to tell Vim to just send the
 current visual selection:</p>
-<pre class="code literal-block"><span></span><code><span class="c">" Black(Python) format the visual selection</span>
+<div class="code"><pre class="code literal-block"><span class="c">" Black(Python) format the visual selection</span>
 xnoremap <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">b</span> :<span class="p">!</span>black <span class="p">-</span><span class="k">q</span> <span class="p">-&lt;</span>CR<span class="p">&gt;</span>
-</code></pre>
+</pre></div>
 
 <p>(Note that both the above Vim configuration snippets map the same key
 sequence -- leader (commonly comma) followed by lower case b. These can be

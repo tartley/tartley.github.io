@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!">
+<meta name="description" content="A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 24) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -53,7 +53,7 @@
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -331,19 +331,19 @@ as a snapshot of current reality.</p>
         </div>
     </header><div class="e-content entry-content">
     <p>Install ffmpeg:</p>
-<pre class="code literal-block"><span></span><code>sudo apt install ffmpeg
-</code></pre>
+<div class="code"><pre class="code literal-block">sudo apt install ffmpeg
+</pre></div>
 
 <p>Install <code>youtube-dl</code>, a tool to download YouTube videos. Using <code>apt</code> installs a
 version that's too old to work, so:</p>
-<pre class="code literal-block"><span></span><code>pip install --user pipsi
+<div class="code"><pre class="code literal-block">pip install --user pipsi
 pipsi install youtube-dl
-</code></pre>
+</pre></div>
 
 <h3>The best way</h3>
 <p>Tell youtube-dl to download the audio:</p>
-<pre class="code literal-block"><span></span><code>youtube-dl -x --audio-format<span class="o">=</span>best URL
-</code></pre>
+<div class="code"><pre class="code literal-block">youtube-dl -x --audio-format<span class="o">=</span>best URL
+</pre></div>
 
 <p>Where:</p>
 <ul>
@@ -364,13 +364,13 @@ benefit of those lossless formats - mp3 is fine for
 extracting audio locally, and the download gets throttled by YouTube in some
 way, which of late is very slow indeed.</p>
 <p>Download the video from YouTube:</p>
-<pre class="code literal-block"><span></span><code>youtube-dl URL
-</code></pre>
+<div class="code"><pre class="code literal-block">youtube-dl URL
+</pre></div>
 
 <p>This results in a webm file. I have no idea what that is, and am relieved
 to discover that converting it into an mp3 requires just:</p>
-<pre class="code literal-block"><span></span><code>ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
-</code></pre>
+<div class="code"><pre class="code literal-block">ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
+</pre></div>
 
 <p>Where <code>-vn</code> disables video in the output.</p>
     </div>

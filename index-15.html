@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!">
+<meta name="description" content="A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 15) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -53,7 +53,7 @@
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -260,7 +260,7 @@ quick Python script,
 <a href="http://code.google.com/p/testwatcher/">testwatcher</a>, which produces
 output very similar to watch, but is cross-platform, and features not
 just inverse text, but <em>yellow</em> inverse text. Woo-hoo!</p>
-<pre class="code literal-block"><span></span><code><span class="c">$ python example_test</span><span class="nt">.</span><span class="c">py</span>
+<div class="code"><pre class="code literal-block"><span class="c">$ python example_test</span><span class="nt">.</span><span class="c">py</span>
 <span class="c">F</span><span class="nt">.</span><span class="c">F</span>
 <span class="c">======================================================================</span>
 <span class="c">FAIL: testThat (__main__</span><span class="nt">.</span><span class="c">TestWatcherTest)</span>
@@ -283,16 +283,16 @@ just inverse text, but <em>yellow</em> inverse text. Woo-hoo!</p>
 
 <span class="c">FAILED (failures=2)</span>
 <span class="c">_</span>
-</code></pre>
+</pre></div>
 
 <p>Incidentally, the above test makes it very clear that Python objects in
 successive processes get new addresses on Linux, but interestingly on
 Windows the same addresses seems to get re-used for different processes.</p>
 <p>I can't help but suspect this is a dumb script to have written - it
 should only be a:</p>
-<pre class="code literal-block"><span></span><code> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<div class="code"><pre class="code literal-block"> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">command</span>
-</code></pre>
+</pre></div>
 
 <p>but in order to shoehorn the inverse text and colors in, it's grown to
 300 lines - a hideous bloat for a minor superficial thrill. Plus the

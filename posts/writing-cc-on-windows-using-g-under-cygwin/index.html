@@ -64,7 +64,7 @@ env">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -157,9 +157,9 @@ uninspiring DOS-like text terminal in a window. Type the command 'ls',
 which lists the files in the current directory. From now on I'll show
 commands you should type in <code>monospace</code>, preceded by a dollar sign,
 possibly followed by expected output of the command, like this:</p>
-<pre class="code literal-block"><span></span><code>$ ls
+<div class="code"><pre class="code literal-block">$ ls
 My Pictures My eBooks My Music
-</code></pre>
+</pre></div>
 
 <p>With any luck, you should recognise the files listed as those residing
 in your My Documents directory.</p>
@@ -170,9 +170,9 @@ commands you need to type to get a C program compiled.</p>
 <p>Create a new directory within 'My Documents', where our C programs will
 live. You can use Linux commands if you know them, or use your Windows
 Explorer thing. I'm going to use Linux commands:</p>
-<pre class="code literal-block"><span></span><code>$ mkdir cprogs
+<div class="code"><pre class="code literal-block">$ mkdir cprogs
 $ <span class="nb">cd</span> cprogs
-</code></pre>
+</pre></div>
 
 <p>(The 'cd' changes directory into the new 'cprogs' directory. Note that
 the yellow '\~' above your dollar prompt has changed into a yellow
@@ -180,31 +180,31 @@ the yellow '\~' above your dollar prompt has changed into a yellow
 nothing - our new directory is empty.)</p>
 <p>Next we want to create our c source file. If you installed vi or emacs
 as part of the cygwin setup, then you can use these here:</p>
-<pre class="code literal-block"><span></span><code>$ vi myprog.c
-</code></pre>
+<div class="code"><pre class="code literal-block">$ vi myprog.c
+</pre></div>
 
 <p>Otherwise, you can just use notepad, or any other windows text editor.
 You can invoke it from the command line if you wish.</p>
-<pre class="code literal-block"><span></span><code>$ notepad myprog.c
-</code></pre>
+<div class="code"><pre class="code literal-block">$ notepad myprog.c
+</pre></div>
 
 <p>Enter and save the following minimal program:</p>
-<pre class="code literal-block"><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="code"><pre class="code literal-block"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"Hello world</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
-</code></pre>
+</pre></div>
 
 <p>Notice that, while notepad is still open, you can no longer type
 anything in your Cygwin terminal window. Cygwin is waiting for notepad
 to finish before it lets you type anything else. Save and quit notepad
 (now you can type again) and then run it once more, appending an
 ampersand at the end of the command:</p>
-<pre class="code literal-block"><span></span><code>$ notepad myprog.c <span class="p">&amp;</span>
-</code></pre>
+<div class="code"><pre class="code literal-block">$ notepad myprog.c <span class="p">&amp;</span>
+</pre></div>
 
 <p>The ampersand tells cygwin to run notepad 'in the background', while
 allowing the cygwin terminal to continue accepting input. For example,
@@ -213,8 +213,8 @@ program.</p>
 <h4>Compiling</h4>
 <p>To compile the program, we invoke the gcc program that we installed as
 part of cygwin setup:</p>
-<pre class="code literal-block"><span></span><code>$ gcc myprog.c -o myprog
-</code></pre>
+<div class="code"><pre class="code literal-block">$ gcc myprog.c -o myprog
+</pre></div>
 
 <p>This tells the program gcc to compile myprog.c, and to call the output
 file myprog. If this produces error messages, check the program in
@@ -223,15 +223,15 @@ you can re-issue the compile command by pressing the up arrow key, then
 return. If the compile command produces no error messages, nor any other
 kind of response, then the compilation has been successful. You can
 verify this:</p>
-<pre class="code literal-block"><span></span><code>$ ls myprog.c myprog.exe
-</code></pre>
+<div class="code"><pre class="code literal-block">$ ls myprog.c myprog.exe
+</pre></div>
 
 <p>(Note: on a real Unix/Linux box, the program would have no '.exe'
 extension. It would simply be called 'myprog'.)</p>
 <p>And to run your new program:</p>
-<pre class="code literal-block"><span></span><code>$ ./myprog
+<div class="code"><pre class="code literal-block">$ ./myprog
 Hello World
-</code></pre>
+</pre></div>
 
 <h4>Wrapup</h4>
 <p>That's the basics. You've got yourself a kick-ass C compiler (or C++
@@ -264,11 +264,11 @@ GUI environments, the user would have no choice but to spend all
 afternoon loading each program in turn and clicking the [compile]
 button. Knowing a little command line magic, however, makes it a
 ten-second job:</p>
-<pre class="code literal-block"><span></span><code>$ <span class="k">for</span> SOURCE <span class="k">in</span> *.c<span class="p">;</span>
+<div class="code"><pre class="code literal-block">$ <span class="k">for</span> SOURCE <span class="k">in</span> *.c<span class="p">;</span>
 &gt; <span class="k">do</span>
 &gt;   gcc <span class="nv">$SOURCE</span> -o <span class="si">${</span><span class="nv">SOURCE</span><span class="p">%.c</span><span class="si">}</span><span class="p">;</span>
 &gt; <span class="k">done</span>
-</code></pre>
+</pre></div>
 
 <p>Each method has it's strengths and should be used where they are most
 appropriate.</p>

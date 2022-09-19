@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!">
+<meta name="description" content="A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 14) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -53,7 +53,7 @@
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -376,19 +376,19 @@ to indulge us, you can buy a copy
         </div>
     </header><div class="e-content entry-content">
     <p>Stick something like this in your .bashrc file:</p>
-<pre class="code literal-block"><span></span><code><span class="c1"># display red exit value if it isn't zero</span>
+<div class="code"><pre class="code literal-block"><span class="c1"># display red exit value if it isn't zero</span>
 <span class="nv">PROMPT_COMMAND</span><span class="o">=</span><span class="s1">'EXITVAL=$?; '</span><span class="nv">$PROMPT_COMMAND</span>
 <span class="nv">GET_EXITVAL</span><span class="o">=</span><span class="s1">'$(if [[ $EXITVAL != 0 ]]; then echo -n "\[\e[37;41;01m\] $EXITVAL \[\e[0m\] "; fi)'</span>
 <span class="nb">export</span> <span class="nv">PS1</span><span class="o">=</span><span class="s2">"</span><span class="nv">$GET_EXITVAL$PS1</span><span class="s2">"</span>
-</code></pre>
+</pre></div>
 
 <p>Command exit values other than zero are displayed in the subsequent
 prompt:</p>
 <p><img alt="Check out the little red '1'" src="files/2009/02/last-exit-value.png"></p>
 <p>(see the little red '1').</p>
 <p>It's the</p>
-<pre class="code literal-block"><span></span><code><span class="si">${</span><span class="p">?#0</span><span class="si">}</span>
-</code></pre>
+<div class="code"><pre class="code literal-block"><span class="si">${</span><span class="p">?#0</span><span class="si">}</span>
+</pre></div>
 
 <p>bit which includes the last command exit value in the prompt, unless the
 value is zero, in which case nothing is displayed.</p>

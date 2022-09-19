@@ -64,7 +64,7 @@ but to whet people's appetite, this is some of what my init">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -102,21 +102,21 @@ interesting geometry. This is an area in which the flexibility and
 expressiveness of Python can really shine.</p>
 <p>I started with a quick Shape class, to model the vertices and faces of
 an arbitrary polyhedra (3D shapes with flat faces and straight edges):</p>
-<pre class="code literal-block"><span></span><code><span class="n">Position</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">'Position'</span><span class="p">,</span> <span class="s1">'x y z'</span><span class="p">)</span>
+<div class="code"><pre class="code literal-block"><span class="n">Position</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">'Position'</span><span class="p">,</span> <span class="s1">'x y z'</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">Shape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="p">[</span><span class="n">Position</span><span class="p">(</span><span class="o">*</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vertices</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">faces</span> <span class="o">=</span> <span class="n">faces</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
-</code></pre>
+</pre></div>
 
 <p>Each face of the shape is represented as a list of integer indices into
 the vertex list. The 'faces' attribute is a list of all faces. The color
 attributes is just a 4 element tuple: (r, g, b, alpha). This class can
 now be instantiated by factory functions to form particular 3D shapes,
 such as red cubes or blue tetrahedrons:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
     <span class="n">verts</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">(</span><span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
         <span class="p">(</span><span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
@@ -136,7 +136,7 @@ such as red cubes or blue tetrahedrons:</p>
         <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="c1"># bottom</span>
     <span class="p">]</span>
     <span class="k">return</span> <span class="n">Shape</span><span class="p">(</span><span class="n">verts</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>A class called 'Glyph' will convert a Shape instance into the set of
 ctypes arrays that need to be passed to OpenGL:</p>
@@ -145,7 +145,7 @@ well as vertices.</p>
 <p>Finally, we have a renderer, whose 'draw' method is invoked by our
 window draw event. This iterates through all items in our world that
 have a Glyph attribute, drawing each of them:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
         <span class="n">gl</span><span class="o">.</span><span class="n">glPushMatrix</span><span class="p">()</span>
 
@@ -162,11 +162,11 @@ have a Glyph attribute, drawing each of them:</p>
             <span class="n">glyph</span><span class="o">.</span><span class="n">glIndices</span><span class="p">)</span>      <span class="c1"># index array</span>
 
         <span class="n">gl</span><span class="o">.</span><span class="n">glPopMatrix</span><span class="p">()</span>
-</code></pre>
+</pre></div>
 
 <p>So we add a couple of interpenetrated Cube() shaped items into our
 world:</p>
-<pre class="code literal-block"><span></span><code><span class="n">white</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<div class="code"><pre class="code literal-block"><span class="n">white</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">red</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="n">world</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">GameItem</span><span class="p">(</span>
@@ -179,7 +179,7 @@ world:</p>
     <span class="n">shape</span><span class="o">=</span><span class="n">Cube</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">red</span><span class="p">),</span>
     <span class="n">glyph</span><span class="o">=</span><span class="n">Glyph</span><span class="p">(),</span>
 <span class="p">))</span>
-</code></pre>
+</pre></div>
 
 <p>and running the program renders them:</p>
 <p><img alt="" src="../../files/2010/06/two-cubes.png"></p>
@@ -192,7 +192,7 @@ call to glDrawElements. To do this, we create a CompositeShape object,
 that contains several Shapes, and exposes 'vertices' and 'faces'
 attributes just like a regular Shape, which aggregate the geometry of
 all their subordinate Shapes.</p>
-<pre class="code literal-block"><span></span><code><span class="k">class</span> <span class="nc">CompositeShape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">CompositeShape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
@@ -207,7 +207,7 @@ all their subordinate Shapes.</p>
         <span class="k">return</span> <span class="p">(</span><span class="n">vert</span> <span class="o">+</span> <span class="n">offset</span>
                 <span class="k">for</span> <span class="n">shape</span><span class="p">,</span> <span class="n">offset</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span>
                 <span class="k">for</span> <span class="n">vert</span> <span class="ow">in</span> <span class="n">shape</span><span class="o">.</span><span class="n">vertices</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>(The real CompositeShape class also defines 'faces', which is elided
 here.) Instances of CompositeShape can be passed directly to our
@@ -244,7 +244,7 @@ shaded. Lighting needs to know normals, the vector at right angles to a
 face, so that it can figure out how how strongly each face is
 illuminated. So our Glyph needs to start generating an array of normals
 for each vertex.</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">get_normal</span><span class="p">(</span><span class="n">face</span><span class="p">,</span> <span class="n">vertices</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">get_normal</span><span class="p">(</span><span class="n">face</span><span class="p">,</span> <span class="n">vertices</span><span class="p">):</span>
     <span class="n">v0</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
     <span class="n">v1</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
     <span class="n">v2</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
@@ -262,7 +262,7 @@ for each vertex.</p>
                    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">face</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">gl_array</span><span class="p">(</span><span class="n">gl</span><span class="o">.</span><span class="n">GLfloat</span><span class="p">,</span> <span class="n">normals</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_glvertices</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>This generation of normals also affects the generation of vertex
 positions, colors and indices, since vertices can no longer be shared

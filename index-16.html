@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!">
+<meta name="description" content="A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 16) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -53,7 +53,7 @@
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -91,7 +91,7 @@ another. When switching, other versions of Python need to be stripped
 from your PATH.</p>
 <p>As a solution, I present a new Python module, <em>pychoose</em>. For the moment
 this is Windows only:</p>
-<pre class="code literal-block"><span></span><code>&gt;python -V
+<div class="code"><pre class="code literal-block">&gt;python -V
 Python 2.6.4
 &gt;easy_install pychoose
 ...
@@ -101,7 +101,7 @@ Python 2.4.4
 (Py24) &gt;exit
 &gt;python -V
 Python 2.6.4
-</code></pre>
+</pre></div>
 
 <p>It prepends to the PATH as above, but it also filters other Python
 versions out the PATH. It modifies the PROMPT to show the user they are
@@ -374,28 +374,28 @@ install it - you can help then to do this by using an opt-out system
 with a checkbox checked by default</p>
 <p>To create the checkbox and control whether it is set you must use the
 following properties in your <strong>Product</strong> section:</p>
-<pre class="code literal-block"><span></span><code>Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT"
+<div class="code"><pre class="code literal-block">Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT"
 Value="Launch the cool program"
 Id="WIXUI_EXITDIALOGOPTIONALCHECKBOX"
 Value="1"
-</code></pre>
+</pre></div>
 
 <p>The value of <code>WIXUI_EXITDIALOGOPTIONALCHECKBOX</code> controls the
 checkboxes checkedness.</p>
 <p>You then need a custom action to do some launching:</p>
-<pre class="code literal-block"><span></span><code>Id="LaunchApplication"
+<div class="code"><pre class="code literal-block">Id="LaunchApplication"
 BinaryKey="WixCA"
 DllEntry="WixShellExec"
 Impersonate="yes"
-</code></pre>
+</pre></div>
 
 <p>and some UI wiring in the <strong>UI</strong> element under the <strong>Product</strong> element
 to get you custom action called.</p>
-<pre class="code literal-block"><span></span><code>Control="Finish"
+<div class="code"><pre class="code literal-block">Control="Finish"
 Event="DoAction"
 Value="LaunchApplication"<span class="ni">&amp;gt;</span>WIXUI\_EXITDIALOGOPTIONALCHECKBOX = 1 and
 NOT Installed
-</code></pre>
+</pre></div>
 
 <p>Huzzah - you now may have a working installer.</p>
     </div>
@@ -617,36 +617,36 @@ On the right are various uses to which I might want to put them. You
 can't use a slower connection (eg. bluetooth) to drive a faster usage
 (eg. blu-ray quality movies). Centre column is the data rate in megabits
 per second (Mb/s):</p>
-<pre class="code literal-block"><span></span><code><span class="n">EDGE</span> <span class="n">mobile</span> <span class="n">phone</span>    <span class="mf">0.23</span>
-                     <span class="mf">0.3</span>  <span class="n">cd</span> <span class="n">audio</span>
-<span class="n">bluetooth1</span>           <span class="mf">0.7</span>
-                     <span class="mf">1.3</span>  <span class="n">minimal</span> <span class="n">video</span>
-<span class="n">bluetooth2</span>           <span class="mf">2.1</span>
-<span class="n">wifi</span> <span class="mf">802.11</span><span class="n">b</span>         <span class="mf">4.5</span>
-                     <span class="mf">5.0</span>  <span class="n">dvd</span> <span class="n">mpeg</span><span class="o">-</span><span class="mh">2</span> <span class="n">quality</span>
-<span class="n">ADSL1</span>                <span class="mf">8.0</span>
-<span class="n">ethernet</span> <span class="mh">10</span><span class="n">baseT</span>    <span class="mh">10</span>
-<span class="n">USB1</span>                <span class="mh">12</span>
-                    <span class="mh">15</span>  <span class="n">hdtv</span> <span class="n">video</span> <span class="p">(</span><span class="n">from</span> <span class="mh">8</span> <span class="n">to</span> <span class="mh">15</span><span class="p">)</span>
-<span class="n">ADSL2</span><span class="o">+</span>              <span class="mh">24</span><span class="o">*</span>
-<span class="n">cable</span> <span class="n">modem</span>         <span class="mh">30</span>
-                    <span class="mh">40</span> <span class="n">blu</span><span class="o">-</span><span class="n">ray</span> <span class="n">disc</span>
-<span class="n">wifi</span> <span class="mf">802.11</span><span class="n">g</span>        <span class="mh">54</span>
-<span class="n">firewire800</span> <span class="n">act</span>     <span class="mh">65</span>
-<span class="n">ethernet</span> <span class="mh">100</span><span class="n">baseT</span>  <span class="mh">100</span><span class="o">*</span>
-<span class="n">PCI</span>                <span class="mh">133</span>
-<span class="n">USB2</span> <span class="n">actual</span>        <span class="mh">240</span>
-<span class="n">firewire</span> <span class="mh">400</span> <span class="n">theo</span>  <span class="mh">400</span>
-<span class="n">USB2</span> <span class="n">theoretical</span>   <span class="mh">480</span>
-<span class="n">wifi</span> <span class="mf">802.11</span><span class="n">n</span>       <span class="mh">600</span>
-<span class="n">firewire</span> <span class="mh">800</span> <span class="n">theo</span>  <span class="mh">800</span>
-<span class="n">Seagate</span> <span class="n">Barracuda</span>  <span class="mh">960</span><span class="o">*</span>
-<span class="n">ethernet</span> <span class="n">gigabit</span> <span class="mh">1</span><span class="p">,</span><span class="mh">000</span>
-<span class="n">SATA</span><span class="o">-</span><span class="mh">150</span> <span class="n">theo</span>    <span class="mh">1</span><span class="p">,</span><span class="mh">500</span>
-<span class="n">SATA</span><span class="o">-</span><span class="mh">300</span> <span class="n">theo</span>    <span class="mh">3</span><span class="p">,</span><span class="mh">000</span>
+<div class="code"><pre class="code literal-block"><span class="n">EDGE</span><span class="w"> </span><span class="n">mobile</span><span class="w"> </span><span class="n">phone</span><span class="w">    </span><span class="mf">0.23</span><span class="w"></span>
+<span class="w">                     </span><span class="mf">0.3</span><span class="w">  </span><span class="n">cd</span><span class="w"> </span><span class="n">audio</span><span class="w"></span>
+<span class="n">bluetooth1</span><span class="w">           </span><span class="mf">0.7</span><span class="w"></span>
+<span class="w">                     </span><span class="mf">1.3</span><span class="w">  </span><span class="n">minimal</span><span class="w"> </span><span class="n">video</span><span class="w"></span>
+<span class="n">bluetooth2</span><span class="w">           </span><span class="mf">2.1</span><span class="w"></span>
+<span class="n">wifi</span><span class="w"> </span><span class="mf">802.11</span><span class="n">b</span><span class="w">         </span><span class="mf">4.5</span><span class="w"></span>
+<span class="w">                     </span><span class="mf">5.0</span><span class="w">  </span><span class="n">dvd</span><span class="w"> </span><span class="n">mpeg</span><span class="o">-</span><span class="mh">2</span><span class="w"> </span><span class="n">quality</span><span class="w"></span>
+<span class="n">ADSL1</span><span class="w">                </span><span class="mf">8.0</span><span class="w"></span>
+<span class="n">ethernet</span><span class="w"> </span><span class="mh">10</span><span class="n">baseT</span><span class="w">    </span><span class="mh">10</span><span class="w"></span>
+<span class="n">USB1</span><span class="w">                </span><span class="mh">12</span><span class="w"></span>
+<span class="w">                    </span><span class="mh">15</span><span class="w">  </span><span class="n">hdtv</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="mh">8</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mh">15</span><span class="p">)</span><span class="w"></span>
+<span class="n">ADSL2</span><span class="o">+</span><span class="w">              </span><span class="mh">24</span><span class="o">*</span><span class="w"></span>
+<span class="n">cable</span><span class="w"> </span><span class="n">modem</span><span class="w">         </span><span class="mh">30</span><span class="w"></span>
+<span class="w">                    </span><span class="mh">40</span><span class="w"> </span><span class="n">blu</span><span class="o">-</span><span class="n">ray</span><span class="w"> </span><span class="n">disc</span><span class="w"></span>
+<span class="n">wifi</span><span class="w"> </span><span class="mf">802.11</span><span class="n">g</span><span class="w">        </span><span class="mh">54</span><span class="w"></span>
+<span class="n">firewire800</span><span class="w"> </span><span class="n">act</span><span class="w">     </span><span class="mh">65</span><span class="w"></span>
+<span class="n">ethernet</span><span class="w"> </span><span class="mh">100</span><span class="n">baseT</span><span class="w">  </span><span class="mh">100</span><span class="o">*</span><span class="w"></span>
+<span class="n">PCI</span><span class="w">                </span><span class="mh">133</span><span class="w"></span>
+<span class="n">USB2</span><span class="w"> </span><span class="n">actual</span><span class="w">        </span><span class="mh">240</span><span class="w"></span>
+<span class="n">firewire</span><span class="w"> </span><span class="mh">400</span><span class="w"> </span><span class="n">theo</span><span class="w">  </span><span class="mh">400</span><span class="w"></span>
+<span class="n">USB2</span><span class="w"> </span><span class="n">theoretical</span><span class="w">   </span><span class="mh">480</span><span class="w"></span>
+<span class="n">wifi</span><span class="w"> </span><span class="mf">802.11</span><span class="n">n</span><span class="w">       </span><span class="mh">600</span><span class="w"></span>
+<span class="n">firewire</span><span class="w"> </span><span class="mh">800</span><span class="w"> </span><span class="n">theo</span><span class="w">  </span><span class="mh">800</span><span class="w"></span>
+<span class="n">Seagate</span><span class="w"> </span><span class="n">Barracuda</span><span class="w">  </span><span class="mh">960</span><span class="o">*</span><span class="w"></span>
+<span class="n">ethernet</span><span class="w"> </span><span class="n">gigabit</span><span class="w"> </span><span class="mh">1</span><span class="p">,</span><span class="mh">000</span><span class="w"></span>
+<span class="n">SATA</span><span class="o">-</span><span class="mh">150</span><span class="w"> </span><span class="n">theo</span><span class="w">    </span><span class="mh">1</span><span class="p">,</span><span class="mh">500</span><span class="w"></span>
+<span class="n">SATA</span><span class="o">-</span><span class="mh">300</span><span class="w"> </span><span class="n">theo</span><span class="w">    </span><span class="mh">3</span><span class="p">,</span><span class="mh">000</span><span class="w"></span>
 
-<span class="o">*</span> <span class="o">=</span> <span class="n">my</span> <span class="n">setup</span>
-</code></pre>
+<span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my</span><span class="w"> </span><span class="n">setup</span><span class="w"></span>
+</pre></div>
 
 <p>I'm assuming that I don't have gigabit ethernet, because I've never paid
 it any attention in the past. Judging from the above, my 100BaseT should
@@ -679,7 +679,7 @@ it.</p>
 <p>Until today, when I found myself refactoring a Pythonic kind of <em>switch</em>
 into my own code.</p>
 <p>I started with this ugly little lump:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
     <span class="n">action</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">action</span> <span class="o">==</span> <span class="s1">'M'</span><span class="p">:</span>
         <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_point</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
@@ -697,7 +697,7 @@ into my own code.</p>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="s1">'unsupported svg path command: </span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">action</span><span class="p">,)</span>
         <span class="k">raise</span> <span class="n">ParseError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>This is from the guts of an SVG parsing module I was hacking up, but
 what it actually does isn't important. Its only salient feature for
@@ -708,7 +708,7 @@ it was sure going to get ugly. How can we make it better?</p>
 In this case, I chose to make them methods of the current class.
 Standalone functions (outside the class, without a '<em>self</em>' parameter)
 would also work, if they didn't need access to shared state.</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">onMove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">onMove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
     <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_point</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">current_path</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)]</span>
 
@@ -727,34 +727,34 @@ would also work, if they didn't need access to shared state.</p>
 <span class="k">def</span> <span class="nf">onBadCommand</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
     <span class="n">msg</span> <span class="o">=</span> <span class="s1">'unsupported svg path command: </span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">action</span><span class="p">,)</span>
     <span class="k">raise</span> <span class="n">ParseError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>Again, don't worry too much about what these functions actually do. Just
 note that I've pulled the logic out of each branch of the
 <em>if...elif...else</em> statement into separate handler functions.</p>
 <p>Second, I define a dictionary which maps action characters to one of the
 new handler functions:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">lookup</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">'M'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">onMove</span><span class="p">,</span>
         <span class="s1">'L'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">onLine</span><span class="p">,</span>
         <span class="s1">'Z'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">onClose</span><span class="p">,</span>
         <span class="s1">'z'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">onClose</span><span class="p">,</span>
     <span class="p">}</span>
-</code></pre>
+</pre></div>
 
 <p>Notice how the methods are bound to self, so they operate on the current
 object as you would expect. If you used stand-alone functions instead,
 they would not need any '<em>self</em>.' qualifier here.</p>
 <p>Third, use the dictionary to lookup the function we want to call, and
 then call the returned function:</p>
-<pre class="code literal-block"><span></span><code><span class="n">handler</span> <span class="o">=</span> <span class="n">lookup</span><span class="p">[</span><span class="n">action</span><span class="p">]</span>
+<div class="code"><pre class="code literal-block"><span class="n">handler</span> <span class="o">=</span> <span class="n">lookup</span><span class="p">[</span><span class="n">action</span><span class="p">]</span>
 <span class="n">handler</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>These two lines can be tidily combined into one:</p>
-<pre class="code literal-block"><span></span><code><span class="n">loopup</span><span class="p">[</span><span class="n">action</span><span class="p">](</span><span class="n">params</span><span class="p">)</span>
-</code></pre>
+<div class="code"><pre class="code literal-block"><span class="n">loopup</span><span class="p">[</span><span class="n">action</span><span class="p">](</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
 
 <p>Note that this is pleasantly succinct, but still very explicit about
 what's going on. We're looking up a value in a dictionary, using the
@@ -772,11 +772,11 @@ correspond to this case. We're really talking about the case when the
 'action' character can't be found in the lookup dictionary at all. The
 most explicit and readable way to handle this case is to modify the
 above line of code:</p>
-<pre class="code literal-block"><span></span><code><span class="k">if</span> <span class="n">action</span> <span class="ow">in</span> <span class="n">lookup</span><span class="p">:</span>
+<div class="code"><pre class="code literal-block"><span class="k">if</span> <span class="n">action</span> <span class="ow">in</span> <span class="n">lookup</span><span class="p">:</span>
     <span class="n">lookup</span><span class="p">[</span><span class="n">action</span><span class="p">](</span><span class="n">params</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">onBadCommand</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>Saving these changes, running the tests shows it behaves identically to
 the original version. (Hint: Tests don't make code harder to change.
@@ -784,7 +784,7 @@ Quite the opposite - tests <em>enable</em> more frequent and more intrusive
 change, by giving you the freedom to dabble with refactoring while
 remaining dead certain you aren't introducing new bugs.)</p>
 <p>Let's take a look at the final code all together:</p>
-<pre class="code literal-block"><span></span><code><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
     <span class="n">lookup</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">'M'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">onMove</span><span class="p">,</span>
         <span class="s1">'L'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">onLine</span><span class="p">,</span>
@@ -796,7 +796,7 @@ remaining dead certain you aren't introducing new bugs.)</p>
         <span class="n">lookup</span><span class="p">[</span><span class="n">action</span><span class="p">](</span><span class="n">params</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">onBadCommand</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>Including the new handler functions, this is considerably longer than
 the original version (19 vs 32 lines). However, it qualifies as
@@ -823,7 +823,7 @@ my mind, but hopefully someone finds it useful.</p>
 <p><strong>Update:</strong> Wow! What a flurry of completely brilliant comments - every
 single one contains something of real merit. I feel compelled to rummage
 through for a sort-of best of breed conclusion based on all of them...</p>
-<pre class="code literal-block"><span></span><code><span class="n">lookup</span> <span class="o">=</span> <span class="p">{</span>
+<div class="code"><pre class="code literal-block"><span class="n">lookup</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">'M'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_move</span><span class="p">,</span>
     <span class="s1">'L'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_line</span><span class="p">,</span>
     <span class="s1">'Z'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_close</span><span class="p">,</span>
@@ -838,7 +838,7 @@ through for a sort-of best of breed conclusion based on all of them...</p>
 <span class="c1"># or alternatively</span>
 <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">lookup</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_bad_command</span><span class="p">)(</span><span class="n">params</span><span class="p">)</span>
-</code></pre>
+</pre></div>
 
 <p>I marginally prefer the first version - the second alternative is a
 smidgeon too compact for my taste. I respect the idea to use exceptions,

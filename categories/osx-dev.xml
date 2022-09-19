@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about osx-dev)</title><link>https://tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/osx-dev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 06 May 2022 16:02:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Encrypted zip files on OSX</title><link>https://www.tartley.com/posts/encrypted-zip-files-on-osx/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; I've since switched to KeePassXC, the community fork of KeePassX,
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about osx-dev)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/osx-dev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Sep 2022 15:37:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Encrypted zip files on OSX</title><link>https://www.tartley.com/posts/encrypted-zip-files-on-osx/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; I've since switched to KeePassXC, the community fork of KeePassX,
 an open source, cross-platorm, local-first, encrypted password storage program.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;My passwords and other miscellany are in a plain text file within an
@@ -21,7 +21,7 @@ access my passwords such that:&lt;/p&gt;
 &lt;p&gt;I failed to find an existing app which would do all this (although I had
 no trouble on Linux or even on Windows.) Hence, resorting to good old
 Bash:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 
 &lt;span class="nv"&gt;ZIPDIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$HOME&lt;/span&gt;&lt;span class="s2"&gt;/docs/org"&lt;/span&gt;
 
@@ -42,7 +42,7 @@ touch passwords.datestamp
 
 rm passwords.txt
 rm passwords.datestamp
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;I don't expect this to be watertight, but seems good enough for today.
 I'm happy to hear suggestions.&lt;/p&gt;</description><category>osx-dev</category><guid>https://www.tartley.com/posts/encrypted-zip-files-on-osx/</guid><pubDate>Tue, 09 Oct 2012 15:17:07 GMT</pubDate></item><item><title>Compiling MacVim with Python 2.7</title><link>https://www.tartley.com/posts/compiling-macvim-with-python-2-7/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I love the brilliant Vim plugin
@@ -55,7 +55,7 @@ set literals. These are marked as a syntax errors, which prevents the
 rest of the file from being parsed.&lt;/p&gt;
 &lt;p&gt;The solution is to compile your own MacVim, using Python 2.7 instead of
 the system Python. The following commands got MacVim compiled for me:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 git clone git://github.com/b4winckler/macvim.git
 &lt;span class="nb"&gt;cd&lt;/span&gt; macvim/src
 &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;LDFLAGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;-L/usr/lib
@@ -69,7 +69,7 @@ git clone git://github.com/b4winckler/macvim.git
 make
 open MacVim/build/Release
 &lt;span class="nb"&gt;echo&lt;/span&gt; Drag MacVim.app to your Applications directory
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Without the LDFLAGS setting, I was missing some symbols at link. The
 --with-python-config-dir entry came from typing 'which python' to find
@@ -79,9 +79,9 @@ where my Python 2.7 install lives, and modifying that result to find its
 macvim/src/MacVim/build/Release/MacVim.app into your Applications
 directory.&lt;/p&gt;
 &lt;p&gt;Open up MacVim, and check out the built-in Python version:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
 &lt;span class="mf"&gt;2.7.1&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r271&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;86882&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Nov&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="mi"&gt;2010&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;35&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;34&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;And files with set literals are now correctly parsed for errors.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This only works if the Python 2.7 is your default 'python'

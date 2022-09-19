@@ -63,7 +63,7 @@ I want to run a second profile at work, to keep a dis">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -103,7 +103,7 @@ Create a second profile.</p>
 <code>about:profiles</code>.</p>
 <p>Substitute those directories into this firefox.desktop file, where I've
 marked 'XXX':</p>
-<pre class="code literal-block"><span></span><code><span class="cp"># Gnome3 .desktop file for Firefox with multiple profiles</span>
+<div class="code"><pre class="code literal-block"><span class="cp"># Gnome3 .desktop file for Firefox with multiple profiles</span>
 <span class="p">[</span><span class="n">Desktop</span><span class="w"> </span><span class="n">Entry</span><span class="p">]</span><span class="w"></span>
 <span class="n">Version</span><span class="o">=</span><span class="mf">1.0</span><span class="w"></span>
 <span class="n">Name</span><span class="o">=</span><span class="n">Firefox</span><span class="w"></span>
@@ -127,12 +127,12 @@ marked 'XXX':</p>
 <span class="p">[</span><span class="n">Desktop</span><span class="w"> </span><span class="n">Action</span><span class="w"> </span><span class="n">work</span><span class="p">]</span><span class="w"></span>
 <span class="n">Name</span><span class="o">=</span><span class="n">Firefox</span><span class="w"> </span><span class="p">(</span><span class="n">work</span><span class="p">)</span><span class="w"></span>
 <span class="n">Exec</span><span class="o">=</span><span class="n">firefox</span><span class="w"> </span><span class="o">--</span><span class="n">profile</span><span class="w"> </span><span class="p">.</span><span class="n">mozilla</span><span class="o">/</span><span class="n">firefox</span><span class="o">/</span><span class="n">XXX</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">remote</span><span class="w"> </span><span class="o">%</span><span class="n">u</span><span class="w"></span>
-</code></pre>
+</pre></div>
 
 <p>Save the above as firefox.desktop and install using:</p>
-<pre class="code literal-block"><span></span><code>$ desktop-file-validate firefox.desktop
+<div class="code"><pre class="code literal-block">$ desktop-file-validate firefox.desktop
 $ desktop-file-install --dir<span class="o">=</span>.local/share/applications firefox.desktop
-</code></pre>
+</pre></div>
 
 <p>This results in a Firefox icon in your applications menu that defaults
 to whichever profile you mark as default in the ProfileManager, but

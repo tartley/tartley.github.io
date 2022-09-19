@@ -66,7 +66,7 @@ other branches, you must name them on">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -101,22 +101,22 @@ other branches, you must name them on">
 <p>When I launch Gitk, it just displays the current branch. To display
 other branches, you must name them on the command line. To display all
 existing branches, you need to find out all the branch names:</p>
-<pre class="code literal-block"><span></span><code>$ git branch
+<div class="code"><pre class="code literal-block">$ git branch
   create-sql-dev
   formula-rewrite
 * master
-</code></pre>
+</pre></div>
 
 <p>Then laboriously type them in to the gitk command line:</p>
-<pre class="code literal-block"><span></span><code>$ gitk create-sql-dev formula-rewrite master
-</code></pre>
+<div class="code"><pre class="code literal-block">$ gitk create-sql-dev formula-rewrite master
+</pre></div>
 
 <p>Alternatively, save this Bash snippet in a script on your PATH. I call
 mine gitka, for 'all branches':</p>
-<pre class="code literal-block"><span></span><code><span class="ch">#!/usr/bin/bash</span>
+<div class="code"><pre class="code literal-block"><span class="ch">#!/usr/bin/bash</span>
 <span class="c1"># run gitk, displaying all existing branches</span>
 <span class="k">for</span> b <span class="k">in</span> <span class="s2">"`git branch`"</span><span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$b</span><span class="s2">"</span><span class="p">;</span> <span class="k">done</span> <span class="p">|</span> tr -d <span class="s2">"*"</span> <span class="p">|</span> xargs gitk
-</code></pre>
+</pre></div>
 
 <p><img alt="Gitk displaying all branches, not just the current ('master' in bold)" src="../../files/2010/12/gitk-all-branches.png" title="gitk-all-branches"></p>
 <p>This works on Windows too, if you save it as 'gitka.sh', and have Cygwin

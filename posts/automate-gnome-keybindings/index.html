@@ -66,7 +66,7 @@ works great on RHEL">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -108,7 +108,7 @@ workstation setup bucket:</p>
     calendar and notifications window, which shadows my 'toggle window
     maximize vertically'.</li>
 </ul>
-<pre class="code literal-block"><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+<div class="code"><pre class="code literal-block"><span class="ch">#!/usr/bin/env bash</span>
 
 <span class="nv">kb</span><span class="o">=</span><span class="s1">'org.gnome.desktop.wm.keybindings'</span>
 
@@ -143,7 +143,7 @@ gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybind
 gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ name <span class="s2">"terminal"</span>
 gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ <span class="nb">command</span> <span class="s2">"terminal"</span>
 gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ binding <span class="s2">"t"</span>
-</code></pre>
+</pre></div>
 
 <p>Embedded in that is the ultimate solution to my longstanding irk with
 Unity and Gnome's default window switcher (alt-tab.) By default it

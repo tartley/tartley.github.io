@@ -66,7 +66,7 @@ process, just what worked for my situation. (">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -110,15 +110,15 @@ show the commands as I used them, as I was figuring each step out.</p>
 <a href="https://github.com/ytdl-org/youtube-dl">install <code>youtube-dl</code></a>,
 hit the YouTube <em>share</em> button to grab the video's encoded URL,
 and:</p>
-<pre class="code literal-block"><span></span><code>youtube-dl https://youtu.be/6-gJMs6DwuE -o Ash.mp4
-</code></pre>
+<div class="code"><pre class="code literal-block">youtube-dl https://youtu.be/6-gJMs6DwuE -o Ash.mp4
+</pre></div>
 
 <p>This gives me an 850KB .mp4 video file.</p>
 <h4>2. Split</h4>
 <p>I only want the final few seconds. To remove the start of the video,
 keeping from 6.5 seconds until the end:</p>
-<pre class="code literal-block"><span></span><code>ffmpeg -hide_banner -i Ash.mp4 -acodec copy -vcodec libx264 -ss 00:00:06.5 Ash-split.mp4
-</code></pre>
+<div class="code"><pre class="code literal-block">ffmpeg -hide_banner -i Ash.mp4 -acodec copy -vcodec libx264 -ss 00:00:06.5 Ash-split.mp4
+</pre></div>
 
 <p>Args to ffmpeg are position sensitive. Specifying '-ss' (to split the file)
 before the input ('-i') can't create the split at an accurate location, since
@@ -136,8 +136,8 @@ image of it).</p>
 <p><img alt="ash-split.webp" src="../../files/2021/ash-split.webp"></p>
 <h4>3. Crop</h4>
 <p>To crop out the black bars from the top and bottom:</p>
-<pre class="code literal-block"><span></span><code>ffmpeg -hide_banner -i Ash-split.mp4 -vf 'crop=iw:365' Ash-split-crop.mp4
-</code></pre>
+<div class="code"><pre class="code literal-block">ffmpeg -hide_banner -i Ash-split.mp4 -vf 'crop=iw:365' Ash-split-crop.mp4
+</pre></div>
 
 <p>Here, we crop it to the input width "iw", and 365 high. In the absense of
 any offset ordinates for the crop, ffmpeg defaults to centering them, so this
@@ -146,8 +146,8 @@ exactly what we want.</p>
 <p>This results in a three second, 220KB .mp4 video file.</p>
 <p><img alt="ash-split-crop.webp" src="../../files/2021/ash-split-crop.webp"></p>
 <h3>4. Resize and convert to gif</h3>
-<pre class="code literal-block"><span></span><code><span class="s s-Atom">ffmpeg</span> <span class="o">-</span><span class="s s-Atom">hide_banner</span> <span class="o">-</span><span class="s s-Atom">i</span> <span class="nv">Ash</span><span class="o">-</span><span class="s s-Atom">split</span><span class="o">-</span><span class="s s-Atom">crop</span><span class="p">.</span><span class="s s-Atom">mp4</span> <span class="o">-</span><span class="s s-Atom">vf</span> <span class="s s-Atom">'scale=512:-1'</span> <span class="nv">Ash</span><span class="o">-</span><span class="s s-Atom">split</span><span class="o">-</span><span class="s s-Atom">crop</span><span class="o">-</span><span class="s s-Atom">resize</span><span class="p">.</span><span class="s s-Atom">gif</span>
-</code></pre>
+<div class="code"><pre class="code literal-block"><span class="s s-Atom">ffmpeg</span> <span class="o">-</span><span class="s s-Atom">hide_banner</span> <span class="o">-</span><span class="s s-Atom">i</span> <span class="nv">Ash</span><span class="o">-</span><span class="s s-Atom">split</span><span class="o">-</span><span class="s s-Atom">crop</span><span class="p">.</span><span class="s s-Atom">mp4</span> <span class="o">-</span><span class="s s-Atom">vf</span> <span class="s s-Atom">'scale=512:-1'</span> <span class="nv">Ash</span><span class="o">-</span><span class="s s-Atom">split</span><span class="o">-</span><span class="s s-Atom">crop</span><span class="o">-</span><span class="s s-Atom">resize</span><span class="p">.</span><span class="s s-Atom">gif</span>
+</pre></div>
 
 <p>This results in a grainy-but-passable three second 750KB animated .gif:</p>
 <p><img alt="ash-split-crop-resize.gif" src="../../files/2021/ash-split-crop-resize.gif"></p>
@@ -158,7 +158,7 @@ of that was a very large (10MB) file and played very slowly, and I wasn't
 immediately sure how to fix that.</p>
 <h3>5. Add text</h3>
 <p>Using Imagemagik's 'convert':</p>
-<pre class="code literal-block"><span></span><code>convert \
+<div class="code"><pre class="code literal-block">convert \
     Ash-split-crop-resize.gif \
     -coalesce \
     -font impact -pointsize 36 -fill white -stroke black -strokewidth 2 \
@@ -166,7 +166,7 @@ immediately sure how to fix that.</p>
     -gravity south -annotate +0+0 'you have my sympathies' \
     -layers Optimize \
     Ash-split-crop-resize-text.gif
-</code></pre>
+</pre></div>
 
 <p>The '-coalesce' option removes all the .gif optimizations, then we apply the
 text labels, then the '-layers' option re-applies optimizations. Without this

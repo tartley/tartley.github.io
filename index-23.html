@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!">
+<meta name="description" content="A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 23) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -53,7 +53,7 @@
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -290,16 +290,16 @@ brightest of the next generation (as judged by my own paradigm's criteria.)</p>
     </header><div class="e-content entry-content">
     <p>Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:</p>
-<pre class="code literal-block"><span></span><code><span class="c">" Black(Python) format the whole file</span>
+<div class="code"><pre class="code literal-block"><span class="c">" Black(Python) format the whole file</span>
 <span class="nb">nnoremap</span> <span class="p">&lt;</span>leader<span class="p">&gt;</span><span class="k">b</span> :<span class="m">1</span><span class="p">,</span>$<span class="p">!</span>black <span class="p">-</span><span class="k">q</span> <span class="p">-&lt;</span>CR<span class="p">&gt;</span>
-</code></pre>
+</pre></div>
 
 <p>But often you'd like to reformat just a section of the file, while leaving
 everything else intact. In principle, it's easy to tell Vim to just send the
 current visual selection:</p>
-<pre class="code literal-block"><span></span><code><span class="c">" Black(Python) format the visual selection</span>
+<div class="code"><pre class="code literal-block"><span class="c">" Black(Python) format the visual selection</span>
 xnoremap <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">b</span> :<span class="p">!</span>black <span class="p">-</span><span class="k">q</span> <span class="p">-&lt;</span>CR<span class="p">&gt;</span>
-</code></pre>
+</pre></div>
 
 <p>(Note that both the above Vim configuration snippets map the same key
 sequence -- leader (commonly comma) followed by lower case b. These can be
@@ -340,25 +340,25 @@ bash command history when creating, etc?</p>
 <p>Here goes then.</p>
 <p>I have one LXD container running for each nontrivial development project I'm
 working on.</p>
-<pre class="code literal-block"><span></span><code>$ lxc ls
+<div class="code"><pre class="code literal-block">$ lxc ls
 <span class="p">|</span>    NAME     <span class="p">|</span>  STATE  <span class="p">|</span>        IPV4         <span class="p">|</span> IPV6 <span class="p">|</span>   TYPE    <span class="p">|</span> SNAPSHOTS <span class="p">|</span>
 <span class="p">|</span> devicegw    <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.228 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
 <span class="p">|</span> ident       <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.4 <span class="o">(</span>eth0<span class="o">)</span>   <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
 <span class="p">|</span> revs        <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.151 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
 <span class="p">|</span> siab        <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.128 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
 <span class="p">|</span> tartley-com <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.161 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-</code></pre>
+</pre></div>
 
 <p>Out of the gate we see one source of confusion. "LXD", the daemon, is a
 newer project that builds on top of "LXC" the containers. However the user
 interface to all the new LXD-goodness is through a command-line called "lxc",
 which replaces the older command line tool called "lxd". :-/</p>
 <p>To create a new one:</p>
-<pre class="code literal-block"><span></span><code>$ <span class="nb">time</span> lxc launch ubuntu:16.04 -p default -p jhartley demo
+<div class="code"><pre class="code literal-block">$ <span class="nb">time</span> lxc launch ubuntu:16.04 -p default -p jhartley demo
 Creating demo
 Starting demo
 real    0m9.593s
-</code></pre>
+</pre></div>
 
 <p>Once created, they take about 3 seconds to stop and 0.5 seconds to start.</p>
 <p>Those "-p" options cause the container to use two <em>profiles</em>. They are:</p>
@@ -374,14 +374,14 @@ real    0m9.593s
 </li>
 </ol>
 <p>Once a new container is up, we can execute commands directly on it:</p>
-<pre class="code literal-block"><span></span><code>$ lxc <span class="nb">exec</span> demo hostname
+<div class="code"><pre class="code literal-block">$ lxc <span class="nb">exec</span> demo hostname
 demo
 $ lxc <span class="nb">exec</span> demo whoami
 root
-</code></pre>
+</pre></div>
 
 <p>Or SSH to them using their IP address:</p>
-<pre class="code literal-block"><span></span><code>jhartley@t460 $ lxc ls demo
+<div class="code"><pre class="code literal-block">jhartley@t460 $ lxc ls demo
 <span class="p">|</span> NAME <span class="p">|</span>  STATE  <span class="p">|</span>        IPV4         <span class="p">|</span> IPV6 <span class="p">|</span>   TYPE    <span class="p">|</span> SNAPSHOTS <span class="p">|</span>
 <span class="p">|</span> demo <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.162 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
 jhartley@t460 $ ssh <span class="m">10</span>.44.99.162
@@ -389,34 +389,34 @@ jhartley@t460 $ ssh <span class="m">10</span>.44.99.162
 Warning: Permanently added <span class="s1">'10.44.99.162'</span> <span class="o">(</span>ECDSA<span class="o">)</span> to the list of known hosts.
 Welcome to Ubuntu <span class="m">16</span>.04.6 LTS <span class="o">(</span>GNU/Linux <span class="m">5</span>.4.0-25-generic x86_64<span class="o">)</span>
 jhartley@demo $
-</code></pre>
+</pre></div>
 
 <p>Better than using IP addresses, you can run a DNS server to recognize
 <code>{containername}.lxd</code> hostnames. (This part is from
 <a href="https://discuss.linuxcontainers.org/t/a-way-to-resolve-container-lxd-from-host-in-all-cases/3698">here</a>.)</p>
 <p>Find your lxd bridge IPv4 address</p>
-<pre class="code literal-block"><span></span><code>lxc network show lxdbr0
-</code></pre>
+<div class="code"><pre class="code literal-block">lxc network show lxdbr0
+</pre></div>
 
 <p>Create file <code>/etc/systemd/network/lxd.network</code>:</p>
-<pre class="code literal-block"><span></span><code><span class="k">[Match]</span>
-<span class="na">Name</span><span class="o">=</span><span class="s">lxdbr0</span>
+<div class="code"><pre class="code literal-block"><span class="k">[Match]</span><span class="w"></span>
+<span class="na">Name</span><span class="o">=</span><span class="s">lxdbr0</span><span class="w"></span>
 
-<span class="k">[Network]</span>
-<span class="na">Address</span><span class="o">=</span><span class="s">IPADDR/24</span>
-<span class="na">DNS</span><span class="o">=</span><span class="s">IPADDR</span>
-<span class="na">Domains</span><span class="o">=</span><span class="s">~lxd</span>
-</code></pre>
+<span class="k">[Network]</span><span class="w"></span>
+<span class="na">Address</span><span class="o">=</span><span class="s">IPADDR/24</span><span class="w"></span>
+<span class="na">DNS</span><span class="o">=</span><span class="s">IPADDR</span><span class="w"></span>
+<span class="na">Domains</span><span class="o">=</span><span class="s">~lxd</span><span class="w"></span>
+</pre></div>
 
 <p>Where IPADDR is the lxdbr0 IPv4 address.</p>
-<pre class="code literal-block"><span></span><code>sudo systemctl <span class="nb">enable</span> systemd-networkd
+<div class="code"><pre class="code literal-block">sudo systemctl <span class="nb">enable</span> systemd-networkd
 sudo reboot now
-</code></pre>
+</pre></div>
 
 <p>Then:</p>
-<pre class="code literal-block"><span></span><code>jhartley@t460 $ ssh demo.lxd
+<div class="code"><pre class="code literal-block">jhartley@t460 $ ssh demo.lxd
 jhartley@demo $ <span class="c1"># \o/</span>
-</code></pre>
+</pre></div>
 
 <p>One nice thing is that DNS works both from the host and on the containers,
 so your services can be configured by default to talk to each other at
@@ -424,13 +424,13 @@ SERVICE1.lxd, SERVICE2.lxd. Then running them in containers on your host
 they would just find each other. We don't actually do this, but it seems
 trivially easy to do. I should ask why we don't.</p>
 <p>In practice I wrap up the ssh command with my accumulated foibles:</p>
-<pre class="code literal-block"><span></span><code>jhartley@demo $ <span class="nb">type</span> -a lssh
+<div class="code"><pre class="code literal-block">jhartley@demo $ <span class="nb">type</span> -a lssh
 lssh is a <span class="k">function</span>
 lssh <span class="o">()</span>
 <span class="o">{</span>
     <span class="nv">TERM</span><span class="o">=</span>xterm-color ssh -A -t <span class="s2">"</span><span class="nv">$1</span><span class="s2">.lxd"</span> -- <span class="s2">"cd </span><span class="nv">$PWD</span><span class="s2"> &amp;&amp; exec </span><span class="nv">$SHELL</span><span class="s2"> -l"</span><span class="p">;</span>
 <span class="o">}</span>
-</code></pre>
+</pre></div>
 
 <p>I forget why -A and -t were required. The rest is mostly just to start the
 shell on the container in the same directory as I was in on the host. There
@@ -480,8 +480,8 @@ or font authors.</p>
 more than your distribution does. Here's how I did it for my
 <a href="http://www.dcmembers.com/jibsen/download/61/">beloved Dina</a>.</p>
 <h3>1. Identify the font file.</h3>
-<pre class="code literal-block"><span></span><code>fc-list <span class="p">|</span> grep Dina
-</code></pre>
+<div class="code"><pre class="code literal-block">fc-list <span class="p">|</span> grep Dina
+</pre></div>
 
 <h3>2. Convert.</h3>
 <p>Use either command line tools, or fontforge.</p>

@@ -64,7 +64,7 @@ I have ended up learning far more about crappy DOS sc">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -110,12 +110,12 @@ now be invoked by typing 'toolname', just like on other platforms, as
 opposed to 'toolname.py' or even 'python toolname.py'. So I wrap my
 Python script 'toolname.py' with a new file, 'toolname.bat', living in
 the same directory:</p>
-<pre class="code literal-block"><span></span><code><span class="p">::</span> <span class="n">first</span> <span class="n">run</span> <span class="n">our</span> <span class="k">tool</span>
-<span class="n">python</span> <span class="s2">"%~dp0%~n0.py"</span> <span class="o">%*</span>
+<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span><span class="w"></span>
+<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span><span class="w"></span>
 
-<span class="p">::</span> <span class="n">then</span> <span class="n">make</span> <span class="n">any</span> <span class="n">changes</span> <span class="n">to</span> <span class="n">the</span> <span class="n">environment</span>
-<span class="n">set</span> <span class="n">THIS</span><span class="o">=</span><span class="n">THAT</span>
-</code></pre>
+<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span><span class="w"></span>
+<span class="n">set</span><span class="w"> </span><span class="n">THIS</span><span class="o">=</span><span class="n">THAT</span><span class="w"></span>
+</pre></div>
 
 <p>The %\~dp0 and %\~n0 gobbledygook is a batch file way of referencing the
 same drive, path and filename (minus extension) as the current script,
@@ -125,12 +125,12 @@ depend on what goes on inside toolname.py. So I have that Python write a
 new batch file to the temp directory, containing all the 'set' commands
 which will replace the hardcoded 'set THIS=THAT' in the above script.
 Then we call that new temporary bat file from here:</p>
-<pre class="code literal-block"><span></span><code><span class="p">::</span> <span class="n">first</span> <span class="n">run</span> <span class="n">our</span> <span class="k">tool</span>
-<span class="n">python</span> <span class="s2">"%~dp0%~n0.py"</span> <span class="o">%*</span>
+<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span><span class="w"></span>
+<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span><span class="w"></span>
 
-<span class="p">::</span> <span class="n">then</span> <span class="n">make</span> <span class="n">any</span> <span class="n">changes</span> <span class="n">to</span> <span class="n">the</span> <span class="n">environment</span>
-<span class="n">call</span> <span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span>
-</code></pre>
+<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span><span class="w"></span>
+<span class="n">call</span><span class="w"> </span><span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span><span class="w"></span>
+</pre></div>
 
 <p>Which is good enough. Presumably it will barf all over the place if run
 concurrently. But there's a more pressing problem. I need the exit value
@@ -140,15 +140,15 @@ command at the end is always successful.</p>
 <p>One solution I've seen used is to remember the exit value from
 toolname.py, and then use the DOS exit command to propagate this value
 out to our caller:</p>
-<pre class="code literal-block"><span></span><code><span class="p">::</span> <span class="n">first</span> <span class="n">run</span> <span class="n">our</span> <span class="k">tool</span>
-<span class="n">python</span> <span class="s2">"%~dp0%~n0.py"</span> <span class="o">%*</span>
-<span class="n">set</span> <span class="n">EXITVAL</span><span class="o">=%</span><span class="n">ERRORLEVEL</span><span class="o">%</span>
+<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span><span class="w"></span>
+<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span><span class="w"></span>
+<span class="n">set</span><span class="w"> </span><span class="n">EXITVAL</span><span class="o">=%</span><span class="n">ERRORLEVEL</span><span class="o">%</span><span class="w"></span>
 
-<span class="p">::</span> <span class="n">then</span> <span class="n">make</span> <span class="n">any</span> <span class="n">changes</span> <span class="n">to</span> <span class="n">the</span> <span class="n">environment</span>
-<span class="n">call</span> <span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span>
+<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span><span class="w"></span>
+<span class="n">call</span><span class="w"> </span><span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span><span class="w"></span>
 
-<span class="n">exit</span> <span class="o">%</span><span class="n">EXITVAL</span><span class="o">%</span>
-</code></pre>
+<span class="n">exit</span><span class="w"> </span><span class="o">%</span><span class="n">EXITVAL</span><span class="o">%</span><span class="w"></span>
+</pre></div>
 
 <p>The problem with this is that 'exit' doesn't do what you think it does.
 It doesn't just stop interpreting the current script, rather it
@@ -169,7 +169,7 @@ can be set without using the hopelessly brain-dead 'exit' command. It is
 equal to the exit value of the last process the script invokes. So
 instead of exit, simply find a process that will exit with the value you
 need, and invoke it as the final command in your batch script:</p>
-<pre class="code literal-block"><span></span><code><span class="p">::</span> <span class="n">first</span> <span class="n">run</span> <span class="n">our</span> <span class="n">tool</span>
+<div class="code"><pre class="code literal-block"><span class="p">::</span> <span class="n">first</span> <span class="n">run</span> <span class="n">our</span> <span class="n">tool</span>
 <span class="n">python</span> <span class="s2">"%~dp0%~n0.py"</span><span class="p">;</span> <span class="o">%*</span>
 <span class="nb">set</span> <span class="n">EXITVAL</span><span class="o">=%</span><span class="n">ERRORLEVEL</span><span class="o">%</span>
 
@@ -178,7 +178,7 @@ need, and invoke it as the final command in your batch script:</p>
 
 <span class="p">::</span> <span class="ow">and</span> <span class="n">propagate</span> <span class="n">the</span> <span class="n">exit</span> <span class="n">value</span> <span class="n">to</span> <span class="n">our</span> <span class="n">invoker</span>
 <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">"import sys; sys.exit(</span><span class="si">%E</span><span class="s2">XITVAL%)"</span>
-</code></pre>
+</pre></div>
 
 <p>Bingo. I now have a Python process that can modify the environment of
 its invoking shell, and propagates the correct exit value out of the

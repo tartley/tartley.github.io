@@ -68,7 +68,7 @@ on your PATH. Recent releases are much improved for Py">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -107,12 +107,12 @@ on your PATH. Recent releases are much improved for Python.</p>
 will need to be created or updated whenever you make significant
 changes. Either get used to manually running the following command a
 lot:</p>
-<pre class="code literal-block"><span></span><code>ctags -R .
-</code></pre>
+<div class="code"><pre class="code literal-block">ctags -R .
+</pre></div>
 
 <p>or bind it to a key in your \~/.vimrc:</p>
-<pre class="code literal-block"><span></span><code>map  :<span class="p">!</span><span class="k">start</span> /min ctags <span class="p">-</span>R .
-</code></pre>
+<div class="code"><pre class="code literal-block">map  :<span class="p">!</span><span class="k">start</span> /min ctags <span class="p">-</span>R .
+</pre></div>
 
 <p>I like to set Vim's current working directory equal to the root of
 whatever project I'm working in, so now I can press f12 to update the
@@ -130,10 +130,10 @@ actually make ctrl-] more inconvenient, because they increase the
 likelyhood of finding duplicate definitions of a tag, causing the menu
 to inconveniently pop up, rather than just jumping to the tag you want.</p>
 <p>To fix this, create a \~/.ctags file:</p>
-<pre class="code literal-block"><span></span><code>--python-kinds<span class="o">=</span>-iv
+<div class="code"><pre class="code literal-block">--python-kinds<span class="o">=</span>-iv
 --exclude<span class="o">=</span>build
 --exclude<span class="o">=</span>dist
-</code></pre>
+</pre></div>
 
 <p>The first line turns off tags generation for variables and imports. The
 second and third lines turn off generation of tags in the named dirs,
@@ -147,7 +147,7 @@ property <em>.matrix</em> will present you with a menu asking you to choose
 between property <em>.matrix</em> and class <em>Matrix</em>, rather than just jumping
 to the property.</p>
 <p>To fix this, add this to your .vimrc:</p>
-<pre class="code literal-block"><span></span><code><span class="c">" go to defn of tag under the cursor</span>
+<div class="code"><pre class="code literal-block"><span class="c">" go to defn of tag under the cursor</span>
 <span class="k">fun</span><span class="p">!</span> MatchCaseTag<span class="p">()</span>
     <span class="k">let</span> <span class="nb">ic</span> <span class="p">=</span> &amp;<span class="nb">ic</span>
     <span class="k">set</span> <span class="nb">noic</span>
@@ -158,7 +158,7 @@ to the property.</p>
     <span class="k">endtry</span>
 <span class="k">endfun</span>
 <span class="nb">nnoremap</span>   :<span class="k">call</span> MatchCaseTag<span class="p">()</span>
-</code></pre>
+</pre></div>
 
 <p><strong>Update:</strong>This Vim script was suggested in a comment by James Vega, in
 order to reliably restore the state of 'ignorecase' after doing the tag
