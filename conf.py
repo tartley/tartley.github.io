@@ -20,12 +20,12 @@ BLOG_AUTHOR = "Jonathan Hartley"  # (translatable)
 BLOG_TITLE = "tartley.com"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://tartley.com/"
+SITE_URL = "https://www.tartley.com/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 BASE_URL = "https://www.tartley.com/"
 BLOG_EMAIL = "tartley @ the domain tartley dot com"
-BLOG_DESCRIPTION = "Creating a website devoted to oneself has been described as the greatest act of hubris. Welcome aboard!"  # (translatable)
+BLOG_DESCRIPTION = "A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!"  # (translatable)
 
 DEFAULT_LANG = "en"
 
@@ -520,8 +520,7 @@ HIDDEN_CATEGORIES = []
 # and displayed underneath the author list or index page’s title.
 # AUTHOR_PAGES_DESCRIPTIONS = {
 #    DEFAULT_LANG: {
-#        "Juanjo Conti": "Python coder and writer.",
-#        "Roberto Alsina": "Nikola father."
+#        "Jonathan Hartley": "Made out of meat.",
 #    },
 # }
 

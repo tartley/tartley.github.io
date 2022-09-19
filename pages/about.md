@@ -8,7 +8,7 @@
 .. author: Jonathan Hartley
 -->
 
-A website dedicated to oneself has been described as the greatest act of hubris. Welcome aboard!
+A website dedicated to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!
 
 * Email tartley at the domain tartley.com
 * [twitter.com/tartley](https://twitter.com/tartley)
