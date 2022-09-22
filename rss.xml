@@ -1,5 +1,565 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://www.tartley.com/</link><description>A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Sep 2022 18:30:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Neuromancer</title><link>https://www.tartley.com/posts/neuromancer/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://www.tartley.com/</link><description>A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 22 Sep 2022 04:39:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>New Laptop Time!</title><link>https://www.tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;My employer, Canonical, has a "bring your own hardware" policy, trusting that
+their engineers would rather choose and administer their own personal laptops,
+rather than put up with standardized remotely administered corporate hardware.&lt;/p&gt;
+&lt;p&gt;My current much loved Thinkpad 460p has served faithfully since 2015, but is
+showing its age, sometimes struggling under the workload. Plus, its integrated
+graphics chipset doesn't have the power to play modern games with my kiddo.
+Battlezone 98 runs fine, but Civilization VI (2016) is about the limit.&lt;/p&gt;
+&lt;p&gt;This summer I received the three-year cash-in-hand bonus earmarked as a
+"hardware refresh bonus". It's been many years since I've bought a laptop with
+the attention to detail that comes with spending one's own money. Even the
+current aging Thinkpad was a gift from a former employer. So it's been a decade
+or more since I've seriously specced out a new laptop. This post exists as a
+place to scribble down reminders of a few things I learned along the way.&lt;/p&gt;
+&lt;p&gt;I have a few constraints:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;About the same size as the current laptop's 14 inches, or maybe a tiny bit
+  bigger.&lt;/li&gt;
+&lt;li&gt;I work on Ubuntu Linux, so it has to run that comfortably.&lt;/li&gt;
+&lt;li&gt;It should support modern gaming.&lt;/li&gt;
+&lt;li&gt;Plenty of monitor ports.&lt;/li&gt;
+&lt;li&gt;A headphone jack.&lt;/li&gt;
+&lt;li&gt;Ability for me to open it up, swap out the battery, drives, RAM.&lt;/li&gt;
+&lt;li&gt;3:2 display would be nice, but these are rare.&lt;/li&gt;
+&lt;li&gt;A budget of $2,000.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reading around, I got sort-of up to speed on components.&lt;/p&gt;
+&lt;h3&gt;CPU&lt;/h3&gt;
+&lt;p&gt;The CPU buzz is around Intel's 12th generation (aka "Alder Lake"). These are
+"hybrid" CPUs, combining large high performance cores with smaller high
+efficiency cores on a single chip. They come in about 30 different variants,
+with a naming convention that looks like, for example: &lt;code&gt;Intel Core i7-12700H&lt;/code&gt;.
+This consists of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A brand, e.g "Intel Core"&lt;/li&gt;
+&lt;li&gt;A modifier specifying a market segment, one of:&lt;ul&gt;
+&lt;li&gt;i3 Casual use&lt;/li&gt;
+&lt;li&gt;i5 Multitasking, light gaming&lt;/li&gt;
+&lt;li&gt;i7 Gaming, content creators&lt;/li&gt;
+&lt;li&gt;i9 Slightly faster, more parallel cores.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A single or double digit generation, eg the latest is "12".&lt;/li&gt;
+&lt;li&gt;An SKU, eg the "700" above, a three or four digit number which roughly
+  corresponds to the featureset or performance - larger is better. These are
+  only comparable within a single generation, they adopt wildly different
+  conventions in different generations.&lt;/li&gt;
+&lt;li&gt;A single or double letter suffix, eg "H" for "high performance", taken from
+  &lt;a href="https://www.intel.com/content/www/us/en/support/articles/000058567/processors/intel-core-processors.html"&gt;an idiotic irregular table&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The major alternative to an Intel processor is AMD. These aren't the current
+season's darlings of the performance benchmarks, although they do include
+several respectable contenders that might be great for my needs, as you can see
+in the following performance comparison.&lt;/p&gt;
+&lt;h4&gt;Benchmarks&lt;/h4&gt;
+&lt;p&gt;These laptop CPU performance benchmarks are culled from
+&lt;a href="https://www.cpubenchmark.net/laptop.html"&gt;www.cpubenchmark.net&lt;/a&gt;,
+sorted by the benchmark score. I included the top 20, plus a handful of notable
+others that I looked up along the way. The 'bench' column measures relative
+performance under a variety of benchmark workloads which fully utilize all
+cores.&lt;/p&gt;
+&lt;p&gt;The number of cores is given as (p)performance + (e)fficiency, for hybrid processors.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;CPU&lt;/th&gt;
+&lt;th align="left"&gt;Cores&lt;/th&gt;
+&lt;th align="right"&gt;Clock&lt;/th&gt;
+&lt;th align="right"&gt;Cache&lt;/th&gt;
+&lt;th align="right"&gt;Bench&lt;/th&gt;
+&lt;th&gt;Price&lt;/th&gt;
+&lt;th&gt;Laptop models, and other notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;i9-12900HX&lt;/td&gt;
+&lt;td align="left"&gt;8p+8e&lt;/td&gt;
+&lt;td align="right"&gt;5.0GHz&lt;/td&gt;
+&lt;td align="right"&gt;30MB&lt;/td&gt;
+&lt;td align="right"&gt;36&lt;/td&gt;
+&lt;td&gt;$606&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-12800HX&lt;/td&gt;
+&lt;td align="left"&gt;8p+8e&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;25MB&lt;/td&gt;
+&lt;td align="right"&gt;35&lt;/td&gt;
+&lt;td&gt;$457&lt;/td&gt;
+&lt;td&gt;Thinkpad P16 ($2340).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i9-12950HX&lt;/td&gt;
+&lt;td align="left"&gt;8p+8e&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;30MB&lt;/td&gt;
+&lt;td align="right"&gt;34&lt;/td&gt;
+&lt;td&gt;$590&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-12850HX&lt;/td&gt;
+&lt;td align="left"&gt;8p+8e&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;25MB&lt;/td&gt;
+&lt;td align="right"&gt;31&lt;/td&gt;
+&lt;td&gt;$428&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i9-12900HK&lt;/td&gt;
+&lt;td align="left"&gt;6p+8e&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;24MB&lt;/td&gt;
+&lt;td align="right"&gt;30&lt;/td&gt;
+&lt;td&gt;$635&lt;/td&gt;
+&lt;td&gt;Dell XPS 15 ($2950).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i9-12900H&lt;/td&gt;
+&lt;td align="left"&gt;6p+8e&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;24MB&lt;/td&gt;
+&lt;td align="right"&gt;29&lt;/td&gt;
+&lt;td&gt;$617&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-12700H&lt;/td&gt;
+&lt;td align="left"&gt;6p+8e&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;24MB&lt;/td&gt;
+&lt;td align="right"&gt;27&lt;/td&gt;
+&lt;td&gt;$457&lt;/td&gt;
+&lt;td&gt;Dell XPS 17/15 ($2500), Acer Nitro 5, Onyx, Gazelle.&lt;br&gt;This CPU is what I ended up getting.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 9 6900HX&lt;/td&gt;
+&lt;td align="left"&gt;8&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;25&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Fastest AMD processor.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-12650H&lt;/td&gt;
+&lt;td align="left"&gt;6p+4e&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;24MB&lt;/td&gt;
+&lt;td align="right"&gt;25&lt;/td&gt;
+&lt;td&gt;$457&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i5-12600HX&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;25&lt;/td&gt;
+&lt;td&gt;$284&lt;/td&gt;
+&lt;td&gt;Fastest 12th gen i5. Suspiciously cheap.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 9 PRO 6950H&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-12800H&lt;/td&gt;
+&lt;td align="left"&gt;6p+8e&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;24MB&lt;/td&gt;
+&lt;td align="right"&gt;24&lt;/td&gt;
+&lt;td&gt;$457&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 7 PRO 6850H&lt;/td&gt;
+&lt;td align="left"&gt;8&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Thinkpad P15v.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 9 6900HS&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;ASUS ROG Zephyr G14.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 9 PRO 6950HS&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 7 PRO 6800H&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;23&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i9-11980HK&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;2.6GHz&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;23&lt;/td&gt;
+&lt;td&gt;$583&lt;/td&gt;
+&lt;td&gt;Fastest Intel 11th gen.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 7 6800HS CEd&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;23&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 9 5900HX&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;23&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i9-11950H&lt;/td&gt;
+&lt;td align="left"&gt;8&lt;/td&gt;
+&lt;td align="right"&gt;2.6GHz&lt;/td&gt;
+&lt;td align="right"&gt;24MB&lt;/td&gt;
+&lt;td align="right"&gt;22&lt;/td&gt;
+&lt;td&gt;$556&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;td align="left"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;(I skipped a bunch here)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-1280P&lt;/td&gt;
+&lt;td align="left"&gt;6p+8e&lt;/td&gt;
+&lt;td align="right"&gt;4.8GHz&lt;/td&gt;
+&lt;td align="right"&gt;24MB&lt;/td&gt;
+&lt;td align="right"&gt;20&lt;/td&gt;
+&lt;td&gt;$482&lt;/td&gt;
+&lt;td&gt;Best Framework.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 7 5825U&lt;/td&gt;
+&lt;td align="left"&gt;8&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;18&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Best Dell Inspiron 15".&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-1260P&lt;/td&gt;
+&lt;td align="left"&gt;4p+8e&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;18MB&lt;/td&gt;
+&lt;td align="right"&gt;17&lt;/td&gt;
+&lt;td&gt;$438&lt;/td&gt;
+&lt;td&gt;XPS 13 plus, X1 Carbon gen 10, Thinkpad P14.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-1250U&lt;/td&gt;
+&lt;td align="left"&gt;2p+8e&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;12MB&lt;/td&gt;
+&lt;td align="right"&gt;11&lt;/td&gt;
+&lt;td&gt;$426&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i5-6200U&lt;/td&gt;
+&lt;td align="left"&gt;2&lt;/td&gt;
+&lt;td align="right"&gt;2.8GHz&lt;/td&gt;
+&lt;td align="right"&gt;3MB&lt;/td&gt;
+&lt;td align="right"&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;My current Thinkpad T460.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Notice my current Thinkpad's processor added to the the very bottom of this list,
+which is 10x slower than the CPU I ended up getting.&lt;/p&gt;
+&lt;h3&gt;Graphics&lt;/h3&gt;
+&lt;p&gt;There are plenty of otherwise fantastic laptops which don't include blazing
+fast dedicated Nvidia or AMD graphics processors, but instead only come with
+relatively humdrum graphics support integrated with the CPU. Although
+integrated GPUs have improved massively in the last few years, this wouldn't be
+fast enough to run modern games well.&lt;/p&gt;
+&lt;p&gt;To compensate, I considered pairing such laptops with an external GPU enclosure
+(eGPU), into which a top-of-the-line desktop GPU card can be plugged. I'm still
+wistfully curious about this path, but in the end opted to do without this
+complication.&lt;/p&gt;
+&lt;p&gt;Here's a table of the top laptop GPUs, culled from
+&lt;a href="https://gpu.userbenchmark.com/"&gt;gpu.userbenchmark.com&lt;/a&gt;. Unlike the CPU table,
+this isn't the top N performers, because GPUs can get crazy fast and expensive,
+so I'm looking for something middle-of-the-pack. It's just a selection of GPUs
+I looked up while researching particular laptop models.&lt;/p&gt;
+&lt;p&gt;The 'performance' column is the combined result of a variety of gaming
+benchmarks. The 'position' column compares it against all other benchmarked
+GPUs.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;GPU&lt;/th&gt;
+&lt;th align="right"&gt;Performance&lt;/th&gt;
+&lt;th align="right"&gt;Position&lt;/th&gt;
+&lt;th&gt;Laptop models &amp;amp; other notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia GeForce RTX 3080&lt;/td&gt;
+&lt;td align="right"&gt;130&lt;/td&gt;
+&lt;td align="right"&gt;24th&lt;/td&gt;
+&lt;td&gt;System76 Onyx option.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia GeForce RTX 3070Ti&lt;/td&gt;
+&lt;td align="right"&gt;122&lt;/td&gt;
+&lt;td align="right"&gt;27th&lt;/td&gt;
+&lt;td&gt;system76 Onyx option.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia GeForce RTX 3070&lt;/td&gt;
+&lt;td align="right"&gt;114&lt;/td&gt;
+&lt;td align="right"&gt;30th&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia GeForce RTX 3060&lt;/td&gt;
+&lt;td align="right"&gt;87&lt;/td&gt;
+&lt;td align="right"&gt;58th&lt;/td&gt;
+&lt;td&gt;Best XPS 17. Gazelle. Acer Nitro 5.&lt;br&gt;This is the GPU I ended up getting.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia GeForce RTX 3050Ti&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td&gt;XPS 15 option.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia GeForce RTX 3050&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td&gt;XPS 15 option.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Radeon RX 6800S&lt;/td&gt;
+&lt;td align="right"&gt;85&lt;/td&gt;
+&lt;td align="right"&gt;58th&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD    RX 6700M&lt;/td&gt;
+&lt;td align="right"&gt;79&lt;/td&gt;
+&lt;td align="right"&gt;65th&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia RTX A1000 4GB GDDR6&lt;/td&gt;
+&lt;td align="right"&gt;45&lt;/td&gt;
+&lt;td align="right"&gt;114th&lt;/td&gt;
+&lt;td&gt;Thinkpad P16(certified)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia T1200&lt;/td&gt;
+&lt;td align="right"&gt;42&lt;/td&gt;
+&lt;td align="right"&gt;118th&lt;/td&gt;
+&lt;td&gt;Thinkpad P15v&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia GTX 1050Ti&lt;/td&gt;
+&lt;td align="right"&gt;30&lt;/td&gt;
+&lt;td align="right"&gt;144th&lt;/td&gt;
+&lt;td&gt;My current Windows gaming desktop.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Intel Iris Xe&lt;/td&gt;
+&lt;td align="right"&gt;17&lt;/td&gt;
+&lt;td align="right"&gt;207th&lt;/td&gt;
+&lt;td&gt;Integrated. Framework. XPS 13 Plus.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Intel HD 520&lt;/td&gt;
+&lt;td align="right"&gt;4&lt;/td&gt;
+&lt;td align="right"&gt;402nd&lt;/td&gt;
+&lt;td&gt;Integrated. My current T460.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Notice the two 'integrated' entries at the bottom of the table, one of which is
+my current laptop, a full 20x slower than the GPU I ended up getting.&lt;/p&gt;
+&lt;h3&gt;Laptop models&lt;/h3&gt;
+&lt;p&gt;With the above in mind, I read some reviews, and a few contenders emerged:&lt;/p&gt;
+&lt;h4&gt;Framework&lt;/h4&gt;
+&lt;p&gt;The Framework was massively tempting. It brings an entirely unpresedented
+- some might hopefully say &lt;em&gt;revolutionary&lt;/em&gt; - focus on user-repair and
+upgradability. Rather than soldering and gluing the whole thing together,
+all the Framework's components, up to and including the motherboard and
+screen, are replaceable using a single screwdriver. This is deeply appealing
+for geeks, who want to be able to repair or upgrade.&lt;/p&gt;
+&lt;p&gt;The downside that gave me pause is it is only available with integrated
+Intel-powered graphics. If they had a model including the vastly superior
+Nvidia or AMD accellerated graphics, I would have just bought one months ago,
+instead of prevaricating. But that complication, coupled with the fact that the
+Framework's performance is only mid-range for a 2022 model, put me off
+sufficiently to look around at other options.&lt;/p&gt;
+&lt;h4&gt;Dell XPS 13 plus&lt;/h4&gt;
+&lt;p&gt;The Dell XPS 13 plus looks wonderful, with official Ubuntu verification, no
+less, but just isn't physically big enough for me, and is noticeably
+underpowered. And the Dell 15 inch models seem way overpriced, for the spec,
+easily exceeding my $2,000 budget.&lt;/p&gt;
+&lt;h4&gt;HP One Dev&lt;/h4&gt;
+&lt;p&gt;The HP One Dev looks like a fabulous machine, a colleague just got one and is
+very happy with it. But again, it only has integrated graphics.&lt;/p&gt;
+&lt;h4&gt;MacBook Pro&lt;/h4&gt;
+&lt;p&gt;I considered this, repaved to run Ubuntu, of course, but to be honest, as
+exquisite as the hardware was at one point, it seems somewhat stagnant and
+directionless now, ten years later. Not unimpressive, but doesn't really grab
+me.&lt;/p&gt;
+&lt;h4&gt;System76&lt;/h4&gt;
+&lt;p&gt;I looked at a whole bunch of other laptops at this point, scouring the "best
+gaming laptops of 2022" lists at Toms Hardware and elsewhere. Eventually my
+attention was drawn to System76, who, on reflection, should have been folks I
+checked out earlier in the process.&lt;/p&gt;
+&lt;p&gt;The Oryx is just a few hundred over my budget, even with the current $300 off.
+But a tricked-out Gazelle seems to check all the boxes,&lt;/p&gt;
+&lt;p&gt;They sell with Linux-pre-installed, and their website includes various
+&lt;a href="https://support.system76.com/articles/nvidia-nvs"&gt;handy little write-ups&lt;/a&gt;
+of exactly how to iron over the wrinkles in getting Nvidia's famously
+un-cooperative opaque binary drivers to work smoothly on Linux. They have
+CPUs and GPUs that are quite highly-placed in the above tables, the screen
+is magic.&lt;/p&gt;
+&lt;p&gt;There are downsides. The keyboard is reputedly mediochre - but I almost always
+am using a USB mechanical keyboard anyhow. With such greedy components, the
+battery life kinda sucks when the machine is busy. But, to be frank, the only
+time I've run my current laptop away from my desk in the last 12 months is...
+never? So I guess I don't care, except for once every six months when I attend
+a work event at offices, hotels or conference centers.&lt;/p&gt;
+&lt;p&gt;So this is what I ordered.&lt;/p&gt;
+&lt;p&gt;But I did that thing where I order it with minimal RAM and SSD storage, so that
+I can replace them with my own parts. So I'll have some screwdriver work to do
+after it arrives. But the payoff is that I save about $150 by paying market
+rates for these components. In fact I already have a
+&lt;a href="https://www.amazon.com/WD_Black-SN850-Internal-Gaming-Solid/dp/B0B7CPSN2K"&gt;tremendous SSD&lt;/a&gt;
+I can use, leftover from this year's Chia cryptocurrency farming experiments,
+so that part is free. This means I can stay within my $2,000 budget, with $9 to
+spare after shipping and taxes.&lt;/p&gt;
+&lt;h3&gt;Memory&lt;/h3&gt;
+&lt;p&gt;It's generally possible to just buy whatever RAM is recommended by your vendor.
+But the most reliable and cheapest RAM will often be the slowest, or at least
+the one running at a clock speed which is most widely supported by different
+motherboards. In order to get the &lt;em&gt;fastest&lt;/em&gt; RAM for our particular laptop, we
+need to understand a few things.&lt;/p&gt;
+&lt;h4&gt;Physical form factor&lt;/h4&gt;
+&lt;p&gt;The current standard for RAM is DDR4. For laptops, the slim physical form
+factor is known as SoDIMM. A single circuit board of memory chips is a
+&lt;em&gt;module&lt;/em&gt;. A module connects into a motherboard &lt;em&gt;slot&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;DDR5 is supported by Intel's 12th generation processors, and AMD's newest Ryzen
+7000 series. This uses a different physical connection on the motherboard, and
+is rare thus far, outside of systems above my budget. So I'm looking for DDR4.&lt;/p&gt;
+&lt;h4&gt;Ranks &amp;amp; Channels&lt;/h4&gt;
+&lt;p&gt;A module contains from one to eight 64-bit wide logical &lt;em&gt;blocks&lt;/em&gt; of data storage
+(single, dual, quad or octal &lt;em&gt;rank&lt;/em&gt;.) The chips on a module provide x1, x2, x4
+or x8 &lt;em&gt;banks&lt;/em&gt;.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;number of chips x chip banks / 64 = module rank
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;e.g. Using sixteen x4 chips will provide a single rank of memory on the module
+(16x4/64=1).&lt;/p&gt;
+&lt;p&gt;Whereas using 32 x8 chips will provide a module of 4 ranks (32x8/64=4).&lt;/p&gt;
+&lt;p&gt;This is sometimes annotated on the module using a notation like 1Rx4, as in one
+rank of x4 chips.&lt;/p&gt;
+&lt;p&gt;The reason this matters is that access to ranks is interleaved, so multiple
+ranks can provide access to data at a higher rate than a single rank. But in
+order to take advantage of this, the motherboard must provide a commensurate
+number of memory access channels.&lt;/p&gt;
+&lt;p&gt;The
+&lt;a href="https://tech-docs.system76.com/models/gaze17/README.html"&gt;datasheet for my Gazelle&lt;/a&gt;
+says the motherboard has two slots for RAM, and supports dual-channel access.
+This could be fully utilized by either inserting a single dual-rank module
+(which is more expensive), or, as in the timeworn heuristic, by inserting two
+half-sized single rank modules.&lt;/p&gt;
+&lt;h4&gt;Clock frequencies and latency&lt;/h4&gt;
+&lt;p&gt;RAM has a clock frequency, measured in thousands of MHz, but "double data rate"
+chips transfer data on both the clock's rising and falling edges, so the speed
+of transfer is better measured in mega-transfers per second (MT/s), the higher
+the better.&lt;/p&gt;
+&lt;p&gt;However, it takes more than one clock cycle to perform an action. These latency
+values are sometimes quoted as a series of four integers - the number of clock
+cycles to perform particular operations, e.g. 18-18-18-43. But these are often
+abbreviated to just the first number, representing read access time, known as
+"CAS Latency" (CL), eg. CL 18, which tends to be representative. The lower this
+number is, the better.&lt;/p&gt;
+&lt;p&gt;The actual performance of the memory is determined by the product of a clock
+cycle duration (eg. 1ns at 1000MHz) and the latency number (e.g. 1ns * 18 =
+18ns)&lt;/p&gt;
+&lt;p&gt;Further, the motherboard needs to support the RAM's clock speed. In practice,
+the motherboard will negotiate with the inserted modules to find a commonly
+supported frequency, the same or less than the minimum of the rated memory
+access frequencies of the memory, the motherboard, and the CPU. using an
+over-complicated and hard-to-predict process controlled by BIOS settings. I
+have no experience with this but it sounds well worth avoiding altogether by
+making sure we get RAM modules with a rated frequency (their maximum) that
+exactly matches the advertised clock frequency of our motherboard.&lt;/p&gt;
+&lt;p&gt;For my new Gazelle,
+&lt;a href="https://tech-docs.system76.com/models/gaze17/README.html"&gt;the manual&lt;/a&gt;
+says that is 3,200MHz.&lt;/p&gt;
+&lt;h4&gt;Availability, pricing and scams.&lt;/h4&gt;
+&lt;p&gt;Finding CL26 latency RAM at 3,200MHz is easy, for around $70. For lower
+latencies the price goes up to about $375 for CL16, but that isn't even in
+stock anywhere.&lt;/p&gt;
+&lt;p&gt;At one point, after much searching, I found some CL16 on newegg.com:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Memory on sale in newegg - scam" src="https://www.tartley.com/files/2022/memory-on-sale.webp"&gt;&lt;/p&gt;
+&lt;p&gt;And it is only $128! Carefully checking the specs, including those on the
+manufacturer's site, using the shown model number 'CMSX32GX4M2A3000C16',
+this is exactly what we want. 2x16GB at 3200MT/s at CL16.&lt;/p&gt;
+&lt;p&gt;While checking it out, I clicked around a bit, and at one point found:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bad review on newegg" src="https://www.tartley.com/files/2022/bad-review-on-newegg.webp"&gt;&lt;/p&gt;
+&lt;p&gt;along with a number of other negative reviews, stating that they'd been sent
+memory modules that were fake, ie. just imitations of the purported reputable
+manufacturer, they didn't work at the advertised clock speeds, and the seller
+had gone dark on them, taking weeks to respond to queries, and not sending
+replacements until NewEgg got involved. Seems wisest to skip this.&lt;/p&gt;
+&lt;p&gt;Eventually I found an alternative:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Memory on sale in newegg - legit" src="https://www.tartley.com/files/2022/memory-on-sale-legit.webp"&gt;&lt;/p&gt;
+&lt;p&gt;Yes! DDR4 in a SoDIMM package, 2x16GB modules at 3,200MHz and 18CL. The latency
+isn't quite as good, but it sounds legit, so I'll take it!&lt;/p&gt;
+&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>hardware</category><category>journal</category><category>linux</category><guid>https://www.tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>Neuromancer</title><link>https://www.tartley.com/posts/neuromancer/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Neuromancer cover" src="https://www.tartley.com/files/2022/neuromancer-cover.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by William Gibson, 1984&lt;/em&gt;&lt;/p&gt;
@@ -707,373 +1267,4 @@ tech consumerist society addicted to an all-encompassing virtual-reality
 system. As they approach the edge of the continent, the world outside the car
 window unravels at an ever faster pace, as if somewhere beyond the horizon, the
 hollow core of civilization has finally caved in.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>comic</category><category>fiction</category><category>media</category><category>science-fiction</category><guid>https://www.tartley.com/posts/the-electric-state/</guid><pubDate>Mon, 14 Feb 2022 01:32:45 GMT</pubDate></item><item><title>The Works of Larry Niven</title><link>https://www.tartley.com/posts/the-works-of-larry-niven/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/view-from-the-surface-of-a-ringworld.webp"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;A few days ago I mistakenly
-&lt;a href="https://www.tartley.com/posts/termination-shock"&gt;named Neal Stephenson as the author I'd read more of&lt;/a&gt;
-than any other. But I was forgetting about being young and inhaling books.
-On reflection, that title must surely belong to Larry Niven. As a teenager I
-read every last thing he did - or at least everything I could find in my
-hometown.&lt;/p&gt;
-&lt;p&gt;At one point my Mom picked up &lt;em&gt;World Out of Time&lt;/em&gt;, to see what craziness her
-son was always buried in, and she concluded over the dinner table that I was
-reading it for the sex scenes she'd found. I presumably objected inarticulately
-that I was so little interested in Larry Niven's brief nerdy depictions of
-space sex that I'd barely even noticed they were there, but I have the
-impression she wasn't convinced. But it &lt;em&gt;really was&lt;/em&gt; was his brand of hard
-science fiction that I was there for (I protest too much!) - revolving around
-ideas rather than character arcs, and the ruthless application of consistent
-world-views.&lt;/p&gt;
-&lt;p&gt;In inventing the Ringworld, Niven was inspired by Dyson spheres,
-&lt;a href="https://en.wikipedia.org/wiki/Star_Maker"&gt;first described by Olaf Stapledon&lt;/a&gt;,
-and &lt;a href="https://web.archive.org/web/20140109033551/http://meaningoflife.tv/transcript.php?speaker=dyson"&gt;popularized by Freeman Dyson&lt;/a&gt;.
-A full, solid Dyson sphere was, in some regards, inefficient. Dyson postulated
-miraculous gravity generators to make the inner surface of the sphere
-habitable. But this can be achieved much more feasibly by simply spinning the
-structure. However, all the matter inside the sphere, including any atmosphere,
-then pools at the equator. Niven observed that the superfluous surface of the
-sphere, away from the equator, can then be removed.&lt;/p&gt;
-&lt;p&gt;This vastly reduces the material needed to construct the megastructure.
-Given miraculous elemental transmutation, one could easily gather enough
-matter by recycling all the planets in a solar system as building material,
-even with a 1,000km "wall" along each edge to keep the fringes of the
-atmosphere in. Although this yields a much smaller habitable interior surface
-area than a full sphere, it's still something like a million times larger than
-planet Earth.&lt;/p&gt;
-&lt;p&gt;The aliens themselves weren't quite like any I've read before or since. The
-creepy sessile but sentient Grogs. The mysterious Outsiders, information
-brokers who are able to answer any question humanity has - if only we could
-afford the prices. The warlike, carnivorous Kzinti (picture a species of
-vicious feline Chewbaccas - surely the inspiration for Wing Commander's
-Kilrathi) forever attacking humanity before they were quite ready. You can't
-help but almost feel sorry for them. By the times of Ringworld, representatives
-such as Speaker to Animals (named for his shameful profession, interfacing with
-humans) are sufficiently adapted to working alongside humans to become
-formidable allies.&lt;/p&gt;
-&lt;p&gt;Perhaps Niven's greatest alien race was The Pierson's Puppeteers - like an
-ostrich with two necks, each topped with a single eye and dexterous mouth,
-while the brain resides safely in the body (pictured below, on the cover for
-Neutron star). The body plan makes so much sense in action. Mobile eyes mean
-they routinely view objects from both sides simultaneously, perfect for
-close-up detailed work, using the hand-like mouths. Or, spread the necks wide
-for amazing stereoscopic vision when distance estimation matters. And that
-gestural laugh - eyes turned inward to briefly gaze into one another, observing
-the self, no mirror required.&lt;/p&gt;
-&lt;p&gt;The psychology is also exquisite. Herbivores and herd-beasts, the Puppeteers
-are inveterate cowards. No human has ever met a sane one - only their more
-unstable individuals would venture out alone to run the risks of space travel
-and meeting alien species. However, they are very intelligent, more so than
-humans, and industrious, and manipulative. It becomes clear over the course of
-the books that Puppeteers have selectively bred the Kzinti into constructive
-docility by engineering the many human-kzin wars, and their plans for everyone
-else are scarcely less devious.&lt;/p&gt;
-&lt;p&gt;Finally, my personal favorite was always the Pak. As alien as could be, and yet
-they are us. On humanity's original homeworld, long before introduction to
-planet Earth, a symbiotic plant grows which young humans find uninteresting,
-but in middle-age they develop a compulsion to binge on it. It activates genes
-that provoke startling physiological and psychological changes, transforming
-the human from a &lt;em&gt;breeder&lt;/em&gt;, into a &lt;em&gt;protector&lt;/em&gt; - stronger, and with large
-joints for better leverage, with a tough wrinkled armour-like skin, much
-smarter, with a second heart, and ruthlessly dedicated to just one goal -
-protecting their own offspring. It is protectors who, it turns out many novels
-later, originally built the Ringworld. The absence of the transforming plant,
-which won't grow on Earth, means we grow without its benefits, leaving us with
-inadequate hearts, joints that fail with age, and an old-aged descent into
-feeble bodies and minds. Then, as the story begins, the first known
-interstellar spaceship shows up at Earth, piloted by one protector, come to
-rescue the failed colony, with a hold full of strange plant roots...&lt;/p&gt;
-&lt;p&gt;Wonders like these, from the novels and short stories set in his Known Space
-universe kept me up at night, and shaped the way I thought. Although Niven's
-writing had some mildly conservative tendencies, especially when under the
-influence of his militaristic writing partner Jerry Pournelle, it is also
-permeated with the necessity of a very liberal philosophy of non-judgemental
-tolerance of other lifestyles, both alien and human, a philosophy made explicit
-in one of &lt;em&gt;Niven's Laws&lt;/em&gt;: "The only universal message in science fiction: There
-exist minds that think as well as you do, but differently."&lt;/p&gt;
-&lt;p&gt;It's clear I wasn't the only one spellbound. Niven's ideas have been
-influential throughout science fiction culture. Bank's Culture's Orbitals and
-the understandably much rarer full Rings are clear descendants, as is the
-eponymous megastructure/superweapon of the juggernaut &lt;em&gt;Halo&lt;/em&gt; franchise, and
-countless other imitators. Niven's meticulous hard-SF approach to fantasy in
-&lt;em&gt;The Magic Goes Away&lt;/em&gt;, and in particular his concept of the conservation of
-&lt;em&gt;mana&lt;/em&gt;, was an influence on &lt;em&gt;Magic: The Gathering&lt;/em&gt;, as acknowledged in the card
-Nevinyrral's Disk (Niven's name backwards), which uses magic to simultaneously
-accelerate it's own spin, and to hold itself together, thus rapidly using up
-all the mana in an area, rendering further magic unusable. Movies such as
-Wall-E throw in sly nods - the Axiom is labelled in a passing graphic as using
-a "General Dynamics Type Three Hull", which is a similar size and shape to
-Niven's "General Products Number Three Hull".&lt;/p&gt;
-&lt;p&gt;For years I remember toting Niven's various doorstop 500 page novels to one
-place or another, such as being forbidden from carrying one into the Houses of
-Parliament viewing gallery. All the better that they usually had these crazy
-great '70s covers, mostly by artist
-&lt;a href="http://www.peterandrewjones.net/iacg.htm"&gt;Peter Andrew Jones&lt;/a&gt;,
-from whom you can buy prints of some of them.&lt;/p&gt;
-&lt;p&gt;Collecting these today by Google image search, I see today that these funky
-covers are relatively rare - the vast majority of Niven's sales were of
-editions with far less interesting and less skillfully put together covers. So
-I think it's appropriate to collect and celebrate them here.&lt;/p&gt;
-&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/mote-in-gods-eye.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/footfall.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/oath-of-fealty.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/dream-park.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/patchwork-girl.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/convergent-series.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/magic-goes-away.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/lucifers-hammer.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/world-out-of-time.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/tales-of-known-space.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/hole-in-space.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/flight-of-the-horse.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/protector.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/inconstant-moon.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/ringworld.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/ringworld-engineers.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/long-arm-of-gil-hamilton.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/a-gift-from-earth.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/neutron-star.webp"&gt;&lt;/span&gt;
-&lt;span style="padding: 0.3em"&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/niven/world-of-ptavvs.webp"&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;
-&lt;p&gt;I've not even read half of what Niven wrote. By the '90s the crazy covers had
-been replaced by more conservative designs, and at the same time I drifted away
-to other things. At the time it felt more like Niven was drifting away from me,
-evolving in style over the years, losing something hard-to-characterize that
-I'd enjoyed, maybe just the rawness of his earlier works. Maybe his style was
-diluted through him writing so many books as partnerships, or, as I
-increasingly assumed, in an advisory role, lending his name to the cover for
-younger, less well-known authors, who did most of the work.&lt;/p&gt;
-&lt;p&gt;Looking back on it, with 30-or-so year's hindsight, there are also
-components of Niven's writing that are lacking, and I was slowly growing out of
-it. Hard SF often celebrates the elevation of ideas over characters, and while
-there is a value to that, particularly for those readers who are the most
-vulnerable to the sensation of wonder, it also needlessly shuns other aspects,
-like the emotional impact of character-driven drama or individual psychological
-epiphany. A more skilled writer, I now think, would have a broader range of
-tools to imbue the story with more emotional resonance and meaning.&lt;/p&gt;
-&lt;p&gt;Still, while the affair lasted, it was fabulous. Goodreads page counts
-indicates it was eleven thousand pages, beating my Neal Stephenson consumption
-by a clear thousand pages. Combining that with a very conservative estimate of
-the number of times I re-read each one, nearly twenty five thousand pages. What
-can I say, I was a teenager, with seemingly endless oceans of time.&lt;/p&gt;
-&lt;p&gt;The following are just his books that I've read. He has many others, especially
-many that are more recent than these.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th align="right"&gt;Pages&lt;/th&gt;
-&lt;th align="right"&gt;Times&lt;br&gt;read&lt;/th&gt;
-&lt;th align="right"&gt;Effective&lt;br&gt;pages&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100379.Rainbow_Mars"&gt;Rainbow Mars&lt;/a&gt; (1999)&lt;/td&gt;
-&lt;td align="right"&gt;477&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;td align="right"&gt;477&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/64750.Destiny_s_Road"&gt;Destiny's Road&lt;/a&gt; (1997)&lt;/td&gt;
-&lt;td align="right"&gt;448&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;td align="right"&gt;448&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/64467.The_Ringworld_Throne"&gt;The Ringworld Throne&lt;/a&gt; (1996)&lt;/td&gt;
-&lt;td align="right"&gt;368&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;td align="right"&gt;368&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/69448.Beowulf_s_Children"&gt;Beowulf's Children&lt;/a&gt; (1995)&lt;/td&gt;
-&lt;td align="right"&gt;512&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;1,024&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/40932142-flatlander"&gt;Flatlander&lt;/a&gt; (1995)&lt;/td&gt;
-&lt;td align="right"&gt;369&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;td align="right"&gt;369&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100347.Crashlander"&gt;Crashlander&lt;/a&gt; (1994)&lt;/td&gt;
-&lt;td align="right"&gt;281&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;td align="right"&gt;281&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/218453.The_Gripping_Hand"&gt;The Gripping Hand&lt;/a&gt; (1993)&lt;/td&gt;
-&lt;td align="right"&gt;413&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;826&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/218470.The_Barsoom_Project"&gt;The Barsoom Project&lt;/a&gt; (1989)&lt;/td&gt;
-&lt;td align="right"&gt;352&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;td align="right"&gt;352&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/899392.The_Legacy_of_Heorot"&gt;The Legacy of Heorot&lt;/a&gt; (1987)&lt;/td&gt;
-&lt;td align="right"&gt;383&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;766&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100351.The_Smoke_Ring"&gt;The Smoke Ring&lt;/a&gt; (1987)&lt;/td&gt;
-&lt;td align="right"&gt;323&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;646&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/116356.Footfall"&gt;Footfall&lt;/a&gt; (1985)&lt;/td&gt;
-&lt;td align="right"&gt;524&lt;/td&gt;
-&lt;td align="right"&gt;3&lt;/td&gt;
-&lt;td align="right"&gt;1,572&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/939740.The_Integral_Trees"&gt;The Integral Trees&lt;/a&gt; (1983)&lt;/td&gt;
-&lt;td align="right"&gt;272&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;544&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/583441.Oath_of_Fealty"&gt;Oath of Fealty&lt;/a&gt; (1981)&lt;/td&gt;
-&lt;td align="right"&gt;324&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;648&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/357922.Dream_Park"&gt;Dream Park&lt;/a&gt; (1981)&lt;/td&gt;
-&lt;td align="right"&gt;448&lt;/td&gt;
-&lt;td align="right"&gt;3&lt;/td&gt;
-&lt;td align="right"&gt;1,344&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/1124048.The_Patchwork_Girl"&gt;The Patchwork Girl&lt;/a&gt; (1980)&lt;/td&gt;
-&lt;td align="right"&gt;205&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;410&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/61181.The_Ringworld_Engineers"&gt;The Ringworld Engineers&lt;/a&gt; (1979)&lt;/td&gt;
-&lt;td align="right"&gt;307&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;614&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/1124090.Convergent_Series"&gt;Convergent Series&lt;/a&gt; (1979)&lt;/td&gt;
-&lt;td align="right"&gt;227&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;454&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/1002736.The_Magic_Goes_Away"&gt;The Magic Goes Away&lt;/a&gt; (1978)&lt;/td&gt;
-&lt;td align="right"&gt;212&lt;/td&gt;
-&lt;td align="right"&gt;5&lt;/td&gt;
-&lt;td align="right"&gt;1,060&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/218467.Lucifer_s_Hammer"&gt;Lucifer's Hammer&lt;/a&gt; (1977)&lt;/td&gt;
-&lt;td align="right"&gt;629&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;1,258&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/64725.A_World_Out_of_Time"&gt;A World Out of Time&lt;/a&gt; (1976)&lt;/td&gt;
-&lt;td align="right"&gt;246&lt;/td&gt;
-&lt;td align="right"&gt;3&lt;/td&gt;
-&lt;td align="right"&gt;738&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100359.Tales_of_Known_Space"&gt;Tales of Known Space&lt;/a&gt; (1975)&lt;/td&gt;
-&lt;td align="right"&gt;240&lt;/td&gt;
-&lt;td align="right"&gt;5&lt;/td&gt;
-&lt;td align="right"&gt;1,200&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100365.The_Mote_in_God_s_Eye"&gt;The Mote in God's Eye&lt;/a&gt; (1974)&lt;/td&gt;
-&lt;td align="right"&gt;596&lt;/td&gt;
-&lt;td align="right"&gt;3&lt;/td&gt;
-&lt;td align="right"&gt;1,788&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/218473.A_Hole_in_Space"&gt;A Hole in Space&lt;/a&gt; (1974)&lt;/td&gt;
-&lt;td align="right"&gt;196&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;392&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/378683.The_Flight_of_the_Horse"&gt;The Flight of the Horse&lt;/a&gt; (1973)&lt;/td&gt;
-&lt;td align="right"&gt;212&lt;/td&gt;
-&lt;td align="right"&gt;5&lt;/td&gt;
-&lt;td align="right"&gt;1,060&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100344.Protector"&gt;Protector&lt;/a&gt; (1973)&lt;/td&gt;
-&lt;td align="right"&gt;218&lt;/td&gt;
-&lt;td align="right"&gt;4&lt;/td&gt;
-&lt;td align="right"&gt;872&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/1255867.Inconstant_Moon"&gt;Inconstant Moon&lt;/a&gt; (1971)&lt;/td&gt;
-&lt;td align="right"&gt;200&lt;/td&gt;
-&lt;td align="right"&gt;4&lt;/td&gt;
-&lt;td align="right"&gt;800&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/61179.Ringworld"&gt;Ringworld&lt;/a&gt; (1970)&lt;/td&gt;
-&lt;td align="right"&gt;228&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;456&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100363.N_Space"&gt;N-Space&lt;/a&gt; (1969)&lt;/td&gt;
-&lt;td align="right"&gt;693&lt;/td&gt;
-&lt;td align="right"&gt;1&lt;/td&gt;
-&lt;td align="right"&gt;693&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/116355.The_Long_Arm_of_Gil_Hamilton"&gt;The Long Arm of Gil Hamilton&lt;/a&gt; (1969)&lt;/td&gt;
-&lt;td align="right"&gt;182&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;364&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/218479.All_the_Myriad_Ways"&gt;All the Myriad Ways&lt;/a&gt; (1968)&lt;/td&gt;
-&lt;td align="right"&gt;181&lt;/td&gt;
-&lt;td align="right"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;362&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/218461.A_Gift_from_Earth"&gt;A Gift from Earth&lt;/a&gt; (1968)&lt;/td&gt;
-&lt;td align="right"&gt;256&lt;/td&gt;
-&lt;td align="right"&gt;3&lt;/td&gt;
-&lt;td align="right"&gt;768&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/100366.Neutron_Star"&gt;Neutron Star&lt;/a&gt; (1966)&lt;/td&gt;
-&lt;td align="right"&gt;285&lt;/td&gt;
-&lt;td align="right"&gt;4&lt;/td&gt;
-&lt;td align="right"&gt;1,140&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href="https://www.goodreads.com/book/show/218463.The_World_of_Ptavvs"&gt;The World of Ptavvs&lt;/a&gt; (1966)&lt;/td&gt;
-&lt;td align="right"&gt;188&lt;/td&gt;
-&lt;td align="right"&gt;4&lt;/td&gt;
-&lt;td align="right"&gt;752&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;totals&lt;/strong&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;strong&gt;10,995&lt;/strong&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;strong&gt;24,842&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;(&lt;a href="https://www.facebook.com/groups/324897304599197/permalink/1329010600854524"&gt;Discussion&lt;/a&gt;
-on Damien Walter's &lt;em&gt;Science Fiction&lt;/em&gt; Facebook group)&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>fiction</category><category>media</category><category>niven</category><category>novel</category><category>science-fiction</category><category>short</category><guid>https://www.tartley.com/posts/the-works-of-larry-niven/</guid><pubDate>Fri, 14 Jan 2022 23:37:37 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>comic</category><category>fiction</category><category>media</category><category>science-fiction</category><guid>https://www.tartley.com/posts/the-electric-state/</guid><pubDate>Mon, 14 Feb 2022 01:32:45 GMT</pubDate></item></channel></rss>

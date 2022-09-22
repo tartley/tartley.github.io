@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Laptop Time! | tartley.com</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
+<link rel="canonical" href="https://www.tartley.com/posts/new-laptop-time/">
+<link rel="icon" href="../../welcome.gif" sizes="16x16">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
+<link rel="prev" href="../neuromancer/" title="Neuromancer" type="text/html">
+<meta property="og:site_name" content="tartley.com">
+<meta property="og:title" content="New Laptop Time!">
+<meta property="og:url" content="https://www.tartley.com/posts/new-laptop-time/">
+<meta property="og:description" content='My employer, Canonical, has a "bring your own hardware" policy, trusting that
+their engineers would rather choose and administer their own personal laptops,
+rather than put up with standardized remote'>
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-09-21T11:59:02-05:00">
+<meta property="article:tag" content="hardware">
+<meta property="article:tag" content="journal">
+<meta property="article:tag" content="linux">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.tartley.com/">
+
+                <span id="blog-title">tartley.com</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../categories/">Tags</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS feed</a>
+                </li>
+<li>
+<a href="../../pages/about/">About</a>
+
+                
+            </li>
+</ul>
+<!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">New Laptop Time!</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2022-09-21T11:59:02-05:00" itemprop="datePublished" title="2022-09-21 11:59">2022-09-21 11:59</time></a>
+            </p>
+            
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p>My employer, Canonical, has a "bring your own hardware" policy, trusting that
+their engineers would rather choose and administer their own personal laptops,
+rather than put up with standardized remotely administered corporate hardware.</p>
+<p>My current much loved Thinkpad 460p has served faithfully since 2015, but is
+showing its age, sometimes struggling under the workload. Plus, its integrated
+graphics chipset doesn't have the power to play modern games with my kiddo.
+Battlezone 98 runs fine, but Civilization VI (2016) is about the limit.</p>
+<p>This summer I received the three-year cash-in-hand bonus earmarked as a
+"hardware refresh bonus". It's been many years since I've bought a laptop with
+the attention to detail that comes with spending one's own money. Even the
+current aging Thinkpad was a gift from a former employer. So it's been a decade
+or more since I've seriously specced out a new laptop. This post exists as a
+place to scribble down reminders of a few things I learned along the way.</p>
+<p>I have a few constraints:</p>
+<ul>
+<li>About the same size as the current laptop's 14 inches, or maybe a tiny bit
+  bigger.</li>
+<li>I work on Ubuntu Linux, so it has to run that comfortably.</li>
+<li>It should support modern gaming.</li>
+<li>Plenty of monitor ports.</li>
+<li>A headphone jack.</li>
+<li>Ability for me to open it up, swap out the battery, drives, RAM.</li>
+<li>3:2 display would be nice, but these are rare.</li>
+<li>A budget of $2,000.</li>
+</ul>
+<p>Reading around, I got sort-of up to speed on components.</p>
+<h3>CPU</h3>
+<p>The CPU buzz is around Intel's 12th generation (aka "Alder Lake"). These are
+"hybrid" CPUs, combining large high performance cores with smaller high
+efficiency cores on a single chip. They come in about 30 different variants,
+with a naming convention that looks like, for example: <code>Intel Core i7-12700H</code>.
+This consists of:</p>
+<ul>
+<li>A brand, e.g "Intel Core"</li>
+<li>A modifier specifying a market segment, one of:<ul>
+<li>i3 Casual use</li>
+<li>i5 Multitasking, light gaming</li>
+<li>i7 Gaming, content creators</li>
+<li>i9 Slightly faster, more parallel cores.</li>
+</ul>
+</li>
+<li>A single or double digit generation, eg the latest is "12".</li>
+<li>An SKU, eg the "700" above, a three or four digit number which roughly
+  corresponds to the featureset or performance - larger is better. These are
+  only comparable within a single generation, they adopt wildly different
+  conventions in different generations.</li>
+<li>A single or double letter suffix, eg "H" for "high performance", taken from
+  <a href="https://www.intel.com/content/www/us/en/support/articles/000058567/processors/intel-core-processors.html">an idiotic irregular table</a>.</li>
+</ul>
+<p>The major alternative to an Intel processor is AMD. These aren't the current
+season's darlings of the performance benchmarks, although they do include
+several respectable contenders that might be great for my needs, as you can see
+in the following performance comparison.</p>
+<h4>Benchmarks</h4>
+<p>These laptop CPU performance benchmarks are culled from
+<a href="https://www.cpubenchmark.net/laptop.html">www.cpubenchmark.net</a>,
+sorted by the benchmark score. I included the top 20, plus a handful of notable
+others that I looked up along the way. The 'bench' column measures relative
+performance under a variety of benchmark workloads which fully utilize all
+cores.</p>
+<p>The number of cores is given as (p)performance + (e)fficiency, for hybrid processors.</p>
+<table>
+<thead><tr>
+<th>CPU</th>
+<th align="left">Cores</th>
+<th align="right">Clock</th>
+<th align="right">Cache</th>
+<th align="right">Bench</th>
+<th>Price</th>
+<th>Laptop models, and other notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>i9-12900HX</td>
+<td align="left">8p+8e</td>
+<td align="right">5.0GHz</td>
+<td align="right">30MB</td>
+<td align="right">36</td>
+<td>$606</td>
+<td></td>
+</tr>
+<tr>
+<td>i7-12800HX</td>
+<td align="left">8p+8e</td>
+<td align="right"></td>
+<td align="right">25MB</td>
+<td align="right">35</td>
+<td>$457</td>
+<td>Thinkpad P16 ($2340).</td>
+</tr>
+<tr>
+<td>i9-12950HX</td>
+<td align="left">8p+8e</td>
+<td align="right"></td>
+<td align="right">30MB</td>
+<td align="right">34</td>
+<td>$590</td>
+<td></td>
+</tr>
+<tr>
+<td>i7-12850HX</td>
+<td align="left">8p+8e</td>
+<td align="right"></td>
+<td align="right">25MB</td>
+<td align="right">31</td>
+<td>$428</td>
+<td></td>
+</tr>
+<tr>
+<td>i9-12900HK</td>
+<td align="left">6p+8e</td>
+<td align="right"></td>
+<td align="right">24MB</td>
+<td align="right">30</td>
+<td>$635</td>
+<td>Dell XPS 15 ($2950).</td>
+</tr>
+<tr>
+<td>i9-12900H</td>
+<td align="left">6p+8e</td>
+<td align="right"></td>
+<td align="right">24MB</td>
+<td align="right">29</td>
+<td>$617</td>
+<td></td>
+</tr>
+<tr>
+<td>i7-12700H</td>
+<td align="left">6p+8e</td>
+<td align="right"></td>
+<td align="right">24MB</td>
+<td align="right">27</td>
+<td>$457</td>
+<td>Dell XPS 17/15 ($2500), Acer Nitro 5, Onyx, Gazelle.<br>This CPU is what I ended up getting.</td>
+</tr>
+<tr>
+<td>AMD Ryzen 9 6900HX</td>
+<td align="left">8</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">25</td>
+<td></td>
+<td>Fastest AMD processor.</td>
+</tr>
+<tr>
+<td>i7-12650H</td>
+<td align="left">6p+4e</td>
+<td align="right"></td>
+<td align="right">24MB</td>
+<td align="right">25</td>
+<td>$457</td>
+<td></td>
+</tr>
+<tr>
+<td>i5-12600HX</td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">25</td>
+<td>$284</td>
+<td>Fastest 12th gen i5. Suspiciously cheap.</td>
+</tr>
+<tr>
+<td>AMD Ryzen 9 PRO 6950H</td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">24</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>i7-12800H</td>
+<td align="left">6p+8e</td>
+<td align="right"></td>
+<td align="right">24MB</td>
+<td align="right">24</td>
+<td>$457</td>
+<td></td>
+</tr>
+<tr>
+<td>AMD Ryzen 7 PRO 6850H</td>
+<td align="left">8</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">24</td>
+<td></td>
+<td>Thinkpad P15v.</td>
+</tr>
+<tr>
+<td>AMD Ryzen 9 6900HS</td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">24</td>
+<td></td>
+<td>ASUS ROG Zephyr G14.</td>
+</tr>
+<tr>
+<td>AMD Ryzen 9 PRO 6950HS</td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">24</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AMD Ryzen 7 PRO 6800H</td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">23</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>i9-11980HK</td>
+<td align="left"></td>
+<td align="right">2.6GHz</td>
+<td align="right"></td>
+<td align="right">23</td>
+<td>$583</td>
+<td>Fastest Intel 11th gen.</td>
+</tr>
+<tr>
+<td>AMD Ryzen 7 6800HS CEd</td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">23</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AMD Ryzen 9 5900HX</td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">23</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>i9-11950H</td>
+<td align="left">8</td>
+<td align="right">2.6GHz</td>
+<td align="right">24MB</td>
+<td align="right">22</td>
+<td>$556</td>
+<td></td>
+</tr>
+<tr>
+<td>...</td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td></td>
+<td>(I skipped a bunch here)</td>
+</tr>
+<tr>
+<td>i7-1280P</td>
+<td align="left">6p+8e</td>
+<td align="right">4.8GHz</td>
+<td align="right">24MB</td>
+<td align="right">20</td>
+<td>$482</td>
+<td>Best Framework.</td>
+</tr>
+<tr>
+<td>AMD Ryzen 7 5825U</td>
+<td align="left">8</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">18</td>
+<td></td>
+<td>Best Dell Inspiron 15".</td>
+</tr>
+<tr>
+<td>i7-1260P</td>
+<td align="left">4p+8e</td>
+<td align="right"></td>
+<td align="right">18MB</td>
+<td align="right">17</td>
+<td>$438</td>
+<td>XPS 13 plus, X1 Carbon gen 10, Thinkpad P14.</td>
+</tr>
+<tr>
+<td>i7-1250U</td>
+<td align="left">2p+8e</td>
+<td align="right"></td>
+<td align="right">12MB</td>
+<td align="right">11</td>
+<td>$426</td>
+<td></td>
+</tr>
+<tr>
+<td>i5-6200U</td>
+<td align="left">2</td>
+<td align="right">2.8GHz</td>
+<td align="right">3MB</td>
+<td align="right">3</td>
+<td></td>
+<td>My current Thinkpad T460.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>Notice my current Thinkpad's processor added to the the very bottom of this list,
+which is 10x slower than the CPU I ended up getting.</p>
+<h3>Graphics</h3>
+<p>There are plenty of otherwise fantastic laptops which don't include blazing
+fast dedicated Nvidia or AMD graphics processors, but instead only come with
+relatively humdrum graphics support integrated with the CPU. Although
+integrated GPUs have improved massively in the last few years, this wouldn't be
+fast enough to run modern games well.</p>
+<p>To compensate, I considered pairing such laptops with an external GPU enclosure
+(eGPU), into which a top-of-the-line desktop GPU card can be plugged. I'm still
+wistfully curious about this path, but in the end opted to do without this
+complication.</p>
+<p>Here's a table of the top laptop GPUs, culled from
+<a href="https://gpu.userbenchmark.com/">gpu.userbenchmark.com</a>. Unlike the CPU table,
+this isn't the top N performers, because GPUs can get crazy fast and expensive,
+so I'm looking for something middle-of-the-pack. It's just a selection of GPUs
+I looked up while researching particular laptop models.</p>
+<p>The 'performance' column is the combined result of a variety of gaming
+benchmarks. The 'position' column compares it against all other benchmarked
+GPUs.</p>
+<table>
+<thead><tr>
+<th>GPU</th>
+<th align="right">Performance</th>
+<th align="right">Position</th>
+<th>Laptop models &amp; other notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Nvidia GeForce RTX 3080</td>
+<td align="right">130</td>
+<td align="right">24th</td>
+<td>System76 Onyx option.</td>
+</tr>
+<tr>
+<td>Nvidia GeForce RTX 3070Ti</td>
+<td align="right">122</td>
+<td align="right">27th</td>
+<td>system76 Onyx option.</td>
+</tr>
+<tr>
+<td>Nvidia GeForce RTX 3070</td>
+<td align="right">114</td>
+<td align="right">30th</td>
+<td></td>
+</tr>
+<tr>
+<td>Nvidia GeForce RTX 3060</td>
+<td align="right">87</td>
+<td align="right">58th</td>
+<td>Best XPS 17. Gazelle. Acer Nitro 5.<br>This is the GPU I ended up getting.</td>
+</tr>
+<tr>
+<td>Nvidia GeForce RTX 3050Ti</td>
+<td align="right"></td>
+<td align="right"></td>
+<td>XPS 15 option.</td>
+</tr>
+<tr>
+<td>Nvidia GeForce RTX 3050</td>
+<td align="right"></td>
+<td align="right"></td>
+<td>XPS 15 option.</td>
+</tr>
+<tr>
+<td>AMD Radeon RX 6800S</td>
+<td align="right">85</td>
+<td align="right">58th</td>
+<td></td>
+</tr>
+<tr>
+<td>AMD    RX 6700M</td>
+<td align="right">79</td>
+<td align="right">65th</td>
+<td></td>
+</tr>
+<tr>
+<td>Nvidia RTX A1000 4GB GDDR6</td>
+<td align="right">45</td>
+<td align="right">114th</td>
+<td>Thinkpad P16(certified)</td>
+</tr>
+<tr>
+<td>Nvidia T1200</td>
+<td align="right">42</td>
+<td align="right">118th</td>
+<td>Thinkpad P15v</td>
+</tr>
+<tr>
+<td>Nvidia GTX 1050Ti</td>
+<td align="right">30</td>
+<td align="right">144th</td>
+<td>My current Windows gaming desktop.</td>
+</tr>
+<tr>
+<td>Intel Iris Xe</td>
+<td align="right">17</td>
+<td align="right">207th</td>
+<td>Integrated. Framework. XPS 13 Plus.</td>
+</tr>
+<tr>
+<td>Intel HD 520</td>
+<td align="right">4</td>
+<td align="right">402nd</td>
+<td>Integrated. My current T460.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>Notice the two 'integrated' entries at the bottom of the table, one of which is
+my current laptop, a full 20x slower than the GPU I ended up getting.</p>
+<h3>Laptop models</h3>
+<p>With the above in mind, I read some reviews, and a few contenders emerged:</p>
+<h4>Framework</h4>
+<p>The Framework was massively tempting. It brings an entirely unpresedented
+- some might hopefully say <em>revolutionary</em> - focus on user-repair and
+upgradability. Rather than soldering and gluing the whole thing together,
+all the Framework's components, up to and including the motherboard and
+screen, are replaceable using a single screwdriver. This is deeply appealing
+for geeks, who want to be able to repair or upgrade.</p>
+<p>The downside that gave me pause is it is only available with integrated
+Intel-powered graphics. If they had a model including the vastly superior
+Nvidia or AMD accellerated graphics, I would have just bought one months ago,
+instead of prevaricating. But that complication, coupled with the fact that the
+Framework's performance is only mid-range for a 2022 model, put me off
+sufficiently to look around at other options.</p>
+<h4>Dell XPS 13 plus</h4>
+<p>The Dell XPS 13 plus looks wonderful, with official Ubuntu verification, no
+less, but just isn't physically big enough for me, and is noticeably
+underpowered. And the Dell 15 inch models seem way overpriced, for the spec,
+easily exceeding my $2,000 budget.</p>
+<h4>HP One Dev</h4>
+<p>The HP One Dev looks like a fabulous machine, a colleague just got one and is
+very happy with it. But again, it only has integrated graphics.</p>
+<h4>MacBook Pro</h4>
+<p>I considered this, repaved to run Ubuntu, of course, but to be honest, as
+exquisite as the hardware was at one point, it seems somewhat stagnant and
+directionless now, ten years later. Not unimpressive, but doesn't really grab
+me.</p>
+<h4>System76</h4>
+<p>I looked at a whole bunch of other laptops at this point, scouring the "best
+gaming laptops of 2022" lists at Toms Hardware and elsewhere. Eventually my
+attention was drawn to System76, who, on reflection, should have been folks I
+checked out earlier in the process.</p>
+<p>The Oryx is just a few hundred over my budget, even with the current $300 off.
+But a tricked-out Gazelle seems to check all the boxes,</p>
+<p>They sell with Linux-pre-installed, and their website includes various
+<a href="https://support.system76.com/articles/nvidia-nvs">handy little write-ups</a>
+of exactly how to iron over the wrinkles in getting Nvidia's famously
+un-cooperative opaque binary drivers to work smoothly on Linux. They have
+CPUs and GPUs that are quite highly-placed in the above tables, the screen
+is magic.</p>
+<p>There are downsides. The keyboard is reputedly mediochre - but I almost always
+am using a USB mechanical keyboard anyhow. With such greedy components, the
+battery life kinda sucks when the machine is busy. But, to be frank, the only
+time I've run my current laptop away from my desk in the last 12 months is...
+never? So I guess I don't care, except for once every six months when I attend
+a work event at offices, hotels or conference centers.</p>
+<p>So this is what I ordered.</p>
+<p>But I did that thing where I order it with minimal RAM and SSD storage, so that
+I can replace them with my own parts. So I'll have some screwdriver work to do
+after it arrives. But the payoff is that I save about $150 by paying market
+rates for these components. In fact I already have a
+<a href="https://www.amazon.com/WD_Black-SN850-Internal-Gaming-Solid/dp/B0B7CPSN2K">tremendous SSD</a>
+I can use, leftover from this year's Chia cryptocurrency farming experiments,
+so that part is free. This means I can stay within my $2,000 budget, with $9 to
+spare after shipping and taxes.</p>
+<h3>Memory</h3>
+<p>It's generally possible to just buy whatever RAM is recommended by your vendor.
+But the most reliable and cheapest RAM will often be the slowest, or at least
+the one running at a clock speed which is most widely supported by different
+motherboards. In order to get the <em>fastest</em> RAM for our particular laptop, we
+need to understand a few things.</p>
+<h4>Physical form factor</h4>
+<p>The current standard for RAM is DDR4. For laptops, the slim physical form
+factor is known as SoDIMM. A single circuit board of memory chips is a
+<em>module</em>. A module connects into a motherboard <em>slot</em>.</p>
+<p>DDR5 is supported by Intel's 12th generation processors, and AMD's newest Ryzen
+7000 series. This uses a different physical connection on the motherboard, and
+is rare thus far, outside of systems above my budget. So I'm looking for DDR4.</p>
+<h4>Ranks &amp; Channels</h4>
+<p>A module contains from one to eight 64-bit wide logical <em>blocks</em> of data storage
+(single, dual, quad or octal <em>rank</em>.) The chips on a module provide x1, x2, x4
+or x8 <em>banks</em>.</p>
+<div class="code"><pre class="code literal-block">number of chips x chip banks / 64 = module rank
+</pre></div>
+
+<p>e.g. Using sixteen x4 chips will provide a single rank of memory on the module
+(16x4/64=1).</p>
+<p>Whereas using 32 x8 chips will provide a module of 4 ranks (32x8/64=4).</p>
+<p>This is sometimes annotated on the module using a notation like 1Rx4, as in one
+rank of x4 chips.</p>
+<p>The reason this matters is that access to ranks is interleaved, so multiple
+ranks can provide access to data at a higher rate than a single rank. But in
+order to take advantage of this, the motherboard must provide a commensurate
+number of memory access channels.</p>
+<p>The
+<a href="https://tech-docs.system76.com/models/gaze17/README.html">datasheet for my Gazelle</a>
+says the motherboard has two slots for RAM, and supports dual-channel access.
+This could be fully utilized by either inserting a single dual-rank module
+(which is more expensive), or, as in the timeworn heuristic, by inserting two
+half-sized single rank modules.</p>
+<h4>Clock frequencies and latency</h4>
+<p>RAM has a clock frequency, measured in thousands of MHz, but "double data rate"
+chips transfer data on both the clock's rising and falling edges, so the speed
+of transfer is better measured in mega-transfers per second (MT/s), the higher
+the better.</p>
+<p>However, it takes more than one clock cycle to perform an action. These latency
+values are sometimes quoted as a series of four integers - the number of clock
+cycles to perform particular operations, e.g. 18-18-18-43. But these are often
+abbreviated to just the first number, representing read access time, known as
+"CAS Latency" (CL), eg. CL 18, which tends to be representative. The lower this
+number is, the better.</p>
+<p>The actual performance of the memory is determined by the product of a clock
+cycle duration (eg. 1ns at 1000MHz) and the latency number (e.g. 1ns * 18 =
+18ns)</p>
+<p>Further, the motherboard needs to support the RAM's clock speed. In practice,
+the motherboard will negotiate with the inserted modules to find a commonly
+supported frequency, the same or less than the minimum of the rated memory
+access frequencies of the memory, the motherboard, and the CPU. using an
+over-complicated and hard-to-predict process controlled by BIOS settings. I
+have no experience with this but it sounds well worth avoiding altogether by
+making sure we get RAM modules with a rated frequency (their maximum) that
+exactly matches the advertised clock frequency of our motherboard.</p>
+<p>For my new Gazelle,
+<a href="https://tech-docs.system76.com/models/gaze17/README.html">the manual</a>
+says that is 3,200MHz.</p>
+<h4>Availability, pricing and scams.</h4>
+<p>Finding CL26 latency RAM at 3,200MHz is easy, for around $70. For lower
+latencies the price goes up to about $375 for CL16, but that isn't even in
+stock anywhere.</p>
+<p>At one point, after much searching, I found some CL16 on newegg.com:</p>
+<p><img alt="Memory on sale in newegg - scam" src="../../files/2022/memory-on-sale.webp"></p>
+<p>And it is only $128! Carefully checking the specs, including those on the
+manufacturer's site, using the shown model number 'CMSX32GX4M2A3000C16',
+this is exactly what we want. 2x16GB at 3200MT/s at CL16.</p>
+<p>While checking it out, I clicked around a bit, and at one point found:</p>
+<p><img alt="Bad review on newegg" src="../../files/2022/bad-review-on-newegg.webp"></p>
+<p>along with a number of other negative reviews, stating that they'd been sent
+memory modules that were fake, ie. just imitations of the purported reputable
+manufacturer, they didn't work at the advertised clock speeds, and the seller
+had gone dark on them, taking weeks to respond to queries, and not sending
+replacements until NewEgg got involved. Seems wisest to skip this.</p>
+<p>Eventually I found an alternative:</p>
+<p><img alt="Memory on sale in newegg - legit" src="../../files/2022/memory-on-sale-legit.webp"></p>
+<p>Yes! DDR4 in a SoDIMM package, 2x16GB modules at 3,200MHz and 18CL. The latency
+isn't quite as good, but it sounds legit, so I'll take it!</p>
+<p>And with that, I'm done. Now just awaiting the deliveries to arrive...</p>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/hardware/" rel="tag">hardware</a></li>
+            <li><a class="tag p-category" href="../../categories/journal/" rel="tag">journal</a></li>
+            <li><a class="tag p-category" href="../../categories/linux/" rel="tag">linux</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../neuromancer/" rel="prev" title="Neuromancer">Previous post</a>
+            </li>
+        </ul></nav></aside></article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer"></footer>
+</div>
+</div>
+
+            <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>
