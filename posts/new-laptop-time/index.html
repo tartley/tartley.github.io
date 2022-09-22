@@ -91,14 +91,21 @@ rather than put up with standardized remote'>
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <p>My employer, Canonical, has a "bring your own hardware" policy, trusting that
+    <p><span style="float: left">
+<img alt="A laptop" src="../../files/2008/02/lappy.webp"></span></p>
+<p>My employer, Canonical, has a "bring your own hardware" policy, trusting that
 their engineers would rather choose and administer their own personal laptops,
 rather than put up with standardized remotely administered corporate hardware.</p>
 <p>My current much loved Thinkpad 460p has served faithfully since 2015, but is
 showing its age, sometimes struggling under the workload. Plus, its integrated
 graphics chipset doesn't have the power to play modern games with my kiddo.
-Battlezone 98 runs fine, but Civilization VI (2016) is about the limit.</p>
-<p>This summer I received the three-year cash-in-hand bonus earmarked as a
+Battlezone 98 runs fine, but Civilization VI (2016) is annoyingly choppy,
+at about 9 frames per second.</p>
+<p></p>
+<center>
+<img alt="Civilization VI screenshot" src="../../files/2022/civ-vi.webp">
+</center>
+<br><p>This summer I received the three-year cash-in-hand bonus earmarked as a
 "hardware refresh bonus". It's been many years since I've bought a laptop with
 the attention to detail that comes with spending one's own money. Even the
 current aging Thinkpad was a gift from a former employer. So it's been a decade
@@ -106,15 +113,15 @@ or more since I've seriously specced out a new laptop. This post exists as a
 place to scribble down reminders of a few things I learned along the way.</p>
 <p>I have a few constraints:</p>
 <ul>
-<li>About the same size as the current laptop's 14 inches, or maybe a tiny bit
+<li>About the same size as the current Thinkpad's 14 inches, or maybe a tiny bit
   bigger.</li>
-<li>I work on Ubuntu Linux, so it has to run that comfortably.</li>
+<li>I work on Ubuntu Linux, so I'll need to check it plays nicely.</li>
 <li>It should support modern gaming.</li>
-<li>Plenty of monitor ports.</li>
-<li>A headphone jack.</li>
+<li>Plenty of monitor ports, and/or the grunt to daisy chain them.</li>
+<li>Is it too much to ask for a headphone jack in 2022?</li>
 <li>Ability for me to open it up, swap out the battery, drives, RAM.</li>
 <li>3:2 display would be nice, but these are rare.</li>
-<li>A budget of $2,000.</li>
+<li>A budget of $2,000 (saving a bit of my bonus for other hardware-related things.)</li>
 </ul>
 <p>Reading around, I got sort-of up to speed on components.</p>
 <h3>CPU</h3>
@@ -124,7 +131,7 @@ efficiency cores on a single chip. They come in about 30 different variants,
 with a naming convention that looks like, for example: <code>Intel Core i7-12700H</code>.
 This consists of:</p>
 <ul>
-<li>A brand, e.g "Intel Core"</li>
+<li>A brand, eg. "Intel Core"</li>
 <li>A modifier specifying a market segment, one of:<ul>
 <li>i3 Casual use</li>
 <li>i5 Multitasking, light gaming</li>
@@ -134,7 +141,7 @@ This consists of:</p>
 </li>
 <li>A single or double digit generation, eg the latest is "12".</li>
 <li>An SKU, eg the "700" above, a three or four digit number which roughly
-  corresponds to the featureset or performance - larger is better. These are
+  corresponds to the feature-set or performance - larger is better. These are
   only comparable within a single generation, they adopt wildly different
   conventions in different generations.</li>
 <li>A single or double letter suffix, eg "H" for "high performance", taken from
@@ -150,8 +157,8 @@ in the following performance comparison.</p>
 sorted by the benchmark score. I included the top 20, plus a handful of notable
 others that I looked up along the way. The 'bench' column measures relative
 performance under a variety of benchmark workloads which fully utilize all
-cores.</p>
-<p>The number of cores is given as (p)performance + (e)fficiency, for hybrid processors.</p>
+cores. The higher this number, the better.</p>
+<p>The number of cores is given as (p)erformance + (e)fficiency, for hybrid processors.</p>
 <table>
 <thead><tr>
 <th>CPU</th>
@@ -160,7 +167,7 @@ cores.</p>
 <th align="right">Cache</th>
 <th align="right">Bench</th>
 <th>Price</th>
-<th>Laptop models, and other notes</th>
+<th>Laptop models &amp; other notes</th>
 </tr></thead>
 <tbody>
 <tr>
@@ -224,7 +231,8 @@ cores.</p>
 <td align="right">24MB</td>
 <td align="right">27</td>
 <td>$457</td>
-<td>Dell XPS 17/15 ($2500), Acer Nitro 5, Onyx, Gazelle.<br>This CPU is what I ended up getting.</td>
+<td>Dell XPS 17/15 ($2500), Acer Nitro 5, System76 Onyx &amp; Gazelle.<br><strong>This CPU is what I ended up getting.</strong>
+</td>
 </tr>
 <tr>
 <td>AMD Ryzen 9 6900HX</td>
@@ -395,13 +403,13 @@ cores.</p>
 <td align="right">3MB</td>
 <td align="right">3</td>
 <td></td>
-<td>My current Thinkpad T460.</td>
+<td><strong>My current Thinkpad T460.</strong></td>
 </tr>
 </tbody>
 </table>
 <p><br></p>
-<p>Notice my current Thinkpad's processor added to the the very bottom of this list,
-which is 10x slower than the CPU I ended up getting.</p>
+<p>Notice my current Thinkpad's processor at the very bottom of this list, which
+is 10x slower than the CPU I ended up getting.</p>
 <h3>Graphics</h3>
 <p>There are plenty of otherwise fantastic laptops which don't include blazing
 fast dedicated Nvidia or AMD graphics processors, but instead only come with
@@ -418,8 +426,8 @@ this isn't the top N performers, because GPUs can get crazy fast and expensive,
 so I'm looking for something middle-of-the-pack. It's just a selection of GPUs
 I looked up while researching particular laptop models.</p>
 <p>The 'performance' column is the combined result of a variety of gaming
-benchmarks. The 'position' column compares it against all other benchmarked
-GPUs.</p>
+benchmarks, the higher the better. The 'position' column compares the
+performance against all other benchmarked GPUs.</p>
 <table>
 <thead><tr>
 <th>GPU</th>
@@ -438,7 +446,7 @@ GPUs.</p>
 <td>Nvidia GeForce RTX 3070Ti</td>
 <td align="right">122</td>
 <td align="right">27th</td>
-<td>system76 Onyx option.</td>
+<td>System76 Onyx option.</td>
 </tr>
 <tr>
 <td>Nvidia GeForce RTX 3070</td>
@@ -450,7 +458,8 @@ GPUs.</p>
 <td>Nvidia GeForce RTX 3060</td>
 <td align="right">87</td>
 <td align="right">58th</td>
-<td>Best XPS 17. Gazelle. Acer Nitro 5.<br>This is the GPU I ended up getting.</td>
+<td>Best XPS 17. System76 Gazelle. Acer Nitro 5.<br><strong>This is the GPU I ended up getting.</strong>
+</td>
 </tr>
 <tr>
 <td>Nvidia GeForce RTX 3050Ti</td>
@@ -504,17 +513,20 @@ GPUs.</p>
 <td>Intel HD 520</td>
 <td align="right">4</td>
 <td align="right">402nd</td>
-<td>Integrated. My current T460.</td>
+<td>Integrated. <strong>My current Thinkpad T460.</strong>
+</td>
 </tr>
 </tbody>
 </table>
 <p><br></p>
 <p>Notice the two 'integrated' entries at the bottom of the table, one of which is
-my current laptop, a full 20x slower than the GPU I ended up getting.</p>
+my current laptop, a full 20x slower than the GPU I ended up getting. The
+improvement ought to speed Civilization VI up to around an entirely excessive
+180 frames per second. \o/</p>
 <h3>Laptop models</h3>
 <p>With the above in mind, I read some reviews, and a few contenders emerged:</p>
 <h4>Framework</h4>
-<p>The Framework was massively tempting. It brings an entirely unpresedented
+<p>The Framework was massively tempting. It brings an entirely unprecedented
 - some might hopefully say <em>revolutionary</em> - focus on user-repair and
 upgradability. Rather than soldering and gluing the whole thing together,
 all the Framework's components, up to and including the motherboard and
@@ -522,7 +534,7 @@ screen, are replaceable using a single screwdriver. This is deeply appealing
 for geeks, who want to be able to repair or upgrade.</p>
 <p>The downside that gave me pause is it is only available with integrated
 Intel-powered graphics. If they had a model including the vastly superior
-Nvidia or AMD accellerated graphics, I would have just bought one months ago,
+Nvidia or AMD accelerated graphics, I would have just bought one months ago,
 instead of prevaricating. But that complication, coupled with the fact that the
 Framework's performance is only mid-range for a 2022 model, put me off
 sufficiently to look around at other options.</p>
@@ -534,44 +546,66 @@ easily exceeding my $2,000 budget.</p>
 <h4>HP One Dev</h4>
 <p>The HP One Dev looks like a fabulous machine, a colleague just got one and is
 very happy with it. But again, it only has integrated graphics.</p>
-<h4>MacBook Pro</h4>
+<h4>Mac Book Pro</h4>
 <p>I considered this, repaved to run Ubuntu, of course, but to be honest, as
 exquisite as the hardware was at one point, it seems somewhat stagnant and
-directionless now, ten years later. Not unimpressive, but doesn't really grab
-me.</p>
+directionless now, fifteen years later. Not unimpressive, but doesn't really
+grab me.</p>
 <h4>System76</h4>
 <p>I looked at a whole bunch of other laptops at this point, scouring the "best
 gaming laptops of 2022" lists at Toms Hardware and elsewhere. Eventually my
 attention was drawn to System76, who, on reflection, should have been folks I
 checked out earlier in the process.</p>
 <p>The Oryx is just a few hundred over my budget, even with the current $300 off.
-But a tricked-out Gazelle seems to check all the boxes,</p>
-<p>They sell with Linux-pre-installed, and their website includes various
-<a href="https://support.system76.com/articles/nvidia-nvs">handy little write-ups</a>
-of exactly how to iron over the wrinkles in getting Nvidia's famously
-un-cooperative opaque binary drivers to work smoothly on Linux. They have
-CPUs and GPUs that are quite highly-placed in the above tables, the screen
-is magic.</p>
-<p>There are downsides. The keyboard is reputedly mediochre - but I almost always
-am using a USB mechanical keyboard anyhow. With such greedy components, the
-battery life kinda sucks when the machine is busy. But, to be frank, the only
-time I've run my current laptop away from my desk in the last 12 months is...
-never? So I guess I don't care, except for once every six months when I attend
-a work event at offices, hotels or conference centers.</p>
-<p>So this is what I ordered.</p>
-<p>But I did that thing where I order it with minimal RAM and SSD storage, so that
-I can replace them with my own parts. So I'll have some screwdriver work to do
-after it arrives. But the payoff is that I save about $150 by paying market
-rates for these components. In fact I already have a
-<a href="https://www.amazon.com/WD_Black-SN850-Internal-Gaming-Solid/dp/B0B7CPSN2K">tremendous SSD</a>
+But a tricked-out Gazelle seems to check all the boxes.</p>
+<p></p>
+<center>
+<img alt='Gazelle 15" laptop' src="../../files/2022/gazelle-15.avif">
+</center>
+<p>They have a reasonably high-ranked 12th generation Intel i7 CPU, which seems
+to achieve good performance without wading into the diminishing returns
+of pricey i9 models. Same for the reasonably-placed Nvidia 3060 graphics. And
+the screen is just magic (judged by my admittedly idiosyncratic personal
+criteria.)</p>
+<p>They support the lightning fast open source <a href="https://www.coreboot.org">coreboot
+firmware</a>, and System76 are a leading
+contributor to the project. They sell with Linux-pre-installed, and produce
+their own Ubuntu-based Linux distribution, Pop!OS (Although stock Ubuntu runs
+just fine too.).</p>
+<p>Going with Nvidia graphics instead of AMD does yield a performance boost, but
+the downside is that I'll have to wrestle with the opaque proprietary drivers
+from the famously uncooperative Nvidia. But in a nice gesture, System76
+<a href="https://support.system76.com/articles/graphics-switch-ubuntu">documents this
+process</a>, and
+lots of other stuff, such as how to replace internal components yourself, on
+their website.</p>
+<p>Because it's proprietary closed source, Nvidia drivers have always lagged
+behind AMD's open source offerings in terms of compatibility. In particular,
+Nvidia graphics hasn't worked with the new Linux Wayland display server.
+Reading around, my impression is that it's not ready yet, but <em>might</em> be by
+22.10 (which is next month!?), so I could stick with the older XOrg display
+server for now, without fearing that I'll get marooned there.</p>
+<p>There are other downsides. The keyboard is reputedly mediocre, and I wish it
+didn't have a numpad. Standard layout tenkeyless for the win, every time. But I
+almost always use a USB mechanical keyboard anyhow. Also, with such greedy
+components, the battery life kinda sucks when the GPU is on and the machine is
+busy. But in the last 12 months, the only time I've run my current laptop not
+plugged in is... never? So I guess I don't care.</p>
+<p>So <a href="https://system76.com/laptops/gazelle#specs">this</a>is what I ordered, with
+the 15" display and the 3060 graphics.</p>
+<p>But I did that thing where I order it with minimal RAM and SSD storage, to
+replace with my own parts. So I'll have some screwdriver work to do after it
+arrives. The payoff is that I save about $150 by paying market rates for these
+components. In fact I already have a <a href="https://www.amazon.com/WD_Black-SN850-Internal-Gaming-Solid/dp/B0B7CPSN2K">tremendous
+SSD</a>
 I can use, leftover from this year's Chia cryptocurrency farming experiments,
 so that part is free. This means I can stay within my $2,000 budget, with $9 to
 spare after shipping and taxes.</p>
 <h3>Memory</h3>
-<p>It's generally possible to just buy whatever RAM is recommended by your vendor.
-But the most reliable and cheapest RAM will often be the slowest, or at least
+<p>It's generally fine to just buy whatever RAM is recommended by your vendor.
+But the most reliable and cheapest memory will often be the slowest, or at least
 the one running at a clock speed which is most widely supported by different
-motherboards. In order to get the <em>fastest</em> RAM for our particular laptop, we
+motherboards. In order to get the <em>fastest</em> memory for our particular laptop, we
 need to understand a few things.</p>
 <h4>Physical form factor</h4>
 <p>The current standard for RAM is DDR4. For laptops, the slim physical form
@@ -579,7 +613,8 @@ factor is known as SoDIMM. A single circuit board of memory chips is a
 <em>module</em>. A module connects into a motherboard <em>slot</em>.</p>
 <p>DDR5 is supported by Intel's 12th generation processors, and AMD's newest Ryzen
 7000 series. This uses a different physical connection on the motherboard, and
-is rare thus far, outside of systems above my budget. So I'm looking for DDR4.</p>
+is rare thus far, outside of systems above my budget.</p>
+<p>So I'm looking for DDR4 in a SoDIMM module. Got it.</p>
 <h4>Ranks &amp; Channels</h4>
 <p>A module contains from one to eight 64-bit wide logical <em>blocks</em> of data storage
 (single, dual, quad or octal <em>rank</em>.) The chips on a module provide x1, x2, x4
@@ -587,21 +622,21 @@ or x8 <em>banks</em>.</p>
 <div class="code"><pre class="code literal-block">number of chips x chip banks / 64 = module rank
 </pre></div>
 
-<p>e.g. Using sixteen x4 chips will provide a single rank of memory on the module
+<p>eg. Using sixteen x4 chips will provide a single rank of memory on the module
 (16x4/64=1).</p>
 <p>Whereas using 32 x8 chips will provide a module of 4 ranks (32x8/64=4).</p>
 <p>This is sometimes annotated on the module using a notation like 1Rx4, as in one
 rank of x4 chips.</p>
 <p>The reason this matters is that access to ranks is interleaved, so multiple
-ranks can provide access to data at a higher rate than a single rank. But in
-order to take advantage of this, the motherboard must provide a commensurate
-number of memory access channels.</p>
+ranks can provide access to data at multiples of the rate provided by a single
+rank. In order to take advantage of this, the motherboard must provide a
+commensurate number of memory access <em>channels</em>.</p>
 <p>The
 <a href="https://tech-docs.system76.com/models/gaze17/README.html">datasheet for my Gazelle</a>
-says the motherboard has two slots for RAM, and supports dual-channel access.
+says the motherboard has two memory slots, and supports dual-channel access.
 This could be fully utilized by either inserting a single dual-rank module
 (which is more expensive), or, as in the timeworn heuristic, by inserting two
-half-sized single rank modules.</p>
+half-sized single rank modules (e.g. two 16GB modules to make 32GB total.)</p>
 <h4>Clock frequencies and latency</h4>
 <p>RAM has a clock frequency, measured in thousands of MHz, but "double data rate"
 chips transfer data on both the clock's rising and falling edges, so the speed
@@ -619,11 +654,11 @@ cycle duration (eg. 1ns at 1000MHz) and the latency number (e.g. 1ns * 18 =
 <p>Further, the motherboard needs to support the RAM's clock speed. In practice,
 the motherboard will negotiate with the inserted modules to find a commonly
 supported frequency, the same or less than the minimum of the rated memory
-access frequencies of the memory, the motherboard, and the CPU. using an
+access frequencies of the memory, the motherboard, and the CPU, using an
 over-complicated and hard-to-predict process controlled by BIOS settings. I
 have no experience with this but it sounds well worth avoiding altogether by
-making sure we get RAM modules with a rated frequency (their maximum) that
-exactly matches the advertised clock frequency of our motherboard.</p>
+making sure we get modules with a rated frequency that exactly matches the
+advertised clock frequency of our motherboard.</p>
 <p>For my new Gazelle,
 <a href="https://tech-docs.system76.com/models/gaze17/README.html">the manual</a>
 says that is 3,200MHz.</p>
@@ -632,19 +667,19 @@ says that is 3,200MHz.</p>
 latencies the price goes up to about $375 for CL16, but that isn't even in
 stock anywhere.</p>
 <p>At one point, after much searching, I found some CL16 on newegg.com:</p>
-<p><img alt="Memory on sale in newegg - scam" src="../../files/2022/memory-on-sale.webp"></p>
+<p><img alt="Memory on sale in Newegg - scam" src="../../files/2022/memory-on-sale.webp"></p>
 <p>And it is only $128! Carefully checking the specs, including those on the
 manufacturer's site, using the shown model number 'CMSX32GX4M2A3000C16',
 this is exactly what we want. 2x16GB at 3200MT/s at CL16.</p>
 <p>While checking it out, I clicked around a bit, and at one point found:</p>
-<p><img alt="Bad review on newegg" src="../../files/2022/bad-review-on-newegg.webp"></p>
-<p>along with a number of other negative reviews, stating that they'd been sent
-memory modules that were fake, ie. just imitations of the purported reputable
-manufacturer, they didn't work at the advertised clock speeds, and the seller
-had gone dark on them, taking weeks to respond to queries, and not sending
-replacements until NewEgg got involved. Seems wisest to skip this.</p>
+<p><img alt="Bad review on Newegg" src="../../files/2022/bad-review-on-newegg.webp"></p>
+<p>This came along with a number of other negative reviews, stating customers had
+been sent memory modules that were fake, ie. imitations of the purported
+reputable manufacturer, they didn't work at the advertised clock speeds, and
+the seller had gone dark on them, taking weeks to respond to queries, and not
+sending replacements until Newegg got involved. Seems wisest to skip this.</p>
 <p>Eventually I found an alternative:</p>
-<p><img alt="Memory on sale in newegg - legit" src="../../files/2022/memory-on-sale-legit.webp"></p>
+<p><img alt="Memory on sale in Newegg - legit" src="../../files/2022/memory-on-sale-legit.webp"></p>
 <p>Yes! DDR4 in a SoDIMM package, 2x16GB modules at 3,200MHz and 18CL. The latency
 isn't quite as good, but it sounds legit, so I'll take it!</p>
 <p>And with that, I'm done. Now just awaiting the deliveries to arrive...</p>
