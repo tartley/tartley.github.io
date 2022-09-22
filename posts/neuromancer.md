@@ -96,10 +96,10 @@ of the stretching or uneven speed of its original tape based media.
 > white-painted loft, distant fingers caressing the deck, tears of release
 > streaking his face.*
 
-But I'd urge you to stick with it. To give it a chance. For the author's reedy,
-Virginia-inflected voice has a cadence that holds the attention. A rhythm of
-tone and emphasis that, for me, works considerably better than the practiced
-glossiness of more recent, more professional recordings.
+But I'd urge you to stick with it. For the author's reedy, Virginia-inflected
+voice has a cadence that holds the attention. A rhythm of tone and emphasis
+that, for me, works considerably better than the practiced glossiness of more
+recent, more professional recordings.
 
 > *"The moment, I mean the nanosecond, that one of those things starts figuring
 > out ways to make itself smarter, Turing’ll wipe it. Nobody trusts those
