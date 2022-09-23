@@ -8,11 +8,11 @@
 *By Geoff Johns (writer), Gary Frank (pencil) & Brad Anderson (colors). (2017-2019)*
 ![Spoilers](/files/spoilers.svg)
 
-The original [*Watchmen*](https://archive.org/details/Watchmen1987), is a
+The original [*Watchmen*](https://archive.org/details/Watchmen1987) is a
 seminal 12-issue superhero comic by Alan Moore (writer) & Dave Gibbons
 (artist), published from 1986 to 1987, that transformed the comics world. A
-superhero tale in which *almost* none of the superheroes have any superhuman
-powers.
+superhero tale in which all-but-one of the superheroes have no superhuman
+powers at all.
 
 The decades since have spawned a number of remakes, sequels, prequels and
 spin-offs. Zach Snyder's movie adaptation has its adherents, and the HBO
@@ -102,7 +102,7 @@ other things possible.
 I was especially pleased with the quiet, understated places Doomsday Clock goes
 with *Mothman's*, back-story. The character in *Watchmen* was little more than
 a punchline, recurring throwaway references to mental instability and
-alcoholism. But here we see him fully-fleshed out. Like all-but-one of the
+alcoholism. But here we see him fully-fleshed out. Like the rest of the
 *Watchmen* heroes, bereft of any magical superhuman powers, but still able to
 pull off entirely unexpected and superhuman-seeming stunts, merely by virtue of
 possessing their own unique kinds of extreme mental or emotional
