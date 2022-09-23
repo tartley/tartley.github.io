@@ -6,8 +6,11 @@
 
 I had to learn 100 questions and answers for my US Naturalization civics
 quiz this week, and my default way of learning something is to organize the information
-into an essay. Not the best work I've ever done, but it got me through the test, so
-good enough:
+into an essay. Not the best work I've ever done, but it got me through the
+test, so good enough. Some of these assertions seem somewhat debatable, but my
+job here is to learn what the test tells me are the right answers. In some
+places I've elaborated around the edges with extra info that isn't on the test,
+but helps me to contextualize and remember.
 
 # History
 
@@ -162,7 +165,7 @@ moral and political issue throughout United States history.
 
 The original constitution did not explicitly specify who was able to vote,
 and states demonstrated considerable diversity in whom they did or did not grant
-suffrage. In particular, most states only granted the vote to white, male,
+suffrage to. In particular, most states only granted the vote to white, male,
 property owners - about 6% of the population.
 
 In the 1820s, attitudes and state laws shifted, to allow all white males to
@@ -175,15 +178,18 @@ notably:
 
 * The 15th Amendment of 1870, in the wake of the Civil War and Emancipation
   Proclamation, prevented the denial of voting rights based on a person's race.
-  This was effectively interpreted to mean that men of any race could vote.
-  However, states continued to prevent the majority of African Americans in the
-  United States from voting, via Jim Crow laws, poll taxes, literacy tests,
-  grandfather clauses and the like. Only later in the 20th century were these
-  laws ruled unconstitutional.
+  This was effectively interpreted to mean that *men* (not women) of any race
+  could vote. However, states continued to prevent the majority of African
+  Americans in the United States from voting, via Jim Crow laws, poll taxes,
+  literacy tests, grandfather clauses and the like. Only later in the 20th
+  century were these laws ruled unconstitutional.
 * The 19th Amendment of 1920 allowed women to vote. However, in practice, women
   &mdash; who were rarely in control of independent sources of income &mdash;
   were usually still prevented from voting by the same discriminatory practices
-  that prevented voting by poor or non-white men.
+  that prevented voting by poor or non-white men. For example, federal laws
+  preventing banks from denying women to hold bank accounts were not passed
+  until 1960. (France was a trailblazer in this, passing equivalent laws in
+  1881, while the UK trailed, at 1975.)
 * The 24th amendment of 1964 prohibited using a poll tax to control who could
   vote in federal elections.
 * The 26th amendment of 1971 lowered the voting age from 21 to 18. This was
@@ -198,8 +204,8 @@ comes to issues such as being allowed to vote. So, who currently is, and is
 not, allowed to vote? Sometimes the best way to understand something is to
 trace its contours, by enumerating the exceptions.
 
-Those who are currently legally denied the right to vote, for reasons that I
-personally find arguably understandable, are:
+Those who are currently legally denied the right to vote, for reasons that seem
+potentially reasonable:
 
 * Those aged under 18.
 * Those deemed mentally "incapacitated" or "incompetent" by a conservatorship
@@ -207,7 +213,7 @@ personally find arguably understandable, are:
 * Illegal or undocumented immigrants (16 million people).
 
 The following people are also legally denied the vote, for reasons that I personally
-find controversial or outright wrong:
+find unreasonable:
 
 * US Citizens and nationals who reside in the United States territories that are
   not States, such as Puerto Rico.
@@ -233,7 +239,7 @@ The above categories represent 28.8 million people, around 11 percent of
 the adult population, who currently have no legal right to vote for US government
 positions due to reasons I personally find controversial or wrong.
 
-## Civil Rights
+## Activists
 
 Susan B Anthony was a prominent activist for womens rights and civil rights.
 
@@ -297,11 +303,20 @@ Notable amongst these were:
 * Vietnam War
 * Persian Gulf War
 
-During the Cold war, the main concern of the United States was communism.
+During the Cold war, the main concern of the United States was, it says here,
+communism. I'd wonder whether 'mutually assured destruction' might be a
+contender, but that is not listed as a correct answer.
 
 ### 21st Century Wars
 
-11 thus far, including Afghanistan, Libya, Somalia, Syria and Iraq.
+On 11th September 2001, terrorists attacked the United States by crashing
+commercial passenger airliners into the Pentagon in Virginia near Washington
+DC, and the twin towers of the World Trade Center, destroying them and killing
+nearly 3,000 people.
+
+This atrocity was used as a pretext for the USA's subsequent wars in Afghanistan
+and Iraq, both of which ended disasterously. The USA has also engaged in 9 other
+wars thus far this century, including Libya, Somalia & Syria.
 
 # Government
 
@@ -353,9 +368,7 @@ The Speaker of the House is currently Nancy Pelosi (Democratic).
 
 ## The Legislature
 
-Congress makes federal laws.
-
-It comprises two parts:
+Congress makes federal laws. It comprises two parts:
 
 * The Senate.
 * The House of Representatives.
@@ -454,9 +467,4 @@ The economic system of the United States is a capitalist, free market economy.
 
 The two major political parties in the US are the Democratic and Republican
 parties.
-
-On 11th September 2001, terrorists attacked the United States by crashing
-commercial passenger airliners into the Pentagon in Virginia near Washington
-DC, and the twin towers of the World Trade Center, destroying them and killing
-almost 3,000 people.
 
