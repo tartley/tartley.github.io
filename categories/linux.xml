@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 22 Sep 2022 17:52:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>New Laptop Time!</title><link>https://www.tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 23 Sep 2022 18:47:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>New Laptop Time!</title><link>https://www.tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="A laptop" src="https://www.tartley.com/files/2008/02/lappy.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;My employer, Canonical, has a "bring your own hardware" policy, trusting that
@@ -453,8 +453,8 @@ sufficiently to look around at other options.&lt;/p&gt;
 less, but just isn't physically big enough for me, and is noticeably
 underpowered. And the Dell 15 inch models seem way overpriced, for the spec,
 easily exceeding my $2,000 budget.&lt;/p&gt;
-&lt;h4&gt;HP One Dev&lt;/h4&gt;
-&lt;p&gt;The HP One Dev looks like a fabulous machine, a colleague just got one and is
+&lt;h4&gt;HP Dev One&lt;/h4&gt;
+&lt;p&gt;The HP Dev One looks like a fabulous machine, a colleague just got one and is
 very happy with it. But again, it only has integrated graphics.&lt;/p&gt;
 &lt;h4&gt;Mac Book Pro&lt;/h4&gt;
 &lt;p&gt;I considered this, repaved to run Ubuntu, of course, but to be honest, as
@@ -477,10 +477,10 @@ of pricey i9 models. Same for the reasonably-placed Nvidia 3060 graphics. And
 the screen is just magic (judged by my admittedly idiosyncratic personal
 criteria.)&lt;/p&gt;
 &lt;p&gt;They support the lightning fast open source &lt;a href="https://www.coreboot.org"&gt;coreboot
-firmware&lt;/a&gt;, and System76 are a leading
-contributor to the project. They sell with Linux-pre-installed, and produce
-their own Ubuntu-based Linux distribution, Pop!OS (Although stock Ubuntu runs
-just fine too.).&lt;/p&gt;
+firmware&lt;/a&gt;, and System76 are a leading contributor to
+the project. They sell with Linux-pre-installed, and produce their own
+Ubuntu-based Linux distribution, Pop!_OS (Although stock Ubuntu runs just fine
+too.).&lt;/p&gt;
 &lt;p&gt;Going with Nvidia graphics instead of AMD does yield a performance boost, but
 the downside is that I'll have to wrestle with the opaque proprietary drivers
 from the famously uncooperative Nvidia. But in a nice gesture, System76
@@ -563,7 +563,7 @@ cycle duration (eg. 1ns at 1000MHz) and the latency number (e.g. 1ns * 18 =
 &lt;p&gt;Further, the motherboard needs to support the RAM's clock speed. In practice,
 the motherboard will negotiate with the inserted modules to find a commonly
 supported frequency, the same or less than the minimum of the rated memory
-access frequencies of the memory, the motherboard, and the CPU, using an
+access frequencies of the module, the motherboard, and the CPU, using an
 over-complicated and hard-to-predict process controlled by BIOS settings. I
 have no experience with this but it sounds well worth avoiding altogether by
 making sure we get modules with a rated frequency that exactly matches the
