@@ -190,9 +190,9 @@ less, but just isn't physically big enough for me, and is noticeably
 underpowered. And the Dell 15 inch models seem way overpriced, for the spec,
 easily exceeding my $2,000 budget.
 
-### HP One Dev
+### HP Dev One
 
-The HP One Dev looks like a fabulous machine, a colleague just got one and is
+The HP Dev One looks like a fabulous machine, a colleague just got one and is
 very happy with it. But again, it only has integrated graphics.
 
 ### Mac Book Pro
@@ -223,10 +223,10 @@ the screen is just magic (judged by my admittedly idiosyncratic personal
 criteria.)
 
 They support the lightning fast open source [coreboot
-firmware](https://www.coreboot.org), and System76 are a leading
-contributor to the project. They sell with Linux-pre-installed, and produce
-their own Ubuntu-based Linux distribution, Pop!OS (Although stock Ubuntu runs
-just fine too.).
+firmware](https://www.coreboot.org), and System76 are a leading contributor to
+the project. They sell with Linux-pre-installed, and produce their own
+Ubuntu-based Linux distribution, Pop!\_OS (Although stock Ubuntu runs just fine
+too.).
 
 Going with Nvidia graphics instead of AMD does yield a performance boost, but
 the downside is that I'll have to wrestle with the opaque proprietary drivers
@@ -331,7 +331,7 @@ cycle duration (eg. 1ns at 1000MHz) and the latency number (e.g. 1ns * 18 =
 Further, the motherboard needs to support the RAM's clock speed. In practice,
 the motherboard will negotiate with the inserted modules to find a commonly
 supported frequency, the same or less than the minimum of the rated memory
-access frequencies of the memory, the motherboard, and the CPU, using an
+access frequencies of the module, the motherboard, and the CPU, using an
 over-complicated and hard-to-predict process controlled by BIOS settings. I
 have no experience with this but it sounds well worth avoiding altogether by
 making sure we get modules with a rated frequency that exactly matches the
