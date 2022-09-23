@@ -32,7 +32,7 @@ complexity of people's lives, threatening to leave the galaxy "for one less
 complicated".
 
 <center>
-![Manhattan's departure at the end of Watchmen](/files/2022/doomsdayclock-watchmen-manhattan.webp)
+![Manhattan's departure at the end of Watchmen](/files/2022/doomsday-clock-watchmen-manhattan.webp)
 </center>
 <br />
 
@@ -99,14 +99,14 @@ in what they represent as symbols. Particularly the value of *hope*, as
 personified by Superman, which - quite literally, in this tale - makes all
 other things possible.
 
-I was also really pleased with the places Doomsday Clock goes with *Mothman's*,
-back-story. The character in *Watchmen* was little more than a punchline,
-recurring throwaway references to mental instability and alcoholism. But here
-we see him fully-fleshed out. Like all-but-one of the *Watchmen* heroes, bereft
-of any magical superhuman powers, but still able to pull off entirely unexpected
-and superhuman-seeming stunts, merely by virtue of possessing their own unique
-kinds of extreme mental or emotional resourcefulness, and working very hard at
-it.
+I was especially pleased with the quiet, understated places Doomsday Clock goes
+with *Mothman's*, back-story. The character in *Watchmen* was little more than
+a punchline, recurring throwaway references to mental instability and
+alcoholism. But here we see him fully-fleshed out. Like all-but-one of the
+*Watchmen* heroes, bereft of any magical superhuman powers, but still able to
+pull off entirely unexpected and superhuman-seeming stunts, merely by virtue of
+possessing their own unique kinds of extreme mental or emotional
+resourcefulness, and working very hard at it.
 
 Flawed, but aware of his faults, and able to pull it together to be a beacon of
 warmth, kindness, and generosity which transforms the path of Rorschach II, who
