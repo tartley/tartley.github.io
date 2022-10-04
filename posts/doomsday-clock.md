@@ -36,11 +36,15 @@ complicated".
 </center>
 <br />
 
-Adrian Veidt, genius that he is, invents a means to follow Dr Manhattan,
-seeking his help, and various other *Watchmen* characters make their way, or
-are transferred to, the DC universe. This has been described across the comic
-industry as "the crossover event nobody wanted", but personally I felt it was
-really well done.
+In *Doomsday Clock*, Adrian Veidt, genius that he is, invents a means to follow
+Dr Manhattan, seeking his help with the re-emergence of imminent nuclear war
+brought about by the revelations in Rorschach's journal, and it becomes clear
+that the place Dr Manhattan has journeyed to is the DC universe, populated by
+Superman, Batman, and the *whole* stable of DC heroes.
+
+Various other *Watchmen* characters make their way, or are transferred to, the
+DC universe. This has been described across the comic industry as "the
+crossover event nobody wanted", but personally I felt it was really well done.
 
 Two of the most prominently deceased *Watchmen* characters are brought back
 into play, using mechanisms I thought were legitimate and, on occasion,
@@ -52,13 +56,14 @@ laugh-out-loud satisfying as they reached their resolution.
 <br />
 
 In particular, they find a way to bring back Rorschach. Or, at least, *a*
-Rorschach. This seems like the most controversial of the many decisions in the
-book, but it's handled deftly, and there are both similarities and differences
-between the old and the new Rorschach, making it an interesting character in
-its own right. In some ways this transformation is reminiscent of HBO
-Watchmen's treatment of Hooded Justice - retaining everything we already knew
-about the character, but performing an astonishing piece of narrative ju-jitsu
-to utterly transform everything about what that meant.
+Rorschach. Another individual picks up the mask. This seems like the most
+controversial of the many decisions in the book, but it's handled deftly, and
+there are both similarities and differences between the old and the new
+Rorschach, making it an interesting character in its own right. In some ways
+this transformation is reminiscent of HBO Watchmen's treatment of Hooded
+Justice - retaining everything we already knew about the character, but
+performing an astonishing piece of narrative ju-jitsu to utterly transform
+everything about what that meant.
 
 The DC heroes slowly realize their world is being altered by Dr Manhattan's
 manipulations, tying this crossover into the latest of the DC universe's
@@ -67,21 +72,25 @@ understand it. In doing so, he uncovers deep truths that affect the
 inter-relationship between all the DC time-lines and universes, establishing
 that historical stories, such as Superman's original appearance in Action
 Comics of the 1930s, represent realities that still exist, out in the
-multiverse, unaffected by subsequent re-ploughing that forever drives
-Superman's origin story further forward in time over the years. All these
-worlds, including the various DC pre-crisis worlds, are accessible to
+multiverse, unaffected by subsequent commercial re-ploughing that forever
+drives Superman's origin story further forward in time over the years. All
+these worlds, including the various DC pre-crisis worlds, are accessible to
 Manhattan's powers.
 
 Incidentally, this enables DC to undo the changes wrought by the last few
-years unpopular "new 52" era: The Justice League's alternate roster, the early
-death of Clark's parents, which distances Superman from humanity and changes
-the character dramatically, the loss of the Justice Society of America from
-Earth, and the loss of Wally West's Flash. All these and more are written off
-as the effects of Dr Manhattan's meddling, isolated and preserved in just
-another spun-off part of the multiverse, and jettisoned from the privileged
-*metaverse*, the core template from which all multiversal threads are forged,
-as it reverts to more-or-less its former state when Manhattan's changes are
-undone during *Doomsday Clock*'s story.
+years' unpopular "New 52" era. This meant nothing to me when I started reading,
+I know basically nothing about American comics, only being familiar with the
+fabulous British *2000AD*. I was spurred into reading around the DC lore, and by
+the time I was done, I understood that the *New 52* reality included things
+like The Justice League's alternate roster, the early death of Clark's parents,
+which distances Superman from humanity and changes the character dramatically,
+the loss of the Justice Society of America from Earth, and the loss of Wally
+West's Flash. All these and more are written off as the effects of Dr
+Manhattan's meddling, isolated and preserved in just another spun-off part of
+the multiverse, while being jettisoned from the privileged *metaverse*, the
+core template from which all subsequent multiversal threads are forged, as it
+reverts to more-or-less its former state when Manhattan's changes are undone
+during *Doomsday Clock*'s story.
 
 In doing all this, Manhattan exhibits his usual clinical detachment from the
 human consequences of his actions, setting himself up as the villain of the
@@ -100,21 +109,23 @@ personified by Superman, which - quite literally, in this tale - makes all
 other things possible.
 
 I was especially pleased with the quiet, understated places Doomsday Clock goes
-with *Mothman's*, back-story. The character in *Watchmen* was little more than
-a punchline, recurring throwaway references to mental instability and
-alcoholism. But here we see him fully-fleshed out. Like the rest of the
-*Watchmen* heroes, bereft of any magical superhuman powers, but still able to
-pull off entirely unexpected and superhuman-seeming stunts, merely by virtue of
-possessing their own unique kinds of extreme mental or emotional
-resourcefulness, and working very hard at it.
+with *Mothman's*, back-story. The character in *Watchmen* was only a punchline,
+a recurring throwaway reference to instability and alcoholism, telegraphing his
+subsequent mental breakdown. But here, we see him fully fleshed out.
 
-Flawed, but aware of his faults, and able to pull it together to be a beacon of
-warmth, kindness, and generosity which transforms the path of Rorschach II, who
-he befriends during their overlapping stay in a mental institution - a symbol,
-if you will, that just as *Watchmen's* ruthless gaze influenced the wider world
-of comics, so the comic world gazes back. They see us, all the real-world,
-fully-rounded humans, trapped in the depths of our pathos, and they wonder,
-when will each of us find our means to *fly...*
+Like the rest of the *Watchmen* heroes, he has no magical superhuman powers,
+but is still able to pull off entirely unexpected and superhuman-seeming
+stunts, merely by the virtue of his own unique kind of extreme mental and
+emotional resourcefulness. Flawed, but aware of his faults, and able to pull it
+together, he befriends the younger Rorschach II during their overlapping stays
+in a mental institution, becoming a beacon of warmth, kindness, and generosity
+to the younger man.
+
+He acts as a symbol, if you will, that just as *Watchmen's* ruthless gaze
+influenced the wider world of comics, so the comic world gazes back. They see
+us, all the real-world, fully-rounded humans, trapped in the depths of our
+pathos, and they wonder, when will each of us learn to transcend our humdrum
+limitations, to act on our hopes and dreams, and *fly...*
 
 <center>
 ![Doomsday Clock: Mothman](/files/2022/doomsday-clock-mothman.webp)
