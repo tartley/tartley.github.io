@@ -20,16 +20,17 @@ A creepy survival horror game that leans deeply into the moral and existential
 quandaries arising from scanning one's brain and copying the resulting conciousness
 into alternate receptacles.
 
-I loved the setup. A humdrum medical appointment in present-day Toronto
-requires you to sit still for an experimental new type of brain scan, run by a
-PhD, set up in a cable-strewn side office. Sit in the chair, don the helmet,
-wait for the scan to complete and- blink! Suddenly you are elsewhere.
+I loved the setup. A humdrum morning starting at your present-day Toronto
+apartment leads to a medical appointment, which requires you to sit still for
+an experimental new type of brain scan, run by a PhD, set up in a cable-strewn
+side office. Sit in the chair, don the helmet, wait for the scan to complete
+and- blink! Suddenly you are elsewhere.
 
-It becomes evident that you have awoken to the year 2104, and the recorded brain scans
-of real humans are being used to animate various robots and drones. Backups and
-fall-backs have yanked your ancient brain scan to inhabit an advanced humanoid
-robot, in a decrepit cyberpunk base, deep under the ocean, some time after a
-comet strike has scoured all life from the planet's surface.
+It becomes evident that you have awoken to the year 2104, and the recorded
+brain scans of real humans are being used to animate various robots and drones.
+Backups and fall-backs have yanked your ancient brain scan to inhabit an
+advanced humanoid robot, in a decrepit cyberpunk base, deep under the ocean,
+some time after a comet strike has scoured all life from the planet's surface.
 
 If that weren't bad enough, the base is invaded by disgusting black goo. This
 infiltrates electrical and biological circuits, mimicking and improving upon
@@ -38,15 +39,19 @@ probing tendrils throughout the environment. It infects wildlife, producing
 evil-looking hybrid creatures. And, not least, it has a habit of reanimating
 the corpses of the last few humans, who skulk around, not in a good way. As our
 protagonist asks, incredulously, "You mean they've been brought back to life?".
-Our reassuring AI helper replies "Let's call it that."
+Our reassuring AI companion replies "Yeah, let's call it that."
 
-The game borrows the highly effective mechanics of *Frictional's* previous games,
-where the proximity of - or even just catching sight of - your horrific,
-shambling enemies cause your character to experience debilitating symptoms,
-including, in this case, static-y visual distortions. Your only chance to
-survive encounters is to stay well out of sight, and avert your eyes so you
+The game borrows the highly effective mechanics of *Frictional's* previous
+games, where the proximity of your horrific, shambling enemies cause your
+character to experience debilitating symptoms, including, in this case,
+static-y visual distortions as your neural hardware suffers from some
+interference they emit. This applies even if you simply look at them, an act
+which seems to enrage them all the more. So Your only chance to survive
+encounters is to stay well out of sight, and actively avert your eyes so you
 can't even watch what's going on. This turns out to be fabulously scary and
-atmospheric.
+atmospheric, and lead directly to Susan catching me hiding in a dark cupboard,
+staring at blackness for a prolonged period with a peculiar expression on my
+face.
 
 Spurring us along are not just threats to our immediate survival, but also
 the adoption of a project, to launch the 'ARK' into space, a solar-powered
@@ -55,7 +60,7 @@ human race, so that they might live a prolonged period of idyllic virtual
 existence, preserving at least some echo of what humanity was.
 
 We are accompanied by "Catherine", a simulated personality running on our
-hand-held omni-tool, based on a brain recording of an AI researcher, whose
+hand-held omni-tool, based on the brain recording of an AI researcher, whose
 project during her lifetime was the ARK. Plugging her in to a wall or console
 socket lets her interface with our surroundings, activating power supplies and
 manipulating machinery. Aside from that, she provides context, guidance and
@@ -72,17 +77,18 @@ and hideous, deadly beasts loom out of the murk.
 </center><br />
 
 Along the way, we encounter a few unforgettable scenarios. We find the failing
-storage system from which the last remaining copy of our brain scan resides.
-I flipped some buttons to delete it, prompting my character to respond with
-something like "Let this be the last time I wake up in this godforsaken place."
+storage system in which the last remaining copy of our brain scan resides. I
+decided to flip some buttons which deleted it, prompting my character to
+respond with something like "Let this be the last time I wake up in this
+godforsaken place."
 
-We find ourselves trapped in a few rooms at the bottom of the ocean, with the
-gibbering undead hammering on the door from the next room. There is an airlock
-leading out into the ocean, but we would be crushed at this depth. There is no
-way out. Luckily, Catherine is able to guide us into assembling a more robust
-robot, one capable of withstanding the pressure - all we have to do is sit in
-the chair and activate the transfer into it. We already did this once, back in
-Toronto. Easy.
+At another point, we find ourselves trapped in a few rooms at the bottom of the
+ocean, with the gibbering undead hammering on the door from the next room.
+There is an airlock leading out into the ocean, but we would be crushed at this
+depth. There is no way out. Luckily, Catherine is able to guide us into
+assembling a more robust robot, one capable of withstanding the pressure - all
+we have to do is sit in the chair and activate the transfer into it. We already
+did this once, back in Toronto. Easy.
 
 Except, after the transfer, we glance back across the lab at our original - the
 chap pictured up top - who, we notice, is still breathing. Asking Catherine
@@ -102,7 +108,7 @@ She's deathly sick, and without hope. By the end of your interactions she asks
 you to turn off her life-support before you leave, and stay with her for her
 last moments. So this is how it ends.
 
-Carrying on, because what else is left to do? We finally we get the ARK loaded
+Carrying on, because what else is there to do? We finally we get the ARK loaded
 into the launch system that delivers it to orbit, upload our brain scans onto
 it just before it launches, and - we've done it! Success!
 
