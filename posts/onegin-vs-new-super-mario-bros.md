@@ -28,8 +28,10 @@ post.
 
 **History**
 
-![](/files/2007/03/nes_super_mario_bros.png)
-*: Pushkin's original novel, seen here in the English translation.*
+<center>
+![](/files/2007/03/nes_super_mario_bros.png)<br />
+*Pushkin's original novel, seen here in the English translation.*
+</center><br />
 
 The story of Onegin derives from a Russian novel-in-verse, *Eugene
 Onegin* written by Aleksandr Pushkin over the period from 1823 to 1837.
@@ -41,8 +43,10 @@ as a ballet by Cranko in 1965, and it is Stolze's 2007 arrangement of
 this that is now playing at the Royal Opera House in London's Covent
 Garden.
 
-![](/files/2007/03/eugeneonegin-book.jpg)
-*: Super Mario Bros. on the NES*
+<center>
+![](/files/2007/03/eugeneonegin-book.jpg)<br />
+*Super Mario Bros. on the NES*
+</center><br />
 
 New Super Mario Bros, similarly, represents the culmination of a
 venerated franchise. The character of Mario first appeared as a nameless
@@ -62,8 +66,10 @@ certainly the most influential, videogame series of all time.
 
 **Form**
 
-![](/files/2007/03/jump.jpg)
-*: Flawlessly timed triple jumps result in extra height.*
+<center>
+![](/files/2007/03/jump.jpg)<br />
+*Flawlessly timed triple jumps result in extra height.*
+</center><br />
 
 Like so many other DS outings, New Super Mario Bros. is very much a
 return to form for the champion platformer. It makes solid, competent
@@ -87,8 +93,10 @@ and sophisticated woman, introduces her husband, Prince Gremin.
 Both works have in common the attempt to convey a narrative without the
 aid of verbiage, with significant difficulties encountered in each case.
 
-![](/files/2007/03/1703471_onegin_150a.jpg)
-*: Dumb, as in mime.*
+<center>
+![](/files/2007/03/1703471_onegin_150a.jpg)<br />
+*Dumb, as in mime.*
+</center><br />
 
 Ballet suffers from an inexpressiveness in this regard, insomuch as the
 tools at the dancer's disposal are not capable of depicting much in the
@@ -104,8 +112,10 @@ the same formulaic stories over and over again - and even these are
 considered to be in need of supplementing with a written synopsis in the
 program.
 
-![](/files/2007/03/newsupermario.jpg)
-*: Disrupting the narrative direction.*
+<center>
+![](/files/2007/03/newsupermario.jpg)<br />
+*Disrupting the narrative direction.*
+</center><br />
 
 Similarly, videogames revolve around the participation of the player,
 who thus has the means to disrupt any narrative direction or pacing
