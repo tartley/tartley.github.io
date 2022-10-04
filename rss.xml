@@ -1,5 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://www.tartley.com/</link><description>A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 23 Sep 2022 21:08:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Doomsday Clock</title><link>https://www.tartley.com/posts/doomsday-clock/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;By Geoff Johns (writer), Gary Frank (pencil) &amp;amp; Brad Anderson (colors). (2017-2019)&lt;/em&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://www.tartley.com/</link><description>A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 04 Oct 2022 22:33:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
+&lt;img alt="Spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+&lt;p&gt;I can't stress enough how this write-up is filled with spoilers. If there is any
+chance you'll play &lt;em&gt;Soma&lt;/em&gt;, don't read this! But it's a seven-year old game, so
+I'm not holding back.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;center&gt;
+&lt;img alt="Soma - protagonist" src="https://www.tartley.com/files/2022/soma-protagonist.webp"&gt;
+&lt;/center&gt;&lt;br&gt;
+&lt;p&gt;A creepy survival horror game that leans deeply into the moral and existential
+quandaries arising from scanning one's brain and copying the resulting conciousness
+into alternate receptacles.&lt;/p&gt;
+&lt;p&gt;I loved the setup. A humdrum medical appointment in present-day Toronto
+requires you to sit still for an experimental new type of brain scan, run by a
+PhD, set up in a cable-strewn side office. Sit in the chair, don the helmet,
+wait for the scan to complete and- blink! Suddenly you are elsewhere.&lt;/p&gt;
+&lt;p&gt;It becomes evident that you have awoken to the year 2104, and the recorded brain scans
+of real humans are being used to animate various robots and drones. Backups and
+fall-backs have yanked your ancient brain scan to inhabit an advanced humanoid
+robot, in a decrepit cyberpunk base, deep under the ocean, some time after a
+comet strike has scoured all life from the planet's surface.&lt;/p&gt;
+&lt;p&gt;If that weren't bad enough, the base is invaded by disgusting black goo. This
+infiltrates electrical and biological circuits, mimicking and improving upon
+their functionality. Portions of this host a malevolent AI, and has grown
+probing tendrils throughout the environment. It infects wildlife, producing
+evil-looking hybrid creatures. And, not least, it has a habit of reanimating
+the corpses of the last few humans, who skulk around, not in a good way. As our
+protagonist asks, incredulously, "You mean they've been brought back to life?".
+Our reassuring AI helper replies "Let's call it that."&lt;/p&gt;
+&lt;p&gt;The game borrows the highly effective mechanics of &lt;em&gt;Frictional's&lt;/em&gt; previous games,
+where the proximity of - or even just catching sight of - your horrific,
+shambling enemies cause your character to experience debilitating symptoms,
+including, in this case, static-y visual distortions. Your only chance to
+survive encounters is to stay well out of sight, and avert your eyes so you
+can't even watch what's going on. This turns out to be fabulously scary and
+atmospheric.&lt;/p&gt;
+&lt;p&gt;Spurring us along are not just threats to our immediate survival, but also
+the adoption of a project, to launch the 'ARK' into space, a solar-powered
+simulation hosting the last remaining brain scans of the now-defunct
+human race, so that they might live a prolonged period of idyllic virtual
+existence, preserving at least some echo of what humanity was.&lt;/p&gt;
+&lt;p&gt;We are accompanied by "Catherine", a simulated personality running on our
+hand-held omni-tool, based on a brain recording of an AI researcher, whose
+project during her lifetime was the ARK. Plugging her in to a wall or console
+socket lets her interface with our surroundings, activating power supplies and
+manipulating machinery. Aside from that, she provides context, guidance and
+motivation, leading you through a series of undersea facilities, linked by
+trains, submersibles, and the occasional disorienting trudge across the murky
+ocean floor, stirred up by ferocious currents and landslides. I found these
+some of the absolute best atmospheric "walking simulator" moments I've
+experienced in a game.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;center&gt;
+&lt;img alt="The ocean floor, stirred up by currents and landslides" src="https://www.tartley.com/files/2022/soma-murky.webp"&gt;
+&lt;br&gt;Is that another distant light up ahead? Good luck finding them while the currents pummel you,
+and hideous, deadly beasts loom out of the murk.
+&lt;/center&gt;&lt;br&gt;
+&lt;p&gt;Along the way, we encounter a few unforgettable scenarios. We find the failing
+storage system from which the last remaining copy of our brain scan resides.
+I flipped some buttons to delete it, prompting my character to respond with
+something like "Let this be the last time I wake up in this godforsaken place."&lt;/p&gt;
+&lt;p&gt;We find ourselves trapped in a few rooms at the bottom of the ocean, with the
+gibbering undead hammering on the door from the next room. There is an airlock
+leading out into the ocean, but we would be crushed at this depth. There is no
+way out. Luckily, Catherine is able to guide us into assembling a more robust
+robot, one capable of withstanding the pressure - all we have to do is sit in
+the chair and activate the transfer into it. We already did this once, back in
+Toronto. Easy.&lt;/p&gt;
+&lt;p&gt;Except, after the transfer, we glance back across the lab at our original - the
+chap pictured up top - who, we notice, is still breathing. Asking Catherine
+about it, she reminds us that the brain scan is not a destructive operation.
+He's still in there, chemically subdued for the moment, but he'll soon wake up
+again, wondering why the transfer didn't work. So we are left with the choice
+of stomping out of the airlock to safety, leaving him behind to his nightmarish
+fate. Or flipping the switch to deactivate him before we go.&lt;/p&gt;
+&lt;p&gt;Similarly, later in the journey, we finally stumble across an
+honest-to-goodness real, live human being. She describes how the rest of them
+will be gathered back in particular locations, while she stayed to protect the
+ARK. But, we tell her, we just passed through those locations, and there were
+no humans remaining there. We both know that the planet's surface is sterile. A
+beat passes before she announces "So I'm the last human being left alive."
+She's deathly sick, and without hope. By the end of your interactions she asks
+you to turn off her life-support before you leave, and stay with her for her
+last moments. So this is how it ends.&lt;/p&gt;
+&lt;p&gt;Carrying on, because what else is left to do? We finally we get the ARK loaded
+into the launch system that delivers it to orbit, upload our brain scans onto
+it just before it launches, and - we've done it! Success!&lt;/p&gt;
+&lt;p&gt;There was a moment, about five minutes before the end, when I realized what
+was going to happen here, even though my character had not. I envied him for
+his naive hope. For believing there was still a way out. For, of course, the
+ARK's launch changed nothing for us. Our simulations are aboard it, but we are
+still sitting here, in a rotting robot corpse in a collapsing facility at the
+bottom of a haunted ocean on a dead planet. The copy will enjoy life on the
+ARK, but we - like the copy of ourselves we left behind earlier - are stuck
+here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>Doomsday Clock</title><link>https://www.tartley.com/posts/doomsday-clock/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;By Geoff Johns (writer), Gary Frank (pencil) &amp;amp; Brad Anderson (colors). (2017-2019)&lt;/em&gt;
 &lt;img alt="Spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;The original &lt;a href="https://archive.org/details/Watchmen1987"&gt;&lt;em&gt;Watchmen&lt;/em&gt;&lt;/a&gt; is a
 seminal 12-issue superhero comic by Alan Moore (writer) &amp;amp; Dave Gibbons
@@ -24,11 +116,14 @@ complicated".&lt;/p&gt;
 &lt;img alt="Manhattan's departure at the end of Watchmen" src="https://www.tartley.com/files/2022/doomsday-clock-watchmen-manhattan.webp"&gt;
 &lt;/center&gt;
 &lt;br&gt;
-&lt;p&gt;Adrian Veidt, genius that he is, invents a means to follow Dr Manhattan,
-seeking his help, and various other &lt;em&gt;Watchmen&lt;/em&gt; characters make their way, or
-are transferred to, the DC universe. This has been described across the comic
-industry as "the crossover event nobody wanted", but personally I felt it was
-really well done.&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt;Doomsday Clock&lt;/em&gt;, Adrian Veidt, genius that he is, invents a means to follow
+Dr Manhattan, seeking his help with the re-emergence of imminent nuclear war
+brought about by the revelations in Rorschach's journal, and it becomes clear
+that the place Dr Manhattan has journeyed to is the DC universe, populated by
+Superman, Batman, and the &lt;em&gt;whole&lt;/em&gt; stable of DC heroes.&lt;/p&gt;
+&lt;p&gt;Various other &lt;em&gt;Watchmen&lt;/em&gt; characters make their way, or are transferred to, the
+DC universe. This has been described across the comic industry as "the
+crossover event nobody wanted", but personally I felt it was really well done.&lt;/p&gt;
 &lt;p&gt;Two of the most prominently deceased &lt;em&gt;Watchmen&lt;/em&gt; characters are brought back
 into play, using mechanisms I thought were legitimate and, on occasion,
 laugh-out-loud satisfying as they reached their resolution.&lt;/p&gt;
@@ -37,13 +132,14 @@ laugh-out-loud satisfying as they reached their resolution.&lt;/p&gt;
 &lt;/center&gt;
 &lt;br&gt;
 &lt;p&gt;In particular, they find a way to bring back Rorschach. Or, at least, &lt;em&gt;a&lt;/em&gt;
-Rorschach. This seems like the most controversial of the many decisions in the
-book, but it's handled deftly, and there are both similarities and differences
-between the old and the new Rorschach, making it an interesting character in
-its own right. In some ways this transformation is reminiscent of HBO
-Watchmen's treatment of Hooded Justice - retaining everything we already knew
-about the character, but performing an astonishing piece of narrative ju-jitsu
-to utterly transform everything about what that meant.&lt;/p&gt;
+Rorschach. Another individual picks up the mask. This seems like the most
+controversial of the many decisions in the book, but it's handled deftly, and
+there are both similarities and differences between the old and the new
+Rorschach, making it an interesting character in its own right. In some ways
+this transformation is reminiscent of HBO Watchmen's treatment of Hooded
+Justice - retaining everything we already knew about the character, but
+performing an astonishing piece of narrative ju-jitsu to utterly transform
+everything about what that meant.&lt;/p&gt;
 &lt;p&gt;The DC heroes slowly realize their world is being altered by Dr Manhattan's
 manipulations, tying this crossover into the latest of the DC universe's
 "crisis" events, as Manhattan experiments with this reality, in order to
@@ -51,20 +147,24 @@ understand it. In doing so, he uncovers deep truths that affect the
 inter-relationship between all the DC time-lines and universes, establishing
 that historical stories, such as Superman's original appearance in Action
 Comics of the 1930s, represent realities that still exist, out in the
-multiverse, unaffected by subsequent re-ploughing that forever drives
-Superman's origin story further forward in time over the years. All these
-worlds, including the various DC pre-crisis worlds, are accessible to
+multiverse, unaffected by subsequent commercial re-ploughing that forever
+drives Superman's origin story further forward in time over the years. All
+these worlds, including the various DC pre-crisis worlds, are accessible to
 Manhattan's powers.&lt;/p&gt;
 &lt;p&gt;Incidentally, this enables DC to undo the changes wrought by the last few
-years unpopular "new 52" era: The Justice League's alternate roster, the early
-death of Clark's parents, which distances Superman from humanity and changes
-the character dramatically, the loss of the Justice Society of America from
-Earth, and the loss of Wally West's Flash. All these and more are written off
-as the effects of Dr Manhattan's meddling, isolated and preserved in just
-another spun-off part of the multiverse, and jettisoned from the privileged
-&lt;em&gt;metaverse&lt;/em&gt;, the core template from which all multiversal threads are forged,
-as it reverts to more-or-less its former state when Manhattan's changes are
-undone during &lt;em&gt;Doomsday Clock&lt;/em&gt;'s story.&lt;/p&gt;
+years' unpopular "New 52" era. This meant nothing to me when I started reading,
+I know basically nothing about American comics, only being familiar with the
+fabulous British &lt;em&gt;2000AD&lt;/em&gt;. I was spurred into reading around the DC lore, and by
+the time I was done, I understood that the &lt;em&gt;New 52&lt;/em&gt; reality included things
+like The Justice League's alternate roster, the early death of Clark's parents,
+which distances Superman from humanity and changes the character dramatically,
+the loss of the Justice Society of America from Earth, and the loss of Wally
+West's Flash. All these and more are written off as the effects of Dr
+Manhattan's meddling, isolated and preserved in just another spun-off part of
+the multiverse, while being jettisoned from the privileged &lt;em&gt;metaverse&lt;/em&gt;, the
+core template from which all subsequent multiversal threads are forged, as it
+reverts to more-or-less its former state when Manhattan's changes are undone
+during &lt;em&gt;Doomsday Clock&lt;/em&gt;'s story.&lt;/p&gt;
 &lt;p&gt;In doing all this, Manhattan exhibits his usual clinical detachment from the
 human consequences of his actions, setting himself up as the villain of the
 piece, an uncaring "being of inaction", in contrast to Superman, the literal
@@ -79,20 +179,21 @@ in what they represent as symbols. Particularly the value of &lt;em&gt;hope&lt;/
 personified by Superman, which - quite literally, in this tale - makes all
 other things possible.&lt;/p&gt;
 &lt;p&gt;I was especially pleased with the quiet, understated places Doomsday Clock goes
-with &lt;em&gt;Mothman's&lt;/em&gt;, back-story. The character in &lt;em&gt;Watchmen&lt;/em&gt; was little more than
-a punchline, recurring throwaway references to mental instability and
-alcoholism. But here we see him fully-fleshed out. Like the rest of the
-&lt;em&gt;Watchmen&lt;/em&gt; heroes, bereft of any magical superhuman powers, but still able to
-pull off entirely unexpected and superhuman-seeming stunts, merely by virtue of
-possessing their own unique kinds of extreme mental or emotional
-resourcefulness, and working very hard at it.&lt;/p&gt;
-&lt;p&gt;Flawed, but aware of his faults, and able to pull it together to be a beacon of
-warmth, kindness, and generosity which transforms the path of Rorschach II, who
-he befriends during their overlapping stay in a mental institution - a symbol,
-if you will, that just as &lt;em&gt;Watchmen's&lt;/em&gt; ruthless gaze influenced the wider world
-of comics, so the comic world gazes back. They see us, all the real-world,
-fully-rounded humans, trapped in the depths of our pathos, and they wonder,
-when will each of us find our means to &lt;em&gt;fly...&lt;/em&gt;&lt;/p&gt;
+with &lt;em&gt;Mothman's&lt;/em&gt;, back-story. The character in &lt;em&gt;Watchmen&lt;/em&gt; was only a punchline,
+a recurring throwaway reference to instability and alcoholism, telegraphing his
+subsequent mental breakdown. But here, we see him fully fleshed out.&lt;/p&gt;
+&lt;p&gt;Like the rest of the &lt;em&gt;Watchmen&lt;/em&gt; heroes, he has no magical superhuman powers,
+but is still able to pull off entirely unexpected and superhuman-seeming
+stunts, merely by the virtue of his own unique kind of extreme mental and
+emotional resourcefulness. Flawed, but aware of his faults, and able to pull it
+together, he befriends the younger Rorschach II during their overlapping stays
+in a mental institution, becoming a beacon of warmth, kindness, and generosity
+to the younger man.&lt;/p&gt;
+&lt;p&gt;He acts as a symbol, if you will, that just as &lt;em&gt;Watchmen's&lt;/em&gt; ruthless gaze
+influenced the wider world of comics, so the comic world gazes back. They see
+us, all the real-world, fully-rounded humans, trapped in the depths of our
+pathos, and they wonder, when will each of us learn to transcend our humdrum
+limitations, to act on our hopes and dreams, and &lt;em&gt;fly...&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
 &lt;img alt="Doomsday Clock: Mothman" src="https://www.tartley.com/files/2022/doomsday-clock-mothman.webp"&gt;
 &lt;/center&gt;
@@ -1388,20 +1489,4 @@ couple of novels of recent years, Mary Renault's absolutely fabulous &lt;em&gt;T
 Must Die&lt;/em&gt; and &lt;em&gt;The Bull From the Sea&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Circe is my favorite book of the year so far, beating out even the marvellous
 &lt;em&gt;&lt;a href="https://www.tartley.com/posts/klara-and-the-sun"&gt;Klara and the Sun&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>fantasy</category><category>fiction</category><category>media</category><category>mythology</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/circe/</guid><pubDate>Sun, 20 Mar 2022 03:14:53 GMT</pubDate></item><item><title>Project Hail Mary</title><link>https://www.tartley.com/posts/project-hail-mary/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Project Hail Mary cover" src="https://www.tartley.com/files/2022/project-hail-mary-cover.webp"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;A lot of people really like this, but it really isn't for me. The plot
-is an eerie recreation of the author's previous (and superior) big hit,
-&lt;em&gt;The Martian&lt;/em&gt;, in which an astronaut finds themselves unexpectedly alone on an
-ambitious space mission, and has to science the shit out of things (by which we
-mean deploy some high-school science trivia, along with a penchant for very
-ordinary mental arithmetic) to save the day.&lt;/p&gt;
-&lt;p&gt;A badly written, distractingly unconvincing, and ultimately deeply annoying
-collision between hard science fiction and hand-wavy nonsense, with no literate
-themes, no higher meanings, no lurking Jungian archetypes - no mythology to it
-at all. Just a succession of edge-of-the-seat will-he-or-won't-he survive tense
-moments... Then: Yay, it worked, he did it! But &lt;em&gt;in space!&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Not even worth engaging the subjectivity-proof rating system for this one.&lt;/p&gt;
-&lt;p&gt;Rating: 2/10. I did finish it, but I wish I hadn't.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/project-hail-mary/</guid><pubDate>Mon, 14 Feb 2022 02:07:47 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>fantasy</category><category>fiction</category><category>media</category><category>mythology</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/circe/</guid><pubDate>Sun, 20 Mar 2022 03:14:53 GMT</pubDate></item></channel></rss>

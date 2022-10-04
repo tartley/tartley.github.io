@@ -1,5 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 23 Sep 2022 18:47:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>New Laptop Time!</title><link>https://www.tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 04 Oct 2022 22:33:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
+&lt;img alt="Spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+&lt;p&gt;I can't stress enough how this write-up is filled with spoilers. If there is any
+chance you'll play &lt;em&gt;Soma&lt;/em&gt;, don't read this! But it's a seven-year old game, so
+I'm not holding back.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;center&gt;
+&lt;img alt="Soma - protagonist" src="https://www.tartley.com/files/2022/soma-protagonist.webp"&gt;
+&lt;/center&gt;&lt;br&gt;
+&lt;p&gt;A creepy survival horror game that leans deeply into the moral and existential
+quandaries arising from scanning one's brain and copying the resulting conciousness
+into alternate receptacles.&lt;/p&gt;
+&lt;p&gt;I loved the setup. A humdrum medical appointment in present-day Toronto
+requires you to sit still for an experimental new type of brain scan, run by a
+PhD, set up in a cable-strewn side office. Sit in the chair, don the helmet,
+wait for the scan to complete and- blink! Suddenly you are elsewhere.&lt;/p&gt;
+&lt;p&gt;It becomes evident that you have awoken to the year 2104, and the recorded brain scans
+of real humans are being used to animate various robots and drones. Backups and
+fall-backs have yanked your ancient brain scan to inhabit an advanced humanoid
+robot, in a decrepit cyberpunk base, deep under the ocean, some time after a
+comet strike has scoured all life from the planet's surface.&lt;/p&gt;
+&lt;p&gt;If that weren't bad enough, the base is invaded by disgusting black goo. This
+infiltrates electrical and biological circuits, mimicking and improving upon
+their functionality. Portions of this host a malevolent AI, and has grown
+probing tendrils throughout the environment. It infects wildlife, producing
+evil-looking hybrid creatures. And, not least, it has a habit of reanimating
+the corpses of the last few humans, who skulk around, not in a good way. As our
+protagonist asks, incredulously, "You mean they've been brought back to life?".
+Our reassuring AI helper replies "Let's call it that."&lt;/p&gt;
+&lt;p&gt;The game borrows the highly effective mechanics of &lt;em&gt;Frictional's&lt;/em&gt; previous games,
+where the proximity of - or even just catching sight of - your horrific,
+shambling enemies cause your character to experience debilitating symptoms,
+including, in this case, static-y visual distortions. Your only chance to
+survive encounters is to stay well out of sight, and avert your eyes so you
+can't even watch what's going on. This turns out to be fabulously scary and
+atmospheric.&lt;/p&gt;
+&lt;p&gt;Spurring us along are not just threats to our immediate survival, but also
+the adoption of a project, to launch the 'ARK' into space, a solar-powered
+simulation hosting the last remaining brain scans of the now-defunct
+human race, so that they might live a prolonged period of idyllic virtual
+existence, preserving at least some echo of what humanity was.&lt;/p&gt;
+&lt;p&gt;We are accompanied by "Catherine", a simulated personality running on our
+hand-held omni-tool, based on a brain recording of an AI researcher, whose
+project during her lifetime was the ARK. Plugging her in to a wall or console
+socket lets her interface with our surroundings, activating power supplies and
+manipulating machinery. Aside from that, she provides context, guidance and
+motivation, leading you through a series of undersea facilities, linked by
+trains, submersibles, and the occasional disorienting trudge across the murky
+ocean floor, stirred up by ferocious currents and landslides. I found these
+some of the absolute best atmospheric "walking simulator" moments I've
+experienced in a game.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;center&gt;
+&lt;img alt="The ocean floor, stirred up by currents and landslides" src="https://www.tartley.com/files/2022/soma-murky.webp"&gt;
+&lt;br&gt;Is that another distant light up ahead? Good luck finding them while the currents pummel you,
+and hideous, deadly beasts loom out of the murk.
+&lt;/center&gt;&lt;br&gt;
+&lt;p&gt;Along the way, we encounter a few unforgettable scenarios. We find the failing
+storage system from which the last remaining copy of our brain scan resides.
+I flipped some buttons to delete it, prompting my character to respond with
+something like "Let this be the last time I wake up in this godforsaken place."&lt;/p&gt;
+&lt;p&gt;We find ourselves trapped in a few rooms at the bottom of the ocean, with the
+gibbering undead hammering on the door from the next room. There is an airlock
+leading out into the ocean, but we would be crushed at this depth. There is no
+way out. Luckily, Catherine is able to guide us into assembling a more robust
+robot, one capable of withstanding the pressure - all we have to do is sit in
+the chair and activate the transfer into it. We already did this once, back in
+Toronto. Easy.&lt;/p&gt;
+&lt;p&gt;Except, after the transfer, we glance back across the lab at our original - the
+chap pictured up top - who, we notice, is still breathing. Asking Catherine
+about it, she reminds us that the brain scan is not a destructive operation.
+He's still in there, chemically subdued for the moment, but he'll soon wake up
+again, wondering why the transfer didn't work. So we are left with the choice
+of stomping out of the airlock to safety, leaving him behind to his nightmarish
+fate. Or flipping the switch to deactivate him before we go.&lt;/p&gt;
+&lt;p&gt;Similarly, later in the journey, we finally stumble across an
+honest-to-goodness real, live human being. She describes how the rest of them
+will be gathered back in particular locations, while she stayed to protect the
+ARK. But, we tell her, we just passed through those locations, and there were
+no humans remaining there. We both know that the planet's surface is sterile. A
+beat passes before she announces "So I'm the last human being left alive."
+She's deathly sick, and without hope. By the end of your interactions she asks
+you to turn off her life-support before you leave, and stay with her for her
+last moments. So this is how it ends.&lt;/p&gt;
+&lt;p&gt;Carrying on, because what else is left to do? We finally we get the ARK loaded
+into the launch system that delivers it to orbit, upload our brain scans onto
+it just before it launches, and - we've done it! Success!&lt;/p&gt;
+&lt;p&gt;There was a moment, about five minutes before the end, when I realized what
+was going to happen here, even though my character had not. I envied him for
+his naive hope. For believing there was still a way out. For, of course, the
+ARK's launch changed nothing for us. Our simulations are aboard it, but we are
+still sitting here, in a rotting robot corpse in a collapsing facility at the
+bottom of a haunted ocean on a dead planet. The copy will enjoy life on the
+ARK, but we - like the copy of ourselves we left behind earlier - are stuck
+here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>New Laptop Time!</title><link>https://www.tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="A laptop" src="https://www.tartley.com/files/2008/02/lappy.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;My employer, Canonical, has a "bring your own hardware" policy, trusting that
@@ -1049,31 +1141,4 @@ madness.&lt;/p&gt;
 &lt;p&gt;The above modifies alt-tab to just cycle through all windows, ungrouped,
 which fixes the ability to toggle between last two windows. Also,
 alt-grave is provided as an alternative to cycle backwards through the
-windows, which is easier to hit than shift-alt-tab.&lt;/p&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/automate-gnome-keybindings/</guid><pubDate>Thu, 05 Oct 2017 01:06:47 GMT</pubDate></item><item><title>Postscript formatted man pages</title><link>https://www.tartley.com/posts/postscript-formatted-man-pages/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;man&lt;/code&gt; and its &lt;code&gt;troff&lt;/code&gt; formatting can be asked to produce postscript
-output. Define a Bash function, e.g. in your .bashrc:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;function&lt;/span&gt; psman &lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-    &lt;span class="nv"&gt;SLUG&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$@&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; tr &lt;span class="s1"&gt;' '&lt;/span&gt; &lt;span class="s1"&gt;'-'&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
-    &lt;span class="nv"&gt;FNAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"/tmp/man-&lt;/span&gt;&lt;span class="nv"&gt;$SLUG&lt;/span&gt;&lt;span class="s2"&gt;.pdf"&lt;/span&gt;
-    &lt;span class="nb"&gt;set&lt;/span&gt; -o pipefail
-    man -t &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; ps2pdf - &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$FNAME&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-      nohup evince &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$FNAME&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &amp;gt;/dev/null &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null
-    &lt;span class="nb"&gt;set&lt;/span&gt; +o pipefail
-&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;(I tried to do this without tempfiles, using process substitution, &lt;a href="https://superuser.com/questions/1243405"&gt;but
-failed. Anyone got better
-Bash-fu&lt;/a&gt;?)&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;man -t&lt;/code&gt; is the crucial part. It tells &lt;code&gt;man&lt;/code&gt; to produce output in
-postscript format, which &lt;code&gt;ps2pdf&lt;/code&gt; can read, and &lt;code&gt;evince&lt;/code&gt; displays the
-PDF. We disconnect the evince process using &lt;code&gt;nohup&lt;/code&gt;, so that it lives on
-even if we kill the terminal. We `set -o pipefail` so that if `man`
-fails, the exit code is preserved as the exit of `man|ps2pdf`, which
-causes the `&amp;amp;&amp;amp;` to short-circuit, preventing evince from being run on
-an empty pdf document. We restore `+o pipefail` again at the end.&lt;/p&gt;
-&lt;p&gt;Then, from the command line:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ psman tr
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;produces&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;img alt="" src="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/postscript-formatted-man-pages/</guid><pubDate>Wed, 23 Aug 2017 01:34:02 GMT</pubDate></item></channel></rss>
+windows, which is easier to hit than shift-alt-tab.&lt;/p&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/automate-gnome-keybindings/</guid><pubDate>Thu, 05 Oct 2017 01:06:47 GMT</pubDate></item></channel></rss>
