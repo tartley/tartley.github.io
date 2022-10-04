@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about videogame)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/videogame.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 04 Oct 2022 22:33:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about videogame)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/videogame.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 04 Oct 2022 23:54:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
 &lt;img alt="Spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;I can't stress enough how this write-up is filled with spoilers. If there is any
 chance you'll play &lt;em&gt;Soma&lt;/em&gt;, don't read this! But it's a seven-year old game, so
@@ -10,15 +10,16 @@ I'm not holding back.&lt;/p&gt;
 &lt;p&gt;A creepy survival horror game that leans deeply into the moral and existential
 quandaries arising from scanning one's brain and copying the resulting conciousness
 into alternate receptacles.&lt;/p&gt;
-&lt;p&gt;I loved the setup. A humdrum medical appointment in present-day Toronto
-requires you to sit still for an experimental new type of brain scan, run by a
-PhD, set up in a cable-strewn side office. Sit in the chair, don the helmet,
-wait for the scan to complete and- blink! Suddenly you are elsewhere.&lt;/p&gt;
-&lt;p&gt;It becomes evident that you have awoken to the year 2104, and the recorded brain scans
-of real humans are being used to animate various robots and drones. Backups and
-fall-backs have yanked your ancient brain scan to inhabit an advanced humanoid
-robot, in a decrepit cyberpunk base, deep under the ocean, some time after a
-comet strike has scoured all life from the planet's surface.&lt;/p&gt;
+&lt;p&gt;I loved the setup. A humdrum morning starting at your present-day Toronto
+apartment leads to a medical appointment, which requires you to sit still for
+an experimental new type of brain scan, run by a PhD, set up in a cable-strewn
+side office. Sit in the chair, don the helmet, wait for the scan to complete
+and- blink! Suddenly you are elsewhere.&lt;/p&gt;
+&lt;p&gt;It becomes evident that you have awoken to the year 2104, and the recorded
+brain scans of real humans are being used to animate various robots and drones.
+Backups and fall-backs have yanked your ancient brain scan to inhabit an
+advanced humanoid robot, in a decrepit cyberpunk base, deep under the ocean,
+some time after a comet strike has scoured all life from the planet's surface.&lt;/p&gt;
 &lt;p&gt;If that weren't bad enough, the base is invaded by disgusting black goo. This
 infiltrates electrical and biological circuits, mimicking and improving upon
 their functionality. Portions of this host a malevolent AI, and has grown
@@ -26,21 +27,25 @@ probing tendrils throughout the environment. It infects wildlife, producing
 evil-looking hybrid creatures. And, not least, it has a habit of reanimating
 the corpses of the last few humans, who skulk around, not in a good way. As our
 protagonist asks, incredulously, "You mean they've been brought back to life?".
-Our reassuring AI helper replies "Let's call it that."&lt;/p&gt;
-&lt;p&gt;The game borrows the highly effective mechanics of &lt;em&gt;Frictional's&lt;/em&gt; previous games,
-where the proximity of - or even just catching sight of - your horrific,
-shambling enemies cause your character to experience debilitating symptoms,
-including, in this case, static-y visual distortions. Your only chance to
-survive encounters is to stay well out of sight, and avert your eyes so you
+Our reassuring AI companion replies "Yeah, let's call it that."&lt;/p&gt;
+&lt;p&gt;The game borrows the highly effective mechanics of &lt;em&gt;Frictional's&lt;/em&gt; previous
+games, where the proximity of your horrific, shambling enemies cause your
+character to experience debilitating symptoms, including, in this case,
+static-y visual distortions as your neural hardware suffers from some
+interference they emit. This applies even if you simply look at them, an act
+which seems to enrage them all the more. So Your only chance to survive
+encounters is to stay well out of sight, and actively avert your eyes so you
 can't even watch what's going on. This turns out to be fabulously scary and
-atmospheric.&lt;/p&gt;
+atmospheric, and lead directly to Susan catching me hiding in a dark cupboard,
+staring at blackness for a prolonged period with a peculiar expression on my
+face.&lt;/p&gt;
 &lt;p&gt;Spurring us along are not just threats to our immediate survival, but also
 the adoption of a project, to launch the 'ARK' into space, a solar-powered
 simulation hosting the last remaining brain scans of the now-defunct
 human race, so that they might live a prolonged period of idyllic virtual
 existence, preserving at least some echo of what humanity was.&lt;/p&gt;
 &lt;p&gt;We are accompanied by "Catherine", a simulated personality running on our
-hand-held omni-tool, based on a brain recording of an AI researcher, whose
+hand-held omni-tool, based on the brain recording of an AI researcher, whose
 project during her lifetime was the ARK. Plugging her in to a wall or console
 socket lets her interface with our surroundings, activating power supplies and
 manipulating machinery. Aside from that, she provides context, guidance and
@@ -55,16 +60,17 @@ experienced in a game.&lt;/p&gt;
 and hideous, deadly beasts loom out of the murk.
 &lt;/center&gt;&lt;br&gt;
 &lt;p&gt;Along the way, we encounter a few unforgettable scenarios. We find the failing
-storage system from which the last remaining copy of our brain scan resides.
-I flipped some buttons to delete it, prompting my character to respond with
-something like "Let this be the last time I wake up in this godforsaken place."&lt;/p&gt;
-&lt;p&gt;We find ourselves trapped in a few rooms at the bottom of the ocean, with the
-gibbering undead hammering on the door from the next room. There is an airlock
-leading out into the ocean, but we would be crushed at this depth. There is no
-way out. Luckily, Catherine is able to guide us into assembling a more robust
-robot, one capable of withstanding the pressure - all we have to do is sit in
-the chair and activate the transfer into it. We already did this once, back in
-Toronto. Easy.&lt;/p&gt;
+storage system in which the last remaining copy of our brain scan resides. I
+decided to flip some buttons which deleted it, prompting my character to
+respond with something like "Let this be the last time I wake up in this
+godforsaken place."&lt;/p&gt;
+&lt;p&gt;At another point, we find ourselves trapped in a few rooms at the bottom of the
+ocean, with the gibbering undead hammering on the door from the next room.
+There is an airlock leading out into the ocean, but we would be crushed at this
+depth. There is no way out. Luckily, Catherine is able to guide us into
+assembling a more robust robot, one capable of withstanding the pressure - all
+we have to do is sit in the chair and activate the transfer into it. We already
+did this once, back in Toronto. Easy.&lt;/p&gt;
 &lt;p&gt;Except, after the transfer, we glance back across the lab at our original - the
 chap pictured up top - who, we notice, is still breathing. Asking Catherine
 about it, she reminds us that the brain scan is not a destructive operation.
@@ -81,7 +87,7 @@ beat passes before she announces "So I'm the last human being left alive."
 She's deathly sick, and without hope. By the end of your interactions she asks
 you to turn off her life-support before you leave, and stay with her for her
 last moments. So this is how it ends.&lt;/p&gt;
-&lt;p&gt;Carrying on, because what else is left to do? We finally we get the ARK loaded
+&lt;p&gt;Carrying on, because what else is there to do? We finally we get the ARK loaded
 into the launch system that delivers it to orbit, upload our brain scans onto
 it just before it launches, and - we've done it! Success!&lt;/p&gt;
 &lt;p&gt;There was a moment, about five minutes before the end, when I realized what
