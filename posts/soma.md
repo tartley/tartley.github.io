@@ -28,10 +28,10 @@ wait for the scan to complete and- blink! Suddenly you are elsewhere.
 It becomes evident that you have awoken to the year 2104, and the recorded brain scans
 of real humans are being used to animate various robots and drones. Backups and
 fall-backs have yanked your ancient brain scan to inhabit an advanced humanoid
-robot, in a filthy cyberpunk base, deep under the ocean, some time after a
+robot, in a decrepit cyberpunk base, deep under the ocean, some time after a
 comet strike has scoured all life from the planet's surface.
 
-If that weren't bad enough, the base is invaded by some filthy black goo. This
+If that weren't bad enough, the base is invaded by disgusting black goo. This
 infiltrates electrical and biological circuits, mimicking and improving upon
 their functionality. Portions of this host a malevolent AI, and has grown
 probing tendrils throughout the environment. It infects wildlife, producing
@@ -108,9 +108,10 @@ it just before it launches, and - we've done it! Success!
 
 There was a moment, about five minutes before the end, when I realized what
 was going to happen here, even though my character had not. I envied him for
-his naive hope. For believing there was still a way out. For, of course, for
-us, nothing has changed. The ARK is away, and our simulations are aboard it,
-but we are still sitting here, in a rotting robot corpse in a collapsing
-facility at the bottom of a filthy, haunted ocean on a dead planet. The copy
-will enjoy life on the ARK, but we are stuck here for good. Roll credits.
+his naive hope. For believing there was still a way out. For, of course, the
+ARK's launch changed nothing for us. Our simulations are aboard it, but we are
+still sitting here, in a rotting robot corpse in a collapsing facility at the
+bottom of a haunted ocean on a dead planet. The copy will enjoy life on the
+ARK, but we - like the copy of ourselves we left behind earlier - are stuck
+here for good. Roll credits.
 
