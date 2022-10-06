@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about refried)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/refried.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Sep 2022 15:37:51 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cross-site image linking vandalism</title><link>https://www.tartley.com/posts/cross-site-image-linking-vandalism/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="New Super Mario Brothers... or is it?" src="https://www.tartley.com/files/2007/03/new-super-mario-bros2.jpg"&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about refried)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/refried.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 06 Oct 2022 16:10:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cross-site image linking vandalism</title><link>https://www.tartley.com/posts/cross-site-image-linking-vandalism/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="New Super Mario Brothers... or is it?" src="https://www.tartley.com/files/2007/03/new-super-mario-bros2.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;It never gets old. Thank you for the giggles, &lt;a href="http://vgfreedom.blogspot.com/2008/06/podcast-review-new-super-mario-bros.html"&gt;Video Game
 Freedom&lt;/a&gt;.&lt;/p&gt;</description><category>creative</category><category>gumby</category><category>image</category><category>linking</category><category>refried</category><category>tartley.com</category><category>vandalism</category><category>web</category><guid>https://www.tartley.com/posts/cross-site-image-linking-vandalism/</guid><pubDate>Thu, 05 Jun 2008 22:17:28 GMT</pubDate></item><item><title>Just Married!</title><link>https://www.tartley.com/posts/just-married/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://www.tartley.com/files/2008/05/wed.jpg"&gt;&lt;img alt="Just Married!" src="https://www.tartley.com/files/2008/05/wed.jpg" title="Just Married!"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;At
@@ -30,29 +30,37 @@ these online, listed below:&lt;/p&gt;
 &lt;li&gt;&lt;a href="http://www.flickr.com/photos/aaronindenver/sets/72157604336077174/"&gt;Aaron's&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.brownsolutions.biz/administrator/components/gallery/JBs-Wedding"&gt;Al Brown's&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.facebook.com/album.php?page=1&amp;amp;aid=20525&amp;amp;id=509123606"&gt;Alia's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Amanda's&lt;/li&gt;
+&lt;li&gt;Amanda's&lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.facebook.com/album.php?aid=19098&amp;amp;id=501388030&amp;amp;op=80"&gt;one&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.facebook.com/album.php?aid=19099&amp;amp;id=501388030&amp;amp;op=80"&gt;two&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://photos.walmart.com/shareephotolib/p=120121210651609191/l=10368438/g=17690942/cobrandOid=1011/otsc=SYE/otsi=SALB/pns/share/p=120121210651609191/l=10368438/g=17690942/cobrandOid=1011/otsc=SYE/otsi=SALB"&gt;Anita's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Batty's:&lt;/li&gt;
+&lt;li&gt;Batty's:&lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.flickr.com/photos/ebatty/sets/72157604321078488/"&gt;ceremony&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.flickr.com/photos/ebatty/sets/72157604370499812/"&gt;Tulum&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.facebook.com/album.php?aid=104393&amp;amp;id=806225359&amp;amp;op=60"&gt;Harry's&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.facebook.com/album.php?aid=44698&amp;amp;id=626416349&amp;amp;op=80"&gt;Jules'&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://picasaweb.google.com/marci.pierce/Tulum"&gt;Marci's&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://flickr.com/photos/neil_stone/sets/72157604415231580/"&gt;Neil's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Nixta's&lt;/li&gt;
+&lt;li&gt;Nixta's&lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.flickr.com/photos/flixta/sets/72157604378814124/"&gt;wedding&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.flickr.com/photos/flixta/sets/72157604374702326/"&gt;environs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.flickr.com/photos/ebatty/collections/72157600828965024/"&gt;Peter's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Phil's&lt;/li&gt;
+&lt;li&gt;Phil's&lt;ul&gt;
 &lt;li&gt;&lt;a href="http://frosties.com/index.php?option=com_gallery2&amp;amp;Itemid=28&amp;amp;g2_itemId=33451"&gt;one&lt;/a&gt;,&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://frosties.com/index.php?option=com_gallery2&amp;amp;Itemid=28&amp;amp;g2_itemId=33552"&gt;two&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://frosties.com/index.php?option=com_gallery2&amp;amp;Itemid=28&amp;amp;g2_itemId=33653"&gt;three&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.facebook.com/album.php?aid=33845&amp;amp;id=513030422&amp;amp;op=60"&gt;Steve's&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://picasaweb.google.com/tiva.montalbano/SusanAndJBTulumMarch2008?authkey=5bI2u0vkCWo"&gt;Tiva's&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.flickr.com/photos/atonks/sets/72157604418837612/"&gt;Tonk's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.kodakgallery.com/I.jsp?c=37w0p9r.3r4uaqjj&amp;amp;x=0&amp;amp;y=tbhnex&amp;amp;localeid=en_US"&gt;Will's&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;Will's&lt;/del&gt; (Kodak Gallery is now defunct)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;If there are more that we haven't yet seen, please
 &lt;a href="mailto:tartley@tartley.com"&gt;let us know&lt;/a&gt;!&lt;/p&gt;</description><category>journal</category><category>refried</category><guid>https://www.tartley.com/posts/just-married/</guid><pubDate>Wed, 23 Apr 2008 18:16:36 GMT</pubDate></item><item><title>Actual vs Perceived threats (aka People are Crazy)</title><link>https://www.tartley.com/posts/actual-vs-perceived-threats-aka-people-are-crazy/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="http://www.susannahertrich.com/html/humansanimals.html"&gt;&lt;img alt="Actual vs Perceived threats" src="https://www.tartley.com/files/2008/02/0aelecrtromshjoi9.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
