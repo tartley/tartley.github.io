@@ -5,47 +5,74 @@
 .. tags: linux,music,til,youtube,command-line
 -->
 
-Install ffmpeg:
+For the sort of weirdos who still host their own music files, but aren't
+preciously audiophile about it. Aaaaand also I'm wording this with the
+assumption you're a Linux, command-line and Python nerd.
+
+Sometimes it's a video which is explicitly Creative Commons. Other times, it's
+a friend's otherwise unpublished non-commercial thing. Or maybe it's a massive
+commercial product from a famously litigious corporate behemoth, but you've
+already bought the soundtrack and you just really *really* wish you had a
+version which had the exact same sound effects or dialog or arrangement that
+you or your child has grown to love from obsessive movie re-watches.
+
+I've got ya.
+
+## One-off setup:
+
+Install [*ffmpeg*](https://ffmpeg.org/), a venerable open-source command-line
+video/audio conversion tool.
 
 ```bash
 sudo apt install ffmpeg
 ```
 
-Install `youtube-dl`, a tool to download YouTube videos. Using `apt` installs a
-version that's too old to work, so:
+Next, install [*pipx*](https://pypa.github.io/pipx/), a tool to install
+commmand-line tools that are distributed as Python packages:
 
 ```bash
-pip install --user pipsi
-pipsi install youtube-dl
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
 ```
 
-## The best way
-
-Tell youtube-dl to download the audio:
+Finally, use pipx to install the [*youtube-dl*](https://youtube-dl.org/), an
+oft-sued but never vanquished tool to download YouTube videos. (We're using
+the Python package because the apt package is too old to work):
 
 ```bash
-youtube-dl -x --audio-format=best URL
+pipx install youtube-dl
+```
+
+## Goal fulfillment
+
+Download your precious audio:
+
+```bash
+youtube-dl -x URL
 ```
 
 Where:
 
-* `-x` downloads just the audio part.
-* Audio format defaults to 'best', but can be "aac", "flac", "mp3", "m4a",
-  "opus", "vorbis", or "wav".
+* `-x` requests just the audio part, with no video.
 * URL is an encoded version of the video URL (youtu.be/XXX), obtained by
-  hitting the 'share' button on the youtube page.
+  hitting the 'share' button on the YouTube page.
+* Optionally, before the URL, you can insert `--audio-format=X`, where `X`
+  defaults to 'best', which means YouTube decides which one to send.
+  Alternatively, you can explicitly request "aac", "flac", "mp3", "m4a",
+  "opus", "vorbis", or "wav". As I understand it, YouTube will only send the
+  requested format if the uploader provided it. If they didn't then we get
+  whatever YouTube provides and then convert it locally using ffmpeg. So you
+  sometimes won't be getting the benefit of those lossless formats.
 
-As I understand it, it downloads whatever audio format YouTube provides,
-then converts it locally using ffmpeg, so you're not really getting the
-benefit of those lossless formats - mp3 is fine for
-[my](https://www.youtube.com/watch?v=VSJWvzLuGz8)
+But mp3 works well enough for [my](https://www.youtube.com/watch?v=VSJWvzLuGz8)
 [needs](https://www.youtube.com/watch?v=nyU1Pt2IXyE).
 
 ## My previous inferior way
 
-This method is worse because it downloads the whole video file before
+**Update:** This method is worse because it downloads the whole video file before
 extracting audio locally, and the download gets throttled by YouTube in some
-way, which of late is very slow indeed.
+way, which of late is very slow indeed, i.e. substantially slower than watching
+the video.
 
 Download the video from YouTube:
 
@@ -61,4 +88,15 @@ ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
 ```
 
 Where `-vn` disables video in the output.
+
+---
+
+### Changelog
+
+* 2023/02/14: Wide-ranging rewrite of prose to enliven, enlink, and clarify.
+* 2023/02/14: Swapped use of [*pipsi*](https://github.com/mitsuhiko/pipsi/)
+  tool, last released 2015, for *pipx*, which is more useful, well-maintained
+  and popular.
+* 2022: Added "Goal fulfillment" section, initially called "The Best Way", and
+  deprecated the previous method under "My previous inferior way".
 
