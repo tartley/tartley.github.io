@@ -45,27 +45,41 @@ pipx install youtube-dl
 
 ## Goal fulfillment
 
-Download your precious audio:
+Here, download your precious audio:
 
 ```bash
-youtube-dl -x URL
+youtube-dl -x --audio-format=best URL
 ```
 
 Where:
 
+* `URL` is the encoded version of the video URL (i.e. like "youtu.be/XXX"),
+  obtained by hitting the 'share' button on the YouTube page.
 * `-x` requests just the audio part, with no video.
-* URL is an encoded version of the video URL (youtu.be/XXX), obtained by
-  hitting the 'share' button on the YouTube page.
-* Optionally, before the URL, you can insert `--audio-format=X`, where `X`
-  defaults to 'best', which means YouTube decides which one to send.
-  Alternatively, you can explicitly request "aac", "flac", "mp3", "m4a",
-  "opus", "vorbis", or "wav". As I understand it, YouTube will only send the
-  requested format if the uploader provided it. If they didn't then we get
-  whatever YouTube provides and then convert it locally using ffmpeg. So you
-  sometimes won't be getting the benefit of those lossless formats.
+* While `--audio-format=best` is ostensibly the default setting, meaning
+  YouTube decides which format to send, using `-x` seems to fail if we don't
+  specify this explicitly. Alternatively, you can explicitly request "aac",
+  "flac", "mp3", "m4a", "opus", "vorbis", or "wav". As I understand it, YouTube
+  will only send the requested format if the uploader provided it. If they
+  didn't then we get whatever YouTube provides and then convert it locally
+  using ffmpeg. So you sometimes won't be getting the benefit of those lossless
+  formats.
 
 But mp3 works well enough for [my](https://www.youtube.com/watch?v=VSJWvzLuGz8)
-[needs](https://www.youtube.com/watch?v=nyU1Pt2IXyE).
+[needs](https://www.youtube.com/watch?v=ENVIoR2f-Qgh).
+
+Alternatively, for playlists:
+
+```bash
+youtube-dl -x --audio-format=best --yes-playlist -i URL
+```
+
+Where:
+
+* `--yes-playlist` / `--no-playlist` chooses which to download if the URL you
+  provide is both a playlist and a video.
+* `-i` ignores errors, so one bad track in the playlist doesn't stop the whole
+  thing.
 
 ## My previous inferior way
 
