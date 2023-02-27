@@ -83,10 +83,10 @@ Where:
 
 ## My previous inferior way
 
-**Update:** This method is worse because it downloads the whole video file before
-extracting audio locally, and the download gets throttled by YouTube in some
-way, which of late is very slow indeed, i.e. substantially slower than watching
-the video.
+This method is worse because it downloads the whole video file before
+extracting audio locally, and the download gets throttled by YouTube in
+some way, which of late is very slow indeed, i.e. substantially slower
+than watching the video.
 
 Download the video from YouTube:
 
