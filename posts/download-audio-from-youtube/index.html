@@ -16,14 +16,9 @@
 <meta property="og:site_name" content="tartley.com">
 <meta property="og:title" content="Download audio from YouTube">
 <meta property="og:url" content="https://www.tartley.com/posts/download-audio-from-youtube/">
-<meta property="og:description" content="Install ffmpeg:
-sudo apt install ffmpeg
-
-
-Install youtube-dl, a tool to download YouTube videos. Using apt installs a
-version that's too old to work, so:
-pip install --user pipsi
-pipsi install youtube">
+<meta property="og:description" content="For the sort of weirdos who still host their own music files, but aren't
+preciously audiophile about it. Aaaaand also I'm wording this with the
+assumption you're a Linux, command-line and Python nerd.">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2021-05-13T11:18:33-05:00">
 <meta property="article:tag" content="command-line">
@@ -99,39 +94,75 @@ pipsi install youtube">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <p>Install ffmpeg:</p>
+    <p>For the sort of weirdos who still host their own music files, but aren't
+preciously audiophile about it. Aaaaand also I'm wording this with the
+assumption you're a Linux, command-line and Python nerd.</p>
+<p>Sometimes it's a video which is explicitly Creative Commons. Other times, it's
+a friend's otherwise unpublished non-commercial thing. Or maybe it's a massive
+commercial product from a famously litigious corporate behemoth, but you've
+already bought the soundtrack and you just really <em>really</em> wish you had a
+version which had the exact same sound effects or dialog or arrangement that
+you or your child has grown to love from obsessive movie re-watches.</p>
+<p>I've got ya.</p>
+<h3>One-off setup:</h3>
+<p>Install <a href="https://ffmpeg.org/"><em>ffmpeg</em></a>, a venerable open-source command-line
+video/audio conversion tool.</p>
 <div class="code"><pre class="code literal-block">sudo apt install ffmpeg
 </pre></div>
 
-<p>Install <code>youtube-dl</code>, a tool to download YouTube videos. Using <code>apt</code> installs a
-version that's too old to work, so:</p>
-<div class="code"><pre class="code literal-block">pip install --user pipsi
-pipsi install youtube-dl
+<p>Next, install <a href="https://pypa.github.io/pipx/"><em>pipx</em></a>, a tool to install
+commmand-line tools that are distributed as Python packages:</p>
+<div class="code"><pre class="code literal-block">python3 -m pip install --user pipx
+python3 -m pipx ensurepath
 </pre></div>
 
-<h3>The best way</h3>
-<p>Tell youtube-dl to download the audio:</p>
+<p>Finally, use pipx to install the <a href="https://youtube-dl.org/"><em>youtube-dl</em></a>, an
+oft-sued but never vanquished tool to download YouTube videos. (We're using
+the Python package because the apt package is too old to work):</p>
+<div class="code"><pre class="code literal-block">pipx install youtube-dl
+</pre></div>
+
+<h3>Goal fulfillment</h3>
+<p>Here, download your precious audio:</p>
 <div class="code"><pre class="code literal-block">youtube-dl -x --audio-format<span class="o">=</span>best URL
 </pre></div>
 
 <p>Where:</p>
 <ul>
 <li>
-<code>-x</code> downloads just the audio part.</li>
-<li>Audio format defaults to 'best', but can be "aac", "flac", "mp3", "m4a",
-  "opus", "vorbis", or "wav".</li>
-<li>URL is an encoded version of the video URL (youtu.be/XXX), obtained by
-  hitting the 'share' button on the youtube page.</li>
+<code>URL</code> is the encoded version of the video URL (i.e. like "youtu.be/XXX"),
+  obtained by hitting the 'share' button on the YouTube page.</li>
+<li>
+<code>-x</code> requests just the audio part, with no video.</li>
+<li>While <code>--audio-format=best</code> is ostensibly the default setting, meaning
+  YouTube decides which format to send, using <code>-x</code> seems to fail if we don't
+  specify this explicitly. Alternatively, you can explicitly request "aac",
+  "flac", "mp3", "m4a", "opus", "vorbis", or "wav". As I understand it, YouTube
+  will only send the requested format if the uploader provided it. If they
+  didn't then we get whatever YouTube provides and then convert it locally
+  using ffmpeg. So you sometimes won't be getting the benefit of those lossless
+  formats.</li>
 </ul>
-<p>As I understand it, it downloads whatever audio format YouTube provides,
-then converts it locally using ffmpeg, so you're not really getting the
-benefit of those lossless formats - mp3 is fine for
-<a href="https://www.youtube.com/watch?v=VSJWvzLuGz8">my</a>
-<a href="https://www.youtube.com/watch?v=nyU1Pt2IXyE">needs</a>.</p>
+<p>But mp3 works well enough for <a href="https://www.youtube.com/watch?v=VSJWvzLuGz8">my</a>
+<a href="https://www.youtube.com/watch?v=ENVIoR2f-Qgh">needs</a>.</p>
+<p>Alternatively, for playlists:</p>
+<div class="code"><pre class="code literal-block">youtube-dl -x --audio-format<span class="o">=</span>best --yes-playlist -i URL
+</pre></div>
+
+<p>Where:</p>
+<ul>
+<li>
+<code>--yes-playlist</code> / <code>--no-playlist</code> chooses which to download if the URL you
+  provide is both a playlist and a video.</li>
+<li>
+<code>-i</code> ignores errors, so one bad track in the playlist doesn't stop the whole
+  thing.</li>
+</ul>
 <h3>My previous inferior way</h3>
-<p>This method is worse because it downloads the whole video file before
+<p><strong>Update:</strong> This method is worse because it downloads the whole video file before
 extracting audio locally, and the download gets throttled by YouTube in some
-way, which of late is very slow indeed.</p>
+way, which of late is very slow indeed, i.e. substantially slower than watching
+the video.</p>
 <p>Download the video from YouTube:</p>
 <div class="code"><pre class="code literal-block">youtube-dl URL
 </pre></div>
@@ -142,7 +173,17 @@ to discover that converting it into an mp3 requires just:</p>
 </pre></div>
 
 <p>Where <code>-vn</code> disables video in the output.</p>
-    </div>
+<hr>
+<h4>Changelog</h4>
+<ul>
+<li>2023/02/14: Wide-ranging rewrite of prose to enliven, enlink, and clarify.</li>
+<li>2023/02/14: Swapped use of <a href="https://github.com/mitsuhiko/pipsi/"><em>pipsi</em></a>
+  tool, last released 2015, for <em>pipx</em>, which is more useful, well-maintained
+  and popular.</li>
+<li>2022: Added "Goal fulfillment" section, initially called "The Best Way", and
+  deprecated the previous method under "My previous inferior way".</li>
+</ul>
+</div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/command-line/" rel="tag">command-line</a></li>
             <li><a class="tag p-category" href="../../categories/linux/" rel="tag">linux</a></li>
