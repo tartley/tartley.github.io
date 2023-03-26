@@ -73,7 +73,7 @@ intently at a blank, black screen for a prolonged period, with a peculiar
 expression on my face, as I hid in a dark cupboard waiting for the slithering
 sounds behind me to go away.
 
-Spurring through this environment are not just threats to our immediate
+Spurring us through this environment are not just threats to our immediate
 survival, but also the adoption of a project, to launch into space a
 solar-powered simulation, hosting all the last remaining brain scans of the
 now-defunct human race, known as the 'ARK'. This will allow the on-board sims
@@ -139,8 +139,8 @@ just passed through those locations, and there were no humans remaining there.
 We both know that the planet's surface is sterile. A beat passes before she
 announces "So I'm the last human being left alive." She's deathly sick, and
 without hope. By the end of your interactions she asks you to turn off her
-life-support before you leave, and stay with her for her last moments. So this
-is how humanity ends.
+life-support before you leave, and stay with her for her last wheezing moments.
+So this is how humanity ends.
 
 Carrying on, because what else is there to do? We finally we get the ARK loaded
 into the launch system that delivers it to orbit, upload our brain scans onto
