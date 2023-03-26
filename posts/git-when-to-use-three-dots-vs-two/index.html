@@ -5,17 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Git: When to use three dots vs two | tartley.com</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/">
+<link rel="canonical" href="https://tartley.com/posts/git-when-to-use-three-dots-vs-two/">
 <link rel="icon" href="../../welcome.gif" sizes="16x16">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
 <link rel="prev" href="../thoughts-on-nylas-how-we-deploy-code/" title="Thoughts on Nylas' &quot;How We Deploy Code&quot;" type="text/html">
 <link rel="next" href="../pyrochestermn/" title="PyRochesterMN" type="text/html">
 <meta property="og:site_name" content="tartley.com">
 <meta property="og:title" content="Git: When to use three dots vs two">
-<meta property="og:url" content="https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/">
+<meta property="og:url" content="https://tartley.com/posts/git-when-to-use-three-dots-vs-two/">
 <meta property="og:description" content="I endlessly misremember when to use '...' in git versus '..'. That ends
 today:
 To see the commits or diffs introduced by a branch (the filled circles ●):
@@ -43,7 +42,7 @@ To see the commits or diffs introduced by a branch (the filled circles ●):
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.tartley.com/">
+            <a class="navbar-brand" href="https://tartley.com/">
 
                 <span id="blog-title">tartley.com</span>
             </a>
@@ -52,13 +51,16 @@ To see the commits or diffs introduced by a branch (the filled circles ●):
         <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
-<a href="../../archive.html">Archive</a>
+<a href="../../archive.html">Posts</a>
                 </li>
 <li>
 <a href="../../categories/">Tags</a>
                 </li>
 <li>
-<a href="../../rss.xml">RSS feed</a>
+<a href="../../galleries/Drawings">Gallery</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS</a>
                 </li>
 <li>
 <a href="../../pages/about/">About</a>
@@ -67,7 +69,7 @@ To see the commits or diffs introduced by a branch (the filled circles ●):
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -82,6 +84,7 @@ To see the commits or diffs introduced by a branch (the filled circles ●):
         <!--Body content-->
         <div class="row">
             
+            
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Git: When to use three dots vs two</a></h1>
 
         <div class="metadata">
@@ -93,8 +96,10 @@ To see the commits or diffs introduced by a branch (the filled circles ●):
             <time class="published dt-published" datetime="2015-08-25T11:51:30-05:00" itemprop="datePublished" title="2015-08-25 11:51">2015-08-25 11:51</time></a>
             </p>
             
+
         </div>
         
+
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <p>I endlessly misremember when to use '...' in git versus '..'. That ends
 today:</p>
@@ -133,17 +138,17 @@ today:</p>
 
 <p>Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
 above that you almost always want:</p>
-<div class="code"><pre class="code literal-block">git diff m...f
+<div class="code"><pre class="code literal-block">git<span class="w"> </span>diff<span class="w"> </span>m...f
 </pre></div>
 
 <p>is the same as</p>
-<div class="code"><pre class="code literal-block">git checkout f
-git diff m...
+<div class="code"><pre class="code literal-block">git<span class="w"> </span>checkout<span class="w"> </span>f
+git<span class="w"> </span>diff<span class="w"> </span>m...
 </pre></div>
 
 <p>or</p>
-<div class="code"><pre class="code literal-block">git checkout m
-git diff ...f
+<div class="code"><pre class="code literal-block">git<span class="w"> </span>checkout<span class="w"> </span>m
+git<span class="w"> </span>diff<span class="w"> </span>...f
 </pre></div>
 
 <p>Is there a word for unicode ascii art?</p>
@@ -168,6 +173,7 @@ git diff ...f
         <footer id="footer"></footer>
 </div>
 </div>
+
 
             <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Sep 2022 15:37:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 26 Mar 2023 04:51:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Format Python Snippets with Black.</title><link>https://tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -30,7 +30,7 @@ gained much enthusiasm.&lt;/p&gt;
 &lt;li&gt;Passes the result to Black.&lt;/li&gt;
 &lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><guid>https://tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;
@@ -38,13 +38,13 @@ bash command history when creating, etc?&lt;/p&gt;
 &lt;p&gt;Here goes then.&lt;/p&gt;
 &lt;p&gt;I have one LXD container running for each nontrivial development project I'm
 working on.&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ lxc ls
-&lt;span class="p"&gt;|&lt;/span&gt;    NAME     &lt;span class="p"&gt;|&lt;/span&gt;  STATE  &lt;span class="p"&gt;|&lt;/span&gt;        IPV4         &lt;span class="p"&gt;|&lt;/span&gt; IPV6 &lt;span class="p"&gt;|&lt;/span&gt;   TYPE    &lt;span class="p"&gt;|&lt;/span&gt; SNAPSHOTS &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; devicegw    &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.228 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; ident       &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.4 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;   &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; revs        &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.151 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; siab        &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.128 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; tartley-com &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.161 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;ls
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;NAME&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;STATE&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;IPV4&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;IPV6&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;TYPE&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;SNAPSHOTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;devicegw&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.228&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;ident&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.4&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;revs&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.151&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;siab&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.128&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;tartley-com&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.161&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Out of the gate we see one source of confusion. "LXD", the daemon, is a
@@ -52,10 +52,10 @@ newer project that builds on top of "LXC" the containers. However the user
 interface to all the new LXD-goodness is through a command-line called "lxc",
 which replaces the older command line tool called "lxd". :-/&lt;/p&gt;
 &lt;p&gt;To create a new one:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ &lt;span class="nb"&gt;time&lt;/span&gt; lxc launch ubuntu:16.04 -p default -p jhartley demo
-Creating demo
-Starting demo
-real    0m9.593s
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;time&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;launch&lt;span class="w"&gt; &lt;/span&gt;ubuntu:16.04&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;default&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;jhartley&lt;span class="w"&gt; &lt;/span&gt;demo
+Creating&lt;span class="w"&gt; &lt;/span&gt;demo
+Starting&lt;span class="w"&gt; &lt;/span&gt;demo
+real&lt;span class="w"&gt;    &lt;/span&gt;0m9.593s
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Once created, they take about 3 seconds to stop and 0.5 seconds to start.&lt;/p&gt;
@@ -72,48 +72,48 @@ real    0m9.593s
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Once a new container is up, we can execute commands directly on it:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ lxc &lt;span class="nb"&gt;exec&lt;/span&gt; demo hostname
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;exec&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;hostname
 demo
-$ lxc &lt;span class="nb"&gt;exec&lt;/span&gt; demo whoami
+$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;exec&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;whoami
 root
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Or SSH to them using their IP address:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460 $ lxc ls demo
-&lt;span class="p"&gt;|&lt;/span&gt; NAME &lt;span class="p"&gt;|&lt;/span&gt;  STATE  &lt;span class="p"&gt;|&lt;/span&gt;        IPV4         &lt;span class="p"&gt;|&lt;/span&gt; IPV6 &lt;span class="p"&gt;|&lt;/span&gt;   TYPE    &lt;span class="p"&gt;|&lt;/span&gt; SNAPSHOTS &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; demo &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.162 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-jhartley@t460 $ ssh &lt;span class="m"&gt;10&lt;/span&gt;.44.99.162
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;ls&lt;span class="w"&gt; &lt;/span&gt;demo
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;NAME&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;STATE&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;IPV4&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;IPV6&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;TYPE&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;SNAPSHOTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.162&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.162
 ...
-Warning: Permanently added &lt;span class="s1"&gt;'10.44.99.162'&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;ECDSA&lt;span class="o"&gt;)&lt;/span&gt; to the list of known hosts.
-Welcome to Ubuntu &lt;span class="m"&gt;16&lt;/span&gt;.04.6 LTS &lt;span class="o"&gt;(&lt;/span&gt;GNU/Linux &lt;span class="m"&gt;5&lt;/span&gt;.4.0-25-generic x86_64&lt;span class="o"&gt;)&lt;/span&gt;
-jhartley@demo $
+Warning:&lt;span class="w"&gt; &lt;/span&gt;Permanently&lt;span class="w"&gt; &lt;/span&gt;added&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'10.44.99.162'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;ECDSA&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;the&lt;span class="w"&gt; &lt;/span&gt;list&lt;span class="w"&gt; &lt;/span&gt;of&lt;span class="w"&gt; &lt;/span&gt;known&lt;span class="w"&gt; &lt;/span&gt;hosts.
+Welcome&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;Ubuntu&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;.04.6&lt;span class="w"&gt; &lt;/span&gt;LTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;GNU/Linux&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;.4.0-25-generic&lt;span class="w"&gt; &lt;/span&gt;x86_64&lt;span class="o"&gt;)&lt;/span&gt;
+jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Better than using IP addresses, you can run a DNS server to recognize
 &lt;code&gt;{containername}.lxd&lt;/code&gt; hostnames. (This part is from
 &lt;a href="https://discuss.linuxcontainers.org/t/a-way-to-resolve-container-lxd-from-host-in-all-cases/3698"&gt;here&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Find your lxd bridge IPv4 address&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;lxc network show lxdbr0
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;network&lt;span class="w"&gt; &lt;/span&gt;show&lt;span class="w"&gt; &lt;/span&gt;lxdbr0
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Create file &lt;code&gt;/etc/systemd/network/lxd.network&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;[Match]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;lxdbr0&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;[Match]&lt;/span&gt;
+&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;lxdbr0&lt;/span&gt;
 
-&lt;span class="k"&gt;[Network]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;Address&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR/24&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;DNS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;Domains&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;~lxd&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;[Network]&lt;/span&gt;
+&lt;span class="na"&gt;Address&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR/24&lt;/span&gt;
+&lt;span class="na"&gt;DNS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR&lt;/span&gt;
+&lt;span class="na"&gt;Domains&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;~lxd&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where IPADDR is the lxdbr0 IPv4 address.&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; systemd-networkd
-sudo reboot now
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;systemctl&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;enable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;systemd-networkd
+sudo&lt;span class="w"&gt; &lt;/span&gt;reboot&lt;span class="w"&gt; &lt;/span&gt;now
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Then:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460 $ ssh demo.lxd
-jhartley@demo $ &lt;span class="c1"&gt;# \o/&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;demo.lxd
+jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# \o/&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;One nice thing is that DNS works both from the host and on the containers,
@@ -122,11 +122,11 @@ SERVICE1.lxd, SERVICE2.lxd. Then running them in containers on your host
 they would just find each other. We don't actually do this, but it seems
 trivially easy to do. I should ask why we don't.&lt;/p&gt;
 &lt;p&gt;In practice I wrap up the ssh command with my accumulated foibles:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@demo $ &lt;span class="nb"&gt;type&lt;/span&gt; -a lssh
-lssh is a &lt;span class="k"&gt;function&lt;/span&gt;
-lssh &lt;span class="o"&gt;()&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-a&lt;span class="w"&gt; &lt;/span&gt;lssh
+lssh&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;function&lt;/span&gt;
+lssh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
 &lt;span class="o"&gt;{&lt;/span&gt;
-    &lt;span class="nv"&gt;TERM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xterm-color ssh -A -t &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.lxd"&lt;/span&gt; -- &lt;span class="s2"&gt;"cd &lt;/span&gt;&lt;span class="nv"&gt;$PWD&lt;/span&gt;&lt;span class="s2"&gt; &amp;amp;&amp;amp; exec &lt;/span&gt;&lt;span class="nv"&gt;$SHELL&lt;/span&gt;&lt;span class="s2"&gt; -l"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;TERM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xterm-color&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;-A&lt;span class="w"&gt; &lt;/span&gt;-t&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.lxd"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;--&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"cd &lt;/span&gt;&lt;span class="nv"&gt;$PWD&lt;/span&gt;&lt;span class="s2"&gt; &amp;amp;&amp;amp; exec &lt;/span&gt;&lt;span class="nv"&gt;$SHELL&lt;/span&gt;&lt;span class="s2"&gt; -l"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -136,7 +136,7 @@ is probably a simpler way.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;The booooooring bits:&lt;/p&gt;
 &lt;p&gt;When we started the container, we mentioned
-&lt;a href="https://www.tartley.com/files/2020/setup-lxd-profile.sh"&gt;a one-off setup script&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://tartley.com/files/2020/setup-lxd-profile.sh"&gt;a one-off setup script&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The script does a few things:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Creates a new key pair specifically to SSH to the container.&lt;/li&gt;
@@ -150,7 +150,7 @@ is probably a simpler way.&lt;/p&gt;
 &lt;li&gt;Doubtless due to my own misunderstanding somewhere, in order to get working
    IPv4 connections to my containers, I had to disable IPv6 connections to
    them.&lt;/li&gt;
-&lt;/ol&gt;</description><category>geek</category><category>linux</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Vonnegut on software development teams.</title><link>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;So here's a thing. Spotted this in some of Kurt Vonnegut's personal
+&lt;/ol&gt;</description><category>geek</category><category>linux</category><category>software</category><category>terminal</category><guid>https://tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Vonnegut on software development teams.</title><link>https://tartley.com/posts/vonnegut-on-software-development-teams/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;So here's a thing. Spotted this in some of Kurt Vonnegut's personal
 correspondence, talking about an instructor of his named Slotkin:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;What Slotkin said was this: no man who achieved greatness in the arts operated
@@ -169,7 +169,7 @@ effectiveness in assembling great individuals to create a great team.&lt;/p&gt;
 &lt;p&gt;But in my personal experience, there is a whole lot &lt;em&gt;more&lt;/em&gt; value in creating a
 great team by instilling the right values, and then watching the members
 visibly level each other up, producing a succession of great individuals,
-and only subsequently attracting more of the same.&lt;/p&gt;</description><category>culture</category><category>greatness</category><category>literature</category><category>software</category><category>vonnegut</category><guid>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</guid><pubDate>Mon, 01 Jul 2019 02:28:04 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
+and only subsequently attracting more of the same.&lt;/p&gt;</description><category>culture</category><category>greatness</category><category>literature</category><category>software</category><category>vonnegut</category><guid>https://tartley.com/posts/vonnegut-on-software-development-teams/</guid><pubDate>Mon, 01 Jul 2019 02:28:04 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
 for it, called "Announce":&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/tartley/rhythmbox-plugin-announce"&gt;https://github.com/tartley/rhythmbox-plugin-announce&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Every time a new song starts to play, it announces the title using
@@ -177,15 +177,15 @@ speech synthesis. I like it when I'm listening to some new music I'm not
 familiar with, but am away from the computer. Then I can still know
 which track is which.&lt;/p&gt;
 &lt;p&gt;If the album or artist names are different from the previous track, then
-it includes those in the announcement, too.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/rhythmbox-plugin-announce/</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://www.tartley.com/posts/google-chrome-credit/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I just noticed: Open Chrome, go to &lt;code&gt;chrome://credits/&lt;/code&gt;, search in page,
+it includes those in the announcement, too.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/rhythmbox-plugin-announce/</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://tartley.com/posts/google-chrome-credit/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I just noticed: Open Chrome, go to &lt;code&gt;chrome://credits/&lt;/code&gt;, search in page,
 'show licence', and:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;img alt="chrome-credit" src="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;</description><category>geek</category><category>software</category><guid>https://www.tartley.com/posts/google-chrome-credit/</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>PyRochesterMN</title><link>https://www.tartley.com/posts/pyrochestermn/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Announcing the world's newest Python User Group, PyRochesterMN, based in
+&lt;p&gt;&lt;a href="https://tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;img alt="chrome-credit" src="https://tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;</description><category>geek</category><category>software</category><guid>https://tartley.com/posts/google-chrome-credit/</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>PyRochesterMN</title><link>https://tartley.com/posts/pyrochestermn/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Announcing the world's newest Python User Group, PyRochesterMN, based in
 Rochester, Minnesota, USA.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; We've had a couple of name &amp;amp; hosting changes since:&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/PyRochesterMN"&gt;http://www.meetup.com/PyRochesterMN&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/RochesTech"&gt;http://www.meetup.com/RochesTech&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.reddit.com/r/rochestertech/"&gt;https://www.reddit.com/r/rochestertech/&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>meetup</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pyrochestermn/</guid><pubDate>Thu, 21 Jan 2016 03:01:27 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://www.tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
+&lt;p&gt;&lt;a href="https://www.reddit.com/r/rochestertech/"&gt;https://www.reddit.com/r/rochestertech/&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>meetup</category><category>python</category><category>software</category><guid>https://tartley.com/posts/pyrochestermn/</guid><pubDate>Thu, 21 Jan 2016 03:01:27 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
 Code."&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The goals of making deployment consistent, reliable and fast are very
 laudable, and the conclusion involving creating Debian packages is just
@@ -215,7 +215,7 @@ full of packages. Point pip at it using
 'packages' directory could be checked into your project's repo, so that
 once you've checked a project out, you have everything you need to
 deploy to local VMs, even with no network connection at all. I wrote
-about this &lt;a href="https://www.tartley.com/pip-install-lightspeed-and-bulletproof"&gt;a while ago&lt;/a&gt;.&lt;/p&gt;
+about this &lt;a href="https://tartley.com/pip-install-lightspeed-and-bulletproof"&gt;a while ago&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; Building your code separately on each host will cause
 consistency issues&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;So don't install dependencies using source packages, use wheels instead.
@@ -240,15 +240,15 @@ packages, rather than more bug-prone ad-hoc scripts and Ansible config.
 So I'm not at all against the final conclusions of the Nylas article.
 (Hugs to you folks at Nylas!)&lt;/p&gt;
 &lt;p&gt;Dashed this out in ten minutes between daycare pickup and dinner being
-ready. Apologies for the inevitable shoddyness.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</guid><pubDate>Wed, 22 Jul 2015 00:06:02 GMT</pubDate></item><item><title>Understanding git rebase so it sticks</title><link>https://www.tartley.com/posts/understanding-rebase-so-it-sticks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I endlessly misremember how to use git rebase. That ends today. Here are
+ready. Apologies for the inevitable shoddyness.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</guid><pubDate>Wed, 22 Jul 2015 00:06:02 GMT</pubDate></item><item><title>Understanding git rebase so it sticks</title><link>https://tartley.com/posts/understanding-rebase-so-it-sticks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I endlessly misremember how to use git rebase. That ends today. Here are
 my notes to help me remember.&lt;/p&gt;
 &lt;p&gt;Rebase is traditionally documented as:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git rebase &lt;span class="o"&gt;[&lt;/span&gt;--onto newbase&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;upstream &lt;span class="o"&gt;[&lt;/span&gt;branch&lt;span class="o"&gt;]]&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;rebase&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;--onto&lt;span class="w"&gt; &lt;/span&gt;newbase&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;upstream&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;branch&lt;span class="o"&gt;]]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This is confusing for several reasons. A slight improvement is to rename
 the args:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git rebase &lt;span class="o"&gt;[&lt;/span&gt;--onto target&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]]&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;rebase&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;--onto&lt;span class="w"&gt; &lt;/span&gt;target&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;exclude&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where:&lt;/p&gt;
@@ -270,7 +270,7 @@ the args:&lt;/p&gt;
                 or include
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git rebase exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;rebase&lt;span class="w"&gt; &lt;/span&gt;exclude&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;                exclude
@@ -291,7 +291,7 @@ specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the transplant desti
                    or include
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git rebase --onto target exclude &lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;rebase&lt;span class="w"&gt; &lt;/span&gt;--onto&lt;span class="w"&gt; &lt;/span&gt;target&lt;span class="w"&gt; &lt;/span&gt;exclude&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;                    target
@@ -305,8 +305,8 @@ specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the transplant desti
 
 &lt;p&gt;Again, the commits to be transplanted are defined by &lt;code&gt;include&lt;/code&gt; and
 &lt;code&gt;exclude&lt;/code&gt;, but this time a separate destination is specified using
-&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;</description><category>git</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/understanding-rebase-so-it-sticks/</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://www.tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Object Oriented Software Engineering cover" src="https://www.tartley.com/files/2014/02/object-oriented-sofware-engineering.jpg"&gt;
+&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;</description><category>git</category><category>software</category><category>terminal</category><guid>https://tartley.com/posts/understanding-rebase-so-it-sticks/</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Object Oriented Software Engineering cover" src="https://tartley.com/files/2014/02/object-oriented-sofware-engineering.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Ivar Jacobsen&lt;/em&gt; (1992, 4th revision)&lt;/p&gt;
 &lt;p&gt;You might wonder if there's anything left to say about
@@ -355,8 +355,8 @@ days.&lt;/p&gt;
 &lt;p&gt;10/10 if you're going to enjoy 500 pages of software design principles
 and case studies.&lt;/p&gt;
 &lt;p&gt;0/10 if you're not.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</guid><pubDate>Sun, 02 Feb 2014 20:26:43 GMT</pubDate></item><item><title>Domain Driven Design: Tackling Complexity in the Heart of Software</title><link>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Domain Driven Design cover" src="https://www.tartley.com/files/2014/01/domaindrivendesign.jpg"&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</guid><pubDate>Sun, 02 Feb 2014 20:26:43 GMT</pubDate></item><item><title>Domain Driven Design: Tackling Complexity in the Heart of Software</title><link>https://tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Domain Driven Design cover" src="https://tartley.com/files/2014/01/domaindrivendesign.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Eric Evans (2004)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;It's a big, dense book -- possibly the most important of the technical
@@ -435,4 +435,4 @@ work'.&lt;/p&gt;
 &lt;p&gt;Rating:&lt;/p&gt;
 &lt;p&gt;10/10 if you're a programmer, or work with programmers.&lt;/p&gt;
 &lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>geek</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>geek</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item></channel></rss>

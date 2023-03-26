@@ -6,10 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 16) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link href="assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
-<link rel="canonical" href="https://www.tartley.com/index-16.html">
+<link rel="canonical" href="https://tartley.com/index-16.html">
 <link rel="icon" href="welcome.gif" sizes="16x16">
 <link rel="prev" href="index-17.html" type="text/html">
 <link rel="next" href="index-15.html" type="text/html">
@@ -29,7 +28,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.tartley.com/">
+            <a class="navbar-brand" href="https://tartley.com/">
 
                 <span id="blog-title">tartley.com</span>
             </a>
@@ -38,13 +37,16 @@
         <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
-<a href="archive.html">Archive</a>
+<a href="archive.html">Posts</a>
                 </li>
 <li>
 <a href="categories/">Tags</a>
                 </li>
 <li>
-<a href="rss.xml">RSS feed</a>
+<a href="galleries/Drawings">Gallery</a>
+                </li>
+<li>
+<a href="rss.xml">RSS</a>
                 </li>
 <li>
 <a href="pages/about/">About</a>
@@ -53,7 +55,7 @@
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -68,7 +70,11 @@
         <!--Body content-->
         <div class="row">
             
+            
+
     
+
+
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
     <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/pychoose-switch-between-installed-versions-of-python/" class="u-url">PyChoose: Switch between installed versions of Python</a></h1>
@@ -375,7 +381,7 @@ with a checkbox checked by default</p>
 <p>To create the checkbox and control whether it is set you must use the
 following properties in your <strong>Product</strong> section:</p>
 <div class="code"><pre class="code literal-block">Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT"
-Value="Launch the cool program"
+Value="Launch<span class="w"> </span>the<span class="w"> </span>cool<span class="w"> </span>program"
 Id="WIXUI_EXITDIALOGOPTIONALCHECKBOX"
 Value="1"
 </pre></div>
@@ -393,8 +399,8 @@ Impersonate="yes"
 to get you custom action called.</p>
 <div class="code"><pre class="code literal-block">Control="Finish"
 Event="DoAction"
-Value="LaunchApplication"<span class="ni">&amp;gt;</span>WIXUI\_EXITDIALOGOPTIONALCHECKBOX = 1 and
-NOT Installed
+Value="LaunchApplication"<span class="ni">&amp;gt;</span>WIXUI\_EXITDIALOGOPTIONALCHECKBOX<span class="w"> </span>=<span class="w"> </span>1<span class="w"> </span>and
+NOT<span class="w"> </span>Installed
 </pre></div>
 
 <p>Huzzah - you now may have a working installer.</p>
@@ -617,35 +623,35 @@ On the right are various uses to which I might want to put them. You
 can't use a slower connection (eg. bluetooth) to drive a faster usage
 (eg. blu-ray quality movies). Centre column is the data rate in megabits
 per second (Mb/s):</p>
-<div class="code"><pre class="code literal-block"><span class="n">EDGE</span><span class="w"> </span><span class="n">mobile</span><span class="w"> </span><span class="n">phone</span><span class="w">    </span><span class="mf">0.23</span><span class="w"></span>
-<span class="w">                     </span><span class="mf">0.3</span><span class="w">  </span><span class="n">cd</span><span class="w"> </span><span class="n">audio</span><span class="w"></span>
-<span class="n">bluetooth1</span><span class="w">           </span><span class="mf">0.7</span><span class="w"></span>
-<span class="w">                     </span><span class="mf">1.3</span><span class="w">  </span><span class="n">minimal</span><span class="w"> </span><span class="n">video</span><span class="w"></span>
-<span class="n">bluetooth2</span><span class="w">           </span><span class="mf">2.1</span><span class="w"></span>
-<span class="n">wifi</span><span class="w"> </span><span class="mf">802.11</span><span class="n">b</span><span class="w">         </span><span class="mf">4.5</span><span class="w"></span>
-<span class="w">                     </span><span class="mf">5.0</span><span class="w">  </span><span class="n">dvd</span><span class="w"> </span><span class="n">mpeg</span><span class="o">-</span><span class="mh">2</span><span class="w"> </span><span class="n">quality</span><span class="w"></span>
-<span class="n">ADSL1</span><span class="w">                </span><span class="mf">8.0</span><span class="w"></span>
-<span class="n">ethernet</span><span class="w"> </span><span class="mh">10</span><span class="n">baseT</span><span class="w">    </span><span class="mh">10</span><span class="w"></span>
-<span class="n">USB1</span><span class="w">                </span><span class="mh">12</span><span class="w"></span>
-<span class="w">                    </span><span class="mh">15</span><span class="w">  </span><span class="n">hdtv</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="mh">8</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mh">15</span><span class="p">)</span><span class="w"></span>
-<span class="n">ADSL2</span><span class="o">+</span><span class="w">              </span><span class="mh">24</span><span class="o">*</span><span class="w"></span>
-<span class="n">cable</span><span class="w"> </span><span class="n">modem</span><span class="w">         </span><span class="mh">30</span><span class="w"></span>
-<span class="w">                    </span><span class="mh">40</span><span class="w"> </span><span class="n">blu</span><span class="o">-</span><span class="n">ray</span><span class="w"> </span><span class="n">disc</span><span class="w"></span>
-<span class="n">wifi</span><span class="w"> </span><span class="mf">802.11</span><span class="n">g</span><span class="w">        </span><span class="mh">54</span><span class="w"></span>
-<span class="n">firewire800</span><span class="w"> </span><span class="n">act</span><span class="w">     </span><span class="mh">65</span><span class="w"></span>
-<span class="n">ethernet</span><span class="w"> </span><span class="mh">100</span><span class="n">baseT</span><span class="w">  </span><span class="mh">100</span><span class="o">*</span><span class="w"></span>
-<span class="n">PCI</span><span class="w">                </span><span class="mh">133</span><span class="w"></span>
-<span class="n">USB2</span><span class="w"> </span><span class="n">actual</span><span class="w">        </span><span class="mh">240</span><span class="w"></span>
-<span class="n">firewire</span><span class="w"> </span><span class="mh">400</span><span class="w"> </span><span class="n">theo</span><span class="w">  </span><span class="mh">400</span><span class="w"></span>
-<span class="n">USB2</span><span class="w"> </span><span class="n">theoretical</span><span class="w">   </span><span class="mh">480</span><span class="w"></span>
-<span class="n">wifi</span><span class="w"> </span><span class="mf">802.11</span><span class="n">n</span><span class="w">       </span><span class="mh">600</span><span class="w"></span>
-<span class="n">firewire</span><span class="w"> </span><span class="mh">800</span><span class="w"> </span><span class="n">theo</span><span class="w">  </span><span class="mh">800</span><span class="w"></span>
-<span class="n">Seagate</span><span class="w"> </span><span class="n">Barracuda</span><span class="w">  </span><span class="mh">960</span><span class="o">*</span><span class="w"></span>
-<span class="n">ethernet</span><span class="w"> </span><span class="n">gigabit</span><span class="w"> </span><span class="mh">1</span><span class="p">,</span><span class="mh">000</span><span class="w"></span>
-<span class="n">SATA</span><span class="o">-</span><span class="mh">150</span><span class="w"> </span><span class="n">theo</span><span class="w">    </span><span class="mh">1</span><span class="p">,</span><span class="mh">500</span><span class="w"></span>
-<span class="n">SATA</span><span class="o">-</span><span class="mh">300</span><span class="w"> </span><span class="n">theo</span><span class="w">    </span><span class="mh">3</span><span class="p">,</span><span class="mh">000</span><span class="w"></span>
+<div class="code"><pre class="code literal-block"><span class="n">EDGE</span><span class="w"> </span><span class="n">mobile</span><span class="w"> </span><span class="n">phone</span><span class="w">    </span><span class="mf">0.23</span>
+<span class="w">                     </span><span class="mf">0.3</span><span class="w">  </span><span class="n">cd</span><span class="w"> </span><span class="n">audio</span>
+<span class="n">bluetooth1</span><span class="w">           </span><span class="mf">0.7</span>
+<span class="w">                     </span><span class="mf">1.3</span><span class="w">  </span><span class="n">minimal</span><span class="w"> </span><span class="n">video</span>
+<span class="n">bluetooth2</span><span class="w">           </span><span class="mf">2.1</span>
+<span class="n">wifi</span><span class="w"> </span><span class="mf">802.11</span><span class="n">b</span><span class="w">         </span><span class="mf">4.5</span>
+<span class="w">                     </span><span class="mf">5.0</span><span class="w">  </span><span class="n">dvd</span><span class="w"> </span><span class="n">mpeg</span><span class="o">-</span><span class="mh">2</span><span class="w"> </span><span class="n">quality</span>
+<span class="n">ADSL1</span><span class="w">                </span><span class="mf">8.0</span>
+<span class="n">ethernet</span><span class="w"> </span><span class="mh">10</span><span class="n">baseT</span><span class="w">    </span><span class="mh">10</span>
+<span class="n">USB1</span><span class="w">                </span><span class="mh">12</span>
+<span class="w">                    </span><span class="mh">15</span><span class="w">  </span><span class="n">hdtv</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="mh">8</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mh">15</span><span class="p">)</span>
+<span class="n">ADSL2</span><span class="o">+</span><span class="w">              </span><span class="mh">24</span><span class="o">*</span>
+<span class="n">cable</span><span class="w"> </span><span class="n">modem</span><span class="w">         </span><span class="mh">30</span>
+<span class="w">                    </span><span class="mh">40</span><span class="w"> </span><span class="n">blu</span><span class="o">-</span><span class="n">ray</span><span class="w"> </span><span class="n">disc</span>
+<span class="n">wifi</span><span class="w"> </span><span class="mf">802.11</span><span class="n">g</span><span class="w">        </span><span class="mh">54</span>
+<span class="n">firewire800</span><span class="w"> </span><span class="n">act</span><span class="w">     </span><span class="mh">65</span>
+<span class="n">ethernet</span><span class="w"> </span><span class="mh">100</span><span class="n">baseT</span><span class="w">  </span><span class="mh">100</span><span class="o">*</span>
+<span class="n">PCI</span><span class="w">                </span><span class="mh">133</span>
+<span class="n">USB2</span><span class="w"> </span><span class="n">actual</span><span class="w">        </span><span class="mh">240</span>
+<span class="n">firewire</span><span class="w"> </span><span class="mh">400</span><span class="w"> </span><span class="n">theo</span><span class="w">  </span><span class="mh">400</span>
+<span class="n">USB2</span><span class="w"> </span><span class="n">theoretical</span><span class="w">   </span><span class="mh">480</span>
+<span class="n">wifi</span><span class="w"> </span><span class="mf">802.11</span><span class="n">n</span><span class="w">       </span><span class="mh">600</span>
+<span class="n">firewire</span><span class="w"> </span><span class="mh">800</span><span class="w"> </span><span class="n">theo</span><span class="w">  </span><span class="mh">800</span>
+<span class="n">Seagate</span><span class="w"> </span><span class="n">Barracuda</span><span class="w">  </span><span class="mh">960</span><span class="o">*</span>
+<span class="n">ethernet</span><span class="w"> </span><span class="n">gigabit</span><span class="w"> </span><span class="mh">1</span><span class="p">,</span><span class="mh">000</span>
+<span class="n">SATA</span><span class="o">-</span><span class="mh">150</span><span class="w"> </span><span class="n">theo</span><span class="w">    </span><span class="mh">1</span><span class="p">,</span><span class="mh">500</span>
+<span class="n">SATA</span><span class="o">-</span><span class="mh">300</span><span class="w"> </span><span class="n">theo</span><span class="w">    </span><span class="mh">3</span><span class="p">,</span><span class="mh">000</span>
 
-<span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my</span><span class="w"> </span><span class="n">setup</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my</span><span class="w"> </span><span class="n">setup</span>
 </pre></div>
 
 <p>I'm assuming that I don't have gigabit ethernet, because I've never paid
@@ -1059,6 +1065,7 @@ by Robert L. Read.</p>
     </div>
     </article>
 </div>
+
         <nav class="postindexpager"><ul class="pager">
 <li class="previous">
                 <a href="index-17.html" rel="prev">Newer posts</a>
@@ -1073,6 +1080,7 @@ by Robert L. Read.</p>
         <footer id="footer"></footer>
 </div>
 </div>
+
 
             <script src="assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");

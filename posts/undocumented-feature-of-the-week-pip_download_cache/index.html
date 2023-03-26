@@ -5,17 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Undocumented feature of the week: $PIP_DOWNLOAD_CACHE | tartley.com</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://www.tartley.com/posts/undocumented-feature-of-the-week-pip_download_cache/">
+<link rel="canonical" href="https://tartley.com/posts/undocumented-feature-of-the-week-pip_download_cache/">
 <link rel="icon" href="../../welcome.gif" sizes="16x16">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
 <link rel="prev" href="../i-am-such-a-child/" title="I am such a child" type="text/html">
 <link rel="next" href="../loving-europython-tutorials/" title="Loving EuroPython Tutorials" type="text/html">
 <meta property="og:site_name" content="tartley.com">
 <meta property="og:title" content="Undocumented feature of the week: $PIP_DOWNLOAD_CACHE">
-<meta property="og:url" content="https://www.tartley.com/posts/undocumented-feature-of-the-week-pip_download_cache/">
+<meta property="og:url" content="https://tartley.com/posts/undocumented-feature-of-the-week-pip_download_cache/">
 <meta property="og:description" content="Use Python? You should be using
 Pip. A replacement for
 easy_install, that supports uninstalling and plays nice with
@@ -42,7 +41,7 @@ It has a marvellous undocum">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.tartley.com/">
+            <a class="navbar-brand" href="https://tartley.com/">
 
                 <span id="blog-title">tartley.com</span>
             </a>
@@ -51,13 +50,16 @@ It has a marvellous undocum">
         <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
-<a href="../../archive.html">Archive</a>
+<a href="../../archive.html">Posts</a>
                 </li>
 <li>
 <a href="../../categories/">Tags</a>
                 </li>
 <li>
-<a href="../../rss.xml">RSS feed</a>
+<a href="../../galleries/Drawings">Gallery</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS</a>
                 </li>
 <li>
 <a href="../../pages/about/">About</a>
@@ -66,7 +68,7 @@ It has a marvellous undocum">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -81,6 +83,7 @@ It has a marvellous undocum">
         <!--Body content-->
         <div class="row">
             
+            
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Undocumented feature of the week: $PIP_DOWNLOAD_CACHE</a></h1>
 
         <div class="metadata">
@@ -92,8 +95,10 @@ It has a marvellous undocum">
             <time class="published dt-published" datetime="2010-07-13T12:46:15-05:00" itemprop="datePublished" title="2010-07-13 12:46">2010-07-13 12:46</time></a>
             </p>
             
+
         </div>
         
+
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <p>Use Python? You should be using
 <a href="http://pypi.python.org/pypi/pip"><em>Pip</em></a>. A replacement for
@@ -103,26 +108,26 @@ Python packages, if you will.</p>
 <p>It has a marvellous undocumented feature. Set the environment variable
 PIP_DOWNLOAD_CACHE to prevent re-downloading the same packages
 repeatedly when setting up environments on the same machine:</p>
-<div class="code"><pre class="code literal-block"><span class="o">&gt;</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">grep</span><span class="w"> </span><span class="n">PIP</span><span class="w"></span>
-<span class="n">PIP_DOWNLOAD_CACHE</span><span class="o">=</span><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Documents</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">Settings</span><span class="err">\</span><span class="n">jhartley</span><span class="err">\</span><span class="p">.</span><span class="n">pip_download_cache</span><span class="w"></span>
+<div class="code"><pre class="code literal-block"><span class="o">&gt;</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">grep</span><span class="w"> </span><span class="n">PIP</span>
+<span class="n">PIP_DOWNLOAD_CACHE</span><span class="o">=</span><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Documents</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">Settings</span><span class="err">\</span><span class="n">jhartley</span><span class="err">\</span><span class="p">.</span><span class="n">pip_download_cache</span>
 
-<span class="o">&gt;</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">mock</span><span class="w"></span>
-<span class="n">Downloading</span><span class="o">/</span><span class="n">unpacking</span><span class="w"> </span><span class="n">mock</span><span class="w"></span>
-<span class="n">Creating</span><span class="w"> </span><span class="n">supposed</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Documents</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">Settings</span><span class="err">\</span><span class="n">jhartley</span><span class="err">\</span><span class="p">.</span><span class="n">pip_download_cache</span><span class="w"></span>
-<span class="w"> </span><span class="n">Downloading</span><span class="w"> </span><span class="n">mock</span><span class="o">-</span><span class="mf">0.7.0</span><span class="n">b2</span><span class="p">.</span><span class="n">zip</span><span class="w"> </span><span class="p">(</span><span class="mi">242</span><span class="n">Kb</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="mi">242</span><span class="n">Kb</span><span class="w"> </span><span class="n">downloaded</span><span class="w"></span>
-<span class="w"> </span><span class="n">Storing</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="nl">c</span><span class="p">:</span><span class="err">\</span><span class="n">documents</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">settings</span><span class="err">\</span><span class="n">jhartley</span><span class="err">\</span><span class="p">.</span><span class="n">pip_download_cache</span><span class="err">\</span><span class="n">http</span><span class="o">%</span><span class="mi">3</span><span class="n">a</span><span class="o">%</span><span class="mi">2</span><span class="n">f</span><span class="o">%</span><span class="mi">2</span><span class="n">fpypi</span><span class="p">.</span><span class="n">python</span><span class="p">.</span><span class="n">org</span><span class="o">%</span><span class="mi">2</span><span class="n">fpackages</span><span class="o">%</span><span class="mi">2</span><span class="n">fsource</span><span class="o">%</span><span class="mi">2</span><span class="n">fm</span><span class="o">%</span><span class="mi">2</span><span class="n">fmock</span><span class="o">%</span><span class="mi">2</span><span class="n">fmock</span><span class="o">-</span><span class="mf">0.7.0</span><span class="n">b2</span><span class="p">.</span><span class="n">zip</span><span class="w"></span>
-<span class="o">[</span><span class="n">snip</span><span class="o">]</span><span class="w"></span>
-<span class="n">Successfully</span><span class="w"> </span><span class="n">installed</span><span class="w"> </span><span class="n">mock</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">mock</span>
+<span class="n">Downloading</span><span class="o">/</span><span class="n">unpacking</span><span class="w"> </span><span class="n">mock</span>
+<span class="n">Creating</span><span class="w"> </span><span class="n">supposed</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Documents</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">Settings</span><span class="err">\</span><span class="n">jhartley</span><span class="err">\</span><span class="p">.</span><span class="n">pip_download_cache</span>
+<span class="w"> </span><span class="n">Downloading</span><span class="w"> </span><span class="n">mock</span><span class="o">-</span><span class="mf">0.7.0</span><span class="n">b2</span><span class="p">.</span><span class="n">zip</span><span class="w"> </span><span class="p">(</span><span class="mi">242</span><span class="n">Kb</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="mi">242</span><span class="n">Kb</span><span class="w"> </span><span class="n">downloaded</span>
+<span class="w"> </span><span class="n">Storing</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="nl">c</span><span class="p">:</span><span class="err">\</span><span class="n">documents</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">settings</span><span class="err">\</span><span class="n">jhartley</span><span class="err">\</span><span class="p">.</span><span class="n">pip_download_cache</span><span class="err">\</span><span class="n">http</span><span class="o">%</span><span class="mi">3</span><span class="n">a</span><span class="o">%</span><span class="mi">2</span><span class="n">f</span><span class="o">%</span><span class="mi">2</span><span class="n">fpypi</span><span class="p">.</span><span class="n">python</span><span class="p">.</span><span class="n">org</span><span class="o">%</span><span class="mi">2</span><span class="n">fpackages</span><span class="o">%</span><span class="mi">2</span><span class="n">fsource</span><span class="o">%</span><span class="mi">2</span><span class="n">fm</span><span class="o">%</span><span class="mi">2</span><span class="n">fmock</span><span class="o">%</span><span class="mi">2</span><span class="n">fmock</span><span class="o">-</span><span class="mf">0.7.0</span><span class="n">b2</span><span class="p">.</span><span class="n">zip</span>
+<span class="o">[</span><span class="n">snip</span><span class="o">]</span>
+<span class="n">Successfully</span><span class="w"> </span><span class="n">installed</span><span class="w"> </span><span class="n">mock</span>
 
-<span class="o">&gt;</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">uninstall</span><span class="w"> </span><span class="n">mock</span><span class="w"></span>
-<span class="o">[</span><span class="n">snip</span><span class="o">]</span><span class="w"></span>
-<span class="w"> </span><span class="n">Successfully</span><span class="w"> </span><span class="n">uninstalled</span><span class="w"> </span><span class="n">mock</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">uninstall</span><span class="w"> </span><span class="n">mock</span>
+<span class="o">[</span><span class="n">snip</span><span class="o">]</span>
+<span class="w"> </span><span class="n">Successfully</span><span class="w"> </span><span class="n">uninstalled</span><span class="w"> </span><span class="n">mock</span>
 
-<span class="o">&gt;</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">mock</span><span class="w"></span>
-<span class="n">Downloading</span><span class="o">/</span><span class="n">unpacking</span><span class="w"> </span><span class="n">mock</span><span class="w"></span>
-<span class="w"> </span><span class="k">Using</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Documents</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">Settings</span><span class="err">\</span><span class="n">jhartley</span><span class="err">\</span><span class="p">.</span><span class="n">pip_download_cache</span><span class="err">\</span><span class="n">http</span><span class="o">%</span><span class="mi">3</span><span class="n">A</span><span class="o">%</span><span class="mi">2</span><span class="n">F</span><span class="o">%</span><span class="mi">2</span><span class="n">Fpypi</span><span class="p">.</span><span class="n">python</span><span class="p">.</span><span class="n">org</span><span class="o">%</span><span class="mi">2</span><span class="n">Fpackages</span><span class="o">%</span><span class="mi">2</span><span class="n">Fsource</span><span class="o">%</span><span class="mi">2</span><span class="n">Fm</span><span class="o">%</span><span class="mi">2</span><span class="n">Fmock</span><span class="o">%</span><span class="mi">2</span><span class="n">Fmock</span><span class="o">-</span><span class="mf">0.7.0</span><span class="n">b2</span><span class="p">.</span><span class="n">zip</span><span class="w"></span>
-<span class="o">[</span><span class="n">snip</span><span class="o">]</span><span class="w"></span>
-<span class="n">Successfully</span><span class="w"> </span><span class="n">installed</span><span class="w"> </span><span class="n">mock</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">mock</span>
+<span class="n">Downloading</span><span class="o">/</span><span class="n">unpacking</span><span class="w"> </span><span class="n">mock</span>
+<span class="w"> </span><span class="k">Using</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Documents</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">Settings</span><span class="err">\</span><span class="n">jhartley</span><span class="err">\</span><span class="p">.</span><span class="n">pip_download_cache</span><span class="err">\</span><span class="n">http</span><span class="o">%</span><span class="mi">3</span><span class="n">A</span><span class="o">%</span><span class="mi">2</span><span class="n">F</span><span class="o">%</span><span class="mi">2</span><span class="n">Fpypi</span><span class="p">.</span><span class="n">python</span><span class="p">.</span><span class="n">org</span><span class="o">%</span><span class="mi">2</span><span class="n">Fpackages</span><span class="o">%</span><span class="mi">2</span><span class="n">Fsource</span><span class="o">%</span><span class="mi">2</span><span class="n">Fm</span><span class="o">%</span><span class="mi">2</span><span class="n">Fmock</span><span class="o">%</span><span class="mi">2</span><span class="n">Fmock</span><span class="o">-</span><span class="mf">0.7.0</span><span class="n">b2</span><span class="p">.</span><span class="n">zip</span>
+<span class="o">[</span><span class="n">snip</span><span class="o">]</span>
+<span class="n">Successfully</span><span class="w"> </span><span class="n">installed</span><span class="w"> </span><span class="n">mock</span>
 </pre></div>
 
 <p>(This text is copied from my unholy bastardised shell of choice at work,
@@ -155,6 +160,7 @@ for bringing this to my attention.</p>
         <footer id="footer"></footer>
 </div>
 </div>
+
 
             <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");

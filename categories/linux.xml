@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 14 Feb 2023 18:03:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
-&lt;img alt="Spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 26 Mar 2023 04:51:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Soma</title><link>https://tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
+&lt;img alt="Spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;Major spoilers ahead. It's seven years old at this point.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Soma - protagonist" src="https://www.tartley.com/files/2022/soma-protagonist.webp"&gt;
+&lt;img alt="Soma - protagonist" src="https://tartley.com/files/2022/soma-protagonist.webp"&gt;
 &lt;/center&gt;&lt;br&gt;
 &lt;p&gt;Soma is a creepy survival horror game, that leans deeply into the moral and
 existential quandaries arising from the deterministic principle that it's
@@ -57,7 +57,7 @@ atmospheric. At one point it lead directly to my wife catching me staring
 intently at a blank, black screen for a prolonged period, with a peculiar
 expression on my face, as I hid in a dark cupboard waiting for the slithering
 sounds behind me to go away.&lt;/p&gt;
-&lt;p&gt;Spurring through this environment are not just threats to our immediate
+&lt;p&gt;Spurring us through this environment are not just threats to our immediate
 survival, but also the adoption of a project, to launch into space a
 solar-powered simulation, hosting all the last remaining brain scans of the
 now-defunct human race, known as the 'ARK'. This will allow the on-board sims
@@ -76,7 +76,7 @@ currents and landslides, populated by organic-mechanical hybrid horrors that
 glide by in the darkness. I found these some of the absolute best, most
 atmospheric "walking simulator" moments I've experienced in a game.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="The ocean floor, stirred up by currents and landslides" src="https://www.tartley.com/files/2022/soma-murky.webp"&gt;
+&lt;img alt="The ocean floor, stirred up by currents and landslides" src="https://tartley.com/files/2022/soma-murky.webp"&gt;
 &lt;br&gt;Is that another distant light up ahead? Good luck finding them while the currents pummel you,
 and hideous, deadly beasts loom out of the murk.
 &lt;/center&gt;&lt;br&gt;
@@ -116,8 +116,8 @@ just passed through those locations, and there were no humans remaining there.
 We both know that the planet's surface is sterile. A beat passes before she
 announces "So I'm the last human being left alive." She's deathly sick, and
 without hope. By the end of your interactions she asks you to turn off her
-life-support before you leave, and stay with her for her last moments. So this
-is how humanity ends.&lt;/p&gt;
+life-support before you leave, and stay with her for her last wheezing moments.
+So this is how humanity ends.&lt;/p&gt;
 &lt;p&gt;Carrying on, because what else is there to do? We finally we get the ARK loaded
 into the launch system that delivers it to orbit, upload our brain scans onto
 it just before it launches, and - we've done it! Success!&lt;/p&gt;
@@ -128,8 +128,8 @@ a way out. For, of course, the ARK's launch changed nothing for us. Our
 simulations are aboard it, but we are still sitting here, in a broken robot
 corpse in a collapsing facility at the bottom of a haunted ocean on a dead
 planet. The dispatched copy will enjoy life on the ARK, but we - like the copy
-of ourselves we left behind earlier - are stuck here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>New Laptop Time!</title><link>https://www.tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="A laptop" src="https://www.tartley.com/files/2008/02/lappy.webp"&gt;
+of ourselves we left behind earlier - are stuck here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>linux</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>New Laptop Time!</title><link>https://tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="A laptop" src="https://tartley.com/files/2008/02/lappy.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;My employer, Canonical, has a "bring your own hardware" policy, trusting that
 their engineers would rather choose and administer their own personal laptops,
@@ -140,7 +140,7 @@ graphics chipset doesn't have the power to play modern games with my kiddo.
 Battlezone 98 runs fine, but Civilization VI (2016) is annoyingly choppy,
 at about 9 frames per second.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Civilization VI screenshot" src="https://www.tartley.com/files/2022/civ-vi.webp"&gt;
+&lt;img alt="Civilization VI screenshot" src="https://tartley.com/files/2022/civ-vi.webp"&gt;
 &lt;/center&gt;
 &lt;br&gt;
 &lt;p&gt;This summer I received the three-year cash-in-hand bonus earmarked as a
@@ -201,10 +201,10 @@ cores. The higher this number, the better.&lt;/p&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;CPU&lt;/th&gt;
-&lt;th align="left"&gt;Cores&lt;/th&gt;
-&lt;th align="right"&gt;Clock&lt;/th&gt;
-&lt;th align="right"&gt;Cache&lt;/th&gt;
-&lt;th align="right"&gt;Bench&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Cores&lt;/th&gt;
+&lt;th style="text-align: right;"&gt;Clock&lt;/th&gt;
+&lt;th style="text-align: right;"&gt;Cache&lt;/th&gt;
+&lt;th style="text-align: right;"&gt;Bench&lt;/th&gt;
 &lt;th&gt;Price&lt;/th&gt;
 &lt;th&gt;Laptop models &amp;amp; other notes&lt;/th&gt;
 &lt;/tr&gt;
@@ -212,235 +212,235 @@ cores. The higher this number, the better.&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;i9-12900HX&lt;/td&gt;
-&lt;td align="left"&gt;8p+8e&lt;/td&gt;
-&lt;td align="right"&gt;5.0GHz&lt;/td&gt;
-&lt;td align="right"&gt;30MB&lt;/td&gt;
-&lt;td align="right"&gt;36&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;5.0GHz&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;30MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;36&lt;/td&gt;
 &lt;td&gt;$606&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i7-12800HX&lt;/td&gt;
-&lt;td align="left"&gt;8p+8e&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;25MB&lt;/td&gt;
-&lt;td align="right"&gt;35&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;25MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;35&lt;/td&gt;
 &lt;td&gt;$457&lt;/td&gt;
 &lt;td&gt;Thinkpad P16 ($2340).&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i9-12950HX&lt;/td&gt;
-&lt;td align="left"&gt;8p+8e&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;30MB&lt;/td&gt;
-&lt;td align="right"&gt;34&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;30MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;34&lt;/td&gt;
 &lt;td&gt;$590&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i7-12850HX&lt;/td&gt;
-&lt;td align="left"&gt;8p+8e&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;25MB&lt;/td&gt;
-&lt;td align="right"&gt;31&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;25MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;31&lt;/td&gt;
 &lt;td&gt;$428&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i9-12900HK&lt;/td&gt;
-&lt;td align="left"&gt;6p+8e&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;24MB&lt;/td&gt;
-&lt;td align="right"&gt;30&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;30&lt;/td&gt;
 &lt;td&gt;$635&lt;/td&gt;
 &lt;td&gt;Dell XPS 15 ($2950).&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i9-12900H&lt;/td&gt;
-&lt;td align="left"&gt;6p+8e&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;24MB&lt;/td&gt;
-&lt;td align="right"&gt;29&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;29&lt;/td&gt;
 &lt;td&gt;$617&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i7-12700H&lt;/td&gt;
-&lt;td align="left"&gt;6p+8e&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;24MB&lt;/td&gt;
-&lt;td align="right"&gt;27&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;27&lt;/td&gt;
 &lt;td&gt;$457&lt;/td&gt;
 &lt;td&gt;Dell XPS 17/15 ($2500), Acer Nitro 5, System76 Onyx &amp;amp; Gazelle.&lt;br&gt;&lt;strong&gt;This CPU is what I ended up getting.&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;AMD Ryzen 9 6900HX&lt;/td&gt;
-&lt;td align="left"&gt;8&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;25&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;25&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Fastest AMD processor.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i7-12650H&lt;/td&gt;
-&lt;td align="left"&gt;6p+4e&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;24MB&lt;/td&gt;
-&lt;td align="right"&gt;25&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;6p+4e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;25&lt;/td&gt;
 &lt;td&gt;$457&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i5-12600HX&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;25&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;25&lt;/td&gt;
 &lt;td&gt;$284&lt;/td&gt;
 &lt;td&gt;Fastest 12th gen i5. Suspiciously cheap.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;AMD Ryzen 9 PRO 6950H&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;24&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i7-12800H&lt;/td&gt;
-&lt;td align="left"&gt;6p+8e&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;24MB&lt;/td&gt;
-&lt;td align="right"&gt;24&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
 &lt;td&gt;$457&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;AMD Ryzen 7 PRO 6850H&lt;/td&gt;
-&lt;td align="left"&gt;8&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;24&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Thinkpad P15v.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;AMD Ryzen 9 6900HS&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;24&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;ASUS ROG Zephyr G14.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;AMD Ryzen 9 PRO 6950HS&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;24&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;AMD Ryzen 7 PRO 6800H&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;23&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;23&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i9-11980HK&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;2.6GHz&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;23&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;2.6GHz&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;23&lt;/td&gt;
 &lt;td&gt;$583&lt;/td&gt;
 &lt;td&gt;Fastest Intel 11th gen.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;AMD Ryzen 7 6800HS CEd&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;23&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;23&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;AMD Ryzen 9 5900HX&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;23&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;23&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i9-11950H&lt;/td&gt;
-&lt;td align="left"&gt;8&lt;/td&gt;
-&lt;td align="right"&gt;2.6GHz&lt;/td&gt;
-&lt;td align="right"&gt;24MB&lt;/td&gt;
-&lt;td align="right"&gt;22&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;2.6GHz&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;22&lt;/td&gt;
 &lt;td&gt;$556&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;...&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;(I skipped a bunch here)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i7-1280P&lt;/td&gt;
-&lt;td align="left"&gt;6p+8e&lt;/td&gt;
-&lt;td align="right"&gt;4.8GHz&lt;/td&gt;
-&lt;td align="right"&gt;24MB&lt;/td&gt;
-&lt;td align="right"&gt;20&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;4.8GHz&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;20&lt;/td&gt;
 &lt;td&gt;$482&lt;/td&gt;
 &lt;td&gt;Best Framework.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;AMD Ryzen 7 5825U&lt;/td&gt;
-&lt;td align="left"&gt;8&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;18&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;18&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Best Dell Inspiron 15".&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i7-1260P&lt;/td&gt;
-&lt;td align="left"&gt;4p+8e&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;18MB&lt;/td&gt;
-&lt;td align="right"&gt;17&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;4p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;18MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;17&lt;/td&gt;
 &lt;td&gt;$438&lt;/td&gt;
 &lt;td&gt;XPS 13 plus, X1 Carbon gen 10, Thinkpad P14.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i7-1250U&lt;/td&gt;
-&lt;td align="left"&gt;2p+8e&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;12MB&lt;/td&gt;
-&lt;td align="right"&gt;11&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;2p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;12MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;11&lt;/td&gt;
 &lt;td&gt;$426&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;i5-6200U&lt;/td&gt;
-&lt;td align="left"&gt;2&lt;/td&gt;
-&lt;td align="right"&gt;2.8GHz&lt;/td&gt;
-&lt;td align="right"&gt;3MB&lt;/td&gt;
-&lt;td align="right"&gt;3&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;2&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;2.8GHz&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;3MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;3&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;My current Thinkpad T460.&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
@@ -471,88 +471,88 @@ performance against all other benchmarked GPUs.&lt;/p&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;GPU&lt;/th&gt;
-&lt;th align="right"&gt;Performance&lt;/th&gt;
-&lt;th align="right"&gt;Position&lt;/th&gt;
+&lt;th style="text-align: right;"&gt;Performance&lt;/th&gt;
+&lt;th style="text-align: right;"&gt;Position&lt;/th&gt;
 &lt;th&gt;Laptop models &amp;amp; other notes&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Nvidia GeForce RTX 3080&lt;/td&gt;
-&lt;td align="right"&gt;130&lt;/td&gt;
-&lt;td align="right"&gt;24th&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;130&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24th&lt;/td&gt;
 &lt;td&gt;System76 Onyx option.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Nvidia GeForce RTX 3070Ti&lt;/td&gt;
-&lt;td align="right"&gt;122&lt;/td&gt;
-&lt;td align="right"&gt;27th&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;122&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;27th&lt;/td&gt;
 &lt;td&gt;System76 Onyx option.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Nvidia GeForce RTX 3070&lt;/td&gt;
-&lt;td align="right"&gt;114&lt;/td&gt;
-&lt;td align="right"&gt;30th&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;114&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;30th&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Nvidia GeForce RTX 3060&lt;/td&gt;
-&lt;td align="right"&gt;87&lt;/td&gt;
-&lt;td align="right"&gt;58th&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;87&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;58th&lt;/td&gt;
 &lt;td&gt;Best XPS 17. System76 Gazelle. Acer Nitro 5.&lt;br&gt;&lt;strong&gt;This is the GPU I ended up getting.&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Nvidia GeForce RTX 3050Ti&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
 &lt;td&gt;XPS 15 option.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Nvidia GeForce RTX 3050&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
-&lt;td align="right"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
 &lt;td&gt;XPS 15 option.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;AMD Radeon RX 6800S&lt;/td&gt;
-&lt;td align="right"&gt;85&lt;/td&gt;
-&lt;td align="right"&gt;58th&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;85&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;58th&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;AMD    RX 6700M&lt;/td&gt;
-&lt;td align="right"&gt;79&lt;/td&gt;
-&lt;td align="right"&gt;65th&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;79&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;65th&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Nvidia RTX A1000 4GB GDDR6&lt;/td&gt;
-&lt;td align="right"&gt;45&lt;/td&gt;
-&lt;td align="right"&gt;114th&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;45&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;114th&lt;/td&gt;
 &lt;td&gt;Thinkpad P16(certified)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Nvidia T1200&lt;/td&gt;
-&lt;td align="right"&gt;42&lt;/td&gt;
-&lt;td align="right"&gt;118th&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;42&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;118th&lt;/td&gt;
 &lt;td&gt;Thinkpad P15v&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Nvidia GTX 1050Ti&lt;/td&gt;
-&lt;td align="right"&gt;30&lt;/td&gt;
-&lt;td align="right"&gt;144th&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;30&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;144th&lt;/td&gt;
 &lt;td&gt;My current Windows gaming desktop.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Intel Iris Xe&lt;/td&gt;
-&lt;td align="right"&gt;17&lt;/td&gt;
-&lt;td align="right"&gt;207th&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;17&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;207th&lt;/td&gt;
 &lt;td&gt;Integrated. Framework. XPS 13 Plus.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Intel HD 520&lt;/td&gt;
-&lt;td align="right"&gt;4&lt;/td&gt;
-&lt;td align="right"&gt;402nd&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;4&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;402nd&lt;/td&gt;
 &lt;td&gt;Integrated. &lt;strong&gt;My current Thinkpad T460.&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -598,7 +598,7 @@ checked out earlier in the process.&lt;/p&gt;
 &lt;p&gt;The Oryx is just a few hundred over my budget, even with the current $300 off.
 But a tricked-out Gazelle seems to check all the boxes.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt='Gazelle 15" laptop' src="https://www.tartley.com/files/2022/gazelle-15.avif"&gt;
+&lt;img alt='Gazelle 15" laptop' src="https://tartley.com/files/2022/gazelle-15.avif"&gt;
 &lt;/center&gt;
 &lt;p&gt;They have a reasonably high-ranked 12th generation Intel i7 CPU, which seems
 to achieve good performance without wading into the diminishing returns
@@ -705,22 +705,22 @@ says that is 3,200MHz.&lt;/p&gt;
 latencies the price goes up to about $375 for CL16, but that isn't even in
 stock anywhere.&lt;/p&gt;
 &lt;p&gt;At one point, after much searching, I found some CL16 on newegg.com:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Memory on sale in Newegg - scam" src="https://www.tartley.com/files/2022/memory-on-sale.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Memory on sale in Newegg - scam" src="https://tartley.com/files/2022/memory-on-sale.webp"&gt;&lt;/p&gt;
 &lt;p&gt;And it is only $128! Carefully checking the specs, including those on the
 manufacturer's site, using the shown model number 'CMSX32GX4M2A3000C16',
 this is exactly what we want. 2x16GB at 3200MT/s at CL16.&lt;/p&gt;
 &lt;p&gt;While checking it out, I clicked around a bit, and at one point found:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Bad review on Newegg" src="https://www.tartley.com/files/2022/bad-review-on-newegg.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bad review on Newegg" src="https://tartley.com/files/2022/bad-review-on-newegg.webp"&gt;&lt;/p&gt;
 &lt;p&gt;This came along with a number of other negative reviews, stating customers had
 been sent memory modules that were fake, ie. imitations of the purported
 reputable manufacturer, they didn't work at the advertised clock speeds, and
 the seller had gone dark on them, taking weeks to respond to queries, and not
 sending replacements until Newegg got involved. Seems wisest to skip this.&lt;/p&gt;
 &lt;p&gt;Eventually I found an alternative:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Memory on sale in Newegg - legit" src="https://www.tartley.com/files/2022/memory-on-sale-legit.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Memory on sale in Newegg - legit" src="https://tartley.com/files/2022/memory-on-sale-legit.webp"&gt;&lt;/p&gt;
 &lt;p&gt;Yes! DDR4 in a SoDIMM package, 2x16GB modules at 3,200MHz and 18CL. The latency
 isn't quite as good, but it sounds legit, so I'll take it!&lt;/p&gt;
-&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>hardware</category><category>journal</category><category>linux</category><guid>https://www.tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
+&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>hardware</category><category>journal</category><category>linux</category><guid>https://tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>Creating Animated Meme GIFs on the Command-Line</title><link>https://tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
 animated gif memes, finally figured out how to do it manually. Not a universal
 process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
 &lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
@@ -758,7 +758,7 @@ and specifying "copy", as most people do, gives me an output with no video,
 only audio.&lt;/p&gt;
 &lt;p&gt;This results in a three second, 217KB .mp4 video file. (the following is just an
 image of it).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split.webp" src="https://www.tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split.webp" src="https://tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
 &lt;h4&gt;3. Crop&lt;/h4&gt;
 &lt;p&gt;To crop out the black bars from the top and bottom:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -hide_banner -i Ash-split.mp4 -vf 'crop=iw:365' Ash-split-crop.mp4
@@ -769,13 +769,13 @@ any offset ordinates for the crop, ffmpeg defaults to centering them, so this
 365 pixels are taken from the (spatial, vertical) middle of the video, which is
 exactly what we want.&lt;/p&gt;
 &lt;p&gt;This results in a three second, 220KB .mp4 video file.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://www.tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
 &lt;h3&gt;4. Resize and convert to gif&lt;/h3&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="s s-Atom"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;hide_banner&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;vf&lt;/span&gt; &lt;span class="s s-Atom"&gt;'scale=512:-1'&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;resize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;gif&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This results in a grainy-but-passable three second 750KB animated .gif:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
 &lt;p&gt;The file size can be smaller, if you care, most easily by splitting a shorter
 video clip, reducing the frame rate, or reducing the 'scale' in this step.&lt;/p&gt;
 &lt;p&gt;Alternately, this could be done using ImageMagik's 'convert', but the result
@@ -798,7 +798,7 @@ text labels, then the '-layers' option re-applies optimizations. Without this
 dance, the text is all twitchy and messy.&lt;/p&gt;
 &lt;p&gt;Voilà. Imagine sending it to a co-worker who is taking on a difficult task,
 like making changes to that thorny section of the codebase that nobody likes:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>video</category><category>youtube</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>Download audio from YouTube</title><link>https://www.tartley.com/posts/download-audio-from-youtube/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;For the sort of weirdos who still host their own music files, but aren't
+&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>video</category><category>youtube</category><guid>https://tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>Download audio from YouTube</title><link>https://tartley.com/posts/download-audio-from-youtube/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;For the sort of weirdos who still host their own music files, but aren't
 preciously audiophile about it. Aaaaand also I'm wording this with the
 assumption you're a Linux, command-line and Python nerd.&lt;/p&gt;
 &lt;p&gt;Sometimes it's a video which is explicitly Creative Commons. Other times, it's
@@ -811,24 +811,24 @@ you or your child has grown to love from obsessive movie re-watches.&lt;/p&gt;
 &lt;h3&gt;One-off setup:&lt;/h3&gt;
 &lt;p&gt;Install &lt;a href="https://ffmpeg.org/"&gt;&lt;em&gt;ffmpeg&lt;/em&gt;&lt;/a&gt;, a venerable open-source command-line
 video/audio conversion tool.&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo apt install ffmpeg
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;ffmpeg
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Next, install &lt;a href="https://pypa.github.io/pipx/"&gt;&lt;em&gt;pipx&lt;/em&gt;&lt;/a&gt;, a tool to install
 commmand-line tools that are distributed as Python packages:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;python3 -m pip install --user pipx
-python3 -m pipx ensurepath
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;pipx
+python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pipx&lt;span class="w"&gt; &lt;/span&gt;ensurepath
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Finally, use pipx to install the &lt;a href="https://youtube-dl.org/"&gt;&lt;em&gt;youtube-dl&lt;/em&gt;&lt;/a&gt;, an
 oft-sued but never vanquished tool to download YouTube videos. (We're using
 the Python package because the apt package is too old to work):&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pipx install youtube-dl
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pipx&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;youtube-dl
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;Goal fulfillment&lt;/h3&gt;
 &lt;p&gt;Here, download your precious audio:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl -x --audio-format&lt;span class="o"&gt;=&lt;/span&gt;best URL
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;-x&lt;span class="w"&gt; &lt;/span&gt;--audio-format&lt;span class="o"&gt;=&lt;/span&gt;best&lt;span class="w"&gt; &lt;/span&gt;URL
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where:&lt;/p&gt;
@@ -848,7 +848,7 @@ the Python package because the apt package is too old to work):&lt;/p&gt;
 &lt;p&gt;But mp3 works well enough for &lt;a href="https://www.youtube.com/watch?v=VSJWvzLuGz8"&gt;my&lt;/a&gt;
 &lt;a href="https://www.youtube.com/watch?v=ENVIoR2f-Qgh"&gt;needs&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Alternatively, for playlists:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl -x --audio-format&lt;span class="o"&gt;=&lt;/span&gt;best --yes-playlist -i URL
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;-x&lt;span class="w"&gt; &lt;/span&gt;--audio-format&lt;span class="o"&gt;=&lt;/span&gt;best&lt;span class="w"&gt; &lt;/span&gt;--yes-playlist&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;URL
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where:&lt;/p&gt;
@@ -859,17 +859,17 @@ the Python package because the apt package is too old to work):&lt;/p&gt;
   thing.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;My previous inferior way&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This method is worse because it downloads the whole video file before
-extracting audio locally, and the download gets throttled by YouTube in some
-way, which of late is very slow indeed, i.e. substantially slower than watching
-the video.&lt;/p&gt;
+&lt;p&gt;This method is worse because it downloads the whole video file before
+extracting audio locally, and the download gets throttled by YouTube in
+some way, which of late is very slow indeed, i.e. substantially slower
+than watching the video.&lt;/p&gt;
 &lt;p&gt;Download the video from YouTube:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl URL
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;URL
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This results in a webm file. I have no idea what that is, and am relieved
 to discover that converting it into an mp3 requires just:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;MyVideoFile&lt;span class="w"&gt; &lt;/span&gt;-vn&lt;span class="w"&gt; &lt;/span&gt;MyAudioFile.mp3
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where &lt;code&gt;-vn&lt;/code&gt; disables video in the output.&lt;/p&gt;
@@ -882,7 +882,7 @@ to discover that converting it into an mp3 requires just:&lt;/p&gt;
   and popular.&lt;/li&gt;
 &lt;li&gt;2022: Added "Goal fulfillment" section, initially called "The Best Way", and
   deprecated the previous method under "My previous inferior way".&lt;/li&gt;
-&lt;/ul&gt;</description><category>command-line</category><category>linux</category><category>music</category><category>til</category><category>youtube</category><guid>https://www.tartley.com/posts/download-audio-from-youtube/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+&lt;/ul&gt;</description><category>command-line</category><category>linux</category><category>music</category><category>til</category><category>youtube</category><guid>https://tartley.com/posts/download-audio-from-youtube/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;
@@ -890,13 +890,13 @@ bash command history when creating, etc?&lt;/p&gt;
 &lt;p&gt;Here goes then.&lt;/p&gt;
 &lt;p&gt;I have one LXD container running for each nontrivial development project I'm
 working on.&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ lxc ls
-&lt;span class="p"&gt;|&lt;/span&gt;    NAME     &lt;span class="p"&gt;|&lt;/span&gt;  STATE  &lt;span class="p"&gt;|&lt;/span&gt;        IPV4         &lt;span class="p"&gt;|&lt;/span&gt; IPV6 &lt;span class="p"&gt;|&lt;/span&gt;   TYPE    &lt;span class="p"&gt;|&lt;/span&gt; SNAPSHOTS &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; devicegw    &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.228 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; ident       &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.4 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;   &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; revs        &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.151 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; siab        &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.128 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; tartley-com &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.161 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;ls
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;NAME&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;STATE&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;IPV4&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;IPV6&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;TYPE&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;SNAPSHOTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;devicegw&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.228&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;ident&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.4&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;revs&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.151&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;siab&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.128&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;tartley-com&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.161&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Out of the gate we see one source of confusion. "LXD", the daemon, is a
@@ -904,10 +904,10 @@ newer project that builds on top of "LXC" the containers. However the user
 interface to all the new LXD-goodness is through a command-line called "lxc",
 which replaces the older command line tool called "lxd". :-/&lt;/p&gt;
 &lt;p&gt;To create a new one:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ &lt;span class="nb"&gt;time&lt;/span&gt; lxc launch ubuntu:16.04 -p default -p jhartley demo
-Creating demo
-Starting demo
-real    0m9.593s
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;time&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;launch&lt;span class="w"&gt; &lt;/span&gt;ubuntu:16.04&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;default&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;jhartley&lt;span class="w"&gt; &lt;/span&gt;demo
+Creating&lt;span class="w"&gt; &lt;/span&gt;demo
+Starting&lt;span class="w"&gt; &lt;/span&gt;demo
+real&lt;span class="w"&gt;    &lt;/span&gt;0m9.593s
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Once created, they take about 3 seconds to stop and 0.5 seconds to start.&lt;/p&gt;
@@ -924,48 +924,48 @@ real    0m9.593s
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Once a new container is up, we can execute commands directly on it:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ lxc &lt;span class="nb"&gt;exec&lt;/span&gt; demo hostname
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;exec&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;hostname
 demo
-$ lxc &lt;span class="nb"&gt;exec&lt;/span&gt; demo whoami
+$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;exec&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;whoami
 root
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Or SSH to them using their IP address:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460 $ lxc ls demo
-&lt;span class="p"&gt;|&lt;/span&gt; NAME &lt;span class="p"&gt;|&lt;/span&gt;  STATE  &lt;span class="p"&gt;|&lt;/span&gt;        IPV4         &lt;span class="p"&gt;|&lt;/span&gt; IPV6 &lt;span class="p"&gt;|&lt;/span&gt;   TYPE    &lt;span class="p"&gt;|&lt;/span&gt; SNAPSHOTS &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; demo &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.162 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-jhartley@t460 $ ssh &lt;span class="m"&gt;10&lt;/span&gt;.44.99.162
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;ls&lt;span class="w"&gt; &lt;/span&gt;demo
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;NAME&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;STATE&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;IPV4&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;IPV6&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;TYPE&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;SNAPSHOTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.162&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.162
 ...
-Warning: Permanently added &lt;span class="s1"&gt;'10.44.99.162'&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;ECDSA&lt;span class="o"&gt;)&lt;/span&gt; to the list of known hosts.
-Welcome to Ubuntu &lt;span class="m"&gt;16&lt;/span&gt;.04.6 LTS &lt;span class="o"&gt;(&lt;/span&gt;GNU/Linux &lt;span class="m"&gt;5&lt;/span&gt;.4.0-25-generic x86_64&lt;span class="o"&gt;)&lt;/span&gt;
-jhartley@demo $
+Warning:&lt;span class="w"&gt; &lt;/span&gt;Permanently&lt;span class="w"&gt; &lt;/span&gt;added&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'10.44.99.162'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;ECDSA&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;the&lt;span class="w"&gt; &lt;/span&gt;list&lt;span class="w"&gt; &lt;/span&gt;of&lt;span class="w"&gt; &lt;/span&gt;known&lt;span class="w"&gt; &lt;/span&gt;hosts.
+Welcome&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;Ubuntu&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;.04.6&lt;span class="w"&gt; &lt;/span&gt;LTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;GNU/Linux&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;.4.0-25-generic&lt;span class="w"&gt; &lt;/span&gt;x86_64&lt;span class="o"&gt;)&lt;/span&gt;
+jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Better than using IP addresses, you can run a DNS server to recognize
 &lt;code&gt;{containername}.lxd&lt;/code&gt; hostnames. (This part is from
 &lt;a href="https://discuss.linuxcontainers.org/t/a-way-to-resolve-container-lxd-from-host-in-all-cases/3698"&gt;here&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Find your lxd bridge IPv4 address&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;lxc network show lxdbr0
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;network&lt;span class="w"&gt; &lt;/span&gt;show&lt;span class="w"&gt; &lt;/span&gt;lxdbr0
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Create file &lt;code&gt;/etc/systemd/network/lxd.network&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;[Match]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;lxdbr0&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;[Match]&lt;/span&gt;
+&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;lxdbr0&lt;/span&gt;
 
-&lt;span class="k"&gt;[Network]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;Address&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR/24&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;DNS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;Domains&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;~lxd&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;[Network]&lt;/span&gt;
+&lt;span class="na"&gt;Address&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR/24&lt;/span&gt;
+&lt;span class="na"&gt;DNS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR&lt;/span&gt;
+&lt;span class="na"&gt;Domains&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;~lxd&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where IPADDR is the lxdbr0 IPv4 address.&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; systemd-networkd
-sudo reboot now
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;systemctl&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;enable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;systemd-networkd
+sudo&lt;span class="w"&gt; &lt;/span&gt;reboot&lt;span class="w"&gt; &lt;/span&gt;now
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Then:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460 $ ssh demo.lxd
-jhartley@demo $ &lt;span class="c1"&gt;# \o/&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;demo.lxd
+jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# \o/&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;One nice thing is that DNS works both from the host and on the containers,
@@ -974,11 +974,11 @@ SERVICE1.lxd, SERVICE2.lxd. Then running them in containers on your host
 they would just find each other. We don't actually do this, but it seems
 trivially easy to do. I should ask why we don't.&lt;/p&gt;
 &lt;p&gt;In practice I wrap up the ssh command with my accumulated foibles:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@demo $ &lt;span class="nb"&gt;type&lt;/span&gt; -a lssh
-lssh is a &lt;span class="k"&gt;function&lt;/span&gt;
-lssh &lt;span class="o"&gt;()&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-a&lt;span class="w"&gt; &lt;/span&gt;lssh
+lssh&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;function&lt;/span&gt;
+lssh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
 &lt;span class="o"&gt;{&lt;/span&gt;
-    &lt;span class="nv"&gt;TERM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xterm-color ssh -A -t &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.lxd"&lt;/span&gt; -- &lt;span class="s2"&gt;"cd &lt;/span&gt;&lt;span class="nv"&gt;$PWD&lt;/span&gt;&lt;span class="s2"&gt; &amp;amp;&amp;amp; exec &lt;/span&gt;&lt;span class="nv"&gt;$SHELL&lt;/span&gt;&lt;span class="s2"&gt; -l"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;TERM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xterm-color&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;-A&lt;span class="w"&gt; &lt;/span&gt;-t&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.lxd"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;--&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"cd &lt;/span&gt;&lt;span class="nv"&gt;$PWD&lt;/span&gt;&lt;span class="s2"&gt; &amp;amp;&amp;amp; exec &lt;/span&gt;&lt;span class="nv"&gt;$SHELL&lt;/span&gt;&lt;span class="s2"&gt; -l"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -988,7 +988,7 @@ is probably a simpler way.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;The booooooring bits:&lt;/p&gt;
 &lt;p&gt;When we started the container, we mentioned
-&lt;a href="https://www.tartley.com/files/2020/setup-lxd-profile.sh"&gt;a one-off setup script&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://tartley.com/files/2020/setup-lxd-profile.sh"&gt;a one-off setup script&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The script does a few things:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Creates a new key pair specifically to SSH to the container.&lt;/li&gt;
@@ -1002,9 +1002,9 @@ is probably a simpler way.&lt;/p&gt;
 &lt;li&gt;Doubtless due to my own misunderstanding somewhere, in order to get working
    IPv4 connections to my containers, I had to disable IPv6 connections to
    them.&lt;/li&gt;
-&lt;/ol&gt;</description><category>geek</category><category>linux</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Dina font as an OTF.</title><link>https://www.tartley.com/posts/dina-as-otf/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;The Dina font, converted to an OpenType Font (see screenshots at the bottom of
+&lt;/ol&gt;</description><category>geek</category><category>linux</category><category>software</category><category>terminal</category><guid>https://tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Dina font as an OTF.</title><link>https://tartley.com/posts/dina-as-otf/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;The Dina font, converted to an OpenType Font (see screenshots at the bottom of
 the page):&lt;/p&gt;
-&lt;h2&gt;&lt;a href="https://www.tartley.com/files/2020/Dina-v2.93-otf.tar.gz"&gt;&lt;span class="emoji"&gt;📦&lt;/span&gt; Dina-v2.93-otf.tar.gz&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a href="https://tartley.com/files/2020/Dina-v2.93-otf.tar.gz"&gt;&lt;span class="emoji"&gt;📦&lt;/span&gt; Dina-v2.93-otf.tar.gz&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://gitlab.gnome.org/GNOME/pango/issues/386"&gt;Pango dropped support for naive bitmap fonts&lt;/a&gt;
 in v1.44 -- i.e. from Ubuntu 20.04, &lt;em&gt;Focal&lt;/em&gt;, onwards.&lt;/p&gt;
 &lt;p&gt;So all bitmap fonts need to be converted into a format that will render,
@@ -1017,7 +1017,7 @@ or font authors.&lt;/p&gt;
 more than your distribution does. Here's how I did it for my
 &lt;a href="http://www.dcmembers.com/jibsen/download/61/"&gt;beloved Dina&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;1. Identify the font file.&lt;/h3&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;fc-list &lt;span class="p"&gt;|&lt;/span&gt; grep Dina
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;fc-list&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;grep&lt;span class="w"&gt; &lt;/span&gt;Dina
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;2. Convert.&lt;/h3&gt;
@@ -1071,19 +1071,19 @@ or at least filing an issue there to try and get some help.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3&gt;The result&lt;/h3&gt;
 &lt;p&gt;I know, it doesn't look like much.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-dina-small-ll.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2020/terminal-dina-small-ll.png"&gt;&lt;/p&gt;
 &lt;p&gt;But compare it with a regular vector font. Here's Ubuntu Mono, the &lt;em&gt;best&lt;/em&gt; of
 the vector fonts I could find at these sizes. Blurry and inconsistent and hard
 to read:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;</description><category>fonts</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>Conky.</title><link>https://www.tartley.com/posts/conky/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;In the typical mad-scientist thrills-per-minute that is the Linux way,
+&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;</description><category>fonts</category><category>linux</category><category>terminal</category><guid>https://tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>Conky.</title><link>https://tartley.com/posts/conky/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;In the typical mad-scientist thrills-per-minute that is the Linux way,
 adding a CPU meter to my desktop involved crafting
-&lt;a href="https://www.tartley.com/files/2020/conky.conf"&gt;my own conky configuration file&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://tartley.com/files/2020/conky.conf"&gt;my own conky configuration file&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As always, building your own is a chore that crops up when you least expect
 it. But on the other hand, the opportunity for functional and aesthetic
 work results in something artisnally crafted to exactly meet your own personal
 needs. Something you can feel a little pride about. An elegant weapon,
 for a more... civilized age.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="An elegant weapon, for a more... civilised age." src="https://www.tartley.com/files/2020/conky.jpg"&gt;&lt;/p&gt;</description><category>linux</category><guid>https://www.tartley.com/posts/conky/</guid><pubDate>Wed, 15 Jan 2020 22:09:13 GMT</pubDate></item><item><title>Installing Colout</title><link>https://www.tartley.com/posts/installing-colout/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="An elegant weapon, for a more... civilised age." src="https://tartley.com/files/2020/conky.jpg"&gt;&lt;/p&gt;</description><category>linux</category><guid>https://tartley.com/posts/conky/</guid><pubDate>Wed, 15 Jan 2020 22:09:13 GMT</pubDate></item><item><title>Installing Colout</title><link>https://tartley.com/posts/installing-colout/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
 &lt;p&gt;But &lt;code&gt;pip install colout&lt;/code&gt; from PyPI is broken, and has been for many months,
 due to a typo in the
 &lt;a href="https://pypi.org/project/colout/"&gt;latest (v0.5) PyPI release&lt;/a&gt;.&lt;/p&gt;
@@ -1097,22 +1097,22 @@ new v0.6 version, although has not released any of that to PyPI.&lt;/p&gt;
 &lt;p&gt;Clone the latest repo &lt;a href="https://github.com/nojhan/colout"&gt;from Github&lt;/a&gt;, and
 install from that:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# cd to the clone, then&lt;/span&gt;
-python3 -m pip install --user .
+python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;.
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Or, pip install the version I uploaded to PyPI, which is a straight copy of the
 latest Github at the time:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pip install --user colout-fix
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;colout-fix
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Or, best of all, pip install straight from the original Github repo:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pip install --user git+git://github.com/nojhan/colout.git
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;git+git://github.com/nojhan/colout.git
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Note that, throughout, we're using &lt;code&gt;--user&lt;/code&gt;, so that you can install
 development tools like this system-wide for the current user, without needing a
 virtualenv, without needing root access, and without modifying your installed
-Python system libraries.&lt;/p&gt;</description><category>geek</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item><item><title>Running Multiple Firefox Profiles on Linux</title><link>https://www.tartley.com/posts/running-multiple-firefox-profiles/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I recently switched from Chrome to Firefox. It's so &lt;em&gt;fast&lt;/em&gt;, and easier
+Python system libraries.&lt;/p&gt;</description><category>geek</category><category>linux</category><category>terminal</category><guid>https://tartley.com/posts/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item><item><title>Running Multiple Firefox Profiles on Linux</title><link>https://tartley.com/posts/running-multiple-firefox-profiles/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I recently switched from Chrome to Firefox. It's so &lt;em&gt;fast&lt;/em&gt;, and easier
 to trust that Mozilla has my privacy and interests at heart than Google
 does.&lt;/p&gt;
 &lt;p&gt;I want to run a second profile at work, to keep a distinct set of open
@@ -1124,34 +1124,34 @@ Create a second profile.&lt;/p&gt;
 &lt;p&gt;Substitute those directories into this firefox.desktop file, where I've
 marked 'XXX':&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="cp"&gt;# Gnome3 .desktop file for Firefox with multiple profiles&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Desktop&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Entry&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Comment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Browse&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;GenericName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Web&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Browser&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Keywords&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Internet&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;WWW&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Browser&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Web&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Explorer&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Application&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;remote&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Terminal&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;MultipleArgs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Icon&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Categories&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;GNOME&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;GTK&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Network&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;WebBrowser&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Actions&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;work&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;MimeType&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xhtml&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;rss&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;rdf&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gif&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jpeg&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ftp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chrome&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;video&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;webm&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xpinstall&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;StartupNotify&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Desktop&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Entry&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;Version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.0&lt;/span&gt;
+&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;
+&lt;span class="n"&gt;Comment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Browse&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;
+&lt;span class="n"&gt;GenericName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Web&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Browser&lt;/span&gt;
+&lt;span class="n"&gt;Keywords&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Internet&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;WWW&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Browser&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Web&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Explorer&lt;/span&gt;
+&lt;span class="n"&gt;Type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Application&lt;/span&gt;
+&lt;span class="n"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;remote&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;
+&lt;span class="n"&gt;Terminal&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;MultipleArgs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;span class="n"&gt;Icon&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;
+&lt;span class="n"&gt;Categories&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;GNOME&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;GTK&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Network&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;WebBrowser&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;Actions&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;work&lt;/span&gt;
+&lt;span class="n"&gt;MimeType&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xhtml&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;rss&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;rdf&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gif&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jpeg&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ftp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chrome&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;video&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;webm&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xpinstall&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;StartupNotify&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
 
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Desktop&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Action&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;profile&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mozilla&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;XXX&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;remote&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Desktop&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Action&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;profile&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mozilla&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;XXX&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;remote&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;
 
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Desktop&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Action&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;work&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;work&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;profile&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mozilla&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;XXX&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;remote&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Desktop&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Action&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;work&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;work&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;profile&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mozilla&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;XXX&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;remote&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Save the above as firefox.desktop and install using:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ desktop-file-validate firefox.desktop
-$ desktop-file-install --dir&lt;span class="o"&gt;=&lt;/span&gt;.local/share/applications firefox.desktop
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;desktop-file-validate&lt;span class="w"&gt; &lt;/span&gt;firefox.desktop
+$&lt;span class="w"&gt; &lt;/span&gt;desktop-file-install&lt;span class="w"&gt; &lt;/span&gt;--dir&lt;span class="o"&gt;=&lt;/span&gt;.local/share/applications&lt;span class="w"&gt; &lt;/span&gt;firefox.desktop
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This results in a Firefox icon in your applications menu that defaults
@@ -1159,7 +1159,7 @@ to whichever profile you mark as default in the ProfileManager, but
 right clicking lets you select the home or work profile explicitly. Open
 each, and change the theme in one of them so the windows are visually
 distinct.&lt;/p&gt;
-&lt;p&gt;Tested on Ubuntu, RHEL 7.3, probably works on all Gnome3 desktops.&lt;/p&gt;</description><category>geek</category><category>linux</category><guid>https://www.tartley.com/posts/running-multiple-firefox-profiles/</guid><pubDate>Thu, 22 Feb 2018 00:40:55 GMT</pubDate></item><item><title>Automate Gnome keybindings</title><link>https://www.tartley.com/posts/automate-gnome-keybindings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Sick of manual GUI twiddling to fix inconsistent keybindings on various
+&lt;p&gt;Tested on Ubuntu, RHEL 7.3, probably works on all Gnome3 desktops.&lt;/p&gt;</description><category>geek</category><category>linux</category><guid>https://tartley.com/posts/running-multiple-firefox-profiles/</guid><pubDate>Thu, 22 Feb 2018 00:40:55 GMT</pubDate></item><item><title>Automate Gnome keybindings</title><link>https://tartley.com/posts/automate-gnome-keybindings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Sick of manual GUI twiddling to fix inconsistent keybindings on various
 computers. Solved once and for all, by a new script in my personal
 workstation setup bucket:&lt;/p&gt;
 &lt;p&gt;Warning: This:&lt;/p&gt;
@@ -1177,20 +1177,20 @@ workstation setup bucket:&lt;/p&gt;
 &lt;span class="nv"&gt;kb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'org.gnome.desktop.wm.keybindings'&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Switcher, between windows not apps, uses alt-tab and alt-grave&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; switch-windows &lt;span class="s2"&gt;"['Tab']"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; switch-windows-backward &lt;span class="s2"&gt;"['grave', 'Tab']"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; switch-applications &lt;span class="s2"&gt;"[]"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; switch-applications-backward &lt;span class="s2"&gt;"[]"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;switch-windows&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['Tab']"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;switch-windows-backward&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['grave', 'Tab']"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;switch-applications&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"[]"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;switch-applications-backward&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"[]"&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Window maximize toggle, super-up&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; maximize &lt;span class="s2"&gt;"[]"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; toggle-maximized &lt;span class="s2"&gt;"['Up']"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;maximize&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"[]"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;toggle-maximized&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['Up']"&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Window maximize vertically toggle, super-v&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; maximize-vertically &lt;span class="s2"&gt;"['v']"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;maximize-vertically&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['v']"&lt;/span&gt;
 
 &lt;span class="c1"&gt;# run command, super-r&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; panel-run-dialog &lt;span class="s2"&gt;"['r', 'F2']"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;panel-run-dialog&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['r', 'F2']"&lt;/span&gt;
 
 
 &lt;span class="c1"&gt;# Custom commands&lt;/span&gt;
@@ -1198,15 +1198,15 @@ gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;
 &lt;span class="nv"&gt;mk&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'org.gnome.settings-daemon.plugins.media-keys'&lt;/span&gt;
 &lt;span class="nv"&gt;ckb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings'&lt;/span&gt;
 
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt; custom-keybindings &lt;span class="s2"&gt;"['&lt;/span&gt;&lt;span class="nv"&gt;$ckb&lt;/span&gt;&lt;span class="s2"&gt;/custom0/', '&lt;/span&gt;&lt;span class="nv"&gt;$ckb&lt;/span&gt;&lt;span class="s2"&gt;/custom1/']"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;custom-keybindings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['&lt;/span&gt;&lt;span class="nv"&gt;$ckb&lt;/span&gt;&lt;span class="s2"&gt;/custom0/', '&lt;/span&gt;&lt;span class="nv"&gt;$ckb&lt;/span&gt;&lt;span class="s2"&gt;/custom1/']"&lt;/span&gt;
 
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/ name &lt;span class="s2"&gt;"screen off"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/ &lt;span class="nb"&gt;command&lt;/span&gt; &lt;span class="s2"&gt;"screenoff"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/ binding &lt;span class="s2"&gt;"z"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/&lt;span class="w"&gt; &lt;/span&gt;name&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"screen off"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"screenoff"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/&lt;span class="w"&gt; &lt;/span&gt;binding&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"z"&lt;/span&gt;
 
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ name &lt;span class="s2"&gt;"terminal"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ &lt;span class="nb"&gt;command&lt;/span&gt; &lt;span class="s2"&gt;"terminal"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ binding &lt;span class="s2"&gt;"t"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/&lt;span class="w"&gt; &lt;/span&gt;name&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"terminal"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"terminal"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/&lt;span class="w"&gt; &lt;/span&gt;binding&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"t"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Embedded in that is the ultimate solution to my longstanding irk with
@@ -1221,4 +1221,4 @@ madness.&lt;/p&gt;
 &lt;p&gt;The above modifies alt-tab to just cycle through all windows, ungrouped,
 which fixes the ability to toggle between last two windows. Also,
 alt-grave is provided as an alternative to cycle backwards through the
-windows, which is easier to hit than shift-alt-tab.&lt;/p&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/automate-gnome-keybindings/</guid><pubDate>Thu, 05 Oct 2017 01:06:47 GMT</pubDate></item></channel></rss>
+windows, which is easier to hit than shift-alt-tab.&lt;/p&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://tartley.com/posts/automate-gnome-keybindings/</guid><pubDate>Thu, 05 Oct 2017 01:06:47 GMT</pubDate></item></channel></rss>

@@ -5,17 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Automate Gnome keybindings | tartley.com</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://www.tartley.com/posts/automate-gnome-keybindings/">
+<link rel="canonical" href="https://tartley.com/posts/automate-gnome-keybindings/">
 <link rel="icon" href="../../welcome.gif" sizes="16x16">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
 <link rel="prev" href="../postscript-formatted-man-pages/" title="Postscript formatted man pages" type="text/html">
 <link rel="next" href="../running-multiple-firefox-profiles/" title="Running Multiple Firefox Profiles on Linux" type="text/html">
 <meta property="og:site_name" content="tartley.com">
 <meta property="og:title" content="Automate Gnome keybindings">
-<meta property="og:url" content="https://www.tartley.com/posts/automate-gnome-keybindings/">
+<meta property="og:url" content="https://tartley.com/posts/automate-gnome-keybindings/">
 <meta property="og:description" content="Sick of manual GUI twiddling to fix inconsistent keybindings on various
 computers. Solved once and for all, by a new script in my personal
 workstation setup bucket:
@@ -42,7 +41,7 @@ works great on RHEL">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.tartley.com/">
+            <a class="navbar-brand" href="https://tartley.com/">
 
                 <span id="blog-title">tartley.com</span>
             </a>
@@ -51,13 +50,16 @@ works great on RHEL">
         <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
-<a href="../../archive.html">Archive</a>
+<a href="../../archive.html">Posts</a>
                 </li>
 <li>
 <a href="../../categories/">Tags</a>
                 </li>
 <li>
-<a href="../../rss.xml">RSS feed</a>
+<a href="../../galleries/Drawings">Gallery</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS</a>
                 </li>
 <li>
 <a href="../../pages/about/">About</a>
@@ -66,7 +68,7 @@ works great on RHEL">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -81,6 +83,7 @@ works great on RHEL">
         <!--Body content-->
         <div class="row">
             
+            
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Automate Gnome keybindings</a></h1>
 
         <div class="metadata">
@@ -92,8 +95,10 @@ works great on RHEL">
             <time class="published dt-published" datetime="2017-10-04T20:06:47-05:00" itemprop="datePublished" title="2017-10-04 20:06">2017-10-04 20:06</time></a>
             </p>
             
+
         </div>
         
+
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <p>Sick of manual GUI twiddling to fix inconsistent keybindings on various
 computers. Solved once and for all, by a new script in my personal
@@ -113,20 +118,20 @@ workstation setup bucket:</p>
 <span class="nv">kb</span><span class="o">=</span><span class="s1">'org.gnome.desktop.wm.keybindings'</span>
 
 <span class="c1"># Switcher, between windows not apps, uses alt-tab and alt-grave</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-windows <span class="s2">"['Tab']"</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-windows-backward <span class="s2">"['grave', 'Tab']"</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-applications <span class="s2">"[]"</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-applications-backward <span class="s2">"[]"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>switch-windows<span class="w"> </span><span class="s2">"['Tab']"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>switch-windows-backward<span class="w"> </span><span class="s2">"['grave', 'Tab']"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>switch-applications<span class="w"> </span><span class="s2">"[]"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>switch-applications-backward<span class="w"> </span><span class="s2">"[]"</span>
 
 <span class="c1"># Window maximize toggle, super-up</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> maximize <span class="s2">"[]"</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> toggle-maximized <span class="s2">"['Up']"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>maximize<span class="w"> </span><span class="s2">"[]"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>toggle-maximized<span class="w"> </span><span class="s2">"['Up']"</span>
 
 <span class="c1"># Window maximize vertically toggle, super-v</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> maximize-vertically <span class="s2">"['v']"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>maximize-vertically<span class="w"> </span><span class="s2">"['v']"</span>
 
 <span class="c1"># run command, super-r</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> panel-run-dialog <span class="s2">"['r', 'F2']"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>panel-run-dialog<span class="w"> </span><span class="s2">"['r', 'F2']"</span>
 
 
 <span class="c1"># Custom commands</span>
@@ -134,15 +139,15 @@ gsettings <span class="nb">set</span> <span class="nv">$kb</span> panel-run-dial
 <span class="nv">mk</span><span class="o">=</span><span class="s1">'org.gnome.settings-daemon.plugins.media-keys'</span>
 <span class="nv">ckb</span><span class="o">=</span><span class="s1">'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings'</span>
 
-gsettings <span class="nb">set</span> <span class="nv">$mk</span> custom-keybindings <span class="s2">"['</span><span class="nv">$ckb</span><span class="s2">/custom0/', '</span><span class="nv">$ckb</span><span class="s2">/custom1/']"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$mk</span><span class="w"> </span>custom-keybindings<span class="w"> </span><span class="s2">"['</span><span class="nv">$ckb</span><span class="s2">/custom0/', '</span><span class="nv">$ckb</span><span class="s2">/custom1/']"</span>
 
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/ name <span class="s2">"screen off"</span>
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/ <span class="nb">command</span> <span class="s2">"screenoff"</span>
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/ binding <span class="s2">"z"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/<span class="w"> </span>name<span class="w"> </span><span class="s2">"screen off"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="s2">"screenoff"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/<span class="w"> </span>binding<span class="w"> </span><span class="s2">"z"</span>
 
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ name <span class="s2">"terminal"</span>
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ <span class="nb">command</span> <span class="s2">"terminal"</span>
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ binding <span class="s2">"t"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/<span class="w"> </span>name<span class="w"> </span><span class="s2">"terminal"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="s2">"terminal"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/<span class="w"> </span>binding<span class="w"> </span><span class="s2">"t"</span>
 </pre></div>
 
 <p>Embedded in that is the ultimate solution to my longstanding irk with
@@ -178,6 +183,7 @@ windows, which is easier to hit than shift-alt-tab.</p>
         <footer id="footer"></footer>
 </div>
 </div>
+
 
             <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");

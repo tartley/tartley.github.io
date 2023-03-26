@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about video)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/video.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Sep 2022 15:37:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about video)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/video.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 23 Mar 2023 19:05:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating Animated Meme GIFs on the Command-Line</title><link>https://tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
 animated gif memes, finally figured out how to do it manually. Not a universal
 process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
 &lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
@@ -37,7 +37,7 @@ and specifying "copy", as most people do, gives me an output with no video,
 only audio.&lt;/p&gt;
 &lt;p&gt;This results in a three second, 217KB .mp4 video file. (the following is just an
 image of it).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split.webp" src="https://www.tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split.webp" src="https://tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
 &lt;h4&gt;3. Crop&lt;/h4&gt;
 &lt;p&gt;To crop out the black bars from the top and bottom:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -hide_banner -i Ash-split.mp4 -vf 'crop=iw:365' Ash-split-crop.mp4
@@ -48,13 +48,13 @@ any offset ordinates for the crop, ffmpeg defaults to centering them, so this
 365 pixels are taken from the (spatial, vertical) middle of the video, which is
 exactly what we want.&lt;/p&gt;
 &lt;p&gt;This results in a three second, 220KB .mp4 video file.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://www.tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
 &lt;h3&gt;4. Resize and convert to gif&lt;/h3&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="s s-Atom"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;hide_banner&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;vf&lt;/span&gt; &lt;span class="s s-Atom"&gt;'scale=512:-1'&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;resize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;gif&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This results in a grainy-but-passable three second 750KB animated .gif:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
 &lt;p&gt;The file size can be smaller, if you care, most easily by splitting a shorter
 video clip, reducing the frame rate, or reducing the 'scale' in this step.&lt;/p&gt;
 &lt;p&gt;Alternately, this could be done using ImageMagik's 'convert', but the result
@@ -77,4 +77,4 @@ text labels, then the '-layers' option re-applies optimizations. Without this
 dance, the text is all twitchy and messy.&lt;/p&gt;
 &lt;p&gt;Voilà. Imagine sending it to a co-worker who is taking on a difficult task,
 like making changes to that thorny section of the codebase that nobody likes:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>video</category><category>youtube</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>video</category><category>youtube</category><guid>https://tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item></channel></rss>

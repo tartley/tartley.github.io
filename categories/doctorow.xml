@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about doctorow)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/doctorow.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Sep 2022 15:37:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Do a bit of helping out at EuroPython</title><link>https://www.tartley.com/posts/do-a-bit-of-helping-out-at-europython/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Are you a &lt;a href="http://python.org"&gt;Python&lt;/a&gt; geek?&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about doctorow)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/doctorow.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 23 Mar 2023 19:05:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Do a bit of helping out at EuroPython</title><link>https://tartley.com/posts/do-a-bit-of-helping-out-at-europython/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Are you a &lt;a href="http://python.org"&gt;Python&lt;/a&gt; geek?&lt;/p&gt;
 &lt;p&gt;For starters - you should totally be going to
 &lt;a href="http://www.europython.eu/"&gt;EuroPython&lt;/a&gt; at the end of June. Python
 conferences like this attract brilliant presentations from some real
@@ -43,8 +43,8 @@ premises)&lt;/p&gt;
 &lt;p&gt;Please think about it, and if you fancy it, sign up soon (on the wiki
 page above) because we're currently all a-flutter wondering how the heck
 we're going to manage this. :-)&lt;/p&gt;
-&lt;p&gt;Thanks!&lt;/p&gt;</description><category>doctorow</category><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/do-a-bit-of-helping-out-at-europython/</guid><pubDate>Tue, 09 Jun 2009 20:13:40 GMT</pubDate></item><item><title>Makers</title><link>https://www.tartley.com/posts/makers/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Makers cover" src="https://www.tartley.com/files/2009/makers-cover.jpg"&gt;
+&lt;p&gt;Thanks!&lt;/p&gt;</description><category>doctorow</category><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/do-a-bit-of-helping-out-at-europython/</guid><pubDate>Tue, 09 Jun 2009 20:13:40 GMT</pubDate></item><item><title>Makers</title><link>https://tartley.com/posts/makers/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Makers cover" src="https://tartley.com/files/2009/makers-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Cory Doctorow&lt;/em&gt; (not yet published.)&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://craphound.com/"&gt;Cory&lt;/a&gt; very kindly brought an early manuscript of
@@ -65,9 +65,9 @@ personal ramifications of the ways in which modern technology is
 changing the way people interact, organise and get things done.&lt;/p&gt;
 &lt;p&gt;0/10: If you aren't interested in the ways society is changing under our
 feet.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>culture</category><category>doctorow</category><category>fiction</category><category>internet</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/makers/</guid><pubDate>Sat, 18 Apr 2009 22:10:31 GMT</pubDate></item><item><title>Trans-Speculative Ramblings</title><link>https://www.tartley.com/posts/trans-speculative-ramblings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;If you're not a wild-eyed loon, you're unlikely to appreciate this post.
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>culture</category><category>doctorow</category><category>fiction</category><category>internet</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://tartley.com/posts/makers/</guid><pubDate>Sat, 18 Apr 2009 22:10:31 GMT</pubDate></item><item><title>Trans-Speculative Ramblings</title><link>https://tartley.com/posts/trans-speculative-ramblings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;If you're not a wild-eyed loon, you're unlikely to appreciate this post.
 Bear with me a moment, while I establish some context.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Cory Doctorow" src="https://www.tartley.com/files/2007/07/cory-doctorow.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Cory Doctorow" src="https://tartley.com/files/2007/07/cory-doctorow.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;So &lt;a href="http://www.craphound.com/"&gt;here's the esteemed Cory Doctorow&lt;/a&gt;. His
 recent[*1] post at Locus, &lt;a href="http://www.locusmag.com/Features/2007/07/cory-doctorow-progressive-apocalypse.html"&gt;The Progressive Apocalypse and Other
 Futurismic
@@ -104,7 +104,7 @@ the dead alike. Or at least those of the dead who had sufficient
 foresight to have had their state vector preserved, at any rate.&lt;/p&gt;
 &lt;p&gt;Still with me? Singularity = Judgement Day. Got it? Ok.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://sentientdevelopments.blogspot.com"&gt;&lt;img alt="George
-Dvorsky" src="https://www.tartley.com/files/2007/07/georgedvorsky.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+Dvorsky" src="https://tartley.com/files/2007/07/georgedvorsky.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Then, over here, we have
 &lt;a href="http://sentientdevelopments.blogspot.com"&gt;George Dvorsky&lt;/a&gt;,
 who recently[*1] referenced an old post of his, &lt;a href="http://sentientdevelopments.blogspot.com/2006/03/our-non-arbitrary-universe.html"&gt;Our non-arbitrary
@@ -197,10 +197,10 @@ but it would make for a smashing short science fiction story, don't you
 think?&lt;/p&gt;
 &lt;p&gt;(Note *1: I wrote most of this months ago, but never got around to
 hitting 'Post', so forgive the no-longer accurate references to 'recent'
-events.)&lt;/p&gt;</description><category>doctorow</category><category>geek</category><category>imho</category><category>write</category><guid>https://www.tartley.com/posts/trans-speculative-ramblings/</guid><pubDate>Fri, 09 May 2008 05:27:05 GMT</pubDate></item><item><title>Someone Comes to Town, Someone Leaves Town</title><link>https://www.tartley.com/posts/someone-comes-to-town-someone-leaves-town/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Someone Comes to Town, Someone Leaves Town" src="https://www.tartley.com/files/2008/02/someone-comes-to-town.jpg"&gt;
+events.)&lt;/p&gt;</description><category>doctorow</category><category>geek</category><category>imho</category><category>write</category><guid>https://tartley.com/posts/trans-speculative-ramblings/</guid><pubDate>Fri, 09 May 2008 05:27:05 GMT</pubDate></item><item><title>Someone Comes to Town, Someone Leaves Town</title><link>https://tartley.com/posts/someone-comes-to-town-someone-leaves-town/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Someone Comes to Town, Someone Leaves Town" src="https://tartley.com/files/2008/02/someone-comes-to-town.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Cory Doctorow&lt;/em&gt; &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Cory Doctorow&lt;/em&gt; &lt;img alt="spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;I just don't know about this one. I really wanted to like it. It starts
 out with an interesting, down-to-earth story about a guy establishing
 himself in a new neighbourhood, setting up an open wireless mesh net
@@ -228,8 +228,8 @@ However, I've read a bunch of discussion about &lt;em&gt;Someone Comes to
 Town...&lt;/em&gt;, and I don't seem to have missed much that anyone else has been
 getting out of it. So while I'm looking forward to other stuff by him,
 I'm sticking by my low rating for this.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>doctorow</category><category>fiction</category><category>media</category><category>novel</category><guid>https://www.tartley.com/posts/someone-comes-to-town-someone-leaves-town/</guid><pubDate>Fri, 08 Feb 2008 07:01:37 GMT</pubDate></item><item><title>The Hacker Crackdown : Law and Disorder on the Electronic Frontier</title><link>https://www.tartley.com/posts/the-hacker-crackdown-law-and-disorder-on-the-electronic-frontier/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="The Hacker Crackdown" src="https://www.tartley.com/files/2008/01/hacker-crackdown.jpg"&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>doctorow</category><category>fiction</category><category>media</category><category>novel</category><guid>https://tartley.com/posts/someone-comes-to-town-someone-leaves-town/</guid><pubDate>Fri, 08 Feb 2008 07:01:37 GMT</pubDate></item><item><title>The Hacker Crackdown : Law and Disorder on the Electronic Frontier</title><link>https://tartley.com/posts/the-hacker-crackdown-law-and-disorder-on-the-electronic-frontier/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="The Hacker Crackdown" src="https://tartley.com/files/2008/01/hacker-crackdown.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Bruce Sterling, &lt;a href="http://www.archive.org/search.php?query=hacker%20crackdown%20AND%20mediatype%3Aaudio%20AND%20collection%3Aopensource_audio"&gt;read aloud by Cory Doctorow&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Only the second audiobook I've bothered to listen to, and it seems to
@@ -266,4 +266,4 @@ online realm.&lt;/p&gt;
 and motives of the colorful individuals involved, and this makes the
 whole thing an enjoyable romp through a serious topic.&lt;/p&gt;
 &lt;p&gt;Rating: 8/10 - I only wish I'd read it ten years ago&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>audiobook</category><category>book</category><category>culture</category><category>doctorow</category><category>internet</category><category>law</category><category>media</category><category>non-fiction</category><category>software</category><category>stirling</category><guid>https://www.tartley.com/posts/the-hacker-crackdown-law-and-disorder-on-the-electronic-frontier/</guid><pubDate>Sat, 02 Feb 2008 22:15:49 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>audiobook</category><category>book</category><category>culture</category><category>doctorow</category><category>internet</category><category>law</category><category>media</category><category>non-fiction</category><category>software</category><category>stirling</category><guid>https://tartley.com/posts/the-hacker-crackdown-law-and-disorder-on-the-electronic-frontier/</guid><pubDate>Sat, 02 Feb 2008 22:15:49 GMT</pubDate></item></channel></rss>

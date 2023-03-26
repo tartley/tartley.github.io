@@ -6,10 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 23) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link href="assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
-<link rel="canonical" href="https://www.tartley.com/index-23.html">
+<link rel="canonical" href="https://tartley.com/index-23.html">
 <link rel="icon" href="welcome.gif" sizes="16x16">
 <link rel="prev" href="index-24.html" type="text/html">
 <link rel="next" href="index-22.html" type="text/html">
@@ -29,7 +28,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.tartley.com/">
+            <a class="navbar-brand" href="https://tartley.com/">
 
                 <span id="blog-title">tartley.com</span>
             </a>
@@ -38,13 +37,16 @@
         <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
-<a href="archive.html">Archive</a>
+<a href="archive.html">Posts</a>
                 </li>
 <li>
 <a href="categories/">Tags</a>
                 </li>
 <li>
-<a href="rss.xml">RSS feed</a>
+<a href="galleries/Drawings">Gallery</a>
+                </li>
+<li>
+<a href="rss.xml">RSS</a>
                 </li>
 <li>
 <a href="pages/about/">About</a>
@@ -53,7 +55,7 @@
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -68,7 +70,11 @@
         <!--Body content-->
         <div class="row">
             
+            
+
     
+
+
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
     <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/git-annotated-tags/" class="u-url">Git Annotated Tags</a></h1>
@@ -340,13 +346,13 @@ bash command history when creating, etc?</p>
 <p>Here goes then.</p>
 <p>I have one LXD container running for each nontrivial development project I'm
 working on.</p>
-<div class="code"><pre class="code literal-block">$ lxc ls
-<span class="p">|</span>    NAME     <span class="p">|</span>  STATE  <span class="p">|</span>        IPV4         <span class="p">|</span> IPV6 <span class="p">|</span>   TYPE    <span class="p">|</span> SNAPSHOTS <span class="p">|</span>
-<span class="p">|</span> devicegw    <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.228 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-<span class="p">|</span> ident       <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.4 <span class="o">(</span>eth0<span class="o">)</span>   <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-<span class="p">|</span> revs        <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.151 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-<span class="p">|</span> siab        <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.128 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-<span class="p">|</span> tartley-com <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.161 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>lxc<span class="w"> </span>ls
+<span class="p">|</span><span class="w">    </span>NAME<span class="w">     </span><span class="p">|</span><span class="w">  </span>STATE<span class="w">  </span><span class="p">|</span><span class="w">        </span>IPV4<span class="w">         </span><span class="p">|</span><span class="w"> </span>IPV6<span class="w"> </span><span class="p">|</span><span class="w">   </span>TYPE<span class="w">    </span><span class="p">|</span><span class="w"> </span>SNAPSHOTS<span class="w"> </span><span class="p">|</span>
+<span class="p">|</span><span class="w"> </span>devicegw<span class="w">    </span><span class="p">|</span><span class="w"> </span>RUNNING<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">10</span>.44.99.228<span class="w"> </span><span class="o">(</span>eth0<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">0</span><span class="w">         </span><span class="p">|</span>
+<span class="p">|</span><span class="w"> </span>ident<span class="w">       </span><span class="p">|</span><span class="w"> </span>RUNNING<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">10</span>.44.99.4<span class="w"> </span><span class="o">(</span>eth0<span class="o">)</span><span class="w">   </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">0</span><span class="w">         </span><span class="p">|</span>
+<span class="p">|</span><span class="w"> </span>revs<span class="w">        </span><span class="p">|</span><span class="w"> </span>RUNNING<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">10</span>.44.99.151<span class="w"> </span><span class="o">(</span>eth0<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">0</span><span class="w">         </span><span class="p">|</span>
+<span class="p">|</span><span class="w"> </span>siab<span class="w">        </span><span class="p">|</span><span class="w"> </span>RUNNING<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">10</span>.44.99.128<span class="w"> </span><span class="o">(</span>eth0<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">0</span><span class="w">         </span><span class="p">|</span>
+<span class="p">|</span><span class="w"> </span>tartley-com<span class="w"> </span><span class="p">|</span><span class="w"> </span>RUNNING<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">10</span>.44.99.161<span class="w"> </span><span class="o">(</span>eth0<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">0</span><span class="w">         </span><span class="p">|</span>
 </pre></div>
 
 <p>Out of the gate we see one source of confusion. "LXD", the daemon, is a
@@ -354,10 +360,10 @@ newer project that builds on top of "LXC" the containers. However the user
 interface to all the new LXD-goodness is through a command-line called "lxc",
 which replaces the older command line tool called "lxd". :-/</p>
 <p>To create a new one:</p>
-<div class="code"><pre class="code literal-block">$ <span class="nb">time</span> lxc launch ubuntu:16.04 -p default -p jhartley demo
-Creating demo
-Starting demo
-real    0m9.593s
+<div class="code"><pre class="code literal-block">$<span class="w"> </span><span class="nb">time</span><span class="w"> </span>lxc<span class="w"> </span>launch<span class="w"> </span>ubuntu:16.04<span class="w"> </span>-p<span class="w"> </span>default<span class="w"> </span>-p<span class="w"> </span>jhartley<span class="w"> </span>demo
+Creating<span class="w"> </span>demo
+Starting<span class="w"> </span>demo
+real<span class="w">    </span>0m9.593s
 </pre></div>
 
 <p>Once created, they take about 3 seconds to stop and 0.5 seconds to start.</p>
@@ -374,48 +380,48 @@ real    0m9.593s
 </li>
 </ol>
 <p>Once a new container is up, we can execute commands directly on it:</p>
-<div class="code"><pre class="code literal-block">$ lxc <span class="nb">exec</span> demo hostname
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>lxc<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>demo<span class="w"> </span>hostname
 demo
-$ lxc <span class="nb">exec</span> demo whoami
+$<span class="w"> </span>lxc<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>demo<span class="w"> </span>whoami
 root
 </pre></div>
 
 <p>Or SSH to them using their IP address:</p>
-<div class="code"><pre class="code literal-block">jhartley@t460 $ lxc ls demo
-<span class="p">|</span> NAME <span class="p">|</span>  STATE  <span class="p">|</span>        IPV4         <span class="p">|</span> IPV6 <span class="p">|</span>   TYPE    <span class="p">|</span> SNAPSHOTS <span class="p">|</span>
-<span class="p">|</span> demo <span class="p">|</span> RUNNING <span class="p">|</span> <span class="m">10</span>.44.99.162 <span class="o">(</span>eth0<span class="o">)</span> <span class="p">|</span>      <span class="p">|</span> CONTAINER <span class="p">|</span> <span class="m">0</span>         <span class="p">|</span>
-jhartley@t460 $ ssh <span class="m">10</span>.44.99.162
+<div class="code"><pre class="code literal-block">jhartley@t460<span class="w"> </span>$<span class="w"> </span>lxc<span class="w"> </span>ls<span class="w"> </span>demo
+<span class="p">|</span><span class="w"> </span>NAME<span class="w"> </span><span class="p">|</span><span class="w">  </span>STATE<span class="w">  </span><span class="p">|</span><span class="w">        </span>IPV4<span class="w">         </span><span class="p">|</span><span class="w"> </span>IPV6<span class="w"> </span><span class="p">|</span><span class="w">   </span>TYPE<span class="w">    </span><span class="p">|</span><span class="w"> </span>SNAPSHOTS<span class="w"> </span><span class="p">|</span>
+<span class="p">|</span><span class="w"> </span>demo<span class="w"> </span><span class="p">|</span><span class="w"> </span>RUNNING<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">10</span>.44.99.162<span class="w"> </span><span class="o">(</span>eth0<span class="o">)</span><span class="w"> </span><span class="p">|</span><span class="w">      </span><span class="p">|</span><span class="w"> </span>CONTAINER<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">0</span><span class="w">         </span><span class="p">|</span>
+jhartley@t460<span class="w"> </span>$<span class="w"> </span>ssh<span class="w"> </span><span class="m">10</span>.44.99.162
 ...
-Warning: Permanently added <span class="s1">'10.44.99.162'</span> <span class="o">(</span>ECDSA<span class="o">)</span> to the list of known hosts.
-Welcome to Ubuntu <span class="m">16</span>.04.6 LTS <span class="o">(</span>GNU/Linux <span class="m">5</span>.4.0-25-generic x86_64<span class="o">)</span>
-jhartley@demo $
+Warning:<span class="w"> </span>Permanently<span class="w"> </span>added<span class="w"> </span><span class="s1">'10.44.99.162'</span><span class="w"> </span><span class="o">(</span>ECDSA<span class="o">)</span><span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>list<span class="w"> </span>of<span class="w"> </span>known<span class="w"> </span>hosts.
+Welcome<span class="w"> </span>to<span class="w"> </span>Ubuntu<span class="w"> </span><span class="m">16</span>.04.6<span class="w"> </span>LTS<span class="w"> </span><span class="o">(</span>GNU/Linux<span class="w"> </span><span class="m">5</span>.4.0-25-generic<span class="w"> </span>x86_64<span class="o">)</span>
+jhartley@demo<span class="w"> </span>$
 </pre></div>
 
 <p>Better than using IP addresses, you can run a DNS server to recognize
 <code>{containername}.lxd</code> hostnames. (This part is from
 <a href="https://discuss.linuxcontainers.org/t/a-way-to-resolve-container-lxd-from-host-in-all-cases/3698">here</a>.)</p>
 <p>Find your lxd bridge IPv4 address</p>
-<div class="code"><pre class="code literal-block">lxc network show lxdbr0
+<div class="code"><pre class="code literal-block">lxc<span class="w"> </span>network<span class="w"> </span>show<span class="w"> </span>lxdbr0
 </pre></div>
 
 <p>Create file <code>/etc/systemd/network/lxd.network</code>:</p>
-<div class="code"><pre class="code literal-block"><span class="k">[Match]</span><span class="w"></span>
-<span class="na">Name</span><span class="o">=</span><span class="s">lxdbr0</span><span class="w"></span>
+<div class="code"><pre class="code literal-block"><span class="k">[Match]</span>
+<span class="na">Name</span><span class="o">=</span><span class="s">lxdbr0</span>
 
-<span class="k">[Network]</span><span class="w"></span>
-<span class="na">Address</span><span class="o">=</span><span class="s">IPADDR/24</span><span class="w"></span>
-<span class="na">DNS</span><span class="o">=</span><span class="s">IPADDR</span><span class="w"></span>
-<span class="na">Domains</span><span class="o">=</span><span class="s">~lxd</span><span class="w"></span>
+<span class="k">[Network]</span>
+<span class="na">Address</span><span class="o">=</span><span class="s">IPADDR/24</span>
+<span class="na">DNS</span><span class="o">=</span><span class="s">IPADDR</span>
+<span class="na">Domains</span><span class="o">=</span><span class="s">~lxd</span>
 </pre></div>
 
 <p>Where IPADDR is the lxdbr0 IPv4 address.</p>
-<div class="code"><pre class="code literal-block">sudo systemctl <span class="nb">enable</span> systemd-networkd
-sudo reboot now
+<div class="code"><pre class="code literal-block">sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>systemd-networkd
+sudo<span class="w"> </span>reboot<span class="w"> </span>now
 </pre></div>
 
 <p>Then:</p>
-<div class="code"><pre class="code literal-block">jhartley@t460 $ ssh demo.lxd
-jhartley@demo $ <span class="c1"># \o/</span>
+<div class="code"><pre class="code literal-block">jhartley@t460<span class="w"> </span>$<span class="w"> </span>ssh<span class="w"> </span>demo.lxd
+jhartley@demo<span class="w"> </span>$<span class="w"> </span><span class="c1"># \o/</span>
 </pre></div>
 
 <p>One nice thing is that DNS works both from the host and on the containers,
@@ -424,11 +430,11 @@ SERVICE1.lxd, SERVICE2.lxd. Then running them in containers on your host
 they would just find each other. We don't actually do this, but it seems
 trivially easy to do. I should ask why we don't.</p>
 <p>In practice I wrap up the ssh command with my accumulated foibles:</p>
-<div class="code"><pre class="code literal-block">jhartley@demo $ <span class="nb">type</span> -a lssh
-lssh is a <span class="k">function</span>
-lssh <span class="o">()</span>
+<div class="code"><pre class="code literal-block">jhartley@demo<span class="w"> </span>$<span class="w"> </span><span class="nb">type</span><span class="w"> </span>-a<span class="w"> </span>lssh
+lssh<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span><span class="k">function</span>
+lssh<span class="w"> </span><span class="o">()</span>
 <span class="o">{</span>
-    <span class="nv">TERM</span><span class="o">=</span>xterm-color ssh -A -t <span class="s2">"</span><span class="nv">$1</span><span class="s2">.lxd"</span> -- <span class="s2">"cd </span><span class="nv">$PWD</span><span class="s2"> &amp;&amp; exec </span><span class="nv">$SHELL</span><span class="s2"> -l"</span><span class="p">;</span>
+<span class="w">    </span><span class="nv">TERM</span><span class="o">=</span>xterm-color<span class="w"> </span>ssh<span class="w"> </span>-A<span class="w"> </span>-t<span class="w"> </span><span class="s2">"</span><span class="nv">$1</span><span class="s2">.lxd"</span><span class="w"> </span>--<span class="w"> </span><span class="s2">"cd </span><span class="nv">$PWD</span><span class="s2"> &amp;&amp; exec </span><span class="nv">$SHELL</span><span class="s2"> -l"</span><span class="p">;</span>
 <span class="o">}</span>
 </pre></div>
 
@@ -480,7 +486,7 @@ or font authors.</p>
 more than your distribution does. Here's how I did it for my
 <a href="http://www.dcmembers.com/jibsen/download/61/">beloved Dina</a>.</p>
 <h3>1. Identify the font file.</h3>
-<div class="code"><pre class="code literal-block">fc-list <span class="p">|</span> grep Dina
+<div class="code"><pre class="code literal-block">fc-list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Dina
 </pre></div>
 
 <h3>2. Convert.</h3>
@@ -662,6 +668,7 @@ invasion. Not my thing.</p>
     </div>
     </article>
 </div>
+
         <nav class="postindexpager"><ul class="pager">
 <li class="previous">
                 <a href="index-24.html" rel="prev">Newer posts</a>
@@ -676,6 +683,7 @@ invasion. Not my thing.</p>
         <footer id="footer"></footer>
 </div>
 </div>
+
 
             <script src="assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");

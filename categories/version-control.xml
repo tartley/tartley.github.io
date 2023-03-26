@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about version-control)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/version-control.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Sep 2022 15:37:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Git Annotated Tags</title><link>https://www.tartley.com/posts/git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about version-control)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/version-control.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 26 Mar 2023 04:51:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Git Annotated Tags</title><link>https://tartley.com/posts/git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
 &lt;code&gt;git tag TAGNAME&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Today I learned about &lt;em&gt;annotated&lt;/em&gt; tags, created with &lt;code&gt;git tag -a -m "MESSAGE"
 TAGNAME&lt;/code&gt;. If you don't specify &lt;code&gt;-m MESSAGE&lt;/code&gt;, git annoyingly prompts you for
@@ -23,7 +23,7 @@ of the commit being pushed, so that no unreachable tags are created on origin.&l
 &lt;li&gt;Use annotated tags to share state with other developers.&lt;/li&gt;
 &lt;li&gt;To share annotated tags, either push them directly, with &lt;code&gt;git push TAGNAME&lt;/code&gt;,
    or use &lt;code&gt;git push --follow-tags&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;</description><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>Git: When to use three dots vs two</title><link>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
+&lt;/ol&gt;</description><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://tartley.com/posts/git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>Git: When to use three dots vs two</title><link>https://tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
 today:&lt;/p&gt;
 &lt;p&gt;To see the commits or diffs introduced by a branch (the filled circles ●):&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;     f
@@ -60,20 +60,20 @@ today:&lt;/p&gt;
 
 &lt;p&gt;Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
 above that you almost always want:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git diff m...f
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;m...f
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;is the same as&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git checkout f
-git diff m...
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;checkout&lt;span class="w"&gt; &lt;/span&gt;f
+git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;m...
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;or&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git checkout m
-git diff ...f
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;checkout&lt;span class="w"&gt; &lt;/span&gt;m
+git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;...f
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;</description><category>geek</category><category>git</category><category>terminal</category><category>version-control</category><guid>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>A Guide to GIT using spatial analogies</title><link>https://www.tartley.com/posts/a-guide-to-git-using-spatial-analogies/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Some developers find Git takes a little getting used to, claiming that
+&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;</description><category>geek</category><category>git</category><category>terminal</category><category>version-control</category><guid>https://tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>A Guide to GIT using spatial analogies</title><link>https://tartley.com/posts/a-guide-to-git-using-spatial-analogies/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Some developers find Git takes a little getting used to, claiming that
 it is conceptually convoluted compared to other distributed version
 control systems. I used to number myself amongst them.&lt;/p&gt;
 &lt;p&gt;Happily, I've found that a couple of simple spatial analogies have made
@@ -87,10 +87,10 @@ of your repository as a point in a high-dimensional 'code-space', in
 which branches are represented as n-dimensional membranes, mapping the
 spatial loci of successive commits onto the projected manifold of each
 cloned repository.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Branches as n-branes" src="https://www.tartley.com/files/2010/12/I1546manifold.png" title="I1546manifold"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Branches as n-branes" src="https://tartley.com/files/2010/12/I1546manifold.png" title="I1546manifold"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; There is, of course, a &lt;a href="http://www.reddit.com/r/programming/comments/embdf/git_complicated_of_course_not_commits_map_to/"&gt;fabulously insightful
 commentary&lt;/a&gt;
 on reddit.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Thanks folks. You've made my usual one or two hundred daily
 visitors look kinda paltry:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="spike in daily traffic graph" src="https://www.tartley.com/files/2010/12/daily-traffic.png" title="daily-traffic"&gt;&lt;/p&gt;</description><category>git</category><category>software</category><category>version-control</category><guid>https://www.tartley.com/posts/a-guide-to-git-using-spatial-analogies/</guid><pubDate>Wed, 15 Dec 2010 20:40:14 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;img alt="spike in daily traffic graph" src="https://tartley.com/files/2010/12/daily-traffic.png" title="daily-traffic"&gt;&lt;/p&gt;</description><category>git</category><category>software</category><category>version-control</category><guid>https://tartley.com/posts/a-guide-to-git-using-spatial-analogies/</guid><pubDate>Wed, 15 Dec 2010 20:40:14 GMT</pubDate></item></channel></rss>

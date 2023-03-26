@@ -5,17 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MSWindows Programming : Propogating child process exit values out of .bat scripts | tartley.com</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://www.tartley.com/posts/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/">
+<link rel="canonical" href="https://tartley.com/posts/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/">
 <link rel="icon" href="../../welcome.gif" sizes="16x16">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
 <link rel="prev" href="../my-fonts-look-crap-i-blame-windows-and-ati/" title="My Fonts Look Crap. I blame Windows and ATI." type="text/html">
 <link rel="next" href="../musicians-wake-up/" title="Musicians : wake up!" type="text/html">
 <meta property="og:site_name" content="tartley.com">
 <meta property="og:title" content="MSWindows Programming : Propogating child process exit values out of .">
-<meta property="og:url" content="https://www.tartley.com/posts/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/">
+<meta property="og:url" content="https://tartley.com/posts/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/">
 <meta property="og:description" content="&quot;God dammit. Why won't you just DO what I WANT you hopeless pile of
 crap!&quot;
 So goes the refrain. I think you know where I'm coming from. Yet again,
@@ -40,7 +39,7 @@ I have ended up learning far more about crappy DOS sc">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.tartley.com/">
+            <a class="navbar-brand" href="https://tartley.com/">
 
                 <span id="blog-title">tartley.com</span>
             </a>
@@ -49,13 +48,16 @@ I have ended up learning far more about crappy DOS sc">
         <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
-<a href="../../archive.html">Archive</a>
+<a href="../../archive.html">Posts</a>
                 </li>
 <li>
 <a href="../../categories/">Tags</a>
                 </li>
 <li>
-<a href="../../rss.xml">RSS feed</a>
+<a href="../../galleries/Drawings">Gallery</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS</a>
                 </li>
 <li>
 <a href="../../pages/about/">About</a>
@@ -64,7 +66,7 @@ I have ended up learning far more about crappy DOS sc">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -79,6 +81,7 @@ I have ended up learning far more about crappy DOS sc">
         <!--Body content-->
         <div class="row">
             
+            
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">MSWindows Programming : Propogating child process exit values out of .bat scripts</a></h1>
 
         <div class="metadata">
@@ -90,8 +93,10 @@ I have ended up learning far more about crappy DOS sc">
             <time class="published dt-published" datetime="2010-01-21T20:04:25-06:00" itemprop="datePublished" title="2010-01-21 20:04">2010-01-21 20:04</time></a>
             </p>
             
+
         </div>
         
+
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <p>"God <em>dammit</em>. Why won't you just DO what I WANT you hopeless pile of
 crap!"</p>
@@ -110,11 +115,11 @@ now be invoked by typing 'toolname', just like on other platforms, as
 opposed to 'toolname.py' or even 'python toolname.py'. So I wrap my
 Python script 'toolname.py' with a new file, 'toolname.bat', living in
 the same directory:</p>
-<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span><span class="w"></span>
-<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span><span class="w"></span>
+<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span>
+<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span>
 
-<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span><span class="w"></span>
-<span class="n">set</span><span class="w"> </span><span class="n">THIS</span><span class="o">=</span><span class="n">THAT</span><span class="w"></span>
+<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span>
+<span class="n">set</span><span class="w"> </span><span class="n">THIS</span><span class="o">=</span><span class="n">THAT</span>
 </pre></div>
 
 <p>The %\~dp0 and %\~n0 gobbledygook is a batch file way of referencing the
@@ -125,11 +130,11 @@ depend on what goes on inside toolname.py. So I have that Python write a
 new batch file to the temp directory, containing all the 'set' commands
 which will replace the hardcoded 'set THIS=THAT' in the above script.
 Then we call that new temporary bat file from here:</p>
-<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span><span class="w"></span>
-<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span><span class="w"></span>
+<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span>
+<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span>
 
-<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span><span class="w"></span>
-<span class="n">call</span><span class="w"> </span><span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span><span class="w"></span>
+<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span>
+<span class="n">call</span><span class="w"> </span><span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span>
 </pre></div>
 
 <p>Which is good enough. Presumably it will barf all over the place if run
@@ -140,14 +145,14 @@ command at the end is always successful.</p>
 <p>One solution I've seen used is to remember the exit value from
 toolname.py, and then use the DOS exit command to propagate this value
 out to our caller:</p>
-<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span><span class="w"></span>
-<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span><span class="w"></span>
-<span class="n">set</span><span class="w"> </span><span class="n">EXITVAL</span><span class="o">=%</span><span class="n">ERRORLEVEL</span><span class="o">%</span><span class="w"></span>
+<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span>
+<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span>
+<span class="n">set</span><span class="w"> </span><span class="n">EXITVAL</span><span class="o">=%</span><span class="n">ERRORLEVEL</span><span class="o">%</span>
 
-<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span><span class="w"></span>
-<span class="n">call</span><span class="w"> </span><span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span><span class="w"></span>
+<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span>
+<span class="n">call</span><span class="w"> </span><span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span>
 
-<span class="n">exit</span><span class="w"> </span><span class="o">%</span><span class="n">EXITVAL</span><span class="o">%</span><span class="w"></span>
+<span class="n">exit</span><span class="w"> </span><span class="o">%</span><span class="n">EXITVAL</span><span class="o">%</span>
 </pre></div>
 
 <p>The problem with this is that 'exit' doesn't do what you think it does.
@@ -203,6 +208,7 @@ wrapping DOS script. [Short bow. Applause. Roses. etc.]</p>
         <footer id="footer"></footer>
 </div>
 </div>
+
 
             <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");

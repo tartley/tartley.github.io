@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about terminal)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/terminal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Sep 2022 15:37:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about terminal)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/terminal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 26 Mar 2023 04:51:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating Animated Meme GIFs on the Command-Line</title><link>https://tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
 animated gif memes, finally figured out how to do it manually. Not a universal
 process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
 &lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
@@ -37,7 +37,7 @@ and specifying "copy", as most people do, gives me an output with no video,
 only audio.&lt;/p&gt;
 &lt;p&gt;This results in a three second, 217KB .mp4 video file. (the following is just an
 image of it).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split.webp" src="https://www.tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split.webp" src="https://tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
 &lt;h4&gt;3. Crop&lt;/h4&gt;
 &lt;p&gt;To crop out the black bars from the top and bottom:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -hide_banner -i Ash-split.mp4 -vf 'crop=iw:365' Ash-split-crop.mp4
@@ -48,13 +48,13 @@ any offset ordinates for the crop, ffmpeg defaults to centering them, so this
 365 pixels are taken from the (spatial, vertical) middle of the video, which is
 exactly what we want.&lt;/p&gt;
 &lt;p&gt;This results in a three second, 220KB .mp4 video file.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://www.tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
 &lt;h3&gt;4. Resize and convert to gif&lt;/h3&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="s s-Atom"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;hide_banner&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;vf&lt;/span&gt; &lt;span class="s s-Atom"&gt;'scale=512:-1'&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;resize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;gif&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This results in a grainy-but-passable three second 750KB animated .gif:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
 &lt;p&gt;The file size can be smaller, if you care, most easily by splitting a shorter
 video clip, reducing the frame rate, or reducing the 'scale' in this step.&lt;/p&gt;
 &lt;p&gt;Alternately, this could be done using ImageMagik's 'convert', but the result
@@ -77,7 +77,7 @@ text labels, then the '-layers' option re-applies optimizations. Without this
 dance, the text is all twitchy and messy.&lt;/p&gt;
 &lt;p&gt;Voilà. Imagine sending it to a co-worker who is taking on a difficult task,
 like making changes to that thorny section of the codebase that nobody likes:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>video</category><category>youtube</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>Git Annotated Tags</title><link>https://www.tartley.com/posts/git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
+&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>video</category><category>youtube</category><guid>https://tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>Git Annotated Tags</title><link>https://tartley.com/posts/git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
 &lt;code&gt;git tag TAGNAME&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Today I learned about &lt;em&gt;annotated&lt;/em&gt; tags, created with &lt;code&gt;git tag -a -m "MESSAGE"
 TAGNAME&lt;/code&gt;. If you don't specify &lt;code&gt;-m MESSAGE&lt;/code&gt;, git annoyingly prompts you for
@@ -101,7 +101,7 @@ of the commit being pushed, so that no unreachable tags are created on origin.&l
 &lt;li&gt;Use annotated tags to share state with other developers.&lt;/li&gt;
 &lt;li&gt;To share annotated tags, either push them directly, with &lt;code&gt;git push TAGNAME&lt;/code&gt;,
    or use &lt;code&gt;git push --follow-tags&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;</description><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+&lt;/ol&gt;</description><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://tartley.com/posts/git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>Format Python Snippets with Black.</title><link>https://tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -132,7 +132,7 @@ gained much enthusiasm.&lt;/p&gt;
 &lt;li&gt;Passes the result to Black.&lt;/li&gt;
 &lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken"&gt;enblacken on github&lt;/a&gt;.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><guid>https://tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;
@@ -140,13 +140,13 @@ bash command history when creating, etc?&lt;/p&gt;
 &lt;p&gt;Here goes then.&lt;/p&gt;
 &lt;p&gt;I have one LXD container running for each nontrivial development project I'm
 working on.&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ lxc ls
-&lt;span class="p"&gt;|&lt;/span&gt;    NAME     &lt;span class="p"&gt;|&lt;/span&gt;  STATE  &lt;span class="p"&gt;|&lt;/span&gt;        IPV4         &lt;span class="p"&gt;|&lt;/span&gt; IPV6 &lt;span class="p"&gt;|&lt;/span&gt;   TYPE    &lt;span class="p"&gt;|&lt;/span&gt; SNAPSHOTS &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; devicegw    &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.228 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; ident       &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.4 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;   &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; revs        &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.151 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; siab        &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.128 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; tartley-com &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.161 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;ls
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;NAME&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;STATE&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;IPV4&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;IPV6&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;TYPE&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;SNAPSHOTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;devicegw&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.228&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;ident&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.4&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;revs&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.151&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;siab&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.128&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;tartley-com&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.161&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Out of the gate we see one source of confusion. "LXD", the daemon, is a
@@ -154,10 +154,10 @@ newer project that builds on top of "LXC" the containers. However the user
 interface to all the new LXD-goodness is through a command-line called "lxc",
 which replaces the older command line tool called "lxd". :-/&lt;/p&gt;
 &lt;p&gt;To create a new one:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ &lt;span class="nb"&gt;time&lt;/span&gt; lxc launch ubuntu:16.04 -p default -p jhartley demo
-Creating demo
-Starting demo
-real    0m9.593s
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;time&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;launch&lt;span class="w"&gt; &lt;/span&gt;ubuntu:16.04&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;default&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;jhartley&lt;span class="w"&gt; &lt;/span&gt;demo
+Creating&lt;span class="w"&gt; &lt;/span&gt;demo
+Starting&lt;span class="w"&gt; &lt;/span&gt;demo
+real&lt;span class="w"&gt;    &lt;/span&gt;0m9.593s
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Once created, they take about 3 seconds to stop and 0.5 seconds to start.&lt;/p&gt;
@@ -174,48 +174,48 @@ real    0m9.593s
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Once a new container is up, we can execute commands directly on it:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ lxc &lt;span class="nb"&gt;exec&lt;/span&gt; demo hostname
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;exec&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;hostname
 demo
-$ lxc &lt;span class="nb"&gt;exec&lt;/span&gt; demo whoami
+$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;exec&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;whoami
 root
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Or SSH to them using their IP address:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460 $ lxc ls demo
-&lt;span class="p"&gt;|&lt;/span&gt; NAME &lt;span class="p"&gt;|&lt;/span&gt;  STATE  &lt;span class="p"&gt;|&lt;/span&gt;        IPV4         &lt;span class="p"&gt;|&lt;/span&gt; IPV6 &lt;span class="p"&gt;|&lt;/span&gt;   TYPE    &lt;span class="p"&gt;|&lt;/span&gt; SNAPSHOTS &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt; demo &lt;span class="p"&gt;|&lt;/span&gt; RUNNING &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;.44.99.162 &lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;      &lt;span class="p"&gt;|&lt;/span&gt; CONTAINER &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;         &lt;span class="p"&gt;|&lt;/span&gt;
-jhartley@t460 $ ssh &lt;span class="m"&gt;10&lt;/span&gt;.44.99.162
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;ls&lt;span class="w"&gt; &lt;/span&gt;demo
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;NAME&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;STATE&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;IPV4&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;IPV6&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;TYPE&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;SNAPSHOTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.162&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.162
 ...
-Warning: Permanently added &lt;span class="s1"&gt;'10.44.99.162'&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;ECDSA&lt;span class="o"&gt;)&lt;/span&gt; to the list of known hosts.
-Welcome to Ubuntu &lt;span class="m"&gt;16&lt;/span&gt;.04.6 LTS &lt;span class="o"&gt;(&lt;/span&gt;GNU/Linux &lt;span class="m"&gt;5&lt;/span&gt;.4.0-25-generic x86_64&lt;span class="o"&gt;)&lt;/span&gt;
-jhartley@demo $
+Warning:&lt;span class="w"&gt; &lt;/span&gt;Permanently&lt;span class="w"&gt; &lt;/span&gt;added&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'10.44.99.162'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;ECDSA&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;the&lt;span class="w"&gt; &lt;/span&gt;list&lt;span class="w"&gt; &lt;/span&gt;of&lt;span class="w"&gt; &lt;/span&gt;known&lt;span class="w"&gt; &lt;/span&gt;hosts.
+Welcome&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;Ubuntu&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;.04.6&lt;span class="w"&gt; &lt;/span&gt;LTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;GNU/Linux&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;.4.0-25-generic&lt;span class="w"&gt; &lt;/span&gt;x86_64&lt;span class="o"&gt;)&lt;/span&gt;
+jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Better than using IP addresses, you can run a DNS server to recognize
 &lt;code&gt;{containername}.lxd&lt;/code&gt; hostnames. (This part is from
 &lt;a href="https://discuss.linuxcontainers.org/t/a-way-to-resolve-container-lxd-from-host-in-all-cases/3698"&gt;here&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Find your lxd bridge IPv4 address&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;lxc network show lxdbr0
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;network&lt;span class="w"&gt; &lt;/span&gt;show&lt;span class="w"&gt; &lt;/span&gt;lxdbr0
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Create file &lt;code&gt;/etc/systemd/network/lxd.network&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;[Match]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;lxdbr0&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;[Match]&lt;/span&gt;
+&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;lxdbr0&lt;/span&gt;
 
-&lt;span class="k"&gt;[Network]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;Address&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR/24&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;DNS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="na"&gt;Domains&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;~lxd&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="k"&gt;[Network]&lt;/span&gt;
+&lt;span class="na"&gt;Address&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR/24&lt;/span&gt;
+&lt;span class="na"&gt;DNS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR&lt;/span&gt;
+&lt;span class="na"&gt;Domains&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;~lxd&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where IPADDR is the lxdbr0 IPv4 address.&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo systemctl &lt;span class="nb"&gt;enable&lt;/span&gt; systemd-networkd
-sudo reboot now
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;systemctl&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;enable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;systemd-networkd
+sudo&lt;span class="w"&gt; &lt;/span&gt;reboot&lt;span class="w"&gt; &lt;/span&gt;now
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Then:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460 $ ssh demo.lxd
-jhartley@demo $ &lt;span class="c1"&gt;# \o/&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;demo.lxd
+jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# \o/&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;One nice thing is that DNS works both from the host and on the containers,
@@ -224,11 +224,11 @@ SERVICE1.lxd, SERVICE2.lxd. Then running them in containers on your host
 they would just find each other. We don't actually do this, but it seems
 trivially easy to do. I should ask why we don't.&lt;/p&gt;
 &lt;p&gt;In practice I wrap up the ssh command with my accumulated foibles:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@demo $ &lt;span class="nb"&gt;type&lt;/span&gt; -a lssh
-lssh is a &lt;span class="k"&gt;function&lt;/span&gt;
-lssh &lt;span class="o"&gt;()&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-a&lt;span class="w"&gt; &lt;/span&gt;lssh
+lssh&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;function&lt;/span&gt;
+lssh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
 &lt;span class="o"&gt;{&lt;/span&gt;
-    &lt;span class="nv"&gt;TERM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xterm-color ssh -A -t &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.lxd"&lt;/span&gt; -- &lt;span class="s2"&gt;"cd &lt;/span&gt;&lt;span class="nv"&gt;$PWD&lt;/span&gt;&lt;span class="s2"&gt; &amp;amp;&amp;amp; exec &lt;/span&gt;&lt;span class="nv"&gt;$SHELL&lt;/span&gt;&lt;span class="s2"&gt; -l"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;TERM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xterm-color&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;-A&lt;span class="w"&gt; &lt;/span&gt;-t&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.lxd"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;--&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"cd &lt;/span&gt;&lt;span class="nv"&gt;$PWD&lt;/span&gt;&lt;span class="s2"&gt; &amp;amp;&amp;amp; exec &lt;/span&gt;&lt;span class="nv"&gt;$SHELL&lt;/span&gt;&lt;span class="s2"&gt; -l"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -238,7 +238,7 @@ is probably a simpler way.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;The booooooring bits:&lt;/p&gt;
 &lt;p&gt;When we started the container, we mentioned
-&lt;a href="https://www.tartley.com/files/2020/setup-lxd-profile.sh"&gt;a one-off setup script&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://tartley.com/files/2020/setup-lxd-profile.sh"&gt;a one-off setup script&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The script does a few things:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Creates a new key pair specifically to SSH to the container.&lt;/li&gt;
@@ -252,9 +252,9 @@ is probably a simpler way.&lt;/p&gt;
 &lt;li&gt;Doubtless due to my own misunderstanding somewhere, in order to get working
    IPv4 connections to my containers, I had to disable IPv6 connections to
    them.&lt;/li&gt;
-&lt;/ol&gt;</description><category>geek</category><category>linux</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Dina font as an OTF.</title><link>https://www.tartley.com/posts/dina-as-otf/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;The Dina font, converted to an OpenType Font (see screenshots at the bottom of
+&lt;/ol&gt;</description><category>geek</category><category>linux</category><category>software</category><category>terminal</category><guid>https://tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Dina font as an OTF.</title><link>https://tartley.com/posts/dina-as-otf/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;The Dina font, converted to an OpenType Font (see screenshots at the bottom of
 the page):&lt;/p&gt;
-&lt;h2&gt;&lt;a href="https://www.tartley.com/files/2020/Dina-v2.93-otf.tar.gz"&gt;&lt;span class="emoji"&gt;📦&lt;/span&gt; Dina-v2.93-otf.tar.gz&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a href="https://tartley.com/files/2020/Dina-v2.93-otf.tar.gz"&gt;&lt;span class="emoji"&gt;📦&lt;/span&gt; Dina-v2.93-otf.tar.gz&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://gitlab.gnome.org/GNOME/pango/issues/386"&gt;Pango dropped support for naive bitmap fonts&lt;/a&gt;
 in v1.44 -- i.e. from Ubuntu 20.04, &lt;em&gt;Focal&lt;/em&gt;, onwards.&lt;/p&gt;
 &lt;p&gt;So all bitmap fonts need to be converted into a format that will render,
@@ -267,7 +267,7 @@ or font authors.&lt;/p&gt;
 more than your distribution does. Here's how I did it for my
 &lt;a href="http://www.dcmembers.com/jibsen/download/61/"&gt;beloved Dina&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;1. Identify the font file.&lt;/h3&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;fc-list &lt;span class="p"&gt;|&lt;/span&gt; grep Dina
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;fc-list&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;grep&lt;span class="w"&gt; &lt;/span&gt;Dina
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;2. Convert.&lt;/h3&gt;
@@ -321,11 +321,11 @@ or at least filing an issue there to try and get some help.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3&gt;The result&lt;/h3&gt;
 &lt;p&gt;I know, it doesn't look like much.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-dina-small-ll.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2020/terminal-dina-small-ll.png"&gt;&lt;/p&gt;
 &lt;p&gt;But compare it with a regular vector font. Here's Ubuntu Mono, the &lt;em&gt;best&lt;/em&gt; of
 the vector fonts I could find at these sizes. Blurry and inconsistent and hard
 to read:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;</description><category>fonts</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>Installing Colout</title><link>https://www.tartley.com/posts/installing-colout/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;</description><category>fonts</category><category>linux</category><category>terminal</category><guid>https://tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>Installing Colout</title><link>https://tartley.com/posts/installing-colout/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
 &lt;p&gt;But &lt;code&gt;pip install colout&lt;/code&gt; from PyPI is broken, and has been for many months,
 due to a typo in the
 &lt;a href="https://pypi.org/project/colout/"&gt;latest (v0.5) PyPI release&lt;/a&gt;.&lt;/p&gt;
@@ -339,22 +339,22 @@ new v0.6 version, although has not released any of that to PyPI.&lt;/p&gt;
 &lt;p&gt;Clone the latest repo &lt;a href="https://github.com/nojhan/colout"&gt;from Github&lt;/a&gt;, and
 install from that:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# cd to the clone, then&lt;/span&gt;
-python3 -m pip install --user .
+python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;.
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Or, pip install the version I uploaded to PyPI, which is a straight copy of the
 latest Github at the time:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pip install --user colout-fix
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;colout-fix
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Or, best of all, pip install straight from the original Github repo:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pip install --user git+git://github.com/nojhan/colout.git
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;git+git://github.com/nojhan/colout.git
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Note that, throughout, we're using &lt;code&gt;--user&lt;/code&gt;, so that you can install
 development tools like this system-wide for the current user, without needing a
 virtualenv, without needing root access, and without modifying your installed
-Python system libraries.&lt;/p&gt;</description><category>geek</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item><item><title>Automate Gnome keybindings</title><link>https://www.tartley.com/posts/automate-gnome-keybindings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Sick of manual GUI twiddling to fix inconsistent keybindings on various
+Python system libraries.&lt;/p&gt;</description><category>geek</category><category>linux</category><category>terminal</category><guid>https://tartley.com/posts/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item><item><title>Automate Gnome keybindings</title><link>https://tartley.com/posts/automate-gnome-keybindings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Sick of manual GUI twiddling to fix inconsistent keybindings on various
 computers. Solved once and for all, by a new script in my personal
 workstation setup bucket:&lt;/p&gt;
 &lt;p&gt;Warning: This:&lt;/p&gt;
@@ -372,20 +372,20 @@ workstation setup bucket:&lt;/p&gt;
 &lt;span class="nv"&gt;kb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'org.gnome.desktop.wm.keybindings'&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Switcher, between windows not apps, uses alt-tab and alt-grave&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; switch-windows &lt;span class="s2"&gt;"['Tab']"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; switch-windows-backward &lt;span class="s2"&gt;"['grave', 'Tab']"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; switch-applications &lt;span class="s2"&gt;"[]"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; switch-applications-backward &lt;span class="s2"&gt;"[]"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;switch-windows&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['Tab']"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;switch-windows-backward&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['grave', 'Tab']"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;switch-applications&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"[]"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;switch-applications-backward&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"[]"&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Window maximize toggle, super-up&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; maximize &lt;span class="s2"&gt;"[]"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; toggle-maximized &lt;span class="s2"&gt;"['Up']"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;maximize&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"[]"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;toggle-maximized&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['Up']"&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Window maximize vertically toggle, super-v&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; maximize-vertically &lt;span class="s2"&gt;"['v']"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;maximize-vertically&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['v']"&lt;/span&gt;
 
 &lt;span class="c1"&gt;# run command, super-r&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;/span&gt; panel-run-dialog &lt;span class="s2"&gt;"['r', 'F2']"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;panel-run-dialog&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['r', 'F2']"&lt;/span&gt;
 
 
 &lt;span class="c1"&gt;# Custom commands&lt;/span&gt;
@@ -393,15 +393,15 @@ gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$kb&lt;
 &lt;span class="nv"&gt;mk&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'org.gnome.settings-daemon.plugins.media-keys'&lt;/span&gt;
 &lt;span class="nv"&gt;ckb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings'&lt;/span&gt;
 
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt; custom-keybindings &lt;span class="s2"&gt;"['&lt;/span&gt;&lt;span class="nv"&gt;$ckb&lt;/span&gt;&lt;span class="s2"&gt;/custom0/', '&lt;/span&gt;&lt;span class="nv"&gt;$ckb&lt;/span&gt;&lt;span class="s2"&gt;/custom1/']"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;custom-keybindings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['&lt;/span&gt;&lt;span class="nv"&gt;$ckb&lt;/span&gt;&lt;span class="s2"&gt;/custom0/', '&lt;/span&gt;&lt;span class="nv"&gt;$ckb&lt;/span&gt;&lt;span class="s2"&gt;/custom1/']"&lt;/span&gt;
 
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/ name &lt;span class="s2"&gt;"screen off"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/ &lt;span class="nb"&gt;command&lt;/span&gt; &lt;span class="s2"&gt;"screenoff"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/ binding &lt;span class="s2"&gt;"z"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/&lt;span class="w"&gt; &lt;/span&gt;name&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"screen off"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"screenoff"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/&lt;span class="w"&gt; &lt;/span&gt;binding&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"z"&lt;/span&gt;
 
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ name &lt;span class="s2"&gt;"terminal"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ &lt;span class="nb"&gt;command&lt;/span&gt; &lt;span class="s2"&gt;"terminal"&lt;/span&gt;
-gsettings &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/ binding &lt;span class="s2"&gt;"t"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/&lt;span class="w"&gt; &lt;/span&gt;name&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"terminal"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"terminal"&lt;/span&gt;
+gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/&lt;span class="w"&gt; &lt;/span&gt;binding&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"t"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Embedded in that is the ultimate solution to my longstanding irk with
@@ -416,15 +416,15 @@ madness.&lt;/p&gt;
 &lt;p&gt;The above modifies alt-tab to just cycle through all windows, ungrouped,
 which fixes the ability to toggle between last two windows. Also,
 alt-grave is provided as an alternative to cycle backwards through the
-windows, which is easier to hit than shift-alt-tab.&lt;/p&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/automate-gnome-keybindings/</guid><pubDate>Thu, 05 Oct 2017 01:06:47 GMT</pubDate></item><item><title>Postscript formatted man pages</title><link>https://www.tartley.com/posts/postscript-formatted-man-pages/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;man&lt;/code&gt; and its &lt;code&gt;troff&lt;/code&gt; formatting can be asked to produce postscript
+windows, which is easier to hit than shift-alt-tab.&lt;/p&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://tartley.com/posts/automate-gnome-keybindings/</guid><pubDate>Thu, 05 Oct 2017 01:06:47 GMT</pubDate></item><item><title>Postscript formatted man pages</title><link>https://tartley.com/posts/postscript-formatted-man-pages/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;man&lt;/code&gt; and its &lt;code&gt;troff&lt;/code&gt; formatting can be asked to produce postscript
 output. Define a Bash function, e.g. in your .bashrc:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;function&lt;/span&gt; psman &lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-    &lt;span class="nv"&gt;SLUG&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$@&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; tr &lt;span class="s1"&gt;' '&lt;/span&gt; &lt;span class="s1"&gt;'-'&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
-    &lt;span class="nv"&gt;FNAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"/tmp/man-&lt;/span&gt;&lt;span class="nv"&gt;$SLUG&lt;/span&gt;&lt;span class="s2"&gt;.pdf"&lt;/span&gt;
-    &lt;span class="nb"&gt;set&lt;/span&gt; -o pipefail
-    man -t &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; ps2pdf - &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$FNAME&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-      nohup evince &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$FNAME&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &amp;gt;/dev/null &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null
-    &lt;span class="nb"&gt;set&lt;/span&gt; +o pipefail
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;psman&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;SLUG&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;tr&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;' '&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'-'&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;FNAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"/tmp/man-&lt;/span&gt;&lt;span class="nv"&gt;$SLUG&lt;/span&gt;&lt;span class="s2"&gt;.pdf"&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;pipefail
+&lt;span class="w"&gt;    &lt;/span&gt;man&lt;span class="w"&gt; &lt;/span&gt;-t&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;ps2pdf&lt;span class="w"&gt; &lt;/span&gt;-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$FNAME&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;nohup&lt;span class="w"&gt; &lt;/span&gt;evince&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$FNAME&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;/dev/null&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;+o&lt;span class="w"&gt; &lt;/span&gt;pipefail
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -439,11 +439,11 @@ fails, the exit code is preserved as the exit of `man|ps2pdf`, which
 causes the `&amp;amp;&amp;amp;` to short-circuit, preventing evince from being run on
 an empty pdf document. We restore `+o pipefail` again at the end.&lt;/p&gt;
 &lt;p&gt;Then, from the command line:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ psman tr
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;psman&lt;span class="w"&gt; &lt;/span&gt;tr
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;produces&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;img alt="" src="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/postscript-formatted-man-pages/</guid><pubDate>Wed, 23 Aug 2017 01:34:02 GMT</pubDate></item><item><title>Git: When to use three dots vs two</title><link>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
+&lt;p&gt;&lt;a href="https://tartley.com/files/2017/08/pman-tr.png"&gt;&lt;img alt="" src="https://tartley.com/files/2017/08/pman-tr.png"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://tartley.com/posts/postscript-formatted-man-pages/</guid><pubDate>Wed, 23 Aug 2017 01:34:02 GMT</pubDate></item><item><title>Git: When to use three dots vs two</title><link>https://tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
 today:&lt;/p&gt;
 &lt;p&gt;To see the commits or diffs introduced by a branch (the filled circles ●):&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;     f
@@ -480,20 +480,20 @@ today:&lt;/p&gt;
 
 &lt;p&gt;Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
 above that you almost always want:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git diff m...f
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;m...f
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;is the same as&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git checkout f
-git diff m...
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;checkout&lt;span class="w"&gt; &lt;/span&gt;f
+git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;m...
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;or&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git checkout m
-git diff ...f
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;checkout&lt;span class="w"&gt; &lt;/span&gt;m
+git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;...f
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;</description><category>geek</category><category>git</category><category>terminal</category><category>version-control</category><guid>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>Listen to your phone through your PC speakers</title><link>https://www.tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
+&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;</description><category>geek</category><category>git</category><category>terminal</category><category>version-control</category><guid>https://tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>Listen to your phone through your PC speakers</title><link>https://tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Directs audio input (e.g. mic) to audio output (e.g. speakers),&lt;/span&gt;
 &lt;span class="c1"&gt;# then sleeps forever. Stops audio redirection when it is killed.&lt;/span&gt;
@@ -503,15 +503,15 @@ git diff ...f
 &lt;span class="c1"&gt;# Requires:&lt;/span&gt;
 &lt;span class="c1"&gt;# sudo apt-get install pactl # Ubuntu&lt;/span&gt;
 
-&lt;span class="nb"&gt;set&lt;/span&gt; -e
+&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-e
 
-&lt;span class="nv"&gt;module&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;pactl load-module module-loopback&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;module&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;pactl&lt;span class="w"&gt; &lt;/span&gt;load-module&lt;span class="w"&gt; &lt;/span&gt;module-loopback&lt;span class="k"&gt;)&lt;/span&gt;
 
-&lt;span class="k"&gt;function&lt;/span&gt; cleanup &lt;span class="o"&gt;{&lt;/span&gt;
-    pactl unload-module &lt;span class="nv"&gt;$module&lt;/span&gt;
+&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;cleanup&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;pactl&lt;span class="w"&gt; &lt;/span&gt;unload-module&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$module&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 
-&lt;span class="nb"&gt;trap&lt;/span&gt; cleanup EXIT
+&lt;span class="nb"&gt;trap&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;cleanup&lt;span class="w"&gt; &lt;/span&gt;EXIT
 
-sleep infinity
-&lt;/pre&gt;&lt;/div&gt;</description><category>geek</category><category>terminal</category><guid>https://www.tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</guid><pubDate>Sun, 15 Mar 2015 15:50:09 GMT</pubDate></item></channel></rss>
+sleep&lt;span class="w"&gt; &lt;/span&gt;infinity
+&lt;/pre&gt;&lt;/div&gt;</description><category>geek</category><category>terminal</category><guid>https://tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</guid><pubDate>Sun, 15 Mar 2015 15:50:09 GMT</pubDate></item></channel></rss>

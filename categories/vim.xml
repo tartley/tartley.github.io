@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about vim)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/vim.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Sep 2022 15:37:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Compiling MacVim with Python 2.7</title><link>https://www.tartley.com/posts/compiling-macvim-with-python-2-7/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I love the brilliant Vim plugin
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about vim)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/vim.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 26 Mar 2023 04:51:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Compiling MacVim with Python 2.7</title><link>https://tartley.com/posts/compiling-macvim-with-python-2-7/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I love the brilliant Vim plugin
 &lt;a href="http://www.vim.org/scripts/script.php?script_id=2441"&gt;pyflakes-vim&lt;/a&gt;,
 which highlights errors &amp;amp; warnings, and since I got a MacBook for work,
 I've been using MacVim a lot.&lt;/p&gt;
@@ -10,19 +10,19 @@ rest of the file from being parsed.&lt;/p&gt;
 &lt;p&gt;The solution is to compile your own MacVim, using Python 2.7 instead of
 the system Python. The following commands got MacVim compiled for me:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
-git clone git://github.com/b4winckler/macvim.git
-&lt;span class="nb"&gt;cd&lt;/span&gt; macvim/src
-&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;LDFLAGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;-L/usr/lib
-./configure &lt;span class="se"&gt;\&lt;/span&gt;
-    --with-features&lt;span class="o"&gt;=&lt;/span&gt;huge &lt;span class="se"&gt;\&lt;/span&gt;
-    --enable-rubyinterp &lt;span class="se"&gt;\&lt;/span&gt;
-    --enable-perlinterp &lt;span class="se"&gt;\&lt;/span&gt;
-    --enable-cscope &lt;span class="se"&gt;\&lt;/span&gt;
-    --enable-pythoninterp &lt;span class="se"&gt;\&lt;/span&gt;
-    --with-python-config-dir&lt;span class="o"&gt;=&lt;/span&gt;/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config
+git&lt;span class="w"&gt; &lt;/span&gt;clone&lt;span class="w"&gt; &lt;/span&gt;git://github.com/b4winckler/macvim.git
+&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;macvim/src
+&lt;span class="nb"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;LDFLAGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;-L/usr/lib
+./configure&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--with-features&lt;span class="o"&gt;=&lt;/span&gt;huge&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--enable-rubyinterp&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--enable-perlinterp&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--enable-cscope&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--enable-pythoninterp&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--with-python-config-dir&lt;span class="o"&gt;=&lt;/span&gt;/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config
 make
-open MacVim/build/Release
-&lt;span class="nb"&gt;echo&lt;/span&gt; Drag MacVim.app to your Applications directory
+open&lt;span class="w"&gt; &lt;/span&gt;MacVim/build/Release
+&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Drag&lt;span class="w"&gt; &lt;/span&gt;MacVim.app&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;your&lt;span class="w"&gt; &lt;/span&gt;Applications&lt;span class="w"&gt; &lt;/span&gt;directory
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Without the LDFLAGS setting, I was missing some symbols at link. The
@@ -40,7 +40,7 @@ directory.&lt;/p&gt;
 &lt;p&gt;And files with set literals are now correctly parsed for errors.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This only works if the Python 2.7 is your default 'python'
 executable. Otherwise, or if you get "ImportError: No module named
-site"?, see Richard's comments below.&lt;/p&gt;</description><category>geek</category><category>osx-dev</category><category>python</category><category>software</category><category>terminal</category><category>vim</category><guid>https://www.tartley.com/posts/compiling-macvim-with-python-2-7/</guid><pubDate>Tue, 18 Oct 2011 17:25:03 GMT</pubDate></item><item><title>'Go to Definition' in Vim for Python using Ctags, Done Right</title><link>https://www.tartley.com/posts/go-to-definition-in-vim-for-python-using-ctags-on-windows/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;How to set up and configure Vim to use tags for Python development so
+site"?, see Richard's comments below.&lt;/p&gt;</description><category>geek</category><category>osx-dev</category><category>python</category><category>software</category><category>terminal</category><category>vim</category><guid>https://tartley.com/posts/compiling-macvim-with-python-2-7/</guid><pubDate>Tue, 18 Oct 2011 17:25:03 GMT</pubDate></item><item><title>'Go to Definition' in Vim for Python using Ctags, Done Right</title><link>https://tartley.com/posts/go-to-definition-in-vim-for-python-using-ctags-on-windows/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;How to set up and configure Vim to use tags for Python development so
 that it doesn't suck.&lt;/p&gt;
 &lt;h3&gt;Install Ctags&lt;/h3&gt;
 &lt;p&gt;Get the latest version of &lt;a href="http://ctags.sourceforge.net/"&gt;ctags&lt;/a&gt;, put it
@@ -50,7 +50,7 @@ on your PATH. Recent releases are much improved for Python.&lt;/p&gt;
 will need to be created or updated whenever you make significant
 changes. Either get used to manually running the following command a
 lot:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ctags -R .
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ctags&lt;span class="w"&gt; &lt;/span&gt;-R&lt;span class="w"&gt; &lt;/span&gt;.
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;or bind it to a key in your \~/.vimrc:&lt;/p&gt;
@@ -114,4 +114,4 @@ precisely the same name.&lt;/p&gt;
 &lt;p&gt;Much better.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Also see this post about adding stdlib and venv contents to
 your tags:
-&lt;a href="https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/"&gt;https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>mswin-dev</category><category>python</category><category>software</category><category>terminal</category><category>vim</category><guid>https://www.tartley.com/posts/go-to-definition-in-vim-for-python-using-ctags-on-windows/</guid><pubDate>Fri, 17 Dec 2010 02:39:01 GMT</pubDate></item></channel></rss>
+&lt;a href="https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/"&gt;https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>mswin-dev</category><category>python</category><category>software</category><category>terminal</category><category>vim</category><guid>https://tartley.com/posts/go-to-definition-in-vim-for-python-using-ctags-on-windows/</guid><pubDate>Fri, 17 Dec 2010 02:39:01 GMT</pubDate></item></channel></rss>

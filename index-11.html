@@ -6,10 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 11) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link href="assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
-<link rel="canonical" href="https://www.tartley.com/index-11.html">
+<link rel="canonical" href="https://tartley.com/index-11.html">
 <link rel="icon" href="welcome.gif" sizes="16x16">
 <link rel="prev" href="index-12.html" type="text/html">
 <link rel="next" href="index-10.html" type="text/html">
@@ -29,7 +28,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.tartley.com/">
+            <a class="navbar-brand" href="https://tartley.com/">
 
                 <span id="blog-title">tartley.com</span>
             </a>
@@ -38,13 +37,16 @@
         <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
-<a href="archive.html">Archive</a>
+<a href="archive.html">Posts</a>
                 </li>
 <li>
 <a href="categories/">Tags</a>
                 </li>
 <li>
-<a href="rss.xml">RSS feed</a>
+<a href="galleries/Drawings">Gallery</a>
+                </li>
+<li>
+<a href="rss.xml">RSS</a>
                 </li>
 <li>
 <a href="pages/about/">About</a>
@@ -53,7 +55,7 @@
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -68,7 +70,11 @@
         <!--Body content-->
         <div class="row">
             
+            
+
     
+
+
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
     <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/halting-state/" class="u-url">Halting State</a></h1>
@@ -287,8 +293,8 @@ uninspiring DOS-like text terminal in a window. Type the command 'ls',
 which lists the files in the current directory. From now on I'll show
 commands you should type in <code>monospace</code>, preceded by a dollar sign,
 possibly followed by expected output of the command, like this:</p>
-<div class="code"><pre class="code literal-block">$ ls
-My Pictures My eBooks My Music
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>ls
+My<span class="w"> </span>Pictures<span class="w"> </span>My<span class="w"> </span>eBooks<span class="w"> </span>My<span class="w"> </span>Music
 </pre></div>
 
 <p>With any luck, you should recognise the files listed as those residing
@@ -300,8 +306,8 @@ commands you need to type to get a C program compiled.</p>
 <p>Create a new directory within 'My Documents', where our C programs will
 live. You can use Linux commands if you know them, or use your Windows
 Explorer thing. I'm going to use Linux commands:</p>
-<div class="code"><pre class="code literal-block">$ mkdir cprogs
-$ <span class="nb">cd</span> cprogs
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>mkdir<span class="w"> </span>cprogs
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>cprogs
 </pre></div>
 
 <p>(The 'cd' changes directory into the new 'cprogs' directory. Note that
@@ -310,22 +316,22 @@ the yellow '\~' above your dollar prompt has changed into a yellow
 nothing - our new directory is empty.)</p>
 <p>Next we want to create our c source file. If you installed vi or emacs
 as part of the cygwin setup, then you can use these here:</p>
-<div class="code"><pre class="code literal-block">$ vi myprog.c
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>vi<span class="w"> </span>myprog.c
 </pre></div>
 
 <p>Otherwise, you can just use notepad, or any other windows text editor.
 You can invoke it from the command line if you wish.</p>
-<div class="code"><pre class="code literal-block">$ notepad myprog.c
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>notepad<span class="w"> </span>myprog.c
 </pre></div>
 
 <p>Enter and save the following minimal program:</p>
-<div class="code"><pre class="code literal-block"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div class="code"><pre class="code literal-block"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"Hello world</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="w"> </span><span class="p">(</span><span class="s">"Hello world</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 
 <p>Notice that, while notepad is still open, you can no longer type
@@ -333,7 +339,7 @@ anything in your Cygwin terminal window. Cygwin is waiting for notepad
 to finish before it lets you type anything else. Save and quit notepad
 (now you can type again) and then run it once more, appending an
 ampersand at the end of the command:</p>
-<div class="code"><pre class="code literal-block">$ notepad myprog.c <span class="p">&amp;</span>
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>notepad<span class="w"> </span>myprog.c<span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
 
 <p>The ampersand tells cygwin to run notepad 'in the background', while
@@ -343,7 +349,7 @@ program.</p>
 <h4>Compiling</h4>
 <p>To compile the program, we invoke the gcc program that we installed as
 part of cygwin setup:</p>
-<div class="code"><pre class="code literal-block">$ gcc myprog.c -o myprog
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>gcc<span class="w"> </span>myprog.c<span class="w"> </span>-o<span class="w"> </span>myprog
 </pre></div>
 
 <p>This tells the program gcc to compile myprog.c, and to call the output
@@ -353,14 +359,14 @@ you can re-issue the compile command by pressing the up arrow key, then
 return. If the compile command produces no error messages, nor any other
 kind of response, then the compilation has been successful. You can
 verify this:</p>
-<div class="code"><pre class="code literal-block">$ ls myprog.c myprog.exe
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>ls<span class="w"> </span>myprog.c<span class="w"> </span>myprog.exe
 </pre></div>
 
 <p>(Note: on a real Unix/Linux box, the program would have no '.exe'
 extension. It would simply be called 'myprog'.)</p>
 <p>And to run your new program:</p>
-<div class="code"><pre class="code literal-block">$ ./myprog
-Hello World
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>./myprog
+Hello<span class="w"> </span>World
 </pre></div>
 
 <h4>Wrapup</h4>
@@ -394,10 +400,10 @@ GUI environments, the user would have no choice but to spend all
 afternoon loading each program in turn and clicking the [compile]
 button. Knowing a little command line magic, however, makes it a
 ten-second job:</p>
-<div class="code"><pre class="code literal-block">$ <span class="k">for</span> SOURCE <span class="k">in</span> *.c<span class="p">;</span>
-&gt; <span class="k">do</span>
-&gt;   gcc <span class="nv">$SOURCE</span> -o <span class="si">${</span><span class="nv">SOURCE</span><span class="p">%.c</span><span class="si">}</span><span class="p">;</span>
-&gt; <span class="k">done</span>
+<div class="code"><pre class="code literal-block">$<span class="w"> </span><span class="k">for</span><span class="w"> </span>SOURCE<span class="w"> </span><span class="k">in</span><span class="w"> </span>*.c<span class="p">;</span>
+&gt;<span class="w"> </span><span class="k">do</span>
+&gt;<span class="w">   </span>gcc<span class="w"> </span><span class="nv">$SOURCE</span><span class="w"> </span>-o<span class="w"> </span><span class="si">${</span><span class="nv">SOURCE</span><span class="p">%.c</span><span class="si">}</span><span class="p">;</span>
+&gt;<span class="w"> </span><span class="k">done</span>
 </pre></div>
 
 <p>Each method has it's strengths and should be used where they are most
@@ -616,6 +622,7 @@ Freedom</a>.</p>
     </div>
     </article>
 </div>
+
         <nav class="postindexpager"><ul class="pager">
 <li class="previous">
                 <a href="index-12.html" rel="prev">Newer posts</a>
@@ -630,6 +637,7 @@ Freedom</a>.</p>
         <footer id="footer"></footer>
 </div>
 </div>
+
 
             <script src="assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");

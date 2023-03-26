@@ -5,17 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Postscript formatted man pages | tartley.com</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://www.tartley.com/posts/postscript-formatted-man-pages/">
+<link rel="canonical" href="https://tartley.com/posts/postscript-formatted-man-pages/">
 <link rel="icon" href="../../welcome.gif" sizes="16x16">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
 <link rel="prev" href="../rhythmbox-plugin-announce/" title='Rhythmbox plugin: "Announce"' type="text/html">
 <link rel="next" href="../automate-gnome-keybindings/" title="Automate Gnome keybindings" type="text/html">
 <meta property="og:site_name" content="tartley.com">
 <meta property="og:title" content="Postscript formatted man pages">
-<meta property="og:url" content="https://www.tartley.com/posts/postscript-formatted-man-pages/">
+<meta property="og:url" content="https://tartley.com/posts/postscript-formatted-man-pages/">
 <meta property="og:description" content="man and its troff formatting can be asked to produce postscript
 output. Define a Bash function, e.g. in your .bashrc:
 function psman () {
@@ -41,7 +40,7 @@ function psman () {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.tartley.com/">
+            <a class="navbar-brand" href="https://tartley.com/">
 
                 <span id="blog-title">tartley.com</span>
             </a>
@@ -50,13 +49,16 @@ function psman () {
         <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
-<a href="../../archive.html">Archive</a>
+<a href="../../archive.html">Posts</a>
                 </li>
 <li>
 <a href="../../categories/">Tags</a>
                 </li>
 <li>
-<a href="../../rss.xml">RSS feed</a>
+<a href="../../galleries/Drawings">Gallery</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS</a>
                 </li>
 <li>
 <a href="../../pages/about/">About</a>
@@ -65,7 +67,7 @@ function psman () {
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -80,6 +82,7 @@ function psman () {
         <!--Body content-->
         <div class="row">
             
+            
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Postscript formatted man pages</a></h1>
 
         <div class="metadata">
@@ -91,18 +94,20 @@ function psman () {
             <time class="published dt-published" datetime="2017-08-22T20:34:02-05:00" itemprop="datePublished" title="2017-08-22 20:34">2017-08-22 20:34</time></a>
             </p>
             
+
         </div>
         
+
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <p><code>man</code> and its <code>troff</code> formatting can be asked to produce postscript
 output. Define a Bash function, e.g. in your .bashrc:</p>
-<div class="code"><pre class="code literal-block"><span class="k">function</span> psman <span class="o">()</span> <span class="o">{</span>
-    <span class="nv">SLUG</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$@</span> <span class="p">|</span> tr <span class="s1">' '</span> <span class="s1">'-'</span><span class="k">)</span>
-    <span class="nv">FNAME</span><span class="o">=</span><span class="s2">"/tmp/man-</span><span class="nv">$SLUG</span><span class="s2">.pdf"</span>
-    <span class="nb">set</span> -o pipefail
-    man -t <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span> <span class="p">|</span> ps2pdf - <span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
-      nohup evince <span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span> &gt;/dev/null <span class="m">2</span>&gt;/dev/null
-    <span class="nb">set</span> +o pipefail
+<div class="code"><pre class="code literal-block"><span class="k">function</span><span class="w"> </span>psman<span class="w"> </span><span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nv">SLUG</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$@</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">' '</span><span class="w"> </span><span class="s1">'-'</span><span class="k">)</span>
+<span class="w">    </span><span class="nv">FNAME</span><span class="o">=</span><span class="s2">"/tmp/man-</span><span class="nv">$SLUG</span><span class="s2">.pdf"</span>
+<span class="w">    </span><span class="nb">set</span><span class="w"> </span>-o<span class="w"> </span>pipefail
+<span class="w">    </span>man<span class="w"> </span>-t<span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>ps2pdf<span class="w"> </span>-<span class="w"> </span><span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>nohup<span class="w"> </span>evince<span class="w"> </span><span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span><span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+<span class="w">    </span><span class="nb">set</span><span class="w"> </span>+o<span class="w"> </span>pipefail
 <span class="o">}</span>
 </pre></div>
 
@@ -117,7 +122,7 @@ fails, the exit code is preserved as the exit of `man|ps2pdf`, which
 causes the `&amp;&amp;` to short-circuit, preventing evince from being run on
 an empty pdf document. We restore `+o pipefail` again at the end.</p>
 <p>Then, from the command line:</p>
-<div class="code"><pre class="code literal-block">$ psman tr
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>psman<span class="w"> </span>tr
 </pre></div>
 
 <p>produces</p>
@@ -142,6 +147,7 @@ an empty pdf document. We restore `+o pipefail` again at the end.</p>
         <footer id="footer"></footer>
 </div>
 </div>
+
 
             <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");

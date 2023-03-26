@@ -5,17 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Making a wix installer run a program by default | tartley.com</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://www.tartley.com/posts/making-a-wix-installer-run-a-program-by-default/">
+<link rel="canonical" href="https://tartley.com/posts/making-a-wix-installer-run-a-program-by-default/">
 <link rel="icon" href="../../welcome.gif" sizes="16x16">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
 <link rel="prev" href="../python-deployment-sucks/" title="Python Deployment Sucks" type="text/html">
 <link rel="next" href="../programming-on-windows-use-console/" title="Programming on Windows : Use Console" type="text/html">
 <meta property="og:site_name" content="tartley.com">
 <meta property="og:title" content="Making a wix installer run a program by default">
-<meta property="og:url" content="https://www.tartley.com/posts/making-a-wix-installer-run-a-program-by-default/">
+<meta property="og:url" content="https://tartley.com/posts/making-a-wix-installer-run-a-program-by-default/">
 <meta property="og:description" content="Guest post by my least favourite colleague, Tom.
 Normally - but not always - people want to run a program just after the
 install it - you can help then to do this by using an opt-out system
@@ -38,7 +37,7 @@ with a che">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.tartley.com/">
+            <a class="navbar-brand" href="https://tartley.com/">
 
                 <span id="blog-title">tartley.com</span>
             </a>
@@ -47,13 +46,16 @@ with a che">
         <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
-<a href="../../archive.html">Archive</a>
+<a href="../../archive.html">Posts</a>
                 </li>
 <li>
 <a href="../../categories/">Tags</a>
                 </li>
 <li>
-<a href="../../rss.xml">RSS feed</a>
+<a href="../../galleries/Drawings">Gallery</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS</a>
                 </li>
 <li>
 <a href="../../pages/about/">About</a>
@@ -62,7 +64,7 @@ with a che">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -77,6 +79,7 @@ with a che">
         <!--Body content-->
         <div class="row">
             
+            
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Making a wix installer run a program by default</a></h1>
 
         <div class="metadata">
@@ -88,8 +91,10 @@ with a che">
             <time class="published dt-published" datetime="2009-10-01T18:27:29-05:00" itemprop="datePublished" title="2009-10-01 18:27">2009-10-01 18:27</time></a>
             </p>
             
+
         </div>
         
+
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <p><strong><em>Guest post by my least favourite colleague, Tom.</em></strong></p>
 <p>Normally - but not always - people want to run a program just after the
@@ -98,7 +103,7 @@ with a checkbox checked by default</p>
 <p>To create the checkbox and control whether it is set you must use the
 following properties in your <strong>Product</strong> section:</p>
 <div class="code"><pre class="code literal-block">Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT"
-Value="Launch the cool program"
+Value="Launch<span class="w"> </span>the<span class="w"> </span>cool<span class="w"> </span>program"
 Id="WIXUI_EXITDIALOGOPTIONALCHECKBOX"
 Value="1"
 </pre></div>
@@ -116,8 +121,8 @@ Impersonate="yes"
 to get you custom action called.</p>
 <div class="code"><pre class="code literal-block">Control="Finish"
 Event="DoAction"
-Value="LaunchApplication"<span class="ni">&amp;gt;</span>WIXUI\_EXITDIALOGOPTIONALCHECKBOX = 1 and
-NOT Installed
+Value="LaunchApplication"<span class="ni">&amp;gt;</span>WIXUI\_EXITDIALOGOPTIONALCHECKBOX<span class="w"> </span>=<span class="w"> </span>1<span class="w"> </span>and
+NOT<span class="w"> </span>Installed
 </pre></div>
 
 <p>Huzzah - you now may have a working installer.</p>
@@ -139,6 +144,7 @@ NOT Installed
         <footer id="footer"></footer>
 </div>
 </div>
+
 
             <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");

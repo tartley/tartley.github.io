@@ -5,17 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Encrypted zip files on OSX | tartley.com</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://www.tartley.com/posts/encrypted-zip-files-on-osx/">
+<link rel="canonical" href="https://tartley.com/posts/encrypted-zip-files-on-osx/">
 <link rel="icon" href="../../welcome.gif" sizes="16x16">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
 <link rel="prev" href="../compiling-macvim-with-python-2-7/" title="Compiling MacVim with Python 2.7" type="text/html">
 <link rel="next" href="../hexagonal-django/" title="Hexagonal Django" type="text/html">
 <meta property="og:site_name" content="tartley.com">
 <meta property="og:title" content="Encrypted zip files on OSX">
-<meta property="og:url" content="https://www.tartley.com/posts/encrypted-zip-files-on-osx/">
+<meta property="og:url" content="https://tartley.com/posts/encrypted-zip-files-on-osx/">
 <meta property="og:description" content="Update: I've since switched to KeePassXC, the community fork of KeePassX,
 an open source, cross-platorm, local-first, encrypted password storage program.
 
@@ -38,7 +37,7 @@ My passwords and other miscellany are in a pl">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.tartley.com/">
+            <a class="navbar-brand" href="https://tartley.com/">
 
                 <span id="blog-title">tartley.com</span>
             </a>
@@ -47,13 +46,16 @@ My passwords and other miscellany are in a pl">
         <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
-<a href="../../archive.html">Archive</a>
+<a href="../../archive.html">Posts</a>
                 </li>
 <li>
 <a href="../../categories/">Tags</a>
                 </li>
 <li>
-<a href="../../rss.xml">RSS feed</a>
+<a href="../../galleries/Drawings">Gallery</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS</a>
                 </li>
 <li>
 <a href="../../pages/about/">About</a>
@@ -62,7 +64,7 @@ My passwords and other miscellany are in a pl">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -77,6 +79,7 @@ My passwords and other miscellany are in a pl">
         <!--Body content-->
         <div class="row">
             
+            
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Encrypted zip files on OSX</a></h1>
 
         <div class="metadata">
@@ -88,8 +91,10 @@ My passwords and other miscellany are in a pl">
             <time class="published dt-published" datetime="2012-10-09T10:17:07-05:00" itemprop="datePublished" title="2012-10-09 10:17">2012-10-09 10:17</time></a>
             </p>
             
+
         </div>
         
+
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <p><strong>Update:</strong> I've since switched to KeePassXC, the community fork of KeePassX,
 an open source, cross-platorm, local-first, encrypted password storage program.</p>
@@ -117,23 +122,23 @@ Bash:</p>
 
 <span class="nv">ZIPDIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/docs/org"</span>
 
-<span class="nb">read</span> -s -p <span class="s2">"Password:"</span> key
+<span class="nb">read</span><span class="w"> </span>-s<span class="w"> </span>-p<span class="w"> </span><span class="s2">"Password:"</span><span class="w"> </span>key
 
-<span class="nb">cd</span> <span class="nv">$ZIPDIR</span>
-unzip -P <span class="nv">$key</span> passwords.zip passwords.txt -d <span class="nv">$TMPDIR</span>
-<span class="k">if</span> <span class="o">[[</span> <span class="nv">$?</span> !<span class="o">=</span> <span class="m">0</span> <span class="o">]]</span> <span class="p">;</span> <span class="k">then</span>
-    <span class="nb">exit</span> <span class="m">1</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$ZIPDIR</span>
+unzip<span class="w"> </span>-P<span class="w"> </span><span class="nv">$key</span><span class="w"> </span>passwords.zip<span class="w"> </span>passwords.txt<span class="w"> </span>-d<span class="w"> </span><span class="nv">$TMPDIR</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>!<span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
 <span class="k">fi</span>
 
-<span class="nb">cd</span> <span class="s2">"</span><span class="nv">$TMPDIR</span><span class="s2">"</span>
-touch passwords.datestamp
-<span class="nv">$EDITOR</span> passwords.txt
-<span class="k">if</span> <span class="o">[[</span> passwords.txt -nt passwords.datestamp <span class="o">]]</span> <span class="p">;</span> <span class="k">then</span>
-    zip -P <span class="nv">$key</span> -r <span class="s2">"</span><span class="nv">$ZIPDIR</span><span class="s2">/passwords.zip"</span> passwords.txt
+<span class="nb">cd</span><span class="w"> </span><span class="s2">"</span><span class="nv">$TMPDIR</span><span class="s2">"</span>
+touch<span class="w"> </span>passwords.datestamp
+<span class="nv">$EDITOR</span><span class="w"> </span>passwords.txt
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>passwords.txt<span class="w"> </span>-nt<span class="w"> </span>passwords.datestamp<span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>zip<span class="w"> </span>-P<span class="w"> </span><span class="nv">$key</span><span class="w"> </span>-r<span class="w"> </span><span class="s2">"</span><span class="nv">$ZIPDIR</span><span class="s2">/passwords.zip"</span><span class="w"> </span>passwords.txt
 <span class="k">fi</span>
 
-rm passwords.txt
-rm passwords.datestamp
+rm<span class="w"> </span>passwords.txt
+rm<span class="w"> </span>passwords.datestamp
 </pre></div>
 
 <p>I don't expect this to be watertight, but seems good enough for today.
@@ -156,6 +161,7 @@ I'm happy to hear suggestions.</p>
         <footer id="footer"></footer>
 </div>
 </div>
+
 
             <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");

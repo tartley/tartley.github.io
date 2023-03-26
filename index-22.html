@@ -6,10 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 22) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link href="assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
-<link rel="canonical" href="https://www.tartley.com/index-22.html">
+<link rel="canonical" href="https://tartley.com/index-22.html">
 <link rel="icon" href="welcome.gif" sizes="16x16">
 <link rel="prev" href="index-23.html" type="text/html">
 <link rel="next" href="index-21.html" type="text/html">
@@ -29,7 +28,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.tartley.com/">
+            <a class="navbar-brand" href="https://tartley.com/">
 
                 <span id="blog-title">tartley.com</span>
             </a>
@@ -38,13 +37,16 @@
         <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
-<a href="archive.html">Archive</a>
+<a href="archive.html">Posts</a>
                 </li>
 <li>
 <a href="categories/">Tags</a>
                 </li>
 <li>
-<a href="rss.xml">RSS feed</a>
+<a href="galleries/Drawings">Gallery</a>
+                </li>
+<li>
+<a href="rss.xml">RSS</a>
                 </li>
 <li>
 <a href="pages/about/">About</a>
@@ -53,7 +55,7 @@
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -68,7 +70,11 @@
         <!--Body content-->
         <div class="row">
             
+            
+
     
+
+
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
     <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/hull-zero-three/" class="u-url">Hull Zero Three</a></h1>
@@ -136,16 +142,16 @@ new v0.6 version, although has not released any of that to PyPI.</p>
 <p>Clone the latest repo <a href="https://github.com/nojhan/colout">from Github</a>, and
 install from that:</p>
 <div class="code"><pre class="code literal-block"><span class="c1"># cd to the clone, then</span>
-python3 -m pip install --user .
+python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>.
 </pre></div>
 
 <p>Or, pip install the version I uploaded to PyPI, which is a straight copy of the
 latest Github at the time:</p>
-<div class="code"><pre class="code literal-block">pip install --user colout-fix
+<div class="code"><pre class="code literal-block">pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>colout-fix
 </pre></div>
 
 <p>Or, best of all, pip install straight from the original Github repo:</p>
-<div class="code"><pre class="code literal-block">pip install --user git+git://github.com/nojhan/colout.git
+<div class="code"><pre class="code literal-block">pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>git+git://github.com/nojhan/colout.git
 </pre></div>
 
 <p>Note that, throughout, we're using <code>--user</code>, so that you can install
@@ -176,34 +182,34 @@ Create a second profile.</p>
 <p>Substitute those directories into this firefox.desktop file, where I've
 marked 'XXX':</p>
 <div class="code"><pre class="code literal-block"><span class="cp"># Gnome3 .desktop file for Firefox with multiple profiles</span>
-<span class="p">[</span><span class="n">Desktop</span><span class="w"> </span><span class="n">Entry</span><span class="p">]</span><span class="w"></span>
-<span class="n">Version</span><span class="o">=</span><span class="mf">1.0</span><span class="w"></span>
-<span class="n">Name</span><span class="o">=</span><span class="n">Firefox</span><span class="w"></span>
-<span class="n">Comment</span><span class="o">=</span><span class="n">Browse</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">web</span><span class="w"></span>
-<span class="n">GenericName</span><span class="o">=</span><span class="n">Web</span><span class="w"> </span><span class="n">Browser</span><span class="w"></span>
-<span class="n">Keywords</span><span class="o">=</span><span class="n">Internet</span><span class="p">;</span><span class="n">WWW</span><span class="p">;</span><span class="n">Browser</span><span class="p">;</span><span class="n">Web</span><span class="p">;</span><span class="n">Explorer</span><span class="w"></span>
-<span class="n">Type</span><span class="o">=</span><span class="n">Application</span><span class="w"></span>
-<span class="n">Exec</span><span class="o">=</span><span class="n">firefox</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">remote</span><span class="w"> </span><span class="o">%</span><span class="n">u</span><span class="w"></span>
-<span class="n">Terminal</span><span class="o">=</span><span class="nb">false</span><span class="w"></span>
-<span class="n">X</span><span class="o">-</span><span class="n">MultipleArgs</span><span class="o">=</span><span class="nb">false</span><span class="w"></span>
-<span class="n">Icon</span><span class="o">=</span><span class="n">firefox</span><span class="w"></span>
-<span class="n">Categories</span><span class="o">=</span><span class="n">GNOME</span><span class="p">;</span><span class="n">GTK</span><span class="p">;</span><span class="n">Network</span><span class="p">;</span><span class="n">WebBrowser</span><span class="p">;</span><span class="w"></span>
-<span class="n">Actions</span><span class="o">=</span><span class="n">home</span><span class="p">;</span><span class="n">work</span><span class="w"></span>
-<span class="n">MimeType</span><span class="o">=</span><span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">;</span><span class="n">text</span><span class="o">/</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">xhtml</span><span class="o">+</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">rss</span><span class="o">+</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">rdf</span><span class="o">+</span><span class="n">xml</span><span class="p">;</span><span class="n">image</span><span class="o">/</span><span class="n">gif</span><span class="p">;</span><span class="n">image</span><span class="o">/</span><span class="n">jpeg</span><span class="p">;</span><span class="n">image</span><span class="o">/</span><span class="n">png</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">http</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">https</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">ftp</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">chrome</span><span class="p">;</span><span class="n">video</span><span class="o">/</span><span class="n">webm</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">x</span><span class="o">-</span><span class="n">xpinstall</span><span class="p">;</span><span class="w"></span>
-<span class="n">StartupNotify</span><span class="o">=</span><span class="nb">true</span><span class="w"></span>
+<span class="p">[</span><span class="n">Desktop</span><span class="w"> </span><span class="n">Entry</span><span class="p">]</span>
+<span class="n">Version</span><span class="o">=</span><span class="mf">1.0</span>
+<span class="n">Name</span><span class="o">=</span><span class="n">Firefox</span>
+<span class="n">Comment</span><span class="o">=</span><span class="n">Browse</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">web</span>
+<span class="n">GenericName</span><span class="o">=</span><span class="n">Web</span><span class="w"> </span><span class="n">Browser</span>
+<span class="n">Keywords</span><span class="o">=</span><span class="n">Internet</span><span class="p">;</span><span class="n">WWW</span><span class="p">;</span><span class="n">Browser</span><span class="p">;</span><span class="n">Web</span><span class="p">;</span><span class="n">Explorer</span>
+<span class="n">Type</span><span class="o">=</span><span class="n">Application</span>
+<span class="n">Exec</span><span class="o">=</span><span class="n">firefox</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">remote</span><span class="w"> </span><span class="o">%</span><span class="n">u</span>
+<span class="n">Terminal</span><span class="o">=</span><span class="nb">false</span>
+<span class="n">X</span><span class="o">-</span><span class="n">MultipleArgs</span><span class="o">=</span><span class="nb">false</span>
+<span class="n">Icon</span><span class="o">=</span><span class="n">firefox</span>
+<span class="n">Categories</span><span class="o">=</span><span class="n">GNOME</span><span class="p">;</span><span class="n">GTK</span><span class="p">;</span><span class="n">Network</span><span class="p">;</span><span class="n">WebBrowser</span><span class="p">;</span>
+<span class="n">Actions</span><span class="o">=</span><span class="n">home</span><span class="p">;</span><span class="n">work</span>
+<span class="n">MimeType</span><span class="o">=</span><span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">;</span><span class="n">text</span><span class="o">/</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">xhtml</span><span class="o">+</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">rss</span><span class="o">+</span><span class="n">xml</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">rdf</span><span class="o">+</span><span class="n">xml</span><span class="p">;</span><span class="n">image</span><span class="o">/</span><span class="n">gif</span><span class="p">;</span><span class="n">image</span><span class="o">/</span><span class="n">jpeg</span><span class="p">;</span><span class="n">image</span><span class="o">/</span><span class="n">png</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">http</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">https</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">ftp</span><span class="p">;</span><span class="n">x</span><span class="o">-</span><span class="n">scheme</span><span class="o">-</span><span class="n">handler</span><span class="o">/</span><span class="n">chrome</span><span class="p">;</span><span class="n">video</span><span class="o">/</span><span class="n">webm</span><span class="p">;</span><span class="n">application</span><span class="o">/</span><span class="n">x</span><span class="o">-</span><span class="n">xpinstall</span><span class="p">;</span>
+<span class="n">StartupNotify</span><span class="o">=</span><span class="nb">true</span>
 
-<span class="p">[</span><span class="n">Desktop</span><span class="w"> </span><span class="n">Action</span><span class="w"> </span><span class="n">home</span><span class="p">]</span><span class="w"></span>
-<span class="n">Name</span><span class="o">=</span><span class="n">Firefox</span><span class="w"> </span><span class="p">(</span><span class="n">home</span><span class="p">)</span><span class="w"></span>
-<span class="n">Exec</span><span class="o">=</span><span class="n">firefox</span><span class="w"> </span><span class="o">--</span><span class="n">profile</span><span class="w"> </span><span class="p">.</span><span class="n">mozilla</span><span class="o">/</span><span class="n">firefox</span><span class="o">/</span><span class="n">XXX</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">remote</span><span class="w"> </span><span class="o">%</span><span class="n">u</span><span class="w"></span>
+<span class="p">[</span><span class="n">Desktop</span><span class="w"> </span><span class="n">Action</span><span class="w"> </span><span class="n">home</span><span class="p">]</span>
+<span class="n">Name</span><span class="o">=</span><span class="n">Firefox</span><span class="w"> </span><span class="p">(</span><span class="n">home</span><span class="p">)</span>
+<span class="n">Exec</span><span class="o">=</span><span class="n">firefox</span><span class="w"> </span><span class="o">--</span><span class="n">profile</span><span class="w"> </span><span class="p">.</span><span class="n">mozilla</span><span class="o">/</span><span class="n">firefox</span><span class="o">/</span><span class="n">XXX</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">remote</span><span class="w"> </span><span class="o">%</span><span class="n">u</span>
 
-<span class="p">[</span><span class="n">Desktop</span><span class="w"> </span><span class="n">Action</span><span class="w"> </span><span class="n">work</span><span class="p">]</span><span class="w"></span>
-<span class="n">Name</span><span class="o">=</span><span class="n">Firefox</span><span class="w"> </span><span class="p">(</span><span class="n">work</span><span class="p">)</span><span class="w"></span>
-<span class="n">Exec</span><span class="o">=</span><span class="n">firefox</span><span class="w"> </span><span class="o">--</span><span class="n">profile</span><span class="w"> </span><span class="p">.</span><span class="n">mozilla</span><span class="o">/</span><span class="n">firefox</span><span class="o">/</span><span class="n">XXX</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">remote</span><span class="w"> </span><span class="o">%</span><span class="n">u</span><span class="w"></span>
+<span class="p">[</span><span class="n">Desktop</span><span class="w"> </span><span class="n">Action</span><span class="w"> </span><span class="n">work</span><span class="p">]</span>
+<span class="n">Name</span><span class="o">=</span><span class="n">Firefox</span><span class="w"> </span><span class="p">(</span><span class="n">work</span><span class="p">)</span>
+<span class="n">Exec</span><span class="o">=</span><span class="n">firefox</span><span class="w"> </span><span class="o">--</span><span class="n">profile</span><span class="w"> </span><span class="p">.</span><span class="n">mozilla</span><span class="o">/</span><span class="n">firefox</span><span class="o">/</span><span class="n">XXX</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">remote</span><span class="w"> </span><span class="o">%</span><span class="n">u</span>
 </pre></div>
 
 <p>Save the above as firefox.desktop and install using:</p>
-<div class="code"><pre class="code literal-block">$ desktop-file-validate firefox.desktop
-$ desktop-file-install --dir<span class="o">=</span>.local/share/applications firefox.desktop
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>desktop-file-validate<span class="w"> </span>firefox.desktop
+$<span class="w"> </span>desktop-file-install<span class="w"> </span>--dir<span class="o">=</span>.local/share/applications<span class="w"> </span>firefox.desktop
 </pre></div>
 
 <p>This results in a Firefox icon in your applications menu that defaults
@@ -242,20 +248,20 @@ workstation setup bucket:</p>
 <span class="nv">kb</span><span class="o">=</span><span class="s1">'org.gnome.desktop.wm.keybindings'</span>
 
 <span class="c1"># Switcher, between windows not apps, uses alt-tab and alt-grave</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-windows <span class="s2">"['Tab']"</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-windows-backward <span class="s2">"['grave', 'Tab']"</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-applications <span class="s2">"[]"</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> switch-applications-backward <span class="s2">"[]"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>switch-windows<span class="w"> </span><span class="s2">"['Tab']"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>switch-windows-backward<span class="w"> </span><span class="s2">"['grave', 'Tab']"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>switch-applications<span class="w"> </span><span class="s2">"[]"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>switch-applications-backward<span class="w"> </span><span class="s2">"[]"</span>
 
 <span class="c1"># Window maximize toggle, super-up</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> maximize <span class="s2">"[]"</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> toggle-maximized <span class="s2">"['Up']"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>maximize<span class="w"> </span><span class="s2">"[]"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>toggle-maximized<span class="w"> </span><span class="s2">"['Up']"</span>
 
 <span class="c1"># Window maximize vertically toggle, super-v</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> maximize-vertically <span class="s2">"['v']"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>maximize-vertically<span class="w"> </span><span class="s2">"['v']"</span>
 
 <span class="c1"># run command, super-r</span>
-gsettings <span class="nb">set</span> <span class="nv">$kb</span> panel-run-dialog <span class="s2">"['r', 'F2']"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$kb</span><span class="w"> </span>panel-run-dialog<span class="w"> </span><span class="s2">"['r', 'F2']"</span>
 
 
 <span class="c1"># Custom commands</span>
@@ -263,15 +269,15 @@ gsettings <span class="nb">set</span> <span class="nv">$kb</span> panel-run-dial
 <span class="nv">mk</span><span class="o">=</span><span class="s1">'org.gnome.settings-daemon.plugins.media-keys'</span>
 <span class="nv">ckb</span><span class="o">=</span><span class="s1">'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings'</span>
 
-gsettings <span class="nb">set</span> <span class="nv">$mk</span> custom-keybindings <span class="s2">"['</span><span class="nv">$ckb</span><span class="s2">/custom0/', '</span><span class="nv">$ckb</span><span class="s2">/custom1/']"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$mk</span><span class="w"> </span>custom-keybindings<span class="w"> </span><span class="s2">"['</span><span class="nv">$ckb</span><span class="s2">/custom0/', '</span><span class="nv">$ckb</span><span class="s2">/custom1/']"</span>
 
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/ name <span class="s2">"screen off"</span>
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/ <span class="nb">command</span> <span class="s2">"screenoff"</span>
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/ binding <span class="s2">"z"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/<span class="w"> </span>name<span class="w"> </span><span class="s2">"screen off"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="s2">"screenoff"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom0/<span class="w"> </span>binding<span class="w"> </span><span class="s2">"z"</span>
 
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ name <span class="s2">"terminal"</span>
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ <span class="nb">command</span> <span class="s2">"terminal"</span>
-gsettings <span class="nb">set</span> <span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/ binding <span class="s2">"t"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/<span class="w"> </span>name<span class="w"> </span><span class="s2">"terminal"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="s2">"terminal"</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$mk</span>.custom-keybinding:<span class="nv">$ckb</span>/custom1/<span class="w"> </span>binding<span class="w"> </span><span class="s2">"t"</span>
 </pre></div>
 
 <p>Embedded in that is the ultimate solution to my longstanding irk with
@@ -301,13 +307,13 @@ windows, which is easier to hit than shift-alt-tab.</p>
     </header><div class="e-content entry-content">
     <p><code>man</code> and its <code>troff</code> formatting can be asked to produce postscript
 output. Define a Bash function, e.g. in your .bashrc:</p>
-<div class="code"><pre class="code literal-block"><span class="k">function</span> psman <span class="o">()</span> <span class="o">{</span>
-    <span class="nv">SLUG</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$@</span> <span class="p">|</span> tr <span class="s1">' '</span> <span class="s1">'-'</span><span class="k">)</span>
-    <span class="nv">FNAME</span><span class="o">=</span><span class="s2">"/tmp/man-</span><span class="nv">$SLUG</span><span class="s2">.pdf"</span>
-    <span class="nb">set</span> -o pipefail
-    man -t <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span> <span class="p">|</span> ps2pdf - <span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
-      nohup evince <span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span> &gt;/dev/null <span class="m">2</span>&gt;/dev/null
-    <span class="nb">set</span> +o pipefail
+<div class="code"><pre class="code literal-block"><span class="k">function</span><span class="w"> </span>psman<span class="w"> </span><span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nv">SLUG</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$@</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">' '</span><span class="w"> </span><span class="s1">'-'</span><span class="k">)</span>
+<span class="w">    </span><span class="nv">FNAME</span><span class="o">=</span><span class="s2">"/tmp/man-</span><span class="nv">$SLUG</span><span class="s2">.pdf"</span>
+<span class="w">    </span><span class="nb">set</span><span class="w"> </span>-o<span class="w"> </span>pipefail
+<span class="w">    </span>man<span class="w"> </span>-t<span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>ps2pdf<span class="w"> </span>-<span class="w"> </span><span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">      </span>nohup<span class="w"> </span>evince<span class="w"> </span><span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span><span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+<span class="w">    </span><span class="nb">set</span><span class="w"> </span>+o<span class="w"> </span>pipefail
 <span class="o">}</span>
 </pre></div>
 
@@ -322,7 +328,7 @@ fails, the exit code is preserved as the exit of `man|ps2pdf`, which
 causes the `&amp;&amp;` to short-circuit, preventing evince from being run on
 an empty pdf document. We restore `+o pipefail` again at the end.</p>
 <p>Then, from the command line:</p>
-<div class="code"><pre class="code literal-block">$ psman tr
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>psman<span class="w"> </span>tr
 </pre></div>
 
 <p>produces</p>
@@ -431,23 +437,24 @@ today:</p>
 
 <p>Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
 above that you almost always want:</p>
-<div class="code"><pre class="code literal-block">git diff m...f
+<div class="code"><pre class="code literal-block">git<span class="w"> </span>diff<span class="w"> </span>m...f
 </pre></div>
 
 <p>is the same as</p>
-<div class="code"><pre class="code literal-block">git checkout f
-git diff m...
+<div class="code"><pre class="code literal-block">git<span class="w"> </span>checkout<span class="w"> </span>f
+git<span class="w"> </span>diff<span class="w"> </span>m...
 </pre></div>
 
 <p>or</p>
-<div class="code"><pre class="code literal-block">git checkout m
-git diff ...f
+<div class="code"><pre class="code literal-block">git<span class="w"> </span>checkout<span class="w"> </span>m
+git<span class="w"> </span>diff<span class="w"> </span>...f
 </pre></div>
 
 <p>Is there a word for unicode ascii art?</p>
     </div>
     </article>
 </div>
+
         <nav class="postindexpager"><ul class="pager">
 <li class="previous">
                 <a href="index-23.html" rel="prev">Newer posts</a>
@@ -462,6 +469,7 @@ git diff ...f
         <footer id="footer"></footer>
 </div>
 </div>
+
 
             <script src="assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");

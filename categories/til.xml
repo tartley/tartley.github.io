@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about til)</title><link>https://www.tartley.com/</link><description>Today I learned</description><atom:link href="https://www.tartley.com/categories/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 14 Feb 2023 18:03:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about til)</title><link>https://tartley.com/</link><description>Today I learned</description><atom:link href="https://tartley.com/categories/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 26 Mar 2023 04:51:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating Animated Meme GIFs on the Command-Line</title><link>https://tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
 animated gif memes, finally figured out how to do it manually. Not a universal
 process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
 &lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
@@ -37,7 +37,7 @@ and specifying "copy", as most people do, gives me an output with no video,
 only audio.&lt;/p&gt;
 &lt;p&gt;This results in a three second, 217KB .mp4 video file. (the following is just an
 image of it).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split.webp" src="https://www.tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split.webp" src="https://tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
 &lt;h4&gt;3. Crop&lt;/h4&gt;
 &lt;p&gt;To crop out the black bars from the top and bottom:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -hide_banner -i Ash-split.mp4 -vf 'crop=iw:365' Ash-split-crop.mp4
@@ -48,13 +48,13 @@ any offset ordinates for the crop, ffmpeg defaults to centering them, so this
 365 pixels are taken from the (spatial, vertical) middle of the video, which is
 exactly what we want.&lt;/p&gt;
 &lt;p&gt;This results in a three second, 220KB .mp4 video file.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://www.tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
 &lt;h3&gt;4. Resize and convert to gif&lt;/h3&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="s s-Atom"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;hide_banner&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;vf&lt;/span&gt; &lt;span class="s s-Atom"&gt;'scale=512:-1'&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;resize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;gif&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This results in a grainy-but-passable three second 750KB animated .gif:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
 &lt;p&gt;The file size can be smaller, if you care, most easily by splitting a shorter
 video clip, reducing the frame rate, or reducing the 'scale' in this step.&lt;/p&gt;
 &lt;p&gt;Alternately, this could be done using ImageMagik's 'convert', but the result
@@ -77,14 +77,14 @@ text labels, then the '-layers' option re-applies optimizations. Without this
 dance, the text is all twitchy and messy.&lt;/p&gt;
 &lt;p&gt;Voilà. Imagine sending it to a co-worker who is taking on a difficult task,
 like making changes to that thorny section of the codebase that nobody likes:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>video</category><category>youtube</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>Energy use per transaction for cryptocurrencies vs Visa</title><link>https://www.tartley.com/posts/energy-use-per-transaction-for-cryptocurrencies-vs-visa/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;For my own calibration, approximate current energy use for a single transaction
+&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>video</category><category>youtube</category><guid>https://tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>Energy use per transaction for cryptocurrencies vs Visa</title><link>https://tartley.com/posts/energy-use-per-transaction-for-cryptocurrencies-vs-visa/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;For my own calibration, approximate current energy use for a single transaction
 in various cryptocurrencies, compared with using Visa:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Currency &lt;/th&gt;
 &lt;th&gt;Symbol &lt;/th&gt;
-&lt;th align="right"&gt;Energy use&lt;br&gt;per txn(Wh) &lt;/th&gt;
+&lt;th style="text-align: right;"&gt;Energy use&lt;br&gt;per txn(Wh) &lt;/th&gt;
 &lt;th&gt;Equivalent&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
@@ -92,55 +92,55 @@ in various cryptocurrencies, compared with using Visa:&lt;/p&gt;
 &lt;tr&gt;
 &lt;td&gt;Bitcoin&lt;/td&gt;
 &lt;td&gt;BTC&lt;/td&gt;
-&lt;td align="right"&gt;1,000,000 &lt;/td&gt;
+&lt;td style="text-align: right;"&gt;1,000,000 &lt;/td&gt;
 &lt;td&gt;Hot tub, 150 hours&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Ethereum&lt;/td&gt;
 &lt;td&gt;ETH&lt;/td&gt;
-&lt;td align="right"&gt;62,000 &lt;/td&gt;
+&lt;td style="text-align: right;"&gt;62,000 &lt;/td&gt;
 &lt;td&gt;Nissan Leaf, 1.5 charges&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Litecoin&lt;/td&gt;
 &lt;td&gt;LTC&lt;/td&gt;
-&lt;td align="right"&gt;19,000 &lt;/td&gt;
+&lt;td style="text-align: right;"&gt;19,000 &lt;/td&gt;
 &lt;td&gt;Clothes washer, 8 loads&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Chia&lt;/td&gt;
 &lt;td&gt;XCH&lt;/td&gt;
-&lt;td align="right"&gt;2,000 &lt;/td&gt;
+&lt;td style="text-align: right;"&gt;2,000 &lt;/td&gt;
 &lt;td&gt;Dishwasher, 1 hour&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Cardano&lt;/td&gt;
 &lt;td&gt;ADA&lt;/td&gt;
-&lt;td align="right"&gt;500 &lt;/td&gt;
+&lt;td style="text-align: right;"&gt;500 &lt;/td&gt;
 &lt;td&gt;Computer &amp;amp; monitor, 1 hour&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Dogecoin&lt;/td&gt;
 &lt;td&gt;DOGE&lt;/td&gt;
-&lt;td align="right"&gt;120 &lt;/td&gt;
+&lt;td style="text-align: right;"&gt;120 &lt;/td&gt;
 &lt;td&gt;Humidifier, 1 hour&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Ripple&lt;/td&gt;
 &lt;td&gt;XRP&lt;/td&gt;
-&lt;td align="right"&gt;79 &lt;/td&gt;
+&lt;td style="text-align: right;"&gt;79 &lt;/td&gt;
 &lt;td&gt;Amazon echo telling 2 jokes&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Visa&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td align="right"&gt;1.5 &lt;/td&gt;
+&lt;td style="text-align: right;"&gt;1.5 &lt;/td&gt;
 &lt;td&gt;LED light bulb for 9 minutes&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Nano&lt;/td&gt;
 &lt;td&gt;NANO&lt;/td&gt;
-&lt;td align="right"&gt;0.1 &lt;/td&gt;
+&lt;td style="text-align: right;"&gt;0.1 &lt;/td&gt;
 &lt;td&gt;LED light bulb for 30 seconds&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -191,7 +191,7 @@ white paper refers to that future hypothetical efficiency?&lt;/p&gt;
 become more efficient in the future too (e.g. Bitcoin is in the process
 of deploying its lightning network, which will reduce per transaction
 energy use.)  So I think it's fair to leave the above figures as they are,
-as a snapshot of current reality.&lt;/p&gt;</description><category>cryptocurrency</category><category>environment</category><category>til</category><guid>https://www.tartley.com/posts/energy-use-per-transaction-for-cryptocurrencies-vs-visa/</guid><pubDate>Thu, 13 May 2021 21:09:33 GMT</pubDate></item><item><title>Download audio from YouTube</title><link>https://www.tartley.com/posts/download-audio-from-youtube/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;For the sort of weirdos who still host their own music files, but aren't
+as a snapshot of current reality.&lt;/p&gt;</description><category>cryptocurrency</category><category>environment</category><category>til</category><guid>https://tartley.com/posts/energy-use-per-transaction-for-cryptocurrencies-vs-visa/</guid><pubDate>Thu, 13 May 2021 21:09:33 GMT</pubDate></item><item><title>Download audio from YouTube</title><link>https://tartley.com/posts/download-audio-from-youtube/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;For the sort of weirdos who still host their own music files, but aren't
 preciously audiophile about it. Aaaaand also I'm wording this with the
 assumption you're a Linux, command-line and Python nerd.&lt;/p&gt;
 &lt;p&gt;Sometimes it's a video which is explicitly Creative Commons. Other times, it's
@@ -204,24 +204,24 @@ you or your child has grown to love from obsessive movie re-watches.&lt;/p&gt;
 &lt;h3&gt;One-off setup:&lt;/h3&gt;
 &lt;p&gt;Install &lt;a href="https://ffmpeg.org/"&gt;&lt;em&gt;ffmpeg&lt;/em&gt;&lt;/a&gt;, a venerable open-source command-line
 video/audio conversion tool.&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo apt install ffmpeg
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;ffmpeg
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Next, install &lt;a href="https://pypa.github.io/pipx/"&gt;&lt;em&gt;pipx&lt;/em&gt;&lt;/a&gt;, a tool to install
 commmand-line tools that are distributed as Python packages:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;python3 -m pip install --user pipx
-python3 -m pipx ensurepath
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;pipx
+python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pipx&lt;span class="w"&gt; &lt;/span&gt;ensurepath
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Finally, use pipx to install the &lt;a href="https://youtube-dl.org/"&gt;&lt;em&gt;youtube-dl&lt;/em&gt;&lt;/a&gt;, an
 oft-sued but never vanquished tool to download YouTube videos. (We're using
 the Python package because the apt package is too old to work):&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pipx install youtube-dl
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pipx&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;youtube-dl
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;Goal fulfillment&lt;/h3&gt;
 &lt;p&gt;Here, download your precious audio:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl -x --audio-format&lt;span class="o"&gt;=&lt;/span&gt;best URL
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;-x&lt;span class="w"&gt; &lt;/span&gt;--audio-format&lt;span class="o"&gt;=&lt;/span&gt;best&lt;span class="w"&gt; &lt;/span&gt;URL
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where:&lt;/p&gt;
@@ -241,7 +241,7 @@ the Python package because the apt package is too old to work):&lt;/p&gt;
 &lt;p&gt;But mp3 works well enough for &lt;a href="https://www.youtube.com/watch?v=VSJWvzLuGz8"&gt;my&lt;/a&gt;
 &lt;a href="https://www.youtube.com/watch?v=ENVIoR2f-Qgh"&gt;needs&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Alternatively, for playlists:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl -x --audio-format&lt;span class="o"&gt;=&lt;/span&gt;best --yes-playlist -i URL
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;-x&lt;span class="w"&gt; &lt;/span&gt;--audio-format&lt;span class="o"&gt;=&lt;/span&gt;best&lt;span class="w"&gt; &lt;/span&gt;--yes-playlist&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;URL
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where:&lt;/p&gt;
@@ -252,17 +252,17 @@ the Python package because the apt package is too old to work):&lt;/p&gt;
   thing.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;My previous inferior way&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This method is worse because it downloads the whole video file before
-extracting audio locally, and the download gets throttled by YouTube in some
-way, which of late is very slow indeed, i.e. substantially slower than watching
-the video.&lt;/p&gt;
+&lt;p&gt;This method is worse because it downloads the whole video file before
+extracting audio locally, and the download gets throttled by YouTube in
+some way, which of late is very slow indeed, i.e. substantially slower
+than watching the video.&lt;/p&gt;
 &lt;p&gt;Download the video from YouTube:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl URL
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;URL
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This results in a webm file. I have no idea what that is, and am relieved
 to discover that converting it into an mp3 requires just:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;MyVideoFile&lt;span class="w"&gt; &lt;/span&gt;-vn&lt;span class="w"&gt; &lt;/span&gt;MyAudioFile.mp3
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where &lt;code&gt;-vn&lt;/code&gt; disables video in the output.&lt;/p&gt;
@@ -275,7 +275,7 @@ to discover that converting it into an mp3 requires just:&lt;/p&gt;
   and popular.&lt;/li&gt;
 &lt;li&gt;2022: Added "Goal fulfillment" section, initially called "The Best Way", and
   deprecated the previous method under "My previous inferior way".&lt;/li&gt;
-&lt;/ul&gt;</description><category>command-line</category><category>linux</category><category>music</category><category>til</category><category>youtube</category><guid>https://www.tartley.com/posts/download-audio-from-youtube/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>Git Annotated Tags</title><link>https://www.tartley.com/posts/git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
+&lt;/ul&gt;</description><category>command-line</category><category>linux</category><category>music</category><category>til</category><category>youtube</category><guid>https://tartley.com/posts/download-audio-from-youtube/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>Git Annotated Tags</title><link>https://tartley.com/posts/git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
 &lt;code&gt;git tag TAGNAME&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Today I learned about &lt;em&gt;annotated&lt;/em&gt; tags, created with &lt;code&gt;git tag -a -m "MESSAGE"
 TAGNAME&lt;/code&gt;. If you don't specify &lt;code&gt;-m MESSAGE&lt;/code&gt;, git annoyingly prompts you for
@@ -299,10 +299,10 @@ of the commit being pushed, so that no unreachable tags are created on origin.&l
 &lt;li&gt;Use annotated tags to share state with other developers.&lt;/li&gt;
 &lt;li&gt;To share annotated tags, either push them directly, with &lt;code&gt;git push TAGNAME&lt;/code&gt;,
    or use &lt;code&gt;git push --follow-tags&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;</description><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>‰ is per mille</title><link>https://www.tartley.com/posts/per-mille/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;‰ or &lt;em&gt;'per mille'&lt;/em&gt; means parts per thousand.&lt;/p&gt;
+&lt;/ol&gt;</description><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://tartley.com/posts/git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>‰ is per mille</title><link>https://tartley.com/posts/per-mille/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;‰ or &lt;em&gt;'per mille'&lt;/em&gt; means parts per thousand.&lt;/p&gt;
 &lt;p&gt;I wasn't aware of it until today when I idly Googled "permil", my imagined
 variation on "percent", to find that this is one of the many spellings of
 a real thing. Rarely used in English, but more common in other European
 languages.&lt;/p&gt;
 &lt;p&gt;Now that I see the symbol, I remember seeing it as a child, on an old
-typewriter that my Grandfather used. What's old is new.&lt;/p&gt;</description><category>til</category><guid>https://www.tartley.com/posts/per-mille/</guid><pubDate>Sat, 17 Oct 2020 05:25:45 GMT</pubDate></item></channel></rss>
+typewriter that my Grandfather used. What's old is new.&lt;/p&gt;</description><category>til</category><guid>https://tartley.com/posts/per-mille/</guid><pubDate>Sat, 17 Oct 2020 05:25:45 GMT</pubDate></item></channel></rss>

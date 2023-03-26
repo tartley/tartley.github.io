@@ -5,17 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Launch Gitk displaying all branches | tartley.com</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://www.tartley.com/posts/launch-gitk-displaying-all-extant-branches/">
+<link rel="canonical" href="https://tartley.com/posts/launch-gitk-displaying-all-extant-branches/">
 <link rel="icon" href="../../welcome.gif" sizes="16x16">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
 <link rel="prev" href="../go-to-definition-in-vim-for-python-using-ctags-on-windows/" title="'Go to Definition' in Vim for Python using Ctags, Done Right" type="text/html">
 <link rel="next" href="../your-python-our-servers-what-could-possibly-go-wrong/" title="Your Python, Our Servers : What could possibly go wrong?" type="text/html">
 <meta property="og:site_name" content="tartley.com">
 <meta property="og:title" content="Launch Gitk displaying all branches">
-<meta property="og:url" content="https://www.tartley.com/posts/launch-gitk-displaying-all-extant-branches/">
+<meta property="og:url" content="https://tartley.com/posts/launch-gitk-displaying-all-extant-branches/">
 <meta property="og:description" content="Update: All of the below is made totally redundant by simply using
 gitk --all. Thanks Russel!
 
@@ -42,7 +41,7 @@ other branches, you must name them on">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.tartley.com/">
+            <a class="navbar-brand" href="https://tartley.com/">
 
                 <span id="blog-title">tartley.com</span>
             </a>
@@ -51,13 +50,16 @@ other branches, you must name them on">
         <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
-<a href="../../archive.html">Archive</a>
+<a href="../../archive.html">Posts</a>
                 </li>
 <li>
 <a href="../../categories/">Tags</a>
                 </li>
 <li>
-<a href="../../rss.xml">RSS feed</a>
+<a href="../../galleries/Drawings">Gallery</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS</a>
                 </li>
 <li>
 <a href="../../pages/about/">About</a>
@@ -66,7 +68,7 @@ other branches, you must name them on">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -81,6 +83,7 @@ other branches, you must name them on">
         <!--Body content-->
         <div class="row">
             
+            
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Launch Gitk displaying all branches</a></h1>
 
         <div class="metadata">
@@ -92,8 +95,10 @@ other branches, you must name them on">
             <time class="published dt-published" datetime="2010-12-31T12:25:31-06:00" itemprop="datePublished" title="2010-12-31 12:25">2010-12-31 12:25</time></a>
             </p>
             
+
         </div>
         
+
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <p><strong>Update:</strong> All of the below is made totally redundant by simply using
 <code>gitk --all</code>. Thanks Russel!</p>
@@ -101,21 +106,21 @@ other branches, you must name them on">
 <p>When I launch Gitk, it just displays the current branch. To display
 other branches, you must name them on the command line. To display all
 existing branches, you need to find out all the branch names:</p>
-<div class="code"><pre class="code literal-block">$ git branch
-  create-sql-dev
-  formula-rewrite
-* master
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>git<span class="w"> </span>branch
+<span class="w">  </span>create-sql-dev
+<span class="w">  </span>formula-rewrite
+*<span class="w"> </span>master
 </pre></div>
 
 <p>Then laboriously type them in to the gitk command line:</p>
-<div class="code"><pre class="code literal-block">$ gitk create-sql-dev formula-rewrite master
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>gitk<span class="w"> </span>create-sql-dev<span class="w"> </span>formula-rewrite<span class="w"> </span>master
 </pre></div>
 
 <p>Alternatively, save this Bash snippet in a script on your PATH. I call
 mine gitka, for 'all branches':</p>
 <div class="code"><pre class="code literal-block"><span class="ch">#!/usr/bin/bash</span>
 <span class="c1"># run gitk, displaying all existing branches</span>
-<span class="k">for</span> b <span class="k">in</span> <span class="s2">"`git branch`"</span><span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$b</span><span class="s2">"</span><span class="p">;</span> <span class="k">done</span> <span class="p">|</span> tr -d <span class="s2">"*"</span> <span class="p">|</span> xargs gitk
+<span class="k">for</span><span class="w"> </span>b<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"`git branch`"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"</span><span class="nv">$b</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">done</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-d<span class="w"> </span><span class="s2">"*"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>gitk
 </pre></div>
 
 <p><img alt="Gitk displaying all branches, not just the current ('master' in bold)" src="../../files/2010/12/gitk-all-branches.png" title="gitk-all-branches"></p>
@@ -146,6 +151,7 @@ have had to type out the full 'gitka.sh'.</p>
         <footer id="footer"></footer>
 </div>
 </div>
+
 
             <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");

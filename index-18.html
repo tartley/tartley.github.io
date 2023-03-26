@@ -6,10 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>tartley.com (old posts, page 18) | tartley.com</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link href="assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
-<link rel="canonical" href="https://www.tartley.com/index-18.html">
+<link rel="canonical" href="https://tartley.com/index-18.html">
 <link rel="icon" href="welcome.gif" sizes="16x16">
 <link rel="prev" href="index-19.html" type="text/html">
 <link rel="next" href="index-17.html" type="text/html">
@@ -29,7 +28,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.tartley.com/">
+            <a class="navbar-brand" href="https://tartley.com/">
 
                 <span id="blog-title">tartley.com</span>
             </a>
@@ -38,13 +37,16 @@
         <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
             <ul class="nav navbar-nav">
 <li>
-<a href="archive.html">Archive</a>
+<a href="archive.html">Posts</a>
                 </li>
 <li>
 <a href="categories/">Tags</a>
                 </li>
 <li>
-<a href="rss.xml">RSS feed</a>
+<a href="galleries/Drawings">Gallery</a>
+                </li>
+<li>
+<a href="rss.xml">RSS</a>
                 </li>
 <li>
 <a href="pages/about/">About</a>
@@ -53,7 +55,7 @@
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -68,7 +70,11 @@
         <!--Body content-->
         <div class="row">
             
+            
+
     
+
+
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
     <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/colorama-simple-cross-platform-python-api-for-colored-terminal-text/" class="u-url">colorama: Simple cross-platform Python API for colored terminal text</a></h1>
@@ -341,13 +347,13 @@ acceptance test above, using the DOS command-line:</p>
 <span class="c">F</span>
 <span class="c">======================================================================</span>
 <span class="c">FAIL: test_add_address (__main__</span><span class="nt">.</span><span class="c">AT001_AddItems)</span>
-<span class="nb">----------------------------------------------------------------------</span><span class="c"></span>
+<span class="nb">----------------------------------------------------------------------</span>
 <span class="c">Traceback (most recent call last):</span>
 <span class="c">  File "AT001_AddItems</span><span class="nt">.</span><span class="c">py"</span><span class="nt">,</span><span class="c"> line 11</span><span class="nt">,</span><span class="c"> in test_add_address</span>
 <span class="c">    self</span><span class="nt">.</span><span class="c">fail("test not finished")</span>
 <span class="c">AssertionError: test not finished</span>
 
-<span class="nb">----------------------------------------------------------------------</span><span class="c"></span>
+<span class="nb">----------------------------------------------------------------------</span>
 <span class="c">Ran 1 test in 0</span><span class="nt">.</span><span class="c">141s</span>
 
 <span class="c">FAILED (failures=1)</span>
@@ -441,37 +447,37 @@ of the application. During startup, it creates and shows an instance of
 the main form.</p>
 <div class="code"><pre class="code literal-block"><span class="c1">// C# scaffolding for the WizBang application.</span>
 <span class="c1">// Exposes public functions and GUI forms, for use by tests.</span>
-<span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
-<span class="k">using</span><span class="w"> </span><span class="nn">System.Threading</span><span class="p">;</span><span class="w"></span>
-<span class="k">using</span><span class="w"> </span><span class="nn">System.Windows.Forms</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Threading</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Windows.Forms</span><span class="p">;</span>
 
-<span class="k">namespace</span><span class="w"> </span><span class="nn">WizBang</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">AllForms</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">MainForm</span><span class="w"> </span><span class="n">mainForm</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">AddItemForm</span><span class="w"> </span><span class="n">addItemForm</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">WizBang</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">AllForms</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">MainForm</span><span class="w"> </span><span class="n">mainForm</span><span class="p">;</span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">AddItemForm</span><span class="w"> </span><span class="n">addItemForm</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="n">ManualResetEvent</span><span class="w"> </span><span class="n">eventloopReady</span><span class="w"> </span><span class="p">=</span><span class="w"></span>
-<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="nf">ManualResetEvent</span><span class="p">(</span><span class="k">false</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="n">ManualResetEvent</span><span class="w"> </span><span class="n">eventloopReady</span><span class="w"> </span><span class="o">=</span>
+<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="nf">ManualResetEvent</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
 
-<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">AllForms</span><span class="p">.</span><span class="n">mainForm</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MainForm</span><span class="p">();</span><span class="w"></span>
-<span class="w">            </span><span class="n">AllForms</span><span class="p">.</span><span class="n">mainForm</span><span class="p">.</span><span class="n">Show</span><span class="p">();</span><span class="w"></span>
-<span class="w">            </span><span class="n">eventloopReady</span><span class="p">.</span><span class="n">Set</span><span class="p">();</span><span class="w"></span>
-<span class="w">            </span><span class="n">Application</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">AllForms</span><span class="p">.</span><span class="n">mainForm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MainForm</span><span class="p">();</span>
+<span class="w">            </span><span class="n">AllForms</span><span class="p">.</span><span class="n">mainForm</span><span class="p">.</span><span class="n">Show</span><span class="p">();</span>
+<span class="w">            </span><span class="n">eventloopReady</span><span class="p">.</span><span class="n">Set</span><span class="p">();</span>
+<span class="w">            </span><span class="n">Application</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Stop</span><span class="p">()</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">Application</span><span class="p">.</span><span class="n">Exit</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Stop</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Application</span><span class="p">.</span><span class="n">Exit</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 <p><em>Program.cs</em> and its respective forms can be compiled to a .NET
@@ -501,10 +507,10 @@ which closes all our forms and ends their event loops.</p>
 when quitting, after any user confirmations have happened. The following
 handler on the main form's <em>Closed</em> event ensures this:</p>
 <div class="code"><pre class="code literal-block"><span class="c1">// C# event hander for the main form of the WizBang application</span>
-<span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MainForm_Closed</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">Program</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MainForm_Closed</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Program</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span>
+<span class="p">}</span>
 </pre></div>
 
 <h3>Invoking the SUT on a New Thread</h3>
@@ -560,7 +566,7 @@ library we use.</p>
 <span class="kn">from</span> <span class="nn">WizBang</span> <span class="kn">import</span> <span class="n">Program</span>
 
 <span class="k">class</span> <span class="nc">AcceptanceTest</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="sd">"""</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Starts up the program under test (PUT) on a new thread at the start</span>
 <span class="sd">    of each test, and shut it down again after each test has run</span>
 <span class="sd">    """</span>
@@ -822,12 +828,12 @@ time to create them - after the acceptance test, but before the
 implimentation. Once they are done, the handler to make them and the
 acceptance test both pass looks like this:</p>
 <div class="code"><pre class="code literal-block"><span class="c1">// C# click handler for the AddItem button on WizBang's main form</span>
-<span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">AddButton_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">AllForms</span><span class="p">.</span><span class="n">addItemForm</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">AllForms</span><span class="p">.</span><span class="n">addItemForm</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AddItemForm</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">AllForms</span><span class="p">.</span><span class="n">addItemForm</span><span class="p">.</span><span class="n">Show</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">AddButton_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">AllForms</span><span class="p">.</span><span class="n">addItemForm</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
+<span class="w">        </span><span class="n">AllForms</span><span class="p">.</span><span class="n">addItemForm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AddItemForm</span><span class="p">();</span>
+<span class="w">    </span><span class="n">AllForms</span><span class="p">.</span><span class="n">addItemForm</span><span class="p">.</span><span class="n">Show</span><span class="p">();</span>
+<span class="p">}</span>
 </pre></div>
 
 <p>In a real application, this handler would need to be a little more
@@ -880,10 +886,10 @@ which our test has previously been able to obliviously skip. We would
 prefer that our user didn't have to do this either, so we add an
 <code>Activated</code> handler on the <code>AddItemForm</code>:</p>
 <div class="code"><pre class="code literal-block"><span class="c1">// C# handler for the add item form's Activated event</span>
-<span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">AddItemForm_Activated</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">addItem</span><span class="p">.</span><span class="n">Focus</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">AddItemForm_Activated</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">addItem</span><span class="p">.</span><span class="n">Focus</span><span class="p">();</span>
+<span class="p">}</span>
 </pre></div>
 
 <p>This makes the acceptance test pass. Implementing the next test
@@ -906,13 +912,13 @@ requirement is straightforward:</p>
 In order to make this pass, we need a click handler for the OK button on
 the <em>add item</em> form:</p>
 <div class="code"><pre class="code literal-block"><span class="c1">// C# handler for add item form's ok button</span>
-<span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">okButton_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">ListBox</span><span class="w"> </span><span class="n">wizList</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">AllForms</span><span class="p">.</span><span class="n">mainForm</span><span class="p">.</span><span class="n">WizList</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">wizList</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">addItem</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">wizList</span><span class="p">.</span><span class="n">SelectedIndex</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">wizList</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">okButton_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">ListBox</span><span class="w"> </span><span class="n">wizList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AllForms</span><span class="p">.</span><span class="n">mainForm</span><span class="p">.</span><span class="n">WizList</span><span class="p">;</span>
+<span class="w">    </span><span class="n">wizList</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">addItem</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
+<span class="w">    </span><span class="n">wizList</span><span class="p">.</span><span class="n">SelectedIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wizList</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="p">}</span>
 </pre></div>
 
 <p>Finally, the test closes down the application and ends:</p>
@@ -930,10 +936,10 @@ will fail. Instead, we read this property directly.</p>
 <p>To make this pass, we add a simple button click hander to the main
 form's <em>Close</em> button:</p>
 <div class="code"><pre class="code literal-block"><span class="c1">// C# handler for click event on main form's close button</span>
-<span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">CloseButton_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">CloseButton_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="p">}</span>
 </pre></div>
 
 <h3>Simulating Mouse and Keyboard Events</h3>
@@ -965,19 +971,19 @@ win32 function <code>SendInput()</code>, from the Windows user32.dll. Calling wi
 functions from IronPython like this requires creating a C# assembly, in
 which we expose <code>SendInput()</code>, and more than a dozen similar functions,
 by declaring them as follows:</p>
-<div class="code"><pre class="code literal-block"><span class="k">using</span><span class="w"> </span><span class="nn">System.Runtime.InteropServices</span><span class="p">;</span><span class="w"></span>
+<div class="code"><pre class="code literal-block"><span class="k">using</span><span class="w"> </span><span class="nn">System.Runtime.InteropServices</span><span class="p">;</span>
 
-<span class="k">namespace</span><span class="w"> </span><span class="nn">UnmanagedCode</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">UnmanagedCode</span>
+<span class="p">{</span>
 <span class="w">    </span><span class="c1">// extensive type declarations for type 'Input' go here</span>
 
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">User32</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="na">[DllImport("user32.dll", CharSet = CharSet.Auto)]</span><span class="w"></span>
-<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">SendInput</span><span class="p">(</span><span class="w"></span>
-<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">nInputs</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="n">Input</span><span class="w"> </span><span class="n">pInputs</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cbSize</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">User32</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="na">[DllImport("user32.dll", CharSet = CharSet.Auto)]</span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">SendInput</span><span class="p">(</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">nInputs</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="n">Input</span><span class="w"> </span><span class="n">pInputs</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cbSize</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 <p>It turns out that populating the large <code>Input</code> data structure to be
@@ -1386,11 +1392,11 @@ now be invoked by typing 'toolname', just like on other platforms, as
 opposed to 'toolname.py' or even 'python toolname.py'. So I wrap my
 Python script 'toolname.py' with a new file, 'toolname.bat', living in
 the same directory:</p>
-<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span><span class="w"></span>
-<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span><span class="w"></span>
+<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span>
+<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span>
 
-<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span><span class="w"></span>
-<span class="n">set</span><span class="w"> </span><span class="n">THIS</span><span class="o">=</span><span class="n">THAT</span><span class="w"></span>
+<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span>
+<span class="n">set</span><span class="w"> </span><span class="n">THIS</span><span class="o">=</span><span class="n">THAT</span>
 </pre></div>
 
 <p>The %\~dp0 and %\~n0 gobbledygook is a batch file way of referencing the
@@ -1401,11 +1407,11 @@ depend on what goes on inside toolname.py. So I have that Python write a
 new batch file to the temp directory, containing all the 'set' commands
 which will replace the hardcoded 'set THIS=THAT' in the above script.
 Then we call that new temporary bat file from here:</p>
-<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span><span class="w"></span>
-<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span><span class="w"></span>
+<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span>
+<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span>
 
-<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span><span class="w"></span>
-<span class="n">call</span><span class="w"> </span><span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span><span class="w"></span>
+<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span>
+<span class="n">call</span><span class="w"> </span><span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span>
 </pre></div>
 
 <p>Which is good enough. Presumably it will barf all over the place if run
@@ -1416,14 +1422,14 @@ command at the end is always successful.</p>
 <p>One solution I've seen used is to remember the exit value from
 toolname.py, and then use the DOS exit command to propagate this value
 out to our caller:</p>
-<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span><span class="w"></span>
-<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span><span class="w"></span>
-<span class="n">set</span><span class="w"> </span><span class="n">EXITVAL</span><span class="o">=%</span><span class="n">ERRORLEVEL</span><span class="o">%</span><span class="w"></span>
+<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span>
+<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span>
+<span class="n">set</span><span class="w"> </span><span class="n">EXITVAL</span><span class="o">=%</span><span class="n">ERRORLEVEL</span><span class="o">%</span>
 
-<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span><span class="w"></span>
-<span class="n">call</span><span class="w"> </span><span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span><span class="w"></span>
+<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span>
+<span class="n">call</span><span class="w"> </span><span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span>
 
-<span class="n">exit</span><span class="w"> </span><span class="o">%</span><span class="n">EXITVAL</span><span class="o">%</span><span class="w"></span>
+<span class="n">exit</span><span class="w"> </span><span class="o">%</span><span class="n">EXITVAL</span><span class="o">%</span>
 </pre></div>
 
 <p>The problem with this is that 'exit' doesn't do what you think it does.
@@ -1462,6 +1468,7 @@ wrapping DOS script. [Short bow. Applause. Roses. etc.]</p>
     </div>
     </article>
 </div>
+
         <nav class="postindexpager"><ul class="pager">
 <li class="previous">
                 <a href="index-19.html" rel="prev">Newer posts</a>
@@ -1476,6 +1483,7 @@ wrapping DOS script. [Short bow. Applause. Roses. etc.]</p>
         <footer id="footer"></footer>
 </div>
 </div>
+
 
             <script src="assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");
