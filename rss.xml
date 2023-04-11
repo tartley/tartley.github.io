@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 26 Mar 2023 04:51:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Soma</title><link>https://tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 11 Apr 2023 17:31:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Astroneer Resource Graph</title><link>https://tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
+get each of the resources in &lt;a href="https://astroneer.space/"&gt;Astroneer&lt;/a&gt;. Click the WEBP
+thumbnail below to get the full glorious SVG, then you can '&lt;em&gt;find in page&lt;/em&gt;' on it.
+(&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>map</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
 &lt;img alt="Spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;Major spoilers ahead. It's seven years old at this point.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
@@ -1507,23 +1511,4 @@ and all.&lt;/p&gt;
 like this sooo much, and can see so many things about that are wonderful, but
 for some reason I just couldn't get in the mood. The problem is indubitably me,
 not you.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>fantasy</category><category>fiction</category><category>media</category><category>mythology</category><category>novel</category><category>science-fiction</category><guid>https://tartley.com/posts/the-witches-heart/</guid><pubDate>Sun, 20 Mar 2022 03:43:53 GMT</pubDate></item><item><title>Circe</title><link>https://tartley.com/posts/circe/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Circe cover" src="https://tartley.com/files/2022/circe-cover.webp"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Madeline Miller, 2018.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Recommended by The Suze, after reading it for one of her book clubs,
-and I absolutely loved it.&lt;/p&gt;
-&lt;p&gt;Tells the life story of the mythical Circe of the ancient Greek pantheon.
-Daughter of Helios, mightiest of the Titans, Circe is driven from her family by
-their capricious cruelty. She puts her meagre supernatural talents to work in
-service of witchcraft, amongst mortals. Along the way she meets many well-known
-mythological characters, such as Odysseus, and the Cretean Minotaur.&lt;/p&gt;
-&lt;p&gt;It was the writing style that captivated me. A timeless, elegant style uses
-powerful turns of phrase to spin a tale of drama and high passions, soaked
-in the psychological resonances so typical of Greek mythology.
-This style, along with the setting, reminded me powerfully of another favourite
-couple of novels of recent years, Mary Renault's absolutely fabulous &lt;em&gt;The King
-Must Die&lt;/em&gt; and &lt;em&gt;The Bull From the Sea&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Circe is my favorite book of the year so far, beating out even the marvellous
-&lt;em&gt;&lt;a href="https://tartley.com/posts/klara-and-the-sun"&gt;Klara and the Sun&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>fantasy</category><category>fiction</category><category>media</category><category>mythology</category><category>novel</category><category>science-fiction</category><guid>https://tartley.com/posts/circe/</guid><pubDate>Sun, 20 Mar 2022 03:14:53 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>fantasy</category><category>fiction</category><category>media</category><category>mythology</category><category>novel</category><category>science-fiction</category><guid>https://tartley.com/posts/the-witches-heart/</guid><pubDate>Sun, 20 Mar 2022 03:43:53 GMT</pubDate></item></channel></rss>

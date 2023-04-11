@@ -7,11 +7,11 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://tartley.com/</loc>
-  <lastmod>2023-03-23T19:05:00Z</lastmod>
+  <lastmod>2023-04-11T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://tartley.com/archive.html</loc>
-  <lastmod>2023-03-28T05:49:00Z</lastmod>
+  <lastmod>2023-04-11T17:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://tartley.com/categories/</loc>
@@ -551,7 +551,11 @@
  </url>
  <url>
   <loc>https://tartley.com/index-26.html</loc>
-  <lastmod>2023-03-28T05:49:00Z</lastmod>
+  <lastmod>2023-04-11T15:06:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://tartley.com/index-27.html</loc>
+  <lastmod>2023-04-11T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://tartley.com/index-3.html</loc>
@@ -652,6 +656,10 @@
  <url>
   <loc>https://tartley.com/posts/and-e-keys-in-windows-on-a-us-laptop-keyboard-done-right/</loc>
   <lastmod>2023-03-23T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://tartley.com/posts/astroneer-resource-graph/</loc>
+  <lastmod>2023-04-11T15:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://tartley.com/posts/automate-gnome-keybindings/</loc>

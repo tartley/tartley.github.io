@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about videogame)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/videogame.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 26 Mar 2023 04:51:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Soma</title><link>https://tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about videogame)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/videogame.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 11 Apr 2023 17:31:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Astroneer Resource Graph</title><link>https://tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
+get each of the resources in &lt;a href="https://astroneer.space/"&gt;Astroneer&lt;/a&gt;. Click the WEBP
+thumbnail below to get the full glorious SVG, then you can '&lt;em&gt;find in page&lt;/em&gt;' on it.
+(&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>map</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
 &lt;img alt="Spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;Major spoilers ahead. It's seven years old at this point.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
@@ -536,58 +540,4 @@ supplied the imagination, were made redundant.&lt;/p&gt;
 &lt;p&gt;It wasn't all doom and gloom, however (no pun intended.) In the midst of
 the impending '80s game boom, there were plenty of gems, once one
 filtered through all the dross. I've found this write-up most enjoyable,
-so maybe I'll write some more about that next week...&lt;/p&gt;</description><category>arcade</category><category>exhibits</category><category>geek</category><category>journal</category><category>videogame</category><guid>https://tartley.com/posts/game-on/</guid><pubDate>Mon, 28 May 2007 17:03:47 GMT</pubDate></item><item><title>Minerva: Metastasis</title><link>https://tartley.com/posts/minerva-metastasis/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;PC, Mod of Half-Life 2. By Adam Foster, 2006.&lt;/em&gt; &lt;img alt="spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Title screen" src="https://tartley.com/files/2007/04/metastasis_1_background0000.jpg"&gt;]&lt;/p&gt;
-&lt;p&gt;So the digital ink is barely dry on my assertions that videogames have
-problems telling a story, when what should fall into my lap but one of
-those rare and immaculate counter-examples to shut me right up.
-&lt;a href="http://www.hylobatidae.org/minerva/"&gt;Minerva: Metastatis&lt;/a&gt; is a
-bedroom-coded Half-Life 2 (HL2) mod that develops a storyline set within
-the HL2 universe, a new thread in the tale of the alien Combine's
-invasion of Earth. It has been three years in the making, and it's
-&lt;em&gt;bloody brilliant&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2007/04/metastasis_10004.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;The baseline HL2 gameplay is not changed one iota. Metastasis eschews
-the normal stock-in-trade of the mod scene, introducing no new enemies,
-no new weapons, no new assets such as bitmaps or sound effects. Instead,
-it envelops the player in an enthralling atmospheric experience, with a
-compelling backstory and superb player motivation, using a sublime
-combination of architecture, geometric composition, intensely creative
-injected textual fragments and well-considered use of music. This is
-backed up by the superbly crafted accompanying
-&lt;a href="http://www.hylobatidae.org/minerva/"&gt;website&lt;/a&gt;, that does its best to
-misinform and manipulate, drawing upon the best of various &lt;a href="http://en.wikipedia.org/wiki/Alternate_reality_game"&gt;alternate
-reality game&lt;/a&gt;
-influences.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Shoreline" src="https://tartley.com/files/2007/04/metastasis_10012.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;The game opens with your character dumped unceremoniously out of a
-helicopter by forces unknown, onto a beach under hostile fire. Running
-for cover is the only option. Once out of immediate danger, your plight
-is revealed in stages by a series of messages squirted onto your
-protective suit's HUD by some agency identifying themselves as
-&lt;a href="http://en.wikipedia.org/wiki/Minerva"&gt;Minerva&lt;/a&gt;, as in the Roman Goddess
-of crafts and wisdom, a.k.a, as
-&lt;a href="http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958"&gt;Stephenson&lt;/a&gt;
-would have it, the Goddess of technology. Minerva's communications are
-enigmatic and aloof. You are being used as her sentient reconnaissance
-tool, your experiences relayed back to her remote location, that she
-might investigate a small island, and its role in the Combine's
-occupation.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Down the rabbit hole" src="https://tartley.com/files/2007/04/metastasis_20021.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;The island plays host to the usual menagerie of HL2 critters, and
-visible at its centre is a mysterious plasma discharge, which Minerva
-prompts you to investigate. Clambering down, underground, you discover
-the crumbling remains of old WWII fortifications, now housing the
-twisted, unearthly technology of the Combine's invading forces. From
-there on, things only get stranger and larger by degrees, until the
-moment when even Minerva's cool begins to break, and you are left
-feeling very much like an ant in a nuclear power station, with little
-option but to continue exploring until the exterminators show up.&lt;/p&gt;
-&lt;p&gt;It's short and sweet - I played through the first and second parts in a
-single night. But it's managed with such finesse, extending the
-backstory of HL2 in bold new directions, building upon what was
-indubitably the greatest PC game of 2005, possibly of all time, with
-such verve and imagination that I have to agree with a Metastasis forum
-posting: It might just be (&lt;em&gt;whisper it&lt;/em&gt;) better than the source.&lt;/p&gt;
-&lt;p&gt;Rating: 10/10.
-Bring on the third and final instalment, due later this month...&lt;/p&gt;</description><category>completed</category><category>media</category><category>videogame</category><category>windows</category><guid>https://tartley.com/posts/minerva-metastasis/</guid><pubDate>Thu, 05 Apr 2007 05:24:11 GMT</pubDate></item></channel></rss>
+so maybe I'll write some more about that next week...&lt;/p&gt;</description><category>arcade</category><category>exhibits</category><category>geek</category><category>journal</category><category>videogame</category><guid>https://tartley.com/posts/game-on/</guid><pubDate>Mon, 28 May 2007 17:03:47 GMT</pubDate></item></channel></rss>

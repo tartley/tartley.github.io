@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about media)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/media.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 26 Mar 2023 04:51:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Soma</title><link>https://tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about media)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/media.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 11 Apr 2023 17:31:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Astroneer Resource Graph</title><link>https://tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
+get each of the resources in &lt;a href="https://astroneer.space/"&gt;Astroneer&lt;/a&gt;. Click the WEBP
+thumbnail below to get the full glorious SVG, then you can '&lt;em&gt;find in page&lt;/em&gt;' on it.
+(&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>map</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
 &lt;img alt="Spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;Major spoilers ahead. It's seven years old at this point.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
@@ -566,27 +570,4 @@ at all. Just a succession of edge-of-the-seat will-he-or-won't-he survive tense
 moments... Then: Yay, it worked, he did it! But &lt;em&gt;in space!&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Not even worth engaging the subjectivity-proof rating system for this one.&lt;/p&gt;
 &lt;p&gt;Rating: 2/10. I did finish it, but I wish I hadn't.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://tartley.com/posts/project-hail-mary/</guid><pubDate>Mon, 14 Feb 2022 02:07:47 GMT</pubDate></item><item><title>The Electric State</title><link>https://tartley.com/posts/the-electric-state/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: right"&gt;
-&lt;img alt="The Electric State cover" src="https://tartley.com/files/2022/the-electric-state-cover.webp"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Simon Stålenhag (2017)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;I listen to
-&lt;a href="https://damiengwalter.com/podcast/"&gt;a really fantastic science fiction podcast&lt;/a&gt;
-by Damien Walter, which is fascinatingly cerebral. Damien selected Stålenhag's
-work for his recent round-up of
-&lt;a href="https://damiengwalter.com/2021/12/03/the-21-most-significant-science-fiction-storytellers-of-the-21st-century-so-far/"&gt;the 21 most significant science fiction storytellers of the 21st century (so
-far)&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This is the same artist whose work inspired 2020's
-&lt;em&gt;&lt;a href="https://www.imdb.com/title/tt8741290/"&gt;Tales from the Loop&lt;/a&gt;&lt;/em&gt;,
-and Damien's selection spurred me to engage more fully than just browse around
-Stålenhag's images all over the web.&lt;/p&gt;
-&lt;p&gt;I wasn't disappointed. The word count is low enough to be considered a short,
-but the main event is the accompanying illustrations, which are downright
-startling in their contrasts of the mundane and the fantastic.&lt;/p&gt;
-&lt;p&gt;Charting the journey of a runaway teenager and her small yellow robot, through
-a ruined near-future American landscape, littered with the debris of a high
-tech consumerist society addicted to an all-encompassing virtual-reality
-system. As they approach the edge of the continent, the world outside the car
-window unravels at an ever faster pace, as if somewhere beyond the horizon, the
-hollow core of civilization has finally caved in.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>comic</category><category>fiction</category><category>media</category><category>science-fiction</category><guid>https://tartley.com/posts/the-electric-state/</guid><pubDate>Mon, 14 Feb 2022 01:32:45 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://tartley.com/posts/project-hail-mary/</guid><pubDate>Mon, 14 Feb 2022 02:07:47 GMT</pubDate></item></channel></rss>
