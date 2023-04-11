@@ -46,12 +46,12 @@ The aliens themselves weren't quite like any I've read before or since. The
 creepy sessile but sentient Grogs. The mysterious Outsiders, information
 brokers who are able to answer any question humanity has - if only we could
 afford the prices. The warlike, carnivorous Kzinti (picture a species of
-vicious feline Chewbaccas - surely the inspiration for Wing Commander's
-Kilrathi) forever attacking humanity before they were quite ready. You can't
-help but almost feel sorry for them. By the times of Ringworld, representatives
-such as Speaker to Animals (named for his shameful profession, interfacing with
-humans) are sufficiently adapted to working alongside humans to become
-formidable allies.
+vicious, vaguely feline Chewbaccas - surely the inspiration for Wing
+Commander's Kilrathi) forever attacking humanity before they were quite ready.
+You can't help but almost feel sorry for them. By the times of Ringworld,
+representatives such as Speaker to Animals (named for his shameful profession,
+interfacing with humans) are sufficiently adapted to working alongside humans
+to become formidable allies.
 
 Perhaps Niven's greatest alien race was The Pierson's Puppeteers - like an
 ostrich with two necks, each topped with a single eye and dexterous mouth,
@@ -67,13 +67,13 @@ The psychology is also exquisite. Herbivores and herd-beasts, the Puppeteers
 are inveterate cowards. No human has ever met a sane one - only their more
 unstable individuals would venture out alone to run the risks of space travel
 and meeting alien species. However, they are very intelligent, more so than
-humans, and industrious, and manipulative. It becomes clear over the course of
+humans, and industrious, and devious. It becomes clear over the course of
 the books that Puppeteers have selectively bred the Kzinti into constructive
 docility by engineering the many human-kzin wars, and their plans for everyone
-else are scarcely less devious.
+else are scarcely less manipulative.
 
 Finally, my personal favorite was always the Pak. As alien as could be, and yet
-they are us. On humanity's original homeworld, long before introduction to
+they are us. On humanity's original home-world, long before introduction to
 planet Earth, a symbiotic plant grows which young humans find uninteresting,
 but in middle-age they develop a compulsion to binge on it. It activates genes
 that provoke startling physiological and psychological changes, transforming
@@ -211,7 +211,6 @@ many that are more recent than these.
 | [Neutron Star](https://www.goodreads.com/book/show/100366.Neutron_Star) (1966)                       | 285 | 4 | 1,140 |
 | [The World of Ptavvs](https://www.goodreads.com/book/show/218463.The_World_of_Ptavvs) (1966)         | 188 | 4 |   752 |
 |                                                                               **totals** | **10,995** |   | **24,842** |
-
 
 ([Discussion](https://www.facebook.com/groups/324897304599197/permalink/1329010600854524 )
 on Damien Walter's *Science Fiction* Facebook group)
