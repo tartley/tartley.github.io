@@ -1,0 +1,273 @@
+# Astroneer resources
+
+# TODO: Separate diagram / spreadsheet to lookup printer/ingredients for:
+# - Backpack printer items
+# - Small printer items
+# - Medium printer items
+# - Large printer items
+# - Trade platform items
+# - Dynamite -> EXOChip;
+
+digraph astroneer {
+
+    graph [
+        rankdir=LR
+        compound=true
+        style=filled
+        label="Astroneer resources v1.0"
+        labelloc="t"
+        fontname="Verdana"
+        fontsize=30
+        fillcolor=grey90
+    ];
+    node [shape=box style=filled fontname="Verdana"];
+    edge [fontname="Verdana"];
+
+    # Planets
+    {
+        rank=same;
+        node [shape="plaintext" fillcolor=none margin=0];
+        OuterCore [shape=plaintext label="Outer core of\nall planets"];
+        Atrox [label=<
+            <table border="0" cellborder="0" cellspacing="0"><tr>
+                <td><b>Atrox</b><br/>Very hard<br/>Radiated<br/>Turgid</td>
+                <td height="56" width="56"><img src="/files/2023/astroneer/Atrox.png" scale="both"/></td>
+            </tr></table>
+        >];
+        Glacio [label=<
+            <table border="0" cellborder="0" cellspacing="0"><tr>
+                <td><b>Glacio</b><br/>Hard<br/>Tundra<br/>Wind</td>
+                <td height="56" width="56"><img src="/files/2023/astroneer/Glacio.png" scale="both"/></td>
+            </tr></table>
+        >];
+        Novus [label=<
+            <table border="0" cellborder="0" cellspacing="0"><tr>
+                <td><b>Novus</b><br/>Medium<br/>Exotic<br/>Sun, wind</td>
+                <td height="56" width="56"><img src="/files/2023/astroneer/Novus.png" scale="both"/></td>
+            </tr></table>
+        >];
+        Vesania [label=<
+            <table border="0" cellborder="0" cellspacing="0"><tr>
+                <td><b>Vesania</b><br/>Medium<br/>Exotic<br/>Wind</td>
+                <td height="56" width="56"><img src="/files/2023/astroneer/Vesania.png" scale="both"/></td>
+            </tr></table>
+        >];
+        Calidor [label=<
+            <table border="0" cellborder="0" cellspacing="0"><tr>
+                <td><b>Calidor</b><br/>Medium<br/>Arid<br/>Sun</td>
+                <td height="56" width="56"><img src="/files/2023/astroneer/Calidor.png" scale="both"/></td>
+            </tr></table>
+        >];
+        Sylva [label=<
+            <table border="0" cellborder="0" cellspacing="0"><tr>
+                <td><b>Sylva</b><br/>Easy<br/>Earth-like<br/>Sun, wind</td>
+                <td height="56" width="56"><img src="/files/2023/astroneer/Sylva.png" scale="both"/></td>
+            </tr></table>
+        >];
+        Desolo [label=<
+            <table border="0" cellborder="0" cellspacing="0"><tr>
+                <td><b>Desolo</b><br/>Easy<br/>Barren<br/>Sun</td>
+                <td height="56" width="56"><img src="/files/2023/astroneer/Desolo.png" scale="both"/></td>
+            </tr></table>
+        >];
+    }
+
+    # Atmospheric (condensed) resources
+    {
+        rank=same;
+        node [fillcolor=skyblue1];
+        Methane;
+        Sulfur;
+        Argon;
+        Hydrogen;
+        Nitrogen;
+        Helium;
+    }
+    # Planet -> Atmosphere
+    Atrox:e -> Methane:w; # 100%
+    Atrox -> Sulfur[style="dashed"]; # 75%
+    Atrox -> Nitrogen[style="dashed"]; # 50%
+    Atrox -> Helium[style="dotted"]; # 25%
+    Glacio -> Argon; # 100%
+    Novus -> Hydrogen[style="dotted"]; # 25%
+    Novus -> Methane[style="dashed"]; # 75%
+    Vesania -> Hydrogen; # 100%
+    Vesania -> Argon[style="dashed"]; # 50%
+    Vesania -> Nitrogen[style="dashed"]; # 50%
+    Calidor -> Hydrogen[style="dashed"]; # 50%
+    Calidor -> Sulfur; # 100%
+    Sylva -> Hydrogen[style="dashed"]; # 75%
+    Sylva -> Nitrogen; # 100%
+
+    # Natural (mined) resources
+    {
+        rank=same;
+        node [fillcolor=rosybrown2];
+        Sphalerite;
+        Astronium;
+        Lithium;
+        Titanite;
+        Graphite;
+        Ammonium;
+        Laterite;
+        Malachite;
+        Hematite;
+        Clay;
+        Wolframite;
+        Organic;
+        Compound;
+        Quartz;
+        Resin;
+    }
+    edge [style=bold color=rosybrown1 fontcolor=rosybrown1]; # primaries
+    Sylva -> Sphalerite;
+    Desolo -> Wolframite [xlabel="caves,\nmantle"];
+    Calidor -> Malachite;
+    Vesania -> Lithium;
+    Novus -> Hematite;
+    Glacio -> Titanite;
+    edge [style=solid color=rosybrown3 fontcolor=rosybrown3 arrowhead=empty]; # secondaries
+    Sylva -> Malachite:w;
+    Desolo -> Sphalerite [xlabel="mountains,\nouter core"];
+    Calidor -> Wolframite;
+    Vesania -> Titanite;
+    Novus -> Lithium;
+    Glacio -> Hematite:w;
+    edge [color=black arrowhead=normal fontcolor=black];
+    OuterCore -> Astronium;
+
+    TradePlatform [label=<
+      <table border="0" cellborder="0" cellspacing="0"><tr>
+        <td port="1"> </td>
+      </tr><tr>
+        <td> </td>
+      </tr><tr>
+        <td port="2">Trade<br/>Platform</td>
+      </tr><tr>
+        <td> </td>
+      </tr><tr>
+        <td port="3"> </td>
+      </tr></table>
+    >];
+    Modules [label="Modules\n(see table)" shape=plaintext fillcolor=none];
+    Scrap -> TradePlatform:1 [color=rosybrown3 label="xN" fontcolor=rosybrown3];
+    Astronium -> TradePlatform:2;
+    FaultFinder -> TradePlatform:3 [color=aquamarine4 label=xN fontcolor=aquamarine4];
+    TradeScrapOutput [fillcolor="rosybrown2" color=none label="All natural\nresources"];
+    TradeFaultFinderOutput [fillcolor=aquamarine3 color=none label="All composite\nresources"];
+    TradePlatform:1 -> TradeScrapOutput [color=rosybrown3 label=xM fontcolor=rosybrown3];
+    TradePlatform:2 -> Modules;
+    TradePlatform:3 -> TradeFaultFinderOutput [color=aquamarine4 label=xM fontcolor=aquamarine4];
+
+    # Refined (smelted) resources
+    {
+        rank=same;
+        node [fillcolor=wheat];
+        Glass;
+        Carbon;
+        Tungsten;
+        Ceramic;
+        Iron;
+        Copper;
+        Aluminum;
+        Titanium;
+        Zinc;
+    }
+    Quartz -> Glass;
+    Organic -> Carbon;
+    Wolframite -> Tungsten;
+    Clay -> Ceramic;
+    Hematite -> Iron;
+    Malachite -> Copper;
+    Laterite -> Aluminum;
+    Titanite -> Titanium;
+    Sphalerite -> Zinc;
+
+    # Compound (chemistry lab) resources
+    {
+        rank=same;
+        node [fillcolor=aquamarine3];
+        TitaniumAlloy [label="Titanium\nalloy"];
+        Graphene;
+        Diamond;
+        Hydrazine;
+        AluminumAlloy [label="Aluminum\nalloy"];
+        TungstenCarbide [label="Tungsten\ncarbide"];
+        NanocarbonAlloy [label="Nanocarbon\nalloy"];
+        Steel;
+        ExplosivePowder [label="Explosive\npowder"];
+        Plastic;
+        Rubber;
+        Silicone;
+    }
+    Resin -> Silicone;
+    Methane -> Silicone;
+    Resin -> Rubber;
+    Organic -> Rubber;
+    Compound -> Plastic;
+    Carbon -> Plastic;
+    Sulfur -> ExplosivePowder;
+    Carbon -> ExplosivePowder [label="x2" style=bold];
+    Carbon -> Steel;
+    Argon -> Steel;
+    Iron -> Steel;
+    Helium -> NanocarbonAlloy;
+    Carbon -> TungstenCarbide;
+    Tungsten -> TungstenCarbide;
+    Copper -> AluminumAlloy;
+    Aluminum -> AluminumAlloy;
+    Ammonium -> Hydrazine [label="x2" style=bold];
+    Hydrogen -> Hydrazine;
+    Graphite -> Graphene;
+    Titanium -> TitaniumAlloy;
+    Nitrogen -> TitaniumAlloy;
+    # compound to compound edges, route on right side via invisible extra nodes
+    node [style=invis shape=point height=0 width=0 margin=0 label=""];
+    edge [color=aquamarine4];
+    Hydrazine -> i1:n [arrowhead=none];
+    i1:s -> Graphene:e;
+    Steel -> i2:n [arrowhead=none];
+    i2:s -> NanocarbonAlloy;
+    Graphene -> i3:n [arrowhead=none label="x2" fontcolor=aquamarine4 style=bold];
+    i3:s -> Diamond [style=bold];
+    Graphene -> i4 [arrowhead=none];
+    i4 -> TitaniumAlloy;
+    TitaniumAlloy -> i5:s [arrowhead=none];
+    i5:n -> NanocarbonAlloy;
+    node [style=filled shape=box width=none height=none margin=0.1 label=none];
+
+    # Soil Centrifuge
+    edge [color=plum4 fontcolor=plum4];
+    node [fillcolor=lightgrey];
+    Soil [label="Soil"];
+    SoilCentrifuge [label="Soil\nCentrifuge" fillcolor=plum fontcolor=white color=white];
+    SoilCentrifuge -> Compound:w [label="x8"];
+    SoilCentrifuge -> Resin:w [label="x8"];
+    SoilCentrifuge -> Organic:w [label="x8"];
+    SoilCentrifuge -> Clay:w [label="x6"];
+    SoilCentrifuge -> Quartz:w [label="x4"];
+    SoilCentrifuge -> Graphite:w [label="x2"];
+    SoilCentrifuge -> Ammonium:w;
+    edge [color=black];
+    Soil -> SoilCentrifuge [label="x2" fontcolor=black style=bold];
+
+    # Headings
+    node [shape=plaintext fontcolor=white fontsize=16 margin=0.1];
+    Atmospheric [fillcolor=skyblue1 label="Atmospheric\n(condensed)\nresources"];
+    Natural [fillcolor=rosybrown2 label="Natural\n(mined)\nresources"];
+    Refined [fillcolor=wheat label="Refined\n(smelted)\nresources"];
+    Composite [fillcolor=aquamarine3 label="Composite\n(chemistry lab)\nresources"];
+
+    # Placement hints
+    node [style=invis color=lightgrey];
+    edge [style=invis color=lightgrey];
+    Version -> Atmospheric -> Natural -> Refined -> Composite;
+    Hydrazine -> i4;
+    # and one of:
+    # Hydrogen -> Ammonium; # Looks good but v. weird ammonium->hydrazine arrow.
+    # Ammonium -> Hydrogen; Sulfur -> Carbon; # 2 constraints?
+    Methane -> Resin; # Best of a bad bunch
+    # Argon -> Hematite; # Bad vertical edge confluence before natural resource column
+
+}
+
