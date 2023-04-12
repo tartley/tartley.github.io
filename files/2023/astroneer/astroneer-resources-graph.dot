@@ -1,12 +1,8 @@
 # Astroneer resources
 
-# TODO: Separate diagram / spreadsheet to lookup printer/ingredients for:
-# - Backpack printer items
-# - Small printer items
-# - Medium printer items
-# - Large printer items
-# - Trade platform items
-# - Dynamite -> EXOChip;
+# Changes:
+# v1.0.1 Tweak colors.
+# v1.0   Feature complete. Posted to Reddit.
 
 digraph astroneer {
 
@@ -14,7 +10,7 @@ digraph astroneer {
         rankdir=LR
         compound=true
         style=filled
-        label="Astroneer resources v1.0"
+        label="Astroneer resources v1.0.1"
         labelloc="t"
         fontname="Verdana"
         fontsize=30
@@ -31,43 +27,43 @@ digraph astroneer {
         Atrox [label=<
             <table border="0" cellborder="0" cellspacing="0"><tr>
                 <td><b>Atrox</b><br/>Very hard<br/>Radiated<br/>Turgid</td>
-                <td height="56" width="56"><img src="/files/2023/astroneer/Atrox.png" scale="both"/></td>
+                <td height="56" width="56"><img src="/files/2023/astroneer/images/Atrox.png" scale="both"/></td>
             </tr></table>
         >];
         Glacio [label=<
             <table border="0" cellborder="0" cellspacing="0"><tr>
                 <td><b>Glacio</b><br/>Hard<br/>Tundra<br/>Wind</td>
-                <td height="56" width="56"><img src="/files/2023/astroneer/Glacio.png" scale="both"/></td>
+                <td height="56" width="56"><img src="/files/2023/astroneer/images/Glacio.png" scale="both"/></td>
             </tr></table>
         >];
         Novus [label=<
             <table border="0" cellborder="0" cellspacing="0"><tr>
                 <td><b>Novus</b><br/>Medium<br/>Exotic<br/>Sun, wind</td>
-                <td height="56" width="56"><img src="/files/2023/astroneer/Novus.png" scale="both"/></td>
+                <td height="56" width="56"><img src="/files/2023/astroneer/images/Novus.png" scale="both"/></td>
             </tr></table>
         >];
         Vesania [label=<
             <table border="0" cellborder="0" cellspacing="0"><tr>
                 <td><b>Vesania</b><br/>Medium<br/>Exotic<br/>Wind</td>
-                <td height="56" width="56"><img src="/files/2023/astroneer/Vesania.png" scale="both"/></td>
+                <td height="56" width="56"><img src="/files/2023/astroneer/images/Vesania.png" scale="both"/></td>
             </tr></table>
         >];
         Calidor [label=<
             <table border="0" cellborder="0" cellspacing="0"><tr>
                 <td><b>Calidor</b><br/>Medium<br/>Arid<br/>Sun</td>
-                <td height="56" width="56"><img src="/files/2023/astroneer/Calidor.png" scale="both"/></td>
+                <td height="56" width="56"><img src="/files/2023/astroneer/images/Calidor.png" scale="both"/></td>
             </tr></table>
         >];
         Sylva [label=<
             <table border="0" cellborder="0" cellspacing="0"><tr>
                 <td><b>Sylva</b><br/>Easy<br/>Earth-like<br/>Sun, wind</td>
-                <td height="56" width="56"><img src="/files/2023/astroneer/Sylva.png" scale="both"/></td>
+                <td height="56" width="56"><img src="/files/2023/astroneer/images/Sylva.png" scale="both"/></td>
             </tr></table>
         >];
         Desolo [label=<
             <table border="0" cellborder="0" cellspacing="0"><tr>
                 <td><b>Desolo</b><br/>Easy<br/>Barren<br/>Sun</td>
-                <td height="56" width="56"><img src="/files/2023/astroneer/Desolo.png" scale="both"/></td>
+                <td height="56" width="56"><img src="/files/2023/astroneer/images/Desolo.png" scale="both"/></td>
             </tr></table>
         >];
     }
@@ -148,7 +144,7 @@ digraph astroneer {
       </tr><tr>
         <td port="3"> </td>
       </tr></table>
-    >];
+    > fillcolor=plum3 fontcolor=white color=none];
     Modules [label="Modules\n(see table)" shape=plaintext fillcolor=none];
     Scrap -> TradePlatform:1 [color=rosybrown3 label="xN" fontcolor=rosybrown3];
     Astronium -> TradePlatform:2;
@@ -162,7 +158,7 @@ digraph astroneer {
     # Refined (smelted) resources
     {
         rank=same;
-        node [fillcolor=wheat];
+        node [fillcolor=peachpuff];
         Glass;
         Carbon;
         Tungsten;
@@ -207,7 +203,7 @@ digraph astroneer {
     Compound -> Plastic;
     Carbon -> Plastic;
     Sulfur -> ExplosivePowder;
-    Carbon -> ExplosivePowder [label="x2" style=bold];
+    Carbon -> ExplosivePowder [xlabel="x2" style=bold];
     Carbon -> Steel;
     Argon -> Steel;
     Iron -> Steel;
@@ -216,7 +212,7 @@ digraph astroneer {
     Tungsten -> TungstenCarbide;
     Copper -> AluminumAlloy;
     Aluminum -> AluminumAlloy;
-    Ammonium -> Hydrazine [label="x2" style=bold];
+    Ammonium -> Hydrazine [xlabel="x2" style=bold];
     Hydrogen -> Hydrazine;
     Graphite -> Graphene;
     Titanium -> TitaniumAlloy;
@@ -228,7 +224,7 @@ digraph astroneer {
     i1:s -> Graphene:e;
     Steel -> i2:n [arrowhead=none];
     i2:s -> NanocarbonAlloy;
-    Graphene -> i3:n [arrowhead=none label="x2" fontcolor=aquamarine4 style=bold];
+    Graphene -> i3:n [arrowhead=none xlabel="x2" fontcolor=aquamarine4 style=bold];
     i3:s -> Diamond [style=bold];
     Graphene -> i4 [arrowhead=none];
     i4 -> TitaniumAlloy;
@@ -240,7 +236,7 @@ digraph astroneer {
     edge [color=plum4 fontcolor=plum4];
     node [fillcolor=lightgrey];
     Soil [label="Soil"];
-    SoilCentrifuge [label="Soil\nCentrifuge" fillcolor=plum fontcolor=white color=white];
+    SoilCentrifuge [label="Soil\nCentrifuge" fillcolor=plum3 fontcolor=white color=none];
     SoilCentrifuge -> Compound:w [label="x8"];
     SoilCentrifuge -> Resin:w [label="x8"];
     SoilCentrifuge -> Organic:w [label="x8"];
@@ -255,7 +251,7 @@ digraph astroneer {
     node [shape=plaintext fontcolor=white fontsize=16 margin=0.1];
     Atmospheric [fillcolor=skyblue1 label="Atmospheric\n(condensed)\nresources"];
     Natural [fillcolor=rosybrown2 label="Natural\n(mined)\nresources"];
-    Refined [fillcolor=wheat label="Refined\n(smelted)\nresources"];
+    Refined [fillcolor=peachpuff label="Refined\n(smelted)\nresources"];
     Composite [fillcolor=aquamarine3 label="Composite\n(chemistry lab)\nresources"];
 
     # Placement hints
