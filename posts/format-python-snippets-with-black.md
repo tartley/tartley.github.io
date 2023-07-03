@@ -43,4 +43,4 @@ So, I present a tiny Python3 wrapper, *enblacken*, which:
 * Passes the result to Black.
 * Reindents Black's output, by the same amount as the original unindent.
 
-See [enblacken on github](https://github.com/tartley/dotfiles/blob/master/other/bin/enblacken).
+See [enblacken on github](https://github.com/tartley/dotfiles/blob/main/bin/enblacken)
