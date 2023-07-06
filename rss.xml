@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 03 Jul 2023 16:23:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Astroneer Resource Graph</title><link>https://tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 06 Jul 2023 21:08:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makefiles that are self-documenting, and process all extant files.</title><link>https://tartley.com/posts/til-makefiles-that-are-self-documenting-and-process-all-extant-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;h3&gt;Self-documenting Makefiles&lt;/h3&gt;
+&lt;p&gt;A trick from years ago, but I copy it around between projects enough that it
+deserves calling out. Add a target:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;help&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## Show this help.&lt;/span&gt;
+&lt;span class="c"&gt;    @# Optionally add 'sort' before 'awk'&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;@grep&lt;span class="w"&gt; &lt;/span&gt;-E&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'^[a-zA-Z_\.%-]+:.*?## .*$$'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;MAKEFILE_LIST&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;awk&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'&lt;/span&gt;
+&lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;help&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Decorate other targets with a descriptive '##' comment, like "&lt;em&gt;Show this help&lt;/em&gt;"
+above. Now calling the 'help' target will summarize all the things the Makefile
+can do. eg:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ make help
+help       Show this help.
+setup      Install required system packages using 'apt install'.
+%.pdf      Generate given PDF from corresponding .tex file.
+all        Convert all .tex files to PDF.
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You might choose to make 'help' the first target in the Makefile, so that it
+gets triggered when the user runs &lt;code&gt;make&lt;/code&gt; without arguments.&lt;/p&gt;
+&lt;h3&gt;Process all extant files&lt;/h3&gt;
+&lt;p&gt;Make's canonical paradigm is that you tell it the name of the file to generate,
+and it uses the tree of dependencies specified in the Makefile to figure out
+how to build it. Typically you'll use automatic variables like "$&amp;lt;" to represent
+the wildcarded source filename:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;%.pdf&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;%.&lt;span class="n"&gt;tex&lt;/span&gt; &lt;span class="c"&gt;## Generate given PDF from corresponding .tex file.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;pdflatex&lt;span class="w"&gt; &lt;/span&gt;$&amp;lt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The pitfall is that when invoking this, you have to name all the PDF files you
+want to generate. If the names are a fixed part of your build, they can be
+embedded in the Makefile itself:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;one&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt; &lt;span class="n"&gt;two&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt; &lt;span class="n"&gt;three&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But if their names are dynamic, you have to specify them on the command line,
+which is a pain:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;one.pdf&lt;span class="w"&gt; &lt;/span&gt;two.pdf&lt;span class="w"&gt; &lt;/span&gt;three.pdf
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is easy enough when &lt;em&gt;re-&lt;/em&gt;generating all the PDFs that already exist:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;*.pdf
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;but is no help when you just have a bunch of .tex files and you just want Make
+to build all of them. This is going the opposite way to canonical make usage.
+We want to specify the existing source files (&lt;code&gt;*.tex&lt;/code&gt;, in this case), and have
+Make build the resulting products.&lt;/p&gt;
+&lt;p&gt;To do it, we need our Makefile to enumerate the existing source files:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;TEX_FILES&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;wildcard&lt;span class="w"&gt; &lt;/span&gt;*.tex&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Using the 'wildcard' function here behaves better than a bare wildcard
+expansion, e.g. it produces no output when there are no matches, rather than
+outputting the unmatched wildcard expression.&lt;/p&gt;
+&lt;p&gt;Then use a substitution to generate the list of .pdf filenames:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;all&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;TEX_FILES:%.tex&lt;span class="o"&gt;=&lt;/span&gt;%.pdf&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will generate one .pdf file for each extant .tex file, regardless of
+whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>command-line</category><category>make</category><category>til</category><guid>https://tartley.com/posts/til-makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>Astroneer Resource Graph</title><link>https://tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
 get each of the resources in &lt;a href="https://astroneer.space/"&gt;Astroneer&lt;/a&gt;. Click the WEBP
 thumbnail below to get the full glorious SVG, then you can '&lt;em&gt;find in page&lt;/em&gt;' on it.
 (&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
@@ -1495,20 +1556,4 @@ to read.&lt;/p&gt;
 Once again, I wanted to like this so much. I started reading it twice, spaced
 about 18 months apart. But each time, I just couldn't get into it, and
 abandoned it about 1/3 in. It is indubitably me, not you.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://tartley.com/posts/contact/</guid><pubDate>Sun, 20 Mar 2022 04:01:53 GMT</pubDate></item><item><title>The Witch's Heart</title><link>https://tartley.com/posts/the-witches-heart/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="The Witch's Heart cover" src="https://tartley.com/files/2022/the-witchs-heart-cover.webp"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Genevieve Gornichec, 2021.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Old Norse mythology only briefly mentions the witch
-&lt;a href="https://en.wikipedia.org/wiki/Angrbo%C3%B0a"&gt;Angrboða&lt;/a&gt;,
-as the mother of three "monsters", fathered by the trickster god, Loki. This
-book explores her life, explicitly acknowledging her erasure as a woman, and
-resolves it, providing her a powerful story, in which she survives men, gods,
-and all.&lt;/p&gt;
-&lt;p&gt;Another fantastic Suze recommendation. Loved it.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Also this month: &lt;em&gt;The Emperess of Salt and Fortune&lt;/em&gt; by Nghi Vo. I wanted to
-like this sooo much, and can see so many things about that are wonderful, but
-for some reason I just couldn't get in the mood. The problem is indubitably me,
-not you.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>fantasy</category><category>fiction</category><category>media</category><category>mythology</category><category>novel</category><category>science-fiction</category><guid>https://tartley.com/posts/the-witches-heart/</guid><pubDate>Sun, 20 Mar 2022 03:43:53 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://tartley.com/posts/contact/</guid><pubDate>Sun, 20 Mar 2022 04:01:53 GMT</pubDate></item></channel></rss>

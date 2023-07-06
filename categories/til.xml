@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about til)</title><link>https://tartley.com/</link><description>Today I learned</description><atom:link href="https://tartley.com/categories/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 15 May 2023 16:26:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating Animated Meme GIFs on the Command-Line</title><link>https://tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about til)</title><link>https://tartley.com/</link><description>Today I learned</description><atom:link href="https://tartley.com/categories/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 06 Jul 2023 21:08:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Makefiles that are self-documenting, and process all extant files.</title><link>https://tartley.com/posts/til-makefiles-that-are-self-documenting-and-process-all-extant-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;h3&gt;Self-documenting Makefiles&lt;/h3&gt;
+&lt;p&gt;A trick from years ago, but I copy it around between projects enough that it
+deserves calling out. Add a target:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;help&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## Show this help.&lt;/span&gt;
+&lt;span class="c"&gt;    @# Optionally add 'sort' before 'awk'&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;@grep&lt;span class="w"&gt; &lt;/span&gt;-E&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'^[a-zA-Z_\.%-]+:.*?## .*$$'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;MAKEFILE_LIST&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;awk&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'&lt;/span&gt;
+&lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;help&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Decorate other targets with a descriptive '##' comment, like "&lt;em&gt;Show this help&lt;/em&gt;"
+above. Now calling the 'help' target will summarize all the things the Makefile
+can do. eg:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ make help
+help       Show this help.
+setup      Install required system packages using 'apt install'.
+%.pdf      Generate given PDF from corresponding .tex file.
+all        Convert all .tex files to PDF.
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You might choose to make 'help' the first target in the Makefile, so that it
+gets triggered when the user runs &lt;code&gt;make&lt;/code&gt; without arguments.&lt;/p&gt;
+&lt;h3&gt;Process all extant files&lt;/h3&gt;
+&lt;p&gt;Make's canonical paradigm is that you tell it the name of the file to generate,
+and it uses the tree of dependencies specified in the Makefile to figure out
+how to build it. Typically you'll use automatic variables like "$&amp;lt;" to represent
+the wildcarded source filename:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;%.pdf&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;%.&lt;span class="n"&gt;tex&lt;/span&gt; &lt;span class="c"&gt;## Generate given PDF from corresponding .tex file.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;pdflatex&lt;span class="w"&gt; &lt;/span&gt;$&amp;lt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The pitfall is that when invoking this, you have to name all the PDF files you
+want to generate. If the names are a fixed part of your build, they can be
+embedded in the Makefile itself:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;one&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt; &lt;span class="n"&gt;two&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt; &lt;span class="n"&gt;three&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But if their names are dynamic, you have to specify them on the command line,
+which is a pain:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;one.pdf&lt;span class="w"&gt; &lt;/span&gt;two.pdf&lt;span class="w"&gt; &lt;/span&gt;three.pdf
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is easy enough when &lt;em&gt;re-&lt;/em&gt;generating all the PDFs that already exist:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;*.pdf
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;but is no help when you just have a bunch of .tex files and you just want Make
+to build all of them. This is going the opposite way to canonical make usage.
+We want to specify the existing source files (&lt;code&gt;*.tex&lt;/code&gt;, in this case), and have
+Make build the resulting products.&lt;/p&gt;
+&lt;p&gt;To do it, we need our Makefile to enumerate the existing source files:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;TEX_FILES&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;wildcard&lt;span class="w"&gt; &lt;/span&gt;*.tex&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Using the 'wildcard' function here behaves better than a bare wildcard
+expansion, e.g. it produces no output when there are no matches, rather than
+outputting the unmatched wildcard expression.&lt;/p&gt;
+&lt;p&gt;Then use a substitution to generate the list of .pdf filenames:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;all&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;TEX_FILES:%.tex&lt;span class="o"&gt;=&lt;/span&gt;%.pdf&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will generate one .pdf file for each extant .tex file, regardless of
+whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>command-line</category><category>make</category><category>til</category><guid>https://tartley.com/posts/til-makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>Creating Animated Meme GIFs on the Command-Line</title><link>https://tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
 animated gif memes, finally figured out how to do it manually. Not a universal
 process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
 &lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
