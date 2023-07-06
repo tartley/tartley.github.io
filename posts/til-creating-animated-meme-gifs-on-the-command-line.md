@@ -1,5 +1,5 @@
 <!--
-.. title: Creating Animated Meme GIFs on the Command-Line
+.. title: TIL: Creating Animated Meme GIFs on the Command-Line
 .. slug: creating-animated-meme-gifs-on-the-command-line
 .. date: 2021-12-08 15:32:10 UTC-06:00
 .. tags: til,terminal,linux,video,image,youtube

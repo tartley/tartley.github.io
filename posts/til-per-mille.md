@@ -1,5 +1,5 @@
 <!--
-.. title: ‰ is per mille
+.. title: TIL: ‰ is per mille
 .. slug: per-mille
 .. date: 2020-10-17 00:25:45 UTC-05:00
 .. tags: til
