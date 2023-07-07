@@ -1,9 +1,9 @@
 help: ## Show this help.
 	@# Optionally add 'sort' before 'awk'
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'
+	@grep -E '^[a-zA-Z_%-]+\s*:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'
 .PHONY: help
 
-clean: ## Delete generated files and virtualenv
+clean : ## Delete generated files and virtualenv
 	rm -rf ${ve}
 	rm -rf output
 .PHONY: clean
