@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about journal)</title><link>https://tartley.com/</link><description>Events of my life.</description><atom:link href="https://tartley.com/categories/journal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 06 Jul 2023 17:52:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>New Laptop Time!</title><link>https://tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about journal)</title><link>https://tartley.com/</link><description>Events of my life.</description><atom:link href="https://tartley.com/categories/journal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 07 Jul 2023 01:59:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>New Laptop Time!</title><link>https://tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="A laptop" src="https://tartley.com/files/2008/02/lappy.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;My employer, Canonical, has a "bring your own hardware" policy, trusting that
@@ -500,7 +500,7 @@ almost always use a USB mechanical keyboard anyhow. Also, with such greedy
 components, the battery life kinda sucks when the GPU is on and the machine is
 busy. But in the last 12 months, the only time I've run my current laptop not
 plugged in is... never? So I guess I don't care.&lt;/p&gt;
-&lt;p&gt;So &lt;a href="https://system76.com/laptops/gazelle#specs"&gt;this&lt;/a&gt;is what I ordered, with
+&lt;p&gt;So &lt;a href="https://system76.com/laptops/gazelle#specs"&gt;this&lt;/a&gt; is what I ordered, with
 the 15" display and the 3060 graphics.&lt;/p&gt;
 &lt;p&gt;But I did that thing where I order it with minimal RAM and SSD storage, to
 replace with my own parts. So I'll have some screwdriver work to do after it
