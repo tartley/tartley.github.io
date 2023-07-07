@@ -250,7 +250,7 @@ components, the battery life kinda sucks when the GPU is on and the machine is
 busy. But in the last 12 months, the only time I've run my current laptop not
 plugged in is... never? So I guess I don't care.
 
-So [this](https://system76.com/laptops/gazelle#specs)is what I ordered, with
+So [this](https://system76.com/laptops/gazelle#specs) is what I ordered, with
 the 15" display and the 3060 graphics.
 
 But I did that thing where I order it with minimal RAM and SSD storage, to

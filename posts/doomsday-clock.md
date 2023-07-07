@@ -39,8 +39,8 @@ complicated".
 In *Doomsday Clock*, Adrian Veidt, genius that he is, invents a means to follow
 Dr Manhattan, seeking his help with the re-emergence of imminent nuclear war
 brought about by the revelations in Rorschach's journal, and it becomes clear
-that the place Dr Manhattan has journeyed to is the DC universe, populated by
-Superman, Batman, and the *whole* stable of DC heroes.
+that the "simpler place" Dr Manhattan has journeyed to is the DC universe,
+populated by Superman, Batman, and the *whole* stable of DC heroes.
 
 Various other *Watchmen* characters make their way, or are transferred to, the
 DC universe. This has been described across the comic industry as "the
@@ -95,7 +95,7 @@ during *Doomsday Clock*'s story.
 In doing all this, Manhattan exhibits his usual clinical detachment from the
 human consequences of his actions, setting himself up as the villain of the
 piece, an uncaring "being of inaction", in contrast to Superman, the literal
-"man of Action" (Action comics, that is).
+"man of Action".
 
 <center>
 ![Doomsday Clock: Superman & Manhattan](/files/2022/doomsday-clock-superman.webp)
@@ -103,10 +103,11 @@ piece, an uncaring "being of inaction", in contrast to Superman, the literal
 <br />
 
 This forms a genuine riposte to *Watchmen's* criticism of the superhero genre.
-Yes, the DC heroes inhabit a simpler world, but there is a mythological power
-in what they represent as symbols. Particularly the value of *hope*, as
-personified by Superman, which - quite literally, in this tale - makes all
-other things possible.
+Yes, the DC heroes inhabit a simpler world, but the simplicity serves a purpose.
+Escaping the mundane enhances the mythological power of what they represent as
+symbols. Particularly the value of *hope*, as personified by Superman, which,
+although possibly somewhat overwrought in the telling - quite literally, in
+this tale - makes all other things possible.
 
 I was especially pleased with the quiet, understated places Doomsday Clock goes
 with *Mothman's*, back-story. The character in *Watchmen* was only a punchline,
@@ -117,15 +118,15 @@ Like the rest of the *Watchmen* heroes, he has no magical superhuman powers,
 but is still able to pull off entirely unexpected and superhuman-seeming
 stunts, merely by the virtue of his own unique kind of extreme mental and
 emotional resourcefulness. Flawed, but aware of his faults, and able to pull it
-together, he befriends the younger Rorschach II during their overlapping stays
-in a mental institution, becoming a beacon of warmth, kindness, and generosity
-to the younger man.
+together when he needs to, he befriends the younger Rorschach II during their
+overlapping stays in a mental institution, becoming a beacon of warmth,
+kindness, and generosity to the younger man.
 
 He acts as a symbol, if you will, that just as *Watchmen's* ruthless gaze
 influenced the wider world of comics, so the comic world gazes back. They see
 us, all the real-world, fully-rounded humans, trapped in the depths of our
 pathos, and they wonder, when will each of us learn to transcend our humdrum
-limitations, to act on our hopes and dreams, and *fly...*
+limitations, to finally act on our hopes and dreams, and *fly...*
 
 <center>
 ![Doomsday Clock: Mothman](/files/2022/doomsday-clock-mothman.webp)
