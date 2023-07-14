@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about til)</title><link>https://tartley.com/</link><description>Today I learned</description><atom:link href="https://tartley.com/categories/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 07 Jul 2023 01:59:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Makefiles that are self-documenting, and process all extant files.</title><link>https://tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;h3&gt;Self-documenting Makefiles&lt;/h3&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about til)</title><link>https://tartley.com/</link><description>Today I learned</description><atom:link href="https://tartley.com/categories/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 14 Jul 2023 03:46:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Makefiles that are self-documenting, and process all extant files.</title><link>https://tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;h3&gt;Self-documenting Makefiles&lt;/h3&gt;
 &lt;p&gt;A trick from years ago, but I copy it around between projects enough that it
 deserves calling out. Add a target:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;help&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## Show this help.&lt;/span&gt;
@@ -366,7 +366,38 @@ variation on "percent", to find that this is one of the many spellings of
 a real thing. Rarely used in English, but more common in other European
 languages.&lt;/p&gt;
 &lt;p&gt;Now that I see the symbol, I remember seeing it as a child, on an old
-typewriter that my Grandfather used. What's old is new.&lt;/p&gt;</description><category>til</category><guid>https://tartley.com/posts/per-mille/</guid><pubDate>Sat, 17 Oct 2020 05:25:45 GMT</pubDate></item><item><title>TIL: When to use three dots vs two in Git</title><link>https://tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
+typewriter that my Grandfather used. What's old is new.&lt;/p&gt;</description><category>til</category><guid>https://tartley.com/posts/per-mille/</guid><pubDate>Sat, 17 Oct 2020 05:25:45 GMT</pubDate></item><item><title>TIL: Format Python Snippets with Black.</title><link>https://tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But often you'd like to reformat just a section of the file, while leaving
+everything else intact. In principle, it's easy to tell Vim to just send the
+current visual selection:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the visual selection&lt;/span&gt;
+xnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;(Note that both the above Vim configuration snippets map the same key
+sequence -- leader (commonly comma) followed by lower case b. These can be
+defined simultaneously, because the second one uses 'xnoremap', meaning it is
+used only while a visual selection exists, while the first uses 'nnoremap', so
+is used all other times.)&lt;/p&gt;
+&lt;p&gt;But if the given code starts with an indent on the first line, for example if
+it comes from lines in the middle of a function, then this won't work. Black
+parses the given code into a Python abstract syntax tree (AST), and a leading
+indent is a syntax error - it's just not valid Python.&lt;/p&gt;
+&lt;p&gt;I filed a hopeful &lt;a href="https://github.com/psf/black/issues/1352"&gt;issue with Black&lt;/a&gt;,
+suggesting they could handle this case, but it was a long shot and hasn't
+gained much enthusiasm.&lt;/p&gt;
+&lt;p&gt;So, I present a tiny Python3 wrapper, &lt;em&gt;enblacken&lt;/em&gt;, which:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unindents the given code such that the first line has no indent.&lt;/li&gt;
+&lt;li&gt;Passes the result to Black.&lt;/li&gt;
+&lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/main/bin/enblacken"&gt;enblacken on github&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><category>til</category><category>vim</category><guid>https://tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>TIL: When to use three dots vs two in Git</title><link>https://tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
 today:&lt;/p&gt;
 &lt;p&gt;To see the commits or diffs introduced by a branch (the filled circles ●):&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;     f
@@ -416,4 +447,90 @@ git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;m
 git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;...f
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;</description><category>geek</category><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;</description><category>geek</category><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>TIL: Listen to your phone through your PC speakers</title><link>https://tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Directs audio input (e.g. mic) to audio output (e.g. speakers),&lt;/span&gt;
+&lt;span class="c1"&gt;# then sleeps forever. Stops audio redirection when it is killed.&lt;/span&gt;
+&lt;span class="c1"&gt;# So, for example, plug your phone into the PC's mic, run 'listen',&lt;/span&gt;
+&lt;span class="c1"&gt;# and listen to phone audio through your computer's speakers.&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# Requires:&lt;/span&gt;
+&lt;span class="c1"&gt;# sudo apt-get install pactl # Ubuntu&lt;/span&gt;
+
+&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-e
+
+&lt;span class="nv"&gt;module&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;pactl&lt;span class="w"&gt; &lt;/span&gt;load-module&lt;span class="w"&gt; &lt;/span&gt;module-loopback&lt;span class="k"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;cleanup&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;pactl&lt;span class="w"&gt; &lt;/span&gt;unload-module&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$module&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="nb"&gt;trap&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;cleanup&lt;span class="w"&gt; &lt;/span&gt;EXIT
+
+sleep&lt;span class="w"&gt; &lt;/span&gt;infinity
+&lt;/pre&gt;&lt;/div&gt;</description><category>geek</category><category>terminal</category><category>til</category><guid>https://tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</guid><pubDate>Sun, 15 Mar 2015 15:50:09 GMT</pubDate></item><item><title>TIL: Understanding git rebase so it sticks</title><link>https://tartley.com/posts/understanding-rebase-so-it-sticks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I endlessly misremember how to use git rebase. That ends today. Here are
+my notes to help me remember.&lt;/p&gt;
+&lt;p&gt;Rebase is traditionally documented as:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;rebase&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;--onto&lt;span class="w"&gt; &lt;/span&gt;newbase&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;upstream&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;branch&lt;span class="o"&gt;]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is confusing for several reasons. A slight improvement is to rename
+the args:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;rebase&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;--onto&lt;span class="w"&gt; &lt;/span&gt;target&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;exclude&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;include&lt;/code&gt; is the tip of the branch to be transplanted. If omitted,
+    it defaults to the current branch.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;exclude&lt;/code&gt; excludes all its ancestors from being transplanted. Hence
+    the transplanted branch will have its tip at &lt;code&gt;include&lt;/code&gt;, and its base
+    at the common ancestor of &lt;code&gt;include&lt;/code&gt; and &lt;code&gt;exclude&lt;/code&gt;. If &lt;code&gt;--onto&lt;/code&gt; isn't
+    specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the destination for the
+    transplant.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;target&lt;/code&gt; is the place to transplant the branch to. If not specified,
+    it defaults to the value of &lt;code&gt;exclude&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hence, a simple before and after:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;o---o---o---o---o---o exclude
+     \
+      1---2---3 current branch
+                or include
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;rebase&lt;span class="w"&gt; &lt;/span&gt;exclude&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;                exclude
+                v
+o---o---o---o---o---1---2---3 current branch
+                              or include
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;See how the commits to be transplanted start at &lt;code&gt;include&lt;/code&gt; and go back to
+the common ancestor of that and &lt;code&gt;exclude&lt;/code&gt;. Since &lt;code&gt;--onto&lt;/code&gt; isn't
+specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the transplant destination.&lt;/p&gt;
+&lt;p&gt;Or a more complex one:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt; o---o---o---o---o target
+      \
+       o---o---o exclude
+            \
+             1---2 current branch
+                   or include
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;rebase&lt;span class="w"&gt; &lt;/span&gt;--onto&lt;span class="w"&gt; &lt;/span&gt;target&lt;span class="w"&gt; &lt;/span&gt;exclude&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;include&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;                    target
+                    v
+    o---o---o---o---o---1---2 current branch
+         \                    or include
+          o---o---o
+                  ^
+                  exclude
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Again, the commits to be transplanted are defined by &lt;code&gt;include&lt;/code&gt; and
+&lt;code&gt;exclude&lt;/code&gt;, but this time a separate destination is specified using
+&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;</description><category>git</category><category>software</category><category>terminal</category><category>til</category><guid>https://tartley.com/posts/understanding-rebase-so-it-sticks/</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item></channel></rss>

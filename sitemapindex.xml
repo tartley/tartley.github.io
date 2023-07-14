@@ -23,7 +23,7 @@
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/bash.xml</loc>
-  <lastmod>2023-07-07T01:59:00Z</lastmod>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/bear.xml</loc>
@@ -86,6 +86,10 @@
   <lastmod>2023-07-07T01:59:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://tartley.com/categories/dina.xml</loc>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://tartley.com/categories/doctorow.xml</loc>
   <lastmod>2023-07-07T01:59:00Z</lastmod>
  </sitemap>
@@ -134,8 +138,12 @@
   <lastmod>2023-07-07T01:59:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://tartley.com/categories/file-watcher.xml</loc>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://tartley.com/categories/fonts.xml</loc>
-  <lastmod>2023-07-07T01:59:00Z</lastmod>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/free-to-read.xml</loc>
@@ -147,7 +155,7 @@
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/geek.xml</loc>
-  <lastmod>2023-07-07T01:59:00Z</lastmod>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/gig.xml</loc>
@@ -159,7 +167,7 @@
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/git.xml</loc>
-  <lastmod>2023-07-07T01:59:00Z</lastmod>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/graphics.xml</loc>
@@ -223,7 +231,7 @@
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/linux.xml</loc>
-  <lastmod>2023-07-07T01:59:00Z</lastmod>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/literature.xml</loc>
@@ -271,7 +279,7 @@
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/mswin-dev.xml</loc>
-  <lastmod>2023-07-07T01:59:00Z</lastmod>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/music.xml</loc>
@@ -339,7 +347,7 @@
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/python.xml</loc>
-  <lastmod>2023-07-07T01:59:00Z</lastmod>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/qntm.xml</loc>
@@ -375,7 +383,7 @@
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/software.xml</loc>
-  <lastmod>2023-07-07T01:59:00Z</lastmod>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/startups.xml</loc>
@@ -395,11 +403,11 @@
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/terminal.xml</loc>
-  <lastmod>2023-07-07T01:59:00Z</lastmod>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/testing.xml</loc>
-  <lastmod>2023-07-07T01:59:00Z</lastmod>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/the-fountain.xml</loc>
@@ -407,7 +415,7 @@
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/til.xml</loc>
-  <lastmod>2023-07-07T01:59:00Z</lastmod>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/time-travel.xml</loc>
@@ -435,7 +443,7 @@
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/vim.xml</loc>
-  <lastmod>2023-07-07T01:59:00Z</lastmod>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/vonnegut.xml</loc>
@@ -471,10 +479,10 @@
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/rss.xml</loc>
-  <lastmod>2023-07-13T20:52:00Z</lastmod>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/sitemap.xml</loc>
-  <lastmod>2023-07-13T20:52:00Z</lastmod>
+  <lastmod>2023-07-14T03:46:00Z</lastmod>
  </sitemap>
 </sitemapindex>
