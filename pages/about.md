@@ -15,6 +15,7 @@ A website dedicated to oneself has been described (by my own Father, no less) as
 * Chit-chat on [mastodon.social@tartley](https://mastodon.social/@tartley)
 * Email tartley at the domain tartley.com
 * Code on [github.com/tartley](https://github.com/tartley)
+* Résumé: [HTML](/files/Jonathan-Hartley-résumé.html) or [PDF](/files/Jonathan-Hartley-résumé.pdf).
 
 ## License
 
