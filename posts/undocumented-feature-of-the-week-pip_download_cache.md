@@ -1,13 +1,9 @@
 <!--
-.. title: Undocumented feature of the week: $PIP_DOWNLOAD_CACHE
+.. title: TIL: Undocumented feature of the week: $PIP_DOWNLOAD_CACHE
 .. slug: undocumented-feature-of-the-week-pip_download_cache
 .. date: 2010-07-13 12:46:15-05:00
-.. tags: geek,software,python
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,software,python,til
 -->
-
 
 Use Python? You should be using
 [*Pip*](http://pypi.python.org/pypi/pip). A replacement for

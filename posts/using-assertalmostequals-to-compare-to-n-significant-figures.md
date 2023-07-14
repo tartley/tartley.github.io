@@ -1,11 +1,8 @@
 <!--
-.. title: Using assertAlmostEquals to compare to N Significant Figures
+.. title: TIL: Using assertAlmostEquals to compare to N Significant Figures
 .. slug: using-assertalmostequals-to-compare-to-n-significant-figures
 .. date: 2008-12-17 14:59:54-06:00
-.. tags: geek,software,python,testing
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,software,python,testing,til
 -->
 
 

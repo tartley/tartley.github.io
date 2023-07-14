@@ -2,8 +2,7 @@
 .. title: Testwatcher
 .. slug: testwatcher
 .. date: 2009-04-29 23:02:59-05:00
-.. tags: geek,software,python,testing,terminal
-.. type: text
+.. tags: file-watcher,geek,software,python,testing,terminal
 -->
 
 Sometimes when programming I like to leave unit tests running

@@ -5,8 +5,11 @@
 .. tags: geek,linux,terminal
 -->
 
-
 [Colout](http://nojhan.github.io/colout/) is amazing, I use it all the time.
+
+**Update:** Colout on PyPI now works just fine, all the following is needless.
+
+---
 
 But `pip install colout` from PyPI is broken, and has been for many months,
 due to a typo in the

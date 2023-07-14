@@ -10,7 +10,7 @@
 
 In the typical mad-scientist thrills-per-minute that is the Linux way,
 adding a CPU meter to my desktop involved crafting
-[my own conky configuration file](/files/2020/conky.conf).
+[my own conky configuration file](https://github.com/tartley/dotfiles/tree/main/.config/conky).
 
 As always, building your own is a chore that crops up when you least expect
 it. But on the other hand, the opportunity for functional and aesthetic

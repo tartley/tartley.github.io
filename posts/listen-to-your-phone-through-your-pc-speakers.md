@@ -1,8 +1,8 @@
 <!--
-.. title: Listen to your phone through your PC speakers
+.. title: TIL: Listen to your phone through your PC speakers
 .. slug: listen-to-your-phone-through-your-pc-speakers
 .. date: 2015-03-15 10:50:09-05:00
-.. tags: geek,terminal
+.. tags: geek,terminal,til
 -->
 
 

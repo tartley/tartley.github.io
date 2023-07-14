@@ -2,7 +2,7 @@
 .. title: Rerun unit tests whenever files update
 .. slug: rerun-unit-tests-whenever-files-update
 .. date: 2010-10-15 01:43:33-05:00
-.. tags: geek,python,testing,software,mswin-dev,terminal
+.. tags: file-watcher,geek,python,testing,software,mswin-dev,terminal
 -->
 
 

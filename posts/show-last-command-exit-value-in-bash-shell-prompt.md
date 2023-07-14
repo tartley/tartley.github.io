@@ -1,8 +1,8 @@
 <!--
-.. title: Show last command exit value in Bash shell prompt
+.. title: TIL: Show last command exit value in Bash shell prompt
 .. slug: show-last-command-exit-value-in-bash-shell-prompt
 .. date: 2009-02-05 12:11:57-06:00
-.. tags: geek,terminal,bash
+.. tags: geek,terminal,bash,til
 -->
 
 

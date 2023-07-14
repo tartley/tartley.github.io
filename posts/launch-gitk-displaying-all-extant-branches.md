@@ -1,8 +1,8 @@
 <!--
-.. title: Launch Gitk displaying all branches
+.. title: TIL: Launch Gitk displaying all branches
 .. slug: launch-gitk-displaying-all-extant-branches
 .. date: 2010-12-31 12:25:31-06:00
-.. tags: software,mswin-dev,git,terminal
+.. tags: git,mswin-dev,software,til,terminal
 -->
 
 
