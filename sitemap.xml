@@ -11,7 +11,7 @@
  </url>
  <url>
   <loc>https://tartley.com/archive.html</loc>
-  <lastmod>2023-07-14T03:46:00Z</lastmod>
+  <lastmod>2023-07-30T23:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://tartley.com/categories/</loc>
@@ -571,7 +571,7 @@
  </url>
  <url>
   <loc>https://tartley.com/index-27.html</loc>
-  <lastmod>2023-07-13T20:52:00Z</lastmod>
+  <lastmod>2023-07-30T20:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://tartley.com/index-3.html</loc>
@@ -1452,6 +1452,10 @@
  <url>
   <loc>https://tartley.com/posts/stretching-pyglets-wings/</loc>
   <lastmod>2023-07-07T01:59:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://tartley.com/posts/structured-pattern-matching-in-python/</loc>
+  <lastmod>2023-07-30T20:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://tartley.com/posts/studencki-festiwal-informatyczny-2008/</loc>

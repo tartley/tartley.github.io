@@ -1,5 +1,344 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 14 Jul 2023 03:46:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Format Python Snippets with Black.</title><link>https://tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 30 Jul 2023 23:13:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Structured Pattern Matching in Python</title><link>https://tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through desriptions of
+&lt;a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement"&gt;structured pattern matching&lt;/a&gt;
+when it was added in Python 3.10 a couple of years ago, and have studiously
+avoided it ever since. It seemed like a language feature that's amazingly
+useful in one or two places, like writing a parser, say, and is a horrifically
+over-complicated mis-step just about everywhere else.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; A day after writing this I see that Guido van
+Rossum wrote exactly that,
+&lt;a href="https://github.com/gvanrossum/patma/blob/master/examples/expr.py"&gt;a parser&lt;/a&gt;,
+to showcase the feature. I'm guessing he writes a lot of parsers. I definitely
+don't write enough of them to think this language feature is worth the extra
+complexity it brings.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Regardless, I really ought to remember how it works, so this is my attempt to
+make the details stick, by writing about it.&lt;/p&gt;
+&lt;p&gt;If you're not me, you really ought to be reading about it from the source instead:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://peps.python.org/pep-0634/"&gt;PEP 643&lt;/a&gt;: Specification.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://peps.python.org/pep-0635/"&gt;PEP 635&lt;/a&gt;: Motivation and rationale.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://peps.python.org/pep-0636/"&gt;PEP 636&lt;/a&gt;: A tutorial.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Basic structure&lt;/h2&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;EXPRESSION&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;PATTERN1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;PATTERN2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;_&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This evaluates the &lt;code&gt;match&lt;/code&gt; EXPRESSION, then tries to match it against each
+&lt;code&gt;case&lt;/code&gt; PATTERN, executing the body of the first case that matches, falling back
+to the optional final &lt;code&gt;_&lt;/code&gt; default case. (&lt;code&gt;match&lt;/code&gt; and &lt;code&gt;case&lt;/code&gt; are not keywords,
+except in the context of a match...case block, so you can continue using them
+as variable names elsewhere.)&lt;/p&gt;
+&lt;p&gt;But what are PATTERNs, and how are they tested for a match?&lt;/p&gt;
+&lt;h2&gt;Patterns&lt;/h2&gt;
+&lt;p&gt;Patterns can be any of the following. As becomes increasingly obvious down the
+list, the real power of this feature comes from composing each of these
+patterns with the others. For complicated patterns, parentheses can be used to
+indicate order of operations.&lt;/p&gt;
+&lt;h3&gt;Literals&lt;/h3&gt;
+&lt;p&gt;Like other languages' traditional &lt;code&gt;switch&lt;/code&gt; statement:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;mycommand&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'start'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;_&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;CommandNotFoundError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mycommand&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Such literal case patterns may be strings (including raw and byte-strings, but
+not f-strings), numbers, booleans or None.&lt;/p&gt;
+&lt;p&gt;Such cases are compared with equality:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mf"&gt;123.0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;except for booleans and None, which are compared using &lt;code&gt;is&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Any&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__eq__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+
+&lt;span class="n"&gt;myfalse&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Any&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;myfalse&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;case&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# Doesn't match, even though myfalse == False&lt;/span&gt;
+        &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Variable names&lt;/h3&gt;
+&lt;p&gt;We can replace a literal with a variable name, to capture the value of the match
+expression.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'start'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;unknown&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variable 'unknown' is assigned the value of command&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The 'default' case pattern &lt;code&gt;_&lt;/code&gt; is just a special case variable name which
+binds no name.&lt;/p&gt;
+&lt;p&gt;Beware the common error of using "constants" as the case pattern:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="n"&gt;NOT_FOUND&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;404&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;NOT_FOUND&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# bad&lt;/span&gt;
+        &lt;span class="n"&gt;handle_404&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The above case is intended to test for &lt;code&gt;error == NOT_FOUND&lt;/code&gt;, but instead
+assigns the variable &lt;code&gt;NOT_FOUND = error&lt;/code&gt;. The best defense is to always include
+a default catch-all case at the end, which causes the above &lt;code&gt;NOT_FOUND&lt;/code&gt; case to
+produce a SyntaxError:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="n"&gt;NOT_FOUND&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;404&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;NOT_FOUND&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;handle_404&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;_&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;pass&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="n"&gt;SyntaxError&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;capture&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'NOT_FOUND'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;makes&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;remaining&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;patterns&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;unreachable&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To use a 'constant' in a case pattern like this, qualify it with a dotted name,
+such as by using an &lt;code&gt;enum.Enum&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NOT_FOUND&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# correctly matches&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Sequences&lt;/h3&gt;
+&lt;p&gt;Using a list-like or tuple-like syntax, matches must have the right number of
+items. Like Python's existing iterable unpackling feature. Use &lt;code&gt;*&lt;/code&gt; to match the
+rest of a sequence. Included variable names are set if a case matches by all
+other criteria.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'start'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variable name=command[1]&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variable name=command[1]&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variables name=command[1], delay=command[2]&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;extra&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variables name=command[1], delay=command[2] &amp;amp; extra=command[3:]&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;_&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;BadCommand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Mappings&lt;/h3&gt;
+&lt;p&gt;Using a dict-like syntax. The match expression must must contain a
+corresponding mapping, and can contain other keys, too. Use &lt;code&gt;**&lt;/code&gt; to match the
+rest of a mapping.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'host'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;hostname&lt;/span&gt;&lt;span class="p"&gt;}:&lt;/span&gt;
+        &lt;span class="c1"&gt;# 'config' must contain key 'host'. New variable hostname=config['host']&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'port'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;portnumber&lt;/span&gt;&lt;span class="p"&gt;}:&lt;/span&gt;
+        &lt;span class="c1"&gt;# 'config' must contain key 'port'. New variable portnumber=config['port']&lt;/span&gt;
+        &lt;span class="c1"&gt;# Remember we only use the first matching case.&lt;/span&gt;
+        &lt;span class="c1"&gt;# If 'config' contains 'host', then this 'port' case will not match.&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'scheme'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;extras&lt;/span&gt;&lt;span class="p"&gt;}:&lt;/span&gt;
+        &lt;span class="c1"&gt;# new variables 'scheme' and 'extras' are assigned.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Case patterns may contain more than one key-value pair. The match expression must
+contain all of them to match.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s1"&gt;'host'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;hostname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;'port'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;portnumber&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="p"&gt;}:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Objects and their attributes&lt;/h3&gt;
+&lt;p&gt;Using class syntax, the value must match an isinstance check with the given class:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Click&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="c1"&gt;# handle click&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="c1"&gt;# handle key press&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Beware the common error of omitting the parens:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;myval&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Click&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# bad&lt;/span&gt;
+        &lt;span class="c1"&gt;# handle clicks&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The above case is intended to test for &lt;code&gt;isinstance(myval, Click)&lt;/code&gt;, but instead
+creates a new var, &lt;code&gt;Click = myval&lt;/code&gt;. The best defence against this error is to
+always include a default catch-all at the end, which makes the &lt;code&gt;Click&lt;/code&gt; catch-all
+produce an error by making subsequent patterns unreachable.&lt;/p&gt;
+&lt;p&gt;Attribute values for the class can be given, which must also match.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'q'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;release&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;game&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;quit&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="n"&gt;handle_keypress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Values can also be passed as positional args to the class-like case syntax:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'q'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If the class is a namedtuple or dataclass, then positional args to a class-like
+case pattern can automatically be handled using the unambiguous ordering of its
+attributes:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nd"&gt;@dataclass&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
+    &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
+
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'dash'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'golden'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'dash'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'golden'&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But for regular classes, the ordering of the class attributes is ambiguous.
+To fix this, add a &lt;code&gt;__match_args__&lt;/code&gt; attribute on the class, a tuple which
+specifies which class attributes, in which order, can be specified in a case
+pattern:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;__match_args__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'key_name'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'release'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;event&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'q'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;release&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'q'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;As you might expect, the literal positional args can be replaced with variable
+names to capture attribute values instead:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="c1"&gt;# names unimportant, order matters&lt;/span&gt;
+        &lt;span class="n"&gt;handle_keypress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Positional sub-patterns behave slightly differently for builtins &lt;code&gt;bool&lt;/code&gt;,
+&lt;code&gt;bytearray&lt;/code&gt;, &lt;code&gt;bytes&lt;/code&gt;, &lt;code&gt;dict&lt;/code&gt;, &lt;code&gt;float&lt;/code&gt;, &lt;code&gt;frozenset&lt;/code&gt;, &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;list&lt;/code&gt;, &lt;code&gt;set&lt;/code&gt;,
+&lt;code&gt;str&lt;/code&gt;, and &lt;code&gt;tuple&lt;/code&gt;. A positional value is matched by equality against the match
+expression itself, rather than an attribute on it:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;123.0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# would also match if it wasn't shadowed&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Similarly, a positional variable is assigned the value of the match expression
+itself, not an attribute on that value:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+   &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The values passed as keyword or positional args to class-like case patterns can
+be more than just literals or variable names. In fact they can use &lt;em&gt;any&lt;/em&gt; of the
+listed pattern types. For example, they could be a nested instance of this
+class-like syntax:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt;
+
+&lt;span class="n"&gt;mycar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Location&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;mycar&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Location&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;))):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches, and captures 'x' and 'y'&lt;/span&gt;
+
+&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;
+&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Combine patterns usiung &lt;code&gt;|&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;To match either one pattern or another:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'true'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'on'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'yes'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches any of those values&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Capture sub-patterns using &lt;code&gt;as&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;We've seen how we can either match against a value, or capture the value using
+a variable name. We can do both using &lt;code&gt;as&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'a'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'b'&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ab&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches either value, captures what the value actually was&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This might not be much use when capturing the whole match expression like that.
+If the match expression is just a variable, then we could instead simply refer
+to that variable. But using &lt;code&gt;as&lt;/code&gt; can be useful when the match expression is
+lengthy or has side-effects:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;events&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_next&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyDown&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;key_event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;or to capture just a component of the whole expression. Contrived example:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'a'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'b'&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ab&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'c'&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matchs ['a', 'c'] or ['b', 'c'], and captures the first letter in 'ab'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4&gt;An &lt;code&gt;if&lt;/code&gt; guard clause&lt;/h4&gt;
+&lt;p&gt;Add arbitrary conditions to the match:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches integers less than 100&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Or, alternatively:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches integers less than 100&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Complications&lt;/h2&gt;
+&lt;p&gt;This feature seems rife with complexity. The flexible syntax of case patterns
+forms a new mini-language, embedded within Python. It has many similarities to
+Python, but also many initially unintuitive differences.&lt;/p&gt;
+&lt;p&gt;For example, a class-like case pattern such as &lt;code&gt;case Click():&lt;/code&gt;. Anywhere else
+in the language, the expression like &lt;code&gt;Click(...)&lt;/code&gt; would create an instance of the
+&lt;code&gt;Click&lt;/code&gt; class. In a case statement, it instead is doing things like
+&lt;code&gt;isinstance&lt;/code&gt; and &lt;code&gt;hasattr&lt;/code&gt; checks.&lt;/p&gt;
+&lt;p&gt;Similarly, including variable names doesn't return the variable value as in
+ordinary Python. Instead it binds a value as that name. This is the source of
+the annoying gotcha described above, that bare "constants" like &lt;code&gt;NOT_FOUND&lt;/code&gt;
+behave very unexpectedly when used as case expressions.&lt;/p&gt;
+&lt;p&gt;There are a few places in real-world code where structured pattern matching
+will produce nicer code than the equivalent using nested &lt;code&gt;elif&lt;/code&gt;s. But equally,
+there are a lot of places where the &lt;code&gt;elif&lt;/code&gt;s are a more natural match.
+Developers now get to choose which they're going to use, and then later
+disagree with each other about it, or simply change their mind, and end up
+converting code from one to the other.&lt;/p&gt;
+&lt;p&gt;If this was a simple feature, with low overheads, then I'd forgive its
+inclusion in the language, accepting the costs in return for the marginal and
+unevenly distributed benefits.&lt;/p&gt;
+&lt;p&gt;But it's really not simple. In addition to Python programmers all having to
+do an exercise like this post just to add it to their mental toolbox, it needs
+maintenance effort, not just in CPython but in other implementations too, and
+needs handling by tools such as syntax highlighters, type checkers. It really
+doesn't seem like a net win to me, &lt;em&gt;unless&lt;/em&gt; you're writing way more parsers
+than the average programmer, which no doubt the champions of this feature are.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/structured-pattern-matching-in-python/</guid><pubDate>Sat, 29 Jul 2023 23:15:26 GMT</pubDate></item><item><title>TIL: Format Python Snippets with Black.</title><link>https://tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -355,84 +694,4 @@ days.&lt;/p&gt;
 &lt;p&gt;10/10 if you're going to enjoy 500 pages of software design principles
 and case studies.&lt;/p&gt;
 &lt;p&gt;0/10 if you're not.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</guid><pubDate>Sun, 02 Feb 2014 20:26:43 GMT</pubDate></item><item><title>Domain Driven Design: Tackling Complexity in the Heart of Software</title><link>https://tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Domain Driven Design cover" src="https://tartley.com/files/2014/01/domaindrivendesign.jpg"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Eric Evans (2004)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;It's a big, dense book -- possibly the most important of the technical
-books I've read in a flurry over the last few months, catching up after
-recovering a modicum of sanity in our lives after our kid's first year.
-I finish it feeling changed, invigorated, and given new direction.&lt;/p&gt;
-&lt;p&gt;At its core is a simple idea, which sounds neither new nor revolutionary
-on the surface. Software projects, Evans maintains, should work closely
-with business experts to create and maintain a domain model. The model
-might be expressed as a class diagram of core business concerns, and
-should also correspond directly to a body of code modelling these
-business entities. This forms a set of core business entities which are
-clearly analogous to things like the core enterprise entities of the
-hexagonal or clean architectures.&lt;/p&gt;
-&lt;p&gt;However it's created, the terminology and notation used in the class
-diagram (or it's equivalent) should be well understood by individuals on
-both side of the tech/business divide. In the past I think I've made the
-mistake of believing that only developers needed to understand it, and
-therefore the model only needed to be expressed in code.&lt;/p&gt;
-&lt;p&gt;This model should be displayed prominently, referred to continually, and
-in a healthy project should very directly correspond to the specialised
-language that evolves within the organisation. Where the team's language
-doesn't match the model - for example, your business experts' use of
-plurals betrays that the cardinality of relationships are modelled
-wrongly, then the model - and the underlying code - should be
-aggressively refactored to match reality.&lt;/p&gt;
-&lt;p&gt;Evans makes a persuasive case that the appropriate management of this
-complexity at the heart of your software will be a major influence on
-the success of the project. To be fair, this is a viewpoint that I
-already believed in, so I was a sucker for all of this. Without an
-appropriate approach to these central design concerns, over time
-developers will find they are no longer able to understand the code
-thoroughly enough to be able to modify or extend it easily, unless they
-deliberately or inadvertently use design-breaking hacks like redundancy
-or mislocated chunks of code. This forms a vicious cycle of technical
-debt accrual, and creates an upper limit on the size or complexity which
-can be achieved by any project before productivity begins to slump.
-Other metrics like reliability then also suffer.&lt;/p&gt;
-&lt;p&gt;To counter this, conquering these central design issues requires a
-pro-active and multi-pronged effort. Firstly, the existing design must
-be understood by all parties. In order for this to remain true, the
-design needs to be kept up to date and be easily understood by new team
-members. The code must be kept directly in sync with the model, and kept
-understandable - inappropriate dependencies must be ruthlessly pruned.
-Simultaneously, the "correct" design must be discovered iteratively,
-throughout the life of the project, and this can only be done by
-encouraging continual conversations between developers and business
-folks to discuss the potential inadequacies of the current design and
-possible alternatives.&lt;/p&gt;
-&lt;p&gt;When managed correctly, this lends an agility and suppleness to project.
-Developers find it easy to integrate subsequent parts of code because
-they 'fit naturally' into the existing design, and when the design is
-found wanting, it's relatively easy to modify it to incorporate new
-concerns.&lt;/p&gt;
-&lt;p&gt;There are times when I've struggled to convey the message about how the
-resulting trade off works between time spent refactoring versus time
-saved over the long term. Evans describes this in an interesting way.
-Instead of trying to model team productivity by applying a multiplier to
-describe drag caused by technical debt, he simply contrasts the normal
-way projects slow down as they become larger and more complex, with a
-project that instead &lt;em&gt;speeds up&lt;/em&gt; over time, as developers, unhindered by
-a cycle of technical debt, are instead empowered by the creation of
-powerful and expressive abstractions, which can then be relatively
-easily reconfigured into unanticipated configurations.&lt;/p&gt;
-&lt;p&gt;To counter-balance this idealistic hand-waving, the next section dives
-right into some specific design practices which embody these ideas.
-These are valuable and insightful, stock-in-trade, such as
-distinguishing between entity and value types. But many of the ideas
-were completely new to me, such as the concept of &lt;em&gt;aggregates&lt;/em&gt;, which
-define subsets of the domain model which are always atomically retrieved
-from (or updated in) a data store.&lt;/p&gt;
-&lt;p&gt;In short, I really loved this book. It stretched and inspired me. It's
-in a very small set of books I've flagged to re-read in a couple of
-years. It's top of my list for 'books to bring in and talk about at
-work'.&lt;/p&gt;
-&lt;p&gt;Rating:&lt;/p&gt;
-&lt;p&gt;10/10 if you're a programmer, or work with programmers.&lt;/p&gt;
-&lt;p&gt;0/10 if you're not, or don't.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>geek</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://tartley.com/posts/domain-driven-design-tackling-complexity-in-the-heart-of-software/</guid><pubDate>Mon, 27 Jan 2014 17:05:53 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</guid><pubDate>Sun, 02 Feb 2014 20:26:43 GMT</pubDate></item></channel></rss>

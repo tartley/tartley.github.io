@@ -11,7 +11,7 @@
 <link rel="canonical" href="https://tartley.com/">
 <link rel="icon" href="welcome.gif" sizes="16x16">
 <link rel="next" href="index-27.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/ur-fascism/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/structured-pattern-matching-in-python/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -76,7 +76,364 @@
 
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/ur-fascism/" class="u-url">Ur-Fascism</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/structured-pattern-matching-in-python/" class="u-url">Structured Pattern Matching in Python</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/structured-pattern-matching-in-python/" rel="bookmark">
+            <time class="published dt-published" datetime="2023-07-29T18:15:26-05:00" itemprop="datePublished" title="2023-07-29 18:15">2023-07-29 18:15</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>I read through desriptions of
+<a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement">structured pattern matching</a>
+when it was added in Python 3.10 a couple of years ago, and have studiously
+avoided it ever since. It seemed like a language feature that's amazingly
+useful in one or two places, like writing a parser, say, and is a horrifically
+over-complicated mis-step just about everywhere else.</p>
+<blockquote>
+<p><strong>Update:</strong> A day after writing this I see that Guido van
+Rossum wrote exactly that,
+<a href="https://github.com/gvanrossum/patma/blob/master/examples/expr.py">a parser</a>,
+to showcase the feature. I'm guessing he writes a lot of parsers. I definitely
+don't write enough of them to think this language feature is worth the extra
+complexity it brings.</p>
+</blockquote>
+<p>Regardless, I really ought to remember how it works, so this is my attempt to
+make the details stick, by writing about it.</p>
+<p>If you're not me, you really ought to be reading about it from the source instead:</p>
+<ul>
+<li>
+<a href="https://peps.python.org/pep-0634/">PEP 643</a>: Specification.</li>
+<li>
+<a href="https://peps.python.org/pep-0635/">PEP 635</a>: Motivation and rationale.</li>
+<li>
+<a href="https://peps.python.org/pep-0636/">PEP 636</a>: A tutorial.</li>
+</ul>
+<h2>Basic structure</h2>
+<div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="n">EXPRESSION</span><span class="p">:</span>
+    <span class="k">case</span> <span class="n">PATTERN1</span><span class="p">:</span>
+        <span class="o">...</span>
+    <span class="k">case</span> <span class="n">PATTERN2</span><span class="p">:</span>
+        <span class="o">...</span>
+    <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+        <span class="o">...</span>
+</pre></div>
+
+<p>This evaluates the <code>match</code> EXPRESSION, then tries to match it against each
+<code>case</code> PATTERN, executing the body of the first case that matches, falling back
+to the optional final <code>_</code> default case. (<code>match</code> and <code>case</code> are not keywords,
+except in the context of a match...case block, so you can continue using them
+as variable names elsewhere.)</p>
+<p>But what are PATTERNs, and how are they tested for a match?</p>
+<h2>Patterns</h2>
+<p>Patterns can be any of the following. As becomes increasingly obvious down the
+list, the real power of this feature comes from composing each of these
+patterns with the others. For complicated patterns, parentheses can be used to
+indicate order of operations.</p>
+<h3>Literals</h3>
+<p>Like other languages' traditional <code>switch</code> statement:</p>
+<div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="n">mycommand</span><span class="p">:</span>
+    <span class="k">case</span> <span class="s1">'start'</span><span class="p">:</span>
+        <span class="o">...</span>
+    <span class="k">case</span> <span class="s1">'stop'</span><span class="p">:</span>
+        <span class="o">...</span>
+    <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">CommandNotFoundError</span><span class="p">(</span><span class="n">mycommand</span><span class="p">)</span>
+</pre></div>
+
+<p>Such literal case patterns may be strings (including raw and byte-strings, but
+not f-strings), numbers, booleans or None.</p>
+<p>Such cases are compared with equality:</p>
+<div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="mi">123</span><span class="p">:</span>
+    <span class="k">case</span> <span class="mf">123.0</span><span class="p">:</span>
+        <span class="c1"># matches!</span>
+</pre></div>
+
+<p>except for booleans and None, which are compared using <code>is</code>:</p>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Any</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+<span class="n">myfalse</span> <span class="o">=</span> <span class="n">Any</span><span class="p">()</span>
+
+<span class="k">match</span> <span class="n">myfalse</span><span class="p">:</span>
+    <span class="n">case</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="c1"># Doesn't match, even though myfalse == False</span>
+        <span class="k">assert</span> <span class="kc">False</span>
+</pre></div>
+
+<h3>Variable names</h3>
+<p>We can replace a literal with a variable name, to capture the value of the match
+expression.</p>
+<div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="n">command</span><span class="p">:</span>
+    <span class="k">case</span> <span class="s1">'start'</span><span class="p">:</span>
+        <span class="o">...</span>
+    <span class="k">case</span> <span class="s1">'stop'</span><span class="p">:</span>
+        <span class="o">...</span>
+    <span class="k">case</span> <span class="n">unknown</span><span class="p">:</span>
+        <span class="c1"># New variable 'unknown' is assigned the value of command</span>
+</pre></div>
+
+<p>The 'default' case pattern <code>_</code> is just a special case variable name which
+binds no name.</p>
+<p>Beware the common error of using "constants" as the case pattern:</p>
+<div class="code"><pre class="code literal-block"><span class="n">NOT_FOUND</span> <span class="o">=</span> <span class="mi">404</span>
+
+<span class="k">match</span> <span class="n">error</span><span class="p">:</span>
+    <span class="k">case</span> <span class="n">NOT_FOUND</span><span class="p">:</span> <span class="c1"># bad</span>
+        <span class="n">handle_404</span><span class="p">()</span>
+</pre></div>
+
+<p>The above case is intended to test for <code>error == NOT_FOUND</code>, but instead
+assigns the variable <code>NOT_FOUND = error</code>. The best defense is to always include
+a default catch-all case at the end, which causes the above <code>NOT_FOUND</code> case to
+produce a SyntaxError:</p>
+<div class="code"><pre class="code literal-block"><span class="n">NOT_FOUND</span> <span class="o">=</span> <span class="mi">404</span>
+
+<span class="k">match</span> <span class="n">error</span><span class="p">:</span>
+    <span class="k">case</span> <span class="n">NOT_FOUND</span><span class="p">:</span>
+        <span class="n">handle_404</span><span class="p">()</span>
+    <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+
+<div class="code"><pre class="code literal-block"><span class="n">SyntaxError</span><span class="o">:</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">capture</span><span class="w"> </span><span class="s1">'NOT_FOUND'</span><span class="w"> </span><span class="n">makes</span><span class="w"> </span><span class="n">remaining</span><span class="w"> </span><span class="n">patterns</span><span class="w"> </span><span class="n">unreachable</span>
+</pre></div>
+
+<p>To use a 'constant' in a case pattern like this, qualify it with a dotted name,
+such as by using an <code>enum.Enum</code>:</p>
+<div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="n">error</span>
+    <span class="k">case</span> <span class="n">errors</span><span class="o">.</span><span class="n">NOT_FOUND</span><span class="p">:</span>
+        <span class="c1"># correctly matches</span>
+</pre></div>
+
+<h3>Sequences</h3>
+<p>Using a list-like or tuple-like syntax, matches must have the right number of
+items. Like Python's existing iterable unpackling feature. Use <code>*</code> to match the
+rest of a sequence. Included variable names are set if a case matches by all
+other criteria.</p>
+<div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="n">command</span><span class="p">:</span>
+    <span class="k">case</span> <span class="p">(</span><span class="s1">'start'</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="c1"># New variable name=command[1]</span>
+    <span class="k">case</span> <span class="p">(</span><span class="s1">'stop'</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="c1"># New variable name=command[1]</span>
+    <span class="k">case</span> <span class="p">(</span><span class="s1">'stop'</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">delay</span><span class="p">):</span>
+        <span class="c1"># New variables name=command[1], delay=command[2]</span>
+    <span class="k">case</span> <span class="p">(</span><span class="s1">'stop'</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="o">*</span><span class="n">extra</span><span class="p">):</span>
+        <span class="c1"># New variables name=command[1], delay=command[2] &amp; extra=command[3:]</span>
+    <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">BadCommand</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+</pre></div>
+
+<h3>Mappings</h3>
+<p>Using a dict-like syntax. The match expression must must contain a
+corresponding mapping, and can contain other keys, too. Use <code>**</code> to match the
+rest of a mapping.</p>
+<div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="n">config</span><span class="p">:</span>
+    <span class="k">case</span> <span class="p">{</span><span class="s1">'host'</span><span class="p">:</span> <span class="n">hostname</span><span class="p">}:</span>
+        <span class="c1"># 'config' must contain key 'host'. New variable hostname=config['host']</span>
+    <span class="k">case</span> <span class="p">{</span><span class="s1">'port'</span><span class="p">:</span> <span class="n">portnumber</span><span class="p">}:</span>
+        <span class="c1"># 'config' must contain key 'port'. New variable portnumber=config['port']</span>
+        <span class="c1"># Remember we only use the first matching case.</span>
+        <span class="c1"># If 'config' contains 'host', then this 'port' case will not match.</span>
+    <span class="k">case</span> <span class="p">{</span><span class="s1">'scheme'</span><span class="p">:</span> <span class="n">scheme</span><span class="p">,</span> <span class="o">**</span><span class="n">extras</span><span class="p">}:</span>
+        <span class="c1"># new variables 'scheme' and 'extras' are assigned.</span>
+</pre></div>
+
+<p>Case patterns may contain more than one key-value pair. The match expression must
+contain all of them to match.</p>
+<div class="code"><pre class="code literal-block">    <span class="k">case</span> <span class="p">{</span>
+        <span class="s1">'host'</span><span class="p">:</span> <span class="n">hostname</span><span class="p">,</span>
+        <span class="s1">'port'</span><span class="p">:</span> <span class="n">portnumber</span><span class="p">,</span>
+    <span class="p">}:</span>
+        <span class="o">...</span>
+</pre></div>
+
+<h3>Objects and their attributes</h3>
+<p>Using class syntax, the value must match an isinstance check with the given class:</p>
+<div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="n">event</span><span class="p">:</span>
+    <span class="k">case</span> <span class="n">Click</span><span class="p">():</span>
+        <span class="c1"># handle click</span>
+        <span class="o">...</span>
+    <span class="k">case</span> <span class="n">KeyPress</span><span class="p">():</span>
+        <span class="c1"># handle key press</span>
+        <span class="o">...</span>
+</pre></div>
+
+<p>Beware the common error of omitting the parens:</p>
+<div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="n">myval</span><span class="p">:</span>
+    <span class="k">case</span> <span class="n">Click</span><span class="p">:</span> <span class="c1"># bad</span>
+        <span class="c1"># handle clicks</span>
+</pre></div>
+
+<p>The above case is intended to test for <code>isinstance(myval, Click)</code>, but instead
+creates a new var, <code>Click = myval</code>. The best defence against this error is to
+always include a default catch-all at the end, which makes the <code>Click</code> catch-all
+produce an error by making subsequent patterns unreachable.</p>
+<p>Attribute values for the class can be given, which must also match.</p>
+<div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="n">event</span><span class="p">:</span>
+    <span class="k">case</span> <span class="n">KeyPress</span><span class="p">(</span><span class="n">key_name</span><span class="o">=</span><span class="s1">'q'</span><span class="p">,</span> <span class="n">release</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="n">game</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+    <span class="k">case</span> <span class="n">KeyPress</span><span class="p">():</span>
+        <span class="n">handle_keypress</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+</pre></div>
+
+<p>Values can also be passed as positional args to the class-like case syntax:</p>
+<div class="code"><pre class="code literal-block">    <span class="k">case</span> <span class="n">KeyPress</span><span class="p">(</span><span class="s1">'q'</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+        <span class="o">...</span>
+</pre></div>
+
+<p>If the class is a namedtuple or dataclass, then positional args to a class-like
+case pattern can automatically be handled using the unambiguous ordering of its
+attributes:</p>
+<div class="code"><pre class="code literal-block"><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">color</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">'dash'</span><span class="p">,</span> <span class="s1">'golden'</span><span class="p">)</span>
+
+<span class="k">match</span> <span class="n">d</span><span class="p">:</span>
+    <span class="k">case</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">'dash'</span><span class="p">,</span> <span class="s1">'golden'</span><span class="p">):</span>
+        <span class="c1"># matches</span>
+</pre></div>
+
+<p>But for regular classes, the ordering of the class attributes is ambiguous.
+To fix this, add a <code>__match_args__</code> attribute on the class, a tuple which
+specifies which class attributes, in which order, can be specified in a case
+pattern:</p>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">KeyPress</span><span class="p">:</span>
+    <span class="n">__match_args__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'key_name'</span><span class="p">,</span> <span class="s1">'release'</span><span class="p">)</span>
+
+<span class="n">event</span> <span class="o">=</span> <span class="n">KeyPress</span><span class="p">(</span><span class="n">key_name</span><span class="o">=</span><span class="s1">'q'</span><span class="p">,</span> <span class="n">release</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="k">match</span> <span class="n">event</span><span class="p">:</span>
+    <span class="k">case</span> <span class="n">KeyPress</span><span class="p">(</span><span class="s1">'q'</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="c1"># matches!</span>
+</pre></div>
+
+<p>As you might expect, the literal positional args can be replaced with variable
+names to capture attribute values instead:</p>
+<div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="n">event</span><span class="p">:</span>
+    <span class="k">case</span> <span class="n">KeyPress</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span> <span class="c1"># names unimportant, order matters</span>
+        <span class="n">handle_keypress</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+</pre></div>
+
+<p>Positional sub-patterns behave slightly differently for builtins <code>bool</code>,
+<code>bytearray</code>, <code>bytes</code>, <code>dict</code>, <code>float</code>, <code>frozenset</code>, <code>int</code>, <code>list</code>, <code>set</code>,
+<code>str</code>, and <code>tuple</code>. A positional value is matched by equality against the match
+expression itself, rather than an attribute on it:</p>
+<div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="mi">123</span><span class="p">:</span>
+    <span class="k">case</span> <span class="nb">int</span><span class="p">(</span><span class="mi">123</span><span class="p">):</span>
+        <span class="c1"># matches</span>
+    <span class="k">case</span> <span class="nb">int</span><span class="p">(</span><span class="mf">123.0</span><span class="p">):</span>
+        <span class="c1"># would also match if it wasn't shadowed</span>
+</pre></div>
+
+<p>Similarly, a positional variable is assigned the value of the match expression
+itself, not an attribute on that value:</p>
+<div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="mi">123</span><span class="p">:</span>
+   <span class="k">case</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="o">...</span>
+
+<span class="k">assert</span> <span class="n">value</span> <span class="o">==</span> <span class="mi">123</span>
+</pre></div>
+
+<p>The values passed as keyword or positional args to class-like case patterns can
+be more than just literals or variable names. In fact they can use <em>any</em> of the
+listed pattern types. For example, they could be a nested instance of this
+class-like syntax:</p>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Location</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+
+<span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">location</span>
+
+<span class="n">mycar</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">Location</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">))</span>
+
+<span class="k">match</span> <span class="n">mycar</span><span class="p">:</span>
+    <span class="k">case</span> <span class="n">Car</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">(</span><span class="n">Location</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">))):</span>
+        <span class="c1"># matches, and captures 'x' and 'y'</span>
+
+<span class="k">assert</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">11</span>
+<span class="k">assert</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">22</span>
+</pre></div>
+
+<h3>Combine patterns usiung <code>|</code>
+</h3>
+<p>To match either one pattern or another:</p>
+<div class="code"><pre class="code literal-block">    <span class="k">case</span> <span class="mi">1</span> <span class="o">|</span> <span class="kc">True</span> <span class="o">|</span> <span class="s1">'true'</span> <span class="o">|</span> <span class="s1">'on'</span> <span class="o">|</span> <span class="s1">'yes'</span><span class="p">:</span>
+        <span class="c1"># matches any of those values</span>
+</pre></div>
+
+<h3>Capture sub-patterns using <code>as</code>
+</h3>
+<p>We've seen how we can either match against a value, or capture the value using
+a variable name. We can do both using <code>as</code>:</p>
+<div class="code"><pre class="code literal-block">    <span class="k">case</span> <span class="s1">'a'</span> <span class="o">|</span> <span class="s1">'b'</span> <span class="k">as</span> <span class="n">ab</span><span class="p">:</span>
+        <span class="c1"># matches either value, captures what the value actually was</span>
+</pre></div>
+
+<p>This might not be much use when capturing the whole match expression like that.
+If the match expression is just a variable, then we could instead simply refer
+to that variable. But using <code>as</code> can be useful when the match expression is
+lengthy or has side-effects:</p>
+<div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="n">events</span><span class="o">.</span><span class="n">get_next</span><span class="p">():</span>
+    <span class="k">case</span> <span class="n">KeyDown</span><span class="p">()</span> <span class="k">as</span> <span class="n">key_event</span><span class="p">:</span>
+        <span class="o">...</span>
+</pre></div>
+
+<p>or to capture just a component of the whole expression. Contrived example:</p>
+<div class="code"><pre class="code literal-block">    <span class="k">case</span> <span class="p">(</span><span class="s1">'a'</span> <span class="o">|</span> <span class="s1">'b'</span> <span class="k">as</span> <span class="n">ab</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">):</span>
+        <span class="c1"># matchs ['a', 'c'] or ['b', 'c'], and captures the first letter in 'ab'</span>
+</pre></div>
+
+<h4>An <code>if</code> guard clause</h4>
+<p>Add arbitrary conditions to the match:</p>
+<div class="code"><pre class="code literal-block">    <span class="k">case</span> <span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="c1"># matches integers less than 100</span>
+</pre></div>
+
+<p>Or, alternatively:</p>
+<div class="code"><pre class="code literal-block">    <span class="k">case</span> <span class="nb">int</span><span class="p">()</span> <span class="k">as</span> <span class="n">i</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+        <span class="c1"># matches integers less than 100</span>
+</pre></div>
+
+<h2>Complications</h2>
+<p>This feature seems rife with complexity. The flexible syntax of case patterns
+forms a new mini-language, embedded within Python. It has many similarities to
+Python, but also many initially unintuitive differences.</p>
+<p>For example, a class-like case pattern such as <code>case Click():</code>. Anywhere else
+in the language, the expression like <code>Click(...)</code> would create an instance of the
+<code>Click</code> class. In a case statement, it instead is doing things like
+<code>isinstance</code> and <code>hasattr</code> checks.</p>
+<p>Similarly, including variable names doesn't return the variable value as in
+ordinary Python. Instead it binds a value as that name. This is the source of
+the annoying gotcha described above, that bare "constants" like <code>NOT_FOUND</code>
+behave very unexpectedly when used as case expressions.</p>
+<p>There are a few places in real-world code where structured pattern matching
+will produce nicer code than the equivalent using nested <code>elif</code>s. But equally,
+there are a lot of places where the <code>elif</code>s are a more natural match.
+Developers now get to choose which they're going to use, and then later
+disagree with each other about it, or simply change their mind, and end up
+converting code from one to the other.</p>
+<p>If this was a simple feature, with low overheads, then I'd forgive its
+inclusion in the language, accepting the costs in return for the marginal and
+unevenly distributed benefits.</p>
+<p>But it's really not simple. In addition to Python programmers all having to
+do an exercise like this post just to add it to their mental toolbox, it needs
+maintenance effort, not just in CPython but in other implementations too, and
+needs handling by tools such as syntax highlighters, type checkers. It really
+doesn't seem like a net win to me, <em>unless</em> you're writing way more parsers
+than the average programmer, which no doubt the champions of this feature are.</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/ur-fascism/" class="u-url">Ur-Fascism</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -1693,111 +2050,6 @@ to seek each other's life-giving sustenance.</p>
 <p>I don't know who the two internet randos were, with whom I shared the first and
 second halves of my journey. But in those minutes together, we lived a
 lifetime's worth.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/the-expanse/" class="u-url">The Expanse</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/the-expanse/" rel="bookmark">
-            <time class="published dt-published" datetime="2022-04-08T14:42:40-05:00" itemprop="datePublished" title="2022-04-08 14:42">2022-04-08 14:42</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p><img alt="The Expanse screencap" src="files/2022/the-expanse-screencap.webp"></p>
-<p>(This post rescues content from
-<a href="https://www.facebook.com/mfoord/posts/10158389841835880?comment_id=10158390351245880I">a Facebook comment</a> I got carried away with recently.)</p>
-<p>There's so much to write about the Expanse. It's such a relief to find a
-science fiction show with an ambitiously futuristic setting depicted in a way
-that doesn't make scientifically literate people cringe and shout at the
-television.</p>
-<p>Also, it shines at taking the time for quiet moments of character work, from
-Miller's lonely, poignant realization in s01 that he wasn't the talented
-office maverick, just incompetent and unreliable, right up to the quiet,
-unseen payoff of Naomi's years-long efforts to save her son from his father's
-influence, in the final seconds of s06.</p>
-<p>On many axes, it's the best SF on television, which is saying something, as
-there are so many competitors. Science fiction output is following some sort
-of Moore's law of endless expansion, in response to society's need for
-mythic stories of relevance to modern life, itself a symptom of the meaning
-crisis of modern society. But this is a mixed blessing, because the resulting
-shows &amp; movies are often drawn to using the superficial trappings of science
-fiction, spaceships and lasers (pew pew!), while failing to fulfil the deeper
-psychological needs of mythical or symbolic significance that brought about
-their creation. The Expanse is perhaps the prime example of this.</p>
-<p><a href="posts/the-expanse/damiengwalter.com">My fantastic SF podcast guy</a> defines SF as the arena in
-which we forge new myths of psychological meaning for modern life, which are
-sorely needed as traditional myths dwindle in relevance, as they are
-predominantly based on nature and superstition. Movements such as spiritual
-atheism are a reflection that even the least spiritual amongst us recognize
-that something is missing.</p>
-<p>I do concede that defining SF in this way is a bit of a cheat. It's somewhat
-aggrandizing, claiming any great mythic work as actually being part of the
-SF genre, an no doubt is a somewhat defensive reaction to mainstream
-dismissal of science fiction as puerile. But it does provide a marvellous
-framework for discussion, and adopting this definition makes several
-previously puzzling things fall into place.</p>
-<p>It settles the revealing, never-ending debates over which works are, and
-are not, science fiction. Somewhat tellingly, to me, such debates are
-irreconcilable precisely because of the misnomer "science fiction", which was
-never really about the science to begin with, as this style of fiction has
-existed long before science was the focus. It only gravitated towards using
-science as it became apparent that is now where society's power and
-transformation springs from - our incarnation of gods and magic - and the name
-"science fiction" was then applied post-facto, missing the underlying fact
-that this is just mythic fiction with some modern attributes.</p>
-<p>This definition perfectly explains things like how the first half of the movie
-"Sunshine" could be such astonishing science-fiction, while the second half
-- set aboard the exact same spaceship - is just a mediocre slasher flick.</p>
-<p>So. SF is the arena within which we construct new mythic narratives.</p>
-<p>By this I mean that great science fiction tends to create a story that
-resonates because it leans on powerful mythic tropes - symbolic
-representations of psychological significance, character arcs mirroring
-Jungian archetypes, thematic elements that are told allegorically, suggesting
-things to the reader/watcher on a level that can be more powerful than merely
-stating them directly to the conscious mind.</p>
-<p>In this way, all-time-great examples such as <em>2001: A Space Odyssey</em> (the
-title being conscious of this mythic entanglement) leans heavily into themes
-such as humanity watched over by an ancient, mysterious, godlike alien
-influence which has literally created humanity in its present form, and
-observes as we now reach a second inflection point, materializing not
-just a tale of personal transcendence (although it is certainly that), but one
-of species-wide sublimation - suggesting that it is time for us all to reach
-spiritual adulthood, to graduate to whatever comes next, to meet and be
-transformed by the wise and powerful force that has shepherded humanity
-through our previous prehistorical transitions.</p>
-<p>I could go on with similar examples, but will just briefly mention the original
-Matrix movie, which is a story which resonates because it is absolutely soaked
-in allegory of both religious transcendence and Jungian archetypes - which are
-so on-the-nose that it cannot possibly be accidental, a fact acknowledged
-directly by the creators in the sequels, when they depict the Architect,
-ultimate villain encountered at the narrative peak of the story, as a prim,
-middle aged, white bearded gentleman, wearing an Edwardian suit. He speaks in a
-precise, almost Germanic manner. This is, unmistakably, Sigmund Freud. Why is
-Freud the villain of the Matrix? Because Freud was a contemporaneous antagonist
-to Jung, resisting Jung's ideas of self actualization through reconciliation of
-the archetypes, just as the Architect resists Neo's progression along that same
-path.</p>
-<p>It may be my own lack of imagination, but compared to examples like this, the
-Expanse starts to look a bit thin. I don't see any symbolism or allegory.
-There is some good character work but no actual arcs of transcendence. Through
-the unfortunate realities of converting books to screen, large chunks of what
-could have been the most meaningful story were simply abandoned and will
-apparently never be finished on the screen. In their stead, what would have
-been mythic elements become a series of "McGuffin of the week", as we never
-circle back to resolve why the protomolecule was created, why it was sent to
-our ancient solar system, why it turns people into nuclear-powered zombies,
-and what force destroyed the protomolecule creators, and why? And that's just
-series one's unresolved elements.</p>
-<p>So, lacking that, what the Expanse has to offer is its superlative
-world-building and sane, believable depictions of a gritty interplanetary
-future. Which is no small feat - arguably nobody else has done it better. But,
-for me, it isn't enough. Maybe that's just because I'm a godless heathen who
-looks to get my spiritual fix through TV shows about spaceships. Or maybe it's
-because science fiction is where we show ourselves what we're capable of, what
-to aim for, and I believe we can aim higher than just exciting technological
-dystopias.</p>
     </div>
     </article>
 </div>
