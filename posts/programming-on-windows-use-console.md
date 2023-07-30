@@ -2,12 +2,8 @@
 .. title: Programming on Windows : Use Console
 .. slug: programming-on-windows-use-console
 .. date: 2009-10-09 18:18:50-05:00
-.. tags: software,mswin-dev,terminal
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,software,mswin-dev,terminal
 -->
-
 
 Developing software on Microsoft Windows is a bloody awful experience
 compared to the boyish flamboyance of Macs or the mad scientist

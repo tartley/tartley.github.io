@@ -2,12 +2,8 @@
 .. title: Making a wix installer run a program by default
 .. slug: making-a-wix-installer-run-a-program-by-default
 .. date: 2009-10-01 18:27:29-05:00
-.. tags: software
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,software,mswin-dev
 -->
-
 
 ***Guest post by my least favourite colleague, Tom.***
 

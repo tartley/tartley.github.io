@@ -2,9 +2,8 @@
 .. title: TIL: Launch Gitk displaying all branches
 .. slug: launch-gitk-displaying-all-extant-branches
 .. date: 2010-12-31 12:25:31-06:00
-.. tags: git,mswin-dev,software,til,terminal
+.. tags: geek,git,mswin-dev,software,til,terminal
 -->
-
 
 **Update:** All of the below is made totally redundant by simply using
 `gitk --all`. Thanks Russel!

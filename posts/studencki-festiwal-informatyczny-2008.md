@@ -2,12 +2,8 @@
 .. title: Studencki Festiwal Informatyczny 2008
 .. slug: studencki-festiwal-informatyczny-2008
 .. date: 2008-03-12 11:00:19-05:00
-.. tags: journal,software,presentations
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,journal,software,presentations
 -->
-
 
 I had the good fortune to attend the [Academic IT
 Festival](http://www.sfi.org.pl/news) over the weekend, in Cracow,

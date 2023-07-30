@@ -2,10 +2,7 @@
 .. title: On Estimates
 .. slug: on-estimates
 .. date: 2009-06-18 09:40:15-05:00
-.. tags: software
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,software
 -->
 
 

@@ -2,8 +2,7 @@
 .. title: Minerva: Metastasis
 .. slug: minerva-metastasis
 .. date: 2007-04-05 00:24:11-05:00
-.. tags: media,videogame,windows,completed
-.. type: text
+.. tags: geek,media,videogame,windows,completed
 -->
 
 *PC, Mod of Half-Life 2. By Adam Foster, 2006.* ![spoilers](/files/spoilers.svg)

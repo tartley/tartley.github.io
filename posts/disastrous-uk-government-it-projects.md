@@ -2,9 +2,8 @@
 .. title: Disastrous UK Government IT Projects
 .. slug: disastrous-uk-government-it-projects
 .. date: 2008-01-10 14:50:05-06:00
-.. tags: journal,software
+.. tags: geek,journal,software
 -->
-
 
 I recently penned the following for my local
 [No2ID](http://www.no2id.net/) mailing list (the Camden & Islington

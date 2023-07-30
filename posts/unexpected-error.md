@@ -2,12 +2,8 @@
 .. title: Unexpected Error
 .. slug: unexpected-error
 .. date: 2007-08-18 15:33:47-05:00
-.. tags: journal,software
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,journal,software
 -->
-
 
 So I'm helping a friend create a small website. Casting around for
 lightweight tools, I remember that [an intelligent and influential

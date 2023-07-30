@@ -2,7 +2,7 @@
 .. title: TIL: MSWindows Programming : Propogating child process exit values out of .bat scripts
 .. slug: mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts
 .. date: 2010-01-21 20:04:25-06:00
-.. tags: software,mswin-dev,terminal,til
+.. tags: geek,software,mswin-dev,terminal,til
 -->
 
 "God *dammit*. Why won't you just DO what I WANT you hopeless pile of

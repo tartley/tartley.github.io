@@ -2,12 +2,8 @@
 .. title: A Guide to GIT using spatial analogies
 .. slug: a-guide-to-git-using-spatial-analogies
 .. date: 2010-12-15 14:40:14-06:00
-.. tags: git,version-control,software
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,git,version-control,software
 -->
-
 
 Some developers find Git takes a little getting used to, claiming that
 it is conceptually convoluted compared to other distributed version

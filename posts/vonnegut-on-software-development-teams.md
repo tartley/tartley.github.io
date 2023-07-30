@@ -2,9 +2,8 @@
 .. title: Vonnegut on software development teams.
 .. slug: vonnegut-on-software-development-teams
 .. date: 2019-06-30 21:28:04-05:00
-.. tags: software,literature,culture,greatness,vonnegut
+.. tags: geek,software,literature,culture,greatness,vonnegut
 -->
-
 
 So here's a thing. Spotted this in some of Kurt Vonnegut's personal
 correspondence, talking about an instructor of his named Slotkin:

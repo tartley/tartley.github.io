@@ -2,12 +2,8 @@
 .. title: The Great Resolver IDE Anecdote
 .. slug: the-great-resolver-ide-anecdote
 .. date: 2010-05-04 12:56:47-05:00
-.. tags: imho,software
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,imho,software
 -->
-
 
 Found myself telling this story yet again, so I figured I should just
 post it here and start linking to it, rather than remembering, retyping

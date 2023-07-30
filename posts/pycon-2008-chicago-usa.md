@@ -2,12 +2,8 @@
 .. title: PyCon 2008, Chicago, USA
 .. slug: pycon-2008-chicago-usa
 .. date: 2008-03-19 22:14:13-05:00
-.. tags: software,journal,python,testing,presentations
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,software,journal,python,testing,presentations
 -->
-
 
 ![PyCon USA 2008](/files/2008/03/pyconusa2008.jpg)
 

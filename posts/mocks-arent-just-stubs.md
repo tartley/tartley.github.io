@@ -2,10 +2,7 @@
 .. title: Mocks Aren't (Just) Stubs
 .. slug: mocks-arent-just-stubs
 .. date: 2007-04-22 21:28:07-05:00
-.. tags: testing,software
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,testing,software
 -->
 
 

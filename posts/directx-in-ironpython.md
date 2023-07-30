@@ -2,10 +2,7 @@
 .. title: DirectX in IronPython
 .. slug: directx-in-ironpython
 .. date: 2007-06-12 08:40:52-05:00
-.. tags: software,python,graphics
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,software,python,graphics
 -->
 
 

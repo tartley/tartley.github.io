@@ -2,12 +2,8 @@
 .. title: pyglet week 2: Better Vertex Throughput
 .. slug: pyglet-week-2-better-vertex-throughput
 .. date: 2008-02-16 04:24:33-06:00
-.. tags: software,python,graphics
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,software,python,graphics
 -->
-
 
 In last week's [2D Graphics With pyglet and OpenGL](/2d-graphics-with-pyglet-and-opengl),
 I used the [pyglet](http://www.pyglet.org/) library to produce some OpenGL

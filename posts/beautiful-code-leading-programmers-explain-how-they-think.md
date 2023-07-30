@@ -2,10 +2,7 @@
 .. title: Beautiful Code : Leading Programmers Explain How They Think
 .. slug: beautiful-code-leading-programmers-explain-how-they-think
 .. date: 2008-02-23 01:29:04-06:00
-.. tags: media,book,non-fiction,software
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,media,book,non-fiction,software
 -->
 
 <span style="float: left">

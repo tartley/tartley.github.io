@@ -2,14 +2,13 @@
 .. title: Python Deployment Sucks
 .. slug: python-deployment-sucks
 .. date: 2009-09-28 13:26:45-05:00
-.. tags: software,python
+.. tags: geek,software,python
 -->
 
-
-I don't want to whinge just for the sake of whinging. But I think it's
+I don't want to whinge. But I think it's
 healthy to assess something I currently find difficult, that I might
-better understand where the deficiencies lie and how they might be
-addressed.
+better understand where the deficiencies lie - probably in me - and how they
+might be addressed.
 
 Deploying a Python program to fellow programmers is easy - just send
 them the script, they can install the interpreter if they haven't

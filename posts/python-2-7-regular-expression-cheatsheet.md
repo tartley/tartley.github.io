@@ -2,9 +2,8 @@
 .. title: Python 2.7 regular expression cheatsheet
 .. slug: python-2-7-regular-expression-cheatsheet
 .. date: 2011-10-14 11:20:11-05:00
-.. tags: software,python,terminal
+.. tags: geek,software,python,terminal
 -->
-
 
 Couldn't find one of these, so I whipped one up.
 

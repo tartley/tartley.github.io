@@ -2,10 +2,7 @@
 .. title: Loving EuroPython Tutorials
 .. slug: loving-europython-tutorials
 .. date: 2010-07-19 00:08:53-05:00
-.. tags: software,python,graphics,gamedev
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,software,python,graphics,gamedev
 -->
 
 

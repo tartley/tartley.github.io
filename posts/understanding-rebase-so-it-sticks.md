@@ -2,9 +2,8 @@
 .. title: TIL: Understanding git rebase so it sticks
 .. slug: understanding-rebase-so-it-sticks
 .. date: 2014-02-07 10:28:37-06:00
-.. tags: software,git,terminal,til
+.. tags: geek,software,git,terminal,til
 -->
-
 
 I endlessly misremember how to use git rebase. That ends today. Here are
 my notes to help me remember.

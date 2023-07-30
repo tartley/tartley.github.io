@@ -2,12 +2,8 @@
 .. title: Resolver One 1.0
 .. slug: resolver-one-10
 .. date: 2008-01-17 12:12:19-06:00
-.. tags: journal,python,software
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,journal,python,software
 -->
-
 
 [![Resolver](/files/2008/01/resolver.jpg)](http://www.resolversystems.com/news/?p=36 "Resolver")
 

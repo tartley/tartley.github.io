@@ -2,8 +2,7 @@
 .. title: Object-Oriented Software Engineering : A Use Case Driven Approach
 .. slug: object-oriented-software-engineering-a-use-case-driven-approach
 .. date: 2014-02-02 14:26:43-06:00
-.. tags: media,book,non-fiction,software
-.. type: text
+.. tags: geek,media,book,non-fiction,software
 -->
 
 <span style="float: left">

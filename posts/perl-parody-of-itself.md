@@ -2,10 +2,7 @@
 .. title: Perl: parody of itself
 .. slug: perl-parody-of-itself
 .. date: 2007-07-27 13:35:12-05:00
-.. tags: software
-.. link: 
-.. description: 
-.. type: text
+.. tags: geek,software
 -->
 
 
