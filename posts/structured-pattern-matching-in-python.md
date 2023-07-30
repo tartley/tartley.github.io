@@ -5,7 +5,7 @@
 .. tags: geek, python, software
 -->
 
-I read through desriptions of
+I read through descriptions of
 [structured pattern matching](https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement)
 when it was added in Python 3.10 a couple of years ago, and have studiously
 avoided it ever since. It seemed like a language feature that's amazingly
@@ -154,7 +154,7 @@ match error
 ## Sequences
 
 Using a list-like or tuple-like syntax, matches must have the right number of
-items. Like Python's existing iterable unpackling feature. Use `*` to match the
+items. Like Python's existing iterable unpacking feature. Use `*` to match the
 rest of a sequence. Included variable names are set if a case matches by all
 other criteria.
 
@@ -215,7 +215,7 @@ match event:
         ...
 ```
 
-Beware the common error of omitting the parens:
+Beware the common error of omitting the parentheses:
 
 ```python
 match myval:
@@ -336,7 +336,7 @@ assert x == 11
 assert y == 22
 ```
 
-## Combine patterns usiung `|`
+## Combine patterns using `|`
 
 To match either one pattern or another:
 
