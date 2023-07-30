@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek)</title><link>https://tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 30 Jul 2023 23:13:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Structured Pattern Matching in Python</title><link>https://tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through desriptions of
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek)</title><link>https://tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 30 Jul 2023 23:49:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Structured Pattern Matching in Python</title><link>https://tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
 &lt;a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement"&gt;structured pattern matching&lt;/a&gt;
 when it was added in Python 3.10 a couple of years ago, and have studiously
 avoided it ever since. It seemed like a language feature that's amazingly
@@ -121,7 +121,7 @@ such as by using an &lt;code&gt;enum.Enum&lt;/code&gt;:&lt;/p&gt;
 
 &lt;h3&gt;Sequences&lt;/h3&gt;
 &lt;p&gt;Using a list-like or tuple-like syntax, matches must have the right number of
-items. Like Python's existing iterable unpackling feature. Use &lt;code&gt;*&lt;/code&gt; to match the
+items. Like Python's existing iterable unpacking feature. Use &lt;code&gt;*&lt;/code&gt; to match the
 rest of a sequence. Included variable names are set if a case matches by all
 other criteria.&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -172,7 +172,7 @@ contain all of them to match.&lt;/p&gt;
         &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Beware the common error of omitting the parens:&lt;/p&gt;
+&lt;p&gt;Beware the common error of omitting the parentheses:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;myval&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Click&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# bad&lt;/span&gt;
         &lt;span class="c1"&gt;# handle clicks&lt;/span&gt;
@@ -274,7 +274,7 @@ class-like syntax:&lt;/p&gt;
 &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3&gt;Combine patterns usiung &lt;code&gt;|&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;Combine patterns using &lt;code&gt;|&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;To match either one pattern or another:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'true'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'on'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'yes'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="c1"&gt;# matches any of those values&lt;/span&gt;
@@ -338,7 +338,437 @@ do an exercise like this post just to add it to their mental toolbox, it needs
 maintenance effort, not just in CPython but in other implementations too, and
 needs handling by tools such as syntax highlighters, type checkers. It really
 doesn't seem like a net win to me, &lt;em&gt;unless&lt;/em&gt; you're writing way more parsers
-than the average programmer, which no doubt the champions of this feature are.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/structured-pattern-matching-in-python/</guid><pubDate>Sat, 29 Jul 2023 23:15:26 GMT</pubDate></item><item><title>TIL: Format Python Snippets with Black.</title><link>https://tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+than the average programmer, which no doubt the champions of this feature are.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/structured-pattern-matching-in-python/</guid><pubDate>Sat, 29 Jul 2023 23:15:26 GMT</pubDate></item><item><title>TIL: Makefiles that are self-documenting, and process all extant files.</title><link>https://tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;h3&gt;Self-documenting Makefiles&lt;/h3&gt;
+&lt;p&gt;A trick from years ago, but I copy it around between projects enough that it
+deserves calling out. Add a target:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;help&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## Show this help.&lt;/span&gt;
+&lt;span class="c"&gt;    @# Optionally add 'sort' before 'awk'&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;@grep&lt;span class="w"&gt; &lt;/span&gt;-E&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'^[a-zA-Z_\.%-]+:.*?## .*$$'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;MAKEFILE_LIST&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;awk&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'&lt;/span&gt;
+&lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;help&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Decorate other targets with a descriptive '##' comment, like "&lt;em&gt;Show this help&lt;/em&gt;"
+above. Now calling the 'help' target will summarize all the things the Makefile
+can do. eg:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ make help
+help       Show this help.
+setup      Install required system packages using 'apt install'.
+%.pdf      Generate given PDF from corresponding .tex file.
+all        Convert all .tex files to PDF.
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You might choose to make 'help' the first target in the Makefile, so that it
+gets triggered when the user runs &lt;code&gt;make&lt;/code&gt; without arguments.&lt;/p&gt;
+&lt;h3&gt;Process all extant files&lt;/h3&gt;
+&lt;p&gt;Make's canonical paradigm is that you tell it the name of the file to generate,
+and it uses the tree of dependencies specified in the Makefile to figure out
+how to build it. Typically you'll use automatic variables like "$&amp;lt;" to represent
+the wildcarded source filename:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;%.pdf&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;%.&lt;span class="n"&gt;tex&lt;/span&gt; &lt;span class="c"&gt;## Generate given PDF from corresponding .tex file.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;pdflatex&lt;span class="w"&gt; &lt;/span&gt;$&amp;lt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The pitfall is that when invoking this, you have to name all the PDF files you
+want to generate. If the names are a fixed part of your build, they can be
+embedded in the Makefile itself:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;one&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt; &lt;span class="n"&gt;two&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt; &lt;span class="n"&gt;three&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But if their names are dynamic, you have to specify them on the command line,
+which is a pain:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;one.pdf&lt;span class="w"&gt; &lt;/span&gt;two.pdf&lt;span class="w"&gt; &lt;/span&gt;three.pdf
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is easy enough when &lt;em&gt;re-&lt;/em&gt;generating all the PDFs that already exist:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;*.pdf
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;but is no help when you just have a bunch of .tex files and you just want Make
+to build all of them. This is going the opposite way to canonical make usage.
+We want to specify the existing source files (&lt;code&gt;*.tex&lt;/code&gt;, in this case), and have
+Make build the resulting products.&lt;/p&gt;
+&lt;p&gt;To do it, we need our Makefile to enumerate the existing source files:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;TEX_FILES&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;wildcard&lt;span class="w"&gt; &lt;/span&gt;*.tex&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Using the 'wildcard' function here behaves better than a bare wildcard
+expansion, e.g. it produces no output when there are no matches, rather than
+outputting the unmatched wildcard expression.&lt;/p&gt;
+&lt;p&gt;Then use a substitution to generate the list of .pdf filenames:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;all&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;TEX_FILES:%.tex&lt;span class="o"&gt;=&lt;/span&gt;%.pdf&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will generate one .pdf file for each extant .tex file, regardless of
+whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>command-line</category><category>geek</category><category>make</category><category>til</category><guid>https://tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>Astroneer Resource Graph</title><link>https://tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
+get each of the resources in &lt;a href="https://astroneer.space/"&gt;Astroneer&lt;/a&gt;. Click the WEBP
+thumbnail below to get the full glorious SVG, then you can '&lt;em&gt;find in page&lt;/em&gt;' on it.
+(&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>map</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
+&lt;img alt="Spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+&lt;p&gt;Major spoilers ahead. It's seven years old at this point.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;center&gt;
+&lt;img alt="Soma - protagonist" src="https://tartley.com/files/2022/soma-protagonist.webp"&gt;
+&lt;/center&gt;&lt;br&gt;
+&lt;p&gt;Soma is a creepy survival horror game, that leans deeply into the moral and
+existential quandaries arising from the deterministic principle that it's
+possible to scan one's brain and copy the structure into some other substrate,
+yielding a second conscious entity, which thinks it is you. So there are deep
+science-fiction issues in play here, about whether we think such a scheme could
+ever possibly work, and about the practical, personal, and societal
+ramifications of it.&lt;/p&gt;
+&lt;p&gt;I loved the setup. A humdrum morning begins in your present-day Toronto
+apartment. A note on the fridge reminds you that today is the day of your
+medical appointment, a brain scan. Reaching the doctor's office by train, you
+find the experimental new type of brain scanner, run by some PhD in a
+cable-strewn side-office. Sit in the chair, don the helmet, wait for the scan
+to complete and- blink! Suddenly, you are elsewhere.&lt;/p&gt;
+&lt;p&gt;As the game progresses, it becomes obvious that the version of you that sat
+down in the seat did not experience this discontinuity. They completed the
+scan, removed the helmet, and continued their normal, everyday life.&lt;/p&gt;
+&lt;p&gt;You are not that copy. You open your eyes to a grim, decrepit cyberpunk future.
+Exploring, your only company is a menagerie of half-functional robots and
+drones, many of which are insane, and, in conversation, seem to be under the
+impression that they are human beings. It gradually becomes apparent that
+perceptual filters are in play, preventing them - and you - from noticing they
+are no longer human. At one point the ocean crashes in on you, and you drown
+for a little while, or at least think you are, but you still don't die. At that
+point you have to acknowledge the truth.&lt;/p&gt;
+&lt;p&gt;You have awoken to the year 2104, and the recorded brain scans of real humans
+are being used to animate drones. This is a scenario much like that told from a
+different perspective in the smashing short story
+&lt;a href="https://qntm.org/mmacevedo"&gt;&lt;em&gt;Lena&lt;/em&gt;&lt;/a&gt; by qntm.
+Failing systems engaged fall-backs, resulting in your obsolete brain scan being
+yanked from storage to inhabit an advanced humanoid robot, in a facility deep
+under the ocean, some time after a comet strike has scoured all life from the
+planet's surface.&lt;/p&gt;
+&lt;p&gt;If that wasn't bad enough, one facilitating technology of this nightmarish
+scenario, a black goo that mimics and improves upon electrical and biological
+circuitry it comes into contact with, has run rampant, growing probing tendrils
+which are wrecking the facility. Among other effects, it has reanimated the
+corpses of the last few humans, who skulk around, not in a good way. As our
+protagonist asks, incredulously, "You mean they've been brought back to life?".
+Our reassuring AI companion replies "Yeah, let's call it that."&lt;/p&gt;
+&lt;p&gt;The game borrows the highly effective mechanics of Frictional's previous games,
+the Amnesia and Penumbra series, where the proximity of horrific, shambling
+enemies causes your character to experience debilitating symptoms, including,
+in this case, static-y visual distortions as your neural hardware suffers from
+some overload or interference. This applies even if you simply look at an
+enemy, an act which immediately draws their attention. So your only chance to
+survive encounters is to stay well out of sight, and actively avert your eyes
+so you can't even watch what's going on. Not being able to see exactly what
+your enemies are, or what they are up to, turns out to be fabulously scary and
+atmospheric. At one point it lead directly to my wife catching me staring
+intently at a blank, black screen for a prolonged period, with a peculiar
+expression on my face, as I hid in a dark cupboard waiting for the slithering
+sounds behind me to go away.&lt;/p&gt;
+&lt;p&gt;Spurring us through this environment are not just threats to our immediate
+survival, but also the adoption of a project, to launch into space a
+solar-powered simulation, hosting all the last remaining brain scans of the
+now-defunct human race, known as the 'ARK'. This will allow the on-board sims
+to live a prolonged period of idyllic virtual existence, preserving at least
+some echo of what humanity was. Since the conceit of the game is that our
+character is a living and conscious entity that feels real emotion, the sims on
+the ARK are all presumably the same, so this seems like a worthwhile endeavor.&lt;/p&gt;
+&lt;p&gt;We are guided, motivated, and assisted by "Catherine", a simulated personality
+running on our hand-held omni-tool, based on the brain recording of an AI
+researcher, whose project during her lifetime was the ARK. Plugging her in to a
+wall or console socket lets her interface with our surroundings, activating
+power supplies and manipulating machinery. She leads us through a series of
+undersea facilities, linked by trains, submersibles, and the occasional
+disorienting trudge across the murky ocean floor, stirred up by ferocious
+currents and landslides, populated by organic-mechanical hybrid horrors that
+glide by in the darkness. I found these some of the absolute best, most
+atmospheric "walking simulator" moments I've experienced in a game.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;center&gt;
+&lt;img alt="The ocean floor, stirred up by currents and landslides" src="https://tartley.com/files/2022/soma-murky.webp"&gt;
+&lt;br&gt;Is that another distant light up ahead? Good luck finding them while the currents pummel you,
+and hideous, deadly beasts loom out of the murk.
+&lt;/center&gt;&lt;br&gt;
+&lt;p&gt;Along the way, we encounter a few unforgettable scenarios. We come across the
+failing storage system in which the last remaining copy of our own brain scan
+resides. I decide to flip some buttons which delete it, prompting my character
+to respond with something like "Let this be the last time I wake up in this
+godforsaken place."&lt;/p&gt;
+&lt;p&gt;At another point, we find ourselves trapped within a collapsing facility on the
+bottom of the ocean, with the gibbering undead hammering on the door from the
+next room. There is an airlock leading out into the ocean, but we would be
+crushed at this depth. There is no way out. Luckily, Catherine is able to guide
+us into assembling a more robust robot, one capable of withstanding the
+pressure - all we have to do is sit in the chair and activate the transfer into
+it. We already did this once, back in Toronto. Easy.&lt;/p&gt;
+&lt;p&gt;Except, after the transfer, we glance back across the lab at our original - the
+pictured chap with red LED eyes - who, we notice, is still breathing. Asking
+Catherine about it, she reminds us that the brain scan is not a destructive
+operation. He's still in there, chemically subdued for the moment, but he'll
+soon wake up again, wondering why the transfer didn't work. So we are left with
+the option of stomping out of the airlock to safety, leaving him behind to his
+nightmarish fate. Or flipping a switch to deactivate him before we go.&lt;/p&gt;
+&lt;p&gt;A lot of these narrative beats work better as a game than they perhaps might in
+a written story. They emphasize the player's complicity, your moral
+culpability, which is a mode that games, for all their faults, can do better
+than any other media. Plenty of the lesser moments along the way expose the
+player to decisions about unplugging some human simulation or other which
+declares itself to be "alive", but which is gating your progress in some way.
+Some of them are yourself. Some of these acts require manhandling weighty
+cables, which require large, insistent tugging with the mouse controls. It's
+not just a disembodied button press. One has to provide a determined,
+definitive, mechanical input to end a life. In context, the guilt feels real.&lt;/p&gt;
+&lt;p&gt;Later in the journey, we finally stumble across an honest-to-goodness real,
+live human being. She describes how the rest of the humans will be gathered in
+particular locations, while she stayed to protect the ARK. But, we tell her, we
+just passed through those locations, and there were no humans remaining there.
+We both know that the planet's surface is sterile. A beat passes before she
+announces "So I'm the last human being left alive." She's deathly sick, and
+without hope. By the end of your interactions she asks you to turn off her
+life-support before you leave, and stay with her for her last wheezing moments.
+So this is how humanity ends.&lt;/p&gt;
+&lt;p&gt;Carrying on, because what else is there to do? We finally we get the ARK loaded
+into the launch system that delivers it to orbit, upload our brain scans onto
+it just before it launches, and - we've done it! Success!&lt;/p&gt;
+&lt;p&gt;There was a moment, about five minutes before the end, when I realized what was
+going to happen here, even though my character had not. It was a real emotional
+blow. I envied and pitied him for his naive hope. For believing there was still
+a way out. For, of course, the ARK's launch changed nothing for us. Our
+simulations are aboard it, but we are still sitting here, in a broken robot
+corpse in a collapsing facility at the bottom of a haunted ocean on a dead
+planet. The dispatched copy will enjoy life on the ARK, but we - like the copy
+of ourselves we left behind earlier - are stuck here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>Journey</title><link>https://tartley.com/posts/journey/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2022/journey-screenshot.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Released on PlayStation 3 by thatgamecompany in 2012. Played on Windows 10 in
+2022.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The slow-paced opening scenes, alternately trudging up and then surfing down
+sunbaked desert dunes, failed to sustain Zander's interest, so I ended up
+playing through its short runtime by myself.&lt;/p&gt;
+&lt;p&gt;In some ways it's an indictment of videogame culture that ten years later it
+still feels so fresh and radical to pair players up with another internet
+rando, while giving them no means to communicate or interact other than helping
+each other out, either leading by example, or exchanging wordless shouts. It
+seems like a pretty limited repertoire at first. I'm half tempted to just wander
+off ahead, alone, into the endless desert.&lt;/p&gt;
+&lt;p&gt;Then, you realize that standing close enough together recharges each other's
+magical flying scarves. Suddenly, it's enough. You cling to each other for dear
+life through the howling storms, double back to rescue each other from prowling
+beasts, and then fly exuberantly above the sunlit clouds, forever curving back
+to seek each other's life-giving sustenance.&lt;/p&gt;
+&lt;p&gt;I don't know who the two internet randos were, with whom I shared the first and
+second halves of my journey. But in those minutes together, we lived a
+lifetime's worth.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://tartley.com/posts/journey/</guid><pubDate>Mon, 09 May 2022 11:22:20 GMT</pubDate></item><item><title>TIL: Creating Animated Meme GIFs on the Command-Line</title><link>https://tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
+animated gif memes, finally figured out how to do it manually. Not a universal
+process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
+&lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
+show the commands as I used them, as I was figuring each step out.&lt;/p&gt;
+&lt;h4&gt;1. Download a video&lt;/h4&gt;
+&lt;p&gt;Starting from a video on YouTube:&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6-gJMs6DwuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;To download this locally,
+&lt;a href="https://github.com/ytdl-org/youtube-dl"&gt;install &lt;code&gt;youtube-dl&lt;/code&gt;&lt;/a&gt;,
+hit the YouTube &lt;em&gt;share&lt;/em&gt; button to grab the video's encoded URL,
+and:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl https://youtu.be/6-gJMs6DwuE -o Ash.mp4
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This gives me an 850KB .mp4 video file.&lt;/p&gt;
+&lt;h4&gt;2. Split&lt;/h4&gt;
+&lt;p&gt;I only want the final few seconds. To remove the start of the video,
+keeping from 6.5 seconds until the end:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -hide_banner -i Ash.mp4 -acodec copy -vcodec libx264 -ss 00:00:06.5 Ash-split.mp4
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Args to ffmpeg are position sensitive. Specifying '-ss' (to split the file)
+before the input ('-i') can't create the split at an accurate location, since
+it has to guess whereabouts in the file the given timestamp will occur. But
+putting it after the input (as done here) means it can split accurately on the
+given timestamp, since the file has been processed by the time this arg gets
+actioned, so accurate timestamp/frame conversion is known, at the cost of
+having had to process even the parts of the video that are then discarded.&lt;/p&gt;
+&lt;p&gt;Vcodec of libx264 is specified because, according to stackoverflow,
+"&lt;a href="https://stackoverflow.com/questions/5651654/ffmpeg-how-to-split-video-efficiently#comment85070704_13289426"&gt;scenes in mp4 are broken&lt;/a&gt;", whatever that means,
+and specifying "copy", as most people do, gives me an output with no video,
+only audio.&lt;/p&gt;
+&lt;p&gt;This results in a three second, 217KB .mp4 video file. (the following is just an
+image of it).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split.webp" src="https://tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
+&lt;h4&gt;3. Crop&lt;/h4&gt;
+&lt;p&gt;To crop out the black bars from the top and bottom:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -hide_banner -i Ash-split.mp4 -vf 'crop=iw:365' Ash-split-crop.mp4
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, we crop it to the input width "iw", and 365 high. In the absense of
+any offset ordinates for the crop, ffmpeg defaults to centering them, so this
+365 pixels are taken from the (spatial, vertical) middle of the video, which is
+exactly what we want.&lt;/p&gt;
+&lt;p&gt;This results in a three second, 220KB .mp4 video file.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
+&lt;h3&gt;4. Resize and convert to gif&lt;/h3&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="s s-Atom"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;hide_banner&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;vf&lt;/span&gt; &lt;span class="s s-Atom"&gt;'scale=512:-1'&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;resize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;gif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This results in a grainy-but-passable three second 750KB animated .gif:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
+&lt;p&gt;The file size can be smaller, if you care, most easily by splitting a shorter
+video clip, reducing the frame rate, or reducing the 'scale' in this step.&lt;/p&gt;
+&lt;p&gt;Alternately, this could be done using ImageMagik's 'convert', but the result
+of that was a very large (10MB) file and played very slowly, and I wasn't
+immediately sure how to fix that.&lt;/p&gt;
+&lt;h3&gt;5. Add text&lt;/h3&gt;
+&lt;p&gt;Using Imagemagik's 'convert':&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;convert \
+    Ash-split-crop-resize.gif \
+    -coalesce \
+    -font impact -pointsize 36 -fill white -stroke black -strokewidth 2 \
+    -gravity north -annotate +0+0 'I can''t lie about your chances, but' \
+    -gravity south -annotate +0+0 'you have my sympathies' \
+    -layers Optimize \
+    Ash-split-crop-resize-text.gif
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The '-coalesce' option removes all the .gif optimizations, then we apply the
+text labels, then the '-layers' option re-applies optimizations. Without this
+dance, the text is all twitchy and messy.&lt;/p&gt;
+&lt;p&gt;Voilà. Imagine sending it to a co-worker who is taking on a difficult task,
+like making changes to that thorny section of the codebase that nobody likes:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>geek</category><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>video</category><category>youtube</category><guid>https://tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>Subnautica: Below Zero</title><link>https://tartley.com/posts/subnautica-below-zero/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;on Windows, published 2021&lt;/em&gt;. &lt;img alt="spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://subnautica.fandom.com/wiki/Subnautica_Wiki"&gt;Subnautica&lt;/a&gt;,
+and its icy sequel,
+"&lt;a href="https://subnautica.fandom.com/wiki/Subnautica:_Below_Zero"&gt;Below Zero&lt;/a&gt;",
+have perhaps been my favorite
+games of the last few years. The majority of their run time takes place under
+the colorful waters of an alien ocean. It's been a joy to sit side-by-size
+with Zander for tense scuba cave dives, or piloting vehicles through
+vertiginous underwater cave systems, headlights straining through the murk to
+reveal wonders. It has inspired
+&lt;a href="https://www.reddit.com/r/Subnautica_Below_Zero/comments/r82l3i/birthday_cake_no_spoilers/"&gt;cake&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Part of the games take place on land though. I &lt;em&gt;started&lt;/em&gt; drawing a map of Below
+Zero's Glacial Basin region just to keep track of where we'd been. To make sure
+we visited all the locations, found all the MacGuffins (I'm looking at &lt;em&gt;you&lt;/em&gt;,
+pesky antidote), and experienced all that there was to experience.&lt;/p&gt;
+&lt;p&gt;But as those goals approached completion, I &lt;em&gt;finished&lt;/em&gt; drawing it because it
+had become a therapeutic experience. Happily exploring away, mesmerised by the
+scenery, avoiding hostile wildlife, uncovering the ruins of ancient alien
+artifacts. Reckoning distances by eye, scribbling down what we found, updating
+and correcting the map as we went. Being lost in the experience. Simply a joy.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.reddit.com/r/Subnautica_Below_Zero/comments/qutkqz/hand_drawn_map_of_southern_glacial_region_wip/"&gt;Reddit is encouraging me&lt;/a&gt;
+to tackle the tricky Actic Spires area, too. &lt;em&gt;&amp;lt;Rubs hands&amp;gt;...&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Subnautica screenshot" src="https://tartley.com/files/2021/subnatica-below-zero-map-glacial-basin.png"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>geek</category><category>map</category><category>media</category><category>videogame</category><category>windows</category><guid>https://tartley.com/posts/subnautica-below-zero/</guid><pubDate>Mon, 22 Nov 2021 22:24:22 GMT</pubDate></item><item><title>Manifold Garden</title><link>https://tartley.com/posts/manifold-garden/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Manifold Garden screenshot" src="https://tartley.com/files/2021/manifold-garden.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Windows, 2019&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This was always going to turn my head, marrying a marvellous geometric engine
+to an austere, flat-shaded renderer. Bewildering portals, seamlessly disguised
+as humble doorways, are the simplest of its tricks. More pervasive, levels are
+wraparound along all three spatial dimensions, as can be seen by the
+disorienting arrays of geometry - the current level, infinitely repeated,
+offset or re-oriented - marching to the vanishing points, dwindling to infinity
+in all directions.&lt;/p&gt;
+&lt;p&gt;This is no mere trippy backdrop. Gravity can be trivially flipped to lie along
+any cardinal axis, and one will routinely step off, into a yawning, infinite
+abyss, to fall through the entire level, and beyond, through and amongst the
+infinite constellations of geometry, airsteering all the way, to land,
+unharmed, anywhere that's exposed to the direction you're falling from. It
+becomes a form of teleportation, used to get from A to B almost as frequently
+as simply walking around.&lt;/p&gt;
+&lt;p&gt;This non-Euclidean wrapping is baked deeply into the visuals, the engine, and
+the gameplay. But for all that technical mastery, the puzzles themselves aren't
+as deep and creative and varied as those in the ostensibly similar, but
+less technically accomplished, &lt;em&gt;Antichamber&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Having said that, there's something entirely appropriate in this. The puzzles
+end up being as much rituals as a head-scratchers, holy spatial rites one
+performs to unleash the deeply evocative visuals towards the end of each level
+- a faceted and angular psychedelic, coupled with unnerving reformulations of
+reality straight out of Farbrausch's
+&lt;em&gt;&lt;a href="https://www.youtube.com/watch?v=wqu_IpkOYBg"&gt;Debris&lt;/a&gt;&lt;/em&gt;. By the final level,
+this crescendos in scenes reminiscent of &lt;em&gt;2001: A Space Odyssey&lt;/em&gt;, profound in
+both the intimacy of my commune with godhood, and in my continued inability to
+understand what I had achieved. Created a universe, probably? Yeah, probably.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://tartley.com/posts/manifold-garden/</guid><pubDate>Tue, 05 Oct 2021 03:16:08 GMT</pubDate></item><item><title>TIL: Download audio from YouTube</title><link>https://tartley.com/posts/download-audio-from-youtube/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;For the sort of weirdos who still host their own music files, but aren't
+preciously audiophile about it. Aaaaand also I'm wording this with the
+assumption you're a Linux, command-line and Python nerd.&lt;/p&gt;
+&lt;p&gt;Sometimes it's a video which is explicitly Creative Commons. Other times, it's
+a friend's otherwise unpublished non-commercial thing. Or maybe it's a massive
+commercial product from a famously litigious corporate behemoth, but you've
+already bought the soundtrack and you just really &lt;em&gt;really&lt;/em&gt; wish you had a
+version which had the exact same sound effects or dialog or arrangement that
+you or your child has grown to love from obsessive movie re-watches.&lt;/p&gt;
+&lt;p&gt;I've got ya.&lt;/p&gt;
+&lt;h3&gt;One-off setup:&lt;/h3&gt;
+&lt;p&gt;Install &lt;a href="https://ffmpeg.org/"&gt;&lt;em&gt;ffmpeg&lt;/em&gt;&lt;/a&gt;, a venerable open-source command-line
+video/audio conversion tool.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;ffmpeg
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, install &lt;a href="https://pypa.github.io/pipx/"&gt;&lt;em&gt;pipx&lt;/em&gt;&lt;/a&gt;, a tool to install
+commmand-line tools that are distributed as Python packages:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;pipx
+python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pipx&lt;span class="w"&gt; &lt;/span&gt;ensurepath
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, use pipx to install the &lt;a href="https://youtube-dl.org/"&gt;&lt;em&gt;youtube-dl&lt;/em&gt;&lt;/a&gt;, an
+oft-sued but never vanquished tool to download YouTube videos. (We're using
+the Python package because the apt package is too old to work):&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pipx&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;youtube-dl
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Goal fulfillment&lt;/h3&gt;
+&lt;p&gt;Here, download your precious audio:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;-x&lt;span class="w"&gt; &lt;/span&gt;--audio-format&lt;span class="o"&gt;=&lt;/span&gt;best&lt;span class="w"&gt; &lt;/span&gt;URL
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;URL&lt;/code&gt; is the encoded version of the video URL (i.e. like "youtu.be/XXX"),
+  obtained by hitting the 'share' button on the YouTube page.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-x&lt;/code&gt; requests just the audio part, with no video.&lt;/li&gt;
+&lt;li&gt;While &lt;code&gt;--audio-format=best&lt;/code&gt; is ostensibly the default setting, meaning
+  YouTube decides which format to send, using &lt;code&gt;-x&lt;/code&gt; seems to fail if we don't
+  specify this explicitly. Alternatively, you can explicitly request "aac",
+  "flac", "mp3", "m4a", "opus", "vorbis", or "wav". As I understand it, YouTube
+  will only send the requested format if the uploader provided it. If they
+  didn't then we get whatever YouTube provides and then convert it locally
+  using ffmpeg. So you sometimes won't be getting the benefit of those lossless
+  formats.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But mp3 works well enough for &lt;a href="https://www.youtube.com/watch?v=VSJWvzLuGz8"&gt;my&lt;/a&gt;
+&lt;a href="https://www.youtube.com/watch?v=ENVIoR2f-Qgh"&gt;needs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Alternatively, for playlists:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;-x&lt;span class="w"&gt; &lt;/span&gt;--audio-format&lt;span class="o"&gt;=&lt;/span&gt;best&lt;span class="w"&gt; &lt;/span&gt;--yes-playlist&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;URL
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--yes-playlist&lt;/code&gt; / &lt;code&gt;--no-playlist&lt;/code&gt; chooses which to download if the URL you
+  provide is both a playlist and a video.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-i&lt;/code&gt; ignores errors, so one bad track in the playlist doesn't stop the whole
+  thing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;My previous inferior way&lt;/h3&gt;
+&lt;p&gt;This method is worse because it downloads the whole video file before
+extracting audio locally, and the download gets throttled by YouTube in
+some way, which of late is very slow indeed, i.e. substantially slower
+than watching the video.&lt;/p&gt;
+&lt;p&gt;Download the video from YouTube:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;URL
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This results in a webm file. I have no idea what that is, and am relieved
+to discover that converting it into an mp3 requires just:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;MyVideoFile&lt;span class="w"&gt; &lt;/span&gt;-vn&lt;span class="w"&gt; &lt;/span&gt;MyAudioFile.mp3
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Where &lt;code&gt;-vn&lt;/code&gt; disables video in the output.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Changelog&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;2023/02/14: Wide-ranging rewrite of prose to enliven, enlink, and clarify.&lt;/li&gt;
+&lt;li&gt;2023/02/14: Swapped use of &lt;a href="https://github.com/mitsuhiko/pipsi/"&gt;&lt;em&gt;pipsi&lt;/em&gt;&lt;/a&gt;
+  tool, last released 2015, for &lt;em&gt;pipx&lt;/em&gt;, which is more useful, well-maintained
+  and popular.&lt;/li&gt;
+&lt;li&gt;2022: Added "Goal fulfillment" section, initially called "The Best Way", and
+  deprecated the previous method under "My previous inferior way".&lt;/li&gt;
+&lt;/ul&gt;</description><category>command-line</category><category>geek</category><category>linux</category><category>music</category><category>til</category><category>youtube</category><guid>https://tartley.com/posts/download-audio-from-youtube/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>TIL: Format Python Snippets with Black.</title><link>https://tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -369,323 +799,4 @@ gained much enthusiasm.&lt;/p&gt;
 &lt;li&gt;Passes the result to Black.&lt;/li&gt;
 &lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/main/bin/enblacken"&gt;enblacken on github&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><category>til</category><category>vim</category><guid>https://tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I would be interested in seeing some example lxd config files,
-bash command history when creating, etc?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Here goes then.&lt;/p&gt;
-&lt;p&gt;I have one LXD container running for each nontrivial development project I'm
-working on.&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;ls
-&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;NAME&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;STATE&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;IPV4&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;IPV6&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;TYPE&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;SNAPSHOTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;devicegw&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.228&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;ident&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.4&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;revs&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.151&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;siab&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.128&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;tartley-com&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.161&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Out of the gate we see one source of confusion. "LXD", the daemon, is a
-newer project that builds on top of "LXC" the containers. However the user
-interface to all the new LXD-goodness is through a command-line called "lxc",
-which replaces the older command line tool called "lxd". :-/&lt;/p&gt;
-&lt;p&gt;To create a new one:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;time&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;launch&lt;span class="w"&gt; &lt;/span&gt;ubuntu:16.04&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;default&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;jhartley&lt;span class="w"&gt; &lt;/span&gt;demo
-Creating&lt;span class="w"&gt; &lt;/span&gt;demo
-Starting&lt;span class="w"&gt; &lt;/span&gt;demo
-real&lt;span class="w"&gt;    &lt;/span&gt;0m9.593s
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Once created, they take about 3 seconds to stop and 0.5 seconds to start.&lt;/p&gt;
-&lt;p&gt;Those "-p" options cause the container to use two &lt;em&gt;profiles&lt;/em&gt;. They are:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;The &lt;em&gt;default&lt;/em&gt; profile, which I've never touched. It's just doing whatever it
-   always does.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The &lt;em&gt;jhartley&lt;/em&gt; profile, I created in a one-off step by running a Bash script
-   derived from instructions one of my colleagues passed around. I'll describe
-   it at the end.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Once a new container is up, we can execute commands directly on it:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;exec&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;hostname
-demo
-$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;exec&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;whoami
-root
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Or SSH to them using their IP address:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;ls&lt;span class="w"&gt; &lt;/span&gt;demo
-&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;NAME&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;STATE&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;IPV4&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;IPV6&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;TYPE&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;SNAPSHOTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.162&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
-jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.162
-...
-Warning:&lt;span class="w"&gt; &lt;/span&gt;Permanently&lt;span class="w"&gt; &lt;/span&gt;added&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'10.44.99.162'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;ECDSA&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;the&lt;span class="w"&gt; &lt;/span&gt;list&lt;span class="w"&gt; &lt;/span&gt;of&lt;span class="w"&gt; &lt;/span&gt;known&lt;span class="w"&gt; &lt;/span&gt;hosts.
-Welcome&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;Ubuntu&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;.04.6&lt;span class="w"&gt; &lt;/span&gt;LTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;GNU/Linux&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;.4.0-25-generic&lt;span class="w"&gt; &lt;/span&gt;x86_64&lt;span class="o"&gt;)&lt;/span&gt;
-jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Better than using IP addresses, you can run a DNS server to recognize
-&lt;code&gt;{containername}.lxd&lt;/code&gt; hostnames. (This part is from
-&lt;a href="https://discuss.linuxcontainers.org/t/a-way-to-resolve-container-lxd-from-host-in-all-cases/3698"&gt;here&lt;/a&gt;.)&lt;/p&gt;
-&lt;p&gt;Find your lxd bridge IPv4 address&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;network&lt;span class="w"&gt; &lt;/span&gt;show&lt;span class="w"&gt; &lt;/span&gt;lxdbr0
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Create file &lt;code&gt;/etc/systemd/network/lxd.network&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;[Match]&lt;/span&gt;
-&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;lxdbr0&lt;/span&gt;
-
-&lt;span class="k"&gt;[Network]&lt;/span&gt;
-&lt;span class="na"&gt;Address&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR/24&lt;/span&gt;
-&lt;span class="na"&gt;DNS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR&lt;/span&gt;
-&lt;span class="na"&gt;Domains&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;~lxd&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Where IPADDR is the lxdbr0 IPv4 address.&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;systemctl&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;enable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;systemd-networkd
-sudo&lt;span class="w"&gt; &lt;/span&gt;reboot&lt;span class="w"&gt; &lt;/span&gt;now
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;demo.lxd
-jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# \o/&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;One nice thing is that DNS works both from the host and on the containers,
-so your services can be configured by default to talk to each other at
-SERVICE1.lxd, SERVICE2.lxd. Then running them in containers on your host
-they would just find each other. We don't actually do this, but it seems
-trivially easy to do. I should ask why we don't.&lt;/p&gt;
-&lt;p&gt;In practice I wrap up the ssh command with my accumulated foibles:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-a&lt;span class="w"&gt; &lt;/span&gt;lssh
-lssh&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;function&lt;/span&gt;
-lssh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
-&lt;span class="o"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;TERM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xterm-color&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;-A&lt;span class="w"&gt; &lt;/span&gt;-t&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.lxd"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;--&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"cd &lt;/span&gt;&lt;span class="nv"&gt;$PWD&lt;/span&gt;&lt;span class="s2"&gt; &amp;amp;&amp;amp; exec &lt;/span&gt;&lt;span class="nv"&gt;$SHELL&lt;/span&gt;&lt;span class="s2"&gt; -l"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;I forget why -A and -t were required. The rest is mostly just to start the
-shell on the container in the same directory as I was in on the host. There
-is probably a simpler way.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;The booooooring bits:&lt;/p&gt;
-&lt;p&gt;When we started the container, we mentioned
-&lt;a href="https://tartley.com/files/2020/setup-lxd-profile.sh"&gt;a one-off setup script&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The script does a few things:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Creates a new key pair specifically to SSH to the container.&lt;/li&gt;
-&lt;li&gt;Creates the custom &lt;em&gt;jhartley&lt;/em&gt; profile, which causes all containers started
-   with it to:&lt;/li&gt;
-&lt;li&gt;Create a new user on the container with user and group ID mapped to
-      those of my user on the host, presumably so that file permissions work
-      for...&lt;/li&gt;
-&lt;li&gt;Mount my $HOME directory on the container. Might not always be what you
-      want, but works for me right now.&lt;/li&gt;
-&lt;li&gt;Doubtless due to my own misunderstanding somewhere, in order to get working
-   IPv4 connections to my containers, I had to disable IPv6 connections to
-   them.&lt;/li&gt;
-&lt;/ol&gt;</description><category>geek</category><category>linux</category><category>software</category><category>terminal</category><guid>https://tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Installing Colout</title><link>https://tartley.com/posts/installing-colout/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Colout on PyPI now works just fine, all the following is needless.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;But &lt;code&gt;pip install colout&lt;/code&gt; from PyPI is broken, and has been for many months,
-due to a typo in the
-&lt;a href="https://pypi.org/project/colout/"&gt;latest (v0.5) PyPI release&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I've tried to contact the author, with email and
-&lt;a href="https://github.com/nojhan/colout/issues/101i"&gt;issues&lt;/a&gt; on the
-&lt;a href="https://github.com/nojhan/colout/issues"&gt;Colout Github project&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This has had no effect, although I see the author has made substantial commits
-to the Github project in that time, including fixing this problem and tagging a
-new v0.6 version, although has not released any of that to PyPI.&lt;/p&gt;
-&lt;p&gt;So, in increasing order of desirability, you can either:&lt;/p&gt;
-&lt;p&gt;Clone the latest repo &lt;a href="https://github.com/nojhan/colout"&gt;from Github&lt;/a&gt;, and
-install from that:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# cd to the clone, then&lt;/span&gt;
-python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;.
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Or, pip install the version I uploaded to PyPI, which is a straight copy of the
-latest Github at the time:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;colout-fix
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Or, best of all, pip install straight from the original Github repo:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;git+git://github.com/nojhan/colout.git
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Note that, throughout, we're using &lt;code&gt;--user&lt;/code&gt;, so that you can install
-development tools like this system-wide for the current user, without needing a
-virtualenv, without needing root access, and without modifying your installed
-Python system libraries.&lt;/p&gt;</description><category>geek</category><category>linux</category><category>terminal</category><guid>https://tartley.com/posts/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item><item><title>Running Multiple Firefox Profiles on Linux</title><link>https://tartley.com/posts/running-multiple-firefox-profiles/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I recently switched from Chrome to Firefox. It's so &lt;em&gt;fast&lt;/em&gt;, and easier
-to trust that Mozilla has my privacy and interests at heart than Google
-does.&lt;/p&gt;
-&lt;p&gt;I want to run a second profile at work, to keep a distinct set of open
-tabs, bookmarks, and the like. Here's how I did it:&lt;/p&gt;
-&lt;p&gt;Close all Firefox windows. Run the Profile Manager with &lt;code&gt;firefox -p&lt;/code&gt;.
-Create a second profile.&lt;/p&gt;
-&lt;p&gt;Open Firefox and find the directories your profiles live by browsing to
-&lt;code&gt;about:profiles&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Substitute those directories into this firefox.desktop file, where I've
-marked 'XXX':&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="cp"&gt;# Gnome3 .desktop file for Firefox with multiple profiles&lt;/span&gt;
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Desktop&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Entry&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;Version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.0&lt;/span&gt;
-&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;
-&lt;span class="n"&gt;Comment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Browse&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;
-&lt;span class="n"&gt;GenericName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Web&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Browser&lt;/span&gt;
-&lt;span class="n"&gt;Keywords&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Internet&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;WWW&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Browser&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Web&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Explorer&lt;/span&gt;
-&lt;span class="n"&gt;Type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Application&lt;/span&gt;
-&lt;span class="n"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;remote&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;
-&lt;span class="n"&gt;Terminal&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
-&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;MultipleArgs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
-&lt;span class="n"&gt;Icon&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;
-&lt;span class="n"&gt;Categories&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;GNOME&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;GTK&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;Network&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;WebBrowser&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="n"&gt;Actions&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;work&lt;/span&gt;
-&lt;span class="n"&gt;MimeType&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xhtml&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;rss&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;rdf&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;xml&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;gif&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;jpeg&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;image&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;png&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ftp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chrome&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;video&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;webm&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;application&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xpinstall&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="n"&gt;StartupNotify&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
-
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Desktop&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Action&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;profile&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mozilla&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;XXX&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;remote&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;
-
-&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;Desktop&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Action&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;work&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;work&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;profile&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mozilla&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;firefox&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;XXX&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;remote&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;u&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Save the above as firefox.desktop and install using:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;desktop-file-validate&lt;span class="w"&gt; &lt;/span&gt;firefox.desktop
-$&lt;span class="w"&gt; &lt;/span&gt;desktop-file-install&lt;span class="w"&gt; &lt;/span&gt;--dir&lt;span class="o"&gt;=&lt;/span&gt;.local/share/applications&lt;span class="w"&gt; &lt;/span&gt;firefox.desktop
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This results in a Firefox icon in your applications menu that defaults
-to whichever profile you mark as default in the ProfileManager, but
-right clicking lets you select the home or work profile explicitly. Open
-each, and change the theme in one of them so the windows are visually
-distinct.&lt;/p&gt;
-&lt;p&gt;Tested on Ubuntu, RHEL 7.3, probably works on all Gnome3 desktops.&lt;/p&gt;</description><category>geek</category><category>linux</category><guid>https://tartley.com/posts/running-multiple-firefox-profiles/</guid><pubDate>Thu, 22 Feb 2018 00:40:55 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
-for it, called "Announce":&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/tartley/rhythmbox-plugin-announce"&gt;https://github.com/tartley/rhythmbox-plugin-announce&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Every time a new song starts to play, it announces the title using
-speech synthesis. I like it when I'm listening to some new music I'm not
-familiar with, but am away from the computer. Then I can still know
-which track is which.&lt;/p&gt;
-&lt;p&gt;If the album or artist names are different from the previous track, then
-it includes those in the announcement, too.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/rhythmbox-plugin-announce/</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://tartley.com/posts/google-chrome-credit/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I just noticed: Open Chrome, go to &lt;code&gt;chrome://credits/&lt;/code&gt;, search in page,
-'show licence', and:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;img alt="chrome-credit" src="https://tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;</description><category>geek</category><category>software</category><guid>https://tartley.com/posts/google-chrome-credit/</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>PyRochesterMN</title><link>https://tartley.com/posts/pyrochestermn/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Announcing the world's newest Python User Group, PyRochesterMN, based in
-Rochester, Minnesota, USA.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; We've had a couple of name &amp;amp; hosting changes since:&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/PyRochesterMN"&gt;http://www.meetup.com/PyRochesterMN&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/RochesTech"&gt;http://www.meetup.com/RochesTech&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.reddit.com/r/rochestertech/"&gt;https://www.reddit.com/r/rochestertech/&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>meetup</category><category>python</category><category>software</category><guid>https://tartley.com/posts/pyrochestermn/</guid><pubDate>Thu, 21 Jan 2016 03:01:27 GMT</pubDate></item><item><title>TIL: When to use three dots vs two in Git</title><link>https://tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
-today:&lt;/p&gt;
-&lt;p&gt;To see the commits or diffs introduced by a branch (the filled circles ●):&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;     f
-    +●  m           git log m..f
-     |  ○
-    +●  |           git diff m...f
-      \ ○
-       \|
-        ○
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;To see the commits or diffs between the tip of one branch and another:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;     f              git log m...f
-    +●  m           All commits look the same,
-     |  ●-          unless you use --left-right, which
-    +●  |           shows where each commit comes from.
-      \ ●-
-       \|           git diff m..f
-        ○           '-' commits are shown inverted,
-                     i.e. additions as deletions.
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;To see the commits from 'f' back to the beginning of time:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;     f
-    +●  m           git log f
-     |  ○
-    +●  |           (diffs back to start of time are just
-      \ ○            the contents of the working tree)
-       \|
-       +●
-        |
-       +●
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
-above that you almost always want:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;m...f
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;is the same as&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;checkout&lt;span class="w"&gt; &lt;/span&gt;f
-git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;m...
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;or&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;checkout&lt;span class="w"&gt; &lt;/span&gt;m
-git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;...f
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;</description><category>geek</category><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
-Code."&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The goals of making deployment consistent, reliable and fast are very
-laudable, and the conclusion involving creating Debian packages is just
-great. But in the spirit of geek nitpicking, I can't help but think the
-justifications given are misguided, and overlook a simpler solution.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; pip does not offer a "revert deploy" strategy&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Yes it does. Throw away the virtualenv and create a new one using the
-requirements.txt from an earlier release. This might be slow, but you
-can both speed it up (see below), and you can keep old versioned
-virtualenvs around, as a cache of the output of this slow step, so that
-reverts (the time when you really want deploys to go quickly) require
-only a couple of symlinks.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Oooh, and I just had an idea. You could version virtualenvs
-using a hash of the requirements, so that deploys which do not change
-dependencies can share the same virtualenv. I've never tried that - it
-might work?!?!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; Installing dependencies with pip can make deploys painfully
-slow&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This is true. But it's not the final word on the matter.&lt;/p&gt;
-&lt;p&gt;Firstly, don't grab the dependencies you're installing from PyPI. Have a
-local cache of them. That speeds up the install tremendously, not just
-because no download takes place, but also because no trawling of PyPI
-and author sites for possible alternate versions takes place. Some
-people use a local PyPI instance, but I like simply using a directory
-full of packages. Point pip at it using
-'&lt;code&gt;pip install --no-index --find-links=packages -r requirements&lt;/code&gt;'. The
-'packages' directory could be checked into your project's repo, so that
-once you've checked a project out, you have everything you need to
-deploy to local VMs, even with no network connection at all. I wrote
-about this &lt;a href="https://tartley.com/pip-install-lightspeed-and-bulletproof"&gt;a while ago&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; Building your code separately on each host will cause
-consistency issues&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;So don't install dependencies using source packages, use wheels instead.
-Then any slow or unreliable build step is done once, when you create the
-packages directory, while deployment is now reliable and requires no
-development tools on the production server such as compilers, headers,
-etc.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; As a bonus, this will again substantially speed up the
-creation of your virtualenv when deploying.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; Deploys will fail if the PyPI or your git server are down&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;PyPI outages (or a package author deleting their package, which happens
-routinely) are not a problem if you're deploying from a local source of
-packages.&lt;/p&gt;
-&lt;p&gt;I agree that application code deployment shouldn't be done using a 'git
-pull'. Accessibility to GitHub shouldn't be a single point of failure,
-and the fewer development tools needed on production servers the better.
-So export the code from git into a tar file when you cut a release, and
-then push it out using scp at deploy time.&lt;/p&gt;
-&lt;p&gt;Having said all that, there are still advantages to having your whole
-app and its dependencies handled by a single mechanism like Debian
-packages, rather than more bug-prone ad-hoc scripts and Ansible config.
-So I'm not at all against the final conclusions of the Nylas article.
-(Hugs to you folks at Nylas!)&lt;/p&gt;
-&lt;p&gt;Dashed this out in ten minutes between daycare pickup and dinner being
-ready. Apologies for the inevitable shoddyness.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</guid><pubDate>Wed, 22 Jul 2015 00:06:02 GMT</pubDate></item></channel></rss>
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/main/bin/enblacken"&gt;enblacken on github&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><category>til</category><category>vim</category><guid>https://tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item></channel></rss>

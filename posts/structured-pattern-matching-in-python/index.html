@@ -14,10 +14,10 @@
 <meta property="og:site_name" content="tartley.com">
 <meta property="og:title" content="Structured Pattern Matching in Python">
 <meta property="og:url" content="https://tartley.com/posts/structured-pattern-matching-in-python/">
-<meta property="og:description" content="I read through desriptions of
+<meta property="og:description" content="I read through descriptions of
 structured pattern matching
 when it was added in Python 3.10 a couple of years ago, and have studiously
-avoided it ever since. It seemed like a language feature that's am">
+avoided it ever since. It seemed like a language feature that's a">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2023-07-29T18:15:26-05:00">
 <meta property="article:tag" content="geek">
@@ -97,7 +97,7 @@ avoided it ever since. It seemed like a language feature that's am">
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <p>I read through desriptions of
+    <p>I read through descriptions of
 <a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement">structured pattern matching</a>
 when it was added in Python 3.10 a couple of years ago, and have studiously
 avoided it ever since. It seemed like a language feature that's amazingly
@@ -222,7 +222,7 @@ such as by using an <code>enum.Enum</code>:</p>
 
 <h3>Sequences</h3>
 <p>Using a list-like or tuple-like syntax, matches must have the right number of
-items. Like Python's existing iterable unpackling feature. Use <code>*</code> to match the
+items. Like Python's existing iterable unpacking feature. Use <code>*</code> to match the
 rest of a sequence. Included variable names are set if a case matches by all
 other criteria.</p>
 <div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="n">command</span><span class="p">:</span>
@@ -273,7 +273,7 @@ contain all of them to match.</p>
         <span class="o">...</span>
 </pre></div>
 
-<p>Beware the common error of omitting the parens:</p>
+<p>Beware the common error of omitting the parentheses:</p>
 <div class="code"><pre class="code literal-block"><span class="k">match</span> <span class="n">myval</span><span class="p">:</span>
     <span class="k">case</span> <span class="n">Click</span><span class="p">:</span> <span class="c1"># bad</span>
         <span class="c1"># handle clicks</span>
@@ -375,7 +375,7 @@ class-like syntax:</p>
 <span class="k">assert</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">22</span>
 </pre></div>
 
-<h3>Combine patterns usiung <code>|</code>
+<h3>Combine patterns using <code>|</code>
 </h3>
 <p>To match either one pattern or another:</p>
 <div class="code"><pre class="code literal-block">    <span class="k">case</span> <span class="mi">1</span> <span class="o">|</span> <span class="kc">True</span> <span class="o">|</span> <span class="s1">'true'</span> <span class="o">|</span> <span class="s1">'on'</span> <span class="o">|</span> <span class="s1">'yes'</span><span class="p">:</span>

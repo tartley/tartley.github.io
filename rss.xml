@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 30 Jul 2023 23:13:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Structured Pattern Matching in Python</title><link>https://tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through desriptions of
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 30 Jul 2023 23:49:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Structured Pattern Matching in Python</title><link>https://tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
 &lt;a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement"&gt;structured pattern matching&lt;/a&gt;
 when it was added in Python 3.10 a couple of years ago, and have studiously
 avoided it ever since. It seemed like a language feature that's amazingly
@@ -121,7 +121,7 @@ such as by using an &lt;code&gt;enum.Enum&lt;/code&gt;:&lt;/p&gt;
 
 &lt;h3&gt;Sequences&lt;/h3&gt;
 &lt;p&gt;Using a list-like or tuple-like syntax, matches must have the right number of
-items. Like Python's existing iterable unpackling feature. Use &lt;code&gt;*&lt;/code&gt; to match the
+items. Like Python's existing iterable unpacking feature. Use &lt;code&gt;*&lt;/code&gt; to match the
 rest of a sequence. Included variable names are set if a case matches by all
 other criteria.&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -172,7 +172,7 @@ contain all of them to match.&lt;/p&gt;
         &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Beware the common error of omitting the parens:&lt;/p&gt;
+&lt;p&gt;Beware the common error of omitting the parentheses:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;myval&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Click&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# bad&lt;/span&gt;
         &lt;span class="c1"&gt;# handle clicks&lt;/span&gt;
@@ -274,7 +274,7 @@ class-like syntax:&lt;/p&gt;
 &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3&gt;Combine patterns usiung &lt;code&gt;|&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;Combine patterns using &lt;code&gt;|&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;To match either one pattern or another:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'true'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'on'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'yes'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="c1"&gt;# matches any of those values&lt;/span&gt;
@@ -450,11 +450,11 @@ outputting the unmatched wildcard expression.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will generate one .pdf file for each extant .tex file, regardless of
-whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>command-line</category><category>make</category><category>til</category><guid>https://tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>Astroneer Resource Graph</title><link>https://tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
+whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>command-line</category><category>geek</category><category>make</category><category>til</category><guid>https://tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>Astroneer Resource Graph</title><link>https://tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
 get each of the resources in &lt;a href="https://astroneer.space/"&gt;Astroneer&lt;/a&gt;. Click the WEBP
 thumbnail below to get the full glorious SVG, then you can '&lt;em&gt;find in page&lt;/em&gt;' on it.
 (&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>map</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
+&lt;p&gt;&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>map</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
 &lt;img alt="Spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;Major spoilers ahead. It's seven years old at this point.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
@@ -583,7 +583,7 @@ a way out. For, of course, the ARK's launch changed nothing for us. Our
 simulations are aboard it, but we are still sitting here, in a broken robot
 corpse in a collapsing facility at the bottom of a haunted ocean on a dead
 planet. The dispatched copy will enjoy life on the ARK, but we - like the copy
-of ourselves we left behind earlier - are stuck here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>linux</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>Doomsday Clock</title><link>https://tartley.com/posts/doomsday-clock/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;By Geoff Johns (writer), Gary Frank (pencil) &amp;amp; Brad Anderson (colors). (2017-2019)&lt;/em&gt;
+of ourselves we left behind earlier - are stuck here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>Doomsday Clock</title><link>https://tartley.com/posts/doomsday-clock/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;By Geoff Johns (writer), Gary Frank (pencil) &amp;amp; Brad Anderson (colors). (2017-2019)&lt;/em&gt;
 &lt;img alt="Spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;The original &lt;a href="https://archive.org/details/Watchmen1987"&gt;&lt;em&gt;Watchmen&lt;/em&gt;&lt;/a&gt; is a
 seminal 12-issue superhero comic by Alan Moore (writer) &amp;amp; Dave Gibbons
@@ -1840,4 +1840,4 @@ beasts, and then fly exuberantly above the sunlit clouds, forever curving back
 to seek each other's life-giving sustenance.&lt;/p&gt;
 &lt;p&gt;I don't know who the two internet randos were, with whom I shared the first and
 second halves of my journey. But in those minutes together, we lived a
-lifetime's worth.&lt;/p&gt;</description><category>completed</category><category>media</category><category>videogame</category><category>windows</category><guid>https://tartley.com/posts/journey/</guid><pubDate>Mon, 09 May 2022 11:22:20 GMT</pubDate></item></channel></rss>
+lifetime's worth.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://tartley.com/posts/journey/</guid><pubDate>Mon, 09 May 2022 11:22:20 GMT</pubDate></item></channel></rss>

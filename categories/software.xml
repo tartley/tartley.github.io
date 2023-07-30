@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 30 Jul 2023 23:13:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Structured Pattern Matching in Python</title><link>https://tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through desriptions of
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 30 Jul 2023 23:49:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Structured Pattern Matching in Python</title><link>https://tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
 &lt;a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement"&gt;structured pattern matching&lt;/a&gt;
 when it was added in Python 3.10 a couple of years ago, and have studiously
 avoided it ever since. It seemed like a language feature that's amazingly
@@ -121,7 +121,7 @@ such as by using an &lt;code&gt;enum.Enum&lt;/code&gt;:&lt;/p&gt;
 
 &lt;h3&gt;Sequences&lt;/h3&gt;
 &lt;p&gt;Using a list-like or tuple-like syntax, matches must have the right number of
-items. Like Python's existing iterable unpackling feature. Use &lt;code&gt;*&lt;/code&gt; to match the
+items. Like Python's existing iterable unpacking feature. Use &lt;code&gt;*&lt;/code&gt; to match the
 rest of a sequence. Included variable names are set if a case matches by all
 other criteria.&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -172,7 +172,7 @@ contain all of them to match.&lt;/p&gt;
         &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Beware the common error of omitting the parens:&lt;/p&gt;
+&lt;p&gt;Beware the common error of omitting the parentheses:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;myval&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Click&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# bad&lt;/span&gt;
         &lt;span class="c1"&gt;# handle clicks&lt;/span&gt;
@@ -274,7 +274,7 @@ class-like syntax:&lt;/p&gt;
 &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3&gt;Combine patterns usiung &lt;code&gt;|&lt;/code&gt;&lt;/h3&gt;
+&lt;h3&gt;Combine patterns using &lt;code&gt;|&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;To match either one pattern or another:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'true'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'on'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'yes'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="c1"&gt;# matches any of those values&lt;/span&gt;
@@ -508,7 +508,7 @@ effectiveness in assembling great individuals to create a great team.&lt;/p&gt;
 &lt;p&gt;But in my personal experience, there is a whole lot &lt;em&gt;more&lt;/em&gt; value in creating a
 great team by instilling the right values, and then watching the members
 visibly level each other up, producing a succession of great individuals,
-and only subsequently attracting more of the same.&lt;/p&gt;</description><category>culture</category><category>greatness</category><category>literature</category><category>software</category><category>vonnegut</category><guid>https://tartley.com/posts/vonnegut-on-software-development-teams/</guid><pubDate>Mon, 01 Jul 2019 02:28:04 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
+and only subsequently attracting more of the same.&lt;/p&gt;</description><category>culture</category><category>geek</category><category>greatness</category><category>literature</category><category>software</category><category>vonnegut</category><guid>https://tartley.com/posts/vonnegut-on-software-development-teams/</guid><pubDate>Mon, 01 Jul 2019 02:28:04 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
 for it, called "Announce":&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/tartley/rhythmbox-plugin-announce"&gt;https://github.com/tartley/rhythmbox-plugin-announce&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Every time a new song starts to play, it announces the title using
@@ -644,7 +644,7 @@ specified, &lt;code&gt;exclude&lt;/code&gt; is also used as the transplant desti
 
 &lt;p&gt;Again, the commits to be transplanted are defined by &lt;code&gt;include&lt;/code&gt; and
 &lt;code&gt;exclude&lt;/code&gt;, but this time a separate destination is specified using
-&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;</description><category>git</category><category>software</category><category>terminal</category><category>til</category><guid>https://tartley.com/posts/understanding-rebase-so-it-sticks/</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;code&gt;--onto&lt;/code&gt;.&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><guid>https://tartley.com/posts/understanding-rebase-so-it-sticks/</guid><pubDate>Fri, 07 Feb 2014 16:28:37 GMT</pubDate></item><item><title>Object-Oriented Software Engineering : A Use Case Driven Approach</title><link>https://tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Object Oriented Software Engineering cover" src="https://tartley.com/files/2014/02/object-oriented-sofware-engineering.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Ivar Jacobsen&lt;/em&gt; (1992, 4th revision)&lt;/p&gt;
@@ -694,4 +694,4 @@ days.&lt;/p&gt;
 &lt;p&gt;10/10 if you're going to enjoy 500 pages of software design principles
 and case studies.&lt;/p&gt;
 &lt;p&gt;0/10 if you're not.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</guid><pubDate>Sun, 02 Feb 2014 20:26:43 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>geek</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://tartley.com/posts/object-oriented-software-engineering-a-use-case-driven-approach/</guid><pubDate>Sun, 02 Feb 2014 20:26:43 GMT</pubDate></item></channel></rss>
