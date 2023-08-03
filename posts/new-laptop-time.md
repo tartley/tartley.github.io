@@ -2,7 +2,7 @@
 .. title: New Laptop Time!
 .. slug: new-laptop-time
 .. date: 2022-09-21 11:59:02 UTC-05:00
-.. tags: hardware, journal, linux
+.. tags: geek,hardware,journal,linux
 -->
 
 <span style="float: left">

@@ -2,7 +2,7 @@
 .. title: Keyboard CoolerMaster CK530's Missing Manual
 .. slug: keyboard-coolermaster-ck530s-missing-manual
 .. date: 2021-07-23 13:41:50 UTC-05:00
-.. tags: hardware,keyboard,manual
+.. tags: geek,hardware,keyboard,manual
 -->
 
 I have a
