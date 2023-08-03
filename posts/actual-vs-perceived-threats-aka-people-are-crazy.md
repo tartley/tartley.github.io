@@ -3,9 +3,6 @@
 .. slug: actual-vs-perceived-threats-aka-people-are-crazy
 .. date: 2008-02-23 15:51:54-06:00
 .. tags: imho,refried
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

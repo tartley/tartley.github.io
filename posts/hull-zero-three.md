@@ -3,7 +3,6 @@
 .. slug: hull-zero-three
 .. date: 2019-06-17 10:17:46-05:00
 .. tags: media,book,fiction,science-fiction,novel,bear
-.. type: text
 -->
 
 <span style="float: left">

@@ -3,9 +3,6 @@
 .. slug: copyright-and-the-crowdsourcing-of-promotional-materials
 .. date: 2009-08-29 13:08:59-05:00
 .. tags: imho
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

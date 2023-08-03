@@ -3,9 +3,6 @@
 .. slug: fame-at-last
 .. date: 2007-09-28 17:50:56-05:00
 .. tags: geek
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

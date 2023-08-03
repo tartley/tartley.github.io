@@ -3,9 +3,6 @@
 .. slug: a-short-history-of-nearly-everything
 .. date: 2007-02-21 00:12:36-06:00
 .. tags: media,book,non-fiction,history
-.. link: 
-.. description: 
-.. type: text
 -->
 
 <span style="float: left">

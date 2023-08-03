@@ -3,9 +3,6 @@
 .. slug: howto-bundle-binary-dependancies-with-py2exe-et-al
 .. date: 2010-01-27 22:26:00-06:00
 .. tags: geek,software,python,mswin-dev
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

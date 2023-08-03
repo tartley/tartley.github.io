@@ -3,9 +3,6 @@
 .. slug: a-pythonic-switch-statement
 .. date: 2009-08-05 08:59:53-05:00
 .. tags: geek,software,python
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

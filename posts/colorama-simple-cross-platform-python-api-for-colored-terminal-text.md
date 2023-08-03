@@ -3,7 +3,6 @@
 .. slug: colorama-simple-cross-platform-python-api-for-colored-terminal-text
 .. date: 2010-04-21 10:18:30-05:00
 .. tags: geek,software,python,mswin-dev,terminal
-.. type: text
 -->
 
 Announcing new Python package,

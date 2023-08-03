@@ -3,9 +3,6 @@
 .. slug: london-python-meeting
 .. date: 2007-02-22 20:20:59-06:00
 .. tags: geek,software,journal,python
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

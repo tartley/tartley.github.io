@@ -3,9 +3,6 @@
 .. slug: trip-report-the-chelsea-arts-club
 .. date: 2007-03-14 10:23:52-05:00
 .. tags: journal
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

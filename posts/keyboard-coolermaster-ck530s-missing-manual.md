@@ -3,7 +3,6 @@
 .. slug: keyboard-coolermaster-ck530s-missing-manual
 .. date: 2021-07-23 13:41:50 UTC-05:00
 .. tags: hardware,keyboard,manual
-.. type: text
 -->
 
 I have a

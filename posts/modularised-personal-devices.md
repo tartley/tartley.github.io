@@ -3,9 +3,6 @@
 .. slug: modularised-personal-devices
 .. date: 2008-02-13 14:18:10-06:00
 .. tags: geek
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

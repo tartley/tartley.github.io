@@ -3,9 +3,6 @@
 .. slug: random-wallpaper-for-linux-gnome-desktop
 .. date: 2008-02-23 01:41:37-06:00
 .. tags: geek,software,python
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

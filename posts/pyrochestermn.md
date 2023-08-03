@@ -3,9 +3,6 @@
 .. slug: pyrochestermn
 .. date: 2016-01-20 21:01:27-06:00
 .. tags: geek,software,python,meetup
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

@@ -3,7 +3,6 @@
 .. slug: beginning-game-development-with-python-and-pygame
 .. date: 2009-01-12 00:17:54-06:00
 .. tags: geek,software,media,book,non-fiction,software,python,gamedev
-.. type: text
 -->
 
 

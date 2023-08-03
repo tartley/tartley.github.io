@@ -3,9 +3,6 @@
 .. slug: cross-site-image-linking-vandalism
 .. date: 2008-06-05 17:17:28-05:00
 .. tags: gumby,web,image,linking,vandalism,tartley.com,creative,refried
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

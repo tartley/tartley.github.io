@@ -3,9 +3,6 @@
 .. slug: configuration-vs-customisation
 .. date: 2007-06-29 18:19:22-05:00
 .. tags: imho,gis
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

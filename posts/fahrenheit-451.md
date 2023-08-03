@@ -3,7 +3,6 @@
 .. slug: fahrenheit-451
 .. date: 2009-01-27 16:15:47-06:00
 .. tags: media,book,fiction,science-fiction,novel
-.. type: text
 -->
 
 

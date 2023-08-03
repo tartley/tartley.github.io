@@ -3,9 +3,6 @@
 .. slug: running-multiple-firefox-profiles
 .. date: 2018-02-21 18:40:55-06:00
 .. tags: geek,linux
-.. link: 
-.. description: 
-.. type: text
 -->
 
 I recently switched from Chrome to Firefox. It's so *fast*, and easier

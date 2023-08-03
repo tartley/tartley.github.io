@@ -3,7 +3,6 @@
 .. slug: hackers-and-painters
 .. date: 2008-08-27 15:06:48-05:00
 .. tags: media,geek,book,non-fiction,essays,culture,internet,startups
-.. type: text
 -->
 
 <span style="float: left">

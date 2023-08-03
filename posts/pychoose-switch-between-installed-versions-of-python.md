@@ -3,9 +3,6 @@
 .. slug: pychoose-switch-between-installed-versions-of-python
 .. date: 2009-11-11 16:07:10-06:00
 .. tags: geek,software,python
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

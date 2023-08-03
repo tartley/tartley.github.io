@@ -3,7 +3,6 @@
 .. slug: automate-gnome-keybindings
 .. date: 2017-10-04 20:06:47-05:00
 .. tags: linux,bash,terminal
-.. type: text
 -->
 
 

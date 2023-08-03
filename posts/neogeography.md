@@ -3,9 +3,6 @@
 .. slug: neogeography
 .. date: 2008-08-11 16:31:25-05:00
 .. tags: journal,gis
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

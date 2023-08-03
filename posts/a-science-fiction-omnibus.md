@@ -3,7 +3,6 @@
 .. slug: a-science-fiction-omnibus
 .. date: 2008-12-14 17:32:47-06:00
 .. tags: media,book,fiction,science-fiction,short,bear
-.. type: text
 -->
 
 <span style="float: left">

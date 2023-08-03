@@ -3,7 +3,6 @@
 .. slug: scarface
 .. date: 2008-10-01 22:11:01-05:00
 .. tags: media,movie,fiction
-.. type: text
 -->
 
 <span style="float: left">

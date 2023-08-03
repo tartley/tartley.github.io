@@ -3,9 +3,6 @@
 .. slug: northern-exposure
 .. date: 2007-08-07 06:51:02-05:00
 .. tags: imho
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

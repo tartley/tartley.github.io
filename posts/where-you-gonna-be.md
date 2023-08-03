@@ -3,9 +3,6 @@
 .. slug: where-you-gonna-be
 .. date: 2008-03-20 01:26:41-05:00
 .. tags: journal,gis,web
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

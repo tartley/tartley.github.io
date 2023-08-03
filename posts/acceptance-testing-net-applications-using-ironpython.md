@@ -3,9 +3,6 @@
 .. slug: acceptance-testing-net-applications-using-ironpython
 .. date: 2010-03-16 12:13:15-05:00
 .. tags: geek,software,python,testing,software,mswin-dev,terminal
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

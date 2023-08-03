@@ -3,7 +3,6 @@
 .. slug: the-straight-story
 .. date: 2007-07-22 00:40:15-05:00
 .. tags: media,movie,dramatization
-.. type: text
 -->
 
 <span style="float: left">

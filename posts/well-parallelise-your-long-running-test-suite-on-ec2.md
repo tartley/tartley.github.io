@@ -3,9 +3,6 @@
 .. slug: well-parallelise-your-long-running-test-suite-on-ec2
 .. date: 2011-04-01 19:04:09-05:00
 .. tags: geek,software,python
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

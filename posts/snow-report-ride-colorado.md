@@ -3,9 +3,6 @@
 .. slug: snow-report-ride-colorado
 .. date: 2007-03-12 14:33:08-05:00
 .. tags: journal
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

@@ -3,9 +3,6 @@
 .. slug: diet-guru
 .. date: 2007-03-16 14:30:09-05:00
 .. tags: draw,refried
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

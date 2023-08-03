@@ -3,7 +3,6 @@
 .. slug: permanent-record
 .. date: 2021-10-10 11:18:16 UTC-05:00
 .. tags: media,book,non-fiction,memoir,law
-.. type: text
 -->
 
 <span style="float: left">

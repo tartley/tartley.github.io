@@ -3,9 +3,6 @@
 .. slug: the-future-of-twitter
 .. date: 2009-03-12 22:37:53-05:00
 .. tags: geek,imho
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

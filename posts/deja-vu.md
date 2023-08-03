@@ -3,7 +3,6 @@
 .. slug: deja-vu
 .. date: 2007-03-13 14:56:58-05:00
 .. tags: media,movie,science-fiction,fiction
-.. type: text
 -->
 
 |   |

@@ -3,7 +3,6 @@
 .. slug: i-am-legend
 .. date: 2008-02-08 00:45:21-06:00
 .. tags: media,movie,science-fiction
-.. type: text
 -->
 
 <span style="float: left">

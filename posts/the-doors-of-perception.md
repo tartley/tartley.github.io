@@ -3,7 +3,6 @@
 .. slug: the-doors-of-perception
 .. date: 2008-11-28 11:45:00-06:00
 .. tags: media,book,non-fiction,drugs
-.. type: text
 -->
 
 <span style="float: left">

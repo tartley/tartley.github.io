@@ -3,9 +3,6 @@
 .. slug: children-of-men
 .. date: 2007-04-22 22:36:21-05:00
 .. tags: movie,fiction,science-fiction
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

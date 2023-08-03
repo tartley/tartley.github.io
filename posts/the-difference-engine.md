@@ -3,7 +3,6 @@
 .. slug: the-difference-engine
 .. date: 2008-12-11 09:19:16-06:00
 .. tags: geek,journal,media,book,exhibits,fiction,science-fiction,novel,stirling
-.. type: text
 -->
 
 <span style="float: left">

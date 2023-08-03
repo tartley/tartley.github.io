@@ -3,7 +3,6 @@
 .. slug: freakonomics-a-rogue-economist-explores-the-yada-yada
 .. date: 2007-03-21 14:35:25-05:00
 .. tags: media,book,non-fiction,economics
-.. type: text
 -->
 
 <span style="float: left">

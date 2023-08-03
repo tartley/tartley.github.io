@@ -3,7 +3,6 @@
 .. slug: blink
 .. date: 2007-07-22 00:11:08-05:00
 .. tags: media,book,non-fiction,cognition
-.. type: text
 -->
 
 <span style="float: left">

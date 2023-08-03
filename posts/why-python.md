@@ -3,9 +3,6 @@
 .. slug: why-python
 .. date: 2008-03-10 01:22:46-05:00
 .. tags: geek,software,python
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

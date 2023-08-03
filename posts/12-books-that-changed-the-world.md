@@ -3,7 +3,6 @@
 .. slug: 12-books-that-changed-the-world
 .. date: 2007-06-12 08:14:17-05:00
 .. tags: media,book,non-fiction,history,culture
-.. type: text
 -->
 
 <span style="float: left">

@@ -3,9 +3,6 @@
 .. slug: music-101c2be
 .. date: 2007-06-18 22:23:47-05:00
 .. tags: music
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

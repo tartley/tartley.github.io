@@ -3,9 +3,6 @@
 .. slug: a-laymans-philosophical-musings
 .. date: 2009-10-10 15:09:20-05:00
 .. tags: imho
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

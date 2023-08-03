@@ -3,9 +3,6 @@
 .. slug: the-acm-is-pissing-in-the-well
 .. date: 2009-12-18 15:45:00-06:00
 .. tags: geek,imho,software
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

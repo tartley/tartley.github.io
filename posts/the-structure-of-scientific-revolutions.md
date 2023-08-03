@@ -4,9 +4,6 @@
 .. date: 2020-06-14 09:02:22 UTC-05:00
 .. tags: media,book,non-fiction,science,politics
 .. category: 
-.. link: 
-.. description: 
-.. type: text
 -->
 
 This post rescues content from a series of tweets I wrote in 2018.

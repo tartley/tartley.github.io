@@ -3,7 +3,6 @@
 .. slug: micro-isv-from-vision-to-reality
 .. date: 2008-06-20 15:50:57-05:00
 .. tags: media,book,non-fiction,startups
-.. type: text
 -->
 
 <span style="float: left">

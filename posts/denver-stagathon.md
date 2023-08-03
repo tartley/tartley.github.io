@@ -3,9 +3,6 @@
 .. slug: denver-stagathon
 .. date: 2008-03-23 22:59:38-05:00
 .. tags: journal
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

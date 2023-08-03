@@ -3,9 +3,6 @@
 .. slug: housewarming
 .. date: 2007-10-07 22:45:48-05:00
 .. tags: journal
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

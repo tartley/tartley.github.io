@@ -3,7 +3,6 @@
 .. slug: the-history-boys
 .. date: 2007-03-01 11:26:06-06:00
 .. tags: media,show,fiction
-.. type: text
 -->
 
 ![](/files/2007/03/the-history-boys.jpg)

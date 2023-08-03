@@ -3,7 +3,6 @@
 .. slug: intelligence-a-very-short-introduction
 .. date: 2021-01-18 06:58:23 UTC-05:00
 .. tags: media,book,non-fiction,cognition
-.. type: text
 -->
 
 <span style="float: left">

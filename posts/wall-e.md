@@ -3,7 +3,6 @@
 .. slug: wall-e
 .. date: 2009-01-11 23:39:38-06:00
 .. tags: media,movie,fiction,animation,environment
-.. type: text
 -->
 
 <span style="float: left">

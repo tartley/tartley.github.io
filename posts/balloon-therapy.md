@@ -3,7 +3,6 @@
 .. slug: balloon-therapy
 .. date: 2008-09-03 21:44:50-05:00
 .. tags: media,book,non-fiction,mental-health
-.. type: text
 -->
 
 <span style="float: left">

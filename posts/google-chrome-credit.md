@@ -3,9 +3,6 @@
 .. slug: google-chrome-credit
 .. date: 2016-01-20 23:10:47-06:00
 .. tags: geek,software
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

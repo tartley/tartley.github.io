@@ -3,7 +3,6 @@
 .. slug: the-deluded-ramblings-of-a-rather-odd-person
 .. date: 2007-03-23 15:01:44-05:00
 .. tags: personal,guest-blogger
-.. type: text
 -->
 
 

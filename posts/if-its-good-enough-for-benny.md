@@ -3,9 +3,6 @@
 .. slug: if-its-good-enough-for-benny
 .. date: 2008-02-16 20:46:00-06:00
 .. tags: imho
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

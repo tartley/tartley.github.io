@@ -3,7 +3,6 @@
 .. slug: the-flight-of-the-horse
 .. date: 2007-03-20 01:22:18-05:00
 .. tags: media,book,fiction,science-fiction,short,niven
-.. type: text
 -->
 
 <span style="float: left">

@@ -3,7 +3,6 @@
 .. slug: oceans13
 .. date: 2007-07-22 00:33:56-05:00
 .. tags: media,movie,fiction
-.. type: text
 -->
 
 <span style="float: left">

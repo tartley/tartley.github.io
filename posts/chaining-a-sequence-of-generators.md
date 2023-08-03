@@ -3,9 +3,6 @@
 .. slug: chaining-a-sequence-of-generators
 .. date: 2013-10-15 15:09:54-05:00
 .. tags: geek,software,python
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

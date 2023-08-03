@@ -3,9 +3,6 @@
 .. slug: conky
 .. date: 2020-01-15 16:09:13-06:00
 .. tags: linux
-.. link: 
-.. description: 
-.. type: text
 -->
 
 In the typical mad-scientist thrills-per-minute that is the Linux way,

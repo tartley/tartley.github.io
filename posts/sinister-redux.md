@@ -3,9 +3,6 @@
 .. slug: sinister-redux
 .. date: 2010-01-09 15:57:47-06:00
 .. tags: geek,software,python,graphics
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

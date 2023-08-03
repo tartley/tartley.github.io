@@ -3,9 +3,6 @@
 .. slug: rhythmbox-plugin-announce
 .. date: 2016-05-15 20:34:48-05:00
 .. tags: geek,software,python
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

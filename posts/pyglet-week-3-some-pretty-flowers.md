@@ -3,9 +3,6 @@
 .. slug: pyglet-week-3-some-pretty-flowers
 .. date: 2008-02-25 01:35:33-06:00
 .. tags: geek,software,python,graphics
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

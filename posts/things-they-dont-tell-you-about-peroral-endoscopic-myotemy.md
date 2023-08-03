@@ -3,7 +3,6 @@
 .. slug: things-they-dont-tell-you-about-peroral-endoscopic-myotemy
 .. date: 2021-06-02 10:50:10 UTC-05:00
 .. tags: journal
-.. type: text
 -->
 
 <span style="float: left">

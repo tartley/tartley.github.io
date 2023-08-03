@@ -3,9 +3,6 @@
 .. slug: more-opengl-from-python
 .. date: 2010-06-02 02:04:37-05:00
 .. tags: geek,software,python,graphics
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

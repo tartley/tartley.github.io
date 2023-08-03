@@ -3,9 +3,6 @@
 .. slug: sunshine
 .. date: 2007-05-01 13:13:43-05:00
 .. tags: movie,media,fiction,science-fiction
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

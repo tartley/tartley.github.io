@@ -3,7 +3,6 @@
 .. slug: expert-python-programming
 .. date: 2009-01-11 22:58:26-06:00
 .. tags: geek,media,book,non-fiction,software,python
-.. type: text
 -->
 
 <span style="float: left">

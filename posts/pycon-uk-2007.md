@@ -3,9 +3,6 @@
 .. slug: pycon-uk-2007
 .. date: 2007-09-13 13:57:26-05:00
 .. tags: geek,software,python,testing,presentations,meetup
-.. link: 
-.. description: 
-.. type: text
 -->
 
 

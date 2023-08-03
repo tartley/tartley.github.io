@@ -3,7 +3,6 @@
 .. slug: demon
 .. date: 2021-05-31 11:08:52 UTC-05:00
 .. tags: media,comic,free-to-read,fiction
-.. type: text
 -->
 
 <span style="float: left">
