@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about hardware)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/hardware.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 07 Jul 2023 01:59:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>New Laptop Time!</title><link>https://tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about hardware)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/hardware.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 03 Aug 2023 20:27:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>New Laptop Time!</title><link>https://tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="A laptop" src="https://tartley.com/files/2008/02/lappy.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;My employer, Canonical, has a "bring your own hardware" policy, trusting that
@@ -591,7 +591,7 @@ sending replacements until Newegg got involved. Seems wisest to skip this.&lt;/p
 &lt;p&gt;&lt;img alt="Memory on sale in Newegg - legit" src="https://tartley.com/files/2022/memory-on-sale-legit.webp"&gt;&lt;/p&gt;
 &lt;p&gt;Yes! DDR4 in a SoDIMM package, 2x16GB modules at 3,200MHz and 18CL. The latency
 isn't quite as good, but it sounds legit, so I'll take it!&lt;/p&gt;
-&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>hardware</category><category>journal</category><category>linux</category><guid>https://tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>Keyboard CoolerMaster CK530's Missing Manual</title><link>https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have a
+&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>linux</category><guid>https://tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>Keyboard CoolerMaster CK530's Missing Manual</title><link>https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have a
 &lt;a href="https://www.coolermaster.com/catalog/peripheral/keyboards/ck530/"&gt;CoolerMaster CK530&lt;/a&gt;
 mechanical keyboard, which I love. It might have come with a small printed
 manual, but if it did, I no longer have it, and I'm failing to find one online.
@@ -969,4 +969,174 @@ flashing white. While keeping FN pressed:&lt;/p&gt;
 &lt;p&gt;Hence, to save changes to an arbitrary profile, you need to select that
 profile &lt;em&gt;before&lt;/em&gt; making the changes.&lt;/p&gt;
 &lt;p&gt;When turning the keyboard on (ie. Plugging the USB cable into a computer),
-the active profile will be whichever one was last active.&lt;/p&gt;</description><category>hardware</category><category>keyboard</category><category>manual</category><guid>https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</guid><pubDate>Fri, 23 Jul 2021 18:41:50 GMT</pubDate></item></channel></rss>
+the active profile will be whichever one was last active.&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>keyboard</category><category>manual</category><guid>https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</guid><pubDate>Fri, 23 Jul 2021 18:41:50 GMT</pubDate></item><item><title>Home media center</title><link>https://tartley.com/posts/home-media-center/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I just bought a
+&lt;a href="http://www.dabs.com/products/netgear-readynas-duo--2-bay----no-drives-included-5063.html"&gt;NetGear ReadyNas Duo&lt;/a&gt;
+to connect hard drives to my home network, to stream movies and the like
+to our fabulous Xbox Classic media center. In the process of
+researching, I was wondering whether the kind of hard drive connection
+matters. I mean, if you plug USB hard drives into a device like that,
+does it run fast enough to stream one or more movies simultaneously? How
+many simultaneous movies or audio streams would your average home
+ethernet carry? My first stab at answering these questions are below.&lt;/p&gt;
+&lt;p&gt;On the left are various network and hard drive connection technologies.
+On the right are various uses to which I might want to put them. You
+can't use a slower connection (eg. bluetooth) to drive a faster usage
+(eg. blu-ray quality movies). Centre column is the data rate in megabits
+per second (Mb/s):&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Channel&lt;/th&gt;
+&lt;th style="text-align: right;"&gt;Bandwidth&lt;br&gt;(Mb/s)&lt;/th&gt;
+&lt;th&gt;Media&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;EDGE mobile phone&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;0.2&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;0.3&lt;/td&gt;
+&lt;td&gt;CD audio&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bluetooth1&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;0.7&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;1.3&lt;/td&gt;
+&lt;td&gt;Minimal video&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bluetooth2&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;2.1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Wifi 802.11b&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;4.5&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;5.0&lt;/td&gt;
+&lt;td&gt;DVD mpeg-2 quality&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ADSL1&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;8.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ethernet 10baseT&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;10.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;USB1&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;12.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;15.0&lt;/td&gt;
+&lt;td&gt;HDTV video (from 8 to 15)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ADSL2+ ⭐️&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cable modem&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;30.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;40.0&lt;/td&gt;
+&lt;td&gt;Blu-ray disc&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Wifi 802.11g&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;54.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Firewire800 act&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;65.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ethernet 100baseT ⭐️&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;100.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PCI&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;133.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;USB2 actual&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;240.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Firewire 400 theo&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;400.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;USB2 theoretical&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;480.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Wifi 802.11n&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;600.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Firewire 800 theo&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;800.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Seagate Barracuda ⭐️&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;960.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ethernet gigabit&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;1,000.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SATA-150 theo&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;1,500.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SATA-300 theo&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;3,000.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;⭐️ = my setup&lt;/p&gt;
+&lt;p&gt;I'm assuming that I don't have gigabit ethernet, because I've never paid
+it any attention in the past. Judging from the above, my 100BaseT should
+be more than adequate, but will be the weakest link. So that'll be the
+first thing I look at if streaming seems sub-par. Coolio!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Everything works swimmingly. I've had no problem with
+streaming speeds. Problems &lt;em&gt;have&lt;/em&gt; occurred with some .avi files which
+appeared to have invalid interleave cross-stream differential parity (or
+something) and efforts to reverse their polarity were to no avail
+(transcoding software generally wouldn't even read the files!) A quick
+visit or two to MiniNova fixed all that.&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>media</category><guid>https://tartley.com/posts/home-media-center/</guid><pubDate>Mon, 24 Aug 2009 18:02:42 GMT</pubDate></item></channel></rss>
