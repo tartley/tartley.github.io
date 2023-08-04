@@ -11,7 +11,7 @@
 <link rel="canonical" href="https://tartley.com/">
 <link rel="icon" href="welcome.gif" sizes="16x16">
 <link rel="next" href="index-27.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/structured-pattern-matching-in-python/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/til-git-push-force-with-lease/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -76,7 +76,114 @@
 
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/structured-pattern-matching-in-python/" class="u-url">Structured Pattern Matching in Python</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-git-push-force-with-lease/" class="u-url">TIL: git push --force-with-lease</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/til-git-push-force-with-lease/" rel="bookmark">
+            <time class="published dt-published" datetime="2023-08-04T13:48:19-05:00" itemprop="datePublished" title="2023-08-04 13:48">2023-08-04 13:48</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>Don't ever type <code>git push --force</code>. Yes, there are times we have to hold our
+nose and do a force push. Maybe the project requires contributions to be
+rebased or squashed. Maybe we pushed the nuclear launch codes. But there are
+failure modes:</p>
+<ul>
+<li>You might be accidentally pushing to or from the wrong branch, and hence are
+  about to blow away valuable work at the remote. Yes, is unlikely, and can be
+  fixed after the fact, but who knows how much embarrassing disruption and
+  confusion you'll cause the team before you realize what you did.</li>
+<li>Do you <em>always</em> remember to check the state of the remote, to make sure there
+  isn't unexpected extra commits on the remote that you'll unknowingly blow
+  away when you push? Do you enjoy always having to type those extra commands
+  to pull and check the remote commits?</li>
+<li>No matter how conscientious we are about checking the above, there is a race
+  condition. We might check the remote, then someone else pushes valuable
+  changes, then we force push and blow them away.</li>
+</ul>
+<p>Although there are conventions that can help with all the above (e.g. only ever
+force pushing to your own fork, to which nobody else ever pushes), they aren't
+generally watertight. (e.g. you might have pushed something yourself, before
+vacation, and forgotten about it.)</p>
+<p>So the generally agreed method to avoid the above failure modes is "be more
+careful", which sounds to me like the common prelude to failure. What we need
+are push's newer command-line options:</p>
+<dl>
+<dt><code>--force-with-lease</code></dt>
+<dd>Like <code>--force</code>, but refuses to push if the remote ref doesn't point at the
+same commit that our local remote-tracking branch 'origin/mybranch' thinks it
+should. So if someone else pushes something to the remote's 'mybranch' just
+before we try to force push, our push will fail until we pull (and, in theory,
+inspect) those commits that we were about to blow away.</dd>
+</dl>
+<p>It turns out that this is inadequate. One might have fetched an up-to-date remote
+branch, but somehow or other ended up with our local HEAD on a divergent branch
+anyway:</p>
+<div class="code"><pre class="code literal-block">C origin/mybranch
+|
+B¹   B² HEAD mybranch
+ \ /
+  A
+  |
+</pre></div>
+
+<p>In this situation, <code>--force-with-lease</code> will allow us to push, not only blowing
+away the original commit B¹, as we intended, but also C, which was maybe pushed
+by someone else before we fetched.</p>
+<p>To guard against this, we can use the even newer option:</p>
+<dl>
+<dt><code>--force-if-includes</code></dt>
+<dd>This makes <code>--force-with-lease</code> even more strict about rejecting pushes,
+using clever heuristics on your local reflog, to check that the remote ref
+being updated doesn't include commits which have never been part of your local
+branch.</dd>
+</dl>
+<p>Upshot is, I plan to default to always replacing uses of <code>--force</code> with:</p>
+<div class="code"><pre class="code literal-block">git<span class="w"> </span>push<span class="w"> </span>--force-with-lease<span class="w"> </span>--force-if-includes<span class="w"> </span>...
+</pre></div>
+
+<p>That's a lot to type, the options don't have short versions, and it's easy to forget to
+do. Hence, shadow <code>git</code> to enforce it, and make it easy. In .bashrc or similar:</p>
+<div class="code"><pre class="code literal-block"><span class="c1"># Shadow git to warn againt the use of 'git push -f'</span>
+git<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nv">is_push</span><span class="o">=</span><span class="nb">false</span>
+<span class="w">    </span><span class="nv">is_force</span><span class="o">=</span><span class="nb">false</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>arg<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="o">[</span><span class="w"> </span><span class="s2">"</span><span class="nv">$arg</span><span class="s2">"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"push"</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">is_push</span><span class="o">=</span><span class="nb">true</span>
+<span class="w">        </span><span class="o">[</span><span class="w"> </span><span class="s2">"</span><span class="nv">$arg</span><span class="s2">"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"-f"</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">"</span><span class="nv">$arg</span><span class="s2">"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"--force"</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">is_force</span><span class="o">=</span><span class="nb">true</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">"</span><span class="nv">$is_push</span><span class="s2">"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">"</span><span class="nv">$is_force</span><span class="s2">"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="c1"># Suggest alternative commands.</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"git push -f: Consider 'git push --force-with-lease --force-if-includes' instead, which is aliased to 'gpf'"</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="w">    </span><span class="c1"># Run the given command, using the git executable instead of this function.</span>
+<span class="w">    </span><span class="k">$(</span>which<span class="w"> </span>git<span class="k">)</span><span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+<span class="o">}</span>
+
+<span class="c1"># git push force: using the new, safer alternatives to --force</span>
+gpf<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Older versions of git don't have --force-if-includes. Fallback to omitting it.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>--quiet<span class="w"> </span>--force-with-lease<span class="w"> </span>--force-if-includes<span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span>git<span class="w"> </span>push<span class="w"> </span>--quiet<span class="w"> </span>--force-with-lease<span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
+</pre></div>
+
+<p>Then trying to do it wrong tells you how to easily do it right:</p>
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>-f
+git<span class="w"> </span>push<span class="w"> </span>-f:<span class="w"> </span>Consider<span class="w"> </span><span class="s1">'git push --force-with-lease --force-if-includes'</span><span class="w"> </span>instead,<span class="w"> </span>which<span class="w"> </span>is<span class="w"> </span>aliased<span class="w"> </span>to<span class="w"> </span><span class="s1">'gpf'</span>
+<span class="o">[</span><span class="m">1</span><span class="o">]</span>
+$<span class="w"> </span>gpf
+$
+</pre></div>
+
+<p>(The [1] is my prompt telling me that the last command had an error exit value.)</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/structured-pattern-matching-in-python/" class="u-url">Structured Pattern Matching in Python</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -2018,38 +2125,6 @@ Minnesota, is Jim Hagadorn (Republican).</p>
 <p>The economic system of the United States is a capitalist, free market economy.</p>
 <p>The two major political parties in the US are the Democratic and Republican
 parties.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/journey/" class="u-url">Journey</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/journey/" rel="bookmark">
-            <time class="published dt-published" datetime="2022-05-09T06:22:20-05:00" itemprop="datePublished" title="2022-05-09 06:22">2022-05-09 06:22</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p><img alt="" src="files/2022/journey-screenshot.webp"></p>
-<p><em>Released on PlayStation 3 by thatgamecompany in 2012. Played on Windows 10 in
-2022.</em></p>
-<p>The slow-paced opening scenes, alternately trudging up and then surfing down
-sunbaked desert dunes, failed to sustain Zander's interest, so I ended up
-playing through its short runtime by myself.</p>
-<p>In some ways it's an indictment of videogame culture that ten years later it
-still feels so fresh and radical to pair players up with another internet
-rando, while giving them no means to communicate or interact other than helping
-each other out, either leading by example, or exchanging wordless shouts. It
-seems like a pretty limited repertoire at first. I'm half tempted to just wander
-off ahead, alone, into the endless desert.</p>
-<p>Then, you realize that standing close enough together recharges each other's
-magical flying scarves. Suddenly, it's enough. You cling to each other for dear
-life through the howling storms, double back to rescue each other from prowling
-beasts, and then fly exuberantly above the sunlit clouds, forever curving back
-to seek each other's life-giving sustenance.</p>
-<p>I don't know who the two internet randos were, with whom I shared the first and
-second halves of my journey. But in those minutes together, we lived a
-lifetime's worth.</p>
     </div>
     </article>
 </div>

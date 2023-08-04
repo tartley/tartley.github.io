@@ -1,5 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek)</title><link>https://tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 03 Aug 2023 20:27:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Structured Pattern Matching in Python</title><link>https://tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek)</title><link>https://tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Aug 2023 22:11:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: git push --force-with-lease</title><link>https://tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
+nose and do a force push. Maybe the project requires contributions to be
+rebased or squashed. Maybe we pushed the nuclear launch codes. But there are
+failure modes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You might be accidentally pushing to or from the wrong branch, and hence are
+  about to blow away valuable work at the remote. Yes, is unlikely, and can be
+  fixed after the fact, but who knows how much embarrassing disruption and
+  confusion you'll cause the team before you realize what you did.&lt;/li&gt;
+&lt;li&gt;Do you &lt;em&gt;always&lt;/em&gt; remember to check the state of the remote, to make sure there
+  isn't unexpected extra commits on the remote that you'll unknowingly blow
+  away when you push? Do you enjoy always having to type those extra commands
+  to pull and check the remote commits?&lt;/li&gt;
+&lt;li&gt;No matter how conscientious we are about checking the above, there is a race
+  condition. We might check the remote, then someone else pushes valuable
+  changes, then we force push and blow them away.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Although there are conventions that can help with all the above (e.g. only ever
+force pushing to your own fork, to which nobody else ever pushes), they aren't
+generally watertight. (e.g. you might have pushed something yourself, before
+vacation, and forgotten about it.)&lt;/p&gt;
+&lt;p&gt;So the generally agreed method to avoid the above failure modes is "be more
+careful", which sounds to me like the common prelude to failure. What we need
+are push's newer command-line options:&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;code&gt;--force-with-lease&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;Like &lt;code&gt;--force&lt;/code&gt;, but refuses to push if the remote ref doesn't point at the
+same commit that our local remote-tracking branch 'origin/mybranch' thinks it
+should. So if someone else pushes something to the remote's 'mybranch' just
+before we try to force push, our push will fail until we pull (and, in theory,
+inspect) those commits that we were about to blow away.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;It turns out that this is inadequate. One might have fetched an up-to-date remote
+branch, but somehow or other ended up with our local HEAD on a divergent branch
+anyway:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;C origin/mybranch
+|
+B¹   B² HEAD mybranch
+ \ /
+  A
+  |
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In this situation, &lt;code&gt;--force-with-lease&lt;/code&gt; will allow us to push, not only blowing
+away the original commit B¹, as we intended, but also C, which was maybe pushed
+by someone else before we fetched.&lt;/p&gt;
+&lt;p&gt;To guard against this, we can use the even newer option:&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;code&gt;--force-if-includes&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;This makes &lt;code&gt;--force-with-lease&lt;/code&gt; even more strict about rejecting pushes,
+using clever heuristics on your local reflog, to check that the remote ref
+being updated doesn't include commits which have never been part of your local
+branch.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Upshot is, I plan to default to always replacing uses of &lt;code&gt;--force&lt;/code&gt; with:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;--force-if-includes&lt;span class="w"&gt; &lt;/span&gt;...
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That's a lot to type, the options don't have short versions, and it's easy to forget to
+do. Hence, shadow &lt;code&gt;git&lt;/code&gt; to enforce it, and make it easy. In .bashrc or similar:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# Shadow git to warn againt the use of 'git push -f'&lt;/span&gt;
+git&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;is_push&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;is_force&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;arg&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"push"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;is_push&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"-f"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"--force"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;is_force&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$is_push&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$is_force&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="c1"&gt;# Suggest alternative commands.&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"git push -f: Consider 'git push --force-with-lease --force-if-includes' instead, which is aliased to 'gpf'"&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;# Run the given command, using the git executable instead of this function.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;# git push force: using the new, safer alternatives to --force&lt;/span&gt;
+gpf&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;# Older versions of git don't have --force-if-includes. Fallback to omitting it.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;!&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--quiet&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;--force-if-includes&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--quiet&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then trying to do it wrong tells you how to easily do it right:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;-f
+git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;-f:&lt;span class="w"&gt; &lt;/span&gt;Consider&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'git push --force-with-lease --force-if-includes'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;instead,&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;aliased&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'gpf'&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+$&lt;span class="w"&gt; &lt;/span&gt;gpf
+$
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>Structured Pattern Matching in Python</title><link>https://tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
 &lt;a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement"&gt;structured pattern matching&lt;/a&gt;
 when it was added in Python 3.10 a couple of years ago, and have studiously
 avoided it ever since. It seemed like a language feature that's amazingly
@@ -1276,382 +1370,4 @@ reality straight out of Farbrausch's
 &lt;em&gt;&lt;a href="https://www.youtube.com/watch?v=wqu_IpkOYBg"&gt;Debris&lt;/a&gt;&lt;/em&gt;. By the final level,
 this crescendos in scenes reminiscent of &lt;em&gt;2001: A Space Odyssey&lt;/em&gt;, profound in
 both the intimacy of my commune with godhood, and in my continued inability to
-understand what I had achieved. Created a universe, probably? Yeah, probably.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://tartley.com/posts/manifold-garden/</guid><pubDate>Tue, 05 Oct 2021 03:16:08 GMT</pubDate></item><item><title>Keyboard CoolerMaster CK530's Missing Manual</title><link>https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have a
-&lt;a href="https://www.coolermaster.com/catalog/peripheral/keyboards/ck530/"&gt;CoolerMaster CK530&lt;/a&gt;
-mechanical keyboard, which I love. It might have come with a small printed
-manual, but if it did, I no longer have it, and I'm failing to find one online.
-Here's are some things I've gleaned from experimentation.
-If there's a manual I've overlooked, or if you have corrections,
-&lt;a href="https://twitter.com/tartley"&gt;let me know&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The &lt;a href="https://coolermaster.egnyte.com/dl/8NuIc843wQ/?"&gt;Quickstart guide&lt;/a&gt;
-provides a list of key strokes, but no explanations. I've reproduced
-the table here, with tweaks for understandability, and added more descriptions
-below.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Select a mode &lt;br&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + F5&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Cycle modes.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + F8&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Demo (automatically cycles through modes).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Tweak mode &lt;br&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + F1&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Cycle 8 color variations of the current mode.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + F2&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Red level 0-9.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + F3&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Green level 0-9.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + F4&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Blue level 0-9.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + F6&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Foreground color. (See &lt;a href="https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#foreground-and-background-colors"&gt;below&lt;/a&gt;.)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + F7&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Background color.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + Up&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Faster.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + Down&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Slower.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + Left&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Forwards.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + Right&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Backwards.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + F10&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;In "custom" mode, define color of each key.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Profiles &lt;br&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + Esc&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Default profile&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + 1&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Profile 1 (see mnemonic "P1" - "P4" on sides of these keys)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + 2&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Profile 2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + 3&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Profile 3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + 4&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Profile 4&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + r&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Reset current profile to default appearance. (Hold 3 secs.)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + e&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Reset all profiles to default appearance. (Hold 3 secs.)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Macros &lt;br&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + F11&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Record a macro&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + F12&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Delete macro&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + PrtSc&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Single&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + ScrLk&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Infinite loop&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + Pause&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Repeat&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Media &lt;br&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + Ins&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Play / pause&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + Home&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Next track&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + Del&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Stop&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + End&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Previous track&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + PgUp&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Volume up&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + PgDown&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Volume down&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Lock &lt;br&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;fn + F9&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Cycle unlocked(off) / lock windows key(red) / lock whole keyboard(green)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Many of these are self-explanatory. For the rest:&lt;/p&gt;
-&lt;h3&gt;Using modes&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;fn&lt;/code&gt; is the "Coolermaster" key, on the bottom row key between right Windows and
-right Ctrl.&lt;/p&gt;
-&lt;p&gt;When holding &lt;code&gt;fn&lt;/code&gt;, several keys might light up, depending on the current
-mode:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ESC/1/2/3/4&lt;/code&gt; - one of these keys flashes white to show which profile
-  (see &lt;a href="https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#profiles"&gt;below&lt;/a&gt;) is currently in use.&lt;/li&gt;
-&lt;li&gt;If the current mode allows you to select a color to use, then &lt;code&gt;F2/F3/F4&lt;/code&gt;
-  will light up to show the currently selected color's levels of
-  red/green/blue.&lt;/li&gt;
-&lt;li&gt;If the current mode allows &lt;em&gt;two&lt;/em&gt; colors to be set (foreground &amp;amp; background),
-  then one of &lt;code&gt;F6/F7&lt;/code&gt; will flash white, to show which is currently affected. (See &lt;a href="https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#foreground-and-background-colors"&gt;below&lt;/a&gt;.)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Pressing &lt;code&gt;fn + F5&lt;/code&gt; cycles through:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Mode&lt;/th&gt;
-&lt;th style="text-align: center;"&gt;Foreground&lt;/th&gt;
-&lt;th style="text-align: center;"&gt;. Background&lt;/th&gt;
-&lt;th style="text-align: center;"&gt;. Reactive.&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1. All off&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2. Static (all one color)&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3. Rainbow wave&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;4. Crosshair&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;5. Reactive fade&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;6. Custom (see &lt;a href="https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#custom-mode"&gt;below&lt;/a&gt;)&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;7. Stars&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;8. Rain&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;9. Color cycle&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;10. Breathing&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;11. Ripple&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;12. Reactive punch&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;13. Arcing&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;15. Fireball&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;16. Tornado (color spin)&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;17. Reactive tornado&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;18. Water ripple&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;19. Snake&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;&lt;/td&gt;
-&lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Modes marked "reactive" react to key-presses. Mostly this lights up a pattern
-around the pressed key. In the case of "snake", you can play using the arrow
-keys.&lt;/p&gt;
-&lt;p&gt;&lt;span id="foreground-and-background-colors"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h3&gt;Foreground &amp;amp; background colors&lt;/h3&gt;
-&lt;p&gt;Many of the modes have a foreground effect that you can change the color of.
-For example, in the &lt;em&gt;all-one-color&lt;/em&gt; mode (officially called "static")
-you can select the color with which all keys are lit, using &lt;code&gt;fn + F2/F3/F4&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Some of the modes also have a second color, the background, that you can set
-separately. You can see if a mode offers this by selecting the mode and holding
-&lt;code&gt;fn&lt;/code&gt;. If this mode offers two settable colors, then either &lt;code&gt;F6&lt;/code&gt; or &lt;code&gt;F7&lt;/code&gt; will
-flash white, to show you which one you are currently setting.&lt;/p&gt;
-&lt;p&gt;Press &lt;code&gt;fn + F6/F7&lt;/code&gt; to choose foreground or background,
-then use &lt;code&gt;fn + F2/F3/F4&lt;/code&gt; to set it.&lt;/p&gt;
-&lt;p&gt;&lt;span id="custom-mode"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h3&gt;Custom mode&lt;/h3&gt;
-&lt;p&gt;Custom (mode #6 above) lets the user assign a different color to each key.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;First, cycle through modes using &lt;code&gt;fn + F5&lt;/code&gt; until you reach custom mode.
-   It can be tricky to identify when you've reached it. Use the list of modes
-   above to help.&lt;/li&gt;
-&lt;li&gt;While in custom mode, press &lt;code&gt;fn + F10&lt;/code&gt; to edit key colors.&lt;/li&gt;
-&lt;li&gt;Select a color using &lt;code&gt;fn + F2/F3/F4&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Press all the keys you want lit in the selected color. Pressing the same key
-   again turns it unlit.&lt;/li&gt;
-&lt;li&gt;Repeat steps 3 &amp;amp; 4 for other color/key combinations.&lt;/li&gt;
-&lt;li&gt;Finally, save to your current profile (see &lt;a href="https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#profiles"&gt;below&lt;/a&gt;) by holding
-   &lt;code&gt;fn&lt;/code&gt; and pressing your current profile key (whichever of &lt;code&gt;Esc/1/2/3/4&lt;/code&gt; is
-   flashing white.)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Some wrinkles:&lt;/p&gt;
-&lt;p&gt;I can't manage to set a color for the &lt;code&gt;fn&lt;/code&gt; key itself, which always appears
-unlit in this mode.&lt;/p&gt;
-&lt;p&gt;The caps lock key is unlit in this mode, unless caps lock is on.
-Similarly, scroll lock seems to always be unlit for me in this mode,
-although it is lit in other modes.&lt;/p&gt;
-&lt;p&gt;When you try to assign a color to whichever one of &lt;code&gt;Esc/1/2/3/4&lt;/code&gt; is lit white,
-to indicate the active profile, then nothing visible happens, but it is
-working. You have to save (step 6 above).
-Then you can see whether you successfully assigned the color,
-or pressed the key one too many times and left it unlit.&lt;/p&gt;
-&lt;p&gt;While editing key colors, if you wait, without exit/saving, pressing nothing
-for a minute or so, then key color editing times out, cancelling all your
-changes since step 2.&lt;/p&gt;
-&lt;p&gt;&lt;span id="profiles"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h3&gt;Profiles&lt;/h3&gt;
-&lt;p&gt;There are five "profiles", each of which can be used to save the current
-state of the keyboard.&lt;/p&gt;
-&lt;p&gt;The profiles are accessed using &lt;code&gt;fn + 1/2/3/4/Esc&lt;/code&gt;. &lt;code&gt;Esc&lt;/code&gt; is the "default"
-profile. Current keyboard settings (e.g. illumination mode and customized
-colors) can be saved to one of the five profiles, and then loaded back later.
-Are macros stored in a profile? Don't know.&lt;/p&gt;
-&lt;p&gt;The current profile is shown when you hold &lt;code&gt;fn&lt;/code&gt;, by one of &lt;code&gt;1/2/3/4/Esc&lt;/code&gt;
-flashing white. While keeping FN pressed:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Pressing the flashing profile key will save the keyboard state to your
-  current profile.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Pressing any of the other profile keys will LOAD that profile,
-  losing the current keyboard state.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hence, to save changes to an arbitrary profile, you need to select that
-profile &lt;em&gt;before&lt;/em&gt; making the changes.&lt;/p&gt;
-&lt;p&gt;When turning the keyboard on (ie. Plugging the USB cable into a computer),
-the active profile will be whichever one was last active.&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>keyboard</category><category>manual</category><guid>https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</guid><pubDate>Fri, 23 Jul 2021 18:41:50 GMT</pubDate></item></channel></rss>
+understand what I had achieved. Created a universe, probably? Yeah, probably.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://tartley.com/posts/manifold-garden/</guid><pubDate>Tue, 05 Oct 2021 03:16:08 GMT</pubDate></item></channel></rss>
