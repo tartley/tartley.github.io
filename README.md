@@ -1,6 +1,7 @@
 # tartley.com
 
 Uses Nikola static site generator.
+
 See output of 'make', with no args, for some handy commands.
 
 # TODO
