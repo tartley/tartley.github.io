@@ -20,12 +20,12 @@ BLOG_AUTHOR = "Jonathan Hartley"  # (translatable)
 BLOG_TITLE = "Made out of meat"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://www.tartley.com/"
+SITE_URL = "https://www.tartley.com"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://tartley.com/"
-BLOG_EMAIL = "tartley @ the domain tartley dot com"
-BLOG_DESCRIPTION = "A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!"  # (translatable)
+BLOG_EMAIL = "tartley @ tartley dot com"
+BLOG_DESCRIPTION = "A website devoted to oneself has been described — by my own Father, no less — as the greatest act of hubris. Welcome aboard!"  # (translatable)
 
 DEFAULT_LANG = "en"
 

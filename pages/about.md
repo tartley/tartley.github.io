@@ -4,7 +4,7 @@
 .. date: 2020-06-11 16:12:34 UTC-05:00
 -->
 
-A website dedicated to oneself has been described (by my own Father, no less) as the greatest act of hubris. Welcome aboard!
+A website dedicated to oneself has been described — by my own Father, no less — as the greatest act of hubris. Welcome aboard!
 
 ## Contact Jonathan Hartley
 
@@ -12,7 +12,7 @@ A website dedicated to oneself has been described (by my own Father, no less) as
 ![Jonathan Hartley's smiley face](/files/2023/ibm-cloud/jonathan-hartley.webp) 
 </span>
 
-* Email tartley at the domain tartley.com.
+* Email tartley at tartley.com.
 * Chit-chat on [mastodon.social@tartley](https://mastodon.social/@tartley).
 * Code on [github.com/tartley](https://github.com/tartley).
 * Résumé as [HTML](/files/Jonathan-Hartley-résumé.html) or [PDF](/files/Jonathan-Hartley-résumé.pdf).
@@ -24,11 +24,6 @@ A website dedicated to oneself has been described (by my own Father, no less) as
 <span style="float: left">
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/files/2020/creative-commons-by-nc-sa.png" width=88 height=31 /></a>
 </span>
-<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Content on tartley.com</span>, by <a xmlns:cc="http://creativecommons.org/ns#" href="mailto://tartley @ the domain tartley dot com" property="cc:attributionName" rel="cc:attributionURL">Jonathan Hartley</a>, is licensed under the<br/><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Content on tartley.com</span>, by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com/pages/about" property="cc:attributionName" rel="cc:attributionURL">Jonathan Hartley</a>, is licensed under the<br/><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.
 <span style="float: none">
-
-
-
-
-
 
