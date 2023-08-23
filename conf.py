@@ -17,10 +17,10 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Jonathan Hartley"  # (translatable)
-BLOG_TITLE = "tartley.com"  # (translatable)
+BLOG_TITLE = "tartley.com | Jonathan Hartley's personal blog"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://tartley.com/"
+SITE_URL = "https://www.tartley.com/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://tartley.com/"
@@ -1076,7 +1076,7 @@ MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.c
 # ['-F', 'pandoc-citeproc', '--bibliography=/Users/foo/references.bib']
 # Pandoc does not demote headers by default.  To enable this, you can use, for example
 # ['--base-header-level=2']
-# PANDOC_OPTIONS = []
+PANDOC_OPTIONS = ['--base-header-level=2']
 
 # Social buttons. This is sample code for AddThis (which was the default for a
 # long time). Insert anything you want here, or even make it empty (which is
@@ -1305,7 +1305,7 @@ SEARCH_FORM = """
 # past.  Useful especially if your post titles are in <h1> tags too, for
 # example.
 # (defaults to 1.)
-# DEMOTE_HEADERS = 1
+DEMOTE_HEADERS = 1
 
 # If you don’t like slugified file names ([a-z0-9] and a literal dash),
 # and would prefer to use all the characters your file system allows.
