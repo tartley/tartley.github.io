@@ -50,6 +50,10 @@
   <lastmod>2023-08-03T20:27:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://tartley.com/categories/cloud.xml</loc>
+  <lastmod>2023-08-23T03:26:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://tartley.com/categories/cognition.xml</loc>
   <lastmod>2023-08-03T20:27:00Z</lastmod>
  </sitemap>
@@ -290,6 +294,10 @@
   <lastmod>2023-08-03T20:27:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://tartley.com/categories/networking.xml</loc>
+  <lastmod>2023-08-23T03:26:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://tartley.com/categories/niven.xml</loc>
   <lastmod>2023-08-03T20:27:00Z</lastmod>
  </sitemap>
@@ -374,6 +382,10 @@
   <lastmod>2023-08-03T20:27:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://tartley.com/categories/security.xml</loc>
+  <lastmod>2023-08-23T03:26:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://tartley.com/categories/short.xml</loc>
   <lastmod>2023-08-03T20:27:00Z</lastmod>
  </sitemap>
@@ -383,7 +395,7 @@
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/software.xml</loc>
-  <lastmod>2023-08-04T22:11:00Z</lastmod>
+  <lastmod>2023-08-23T03:26:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/categories/startups.xml</loc>
@@ -471,18 +483,18 @@
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/galleries/Drawings/rss.xml</loc>
-  <lastmod>2023-08-04T18:59:00Z</lastmod>
+  <lastmod>2023-08-23T02:35:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/galleries/rss.xml</loc>
-  <lastmod>2023-08-04T18:59:00Z</lastmod>
+  <lastmod>2023-08-23T02:35:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/rss.xml</loc>
-  <lastmod>2023-08-04T22:11:00Z</lastmod>
+  <lastmod>2023-08-23T03:26:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tartley.com/sitemap.xml</loc>
-  <lastmod>2023-08-04T22:11:00Z</lastmod>
+  <lastmod>2023-08-23T03:26:00Z</lastmod>
  </sitemap>
 </sitemapindex>
