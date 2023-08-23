@@ -30,7 +30,7 @@ only incoming SSH connections, which are TCP connections on port 22. All other
 types of traffic, such as ICMP ‘ping' connections, or TCP connections on other
 ports, are blocked. Fig 1. A security group configured to allow incoming SSH
 
-![](/files/2023/ibm-cloud/1_allow-ssh-1.webp)
+![A diagram representing SSH connections being allowed from support engineer to instances within security group 1, while ping connections are denied](/files/2023/ibm-cloud/1_allow-ssh-1.webp)
 
 *Fig 1. A security group configured to allow incoming SSH.*
 
@@ -46,7 +46,7 @@ increase security, you might only allow connections from a particular instance.
 Fig 2. A security group configured to allow incoming SSH connections (TCP port
 22) from a particular IP address.
 
-![](/files/2023/ibm-cloud/2_allow-ssh-one-ip.webp)
+![A diagram representing SSH conections being allowed from a known IP address to instances within security group 1, while connections from a disgruntled employee at a different IP address are denied](/files/2023/ibm-cloud/2_allow-ssh-one-ip.webp)
 
 *Fig 2. A security group configured to allow incoming SSH connections (TCP port
 22) from a particular IP address.*
@@ -60,7 +60,7 @@ configured with a CIDR block, to allow traffic from all instances on that
 subnet. Fig 3. A security group configured to allow incoming SSH connections
 (TCP port 22) from all instances on a given subnet.
 
-![](/files/2023/ibm-cloud/3_allow-ssh-subnet.webp)
+![A diagram representing SSH conections being allowed from a known subnet to instances within security group 1, while connections from a hacker at an IP address ouside the subet are denied](/files/2023/ibm-cloud/3_allow-ssh-subnet.webp)
 
 *Fig 3. A security group configured to allow incoming SSH connections (TCP port
 22) from all instances on a given subnet.*
@@ -93,7 +93,7 @@ connections on 27017), without restricting the IP addresses allowed to make
 connections. We'll fix that soon. Fig 4. Two security groups configured to
 allow application servers to send queries to MongoDB nodes on a subnet.
 
-![](/files/2023/ibm-cloud/4_allow-app-servers-access-db-subnet.webp)
+![A diagram representing queries from instances in security group "app" being allowed to connect to port 27017 of the subnet of instances in security group "db", which similarly allows incoming connections on TCP port 27017](/files/2023/ibm-cloud/4_allow-app-servers-access-db-subnet.webp)
 
 *Fig 4. Two security groups configured to allow application servers to send
 queries to MongoDB nodes on a subnet.*
@@ -134,7 +134,7 @@ allowing connections from the members of that group. Fig 5. Two security groups
 configured to allow application servers to send queries to MongoDB nodes using
 remote groups.
 
-![](/files/2023/ibm-cloud/5_allow-app-servers-access-db-remote.webp)
+![A diagram representing instances in security group "app" being allowed to connect to instances in security group "db", via port 27017 only](/files/2023/ibm-cloud/5_allow-app-servers-access-db-remote.webp)
 
 *Fig 5. Two security groups configured to allow application servers to send
 queries to MongoDB nodes using remote groups.*
@@ -165,7 +165,7 @@ Similarly, we need to add a second rule to the “app” security group, to allo
 incoming requests from “web”. Fig 6. A traditional three-tier application using
 remote security groups.
 
-![](/files/2023/ibm-cloud/6_web-app-db.webp)
+![A diagram representing a user connecting via port 80 to instances in security group "web", which connect to instances in group "app" via port 61516, which connect to group "db" via port 27017](/files/2023/ibm-cloud/6_web-app-db.webp)
 
 *Fig 6. A traditional three-tier application using remote security groups.*
 
@@ -190,7 +190,7 @@ be configured to only allow incoming connections from the appropriate points in
 a CI/CD infrastructure (not shown.) Fig 7. Adding a bastion server with SSH
 access to all other instances.
 
-![](/files/2023/ibm-cloud/7_bastion.webp)
+![A diagram representing the same elements as figure 6 above, with the addition of a "bastion" group which connects to all instances via SSH on port 22](/files/2023/ibm-cloud/7_bastion.webp)
 
 *Fig 7. Adding a bastion server with SSH access to all other instances.*
 
@@ -208,7 +208,7 @@ accommodate many others. For more information, see
 ---
 
 <span style="float: left">
-![](/files/2023/ibm-cloud/jonathan-hartley.webp)
+![Jonathan Hartley's smiley face](/files/2023/ibm-cloud/jonathan-hartley.webp)
 </span>
 <br/>
 **Jonathan Hartley**<br/>
