@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about creative)</title><link>https://tartley.com/</link><description>Generating instead of consuming.</description><atom:link href="https://tartley.com/categories/creative.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 03 Aug 2023 20:27:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating a Level for Thief 2</title><link>https://tartley.com/posts/creating-a-level-for-thief-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;After &lt;a href="https://tartley.com/sinister-redux"&gt;Sinister Ducks&lt;/a&gt;, my &lt;a href="http://www.gamedevlessons.com/"&gt;videogame
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com | Jonathan Hartley's personal blog (Posts about creative)</title><link>https://www.tartley.com/</link><description>Generating instead of consuming.</description><atom:link href="https://www.tartley.com/categories/creative.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 15:22:21 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating a Level for Thief 2</title><link>https://www.tartley.com/posts/creating-a-level-for-thief-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;After &lt;a href="https://www.tartley.com/sinister-redux"&gt;Sinister Ducks&lt;/a&gt;, my &lt;a href="http://www.gamedevlessons.com/"&gt;videogame
 creation mentor&lt;/a&gt; suggested that I create
 a mod for an existing game, in order to distance myself a little from
 the programming aspects of creating a game, and instead spend a little
@@ -39,7 +39,7 @@ slightly improved engine and editor.) I chose this for three reasons:&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;Having finished the tutorials, this weekend I broke ground on creating
 my own level, or 'fan-mission' (FM), in the parlance:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Designing a Thief2 Level in DromEd" src="https://tartley.com/files/2010/01/dromed-sm.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Designing a Thief2 Level in DromEd" src="https://www.tartley.com/files/2010/01/dromed-sm.png"&gt;&lt;/p&gt;
 &lt;p&gt;I'm using the DromEd Toolkit, which is DromEd with some third-party
 patches and bugfixes applied to it. My first impressions with DromEd are
 that it's very clunky and ugly, and startlingly lacking in
@@ -61,13 +61,13 @@ Museum&lt;/a&gt; in London.&lt;/p&gt;
 basic geometry to form a stocky museum building. Here you can just about
 make out a hole in the brick facade that will form the front entrance.
 This is not the entrance that the player will likely be using:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2010/01/front-entrance.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/front-entrance.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;This is all very crude thus far - with repeating textures on large
 surfaces, and plain uniform lighting. There are a complete set of mostly
 rectangular ground-floor rooms, with interconnecting doorways. The
 highlight of my modelling to date is this stairway leading up to the
 (otherwise nonexistant) next floor.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2010/01/stairway.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/stairway.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;I'm not so happy with the wood texture I chose - I'll go back and look
 for something more uniform. But I am happy with the way the stairs flair
 out at the bottom. I realised in the process of creating this that this
@@ -75,6 +75,6 @@ makes it possible to fit a flight of stairs into a smaller space than
 would otherwise be possible, by allowing the bottom few steps to
 gracefully project out into the corridor.&lt;/p&gt;
 &lt;p&gt;Having finished this last night, I then dreamed about geometric
-operations on three dimensional spaces, which I think is a good sign.&lt;/p&gt;</description><category>creative</category><category>gamedev</category><category>geek</category><guid>https://tartley.com/posts/creating-a-level-for-thief-2/</guid><pubDate>Mon, 25 Jan 2010 19:50:26 GMT</pubDate></item><item><title>Cross-site image linking vandalism</title><link>https://tartley.com/posts/cross-site-image-linking-vandalism/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="New Super Mario Brothers... or is it?" src="https://tartley.com/files/2007/03/new-super-mario-bros2.jpg"&gt;&lt;/p&gt;
+operations on three dimensional spaces, which I think is a good sign.&lt;/p&gt;</description><category>creative</category><category>gamedev</category><category>geek</category><guid>https://www.tartley.com/posts/creating-a-level-for-thief-2/</guid><pubDate>Mon, 25 Jan 2010 19:50:26 GMT</pubDate></item><item><title>Cross-site image linking vandalism</title><link>https://www.tartley.com/posts/cross-site-image-linking-vandalism/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="New Super Mario Brothers... or is it?" src="https://www.tartley.com/files/2007/03/new-super-mario-bros2.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;It never gets old. Thank you for the giggles, &lt;a href="http://vgfreedom.blogspot.com/2008/06/podcast-review-new-super-mario-bros.html"&gt;Video Game
-Freedom&lt;/a&gt;.&lt;/p&gt;</description><category>creative</category><category>gumby</category><category>image</category><category>linking</category><category>refried</category><category>tartley.com</category><category>vandalism</category><category>web</category><guid>https://tartley.com/posts/cross-site-image-linking-vandalism/</guid><pubDate>Thu, 05 Jun 2008 22:17:28 GMT</pubDate></item></channel></rss>
+Freedom&lt;/a&gt;.&lt;/p&gt;</description><category>creative</category><category>gumby</category><category>image</category><category>linking</category><category>refried</category><category>tartley.com</category><category>vandalism</category><category>web</category><guid>https://www.tartley.com/posts/cross-site-image-linking-vandalism/</guid><pubDate>Thu, 05 Jun 2008 22:17:28 GMT</pubDate></item></channel></rss>

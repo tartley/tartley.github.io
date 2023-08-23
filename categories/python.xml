@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about python)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 03 Aug 2023 20:27:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Structured Pattern Matching in Python</title><link>https://tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com | Jonathan Hartley's personal blog (Posts about python)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 15:22:21 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Structured Pattern Matching in Python</title><link>https://www.tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
 &lt;a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement"&gt;structured pattern matching&lt;/a&gt;
 when it was added in Python 3.10 a couple of years ago, and have studiously
 avoided it ever since. It seemed like a language feature that's amazingly
@@ -338,7 +338,7 @@ do an exercise like this post just to add it to their mental toolbox, it needs
 maintenance effort, not just in CPython but in other implementations too, and
 needs handling by tools such as syntax highlighters, type checkers. It really
 doesn't seem like a net win to me, &lt;em&gt;unless&lt;/em&gt; you're writing way more parsers
-than the average programmer, which no doubt the champions of this feature are.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/structured-pattern-matching-in-python/</guid><pubDate>Sat, 29 Jul 2023 23:15:26 GMT</pubDate></item><item><title>TIL: Format Python Snippets with Black.</title><link>https://tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+than the average programmer, which no doubt the champions of this feature are.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/structured-pattern-matching-in-python/</guid><pubDate>Sat, 29 Jul 2023 23:15:26 GMT</pubDate></item><item><title>TIL: Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -369,7 +369,7 @@ gained much enthusiasm.&lt;/p&gt;
 &lt;li&gt;Passes the result to Black.&lt;/li&gt;
 &lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/main/bin/enblacken"&gt;enblacken on github&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><category>til</category><category>vim</category><guid>https://tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/main/bin/enblacken"&gt;enblacken on github&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><category>til</category><category>vim</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
 for it, called "Announce":&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/tartley/rhythmbox-plugin-announce"&gt;https://github.com/tartley/rhythmbox-plugin-announce&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Every time a new song starts to play, it announces the title using
@@ -377,12 +377,12 @@ speech synthesis. I like it when I'm listening to some new music I'm not
 familiar with, but am away from the computer. Then I can still know
 which track is which.&lt;/p&gt;
 &lt;p&gt;If the album or artist names are different from the previous track, then
-it includes those in the announcement, too.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/rhythmbox-plugin-announce/</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>PyRochesterMN</title><link>https://tartley.com/posts/pyrochestermn/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Announcing the world's newest Python User Group, PyRochesterMN, based in
+it includes those in the announcement, too.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/rhythmbox-plugin-announce/</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>PyRochesterMN</title><link>https://www.tartley.com/posts/pyrochestermn/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Announcing the world's newest Python User Group, PyRochesterMN, based in
 Rochester, Minnesota, USA.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; We've had a couple of name &amp;amp; hosting changes since:&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/PyRochesterMN"&gt;http://www.meetup.com/PyRochesterMN&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/RochesTech"&gt;http://www.meetup.com/RochesTech&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.reddit.com/r/rochestertech/"&gt;https://www.reddit.com/r/rochestertech/&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>meetup</category><category>python</category><category>software</category><guid>https://tartley.com/posts/pyrochestermn/</guid><pubDate>Thu, 21 Jan 2016 03:01:27 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
+&lt;p&gt;&lt;a href="https://www.reddit.com/r/rochestertech/"&gt;https://www.reddit.com/r/rochestertech/&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>meetup</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pyrochestermn/</guid><pubDate>Thu, 21 Jan 2016 03:01:27 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://www.tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
 Code."&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The goals of making deployment consistent, reliable and fast are very
 laudable, and the conclusion involving creating Debian packages is just
@@ -412,7 +412,7 @@ full of packages. Point pip at it using
 'packages' directory could be checked into your project's repo, so that
 once you've checked a project out, you have everything you need to
 deploy to local VMs, even with no network connection at all. I wrote
-about this &lt;a href="https://tartley.com/pip-install-lightspeed-and-bulletproof"&gt;a while ago&lt;/a&gt;.&lt;/p&gt;
+about this &lt;a href="https://www.tartley.com/pip-install-lightspeed-and-bulletproof"&gt;a while ago&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; Building your code separately on each host will cause
 consistency issues&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;So don't install dependencies using source packages, use wheels instead.
@@ -437,7 +437,7 @@ packages, rather than more bug-prone ad-hoc scripts and Ansible config.
 So I'm not at all against the final conclusions of the Nylas article.
 (Hugs to you folks at Nylas!)&lt;/p&gt;
 &lt;p&gt;Dashed this out in ten minutes between daycare pickup and dinner being
-ready. Apologies for the inevitable shoddyness.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</guid><pubDate>Wed, 22 Jul 2015 00:06:02 GMT</pubDate></item><item><title>Chaining a sequence of generators</title><link>https://tartley.com/posts/chaining-a-sequence-of-generators/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I often gravitate towards solutions using a series of chained
+ready. Apologies for the inevitable shoddyness.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</guid><pubDate>Wed, 22 Jul 2015 00:06:02 GMT</pubDate></item><item><title>Chaining a sequence of generators</title><link>https://www.tartley.com/posts/chaining-a-sequence-of-generators/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I often gravitate towards solutions using a series of chained
 generators, in the style of David Beazley's '&lt;a href="http://www.dabeaz.com/generators-uk/"&gt;Generator Tricks for
 Systems Programmers&lt;/a&gt;.'&lt;/p&gt;
 &lt;p&gt;This results in the outer level of my code calling one generator after
@@ -511,7 +511,7 @@ generators, i.e. the following is the same as the above 'for' loop:&lt;/p&gt;
 
 &lt;p&gt;There's some rough edges, such as determining what to do if different
 generators require other args. Presumably 'partial' could help here. But
-in general, 'link' only needs to be written once, and I'm liking it.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/chaining-a-sequence-of-generators/</guid><pubDate>Tue, 15 Oct 2013 20:09:54 GMT</pubDate></item><item><title>pip install : Lightspeed and Bulletproof</title><link>https://tartley.com/posts/pip-install-lightspeed-and-bulletproof/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I saw a post about &lt;a href="http://www.scottisheyes.com/how-to-fix-slow-pip-install"&gt;speeding up the Python packaging command "pip
+in general, 'link' only needs to be written once, and I'm liking it.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/chaining-a-sequence-of-generators/</guid><pubDate>Tue, 15 Oct 2013 20:09:54 GMT</pubDate></item><item><title>pip install : Lightspeed and Bulletproof</title><link>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I saw a post about &lt;a href="http://www.scottisheyes.com/how-to-fix-slow-pip-install"&gt;speeding up the Python packaging command "pip
 install"&lt;/a&gt;, by
 specifying more responsive mirrors for querying and downloading
 packages. For my situation, a better tactic is this.&lt;/p&gt;
@@ -549,7 +549,7 @@ no network. You might choose to treat 'packages' as ephemeral.&lt;/p&gt;
 pattern has now been &lt;a href="http://www.pip-installer.org/en/latest/cookbook.html#fast-local-installs"&gt;explicitly called out in the
 documentation&lt;/a&gt;,
 which was substantially reorganised and improved with the recent 1.3
-release.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><guid>https://tartley.com/posts/pip-install-lightspeed-and-bulletproof/</guid><pubDate>Fri, 08 Mar 2013 15:29:09 GMT</pubDate></item><item><title>Hexagonal Django</title><link>https://tartley.com/posts/hexagonal-django/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;The last few weeks I've been thinking about the architectural pattern
+release.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</guid><pubDate>Fri, 08 Mar 2013 15:29:09 GMT</pubDate></item><item><title>Hexagonal Django</title><link>https://www.tartley.com/posts/hexagonal-django/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;The last few weeks I've been thinking about the architectural pattern
 known as &lt;a href="http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html"&gt;Clean, Onion, Hexagonal, or
 Ports'n'Adaptors&lt;/a&gt;.
 I'm curious if many people are applying it in the Django world.&lt;/p&gt;
@@ -596,16 +596,16 @@ web-oriented aspects of your project, as it should.&lt;/p&gt;
 &lt;p&gt;These ideas all seem like relatively straightforward software
 engineering, and I feel a bit foolish for not having been aware of them
 all these years. I console myself that I'm not alone.&lt;/p&gt;
-&lt;p&gt;UncleBob's Ruby Midwest keynote "&lt;a href="https://tartley.com/posts/hexagonal-django/%20http:/www.confreaks.com/videos/759-rubymidwest2011-keynote-architecture-the-lost-years"&gt;Architecture - The Lost
+&lt;p&gt;UncleBob's Ruby Midwest keynote "&lt;a href="https://www.tartley.com/posts/hexagonal-django/%20http:/www.confreaks.com/videos/759-rubymidwest2011-keynote-architecture-the-lost-years"&gt;Architecture - The Lost
 Years&lt;/a&gt;"
-attributes one source of this idea to Ivar Jacobsen's 1994 book &lt;a href="https://tartley.com/posts/hexagonal-django/%20http:/www.amazon.co.uk/Object-oriented-Software-Engineering-Approach-Press/dp/0201544350"&gt;Object
+attributes one source of this idea to Ivar Jacobsen's 1994 book &lt;a href="https://www.tartley.com/posts/hexagonal-django/%20http:/www.amazon.co.uk/Object-oriented-Software-Engineering-Approach-Press/dp/0201544350"&gt;Object
 Oriented Software Engineering : A Use Case Driven
 Approach&lt;/a&gt;
 (2nd-hand hardbacks cheap on Amazon.)&lt;/p&gt;
 &lt;p&gt;I see a few people applying these ideas to Rails, but are many people
 out there doing this in Django? I plan to refactor a small vertical
 slice of our monster Django app into this style, to try and prove the
-idea for myself.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/hexagonal-django/</guid><pubDate>Tue, 04 Dec 2012 20:42:01 GMT</pubDate></item><item><title>Compiling MacVim with Python 2.7</title><link>https://tartley.com/posts/compiling-macvim-with-python-2-7/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I love the brilliant Vim plugin
+idea for myself.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/hexagonal-django/</guid><pubDate>Tue, 04 Dec 2012 20:42:01 GMT</pubDate></item><item><title>Compiling MacVim with Python 2.7</title><link>https://www.tartley.com/posts/compiling-macvim-with-python-2-7/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I love the brilliant Vim plugin
 &lt;a href="http://www.vim.org/scripts/script.php?script_id=2441"&gt;pyflakes-vim&lt;/a&gt;,
 which highlights errors &amp;amp; warnings, and since I got a MacBook for work,
 I've been using MacVim a lot.&lt;/p&gt;
@@ -646,7 +646,7 @@ directory.&lt;/p&gt;
 &lt;p&gt;And files with set literals are now correctly parsed for errors.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This only works if the Python 2.7 is your default 'python'
 executable. Otherwise, or if you get "ImportError: No module named
-site"?, see Richard's comments below.&lt;/p&gt;</description><category>geek</category><category>osx-dev</category><category>python</category><category>software</category><category>terminal</category><category>vim</category><guid>https://tartley.com/posts/compiling-macvim-with-python-2-7/</guid><pubDate>Tue, 18 Oct 2011 17:25:03 GMT</pubDate></item><item><title>Python 2.7 regular expression cheatsheet</title><link>https://tartley.com/posts/python-2-7-regular-expression-cheatsheet/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Couldn't find one of these, so I whipped one up.&lt;/p&gt;
+site"?, see Richard's comments below.&lt;/p&gt;</description><category>geek</category><category>osx-dev</category><category>python</category><category>software</category><category>terminal</category><category>vim</category><guid>https://www.tartley.com/posts/compiling-macvim-with-python-2-7/</guid><pubDate>Tue, 18 Oct 2011 17:25:03 GMT</pubDate></item><item><title>Python 2.7 regular expression cheatsheet</title><link>https://www.tartley.com/posts/python-2-7-regular-expression-cheatsheet/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Couldn't find one of these, so I whipped one up.&lt;/p&gt;
 &lt;p&gt;Bit of restructured text:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/blob/master/cheatsheet.rst"&gt;https://github.com/tartley/python-regex-cheatsheet/blob/master/cheatsheet.rst&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Install some Python packages:&lt;/p&gt;
@@ -657,4 +657,4 @@ site"?, see Richard's comments below.&lt;/p&gt;</description><category>geek</cat
 &lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf"&gt;Python 2.7 regular expression
 cheatsheet&lt;/a&gt;
 (click this link or the image for the most up-to-date PDF from github.)&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf"&gt;&lt;img alt="" src="https://tartley.com/files/2011/10/Python-regular-expression-cheatsheet-0.3.0.png" title="Python regular expression cheatsheet 0.3.3"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><guid>https://tartley.com/posts/python-2-7-regular-expression-cheatsheet/</guid><pubDate>Fri, 14 Oct 2011 16:20:11 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf"&gt;&lt;img alt="" src="https://www.tartley.com/files/2011/10/Python-regular-expression-cheatsheet-0.3.0.png" title="Python regular expression cheatsheet 0.3.3"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/python-2-7-regular-expression-cheatsheet/</guid><pubDate>Fri, 14 Oct 2011 16:20:11 GMT</pubDate></item></channel></rss>

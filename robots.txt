@@ -1,4 +1,4 @@
-Sitemap: https://tartley.com/sitemapindex.xml
+Sitemap: https://www.tartley.com/sitemapindex.xml
 
 User-Agent: *
-Host: tartley.com
+Host: www.tartley.com

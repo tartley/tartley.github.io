@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com</title><link>https://tartley.com/</link><description>A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 03:26:21 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Illustrating Uses of IBM Cloud Security Groups</title><link>https://tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;blockquote&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com | Jonathan Hartley's personal blog</title><link>https://www.tartley.com/</link><description>A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 15:22:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Illustrating Uses of IBM Cloud Security Groups</title><link>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;blockquote&gt;
 &lt;p&gt;I wrote this high-level public-facing guide while employed by IBM, creating
 the security groups feature for IBM Cloud. It
 &lt;a href="https://web.archive.org/web/20210418195246/https://www.ibm.com/cloud/blog/illustrating-uses-ibm-cloud-security-groups"&gt;used to reside&lt;/a&gt;
@@ -20,7 +20,7 @@ connection to your instances, blocking all other traffic. For example, to allow
 only incoming SSH connections, which are TCP connections on port 22. All other
 types of traffic, such as ICMP ‘ping' connections, or TCP connections on other
 ports, are blocked. Fig 1. A security group configured to allow incoming SSH&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/1_allow-ssh-1.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/1_allow-ssh-1.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 1. A security group configured to allow incoming SSH.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;When instances 1 &amp;amp; 2 are added to your security group, firewalls are created
 directly on those instances,configured to allow or deny the corresponding
@@ -31,7 +31,7 @@ send arbitrary network traffic.&lt;/p&gt;
 increase security, you might only allow connections from a particular instance.
 Fig 2. A security group configured to allow incoming SSH connections (TCP port
 22) from a particular IP address.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/2_allow-ssh-one-ip.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/2_allow-ssh-one-ip.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 2. A security group configured to allow incoming SSH connections (TCP port
 22) from a particular IP address.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The security group has been configured with the IP address used by a support
@@ -41,7 +41,7 @@ Connections from other instances are blocked.&lt;/p&gt;
 configured with a CIDR block, to allow traffic from all instances on that
 subnet. Fig 3. A security group configured to allow incoming SSH connections
 (TCP port 22) from all instances on a given subnet.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/3_allow-ssh-subnet.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/3_allow-ssh-subnet.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 3. A security group configured to allow incoming SSH connections (TCP port
 22) from all instances on a given subnet.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The diagram shows instances on an authorized subnet (deploy1 &amp;amp; deploy2),
@@ -65,7 +65,7 @@ we'll give them names: “app” and “db”.&lt;/p&gt;
 connections on 27017), without restricting the IP addresses allowed to make
 connections. We'll fix that soon. Fig 4. Two security groups configured to
 allow application servers to send queries to MongoDB nodes on a subnet.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/4_allow-app-servers-access-db-subnet.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/4_allow-app-servers-access-db-subnet.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 4. Two security groups configured to allow application servers to send
 queries to MongoDB nodes on a subnet.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;For clarity, these diagrams don't show the many connections which are blocked
@@ -104,7 +104,7 @@ group.&lt;/p&gt;
 allowing connections from the members of that group. Fig 5. Two security groups
 configured to allow application servers to send queries to MongoDB nodes using
 remote groups.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/5_allow-app-servers-access-db-remote.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/5_allow-app-servers-access-db-remote.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 5. Two security groups configured to allow application servers to send
 queries to MongoDB nodes using remote groups.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This has several advantages. Firstly, our data store no longer accepts
@@ -126,7 +126,7 @@ on port 61516.&lt;/p&gt;
 &lt;p&gt;Similarly, we need to add a second rule to the “app” security group, to allow
 incoming requests from “web”. Fig 6. A traditional three-tier application using
 remote security groups.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/6_web-app-db.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/6_web-app-db.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 6. A traditional three-tier application using remote security groups.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The more types of server we add to our setup, the more benefit “remote” groups
 provide, by minimizing setup configuration, and by automatically keeping
@@ -144,7 +144,7 @@ access from the bastion to all our instances. The bastion instance itself would
 be configured to only allow incoming connections from the appropriate points in
 a CI/CD infrastructure (not shown.) Fig 7. Adding a bastion server with SSH
 access to all other instances.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/7_bastion.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/7_bastion.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 7. Adding a bastion server with SSH access to all other instances.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This is starting to look like a realistic setup for a modest but scalable
 multi-tier application.&lt;/p&gt;
@@ -156,14 +156,14 @@ accommodate many others. For more information, see
 &lt;a href="https://cloud.ibm.com/docs/security-groups/sg_index.html"&gt;Getting Started with Security Groups&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/jonathan-hartley.webp"&gt;
+&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/jonathan-hartley.webp"&gt;
 &lt;/span&gt;
 &lt;br&gt;
 &lt;strong&gt;Jonathan Hartley&lt;/strong&gt;&lt;br&gt;
 Senior Cloud Developer&lt;/p&gt;
 &lt;p&gt;&lt;span style="float: none"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;</description><category>cloud</category><category>networking</category><category>security</category><category>software</category><guid>https://tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</guid><pubDate>Wed, 23 Aug 2023 02:33:47 GMT</pubDate></item><item><title>TIL: git push --force-with-lease</title><link>https://tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
+&lt;p&gt;&lt;/p&gt;</description><category>cloud</category><category>networking</category><category>security</category><category>software</category><guid>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</guid><pubDate>Wed, 23 Aug 2023 02:33:47 GMT</pubDate></item><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
 nose and do a force push. Maybe the project requires contributions to be
 rebased or squashed. Maybe we pushed the nuclear launch codes. But there are
 failure modes:&lt;/p&gt;
@@ -257,7 +257,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;gpf
 $
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>Structured Pattern Matching in Python</title><link>https://tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
+&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>Structured Pattern Matching in Python</title><link>https://www.tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
 &lt;a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement"&gt;structured pattern matching&lt;/a&gt;
 when it was added in Python 3.10 a couple of years ago, and have studiously
 avoided it ever since. It seemed like a language feature that's amazingly
@@ -596,8 +596,8 @@ do an exercise like this post just to add it to their mental toolbox, it needs
 maintenance effort, not just in CPython but in other implementations too, and
 needs handling by tools such as syntax highlighters, type checkers. It really
 doesn't seem like a net win to me, &lt;em&gt;unless&lt;/em&gt; you're writing way more parsers
-than the average programmer, which no doubt the champions of this feature are.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/structured-pattern-matching-in-python/</guid><pubDate>Sat, 29 Jul 2023 23:15:26 GMT</pubDate></item><item><title>Ur-Fascism</title><link>https://tartley.com/posts/ur-fascism/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Ur-Fascism cover" src="https://tartley.com/files/2023/ur-fascism-cover.webp"&gt;
+than the average programmer, which no doubt the champions of this feature are.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/structured-pattern-matching-in-python/</guid><pubDate>Sat, 29 Jul 2023 23:15:26 GMT</pubDate></item><item><title>Ur-Fascism</title><link>https://www.tartley.com/posts/ur-fascism/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Ur-Fascism cover" src="https://www.tartley.com/files/2023/ur-fascism-cover.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Umberto Eco, 1995.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Eco's prose has left me in the dust on occasion in the past. I missed so many references, or failed to keep up with the relentlessly nested layers of meaning, that I was simply holding on for the ride. This essay matches Eco's characteristically dense, intellectual prose, studded with foreign phrases, and references to contemporary thinkers, historical movements and causes and revolutions and dictatorships, and their antecedents. But it is short, and perhaps in contrast to the flourishes of brilliance that comprise his fiction, this is a factual piece, and is written to be understood rather than to dazzle. It begins by establishing Eco's credentials to speak on this topic, with the first of several entrancing first-hand indications of what it was like to grow up as an intellectual young child in Italy under Mussolini, and the revelations that followed at the opening up of his world at the end of WWII.&lt;/p&gt;
@@ -647,7 +647,7 @@ world and its money. Instead of coastal liberals, refer to coastal elites. But a
 &lt;li&gt;
 &lt;p&gt;All fascisms make use of their own varieties of NewSpeak, using an impoverished vocabulary and syntax, in order to limit the instruments for critical reasoning. This may appear in apparently innocent forms, from schoolbooks to popular talk shows.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</description><category>book</category><category>essays</category><category>media</category><category>non-fiction</category><category>politics</category><guid>https://tartley.com/posts/ur-fascism/</guid><pubDate>Wed, 12 Jul 2023 00:41:42 GMT</pubDate></item><item><title>TIL: Makefiles that are self-documenting, and process all extant files.</title><link>https://tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;h3&gt;Self-documenting Makefiles&lt;/h3&gt;
+&lt;/ol&gt;</description><category>book</category><category>essays</category><category>media</category><category>non-fiction</category><category>politics</category><guid>https://www.tartley.com/posts/ur-fascism/</guid><pubDate>Wed, 12 Jul 2023 00:41:42 GMT</pubDate></item><item><title>TIL: Makefiles that are self-documenting, and process all extant files.</title><link>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;h3&gt;Self-documenting Makefiles&lt;/h3&gt;
 &lt;p&gt;A trick from years ago, but I copy it around between projects enough that it
 deserves calling out. Add a target:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;help&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## Show this help.&lt;/span&gt;
@@ -708,15 +708,15 @@ outputting the unmatched wildcard expression.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will generate one .pdf file for each extant .tex file, regardless of
-whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>command-line</category><category>geek</category><category>make</category><category>til</category><guid>https://tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>Astroneer Resource Graph</title><link>https://tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
+whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>command-line</category><category>geek</category><category>make</category><category>til</category><guid>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>Astroneer Resource Graph</title><link>https://www.tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
 get each of the resources in &lt;a href="https://astroneer.space/"&gt;Astroneer&lt;/a&gt;. Click the WEBP
 thumbnail below to get the full glorious SVG, then you can '&lt;em&gt;find in page&lt;/em&gt;' on it.
-(&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>map</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
-&lt;img alt="Spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+(&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>map</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
+&lt;img alt="Spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;Major spoilers ahead. It's seven years old at this point.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Soma - protagonist" src="https://tartley.com/files/2022/soma-protagonist.webp"&gt;
+&lt;img alt="Soma - protagonist" src="https://www.tartley.com/files/2022/soma-protagonist.webp"&gt;
 &lt;/center&gt;&lt;br&gt;
 &lt;p&gt;Soma is a creepy survival horror game, that leans deeply into the moral and
 existential quandaries arising from the deterministic principle that it's
@@ -789,7 +789,7 @@ currents and landslides, populated by organic-mechanical hybrid horrors that
 glide by in the darkness. I found these some of the absolute best, most
 atmospheric "walking simulator" moments I've experienced in a game.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="The ocean floor, stirred up by currents and landslides" src="https://tartley.com/files/2022/soma-murky.webp"&gt;
+&lt;img alt="The ocean floor, stirred up by currents and landslides" src="https://www.tartley.com/files/2022/soma-murky.webp"&gt;
 &lt;br&gt;Is that another distant light up ahead? Good luck finding them while the currents pummel you,
 and hideous, deadly beasts loom out of the murk.
 &lt;/center&gt;&lt;br&gt;
@@ -841,8 +841,8 @@ a way out. For, of course, the ARK's launch changed nothing for us. Our
 simulations are aboard it, but we are still sitting here, in a broken robot
 corpse in a collapsing facility at the bottom of a haunted ocean on a dead
 planet. The dispatched copy will enjoy life on the ARK, but we - like the copy
-of ourselves we left behind earlier - are stuck here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>Doomsday Clock</title><link>https://tartley.com/posts/doomsday-clock/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;By Geoff Johns (writer), Gary Frank (pencil) &amp;amp; Brad Anderson (colors). (2017-2019)&lt;/em&gt;
-&lt;img alt="Spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+of ourselves we left behind earlier - are stuck here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>Doomsday Clock</title><link>https://www.tartley.com/posts/doomsday-clock/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;By Geoff Johns (writer), Gary Frank (pencil) &amp;amp; Brad Anderson (colors). (2017-2019)&lt;/em&gt;
+&lt;img alt="Spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;The original &lt;a href="https://archive.org/details/Watchmen1987"&gt;&lt;em&gt;Watchmen&lt;/em&gt;&lt;/a&gt; is a
 seminal 12-issue superhero comic by Alan Moore (writer) &amp;amp; Dave Gibbons
 (artist), published from 1986 to 1987, that transformed the comics world. A
@@ -863,7 +863,7 @@ humanity by Adrien Veidt's plans, tired of his entanglement in the messy
 complexity of people's lives, threatening to leave the galaxy "for one less
 complicated".&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Manhattan's departure at the end of Watchmen" src="https://tartley.com/files/2022/doomsday-clock-watchmen-manhattan.webp"&gt;
+&lt;img alt="Manhattan's departure at the end of Watchmen" src="https://www.tartley.com/files/2022/doomsday-clock-watchmen-manhattan.webp"&gt;
 &lt;/center&gt;
 &lt;br&gt;
 &lt;p&gt;In &lt;em&gt;Doomsday Clock&lt;/em&gt;, Adrian Veidt, genius that he is, invents a means to follow
@@ -878,7 +878,7 @@ crossover event nobody wanted", but personally I felt it was really well done.&l
 into play, using mechanisms I thought were legitimate and, on occasion,
 laugh-out-loud satisfying as they reached their resolution.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Doomsday Clock Watchmen Comedian Alive" src="https://tartley.com/files/2022/doomsday-clock-comedian.webp"&gt;
+&lt;img alt="Doomsday Clock Watchmen Comedian Alive" src="https://www.tartley.com/files/2022/doomsday-clock-comedian.webp"&gt;
 &lt;/center&gt;
 &lt;br&gt;
 &lt;p&gt;In particular, they find a way to bring back Rorschach. Or, at least, &lt;em&gt;a&lt;/em&gt;
@@ -920,7 +920,7 @@ human consequences of his actions, setting himself up as the villain of the
 piece, an uncaring "being of inaction", in contrast to Superman, the literal
 "man of Action".&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Doomsday Clock: Superman &amp;amp; Manhattan" src="https://tartley.com/files/2022/doomsday-clock-superman.webp"&gt;
+&lt;img alt="Doomsday Clock: Superman &amp;amp; Manhattan" src="https://www.tartley.com/files/2022/doomsday-clock-superman.webp"&gt;
 &lt;/center&gt;
 &lt;br&gt;
 &lt;p&gt;This forms a genuine riposte to &lt;em&gt;Watchmen's&lt;/em&gt; criticism of the superhero genre.
@@ -946,10 +946,10 @@ us, all the real-world, fully-rounded humans, trapped in the depths of our
 pathos, and they wonder, when will each of us learn to transcend our humdrum
 limitations, to finally act on our hopes and dreams, and &lt;em&gt;fly...&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Doomsday Clock: Mothman" src="https://tartley.com/files/2022/doomsday-clock-mothman.webp"&gt;
+&lt;img alt="Doomsday Clock: Mothman" src="https://www.tartley.com/files/2022/doomsday-clock-mothman.webp"&gt;
 &lt;/center&gt;
-&lt;br&gt;</description><category>book</category><category>comic</category><category>fiction</category><category>media</category><category>moore</category><category>science-fiction</category><guid>https://tartley.com/posts/doomsday-clock/</guid><pubDate>Fri, 23 Sep 2022 01:57:55 GMT</pubDate></item><item><title>New Laptop Time!</title><link>https://tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="A laptop" src="https://tartley.com/files/2008/02/lappy.webp"&gt;
+&lt;br&gt;</description><category>book</category><category>comic</category><category>fiction</category><category>media</category><category>moore</category><category>science-fiction</category><guid>https://www.tartley.com/posts/doomsday-clock/</guid><pubDate>Fri, 23 Sep 2022 01:57:55 GMT</pubDate></item><item><title>New Laptop Time!</title><link>https://www.tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="A laptop" src="https://www.tartley.com/files/2008/02/lappy.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;My employer, Canonical, has a "bring your own hardware" policy, trusting that
 their engineers would rather choose and administer their own personal laptops,
@@ -960,7 +960,7 @@ graphics chipset doesn't have the power to play modern games with my kiddo.
 Battlezone 98 runs fine, but Civilization VI (2016) is annoyingly choppy,
 at about 9 frames per second.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Civilization VI screenshot" src="https://tartley.com/files/2022/civ-vi.webp"&gt;
+&lt;img alt="Civilization VI screenshot" src="https://www.tartley.com/files/2022/civ-vi.webp"&gt;
 &lt;/center&gt;
 &lt;br&gt;
 &lt;p&gt;This summer I received the three-year cash-in-hand bonus earmarked as a
@@ -1418,7 +1418,7 @@ checked out earlier in the process.&lt;/p&gt;
 &lt;p&gt;The Oryx is just a few hundred over my budget, even with the current $300 off.
 But a tricked-out Gazelle seems to check all the boxes.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt='Gazelle 15" laptop' src="https://tartley.com/files/2022/gazelle-15.avif"&gt;
+&lt;img alt='Gazelle 15" laptop' src="https://www.tartley.com/files/2022/gazelle-15.avif"&gt;
 &lt;/center&gt;
 &lt;p&gt;They have a reasonably high-ranked 12th generation Intel i7 CPU, which seems
 to achieve good performance without wading into the diminishing returns
@@ -1525,23 +1525,23 @@ says that is 3,200MHz.&lt;/p&gt;
 latencies the price goes up to about $375 for CL16, but that isn't even in
 stock anywhere.&lt;/p&gt;
 &lt;p&gt;At one point, after much searching, I found some CL16 on newegg.com:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Memory on sale in Newegg - scam" src="https://tartley.com/files/2022/memory-on-sale.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Memory on sale in Newegg - scam" src="https://www.tartley.com/files/2022/memory-on-sale.webp"&gt;&lt;/p&gt;
 &lt;p&gt;And it is only $128! Carefully checking the specs, including those on the
 manufacturer's site, using the shown model number 'CMSX32GX4M2A3000C16',
 this is exactly what we want. 2x16GB at 3200MT/s at CL16.&lt;/p&gt;
 &lt;p&gt;While checking it out, I clicked around a bit, and at one point found:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Bad review on Newegg" src="https://tartley.com/files/2022/bad-review-on-newegg.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bad review on Newegg" src="https://www.tartley.com/files/2022/bad-review-on-newegg.webp"&gt;&lt;/p&gt;
 &lt;p&gt;This came along with a number of other negative reviews, stating customers had
 been sent memory modules that were fake, ie. imitations of the purported
 reputable manufacturer, they didn't work at the advertised clock speeds, and
 the seller had gone dark on them, taking weeks to respond to queries, and not
 sending replacements until Newegg got involved. Seems wisest to skip this.&lt;/p&gt;
 &lt;p&gt;Eventually I found an alternative:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Memory on sale in Newegg - legit" src="https://tartley.com/files/2022/memory-on-sale-legit.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Memory on sale in Newegg - legit" src="https://www.tartley.com/files/2022/memory-on-sale-legit.webp"&gt;&lt;/p&gt;
 &lt;p&gt;Yes! DDR4 in a SoDIMM package, 2x16GB modules at 3,200MHz and 18CL. The latency
 isn't quite as good, but it sounds legit, so I'll take it!&lt;/p&gt;
-&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>linux</category><guid>https://tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>Neuromancer</title><link>https://tartley.com/posts/neuromancer/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left; padding: 1em;"&gt;
-&lt;img alt="Neuromancer cover" src="https://tartley.com/files/2022/neuromancer-cover.webp"&gt;
+&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>linux</category><guid>https://www.tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>Neuromancer</title><link>https://www.tartley.com/posts/neuromancer/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left; padding: 1em;"&gt;
+&lt;img alt="Neuromancer cover" src="https://www.tartley.com/files/2022/neuromancer-cover.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by William Gibson, 1984.&lt;/em&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1695,4 +1695,4 @@ Case chewed his lower lip and gazed out across the plateaus of the Eastern Seabo
 "Well, that's the stuff of legend, ain't it?'&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Five out of five stars. A riveting performance.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>audiobook</category><category>book</category><category>cyberpunk</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://tartley.com/posts/neuromancer/</guid><pubDate>Mon, 19 Sep 2022 16:22:12 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>audiobook</category><category>book</category><category>cyberpunk</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/neuromancer/</guid><pubDate>Mon, 19 Sep 2022 16:22:12 GMT</pubDate></item></channel></rss>

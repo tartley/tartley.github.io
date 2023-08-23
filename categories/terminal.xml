@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about terminal)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/terminal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Aug 2023 22:11:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: git push --force-with-lease</title><link>https://tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com | Jonathan Hartley's personal blog (Posts about terminal)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/terminal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 15:22:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
 nose and do a force push. Maybe the project requires contributions to be
 rebased or squashed. Maybe we pushed the nuclear launch codes. But there are
 failure modes:&lt;/p&gt;
@@ -93,7 +93,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;gpf
 $
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>TIL: Creating Animated Meme GIFs on the Command-Line</title><link>https://tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
+&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>TIL: Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
 animated gif memes, finally figured out how to do it manually. Not a universal
 process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
 &lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
@@ -131,7 +131,7 @@ and specifying "copy", as most people do, gives me an output with no video,
 only audio.&lt;/p&gt;
 &lt;p&gt;This results in a three second, 217KB .mp4 video file. (the following is just an
 image of it).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split.webp" src="https://tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split.webp" src="https://www.tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
 &lt;h4&gt;3. Crop&lt;/h4&gt;
 &lt;p&gt;To crop out the black bars from the top and bottom:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -hide_banner -i Ash-split.mp4 -vf 'crop=iw:365' Ash-split-crop.mp4
@@ -142,13 +142,13 @@ any offset ordinates for the crop, ffmpeg defaults to centering them, so this
 365 pixels are taken from the (spatial, vertical) middle of the video, which is
 exactly what we want.&lt;/p&gt;
 &lt;p&gt;This results in a three second, 220KB .mp4 video file.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://www.tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
 &lt;h3&gt;4. Resize and convert to gif&lt;/h3&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="s s-Atom"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;hide_banner&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;vf&lt;/span&gt; &lt;span class="s s-Atom"&gt;'scale=512:-1'&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;resize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;gif&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This results in a grainy-but-passable three second 750KB animated .gif:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
 &lt;p&gt;The file size can be smaller, if you care, most easily by splitting a shorter
 video clip, reducing the frame rate, or reducing the 'scale' in this step.&lt;/p&gt;
 &lt;p&gt;Alternately, this could be done using ImageMagik's 'convert', but the result
@@ -171,7 +171,7 @@ text labels, then the '-layers' option re-applies optimizations. Without this
 dance, the text is all twitchy and messy.&lt;/p&gt;
 &lt;p&gt;Voilà. Imagine sending it to a co-worker who is taking on a difficult task,
 like making changes to that thorny section of the codebase that nobody likes:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>geek</category><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>video</category><category>youtube</category><guid>https://tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>TIL: Git Annotated Tags</title><link>https://tartley.com/posts/git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
+&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>geek</category><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>video</category><category>youtube</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/posts/git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
 &lt;code&gt;git tag TAGNAME&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Today I learned about &lt;em&gt;annotated&lt;/em&gt; tags, created with &lt;code&gt;git tag -a -m "MESSAGE"
 TAGNAME&lt;/code&gt;. If you don't specify &lt;code&gt;-m MESSAGE&lt;/code&gt;, git annoyingly prompts you for
@@ -195,7 +195,7 @@ of the commit being pushed, so that no unreachable tags are created on origin.&l
 &lt;li&gt;Use annotated tags to share state with other developers.&lt;/li&gt;
 &lt;li&gt;To share annotated tags, either push them directly, with &lt;code&gt;git push TAGNAME&lt;/code&gt;,
    or use &lt;code&gt;git push --follow-tags&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;</description><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://tartley.com/posts/git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>TIL: Format Python Snippets with Black.</title><link>https://tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+&lt;/ol&gt;</description><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>TIL: Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -226,7 +226,7 @@ gained much enthusiasm.&lt;/p&gt;
 &lt;li&gt;Passes the result to Black.&lt;/li&gt;
 &lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/main/bin/enblacken"&gt;enblacken on github&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><category>til</category><category>vim</category><guid>https://tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/main/bin/enblacken"&gt;enblacken on github&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><category>til</category><category>vim</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;
@@ -332,7 +332,7 @@ is probably a simpler way.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;The booooooring bits:&lt;/p&gt;
 &lt;p&gt;When we started the container, we mentioned
-&lt;a href="https://tartley.com/files/2020/setup-lxd-profile.sh"&gt;a one-off setup script&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://www.tartley.com/files/2020/setup-lxd-profile.sh"&gt;a one-off setup script&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The script does a few things:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Creates a new key pair specifically to SSH to the container.&lt;/li&gt;
@@ -346,9 +346,9 @@ is probably a simpler way.&lt;/p&gt;
 &lt;li&gt;Doubtless due to my own misunderstanding somewhere, in order to get working
    IPv4 connections to my containers, I had to disable IPv6 connections to
    them.&lt;/li&gt;
-&lt;/ol&gt;</description><category>geek</category><category>linux</category><category>software</category><category>terminal</category><guid>https://tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Dina font as an OTF.</title><link>https://tartley.com/posts/dina-as-otf/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;The Dina font, converted to an OpenType Font (see screenshots at the bottom of
+&lt;/ol&gt;</description><category>geek</category><category>linux</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Dina font as an OTF.</title><link>https://www.tartley.com/posts/dina-as-otf/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;The Dina font, converted to an OpenType Font (see screenshots at the bottom of
 the page):&lt;/p&gt;
-&lt;h2&gt;&lt;a href="https://tartley.com/files/2020/Dina-v2.93-otf.tar.gz"&gt;&lt;span class="emoji"&gt;📦&lt;/span&gt; Dina-v2.93-otf.tar.gz&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a href="https://www.tartley.com/files/2020/Dina-v2.93-otf.tar.gz"&gt;&lt;span class="emoji"&gt;📦&lt;/span&gt; Dina-v2.93-otf.tar.gz&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://gitlab.gnome.org/GNOME/pango/issues/386"&gt;Pango dropped support for naive bitmap fonts&lt;/a&gt;
 in v1.44 -- i.e. from Ubuntu 20.04, &lt;em&gt;Focal&lt;/em&gt;, onwards.&lt;/p&gt;
 &lt;p&gt;So all bitmap fonts need to be converted into a format that will render,
@@ -415,11 +415,11 @@ or at least filing an issue there to try and get some help.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3&gt;The result&lt;/h3&gt;
 &lt;p&gt;I know, it doesn't look like much.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2020/terminal-dina-small-ll.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-dina-small-ll.png"&gt;&lt;/p&gt;
 &lt;p&gt;But compare it with a regular vector font. Here's Ubuntu Mono, the &lt;em&gt;best&lt;/em&gt; of
 the vector fonts I could find at these sizes. Blurry and inconsistent and hard
 to read:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;</description><category>dina</category><category>fonts</category><category>linux</category><category>terminal</category><guid>https://tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>Installing Colout</title><link>https://tartley.com/posts/installing-colout/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;</description><category>dina</category><category>fonts</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>Installing Colout</title><link>https://www.tartley.com/posts/installing-colout/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Colout on PyPI now works just fine, all the following is needless.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;But &lt;code&gt;pip install colout&lt;/code&gt; from PyPI is broken, and has been for many months,
@@ -450,7 +450,7 @@ latest Github at the time:&lt;/p&gt;
 &lt;p&gt;Note that, throughout, we're using &lt;code&gt;--user&lt;/code&gt;, so that you can install
 development tools like this system-wide for the current user, without needing a
 virtualenv, without needing root access, and without modifying your installed
-Python system libraries.&lt;/p&gt;</description><category>geek</category><category>linux</category><category>terminal</category><guid>https://tartley.com/posts/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item><item><title>Automate Gnome keybindings</title><link>https://tartley.com/posts/automate-gnome-keybindings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Sick of manual GUI twiddling to fix inconsistent keybindings on various
+Python system libraries.&lt;/p&gt;</description><category>geek</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item><item><title>Automate Gnome keybindings</title><link>https://www.tartley.com/posts/automate-gnome-keybindings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Sick of manual GUI twiddling to fix inconsistent keybindings on various
 computers. Solved once and for all, by a new script in my personal
 workstation setup bucket:&lt;/p&gt;
 &lt;p&gt;Warning: This:&lt;/p&gt;
@@ -512,7 +512,7 @@ madness.&lt;/p&gt;
 &lt;p&gt;The above modifies alt-tab to just cycle through all windows, ungrouped,
 which fixes the ability to toggle between last two windows. Also,
 alt-grave is provided as an alternative to cycle backwards through the
-windows, which is easier to hit than shift-alt-tab.&lt;/p&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://tartley.com/posts/automate-gnome-keybindings/</guid><pubDate>Thu, 05 Oct 2017 01:06:47 GMT</pubDate></item><item><title>Postscript formatted man pages</title><link>https://tartley.com/posts/postscript-formatted-man-pages/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;man&lt;/code&gt; and its &lt;code&gt;troff&lt;/code&gt; formatting can be asked to produce postscript
+windows, which is easier to hit than shift-alt-tab.&lt;/p&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/automate-gnome-keybindings/</guid><pubDate>Thu, 05 Oct 2017 01:06:47 GMT</pubDate></item><item><title>Postscript formatted man pages</title><link>https://www.tartley.com/posts/postscript-formatted-man-pages/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;man&lt;/code&gt; and its &lt;code&gt;troff&lt;/code&gt; formatting can be asked to produce postscript
 output. Define a Bash function, e.g. in your .bashrc:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;psman&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
 &lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;SLUG&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;tr&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;' '&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'-'&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
@@ -539,7 +539,7 @@ an empty pdf document. We restore `+o pipefail` again at the end.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;produces&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tartley.com/files/2017/08/pman-tr.png"&gt;&lt;img alt="" src="https://tartley.com/files/2017/08/pman-tr.png"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://tartley.com/posts/postscript-formatted-man-pages/</guid><pubDate>Wed, 23 Aug 2017 01:34:02 GMT</pubDate></item><item><title>TIL: When to use three dots vs two in Git</title><link>https://tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;img alt="" src="https://www.tartley.com/files/2017/08/pman-tr.png"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/postscript-formatted-man-pages/</guid><pubDate>Wed, 23 Aug 2017 01:34:02 GMT</pubDate></item><item><title>TIL: When to use three dots vs two in Git</title><link>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
 today:&lt;/p&gt;
 &lt;p&gt;To see the commits or diffs introduced by a branch (the filled circles ●):&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;     f
@@ -589,4 +589,4 @@ git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;m
 git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;...f
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;</description><category>geek</category><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;</description><category>geek</category><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item></channel></rss>

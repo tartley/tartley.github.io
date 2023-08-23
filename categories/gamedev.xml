@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about gamedev)</title><link>https://tartley.com/</link><description>Creating videogames.</description><atom:link href="https://tartley.com/categories/gamedev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 03 Aug 2023 20:27:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://tartley.com/posts/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com | Jonathan Hartley's personal blog (Posts about gamedev)</title><link>https://www.tartley.com/</link><description>Creating videogames.</description><atom:link href="https://www.tartley.com/categories/gamedev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 15:22:21 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
 geometry to drive OpenGL from Python.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tartley.com/posts/flying-high-hobbyist-opengl-from-python"&gt;&lt;em&gt;&amp;lt;&amp;lt; Back to part 1&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python"&gt;&lt;em&gt;&amp;lt;&amp;lt; Back to part 1&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Last time we got as far as creating some instances of our super-simple
 Shape class, and having Glyph and Render classes convert those to arrays
 for OpenGL and render them. This time, we start using that
@@ -76,7 +76,7 @@ MultiShape:&lt;/p&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;multi&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img alt="A cluster of cubes, rendered in one glDrawElements call" src="https://tartley.com/files/2010/07/screen-cube-cluster2.png" title="A cluster of cubes, rendered in one glDrawElements call"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A cluster of cubes, rendered in one glDrawElements call" src="https://www.tartley.com/files/2010/07/screen-cube-cluster2.png" title="A cluster of cubes, rendered in one glDrawElements call"&gt;&lt;/p&gt;
 &lt;p&gt;Another new factory function, &lt;em&gt;RingOf:&lt;/em&gt;&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;RingOf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;child&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;multi&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;MultiShape&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -93,11 +93,11 @@ MultiShape:&lt;/p&gt;
 
 &lt;p&gt;returns copies of a given child shape, arranged in a ring, such as this
 ring of cubes:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A ring of cubes" src="https://tartley.com/files/2010/07/screen-ring1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A ring of cubes" src="https://www.tartley.com/files/2010/07/screen-ring1.png"&gt;&lt;/p&gt;
 &lt;p&gt;A ring of truncated cubes:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A ring of truncated cubes" src="https://tartley.com/files/2010/07/screen-ring2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A ring of truncated cubes" src="https://www.tartley.com/files/2010/07/screen-ring2.png"&gt;&lt;/p&gt;
 &lt;p&gt;A ring of interpenetrated tetrahedrons:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A ring of interpenetrated tetrahedrons" src="https://tartley.com/files/2010/07/screen-ring3.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A ring of interpenetrated tetrahedrons" src="https://www.tartley.com/files/2010/07/screen-ring3.png"&gt;&lt;/p&gt;
 &lt;p&gt;This is just starting to look a bit like a thorny geometric mushie trip, which
 in this context I'm counting as a success.&lt;/p&gt;
 &lt;p&gt;If we can compose basic shapes into rings, we can also compose rings
@@ -113,18 +113,18 @@ into... um... &lt;em&gt;tri-axis-rings&lt;/em&gt;:&lt;/p&gt;
 
 &lt;p&gt;If you look carefully, you can make out some depth-buffer fighting where the
 three rings intersect, but I'm moving too fast to worry about that now.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Tri-axis rings" src="https://tartley.com/files/2010/07/screen-tri-ring.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Tri-axis rings" src="https://www.tartley.com/files/2010/07/screen-tri-ring.png"&gt;&lt;/p&gt;
 &lt;p&gt;Because we're drawing each MultiShape using a single iteration of the
 Render.draw() loop, we've massively reduced the overhead in drawing each
 Shape, so we can easily add all of these at once into the world at
 60fps, although it does form a bit of a visual cacophony:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="All the rings, plus some other stuff" src="https://tartley.com/files/2010/07/screen-all-rings-etc.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="All the rings, plus some other stuff" src="https://www.tartley.com/files/2010/07/screen-all-rings-etc.png"&gt;&lt;/p&gt;
 &lt;p&gt;I wonder how much stuff we can add into a MultiShape before it starts to
 affect the framerate? Let's investigate... How about a spherical glob of
 red blood cubes:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A glob of red blood cubes" src="https://tartley.com/files/2010/08/screen-glob-red-cubes2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A glob of red blood cubes" src="https://www.tartley.com/files/2010/08/screen-glob-red-cubes2.png"&gt;&lt;/p&gt;
 &lt;p&gt;It turns out I can get about 14,000 cubes (168,000 triangles)
-&lt;a href="https://tartley.com/posts/flying-high-opengl-from-python-part-2/#update"&gt;[1]&lt;/a&gt; into a single MultiShape like this before the framerate
+&lt;a href="https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/#update"&gt;[1]&lt;/a&gt; into a single MultiShape like this before the framerate
 starts to drop. I'm still rendering these as regular ctypes arrays, not
 OpenGL vertex buffers (I don't think my hardware supports that), so all
 the geometry is being sent needlessly over the bus to the GPU every
@@ -148,11 +148,11 @@ frame.&lt;/p&gt;
 
 &lt;p&gt;This creates a cluster of cubes, each one colored by its position in RGB
 space.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="An RGB cube cluster" src="https://tartley.com/files/2010/07/screen-rgb-cluster.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="An RGB cube cluster" src="https://www.tartley.com/files/2010/07/screen-rgb-cluster.png"&gt;&lt;/p&gt;
 &lt;p&gt;We still have enough &lt;em&gt;oomph&lt;/em&gt; left over to dive the camera right into the
 midst of the RgbCubeCluster and reveal that all the previous stuff is
 still in the world too:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Whirling machinery at the center of an RgbCluster" src="https://tartley.com/files/2010/08/screen-rgbcluster-and-everything.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Whirling machinery at the center of an RgbCluster" src="https://www.tartley.com/files/2010/08/screen-rgbcluster-and-everything.png"&gt;&lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Recursively Generated Geometry&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;Can we make any more interesting recursively-defined geometry? The first
 thing I thought of (no doubt this has been done many times before) was
@@ -168,7 +168,7 @@ first I naturally assumed that a bug in my code was the cause, but after
 a period of contemplation, I realised this was the correct geometric
 result. The reason for it can be seen in this Wikimedia diagram of the
 first three iterations of forming a Koch surface:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2010/08/Koch_surface_0_through_3.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/08/Koch_surface_0_through_3.png"&gt;&lt;/p&gt;
 &lt;p&gt;The first iteration replaces every triangle by sticking a new
 tetrahedron out of it - exactly as I had done for every face of my
 original. The next iteration sticks smaller tetrahedrons onto every new
@@ -182,10 +182,10 @@ unchanged.&lt;/p&gt;
 newly-formed smaller tetrahedrons, rather than replacing every
 triangular surface, and the result is this more pleasing snowflake
 shape.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A Koch tetrahedron" src="https://tartley.com/files/2010/08/screen-koch-tetra.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A Koch tetrahedron" src="https://www.tartley.com/files/2010/08/screen-koch-tetra.png"&gt;&lt;/p&gt;
 &lt;p&gt;This algorithm is about 60 lines of code. A similar operation can be
 done on a cube, by poking a new, smaller cube out of each of its faces:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A Koch cube" src="https://tartley.com/files/2010/08/screen-koch-cube.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A Koch cube" src="https://www.tartley.com/files/2010/08/screen-koch-cube.png"&gt;&lt;/p&gt;
 &lt;p&gt;The deeper red parts are the original cube and the early generations of
 children. The lighter yellow parts are the later generations.&lt;/p&gt;
 &lt;p&gt;The final and best example in this section was supplied by Oscar
@@ -194,7 +194,7 @@ download the code and produce some shapes of his own. Screenshots can't
 do it justice, but the full stately geometry becomes wonderfully
 apparent when it's in motion. The &lt;em&gt;tetrix&lt;/em&gt;, aka the &lt;a href="http://en.wikipedia.org/wiki/Sierpinski_triangle"&gt;Sierpinski
 tetrahedron&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="The tetrix, aka Siepinski Tetrahedron" src="https://tartley.com/files/2010/08/screen-sierpinski.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The tetrix, aka Siepinski Tetrahedron" src="https://www.tartley.com/files/2010/08/screen-sierpinski.png"&gt;&lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Odds and Ends&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;That's about all I've got to show you. Overall I'm really pleased by
 this, and excited to do some more of the same going forward.&lt;/p&gt;
@@ -235,7 +235,7 @@ the best performance out of PyOpenGL. I've been back and updated the
 performance stats in this post, and hope to make another post about this
 at some point when I understand what I was doing wrong.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The demonstrated&lt;/em&gt; &lt;em&gt;code&lt;/em&gt; &lt;em&gt;is available at
-&lt;a href="https://github.com/tartley/gloopy"&gt;https://github.com/tartley/gloopy&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>presentations</category><category>python</category><category>software</category><guid>https://tartley.com/posts/flying-high-opengl-from-python-part-2/</guid><pubDate>Tue, 03 Aug 2010 15:04:43 GMT</pubDate></item><item><title>Flying High: Hobbyist OpenGL from Python</title><link>https://tartley.com/posts/flying-high-hobbyist-opengl-from-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;This is a transcript-from-memory (what I wish I'd said) of the talk I
+&lt;a href="https://github.com/tartley/gloopy"&gt;https://github.com/tartley/gloopy&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>presentations</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</guid><pubDate>Tue, 03 Aug 2010 15:04:43 GMT</pubDate></item><item><title>Flying High: Hobbyist OpenGL from Python</title><link>https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;This is a transcript-from-memory (what I wish I'd said) of the talk I
 just gave at &lt;a href="http://www.europython.eu/"&gt;EuroPython&lt;/a&gt; 2010, for which I
 owe a debt of gratitude to Richard Jones for his last-minute moral
 support while wrestling with projectors and refresh rates; and to the
@@ -270,11 +270,11 @@ for a particular project.&lt;/p&gt;
 styles out of technical necessity. As is often the case, these
 restrictions resulted in a diverse blossoming of creative ideas,
 producing an enormous set of distinctive visual styles and experiences.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Non-photo-realistic Quake" src="https://tartley.com/files/2010/07/nprquake.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Non-photo-realistic Quake" src="https://www.tartley.com/files/2010/07/nprquake.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Crucially, the most successful and memorable examples of these were
 projects that found ways to work in harmony with the restrictions of the
 medium, rather than attempting to gloss over them.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Rez HD" src="https://tartley.com/files/2010/07/RezHDA.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Rez HD" src="https://www.tartley.com/files/2010/07/RezHDA.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Advances in computing power and technique provide modern games and
 applications with a far wider range of options in how to present
 themselves visually, and yet the greater proportion of them seem content
@@ -283,20 +283,20 @@ This disappoints me, because I feel that projects that opt for a more
 highly stylised look, when appropriately chosen, can create a vastly
 more striking and memorable artistic experiences. This is true in movies
 and all kinds of art.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Waking Life" src="https://tartley.com/files/2010/07/wakinglife1.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Waking Life" src="https://www.tartley.com/files/2010/07/wakinglife1.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;As an amateur graphics programmer, I don't have large resources nor much
 experience to throw at the problem, so my options and my abilities are
 limited. But, like a good artist, I believe it should still be possible
 to create things that are both strikingly beautiful and highly
 functional, either by working with the restrictions of the medium, or by
 finding creative ways to exploit or extend them.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Love" src="https://tartley.com/files/2010/07/love.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Love" src="https://www.tartley.com/files/2010/07/love.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;In particular, the kind of minimal, clean-lined aesthetic that amateur
 OpenGL programs take on by default are useful for their crisp precision,
 as charting and visualisation tools. But above that, I love them for
 their stark minimalism, their clean lines and homogeneous fields of
 colour.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Tron Legacy" src="https://tartley.com/files/2010/07/tron.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Tron Legacy" src="https://www.tartley.com/files/2010/07/tron.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;I wish more professional game developers had an incentive to aim for
 less conventional aesthetics - whether they be deliberately retro, or
 else striking out in some new direction of their own. It's that brave
@@ -313,7 +313,7 @@ minority of projects which do this which form my inspiration.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;This results in a blank screen, at 60fps. Here's a screenshot, so you
 can see exactly what it's doing:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A blank screen" src="https://tartley.com/files/2010/07/blank1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A blank screen" src="https://www.tartley.com/files/2010/07/blank1.png"&gt;&lt;/p&gt;
 &lt;p&gt;I'm using pyglet &amp;amp; PyOpenGL for this, but this isn't important. Any
 framework that provides the above abilities, such as PyGame, along with
 bindings to OpenGL, will be just fine. Whichever framework you use, this
@@ -327,7 +327,7 @@ class, that model 3D shapes, in a way useful for the creation of
 geometry, and then a Glyph class that converts these geometries into
 arrays for OpenGL. Finally these arrays get passed into a Render class,
 which simply calls glDrawElements to render them.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Our Goal" src="https://tartley.com/files/2010/07/fun-stuff.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Our Goal" src="https://www.tartley.com/files/2010/07/fun-stuff.png"&gt;&lt;/p&gt;
 &lt;p&gt;Once the above infrastructure is in place, we can have some fun
 generating interesting shapes to make pretty pictures with. The
 conventional way to provide geometry to your OpenGL code is by loading
@@ -358,7 +358,7 @@ polyhedron we can imagine.&lt;/p&gt;
 &lt;p&gt;To demonstrate how classes Shape, Glyph and Render hang together, let's
 examine an even simpler example, a yellow triangle joined to a red
 square:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Red Triangle &amp;amp; Yellow Square" src="https://tartley.com/files/2010/07/triangle-square.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Red Triangle &amp;amp; Yellow Square" src="https://www.tartley.com/files/2010/07/triangle-square.png"&gt;&lt;/p&gt;
 &lt;p&gt;You can see this geometry features five vertices (v0 to v4), which are
 used by the two faces. This might be represented by an instance of
 Shape:&lt;/p&gt;
@@ -395,7 +395,7 @@ arrays that OpenGL will eat:&lt;/p&gt;
 &lt;p&gt;To generate glvertices, we need to dereference the indices in
 Shape.faces, to produce a new list of vertices, rearranged into the
 order they are going to be drawn:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Step 1. Dereference indices" src="https://tartley.com/files/2010/07/dereference-indices.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Step 1. Dereference indices" src="https://www.tartley.com/files/2010/07/dereference-indices.png"&gt;&lt;/p&gt;
 &lt;p&gt;The most visible aspect of this change is that the vertices are
 re-ordered, such that the indices now simply read '0, 1, 2, 3, 4, 5...'.
 However that isn't actually necessary. The important part of this
@@ -440,7 +440,7 @@ the glverts generator.&lt;/p&gt;
 &lt;p&gt;The second job Glyph has to do is create a ctypes indices array, which
 is derived from the Shape's faces. In doing this, it has to break the
 Shape's faces down into individual triangles.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Step 2. Tessellate indices" src="https://tartley.com/files/2010/07/tessellate-indices.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Step 2. Tessellate indices" src="https://www.tartley.com/files/2010/07/tessellate-indices.png"&gt;&lt;/p&gt;
 &lt;p&gt;The vertex list is unchanged by this step, and the first face - the
 triangle - is also unchanged. The second face, the square, has been
 broken into two triangles.&lt;/p&gt;
@@ -465,7 +465,7 @@ considerably simpler algorithm:&lt;/p&gt;
 
 &lt;p&gt;We again use a generator, to simply join up the face's first vertex with
 all the other vertices, like this:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Tessellation of convex faces" src="https://tartley.com/files/2010/07/tessellation.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Tessellation of convex faces" src="https://www.tartley.com/files/2010/07/tessellation.png"&gt;&lt;/p&gt;
 &lt;p&gt;Now we have our tessellate function, Glyph can now create the glindices
 array in much the same way as it generated the glvertices. I wasn't
 smart enough to write this as a generator first time around, I presume
@@ -529,7 +529,7 @@ Render.draw() method:&lt;/p&gt;
 
 &lt;p&gt;This is canonical OpenGL render code, so I'm not going to dissect it,
 but now we get some actual visible output:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Red triangle, yellow square" src="https://tartley.com/files/2010/07/screen-triangle-square.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Red triangle, yellow square" src="https://www.tartley.com/files/2010/07/screen-triangle-square.png"&gt;&lt;/p&gt;
 &lt;p&gt;Hooray! \o/ We can move our camera position around, and view this 3D
 object from different angles.&lt;/p&gt;
 &lt;p&gt;There's a minor wrinkle here that I'm glossing over. I've turned on
@@ -554,7 +554,7 @@ straightforward, a tetrahedron (triangle-based pyramid):&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Which produces a tetrahedron:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A tetrahedron" src="https://tartley.com/files/2010/07/screen-tetrahedron.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A tetrahedron" src="https://www.tartley.com/files/2010/07/screen-tetrahedron.png"&gt;&lt;/p&gt;
 &lt;p&gt;Then a cube factory:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;Cube&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;edge&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;face_colors&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;e2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;edge&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
@@ -582,18 +582,18 @@ Just to spell it out in longhand:&lt;/p&gt;
 
 &lt;p&gt;So there are the eight vertices of the cube, and that gets us the
 following:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A cube" src="https://tartley.com/files/2010/07/screen-cube.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A cube" src="https://www.tartley.com/files/2010/07/screen-cube.png"&gt;&lt;/p&gt;
 &lt;p&gt;We can add a few more vertices and faces, to make ourselves a truncated
 cube:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A truncated cube" src="https://tartley.com/files/2010/07/screen-truncated-cube.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A truncated cube" src="https://www.tartley.com/files/2010/07/screen-truncated-cube.png"&gt;&lt;/p&gt;
 &lt;p&gt;Once we've got truncated cubes, we might as well add one last face to
 form the entrance:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A truncated cube with entrance" src="https://tartley.com/files/2010/07/screen-space-station.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A truncated cube with entrance" src="https://www.tartley.com/files/2010/07/screen-space-station.png"&gt;&lt;/p&gt;
 &lt;p&gt;There's nothing to stop us adding several of these shapes into the world
 at once, but since we haven't yet moved any of them away from the
 origin, they just sit there, embedded within one another:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A cube and tetrahedron interpenetrate" src="https://tartley.com/files/2010/07/screen-cube-tetra.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A truncated cube with two tetrahedrons" src="https://tartley.com/files/2010/07/screen-trunccube-two-tetras.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A cube and tetrahedron interpenetrate" src="https://www.tartley.com/files/2010/07/screen-cube-tetra.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A truncated cube with two tetrahedrons" src="https://www.tartley.com/files/2010/07/screen-trunccube-two-tetras.png"&gt;&lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Moving objects around&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;In our earlier Render.draw() method, we left a 'TODO' comment in place,
 to note that we weren't yet handling item positions and orientations.
@@ -662,7 +662,7 @@ camera, or any other item, around in space:&lt;/p&gt;
 item's orientation as time goes by.&lt;/p&gt;
 &lt;p&gt;With these all in place, we can now add many Shapes to the world, each
 moving and rotating independently:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Several independantly positioned and oriented shapes" src="https://tartley.com/files/2010/07/screen-several-shapes.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Several independantly positioned and oriented shapes" src="https://www.tartley.com/files/2010/07/screen-several-shapes.png"&gt;&lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Next week: Composite Shapes...&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;This is all great as far as it goes, but it turns out we have a
 performance problem. Adding more than about 450 shapes at once starts to
@@ -680,7 +680,7 @@ more complex shape. This will allow us to use algorithmic means to
 produce more fun geometry, and will also help us draw more complex
 shapes, composed of many simpler shapes, without requiring several
 separate OpenGL function calls for each of the simple shapes.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tartley.com/posts/flying-high-opengl-from-python-part-2"&gt;On to Part 2 &amp;gt;&amp;gt;&lt;/a&gt;&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>presentations</category><category>python</category><guid>https://tartley.com/posts/flying-high-hobbyist-opengl-from-python/</guid><pubDate>Sat, 31 Jul 2010 19:58:30 GMT</pubDate></item><item><title>Loving EuroPython Tutorials</title><link>https://tartley.com/posts/loving-europython-tutorials/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've been loving the two days of tutorials preceding the EuroPython
+&lt;p&gt;&lt;a href="https://www.tartley.com/posts/flying-high-opengl-from-python-part-2"&gt;On to Part 2 &amp;gt;&amp;gt;&lt;/a&gt;&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>presentations</category><category>python</category><guid>https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python/</guid><pubDate>Sat, 31 Jul 2010 19:58:30 GMT</pubDate></item><item><title>Loving EuroPython Tutorials</title><link>https://www.tartley.com/posts/loving-europython-tutorials/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've been loving the two days of tutorials preceding the EuroPython
 conference. This morning I attended &lt;a href="http://www.mechanicalcat.net/richard/log"&gt;Richard
 Jones&lt;/a&gt;' splendid &lt;em&gt;Introduction
 to Game Programming&lt;/em&gt;. It was an absolute pleasure to be walked through
@@ -688,7 +688,7 @@ the creation of an example game like this, using Python game libraries
 like &lt;a href="http://pyglet.org/"&gt;pyglet&lt;/a&gt; and &lt;a href="http://cocos2d.org/"&gt;Cocos&lt;/a&gt;, by
 someone who really knows what he's doing. Also, it's nice to have
 something visible to show after a morning's work:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="My asteroids." src="https://tartley.com/files/2010/07/intro-to-game-programming.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="My asteroids." src="https://www.tartley.com/files/2010/07/intro-to-game-programming.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;(Michael your idea of making engine thrust always visible was exactly what I
 needed to help me capture the screenshot.)&lt;/p&gt;
 &lt;p&gt;The code is based very heavily on samples that Richard provided and
@@ -700,7 +700,7 @@ flickery animated engine thrust, that made me gurgle with delight.&lt;/p&gt;
 engine thrust, and created the asteroids themselves entirely from
 scratch in Gimp. They are just rotatable bitmaps, albeit designed in
 homage of vector graphics of yore, complete with simulated CRT glow.
-Brilliant!&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>python</category><category>software</category><guid>https://tartley.com/posts/loving-europython-tutorials/</guid><pubDate>Mon, 19 Jul 2010 05:08:53 GMT</pubDate></item><item><title>Thief Level : Week 2</title><link>https://tartley.com/posts/thief-level-week-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;This week I spent a little while considering the backstory of the level,
+Brilliant!&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/loving-europython-tutorials/</guid><pubDate>Mon, 19 Jul 2010 05:08:53 GMT</pubDate></item><item><title>Thief Level : Week 2</title><link>https://www.tartley.com/posts/thief-level-week-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;This week I spent a little while considering the backstory of the level,
 and now have at least a rudimentary scenario: Garrett the thief is
 taking an opportunistic foray into the local Shope of Curiosities,
 having heard that their prize exhibit, the McGuffin of Antioc, has been
@@ -709,7 +709,7 @@ maintained somewhere on-site.&lt;/p&gt;
 &lt;p&gt;On top of this, I've been refining the layout of the museum building,
 starting with the two-storey entrance hall, complete with a balcony
 running round it:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="sketch of museum's two-storey main entrance hall" src="https://tartley.com/files/2010/02/w02-sketch-entrance.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="sketch of museum's two-storey main entrance hall" src="https://www.tartley.com/files/2010/02/w02-sketch-entrance.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Plus, I've been planning the possible routes a thief might take to get
 from one room to another. Generally, the conventional paths - in through
 the main entrance and up the stairs and down the corridor - will be
@@ -722,7 +722,7 @@ want the player to be able to simply waltz all through the whole
 building. I've tried to engineer a single interesting primary route
 through the building, with the possibility of a few minor variations so
 players feel like they can exercise some freedom and decision making.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="sketch of ground floor" src="https://tartley.com/files/2010/02/w02-sketch-ground-floor.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="sketch of ground floor" src="https://www.tartley.com/files/2010/02/w02-sketch-ground-floor.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Having done all that, I'm now quite happy that my plans are sufficient
 to produce a small but adequate level. I'll aim to get that complete,
 and any fancy window dressing I can layer on top will be a bonus.&lt;/p&gt;
@@ -731,10 +731,10 @@ doorframes inbetween them. I applied some quick floorboard textures to
 differentiate the floors and ceilings from the walls. Here you can see
 the view from the main entrance, looking into the two-storey entrance
 hall, with the balcony around it visible up on the next level:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="main entraince with floorboards" src="https://tartley.com/files/2010/02/w02-main-entrance.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="main entraince with floorboards" src="https://www.tartley.com/files/2010/02/w02-main-entrance.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;And the view while approaching the top of the stairs, looking down over
 the balcony. There will be a railing when it's done:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Approaching the top of the stairs" src="https://tartley.com/files/2010/02/w02-top-of-stairs-balcony.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Approaching the top of the stairs" src="https://www.tartley.com/files/2010/02/w02-top-of-stairs-balcony.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Thanks heaps to Qolelis for a comment with a tip about textures on
 stairways, to rotate the texture 90 degrees on each stair's vertical
 rise. I only just saw that, but will definitely apply it this week.&lt;/p&gt;
@@ -775,7 +775,7 @@ rooms; staircase.) So at the current rate, it's roughly 28 weeks of
 work, which is double or triple what I'd planned on. Hopefully my rate
 of completing items will increase substantially as I get into the
 groove. I'll have to monitor this going forward, and slash scope if I
-can't drastically accelerate.&lt;/p&gt;</description><category>gamedev</category><category>geek</category><guid>https://tartley.com/posts/thief-level-week-2/</guid><pubDate>Mon, 01 Feb 2010 19:20:31 GMT</pubDate></item><item><title>Creating a Level for Thief 2</title><link>https://tartley.com/posts/creating-a-level-for-thief-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;After &lt;a href="https://tartley.com/sinister-redux"&gt;Sinister Ducks&lt;/a&gt;, my &lt;a href="http://www.gamedevlessons.com/"&gt;videogame
+can't drastically accelerate.&lt;/p&gt;</description><category>gamedev</category><category>geek</category><guid>https://www.tartley.com/posts/thief-level-week-2/</guid><pubDate>Mon, 01 Feb 2010 19:20:31 GMT</pubDate></item><item><title>Creating a Level for Thief 2</title><link>https://www.tartley.com/posts/creating-a-level-for-thief-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;After &lt;a href="https://www.tartley.com/sinister-redux"&gt;Sinister Ducks&lt;/a&gt;, my &lt;a href="http://www.gamedevlessons.com/"&gt;videogame
 creation mentor&lt;/a&gt; suggested that I create
 a mod for an existing game, in order to distance myself a little from
 the programming aspects of creating a game, and instead spend a little
@@ -815,7 +815,7 @@ slightly improved engine and editor.) I chose this for three reasons:&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;Having finished the tutorials, this weekend I broke ground on creating
 my own level, or 'fan-mission' (FM), in the parlance:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Designing a Thief2 Level in DromEd" src="https://tartley.com/files/2010/01/dromed-sm.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Designing a Thief2 Level in DromEd" src="https://www.tartley.com/files/2010/01/dromed-sm.png"&gt;&lt;/p&gt;
 &lt;p&gt;I'm using the DromEd Toolkit, which is DromEd with some third-party
 patches and bugfixes applied to it. My first impressions with DromEd are
 that it's very clunky and ugly, and startlingly lacking in
@@ -837,13 +837,13 @@ Museum&lt;/a&gt; in London.&lt;/p&gt;
 basic geometry to form a stocky museum building. Here you can just about
 make out a hole in the brick facade that will form the front entrance.
 This is not the entrance that the player will likely be using:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2010/01/front-entrance.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/front-entrance.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;This is all very crude thus far - with repeating textures on large
 surfaces, and plain uniform lighting. There are a complete set of mostly
 rectangular ground-floor rooms, with interconnecting doorways. The
 highlight of my modelling to date is this stairway leading up to the
 (otherwise nonexistant) next floor.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2010/01/stairway.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/stairway.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;I'm not so happy with the wood texture I chose - I'll go back and look
 for something more uniform. But I am happy with the way the stairs flair
 out at the bottom. I realised in the process of creating this that this
@@ -851,8 +851,8 @@ makes it possible to fit a flight of stairs into a smaller space than
 would otherwise be possible, by allowing the bottom few steps to
 gracefully project out into the corridor.&lt;/p&gt;
 &lt;p&gt;Having finished this last night, I then dreamed about geometric
-operations on three dimensional spaces, which I think is a good sign.&lt;/p&gt;</description><category>creative</category><category>gamedev</category><category>geek</category><guid>https://tartley.com/posts/creating-a-level-for-thief-2/</guid><pubDate>Mon, 25 Jan 2010 19:50:26 GMT</pubDate></item><item><title>Beginning Game Development With Python and PyGame</title><link>https://tartley.com/posts/beginning-game-development-with-python-and-pygame/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="" src="https://tartley.com/files/2009/01/beginning-game-development-with-python-and-pygame.jpg"&gt;
+operations on three dimensional spaces, which I think is a good sign.&lt;/p&gt;</description><category>creative</category><category>gamedev</category><category>geek</category><guid>https://www.tartley.com/posts/creating-a-level-for-thief-2/</guid><pubDate>Mon, 25 Jan 2010 19:50:26 GMT</pubDate></item><item><title>Beginning Game Development With Python and PyGame</title><link>https://www.tartley.com/posts/beginning-game-development-with-python-and-pygame/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="" src="https://www.tartley.com/files/2009/01/beginning-game-development-with-python-and-pygame.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Will McGugan&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Introduces Python, PyGame and game development ideas from the ground up,
@@ -879,7 +879,7 @@ realised at the time. I'm revising the review scores significantly
 upwards to reflect this.&lt;/p&gt;
 &lt;p&gt;Rating: 10/10 for beginners. 5/10 for experts. Consider yourself
 somewhere between the two.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>gamedev</category><category>geek</category><category>media</category><category>non-fiction</category><category>python</category><category>software</category><guid>https://tartley.com/posts/beginning-game-development-with-python-and-pygame/</guid><pubDate>Mon, 12 Jan 2009 06:17:54 GMT</pubDate></item><item><title>London Geek Night : Game Dev</title><link>https://tartley.com/posts/london-geek-night-game-dev/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Last night was Game Dev night at the London Geek meet in the
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>gamedev</category><category>geek</category><category>media</category><category>non-fiction</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/beginning-game-development-with-python-and-pygame/</guid><pubDate>Mon, 12 Jan 2009 06:17:54 GMT</pubDate></item><item><title>London Geek Night : Game Dev</title><link>https://www.tartley.com/posts/london-geek-night-game-dev/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Last night was Game Dev night at the London Geek meet in the
 ThoughtWorks offices. It was really enjoyable, I really enjoyed the
 talks, and meeting and chatting to everyone there.&lt;/p&gt;
 &lt;p&gt;Interestingly, there were a bunch of comments throughout the evening
@@ -927,8 +927,8 @@ what? We figured it out, decades ago now. It's notable to me that other
 industries which suffer from overwork and burnout (eg. the finance
 industry) are also buzzing with arrogance and secrecy.&lt;/p&gt;
 &lt;p&gt;Humility and communication are pre-requisites for any learning. Jeez,
-get over yourselves and go learn how to run a software project.&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>meetup</category><category>software</category><guid>https://tartley.com/posts/london-geek-night-game-dev/</guid><pubDate>Sat, 22 Nov 2008 20:19:48 GMT</pubDate></item><item><title>Sole Scion project v0.1 : A 2D rigid-body Python game</title><link>https://tartley.com/posts/sole-scion-project-v01-a-2d-rigid-body-python-game/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="screenshot Sole Scion
-v1.0" src="https://tartley.com/files/2008/06/screenshot-sole-scion-v10.png"&gt;&lt;/p&gt;
+get over yourselves and go learn how to run a software project.&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>meetup</category><category>software</category><guid>https://www.tartley.com/posts/london-geek-night-game-dev/</guid><pubDate>Sat, 22 Nov 2008 20:19:48 GMT</pubDate></item><item><title>Sole Scion project v0.1 : A 2D rigid-body Python game</title><link>https://www.tartley.com/posts/sole-scion-project-v01-a-2d-rigid-body-python-game/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="screenshot Sole Scion
+v1.0" src="https://www.tartley.com/files/2008/06/screenshot-sole-scion-v10.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://sethgodin.typepad.com/seths_blog/2008/06/is-it-worthy.html"&gt;Everyone&lt;/a&gt;
 today is &lt;a href="http://www.codinghorror.com/blog/archives/001134.html"&gt;abuzz&lt;/a&gt;
 with the 'release early, release often' sentiment, so I've decided to
@@ -954,4 +954,4 @@ License&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: I've only run it on Linux, but reportedly it also works on
 Windows. Thanks Xtian!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; It also reportedly works under PyPy, provided you install
-the 'functools' module. Thanks Maciej!&lt;/p&gt;</description><category>chipmunk</category><category>gamedev</category><category>geek</category><category>graphics</category><category>physics</category><category>pyglet</category><category>pymunk</category><category>python</category><category>rigid-body</category><category>software</category><guid>https://tartley.com/posts/sole-scion-project-v01-a-2d-rigid-body-python-game/</guid><pubDate>Wed, 18 Jun 2008 11:37:17 GMT</pubDate></item></channel></rss>
+the 'functools' module. Thanks Maciej!&lt;/p&gt;</description><category>chipmunk</category><category>gamedev</category><category>geek</category><category>graphics</category><category>physics</category><category>pyglet</category><category>pymunk</category><category>python</category><category>rigid-body</category><category>software</category><guid>https://www.tartley.com/posts/sole-scion-project-v01-a-2d-rigid-body-python-game/</guid><pubDate>Wed, 18 Jun 2008 11:37:17 GMT</pubDate></item></channel></rss>

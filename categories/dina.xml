@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about dina)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/dina.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 03 Aug 2023 20:27:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Dina font as an OTF.</title><link>https://tartley.com/posts/dina-as-otf/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;The Dina font, converted to an OpenType Font (see screenshots at the bottom of
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com | Jonathan Hartley's personal blog (Posts about dina)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/dina.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 15:22:21 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Dina font as an OTF.</title><link>https://www.tartley.com/posts/dina-as-otf/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;The Dina font, converted to an OpenType Font (see screenshots at the bottom of
 the page):&lt;/p&gt;
-&lt;h2&gt;&lt;a href="https://tartley.com/files/2020/Dina-v2.93-otf.tar.gz"&gt;&lt;span class="emoji"&gt;📦&lt;/span&gt; Dina-v2.93-otf.tar.gz&lt;/a&gt;&lt;/h2&gt;
+&lt;h2&gt;&lt;a href="https://www.tartley.com/files/2020/Dina-v2.93-otf.tar.gz"&gt;&lt;span class="emoji"&gt;📦&lt;/span&gt; Dina-v2.93-otf.tar.gz&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://gitlab.gnome.org/GNOME/pango/issues/386"&gt;Pango dropped support for naive bitmap fonts&lt;/a&gt;
 in v1.44 -- i.e. from Ubuntu 20.04, &lt;em&gt;Focal&lt;/em&gt;, onwards.&lt;/p&gt;
 &lt;p&gt;So all bitmap fonts need to be converted into a format that will render,
@@ -68,28 +68,28 @@ or at least filing an issue there to try and get some help.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3&gt;The result&lt;/h3&gt;
 &lt;p&gt;I know, it doesn't look like much.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2020/terminal-dina-small-ll.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-dina-small-ll.png"&gt;&lt;/p&gt;
 &lt;p&gt;But compare it with a regular vector font. Here's Ubuntu Mono, the &lt;em&gt;best&lt;/em&gt; of
 the vector fonts I could find at these sizes. Blurry and inconsistent and hard
 to read:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;</description><category>dina</category><category>fonts</category><category>linux</category><category>terminal</category><guid>https://tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>My Fonts Look Crap. I blame Windows and ATI.</title><link>https://tartley.com/posts/my-fonts-look-crap-i-blame-windows-and-ati/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I know, I &lt;em&gt;know&lt;/em&gt;. But I use Windows for 8 hours a day at work. So what
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;</description><category>dina</category><category>fonts</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>My Fonts Look Crap. I blame Windows and ATI.</title><link>https://www.tartley.com/posts/my-fonts-look-crap-i-blame-windows-and-ati/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I know, I &lt;em&gt;know&lt;/em&gt;. But I use Windows for 8 hours a day at work. So what
 do you do?&lt;/p&gt;
 &lt;p&gt;Here's the poster-boy for programmer-friendly fonts, your friend and
 mine, everyone loves him, &lt;strong&gt;Inconsolata&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tartley.com/files/2010/01/inconsolata-11.png"&gt;&lt;img alt="inconsolata-11" src="https://tartley.com/files/2010/01/inconsolata-11.png" title="inconsolata-11"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2010/01/inconsolata-11.png"&gt;&lt;img alt="inconsolata-11" src="https://www.tartley.com/files/2010/01/inconsolata-11.png" title="inconsolata-11"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I don't know about you, but to me that looks unutterably crap. Wonky and
 irregular. On the right of the orange line is what it looks like with
 ClearType turned off. Meh. Presumably I'm doing it wrong, somehow, but
 unless I figure out how, Inconsolata can fuck right off.&lt;/p&gt;
 &lt;p&gt;So then I fire up the trusty fallback, &lt;strong&gt;Consolas&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tartley.com/files/2010/01/consolas-10.png"&gt;&lt;img alt="consolas-10" src="https://tartley.com/files/2010/01/consolas-10.png" title="consolas-10"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2010/01/consolas-10.png"&gt;&lt;img alt="consolas-10" src="https://www.tartley.com/files/2010/01/consolas-10.png" title="consolas-10"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This is better, certainly, but the letters look cramped. For the number
 of visible lines in a window that size, the letters are awful small.
 Again, on the right of the line is ClearType turned off - which in this
 case distinctly worse.&lt;/p&gt;
 &lt;p&gt;So I continue peering at a succession of monospaced idiocy, eventually
 ending up on &lt;strong&gt;DejaVu Sans Mono&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tartley.com/files/2010/01/deja-vu-sans-mono-9.png"&gt;&lt;img alt="deja-vu-sans-mono-9" src="https://tartley.com/files/2010/01/deja-vu-sans-mono-9.png" title="deja-vu-sans-mono-9"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2010/01/deja-vu-sans-mono-9.png"&gt;&lt;img alt="deja-vu-sans-mono-9" src="https://www.tartley.com/files/2010/01/deja-vu-sans-mono-9.png" title="deja-vu-sans-mono-9"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This still isn't perfect, but it's the best I can find. Note that it
 bears out my impression of Consolas being cramped - even though the
 letters are substantially larger, we still manage to fit an extra line
@@ -104,7 +104,7 @@ really, isn't it? Maybe I should be digging out some mono fonts designed
 especially to be viewed at small sizes? Oooh, now that's actually not a
 bad idea: How about those Android fonts everyone's banging on about?
 &lt;strong&gt;Droid Sans Mono:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tartley.com/files/2010/01/droid-sans-mono-101.png"&gt;&lt;img alt="droid-sans-mono-10" src="https://tartley.com/files/2010/01/droid-sans-mono-101.png" title="droid-sans-mono-10"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2010/01/droid-sans-mono-101.png"&gt;&lt;img alt="droid-sans-mono-10" src="https://www.tartley.com/files/2010/01/droid-sans-mono-101.png" title="droid-sans-mono-10"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This isn't bad, but does contain all the old 'zero vs upper-case O' and
 'one versus lower-case L' ambiguities. I think I'll stick with DejaVu
 Sans Mono.&lt;/p&gt;
@@ -113,12 +113,12 @@ Sans Mono.&lt;/p&gt;
 bitmap fonts (unless you want to do without extended characters) so they
 won't scale. Nevertheless, here's how some representative fonts from
 there look. First up, &lt;strong&gt;Proggy Clean slashed zero:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tartley.com/files/2010/01/proggy-clean-sz.png"&gt;&lt;img alt="proggy-clean-sz font" src="https://tartley.com/files/2010/01/proggy-clean-sz.png" title="proggy-clean-sz"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2010/01/proggy-clean-sz.png"&gt;&lt;img alt="proggy-clean-sz font" src="https://www.tartley.com/files/2010/01/proggy-clean-sz.png" title="proggy-clean-sz"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I love the crisp clarity of a pixel-perfect bitmap font with no scaling
 or anti-aliasing. On the downside, I have a feeling that the characters'
 shapes aren't quite as well-formed and beautiful as &lt;em&gt;DejaVu&lt;/em&gt;. Not sure
 whether or not this would bug me. Next up, &lt;strong&gt;Proggy Opti:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tartley.com/files/2010/01/proggy-opti.png"&gt;&lt;img alt="proggy-opti font" src="https://tartley.com/files/2010/01/proggy-opti.png" title="proggy-opti"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2010/01/proggy-opti.png"&gt;&lt;img alt="proggy-opti font" src="https://www.tartley.com/files/2010/01/proggy-opti.png" title="proggy-opti"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Color me impressed. &lt;em&gt;Opti&lt;/em&gt; still has the wonderful pixel-perfect clarity
 of &lt;em&gt;Proggy Clean&lt;/em&gt;, and manages to fit four extra lines of text into the
 same sized window. Obviously in order to achieve this, the characters
@@ -129,4 +129,4 @@ might well give Opti a spin for a few days, see how it wears on me.
 Thanks for the suggestion Gerry!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Nowadays I use &lt;a href="https://github.com/ProgrammingFonts/ProgrammingFonts/tree/master/Dina"&gt;Dina&lt;/a&gt;,
 a monospaced bitmap font created by some obsessive with a penchant for
-microscopic fonts. It's absolutely perfect.&lt;/p&gt;</description><category>dina</category><category>fonts</category><category>geek</category><category>mswin-dev</category><category>software</category><guid>https://tartley.com/posts/my-fonts-look-crap-i-blame-windows-and-ati/</guid><pubDate>Thu, 21 Jan 2010 02:21:09 GMT</pubDate></item></channel></rss>
+microscopic fonts. It's absolutely perfect.&lt;/p&gt;</description><category>dina</category><category>fonts</category><category>geek</category><category>mswin-dev</category><category>software</category><guid>https://www.tartley.com/posts/my-fonts-look-crap-i-blame-windows-and-ati/</guid><pubDate>Thu, 21 Jan 2010 02:21:09 GMT</pubDate></item></channel></rss>

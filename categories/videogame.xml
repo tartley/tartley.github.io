@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about videogame)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/videogame.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 03 Aug 2023 20:27:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Astroneer Resource Graph</title><link>https://tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com | Jonathan Hartley's personal blog (Posts about videogame)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/videogame.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 15:22:21 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Astroneer Resource Graph</title><link>https://www.tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
 get each of the resources in &lt;a href="https://astroneer.space/"&gt;Astroneer&lt;/a&gt;. Click the WEBP
 thumbnail below to get the full glorious SVG, then you can '&lt;em&gt;find in page&lt;/em&gt;' on it.
-(&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>map</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
-&lt;img alt="Spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+(&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>map</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
+&lt;img alt="Spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;Major spoilers ahead. It's seven years old at this point.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Soma - protagonist" src="https://tartley.com/files/2022/soma-protagonist.webp"&gt;
+&lt;img alt="Soma - protagonist" src="https://www.tartley.com/files/2022/soma-protagonist.webp"&gt;
 &lt;/center&gt;&lt;br&gt;
 &lt;p&gt;Soma is a creepy survival horror game, that leans deeply into the moral and
 existential quandaries arising from the deterministic principle that it's
@@ -80,7 +80,7 @@ currents and landslides, populated by organic-mechanical hybrid horrors that
 glide by in the darkness. I found these some of the absolute best, most
 atmospheric "walking simulator" moments I've experienced in a game.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="The ocean floor, stirred up by currents and landslides" src="https://tartley.com/files/2022/soma-murky.webp"&gt;
+&lt;img alt="The ocean floor, stirred up by currents and landslides" src="https://www.tartley.com/files/2022/soma-murky.webp"&gt;
 &lt;br&gt;Is that another distant light up ahead? Good luck finding them while the currents pummel you,
 and hideous, deadly beasts loom out of the murk.
 &lt;/center&gt;&lt;br&gt;
@@ -132,7 +132,7 @@ a way out. For, of course, the ARK's launch changed nothing for us. Our
 simulations are aboard it, but we are still sitting here, in a broken robot
 corpse in a collapsing facility at the bottom of a haunted ocean on a dead
 planet. The dispatched copy will enjoy life on the ARK, but we - like the copy
-of ourselves we left behind earlier - are stuck here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>Journey</title><link>https://tartley.com/posts/journey/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2022/journey-screenshot.webp"&gt;&lt;/p&gt;
+of ourselves we left behind earlier - are stuck here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>Journey</title><link>https://www.tartley.com/posts/journey/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/journey-screenshot.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Released on PlayStation 3 by thatgamecompany in 2012. Played on Windows 10 in
 2022.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The slow-paced opening scenes, alternately trudging up and then surfing down
@@ -151,7 +151,7 @@ beasts, and then fly exuberantly above the sunlit clouds, forever curving back
 to seek each other's life-giving sustenance.&lt;/p&gt;
 &lt;p&gt;I don't know who the two internet randos were, with whom I shared the first and
 second halves of my journey. But in those minutes together, we lived a
-lifetime's worth.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://tartley.com/posts/journey/</guid><pubDate>Mon, 09 May 2022 11:22:20 GMT</pubDate></item><item><title>Subnautica: Below Zero</title><link>https://tartley.com/posts/subnautica-below-zero/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;on Windows, published 2021&lt;/em&gt;. &lt;img alt="spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+lifetime's worth.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/journey/</guid><pubDate>Mon, 09 May 2022 11:22:20 GMT</pubDate></item><item><title>Subnautica: Below Zero</title><link>https://www.tartley.com/posts/subnautica-below-zero/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;on Windows, published 2021&lt;/em&gt;. &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://subnautica.fandom.com/wiki/Subnautica_Wiki"&gt;Subnautica&lt;/a&gt;,
 and its icy sequel,
 "&lt;a href="https://subnautica.fandom.com/wiki/Subnautica:_Below_Zero"&gt;Below Zero&lt;/a&gt;",
@@ -174,10 +174,10 @@ and correcting the map as we went. Being lost in the experience. Simply a joy.&l
 &lt;p&gt;&lt;a href="https://www.reddit.com/r/Subnautica_Below_Zero/comments/qutkqz/hand_drawn_map_of_southern_glacial_region_wip/"&gt;Reddit is encouraging me&lt;/a&gt;
 to tackle the tricky Actic Spires area, too. &lt;em&gt;&amp;lt;Rubs hands&amp;gt;...&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Subnautica screenshot" src="https://tartley.com/files/2021/subnatica-below-zero-map-glacial-basin.png"&gt;
+&lt;img alt="Subnautica screenshot" src="https://www.tartley.com/files/2021/subnatica-below-zero-map-glacial-basin.png"&gt;
 &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>geek</category><category>map</category><category>media</category><category>videogame</category><category>windows</category><guid>https://tartley.com/posts/subnautica-below-zero/</guid><pubDate>Mon, 22 Nov 2021 22:24:22 GMT</pubDate></item><item><title>Manifold Garden</title><link>https://tartley.com/posts/manifold-garden/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Manifold Garden screenshot" src="https://tartley.com/files/2021/manifold-garden.jpg"&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>geek</category><category>map</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/subnautica-below-zero/</guid><pubDate>Mon, 22 Nov 2021 22:24:22 GMT</pubDate></item><item><title>Manifold Garden</title><link>https://www.tartley.com/posts/manifold-garden/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Manifold Garden screenshot" src="https://www.tartley.com/files/2021/manifold-garden.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Windows, 2019&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This was always going to turn my head, marrying a marvellous geometric engine
@@ -206,8 +206,8 @@ reality straight out of Farbrausch's
 &lt;em&gt;&lt;a href="https://www.youtube.com/watch?v=wqu_IpkOYBg"&gt;Debris&lt;/a&gt;&lt;/em&gt;. By the final level,
 this crescendos in scenes reminiscent of &lt;em&gt;2001: A Space Odyssey&lt;/em&gt;, profound in
 both the intimacy of my commune with godhood, and in my continued inability to
-understand what I had achieved. Created a universe, probably? Yeah, probably.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://tartley.com/posts/manifold-garden/</guid><pubDate>Tue, 05 Oct 2021 03:16:08 GMT</pubDate></item><item><title>This Gaming Life: Travels in Three Cities</title><link>https://tartley.com/posts/this-gaming-life-travels-in-three-cities/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="gaminglife" src="https://tartley.com/files/2014/02/gaminglife.jpg"&gt;
+understand what I had achieved. Created a universe, probably? Yeah, probably.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/manifold-garden/</guid><pubDate>Tue, 05 Oct 2021 03:16:08 GMT</pubDate></item><item><title>This Gaming Life: Travels in Three Cities</title><link>https://www.tartley.com/posts/this-gaming-life-travels-in-three-cities/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="gaminglife" src="https://www.tartley.com/files/2014/02/gaminglife.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Jim Rossignol&lt;/em&gt; (2009)&lt;/p&gt;
 &lt;p&gt;A gorgeous insider's look at videogaming culture, by an author who,
@@ -226,8 +226,8 @@ felt welcomed to his world. Join us - we'll be on the sofa.&lt;/p&gt;
 &lt;p&gt;10/10 if you understand that games have the potential to become the
 dominant art form of the 21st century.&lt;/p&gt;
 &lt;p&gt;0/10 if it's just for kids, innit?&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>geek</category><category>media</category><category>non-fiction</category><category>videogame</category><guid>https://tartley.com/posts/this-gaming-life-travels-in-three-cities/</guid><pubDate>Tue, 04 Feb 2014 02:31:29 GMT</pubDate></item><item><title>Legend of Zelda : The Phantom Hourglass</title><link>https://tartley.com/posts/legend-of-zelda-the-phantom-hourglass/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Phantom Hourglass" src="https://tartley.com/files/2008/05/phantom-hourglass.jpg"&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>geek</category><category>media</category><category>non-fiction</category><category>videogame</category><guid>https://www.tartley.com/posts/this-gaming-life-travels-in-three-cities/</guid><pubDate>Tue, 04 Feb 2014 02:31:29 GMT</pubDate></item><item><title>Legend of Zelda : The Phantom Hourglass</title><link>https://www.tartley.com/posts/legend-of-zelda-the-phantom-hourglass/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Phantom Hourglass" src="https://www.tartley.com/files/2008/05/phantom-hourglass.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Nintendo, 2008&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Nintendo spin off a &lt;em&gt;fourteenth&lt;/em&gt; iteration of the familiar and
@@ -262,8 +262,8 @@ here.&lt;/p&gt;
 compelling and charming as this, and yearn for a resurgence in
 experimental originality to kick the gaming industry out of one or two
 ruts (such as having a blind spot for crappy dialog.)&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>completed</category><category>ds</category><category>geek</category><category>media</category><category>videogame</category><guid>https://tartley.com/posts/legend-of-zelda-the-phantom-hourglass/</guid><pubDate>Fri, 16 Jan 2009 20:36:05 GMT</pubDate></item><item><title>Shadow of the Colossus</title><link>https://tartley.com/posts/shadow-of-the-colossus/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="" src="https://tartley.com/files/2009/01/sotc4-300x225.jpg"&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>completed</category><category>ds</category><category>geek</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/legend-of-zelda-the-phantom-hourglass/</guid><pubDate>Fri, 16 Jan 2009 20:36:05 GMT</pubDate></item><item><title>Shadow of the Colossus</title><link>https://www.tartley.com/posts/shadow-of-the-colossus/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="" src="https://www.tartley.com/files/2009/01/sotc4-300x225.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Team ICO, PS2, 2005.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;As is common for a title released in the autumn years of a console's
@@ -322,10 +322,10 @@ experiments with a new subjectivity-proof rating system:&lt;/p&gt;
 &lt;p&gt;10/10 if you wish to enjoy the state of the art in what videogames as a
 medium are capable of.&lt;/p&gt;
 &lt;p&gt;0/10 if you are incapable of appreciating beauty or have no soul.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>ps2</category><category>videogame</category><guid>https://tartley.com/posts/shadow-of-the-colossus/</guid><pubDate>Fri, 16 Jan 2009 01:33:59 GMT</pubDate></item><item><title>Façade</title><link>https://tartley.com/posts/facade/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="" src="https://tartley.com/files/2007/06/facade-game.jpg"&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>ps2</category><category>videogame</category><guid>https://www.tartley.com/posts/shadow-of-the-colossus/</guid><pubDate>Fri, 16 Jan 2009 01:33:59 GMT</pubDate></item><item><title>Façade</title><link>https://www.tartley.com/posts/facade/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="" src="https://www.tartley.com/files/2007/06/facade-game.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Procedural Arts (PC, 2006)&lt;/em&gt; &lt;img alt="spoilers" src="https://tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Procedural Arts (PC, 2006)&lt;/em&gt; &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.interactivestory.net/"&gt;http://www.interactivestory.net/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Façade&lt;/em&gt; is an art and research project which aims to extend the remit
 of gaming, making a bold raid deep into rarely-explored territory. It
@@ -386,7 +386,7 @@ and emotional finesse to which that medium would one day soar? For all
 its faults, it's in increments such as &lt;em&gt;Façade&lt;/em&gt; that gaming moves in the
 same direction.&lt;/p&gt;
 &lt;p&gt;Rating: 9/10.
-Lets. Push. Things. Forward.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://tartley.com/posts/facade/</guid><pubDate>Thu, 28 Jun 2007 19:43:48 GMT</pubDate></item><item><title>Game On: Origins</title><link>https://tartley.com/posts/game-on/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;The lovely Susan and I managed to nip into the
+Lets. Push. Things. Forward.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/facade/</guid><pubDate>Thu, 28 Jun 2007 19:43:48 GMT</pubDate></item><item><title>Game On: Origins</title><link>https://www.tartley.com/posts/game-on/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;The lovely Susan and I managed to nip into the
 &lt;a href="http://www.sciencemuseum.org.uk/exhibitions/gameon/"&gt;Game On&lt;/a&gt;
 exhibit at the
 &lt;a href="http://www.sciencemuseum.org.uk/"&gt;Science Museum&lt;/a&gt;,
@@ -401,7 +401,7 @@ completing it, so the following annotated list of my personal highlights
 from the first section will have to suffice for the moment, though it is
 naught but a gnarled stub of the monument I had envisaged.&lt;/p&gt;
 &lt;h5&gt;Spacewar! (MIT, 1962)&lt;/h5&gt;
-&lt;p&gt;&lt;img alt="Spacewar! on the PDP-1's oscilloscope-like display." src="https://tartley.com/files/2007/05/sw.jpg"&gt;
+&lt;p&gt;&lt;img alt="Spacewar! on the PDP-1's oscilloscope-like display." src="https://www.tartley.com/files/2007/05/sw.jpg"&gt;
 &lt;em&gt;Spacewar! on the PDP-1's oscilloscope-like display.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Not just the strongest entry for the hotly-contested title of 'first
 ever computer game', but actually by far and away the most &lt;em&gt;fun&lt;/em&gt; of any
@@ -417,7 +417,7 @@ a defunct PDP-1 the size of a Hummer, which ran at 0.2MHz. In an
 inadvertent demonstration of Moore's Law, a playable simulacrum of the
 game itself was provided on a six-inch Vectrex from the '80s.&lt;/p&gt;
 &lt;h5&gt;Pong (Atari, 1972)&lt;/h5&gt;
-&lt;p&gt;&lt;img alt="Pong (1972)" src="https://tartley.com/files/2007/05/pong-01.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pong (1972)" src="https://www.tartley.com/files/2007/05/pong-01.png"&gt;&lt;/p&gt;
 &lt;p&gt;Nolan Bushnell founds Atari, and when the local bar reports his first machine
 to be 'broken', it turns out to be due to its innards overflowing with
 quarters. Before my time, this one, but a clear indicator of things to
@@ -427,7 +427,7 @@ since it was constructed using dedicated analog electronics, which
 enabled a rapid framerate, and commensurate fluidity of gameplay, which
 could not be matched by software implementations for years to come.&lt;/p&gt;
 &lt;h5&gt;Space Invaders (Taito, 1978)&lt;/h5&gt;
-&lt;p&gt;&lt;img alt="Space Invaders" src="https://tartley.com/files/2007/05/wspace_invaders.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Space Invaders" src="https://www.tartley.com/files/2007/05/wspace_invaders.png"&gt;&lt;/p&gt;
 &lt;p&gt;Triggered coin shortages in Japan, prompting the government to quadruple the
 supply of 1 Yen coins. To this day the cultural resonance lives on, as
 the French urban street artist 'Invader' is still placing his discreet
@@ -440,7 +440,7 @@ I however, shall stick to my story, that perhaps the blatantly
 predictable gameplay proved fractionally less of a lure than other,
 subsequent titles that left a little more to the imagination.&lt;/p&gt;
 &lt;h5&gt;Asteroids (Atari, 1979)&lt;/h5&gt;
-&lt;p&gt;&lt;img alt="Asteroids" src="https://tartley.com/files/2007/05/asteroids.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Asteroids" src="https://www.tartley.com/files/2007/05/asteroids.png"&gt;&lt;/p&gt;
 &lt;p&gt;A clear descendant of the original &lt;em&gt;Spacewar&lt;/em&gt;, featuring deep-space based
 Newtonian combat rendered with rotational vector graphics which afford
 an austere Kubrickian elegance to the presentation. In common with many
@@ -453,12 +453,12 @@ spent lurking around the screen edges, dreaming of a high-stakes
 lifestyle out beyond the Kuiper belt in a singleship, hunting down those
 high-scoring UFOs.&lt;/p&gt;
 &lt;h5&gt;Pac Man (Namco, 1979)&lt;/h5&gt;
-&lt;p&gt;&lt;img alt="Pac-Man" src="https://tartley.com/files/2007/05/pac.gif"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pac-Man" src="https://www.tartley.com/files/2007/05/pac.gif"&gt;&lt;/p&gt;
 &lt;p&gt;"If computer games affected our behaviour, then by now there'd be a
 generation that had grown up running around in darkened rooms, munching
 magic pills and listening to repetitive electronic music - oh, hang on."&lt;/p&gt;
 &lt;h5&gt;Missile Command (Atari, 1980)&lt;/h5&gt;
-&lt;p&gt;&lt;img alt="Missile Command" src="https://tartley.com/files/2007/05/missile_a.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Missile Command" src="https://www.tartley.com/files/2007/05/missile_a.png"&gt;&lt;/p&gt;
 &lt;p&gt;The game's original design tasked the player with the defence of American
 west coast cities, from San Diego to San Francisco, while unending waves
 of nukes rained down like fireflies. Cold war tensions made that
@@ -469,7 +469,7 @@ a classic that remained a prominent and profitable entry in arcades for
 fifteen years after its release, and remains an inspiration for modern
 games such as Defcon (PC, 2006).&lt;/p&gt;
 &lt;h5&gt;Battlezone (Atari, 1980)&lt;/h5&gt;
-&lt;p&gt;&lt;img alt="Battlezone" src="https://tartley.com/files/2007/05/800px-arcade-atari-battlezone1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Battlezone" src="https://www.tartley.com/files/2007/05/800px-arcade-atari-battlezone1.png"&gt;&lt;/p&gt;
 &lt;p&gt;A trailblazing first-person perspective 3D virtual reality, and famously
 adapted by the US Army to train gunnery crews of the Bradley Fighting
 Vehicle. Myths surrounding the game abounded, of increasingly esoteric
@@ -485,7 +485,7 @@ young self, offering possibilities for the presentation of limitless
 worlds, to anyone who could bring with them but a modicum of
 willing-suspension.&lt;/p&gt;
 &lt;h5&gt;Defender (Williams, 1980)&lt;/h5&gt;
-&lt;p&gt;&lt;img alt="Get away from me!" src="https://tartley.com/files/2007/05/defender1.gif" title="Get away from me!"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Get away from me!" src="https://www.tartley.com/files/2007/05/defender1.gif" title="Get away from me!"&gt;&lt;/p&gt;
 &lt;p&gt;While its contemporaries could often be mastered by careful, methodical
 play, memorising patterns, and the occasional bout of dexterity,
 &lt;em&gt;Defender&lt;/em&gt; proved to be the ultimate test of reactions, spatial
@@ -540,4 +540,4 @@ supplied the imagination, were made redundant.&lt;/p&gt;
 &lt;p&gt;It wasn't all doom and gloom, however (no pun intended.) In the midst of
 the impending '80s game boom, there were plenty of gems, once one
 filtered through all the dross. I've found this write-up most enjoyable,
-so maybe I'll write some more about that next week...&lt;/p&gt;</description><category>arcade</category><category>exhibits</category><category>geek</category><category>journal</category><category>videogame</category><guid>https://tartley.com/posts/game-on/</guid><pubDate>Mon, 28 May 2007 17:03:47 GMT</pubDate></item></channel></rss>
+so maybe I'll write some more about that next week...&lt;/p&gt;</description><category>arcade</category><category>exhibits</category><category>geek</category><category>journal</category><category>videogame</category><guid>https://www.tartley.com/posts/game-on/</guid><pubDate>Mon, 28 May 2007 17:03:47 GMT</pubDate></item></channel></rss>

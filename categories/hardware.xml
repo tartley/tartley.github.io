@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about hardware)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/hardware.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 03 Aug 2023 20:27:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>New Laptop Time!</title><link>https://tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="A laptop" src="https://tartley.com/files/2008/02/lappy.webp"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com | Jonathan Hartley's personal blog (Posts about hardware)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/hardware.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 15:22:21 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>New Laptop Time!</title><link>https://www.tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="A laptop" src="https://www.tartley.com/files/2008/02/lappy.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;My employer, Canonical, has a "bring your own hardware" policy, trusting that
 their engineers would rather choose and administer their own personal laptops,
@@ -11,7 +11,7 @@ graphics chipset doesn't have the power to play modern games with my kiddo.
 Battlezone 98 runs fine, but Civilization VI (2016) is annoyingly choppy,
 at about 9 frames per second.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Civilization VI screenshot" src="https://tartley.com/files/2022/civ-vi.webp"&gt;
+&lt;img alt="Civilization VI screenshot" src="https://www.tartley.com/files/2022/civ-vi.webp"&gt;
 &lt;/center&gt;
 &lt;br&gt;
 &lt;p&gt;This summer I received the three-year cash-in-hand bonus earmarked as a
@@ -469,7 +469,7 @@ checked out earlier in the process.&lt;/p&gt;
 &lt;p&gt;The Oryx is just a few hundred over my budget, even with the current $300 off.
 But a tricked-out Gazelle seems to check all the boxes.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt='Gazelle 15" laptop' src="https://tartley.com/files/2022/gazelle-15.avif"&gt;
+&lt;img alt='Gazelle 15" laptop' src="https://www.tartley.com/files/2022/gazelle-15.avif"&gt;
 &lt;/center&gt;
 &lt;p&gt;They have a reasonably high-ranked 12th generation Intel i7 CPU, which seems
 to achieve good performance without wading into the diminishing returns
@@ -576,22 +576,22 @@ says that is 3,200MHz.&lt;/p&gt;
 latencies the price goes up to about $375 for CL16, but that isn't even in
 stock anywhere.&lt;/p&gt;
 &lt;p&gt;At one point, after much searching, I found some CL16 on newegg.com:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Memory on sale in Newegg - scam" src="https://tartley.com/files/2022/memory-on-sale.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Memory on sale in Newegg - scam" src="https://www.tartley.com/files/2022/memory-on-sale.webp"&gt;&lt;/p&gt;
 &lt;p&gt;And it is only $128! Carefully checking the specs, including those on the
 manufacturer's site, using the shown model number 'CMSX32GX4M2A3000C16',
 this is exactly what we want. 2x16GB at 3200MT/s at CL16.&lt;/p&gt;
 &lt;p&gt;While checking it out, I clicked around a bit, and at one point found:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Bad review on Newegg" src="https://tartley.com/files/2022/bad-review-on-newegg.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bad review on Newegg" src="https://www.tartley.com/files/2022/bad-review-on-newegg.webp"&gt;&lt;/p&gt;
 &lt;p&gt;This came along with a number of other negative reviews, stating customers had
 been sent memory modules that were fake, ie. imitations of the purported
 reputable manufacturer, they didn't work at the advertised clock speeds, and
 the seller had gone dark on them, taking weeks to respond to queries, and not
 sending replacements until Newegg got involved. Seems wisest to skip this.&lt;/p&gt;
 &lt;p&gt;Eventually I found an alternative:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Memory on sale in Newegg - legit" src="https://tartley.com/files/2022/memory-on-sale-legit.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Memory on sale in Newegg - legit" src="https://www.tartley.com/files/2022/memory-on-sale-legit.webp"&gt;&lt;/p&gt;
 &lt;p&gt;Yes! DDR4 in a SoDIMM package, 2x16GB modules at 3,200MHz and 18CL. The latency
 isn't quite as good, but it sounds legit, so I'll take it!&lt;/p&gt;
-&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>linux</category><guid>https://tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>Keyboard CoolerMaster CK530's Missing Manual</title><link>https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have a
+&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>linux</category><guid>https://www.tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>Keyboard CoolerMaster CK530's Missing Manual</title><link>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have a
 &lt;a href="https://www.coolermaster.com/catalog/peripheral/keyboards/ck530/"&gt;CoolerMaster CK530&lt;/a&gt;
 mechanical keyboard, which I love. It might have come with a small printed
 manual, but if it did, I no longer have it, and I'm failing to find one online.
@@ -644,7 +644,7 @@ below.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;fn + F6&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Foreground color. (See &lt;a href="https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#foreground-and-background-colors"&gt;below&lt;/a&gt;.)&lt;/td&gt;
+&lt;td&gt;Foreground color. (See &lt;a href="https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#foreground-and-background-colors"&gt;below&lt;/a&gt;.)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;fn + F7&lt;/code&gt;&lt;/td&gt;
@@ -773,12 +773,12 @@ right Ctrl.&lt;/p&gt;
 mode:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;ESC/1/2/3/4&lt;/code&gt; - one of these keys flashes white to show which profile
-  (see &lt;a href="https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#profiles"&gt;below&lt;/a&gt;) is currently in use.&lt;/li&gt;
+  (see &lt;a href="https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#profiles"&gt;below&lt;/a&gt;) is currently in use.&lt;/li&gt;
 &lt;li&gt;If the current mode allows you to select a color to use, then &lt;code&gt;F2/F3/F4&lt;/code&gt;
   will light up to show the currently selected color's levels of
   red/green/blue.&lt;/li&gt;
 &lt;li&gt;If the current mode allows &lt;em&gt;two&lt;/em&gt; colors to be set (foreground &amp;amp; background),
-  then one of &lt;code&gt;F6/F7&lt;/code&gt; will flash white, to show which is currently affected. (See &lt;a href="https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#foreground-and-background-colors"&gt;below&lt;/a&gt;.)&lt;/li&gt;
+  then one of &lt;code&gt;F6/F7&lt;/code&gt; will flash white, to show which is currently affected. (See &lt;a href="https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#foreground-and-background-colors"&gt;below&lt;/a&gt;.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Pressing &lt;code&gt;fn + F5&lt;/code&gt; cycles through:&lt;/p&gt;
 &lt;table&gt;
@@ -822,7 +822,7 @@ mode:&lt;/p&gt;
 &lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;6. Custom (see &lt;a href="https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#custom-mode"&gt;below&lt;/a&gt;)&lt;/td&gt;
+&lt;td&gt;6. Custom (see &lt;a href="https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#custom-mode"&gt;below&lt;/a&gt;)&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;&lt;/td&gt;
@@ -928,7 +928,7 @@ then use &lt;code&gt;fn + F2/F3/F4&lt;/code&gt; to set it.&lt;/p&gt;
 &lt;li&gt;Press all the keys you want lit in the selected color. Pressing the same key
    again turns it unlit.&lt;/li&gt;
 &lt;li&gt;Repeat steps 3 &amp;amp; 4 for other color/key combinations.&lt;/li&gt;
-&lt;li&gt;Finally, save to your current profile (see &lt;a href="https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#profiles"&gt;below&lt;/a&gt;) by holding
+&lt;li&gt;Finally, save to your current profile (see &lt;a href="https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/#profiles"&gt;below&lt;/a&gt;) by holding
    &lt;code&gt;fn&lt;/code&gt; and pressing your current profile key (whichever of &lt;code&gt;Esc/1/2/3/4&lt;/code&gt; is
    flashing white.)&lt;/li&gt;
 &lt;/ol&gt;
@@ -969,7 +969,7 @@ flashing white. While keeping FN pressed:&lt;/p&gt;
 &lt;p&gt;Hence, to save changes to an arbitrary profile, you need to select that
 profile &lt;em&gt;before&lt;/em&gt; making the changes.&lt;/p&gt;
 &lt;p&gt;When turning the keyboard on (ie. Plugging the USB cable into a computer),
-the active profile will be whichever one was last active.&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>keyboard</category><category>manual</category><guid>https://tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</guid><pubDate>Fri, 23 Jul 2021 18:41:50 GMT</pubDate></item><item><title>Home media center</title><link>https://tartley.com/posts/home-media-center/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I just bought a
+the active profile will be whichever one was last active.&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>keyboard</category><category>manual</category><guid>https://www.tartley.com/posts/keyboard-coolermaster-ck530s-missing-manual/</guid><pubDate>Fri, 23 Jul 2021 18:41:50 GMT</pubDate></item><item><title>Home media center</title><link>https://www.tartley.com/posts/home-media-center/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I just bought a
 &lt;a href="http://www.dabs.com/products/netgear-readynas-duo--2-bay----no-drives-included-5063.html"&gt;NetGear ReadyNas Duo&lt;/a&gt;
 to connect hard drives to my home network, to stream movies and the like
 to our fabulous Xbox Classic media center. In the process of
@@ -1139,4 +1139,4 @@ streaming speeds. Problems &lt;em&gt;have&lt;/em&gt; occurred with some .avi fil
 appeared to have invalid interleave cross-stream differential parity (or
 something) and efforts to reverse their polarity were to no avail
 (transcoding software generally wouldn't even read the files!) A quick
-visit or two to MiniNova fixed all that.&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>media</category><guid>https://tartley.com/posts/home-media-center/</guid><pubDate>Mon, 24 Aug 2009 18:02:42 GMT</pubDate></item></channel></rss>
+visit or two to MiniNova fixed all that.&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>media</category><guid>https://www.tartley.com/posts/home-media-center/</guid><pubDate>Mon, 24 Aug 2009 18:02:42 GMT</pubDate></item></channel></rss>

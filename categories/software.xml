@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://tartley.com/</link><description></description><atom:link href="https://tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 03:26:21 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Illustrating Uses of IBM Cloud Security Groups</title><link>https://tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;blockquote&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com | Jonathan Hartley's personal blog (Posts about software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 15:22:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Illustrating Uses of IBM Cloud Security Groups</title><link>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;blockquote&gt;
 &lt;p&gt;I wrote this high-level public-facing guide while employed by IBM, creating
 the security groups feature for IBM Cloud. It
 &lt;a href="https://web.archive.org/web/20210418195246/https://www.ibm.com/cloud/blog/illustrating-uses-ibm-cloud-security-groups"&gt;used to reside&lt;/a&gt;
@@ -20,7 +20,7 @@ connection to your instances, blocking all other traffic. For example, to allow
 only incoming SSH connections, which are TCP connections on port 22. All other
 types of traffic, such as ICMP ‘ping' connections, or TCP connections on other
 ports, are blocked. Fig 1. A security group configured to allow incoming SSH&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/1_allow-ssh-1.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/1_allow-ssh-1.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 1. A security group configured to allow incoming SSH.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;When instances 1 &amp;amp; 2 are added to your security group, firewalls are created
 directly on those instances,configured to allow or deny the corresponding
@@ -31,7 +31,7 @@ send arbitrary network traffic.&lt;/p&gt;
 increase security, you might only allow connections from a particular instance.
 Fig 2. A security group configured to allow incoming SSH connections (TCP port
 22) from a particular IP address.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/2_allow-ssh-one-ip.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/2_allow-ssh-one-ip.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 2. A security group configured to allow incoming SSH connections (TCP port
 22) from a particular IP address.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The security group has been configured with the IP address used by a support
@@ -41,7 +41,7 @@ Connections from other instances are blocked.&lt;/p&gt;
 configured with a CIDR block, to allow traffic from all instances on that
 subnet. Fig 3. A security group configured to allow incoming SSH connections
 (TCP port 22) from all instances on a given subnet.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/3_allow-ssh-subnet.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/3_allow-ssh-subnet.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 3. A security group configured to allow incoming SSH connections (TCP port
 22) from all instances on a given subnet.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The diagram shows instances on an authorized subnet (deploy1 &amp;amp; deploy2),
@@ -65,7 +65,7 @@ we'll give them names: “app” and “db”.&lt;/p&gt;
 connections on 27017), without restricting the IP addresses allowed to make
 connections. We'll fix that soon. Fig 4. Two security groups configured to
 allow application servers to send queries to MongoDB nodes on a subnet.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/4_allow-app-servers-access-db-subnet.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/4_allow-app-servers-access-db-subnet.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 4. Two security groups configured to allow application servers to send
 queries to MongoDB nodes on a subnet.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;For clarity, these diagrams don't show the many connections which are blocked
@@ -104,7 +104,7 @@ group.&lt;/p&gt;
 allowing connections from the members of that group. Fig 5. Two security groups
 configured to allow application servers to send queries to MongoDB nodes using
 remote groups.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/5_allow-app-servers-access-db-remote.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/5_allow-app-servers-access-db-remote.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 5. Two security groups configured to allow application servers to send
 queries to MongoDB nodes using remote groups.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This has several advantages. Firstly, our data store no longer accepts
@@ -126,7 +126,7 @@ on port 61516.&lt;/p&gt;
 &lt;p&gt;Similarly, we need to add a second rule to the “app” security group, to allow
 incoming requests from “web”. Fig 6. A traditional three-tier application using
 remote security groups.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/6_web-app-db.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/6_web-app-db.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 6. A traditional three-tier application using remote security groups.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The more types of server we add to our setup, the more benefit “remote” groups
 provide, by minimizing setup configuration, and by automatically keeping
@@ -144,7 +144,7 @@ access from the bastion to all our instances. The bastion instance itself would
 be configured to only allow incoming connections from the appropriate points in
 a CI/CD infrastructure (not shown.) Fig 7. Adding a bastion server with SSH
 access to all other instances.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/7_bastion.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/7_bastion.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 7. Adding a bastion server with SSH access to all other instances.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This is starting to look like a realistic setup for a modest but scalable
 multi-tier application.&lt;/p&gt;
@@ -156,14 +156,14 @@ accommodate many others. For more information, see
 &lt;a href="https://cloud.ibm.com/docs/security-groups/sg_index.html"&gt;Getting Started with Security Groups&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="" src="https://tartley.com/files/2023/ibm-cloud/jonathan-hartley.webp"&gt;
+&lt;img alt="" src="https://www.tartley.com/files/2023/ibm-cloud/jonathan-hartley.webp"&gt;
 &lt;/span&gt;
 &lt;br&gt;
 &lt;strong&gt;Jonathan Hartley&lt;/strong&gt;&lt;br&gt;
 Senior Cloud Developer&lt;/p&gt;
 &lt;p&gt;&lt;span style="float: none"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;</description><category>cloud</category><category>networking</category><category>security</category><category>software</category><guid>https://tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</guid><pubDate>Wed, 23 Aug 2023 02:33:47 GMT</pubDate></item><item><title>TIL: git push --force-with-lease</title><link>https://tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
+&lt;p&gt;&lt;/p&gt;</description><category>cloud</category><category>networking</category><category>security</category><category>software</category><guid>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</guid><pubDate>Wed, 23 Aug 2023 02:33:47 GMT</pubDate></item><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
 nose and do a force push. Maybe the project requires contributions to be
 rebased or squashed. Maybe we pushed the nuclear launch codes. But there are
 failure modes:&lt;/p&gt;
@@ -257,7 +257,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;gpf
 $
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>Structured Pattern Matching in Python</title><link>https://tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
+&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>Structured Pattern Matching in Python</title><link>https://www.tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
 &lt;a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement"&gt;structured pattern matching&lt;/a&gt;
 when it was added in Python 3.10 a couple of years ago, and have studiously
 avoided it ever since. It seemed like a language feature that's amazingly
@@ -596,7 +596,7 @@ do an exercise like this post just to add it to their mental toolbox, it needs
 maintenance effort, not just in CPython but in other implementations too, and
 needs handling by tools such as syntax highlighters, type checkers. It really
 doesn't seem like a net win to me, &lt;em&gt;unless&lt;/em&gt; you're writing way more parsers
-than the average programmer, which no doubt the champions of this feature are.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/structured-pattern-matching-in-python/</guid><pubDate>Sat, 29 Jul 2023 23:15:26 GMT</pubDate></item><item><title>TIL: Format Python Snippets with Black.</title><link>https://tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+than the average programmer, which no doubt the champions of this feature are.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/structured-pattern-matching-in-python/</guid><pubDate>Sat, 29 Jul 2023 23:15:26 GMT</pubDate></item><item><title>TIL: Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -627,7 +627,7 @@ gained much enthusiasm.&lt;/p&gt;
 &lt;li&gt;Passes the result to Black.&lt;/li&gt;
 &lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/main/bin/enblacken"&gt;enblacken on github&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><category>til</category><category>vim</category><guid>https://tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/main/bin/enblacken"&gt;enblacken on github&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><category>til</category><category>vim</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;
@@ -733,7 +733,7 @@ is probably a simpler way.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;The booooooring bits:&lt;/p&gt;
 &lt;p&gt;When we started the container, we mentioned
-&lt;a href="https://tartley.com/files/2020/setup-lxd-profile.sh"&gt;a one-off setup script&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://www.tartley.com/files/2020/setup-lxd-profile.sh"&gt;a one-off setup script&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The script does a few things:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Creates a new key pair specifically to SSH to the container.&lt;/li&gt;
@@ -747,7 +747,7 @@ is probably a simpler way.&lt;/p&gt;
 &lt;li&gt;Doubtless due to my own misunderstanding somewhere, in order to get working
    IPv4 connections to my containers, I had to disable IPv6 connections to
    them.&lt;/li&gt;
-&lt;/ol&gt;</description><category>geek</category><category>linux</category><category>software</category><category>terminal</category><guid>https://tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Vonnegut on software development teams.</title><link>https://tartley.com/posts/vonnegut-on-software-development-teams/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;So here's a thing. Spotted this in some of Kurt Vonnegut's personal
+&lt;/ol&gt;</description><category>geek</category><category>linux</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Vonnegut on software development teams.</title><link>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;So here's a thing. Spotted this in some of Kurt Vonnegut's personal
 correspondence, talking about an instructor of his named Slotkin:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;What Slotkin said was this: no man who achieved greatness in the arts operated
@@ -766,7 +766,7 @@ effectiveness in assembling great individuals to create a great team.&lt;/p&gt;
 &lt;p&gt;But in my personal experience, there is a whole lot &lt;em&gt;more&lt;/em&gt; value in creating a
 great team by instilling the right values, and then watching the members
 visibly level each other up, producing a succession of great individuals,
-and only subsequently attracting more of the same.&lt;/p&gt;</description><category>culture</category><category>geek</category><category>greatness</category><category>literature</category><category>software</category><category>vonnegut</category><guid>https://tartley.com/posts/vonnegut-on-software-development-teams/</guid><pubDate>Mon, 01 Jul 2019 02:28:04 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
+and only subsequently attracting more of the same.&lt;/p&gt;</description><category>culture</category><category>geek</category><category>greatness</category><category>literature</category><category>software</category><category>vonnegut</category><guid>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</guid><pubDate>Mon, 01 Jul 2019 02:28:04 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
 for it, called "Announce":&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/tartley/rhythmbox-plugin-announce"&gt;https://github.com/tartley/rhythmbox-plugin-announce&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Every time a new song starts to play, it announces the title using
@@ -774,15 +774,15 @@ speech synthesis. I like it when I'm listening to some new music I'm not
 familiar with, but am away from the computer. Then I can still know
 which track is which.&lt;/p&gt;
 &lt;p&gt;If the album or artist names are different from the previous track, then
-it includes those in the announcement, too.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/rhythmbox-plugin-announce/</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://tartley.com/posts/google-chrome-credit/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I just noticed: Open Chrome, go to &lt;code&gt;chrome://credits/&lt;/code&gt;, search in page,
+it includes those in the announcement, too.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/rhythmbox-plugin-announce/</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://www.tartley.com/posts/google-chrome-credit/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I just noticed: Open Chrome, go to &lt;code&gt;chrome://credits/&lt;/code&gt;, search in page,
 'show licence', and:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;img alt="chrome-credit" src="https://tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;</description><category>geek</category><category>software</category><guid>https://tartley.com/posts/google-chrome-credit/</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>PyRochesterMN</title><link>https://tartley.com/posts/pyrochestermn/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Announcing the world's newest Python User Group, PyRochesterMN, based in
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;img alt="chrome-credit" src="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;</description><category>geek</category><category>software</category><guid>https://www.tartley.com/posts/google-chrome-credit/</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>PyRochesterMN</title><link>https://www.tartley.com/posts/pyrochestermn/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Announcing the world's newest Python User Group, PyRochesterMN, based in
 Rochester, Minnesota, USA.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; We've had a couple of name &amp;amp; hosting changes since:&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/PyRochesterMN"&gt;http://www.meetup.com/PyRochesterMN&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/RochesTech"&gt;http://www.meetup.com/RochesTech&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.reddit.com/r/rochestertech/"&gt;https://www.reddit.com/r/rochestertech/&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>meetup</category><category>python</category><category>software</category><guid>https://tartley.com/posts/pyrochestermn/</guid><pubDate>Thu, 21 Jan 2016 03:01:27 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
+&lt;p&gt;&lt;a href="https://www.reddit.com/r/rochestertech/"&gt;https://www.reddit.com/r/rochestertech/&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>meetup</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pyrochestermn/</guid><pubDate>Thu, 21 Jan 2016 03:01:27 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://www.tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
 Code."&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The goals of making deployment consistent, reliable and fast are very
 laudable, and the conclusion involving creating Debian packages is just
@@ -812,7 +812,7 @@ full of packages. Point pip at it using
 'packages' directory could be checked into your project's repo, so that
 once you've checked a project out, you have everything you need to
 deploy to local VMs, even with no network connection at all. I wrote
-about this &lt;a href="https://tartley.com/pip-install-lightspeed-and-bulletproof"&gt;a while ago&lt;/a&gt;.&lt;/p&gt;
+about this &lt;a href="https://www.tartley.com/pip-install-lightspeed-and-bulletproof"&gt;a while ago&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; Building your code separately on each host will cause
 consistency issues&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;So don't install dependencies using source packages, use wheels instead.
@@ -837,4 +837,4 @@ packages, rather than more bug-prone ad-hoc scripts and Ansible config.
 So I'm not at all against the final conclusions of the Nylas article.
 (Hugs to you folks at Nylas!)&lt;/p&gt;
 &lt;p&gt;Dashed this out in ten minutes between daycare pickup and dinner being
-ready. Apologies for the inevitable shoddyness.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</guid><pubDate>Wed, 22 Jul 2015 00:06:02 GMT</pubDate></item></channel></rss>
+ready. Apologies for the inevitable shoddyness.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</guid><pubDate>Wed, 22 Jul 2015 00:06:02 GMT</pubDate></item></channel></rss>

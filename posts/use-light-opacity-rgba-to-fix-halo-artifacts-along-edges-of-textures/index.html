@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Use light-opacity RGBA to fix halo artifacts along edges of textures | tartley.com</title>
+<title>Use light-opacity RGBA to fix halo artifacts along edges of textures | tartley.com | Jonathan Hartley's personal blog</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://tartley.com/posts/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures/">
+<link rel="canonical" href="https://www.tartley.com/posts/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures/">
 <link rel="icon" href="../../welcome.gif" sizes="16x16">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Jonathan Hartley">
 <link rel="prev" href="../the-acm-is-pissing-in-the-well/" title="The ACM is pissing in the well" type="text/html">
 <link rel="next" href="../sinister-redux/" title="Sinister Redux" type="text/html">
-<meta property="og:site_name" content="tartley.com">
+<meta property="og:site_name" content="tartley.com | Jonathan Hartley's personal blog">
 <meta property="og:title" content="Use light-opacity RGBA to fix halo artifacts along edges of textures">
-<meta property="og:url" content="https://tartley.com/posts/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures/">
+<meta property="og:url" content="https://www.tartley.com/posts/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures/">
 <meta property="og:description" content="This is a quick post in response to the Vimeo video post Getting Rid of
 White Halos in Transparent Textures by
 FlashBang Studios (creators of the awesome Offroad Velociraptor
@@ -38,9 +38,9 @@ Thanks to FlashB">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://tartley.com/">
+            <a class="navbar-brand" href="https://www.tartley.com/">
 
-                <span id="blog-title">tartley.com</span>
+                <span id="blog-title">tartley.com | Jonathan Hartley's personal blog</span>
             </a>
         </div>
 <!-- /.navbar-header -->
@@ -65,7 +65,7 @@ Thanks to FlashB">
             </li>
 </ul>
 <!-- DuckDuckGo custom search --><form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="https://tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+<input type="hidden" name="sites" value="https://www.tartley.com/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
@@ -149,8 +149,8 @@ transparent pixels are saved with the correct RGB values, and the plugin
 demonstrated in the video helps to automate this.</p>
 <p>The alternative solution, is to modify the RGBA values in the texture,
 by pre-multiplying the RGB values by the A value. ie:</p>
-<div class="code"><pre class="code literal-block">R = R * A
-G = G * A
+<div class="code"><pre class="code literal-block">R = R <span class="gs">* A</span>
+<span class="gs">G = G *</span> A
 B = B * A
 </pre></div>
 
