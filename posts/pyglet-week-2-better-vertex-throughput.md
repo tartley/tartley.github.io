@@ -5,7 +5,8 @@
 .. tags: geek,software,python,graphics
 -->
 
-In last week's [2D Graphics With pyglet and OpenGL](/2d-graphics-with-pyglet-and-opengl),
+In last week's
+[2D Graphics With pyglet and OpenGL](/posts/2d-graphics-with-pyglet-and-opengl),
 I used the [pyglet](http://www.pyglet.org/) library to produce some OpenGL
 triangles on the screen, from my rough-and-ready Python code. This week,
 I want to try to boost the throughput, to get some idea of how complex a
