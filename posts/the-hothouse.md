@@ -2,7 +2,7 @@
 .. title: The Hothouse
 .. slug: the-hothouse
 .. date: 2007-07-22 01:31:10-05:00
-.. tags: media,show,fiction
+.. tags: media,theater,fiction
 -->
 
 <span style="float: left">

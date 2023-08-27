@@ -2,9 +2,8 @@
 .. title: London Symphony Orchestra's Brass Ensemble
 .. slug: london-symphony-orchestras-brass-ensemble
 .. date: 2007-03-19 23:59:37-05:00
-.. tags: media,show
+.. tags: media,theater,orchestra,music
 -->
-
 
 The LSO is enjoying a sustained peak of success, and is apparently
 well-known for the talented and distinctive timbre of their brass

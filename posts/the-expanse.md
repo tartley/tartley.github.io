@@ -2,7 +2,7 @@
 .. title: The Expanse
 .. slug: the-expanse
 .. date: 2022-04-08 14:42:40 UTC-05:00
-.. tags: media,fiction,tv,science-fiction
+.. tags: media,fiction,show,science-fiction
 -->
 
 ![The Expanse screencap](/files/2022/the-expanse-screencap.webp)
