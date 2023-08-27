@@ -15,8 +15,8 @@ A collection of creative essays, varying from playful to unflinchingly
 uncomfortable, shot through with Wallace's typical humour and
 introspection.
 
-I've tended to love and hate his [other](/infinite-jest)
-[writing](/everything-and-more) in equal measure, but with such
+I've tended to love and hate his [other](/posts/infinite-jest)
+[writing](/posts/everything-and-more) in equal measure, but with such
 ferocity that I unreservedly place him amongst my very favourite
 authors. There wasn't even much for me to hate in this one, relatively
 lacking as it is in labyrinthine footnotes.

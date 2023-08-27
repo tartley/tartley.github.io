@@ -7,7 +7,7 @@
 
 
 This is just a refinement of [last week's
-script](/pyglet-week-2-better-vertex-throughput). No massively significant changes,
+script](/posts/pyglet-week-2-better-vertex-throughput). No massively significant changes,
 just a bunch of minor tweaks.
 
 -   The fans are replaced with slightly prettier flowers, with separate

@@ -11,7 +11,7 @@
 
 I just can't decide how I feel about this. Part brilliant, part awful,
 my most bipolar experience since [Everything and
-More](/everything-and-more). I guess I should 'fess up that I've
+More](/posts/everything-and-more). I guess I should 'fess up that I've
 never actually seen or read Hamlet, either, which obviously means I'm
 entirely unqualified to judge. Why was I even watching it?
 Oh deary. er... 5/10.

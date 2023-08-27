@@ -29,4 +29,4 @@ today.
 **Update:** There's
 [photos](https://photos.google.com/album/AF1QipNHkP3miUANDRPKVsCJAsO-SbWjU2vOMn1fhgAw)
 and the talk slides are finally online, [over here
-somewhere...](/pycon-2008-chicago-usa)
+somewhere...](/posts/pycon-2008-chicago-usa)

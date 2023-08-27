@@ -25,7 +25,7 @@ Shaders solve many of the problems I've been happily messing with for
 ages, in ways that are easier to implement, more powerful, and more
 performant.
 
-I [whined about the Red Book](/opengl-programming-guide-6th-ed), but this
+I [whined about the Red Book](/posts/opengl-programming-guide-6th-ed), but this
 "Orange" OpenGL Shading Language book is brill - just what I needed.
 Incisive without being overly terse, practical, and once it got into the
 chapters about applications of multidimensional Perlin noise it got me
