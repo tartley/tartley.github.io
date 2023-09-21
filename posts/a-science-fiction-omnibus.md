@@ -1,5 +1,5 @@
 <!--
-.. title: A Science-Fiction Omnibus
+.. title: Great Work of Time in A Science-Fiction Omnibus
 .. slug: a-science-fiction-omnibus
 .. date: 2008-12-14 17:32:47-06:00
 .. tags: media,book,fiction,science-fiction,short,bear

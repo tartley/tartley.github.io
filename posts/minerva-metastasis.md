@@ -5,7 +5,7 @@
 .. tags: geek,media,videogame,windows,completed
 -->
 
-*PC, Mod of Half-Life 2. By Adam Foster, 2006.* ![spoilers](/files/spoilers.svg)
+*PC, Mod of Half-Life 2. By Adam Foster, 2006.*
 
 ![Title screen](/files/2007/04/metastasis_1_background0000.jpg)]
 
@@ -24,7 +24,7 @@ The baseline HL2 gameplay is not changed one iota. Metastasis eschews
 the normal stock-in-trade of the mod scene, introducing no new enemies,
 no new weapons, no new assets such as bitmaps or sound effects. Instead,
 it envelops the player in an enthralling atmospheric experience, with a
-compelling backstory and superb player motivation, using a sublime
+compelling back-story and superb player motivation, using a sublime
 combination of architecture, geometric composition, intensely creative
 injected textual fragments and well-considered use of music. This is
 backed up by the superbly crafted accompanying
@@ -34,6 +34,8 @@ reality game](http://en.wikipedia.org/wiki/Alternate_reality_game)
 influences.
 
 ![Shoreline](/files/2007/04/metastasis_10012.jpg)
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;">spoilers</span>
 
 The game opens with your character dumped unceremoniously out of a
 helicopter by forces unknown, onto a beach under hostile fire. Running
@@ -63,7 +65,7 @@ option but to continue exploring until the exterminators show up.
 
 It's short and sweet - I played through the first and second parts in a
 single night. But it's managed with such finesse, extending the
-backstory of HL2 in bold new directions, building upon what was
+back-story of HL2 in bold new directions, building upon what was
 indubitably the greatest PC game of 2005, possibly of all time, with
 such verve and imagination that I have to agree with a Metastasis forum
 posting: It might just be (*whisper it*) better than the source.

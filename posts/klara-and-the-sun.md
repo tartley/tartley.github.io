@@ -9,9 +9,11 @@
 ![Klara and the Sun cover](/files/2022/klara-and-the-sun-cover.webp)
 </span>
 
-*by Kazuo Ishiguro, 2021* ![spoilers](/files/spoilers.svg)
+*by Kazuo Ishiguro, 2021*
 
 This was just wonderful to read.
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;">spoilers</span>
 
 The near-future scenario is revealed in a compellingly minimal way, teased
 in minor details. Eventually we piece together an epidemic of children without

@@ -9,7 +9,7 @@
 ![There is No Antimemetics Division cover](/files/2021/there-is-no-antimemetics-division-cover.jpg)
 </span>
 
-*by qntm, 2020*. ![spoilers](/files/spoilers.svg)
+*by qntm, 2020*.
 
 I first became aware of this book when I noticed that the good folks over
 at [The SCP Foundation](http://www.scpwiki.com/) have kept themselves busy in
@@ -35,7 +35,10 @@ can never even know you're at war?*
 
 Intrigued, I started clicking around, and as is the way of SCP, discovered
 many hours had passed. Shortly afterwards, I realized the arc has been
-collected into this book.
+collected into this book, and immediately purchesed it, and everything else
+the author had available for sale.
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"><b>spoilers</b></span>
 
 Occasional SCP entries, in the format we know and love, intertwine a short but
 intense tale of memetic hazards, populated by a few of the Division's

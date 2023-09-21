@@ -9,13 +9,15 @@
 ![Miracleman cover](/files/2019/06/miracleman.jpg)
 </span>
 
-_by Alan Moore, Alan Davies, & John Totleben._  ![spoilers](/files/spoilers.svg)
+_by Alan Moore, Alan Davies, & John Totleben._
 
 I spent a little time digging out earlier works of Alan Moore. These
 inter-library loans didn't disappoint.
 
 Originally published as _Marvelman_ by Mick Anglo, from
-1954-59. Legal battles rebranded the character as _Miracleman_ in 1985.
+1954-59. Legal battles re-branded the character as _Miracleman_ in 1985.
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;">spoilers</span>
 
 The opening pages reprint one of those campy early stories, involving
 primary-colored moralizing while flying around to punch time-travelling Nazi
@@ -28,10 +30,10 @@ ensuing tales are dark and introspective.
 
 One thread follows the emotional stresses placed on Miracleman when incarnated
 as his human alter-ego, the frail and fallible half of a godlike being. He's
-unable to conceive a child with his wife, although _Miracleman_ can, and
-succumbs to self-loathing and jealousy, culminating in a touching scene in
-which he climbs a mountain, leaves a forlorn monument, and changes into
-Miracleman one last time, never to change back.
+unable to conceive a child with his wife, although it turns out _Miracleman_
+can, and succumbs to self-loathing and jealousy, culminating in a touching
+scene in which he climbs a mountain, leaves a forlorn monument, and changes
+into Miracleman one last time, never to change back.
 
 Yes, this is more uneven than Moore's later works. Yes, it's unashamedly an
 underwear-on-the-outside superhero story. But nonetheless I loved it, and

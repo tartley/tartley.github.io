@@ -16,7 +16,8 @@ it really was a pleasure and an education talking to every person
 present. However, I couldn't help but notice that there seems to be a
 pervasive macho streak in the game industry, sustained by the belief
 that game development is considerably harder and more creative than any
-other form of software.
+other form of software. Or, as I have overheard game developers saying,
+first hand, *than any other human endeavor*.
 
 **Not rocket science**
 

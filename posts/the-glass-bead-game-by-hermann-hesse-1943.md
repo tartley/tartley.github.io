@@ -1,6 +1,6 @@
 <!--
 .. title: The Glass Bead Game
-.. slug: the-glass-bead-game-by-hermann-hesse-1943
+.. slug: the-glass-bead-game
 .. date: 2021-08-20 13:37:25 UTC-05:00
 .. tags: media,book,novel,science-fiction,fiction
 -->
@@ -10,7 +10,7 @@
 </span>
 
 *by Hermann Hesse (1943). Translated from German to English with evident
-devotion and expertise by Clara Winston & Richard Winston.* ![spoilers](/files/spoilers.svg)
+devotion and expertise by Clara Winston & Richard Winston.*
 
 This novel is described by some as the culmination of Hesse's career, for
 which he received a Nobel Prize for Literature. Many reviews on
@@ -20,6 +20,8 @@ cite it as a life-changing novel, or as a singular all-time favorite book.
 I must confess with some sadness that I must have entirely missed the point. I
 have not enjoyed it *at all*. The number of books I failed to finish in my
 life is surely less than five, and this very nearly became one of them.
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;">spoilers</span>
 
 The first half describes Knecht's education and career within the rarefied
 academic atmosphere of some distant future European state's "pedagogical
@@ -90,4 +92,6 @@ as Friedrich Nietzsche, others being acquaintances of the author.
 All of which seems reasonable, but doesn't really help me understand what I
 just read. Perhaps each tale of Knecht, in focussing on one human trait,
 is lacking because it undervalues the other three. Perhaps. ¯\\_(ツ)_/¯
+
+Rating: 10/10 if you are not me. 2/10 if you are me.
 

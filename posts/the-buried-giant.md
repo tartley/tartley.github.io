@@ -9,7 +9,7 @@
 ![The Buried Giant cover](/files/2021/the-buried-giant-cover.jpg)
 </span>
 
-*by Kazuo Ishiguro, 2015* ![spoilers](/files/spoilers.svg)
+*by Kazuo Ishiguro, 2015*
 
 A mythical tale, set in post-Arthurian England. Author Kazuo Ishiguro, Nobel
 prize winner for literature, is also famous for Klara and the Sun, Never Let
@@ -19,6 +19,8 @@ Ishiguro moved from Japan to England as a young child, and his insightful
 observation of English and Western culture and myth benefits from that
 transplant's perspective - at once deeply at home in England, and also
 an outsider to it.
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;">spoilers</span>
 
 The tale is populated by ragged peoples, affected by a pervasive amnesia.
 Elderly couple Axl and Beatrice abruptly decide to leave their village of damp,

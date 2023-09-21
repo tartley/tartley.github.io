@@ -2,7 +2,7 @@
 .. title: TIL: Makefiles that are self-documenting, and process all extant files.
 .. slug: makefiles-that-are-self-documenting-and-process-all-extant-files
 .. date: 2023-07-06 11:50:16 UTC-05:00
-.. tags: geek,til,make,command-line
+.. tags: geek,til,make,terminal
 -->
 
 ## Self-documenting Makefiles

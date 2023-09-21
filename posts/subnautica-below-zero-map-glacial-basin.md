@@ -2,10 +2,12 @@
 .. title: Subnautica: Below Zero
 .. slug: subnautica-below-zero
 .. date: 2021-11-22 16:24:22 UTC-06:00
-.. tags: geek,media,videogame,windows,map
+.. tags: geek,media,videogame,windows,map,completed
 -->
 
-*on Windows, published 2021*. ![spoilers](/files/spoilers.svg)
+*on Windows, published 2021*.
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"><b>spoilers</b></span>, obviously. This is a map of an area in the game, revealing many of its secrets.
 
 [Subnautica](https://subnautica.fandom.com/wiki/Subnautica_Wiki),
 and its icy sequel,

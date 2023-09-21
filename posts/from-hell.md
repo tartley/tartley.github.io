@@ -9,15 +9,18 @@
 ![From Hell](/files/2007/07/fromhellsm.jpg)
 </span>
 
-*by Alan Moore (author), Eddie Campbell (artist) (1989)* ![spoilers](/files/spoilers.svg)
+*by Alan Moore (author), Eddie Campbell (artist) (1989)*
 
 Moore has almost single-handedly transformed the definition of the comic
 industry in the last 20 years, and this fetishistically researched
 comic-book dramatisation of the dark and macabre Jack the Ripper murders
-is no exception to his visionary high standards. Moore plunges headlong
-into the sensational conspiracy theory that Royal Physician, Dr. William
-Gull, killed East End prostitutes to silence the story of an
-illegitimate royal baby, under the direct orders of the implacable Queen
+is no exception to his visionary high standards.
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"><b>spoilers</b></span>
+
+Moore plunges headlong into the sensational conspiracy theory that Royal
+Physician, Dr. William Gull, killed East End prostitutes to silence the story
+of an illegitimate royal baby, under the direct orders of the implacable Queen
 Victoria herself.
 
 Dr Gull regards his mission as the great work of his life, which will

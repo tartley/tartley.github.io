@@ -9,11 +9,13 @@
 ![This Is How You Lose the Time War cover](/files/2021/this-is-how-you-lose-the-time-war-cover.jpg)
 </span>
 
-*by Amal El-Mohtar & Max Gladstone, 2019* ![spoilers](/files/spoilers.svg)
+*by Amal El-Mohtar & Max Gladstone, 2019*
 
 It's a marvellous literary romp, deploying the tropes and language of science
-fiction to deliver a scintillatingly poetic payload of — dare I say it —
+fiction to deliver a scintillating, poetic payload of — dare I say it —
 credible romance.
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;">spoilers</span>
 
 The combatants in the Time War seek to bring about historical outcomes which
 predispose those futures which will result in the generation of their own
@@ -22,7 +24,7 @@ particular civilisation.
 In one future, humans have embraced machine-oriented augmentation, uploads,
 and all that that implies. In the other, transformation is wrought by
 biological means, accepting humankind's role as a part of a natural ecosystem,
-boostrapping the whole to greatness by a ruthless application of evolutionary
+bootstrapping the whole to greatness by a ruthless application of evolutionary
 principles. Each finds the other repulsive, and their existence is mutually
 exclusive. From our perspective, they appear equally awe-inspiring and terrible
 to behold.
@@ -46,8 +48,8 @@ each other's skills has grown to full-blown giddy all-out love. But where to,
 from there? Their communications to date are already traitorous - grounds for
 terminal repercussions. Nowhen in the multiverse are they safe from their
 respective commanders. Losing the time war would mean they no longer — had
-never — existed. Winning the time war would mean the same for their opposite
-number.
+never — existed. Winning the time war would mean the same for their now
+beloved opposite number.
 
 At which point, the novel cleverly folds back on itself - these are consummate
 masters of time, and subtle but decisive influence, after all - to perform an

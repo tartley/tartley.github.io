@@ -2,7 +2,7 @@
 .. title: Illustrating Uses of IBM Cloud Security Groups
 .. slug: illustrating-uses-of-ibm-cloud-security-groups
 .. date: 2023-08-22 21:33:47 UTC-05:00
-.. tags: software,networking,security,cloud
+.. tags: geek,software,networking,security,cloud
 -->
 
 > I wrote this high-level public-facing guide while employed by IBM, creating

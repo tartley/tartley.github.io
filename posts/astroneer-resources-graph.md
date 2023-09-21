@@ -2,7 +2,7 @@
 .. title: Astroneer Resource Graph
 .. slug: astroneer-resource-graph
 .. date: 2023-04-11 10:01:51 UTC-05:00
-.. tags: geek,map,media,videogame,videogame
+.. tags: geek,map,media,videogame,videogame,did-not-finish
 -->
 
 Used the trusty [Graphviz](https://graphviz.org/) to whip up a diagram showing how to

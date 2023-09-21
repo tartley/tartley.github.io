@@ -9,7 +9,7 @@
 ![](/files/2007/06/facade-game.jpg)
 </span>
 
-*by Procedural Arts (PC, 2006)* ![spoilers](/files/spoilers.svg)
+*by Procedural Arts (PC, 2006)*
 
 <http://www.interactivestory.net/>
 
@@ -17,7 +17,11 @@
 of gaming, making a bold raid deep into rarely-explored territory. It
 opens with a voicemail, inviting you to visit old friends, and then
 presents the player with a first-person view from outside your caller's
-apartment door. Stepping up briskly, I was just getting to grips with
+apartment door.
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"><b>spoilers</b></span>
+
+Stepping up briskly, I was just getting to grips with
 the mouse cursor's context-sensitive prompt to knock on the door, when I
 began to discern the muffled but unmistakable sounds of an argument
 going on inside. The familiar sinking feeling invoked as you screw up

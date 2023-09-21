@@ -6,9 +6,6 @@
 -->
 
 *by Frictional Games, published 2015*
-![Spoilers](/files/spoilers.svg)
-
-Major spoilers ahead. It's seven years old at this point.
 
 <center>
 ![Soma - protagonist](/files/2022/soma-protagonist.webp)
@@ -21,6 +18,8 @@ yielding a second conscious entity, which thinks it is you. So there are deep
 science-fiction issues in play here, about whether we think such a scheme could
 ever possibly work, and about the practical, personal, and societal
 ramifications of it.
+
+Major <span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;">spoilers</span> ahead. It's seven years old at this point.
 
 I loved the setup. A humdrum morning begins in your present-day Toronto
 apartment. A note on the fridge reminds you that today is the day of your

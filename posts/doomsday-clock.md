@@ -6,25 +6,35 @@
 -->
 
 *By Geoff Johns (writer), Gary Frank (pencil) & Brad Anderson (colors). (2017-2019)*
-![Spoilers](/files/spoilers.svg)
 
-The original [*Watchmen*](https://archive.org/details/Watchmen1987) is a
+[*Watchmen*](https://archive.org/details/Watchmen1987) is a
 seminal 12-issue superhero comic by Alan Moore (writer) & Dave Gibbons
 (artist), published from 1986 to 1987, that transformed the comics world. A
 superhero tale in which all-but-one of the superheroes have no superhuman
 powers at all.
 
 The decades since have spawned a number of remakes, sequels, prequels and
-spin-offs. Zach Snyder's movie adaptation has its adherents, and the HBO
-miniseries sequel was, in my opinion, excellent. But other than that they have
-not been very good. I initially thought the 12 issue sequel *Doomsday Clock*
-comic would fall solidly into this group, and passed it by when it came out
-a couple of years ago.
+spin-offs. Zach Snyder's movie adaptation has its adherents, although I am not
+among them - one of Moore's goals was always to explore what makes the comic
+medium unique, developing and advancing the boundaries of what you can do in
+a comic but cannot do in other media. For example, a reader absorbs a comic at
+their own pace, and will often voluntarily flip back to clarify overlooked
+aspects of recent panels. What use, then, a shot-for-shot remake in the medium
+of video, which steamrolls the viewer along, heedless of their desire to
+cross-check important details? The HBO miniseries sequel, on the other hand,
+was excellent - better than I imagined any Watchmen sequel could be. But other
+than that they have not been very good.
+
+I initially thought the 12 issue sequel *Doomsday Clock* comic would fall
+solidly into this group - indeed, it was decried by many review headlines,
+so I passed it by when it came out a couple of years ago.
 
 But on reading it last week, I really enjoyed it. It really swings for the
 fences, providing a smashing tale, with good arcs for both old and new
 characters, and a genuine attempt to advance the conversation that *Watchmen*
 started by deconstructing the superhero.
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"><b>spoilers</b></span>
 
 We last saw Dr Manhattan at the end of *Watchmen*, having been isolated from
 humanity by Adrien Veidt's plans, tired of his entanglement in the messy
@@ -78,11 +88,15 @@ these worlds, including the various DC pre-crisis worlds, are accessible to
 Manhattan's powers.
 
 Incidentally, this enables DC to undo the changes wrought by the last few
-years' unpopular "New 52" era. This meant nothing to me when I started reading,
-I know basically nothing about American comics, only being familiar with the
-fabulous British *2000AD*. I was spurred into reading around the DC lore, and by
-the time I was done, I understood that the *New 52* reality included things
-like The Justice League's alternate roster, the early death of Clark's parents,
+years' unpopular ["New 52" era](https://en.wikipedia.org/wiki/The_New_52). This
+meant nothing to me when I started reading, I know basically nothing about
+American comics, only being familiar with the fabulous British
+[*2000AD*](https://2000ad.com). I was spurred into reading around the DC lore,
+and by the time I was done, I understood that the *New 52* reality included
+things like
+[The Justice League's alternate roster](https://www.cbr.com/justice-league-darkseid-war-guide/),
+the
+[early death of Clark's parents](https://www.cbr.com/superman-ma-pa-kent-deaths/),
 which distances Superman from humanity and changes the character dramatically,
 the loss of the Justice Society of America from Earth, and the loss of Wally
 West's Flash. All these and more are written off as the effects of Dr

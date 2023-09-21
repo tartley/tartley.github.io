@@ -2,22 +2,25 @@
 .. title: Someone Comes to Town, Someone Leaves Town
 .. slug: someone-comes-to-town-someone-leaves-town
 .. date: 2008-02-08 01:01:37-06:00
-.. tags: media,book,fiction,novel,doctorow
+.. tags: media,book,fiction,fantasy,novel,doctorow
 -->
 
 <span style="float: left">
 ![Someone Comes to Town, Someone Leaves Town](/files/2008/02/someone-comes-to-town.jpg)
 </span>
 
-*by Cory Doctorow* ![spoilers](/files/spoilers.svg)
+*by Cory Doctorow*
 
-I just don't know about this one. I really wanted to like it. It starts
-out with an interesting, down-to-earth story about a guy establishing
-himself in a new neighbourhood, setting up an open wireless mesh net
-across the neighbourhood, back in a day when this was still a *really
-cool idea*. This tale is then peppered with initially disconcerting non-literal
-sounding references to his family, such as the cliffs and caves of his Father,
-the mountain.
+I just don't know about this one. I really wanted to like it.
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"><b>spoilers</b></span>
+
+It starts out with an interesting, down-to-earth story about a guy establishing
+himself in a new neighbourhood, setting up an open wireless mesh net across the
+neighbourhood, back in a day when this was still a *really cool idea*. This
+tale is then peppered with initially disconcerting non-literal sounding
+references to his family, such as the cliffs and caves of his Father, the
+mountain.
 
 Perhaps I embarked upon it too casually. It was certainly engaging, but
 by the last few pages I began to suspect that threads of the plot had
@@ -40,6 +43,6 @@ Rating: 6/10 - One to revisit, maybe, if I like his other stuff.
 However, I've read a bunch of discussion about *Someone Comes to
 Town...*, and I don't seem to have missed much that anyone else has been
 getting out of it. So while I'm looking forward to other stuff by him,
-I'm sticking by my low rating for this.
+I'm sticking by my personal low enjoyment of this one.
 
 <br style="clear: both" />

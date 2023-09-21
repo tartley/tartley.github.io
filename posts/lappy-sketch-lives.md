@@ -2,7 +2,7 @@
 .. title: Lappy sketch lives!
 .. slug: lappy-sketch-lives
 .. date: 2008-02-05 13:13:02-06:00
-.. tags: draw,refried
+.. tags: drawing,refried
 -->
 
 

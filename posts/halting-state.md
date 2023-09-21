@@ -9,7 +9,7 @@
 ![](/files/2008/08/halting-state.jpg)
 </span>
 
-*by Charles Stross*, 2007. ![spoilers](/files/spoilers.svg)
+*by Charles Stross*, 2007.
 
 It's a tale of corporate shenanigans, online virtual reality computer
 gaming, scams, police on the beat, software contractors, and political
@@ -21,6 +21,8 @@ The Scottish vernacular and the boozed-up Brit attitudes in a mildly
 science-fictional setting come across as parochial rather than grungy,
 and projected technologies such as self-driving cars and virtual
 realities all seem too intrusive and out of place.
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;">
 
 The premise oscillates between nauseating and preposterous, as an
 in-game robbery of virtual items gradually tips off its investigators

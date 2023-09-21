@@ -9,7 +9,7 @@
 ![The Flight of the Horse](/files/2007/03/the_flight_of_the_horse_f.jpeg)
 </span>
 
-*by Larry Niven (1969-1973)* ![spoilers](/files/spoilers.svg)
+*by Larry Niven (1969-1973)*
 
 I just got this back from long-term loan to
 [Phil](http://frosties2.com/), and I just couldn't resist reading it
@@ -28,6 +28,8 @@ It's very much Niven's modus operandi, and it lends itself well to a
 book like this, which is essentially a couple of sets of related short
 stories, in settings that verge on fantasy, but which abide by a strict
 internal logic that makes them indisputably hard SF to me.
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"><b>spoilers</b></span>
 
 The first sequence follows the fortunes of a 24th century
 post-apocalyptic time traveller, who is trying his best to investigate

@@ -9,7 +9,9 @@
 ![Swamp Thing cover](/files/2019/06/swamp-thing-vol-1.jpg)
 </span>
 
-*by Alan Moore, Jogn Totleben, & Steve Bissette* ![spoilers](/files/spoilers.svg)
+*by Alan Moore, Jogn Totleben, & Steve Bissette*
+
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"><b>spoilers</b></span>
 
 Moore's deconstruction of existing characters continues. Originally Swamp Thing
 was Alec Holland, miraculously transformed by an infusion of artificially

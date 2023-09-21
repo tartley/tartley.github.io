@@ -2,7 +2,7 @@
 .. title: TIL: Download audio from YouTube
 .. slug: download-audio-from-youtube
 .. date: 2021-05-13 11:18:33 UTC-05:00
-.. tags: geek,linux,music,til,youtube,command-line
+.. tags: geek,linux,music,til,youtube,terminal
 -->
 
 For the sort of weirdos who still host their own music files, but aren't
