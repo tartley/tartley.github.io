@@ -31,15 +31,15 @@ Left bottom, under the Mac
 : You can sort of see the 10" whiteboard I use to combat ADHD by writing a
 sentence about what I'm *supposed* to be working on, then I can spot it every
 few minutes and drag my mind back to the task in hand. (a technique described
-in the fabulous [Self Command by Chris
-DeLeon](https://gamkedo.gumroad.com/l/self-command/).
+in the fabulous
+[Self Command by Chris DeLeon](https://gamkedo.gumroad.com/l/self-command/).
 
 Center
 : Main monitor and wireless tenkeyless mechanical keyboard & mouse combo, all
 switchable to any of the laptops. Under the keyboard you can sort-of see the
-"Magic the Gathering" gaming mat (free from local gaming store's MtG lessons)
-pressed into duty as the world's most gigantic, beautiful, and luxurious mouse
-mat.
+[Magic the Gathering 13x24" gaming mat](https://ultrapro.com/collections/gaming-accessories-magic-the-gathering/type_playmat)
+(free from local gaming store's MtG lessons) pressed into duty as the world's
+most gigantic, beautiful, and luxurious mouse mat.
 
 Right monitor, keyboard and mouse
 : are wired to the Windows gaming PC under the desk (not visible). The kiddo's
@@ -47,5 +47,6 @@ current [Astroneer](https://store.steampowered.com/app/361420/ASTRONEER/)
 session is visible. The monitor is switchable to any of the laptops.
 
 Right tab
-: Absolute workhorse 12.6" Android tablet on which I do most of my reading, laid in the picture here just to be gratuitous.
+: Absolute workhorse 12.6" Android tablet on which I do most of my reading,
+laid in the picture here just to be gratuitous.
 

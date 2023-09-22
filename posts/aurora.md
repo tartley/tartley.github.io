@@ -29,10 +29,10 @@ person finds especially beguiling, compelling, and believable. To some extent,
 I concede that on occasion they are believable because they seem to be a
 reasonable extrapolation of our current situation. But no matter how reasonable
 your extrapolation seems to be, it's always possible that reality will zig
-instead of zag, and your supposedly humdrum tale of life in orbit will clash
-with the unexpected reality of suspended human spaceflight in the face of
-spiraling real-world costs. The vision that one is selling is always, to a
-greater or lesser extent, a wishful one - a *fantasy*.
+instead of zag, and even the most humdrum tale of a rocket man's life will
+find itself at odds with the unexpected reality of suspended human spaceflight
+in the face of spiraling real-world costs. The vision that one is selling is
+always, to a greater or lesser extent, a wishful one - a *fantasy*.
 
 This becomes immediately apparent once we stray beyond the confines of low
 Earth orbit, to take in the wider scope of science fiction, the vast majority
