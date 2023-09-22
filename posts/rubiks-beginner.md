@@ -2,7 +2,7 @@
 .. title: Rubik's Beginner
 .. slug: rubiks-beginner
 .. date: 2021-12-26 22:53:22 UTC-06:00
-.. tags: journal
+.. tags: journal,geek
 -->
 
 <span style="float: left">

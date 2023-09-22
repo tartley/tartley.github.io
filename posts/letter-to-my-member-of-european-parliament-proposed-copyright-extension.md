@@ -2,7 +2,7 @@
 .. title: Letter to my Member of European Parliament : Proposed Copyright Extension
 .. slug: letter-to-my-member-of-european-parliament-proposed-copyright-extension
 .. date: 2009-03-19 14:32:20-05:00
-.. tags: imho
+.. tags: imho,politics
 -->
 
 

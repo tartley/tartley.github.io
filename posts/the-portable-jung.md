@@ -2,7 +2,7 @@
 .. title: The Portable Jung
 .. slug: the-portable-jung
 .. date: 2008-05-27 13:51:13-05:00
-.. tags: media,book,non-fiction,psychology,essays
+.. tags: media,book,non-fiction,essays
 -->
 
 <span style="float: left">

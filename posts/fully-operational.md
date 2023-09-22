@@ -2,7 +2,7 @@
 .. title: Fully Operational
 .. slug: fully-operational
 .. date: 2023-09-21 10:51:12 UTC-05:00
-.. tags: journal,geek,keyboard,hardware
+.. tags: journal,geek,keyboard,hardware,osx-dev
 -->
 
 Now witness the power of this fully armed and operational battle station.
@@ -23,7 +23,9 @@ replaced by...
 
 Left bottom spaceship drawing
 : Macbook Pro (Brand new! Just unwrapped yesterday. Thank you new employer
-Lambda!)
+[Lambda](https://lambdalabs.com)!) Looks like this means I'm returning to
+developing on a Mac and VMs, after a full decade on Ubuntu & derivatives.
+I'm told Docker for Desktop now behaves better than it used to.
 
 Left bottom, under the Mac
 : You can sort of see the 10" whiteboard I use to combat ADHD by writing a

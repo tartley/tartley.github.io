@@ -2,7 +2,7 @@
 .. title: London Symphony Orchestra's Brass Ensemble
 .. slug: london-symphony-orchestras-brass-ensemble
 .. date: 2007-03-19 23:59:37-05:00
-.. tags: media,theater,orchestra,music
+.. tags: media,theater,music
 -->
 
 The LSO is enjoying a sustained peak of success, and is apparently
@@ -35,7 +35,7 @@ Not being overly familiar with orchestral music, the thing that struck
 me was how much the exercise seemed to celebrate the precision and
 craftsmanship that the musicians could bring to bear on the reproduction
 of the music, rather than the sheer visceral joy of the music itself
-which so predominag tes at a pop gig or night club. I'm told in no
+which so predominates at a pop gig or night club. I'm told in no
 uncertain terms by those with more experience of brass ensembles that
 the experience of rhapsody is equally present, but I'm having trouble
 reconciling that with my impressions of an audience which was captivated

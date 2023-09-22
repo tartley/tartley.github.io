@@ -2,7 +2,7 @@
 .. title: Flying High: Hobbyist OpenGL from Python
 .. slug: flying-high-hobbyist-opengl-from-python
 .. date: 2010-07-31 14:58:30-05:00
-.. tags: geek,python,graphics,presentations,gamedev
+.. tags: geek,python,graphics,presentations,gamedev,pyglet
 -->
 
 

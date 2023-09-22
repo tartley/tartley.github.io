@@ -2,6 +2,7 @@
 .. title: US Civics for Naturalization Quiz
 .. slug: basic-us-civics
 .. date: 2022-07-08 11:19:32 UTC-05:00
+.. tags: politics,journal
 -->
 
 I had to learn 100 questions and answers for my US Naturalization civics

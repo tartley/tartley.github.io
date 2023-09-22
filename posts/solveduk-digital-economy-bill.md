@@ -2,9 +2,8 @@
 .. title: [SOLVED]UK Digital Economy Bill
 .. slug: solveduk-digital-economy-bill
 .. date: 2009-12-03 10:04:59-06:00
-.. tags: geek,software,imho,python,lessig
+.. tags: geek,software,imho,python,lessig,politics
 -->
-
 
 So my splendid talented intelligent handsome friend Robert (who is also
 my boss, of sorts) today shared this smashing post:

@@ -2,9 +2,8 @@
 .. title: Use light-opacity RGBA to fix halo artifacts along edges of textures
 .. slug: use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures
 .. date: 2010-01-03 15:33:10-06:00
-.. tags: graphics
+.. tags: graphics,pyglet
 -->
-
 
 This is a quick post in response to the Vimeo video post [Getting Rid of
 White Halos in Transparent Textures](http://vimeo.com/8444889) by

@@ -1,6 +1,6 @@
 <!--
-.. title: Gallery
-.. slug: gallery
+.. title: Gallery of Drawings
+.. slug: gallery-of-drawings
 .. date: 2023-03-01 13:23:19 UTC-05:00
 .. tags: media,creative,drawing
 -->

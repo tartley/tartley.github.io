@@ -9,7 +9,7 @@
 ![historyofwesternphilosophy.jpg](/files/2007/07/historyofwesternphilosophy.jpg)
 </span>
 
-*by Bertrand Russel (1946)*
+*by Bertrand Russell (1946)*
 
 I've clearly been putting off this post for *months*, no doubt
 intimidated by my assumption that my review would have to be as weighty

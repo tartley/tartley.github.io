@@ -2,9 +2,8 @@
 .. title: Result of MP visit - I suck
 .. slug: result-of-mp-visit-i-suck
 .. date: 2009-12-04 23:23:09-06:00
-.. tags: geek,imho,journal
+.. tags: geek,imho,journal,politics
 -->
-
 
 So earlier tonight I turned up at the monthly 'surgery' of my MP, Frank
 Dobson (Labour), to present my objections to the Digital Economy Bill.

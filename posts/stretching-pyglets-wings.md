@@ -2,7 +2,7 @@
 .. title: Stretching pyglet's Wings
 .. slug: stretching-pyglets-wings
 .. date: 2008-09-08 22:25:36-05:00
-.. tags: geek,python,software,graphics,presentations
+.. tags: geek,python,software,graphics,presentations,pyglet
 -->
 
 
