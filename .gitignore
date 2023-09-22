@@ -9,3 +9,4 @@ cache
 nikolaserve.pid
 output
 /logs/
+/tags

@@ -2,7 +2,7 @@
 .. title: This Is How You Lose the Time War
 .. slug: this-is-how-you-lose-the-time-war
 .. date: 2021-11-17 14:49:26 UTC-06:00
-.. tags: media,fiction,book,novella,science-fiction
+.. tags: media,fiction,book,novella,science-fiction,time-travel
 -->
 
 <span style="float: left">

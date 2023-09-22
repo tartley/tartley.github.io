@@ -103,14 +103,5 @@ ffmpeg -i MyVideoFile -vn MyAudioFile.mp3
 
 Where `-vn` disables video in the output.
 
----
-
-### Changelog
-
-* 2023/02/14: Wide-ranging rewrite of prose to enliven, enlink, and clarify.
-* 2023/02/14: Swapped use of [*pipsi*](https://github.com/mitsuhiko/pipsi/)
-  tool, last released 2015, for *pipx*, which is more useful, well-maintained
-  and popular.
-* 2022: Added "Goal fulfillment" section, initially called "The Best Way", and
-  deprecated the previous method under "My previous inferior way".
+<br/>
 

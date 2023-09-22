@@ -2,7 +2,7 @@
 .. title: TIL: git push --force-with-lease
 .. slug: til-git-push-force-with-lease
 .. date: 2023-08-04 13:48:19 UTC-05:00
-.. tags: til,geek,software,git,version-control,terminal
+.. tags: til,geek,software,git,terminal
 -->
 
 Don't ever type `git push --force`. Yes, there are times we have to hold our

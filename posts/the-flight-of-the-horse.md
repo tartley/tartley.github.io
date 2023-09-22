@@ -2,7 +2,7 @@
 .. title: The Flight of the Horse
 .. slug: the-flight-of-the-horse
 .. date: 2007-03-20 01:22:18-05:00
-.. tags: media,book,fiction,science-fiction,short,niven
+.. tags: media,book,fiction,science-fiction,short,niven,time-travel
 -->
 
 <span style="float: left">
