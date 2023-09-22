@@ -2,7 +2,7 @@
 .. title: Cross-site image linking vandalism
 .. slug: cross-site-image-linking-vandalism
 .. date: 2008-06-05 17:17:28-05:00
-.. tags: web,image,tartley.com,creative,refried
+.. tags: internet,image,tartley.com,creative,refried
 -->
 
 

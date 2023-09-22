@@ -2,7 +2,7 @@
 .. title: Home media center
 .. slug: home-media-center
 .. date: 2009-08-24 13:02:42-05:00
-.. tags: geek,hardware,media
+.. tags: geek,hardware,media,networking
 -->
 
 I just bought a

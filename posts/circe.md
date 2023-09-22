@@ -2,7 +2,7 @@
 .. title: Circe
 .. slug: circe
 .. date: 2022-03-19 22:14:53 UTC-05:00
-.. tags: media,fiction,book,novel,mythology,fantasy,science-fiction
+.. tags: media,fiction,book,novel,myth,fantasy,science-fiction
 -->
 
 <span style="float: left">

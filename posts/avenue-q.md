@@ -2,7 +2,7 @@
 .. title: Avenue Q
 .. slug: avenue-q
 .. date: 2007-03-21 10:00:20-05:00
-.. tags: media,theater,fiction,musical,music
+.. tags: media,theater,fiction,music
 -->
 
 ![](/files/2007/03/aveq-screen_ps01_big.jpg)

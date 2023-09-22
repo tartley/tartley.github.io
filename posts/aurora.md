@@ -54,37 +54,40 @@ the conceptual scaffolding around an idea to make it seem believable (e.g. to
 speculate on the mechanism that might allow for a faster-than-light
 hyper-drive) *when the story fulfills some deeper psychological need for them*.
 
-Hence, a story like *Aurora*, of a generation ship sent to colonize an
-Earth-like planet orbiting the nearby star of Tau Ceti, is a story about the
-triumph of modernism. It leverages the sources of strength in the modern world,
-science and technology and *colonialism*, and a reader who is invested in a
-modern world-view will feel validated and empowered by this type of fantasy.
-They will be will be willing to exercise whatever extracurricular creative
-effort is required on the part of the reader to make the story believable.
-Doing so will inspire them with the feeling that their daily grind, is a part
-of the heroic story of how humanity transcends its planetary origins. This is
-much more fulfilling than investing any effort getting on board with the waning
-powers of superstition that are represented by the fantasy genre.
+Hence, a story on the same topic as *Aurora*, of a generation ship sent to
+colonize an Earth-like planet orbiting the nearby star of Tau Ceti, is
+(usually) a story about the triumph of modernism. Such stories leverage the
+sources of strength in the modern world, science and technology and
+*colonialism*, and a reader who is invested in a modern world-view will feel
+validated and empowered by this type of fantasy. They will be will be willing
+to exercise whatever extracurricular creative effort is required on the part of
+the reader to make the story believable. Doing so will inspire them with the
+feeling that their world all makes sense, is leading to something, so that
+their daily grind is a part of the heroic story of how humanity transcends its
+planetary origins. This is much more fulfilling than investing any effort
+getting on board with the waning powers of superstition that are represented by
+the fantasy genre.
 
 <span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"><b>spoilers</b></span>
 
-Aurora's colonists are granted every conceivable boon. A ship fully ten
-kilometers across, enclosing twenty four massive biomes, each stuffed full of
-hills and lakes, soil and forests, microbes and wildlife. A population of well
-over a thousand human beings. Miraculous nanotech fabricators, and megatons of
-elemental feedstock to run them. A miraculous acceleration laser, fired from
-Titan for decades after departure, allowing the ship to coast up to 0.1c,
-making the journey in only seven generations, while retaining enough fuel to
-decelerate for arrival. A miraculous magnetic shield protects the ship from
-catastrophic collisions with stray particles along the way. A benign AI runs
-the ship, growing more sentient and more emotionally robust and capable as the
-years pass.
+In keeping with this, Aurora's colonists are granted every conceivable boon
+that science and industry can supply. A ship fully ten kilometers across,
+enclosing twenty four massive biomes, each stuffed full of hills and lakes,
+soil and forests, microbes and wildlife. A population of well over a thousand
+human beings. Miraculous nanotech fabricators, and megatons of elemental
+feedstock to run them. A miraculous acceleration laser, fired from Titan for
+decades after departure, allowing the ship to coast up to 0.1c, making the
+journey in only seven generations, while retaining enough fuel to decelerate
+for arrival. A miraculous magnetic shield protects the ship from catastrophic
+collisions with stray particles along the way. A benign AI runs the ship,
+amusingly pressed into service as the narrator of the tale, and grows visibly
+more sentient, emotionally robust and capable as the years pass.
 
 And hot damn, they are going to *need* all these things, because in this story,
 human interstellar colonization is revealed for the fantasy it really is.
 Nothing works out, and the problems encountered are far bigger than anything
 the ship's designers planned for. Although the ship does limp into orbit
-around the destination planet, soon after that, people start dying, major
+around the destination planet, soon after that people start dying, major
 disagreements emerge which descend into catastrophic riots, and the ship's
 society falls apart - when have humans ever invented a reliable form of
 governance?
@@ -95,7 +98,7 @@ of a read.
 
 The book, and interviews with the author, caused quite a stir in science
 fiction circles. People were extremely angry. The book was attacking their
-deeply held beliefs that the future of humanity is as a successfully
+deeply held beliefs that the future of humanity is as a successfull
 space-faring species. They had invested their identity in this world-view,
 because of how it serviced their psychological needs for fulfillment and
 meaning. They had developed a religious conviction around this particular kind

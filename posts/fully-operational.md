@@ -2,7 +2,7 @@
 .. title: Fully Operational
 .. slug: fully-operational
 .. date: 2023-09-21 10:51:12 UTC-05:00
-.. tags: journal,geek
+.. tags: journal,geek,keyboard,hardware
 -->
 
 Now witness the power of this fully armed and operational battle station.
