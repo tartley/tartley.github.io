@@ -13,7 +13,7 @@ A website dedicated to oneself has been described — by my own Father, no less 
 </span>
 
 * Email tartley at tartley.com.
-* Chit-chat on [mastodon.social@tartley](https://mastodon.social/@tartley).
+* Chit-chat on [@tartley@mastodon.social](https://mastodon.social/@tartley).
 * Code on [github.com/tartley](https://github.com/tartley).
 * Résumé as [HTML](/files/Jonathan-Hartley-résumé.html) or [PDF](/files/Jonathan-Hartley-résumé.pdf).
 
