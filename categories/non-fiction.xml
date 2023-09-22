@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about non-fiction)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/non-fiction.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 18:34:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ur-Fascism</title><link>https://www.tartley.com/posts/ur-fascism/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about non-fiction)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/non-fiction.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 03:40:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ur-Fascism</title><link>https://www.tartley.com/posts/ur-fascism/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Ur-Fascism cover" src="https://www.tartley.com/files/2023/ur-fascism-cover.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Umberto Eco, 1995.&lt;/em&gt;&lt;/p&gt;
@@ -178,7 +178,7 @@ conclusions, and descriptions of how the field has arrived at them. Edifying.&lt
 &lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="The Structure of Scientific Revolutions cover" src="https://www.tartley.com/files/2020/the-structure-of-scientific-revolutions-cover.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Thomas S. Kuhn, 1962.&lt;/em&gt; &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Thomas S. Kuhn, 1962.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I loved &lt;em&gt;The Structure of Scientfic Revolutions&lt;/em&gt;.
 It was recommended to me as having similar impact to undergraduate
 classics like &lt;em&gt;Godel, Escher, Bach&lt;/em&gt;, or &lt;em&gt;The Blind Watchmaker.&lt;/em&gt; I'm going
@@ -638,7 +638,7 @@ at PyCon, and now I feel as if I should have read this book years ago.
 Shaders solve many of the problems I've been happily messing with for
 ages, in ways that are easier to implement, more powerful, and more
 performant.&lt;/p&gt;
-&lt;p&gt;I &lt;a href="https://www.tartley.com/opengl-programming-guide-6th-ed"&gt;whined about the Red Book&lt;/a&gt;, but this
+&lt;p&gt;I &lt;a href="https://www.tartley.com/posts/opengl-programming-guide-6th-ed"&gt;whined about the Red Book&lt;/a&gt;, but this
 "Orange" OpenGL Shading Language book is brill - just what I needed.
 Incisive without being overly terse, practical, and once it got into the
 chapters about applications of multidimensional Perlin noise it got me

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about videogame)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/videogame.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 18:34:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Astroneer Resource Graph</title><link>https://www.tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about videogame)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/videogame.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 02:56:32 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Astroneer Resource Graph</title><link>https://www.tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
 get each of the resources in &lt;a href="https://astroneer.space/"&gt;Astroneer&lt;/a&gt;. Click the WEBP
 thumbnail below to get the full glorious SVG, then you can '&lt;em&gt;find in page&lt;/em&gt;' on it.
 (&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>map</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
-&lt;img alt="Spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
-&lt;p&gt;Major spoilers ahead. It's seven years old at this point.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>did-not-finish</category><category>geek</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
 &lt;img alt="Soma - protagonist" src="https://www.tartley.com/files/2022/soma-protagonist.webp"&gt;
 &lt;/center&gt;&lt;br&gt;
@@ -16,6 +14,7 @@ yielding a second conscious entity, which thinks it is you. So there are deep
 science-fiction issues in play here, about whether we think such a scheme could
 ever possibly work, and about the practical, personal, and societal
 ramifications of it.&lt;/p&gt;
+&lt;p&gt;Major &lt;span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"&gt;spoilers&lt;/span&gt; ahead. It's seven years old at this point.&lt;/p&gt;
 &lt;p&gt;I loved the setup. A humdrum morning begins in your present-day Toronto
 apartment. A note on the fridge reminds you that today is the day of your
 medical appointment, a brain scan. Reaching the doctor's office by train, you
@@ -151,7 +150,8 @@ beasts, and then fly exuberantly above the sunlit clouds, forever curving back
 to seek each other's life-giving sustenance.&lt;/p&gt;
 &lt;p&gt;I don't know who the two internet randos were, with whom I shared the first and
 second halves of my journey. But in those minutes together, we lived a
-lifetime's worth.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/journey/</guid><pubDate>Mon, 09 May 2022 11:22:20 GMT</pubDate></item><item><title>Subnautica: Below Zero</title><link>https://www.tartley.com/posts/subnautica-below-zero/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;on Windows, published 2021&lt;/em&gt;. &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+lifetime's worth.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/journey/</guid><pubDate>Mon, 09 May 2022 11:22:20 GMT</pubDate></item><item><title>Subnautica: Below Zero</title><link>https://www.tartley.com/posts/subnautica-below-zero/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;on Windows, published 2021&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"&gt;&lt;b&gt;spoilers&lt;/b&gt;&lt;/span&gt;, obviously. This is a map of an area in the game, revealing many of its secrets.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://subnautica.fandom.com/wiki/Subnautica_Wiki"&gt;Subnautica&lt;/a&gt;,
 and its icy sequel,
 "&lt;a href="https://subnautica.fandom.com/wiki/Subnautica:_Below_Zero"&gt;Below Zero&lt;/a&gt;",
@@ -176,7 +176,7 @@ to tackle the tricky Actic Spires area, too. &lt;em&gt;&amp;lt;Rubs hands&amp;gt
 &lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Subnautica screenshot" src="https://www.tartley.com/files/2021/subnatica-below-zero-map-glacial-basin.png"&gt;
 &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>geek</category><category>map</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/subnautica-below-zero/</guid><pubDate>Mon, 22 Nov 2021 22:24:22 GMT</pubDate></item><item><title>Manifold Garden</title><link>https://www.tartley.com/posts/manifold-garden/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>completed</category><category>geek</category><category>map</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/subnautica-below-zero/</guid><pubDate>Mon, 22 Nov 2021 22:24:22 GMT</pubDate></item><item><title>Manifold Garden</title><link>https://www.tartley.com/posts/manifold-garden/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Manifold Garden screenshot" src="https://www.tartley.com/files/2021/manifold-garden.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Windows, 2019&lt;/em&gt;&lt;/p&gt;
@@ -325,13 +325,15 @@ medium are capable of.&lt;/p&gt;
 &lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>ps2</category><category>videogame</category><guid>https://www.tartley.com/posts/shadow-of-the-colossus/</guid><pubDate>Fri, 16 Jan 2009 01:33:59 GMT</pubDate></item><item><title>Façade</title><link>https://www.tartley.com/posts/facade/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="" src="https://www.tartley.com/files/2007/06/facade-game.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by Procedural Arts (PC, 2006)&lt;/em&gt; &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Procedural Arts (PC, 2006)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.interactivestory.net/"&gt;http://www.interactivestory.net/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Façade&lt;/em&gt; is an art and research project which aims to extend the remit
 of gaming, making a bold raid deep into rarely-explored territory. It
 opens with a voicemail, inviting you to visit old friends, and then
 presents the player with a first-person view from outside your caller's
-apartment door. Stepping up briskly, I was just getting to grips with
+apartment door.&lt;/p&gt;
+&lt;p&gt;&lt;span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"&gt;&lt;b&gt;spoilers&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Stepping up briskly, I was just getting to grips with
 the mouse cursor's context-sensitive prompt to knock on the door, when I
 began to discern the muffled but unmistakable sounds of an argument
 going on inside. The familiar sinking feeling invoked as you screw up

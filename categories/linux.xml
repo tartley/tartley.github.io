@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 18:34:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
-&lt;img alt="Spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
-&lt;p&gt;Major spoilers ahead. It's seven years old at this point.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 04:13:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
 &lt;img alt="Soma - protagonist" src="https://www.tartley.com/files/2022/soma-protagonist.webp"&gt;
 &lt;/center&gt;&lt;br&gt;
@@ -12,6 +10,7 @@ yielding a second conscious entity, which thinks it is you. So there are deep
 science-fiction issues in play here, about whether we think such a scheme could
 ever possibly work, and about the practical, personal, and societal
 ramifications of it.&lt;/p&gt;
+&lt;p&gt;Major &lt;span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"&gt;spoilers&lt;/span&gt; ahead. It's seven years old at this point.&lt;/p&gt;
 &lt;p&gt;I loved the setup. A humdrum morning begins in your present-day Toronto
 apartment. A note on the fridge reminds you that today is the day of your
 medical appointment, a brain scan. Reaching the doctor's office by train, you
@@ -798,7 +797,7 @@ text labels, then the '-layers' option re-applies optimizations. Without this
 dance, the text is all twitchy and messy.&lt;/p&gt;
 &lt;p&gt;Voilà. Imagine sending it to a co-worker who is taking on a difficult task,
 like making changes to that thorny section of the codebase that nobody likes:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>geek</category><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>video</category><category>youtube</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>TIL: Download audio from YouTube</title><link>https://www.tartley.com/posts/download-audio-from-youtube/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;For the sort of weirdos who still host their own music files, but aren't
+&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>geek</category><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>youtube</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>TIL: Download audio from YouTube</title><link>https://www.tartley.com/posts/download-audio-from-youtube/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;For the sort of weirdos who still host their own music files, but aren't
 preciously audiophile about it. Aaaaand also I'm wording this with the
 assumption you're a Linux, command-line and Python nerd.&lt;/p&gt;
 &lt;p&gt;Sometimes it's a video which is explicitly Creative Commons. Other times, it's
@@ -873,16 +872,7 @@ to discover that converting it into an mp3 requires just:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where &lt;code&gt;-vn&lt;/code&gt; disables video in the output.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h4&gt;Changelog&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;2023/02/14: Wide-ranging rewrite of prose to enliven, enlink, and clarify.&lt;/li&gt;
-&lt;li&gt;2023/02/14: Swapped use of &lt;a href="https://github.com/mitsuhiko/pipsi/"&gt;&lt;em&gt;pipsi&lt;/em&gt;&lt;/a&gt;
-  tool, last released 2015, for &lt;em&gt;pipx&lt;/em&gt;, which is more useful, well-maintained
-  and popular.&lt;/li&gt;
-&lt;li&gt;2022: Added "Goal fulfillment" section, initially called "The Best Way", and
-  deprecated the previous method under "My previous inferior way".&lt;/li&gt;
-&lt;/ul&gt;</description><category>command-line</category><category>geek</category><category>linux</category><category>music</category><category>til</category><category>youtube</category><guid>https://www.tartley.com/posts/download-audio-from-youtube/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;</description><category>geek</category><category>linux</category><category>music</category><category>terminal</category><category>til</category><category>youtube</category><guid>https://www.tartley.com/posts/download-audio-from-youtube/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would be interested in seeing some example lxd config files,
 bash command history when creating, etc?&lt;/p&gt;

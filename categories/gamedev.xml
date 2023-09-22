@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about gamedev)</title><link>https://www.tartley.com/</link><description>Creating videogames.</description><atom:link href="https://www.tartley.com/categories/gamedev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 18:34:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about gamedev)</title><link>https://www.tartley.com/</link><description>Creating videogames.</description><atom:link href="https://www.tartley.com/categories/gamedev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 03:37:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
 geometry to drive OpenGL from Python.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python"&gt;&lt;em&gt;&amp;lt;&amp;lt; Back to part 1&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Last time we got as far as creating some instances of our super-simple
@@ -235,7 +235,7 @@ the best performance out of PyOpenGL. I've been back and updated the
 performance stats in this post, and hope to make another post about this
 at some point when I understand what I was doing wrong.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The demonstrated&lt;/em&gt; &lt;em&gt;code&lt;/em&gt; &lt;em&gt;is available at
-&lt;a href="https://github.com/tartley/gloopy"&gt;https://github.com/tartley/gloopy&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>presentations</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</guid><pubDate>Tue, 03 Aug 2010 15:04:43 GMT</pubDate></item><item><title>Flying High: Hobbyist OpenGL from Python</title><link>https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;This is a transcript-from-memory (what I wish I'd said) of the talk I
+&lt;a href="https://github.com/tartley/gloopy"&gt;https://github.com/tartley/gloopy&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>presentations</category><category>pyglet</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</guid><pubDate>Tue, 03 Aug 2010 15:04:43 GMT</pubDate></item><item><title>Flying High: Hobbyist OpenGL from Python</title><link>https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;This is a transcript-from-memory (what I wish I'd said) of the talk I
 just gave at &lt;a href="http://www.europython.eu/"&gt;EuroPython&lt;/a&gt; 2010, for which I
 owe a debt of gratitude to Richard Jones for his last-minute moral
 support while wrestling with projectors and refresh rates; and to the
@@ -680,7 +680,7 @@ more complex shape. This will allow us to use algorithmic means to
 produce more fun geometry, and will also help us draw more complex
 shapes, composed of many simpler shapes, without requiring several
 separate OpenGL function calls for each of the simple shapes.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.tartley.com/posts/flying-high-opengl-from-python-part-2"&gt;On to Part 2 &amp;gt;&amp;gt;&lt;/a&gt;&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>presentations</category><category>python</category><guid>https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python/</guid><pubDate>Sat, 31 Jul 2010 19:58:30 GMT</pubDate></item><item><title>Loving EuroPython Tutorials</title><link>https://www.tartley.com/posts/loving-europython-tutorials/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've been loving the two days of tutorials preceding the EuroPython
+&lt;p&gt;&lt;a href="https://www.tartley.com/posts/flying-high-opengl-from-python-part-2"&gt;On to Part 2 &amp;gt;&amp;gt;&lt;/a&gt;&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>presentations</category><category>pyglet</category><category>python</category><guid>https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python/</guid><pubDate>Sat, 31 Jul 2010 19:58:30 GMT</pubDate></item><item><title>Loving EuroPython Tutorials</title><link>https://www.tartley.com/posts/loving-europython-tutorials/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've been loving the two days of tutorials preceding the EuroPython
 conference. This morning I attended &lt;a href="http://www.mechanicalcat.net/richard/log"&gt;Richard
 Jones&lt;/a&gt;' splendid &lt;em&gt;Introduction
 to Game Programming&lt;/em&gt;. It was an absolute pleasure to be walked through
@@ -700,7 +700,7 @@ flickery animated engine thrust, that made me gurgle with delight.&lt;/p&gt;
 engine thrust, and created the asteroids themselves entirely from
 scratch in Gimp. They are just rotatable bitmaps, albeit designed in
 homage of vector graphics of yore, complete with simulated CRT glow.
-Brilliant!&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/loving-europython-tutorials/</guid><pubDate>Mon, 19 Jul 2010 05:08:53 GMT</pubDate></item><item><title>Thief Level : Week 2</title><link>https://www.tartley.com/posts/thief-level-week-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;This week I spent a little while considering the backstory of the level,
+Brilliant!&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>pyglet</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/loving-europython-tutorials/</guid><pubDate>Mon, 19 Jul 2010 05:08:53 GMT</pubDate></item><item><title>Thief Level : Week 2</title><link>https://www.tartley.com/posts/thief-level-week-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;This week I spent a little while considering the backstory of the level,
 and now have at least a rudimentary scenario: Garrett the thief is
 taking an opportunistic foray into the local Shope of Curiosities,
 having heard that their prize exhibit, the McGuffin of Antioc, has been
@@ -775,7 +775,7 @@ rooms; staircase.) So at the current rate, it's roughly 28 weeks of
 work, which is double or triple what I'd planned on. Hopefully my rate
 of completing items will increase substantially as I get into the
 groove. I'll have to monitor this going forward, and slash scope if I
-can't drastically accelerate.&lt;/p&gt;</description><category>gamedev</category><category>geek</category><guid>https://www.tartley.com/posts/thief-level-week-2/</guid><pubDate>Mon, 01 Feb 2010 19:20:31 GMT</pubDate></item><item><title>Creating a Level for Thief 2</title><link>https://www.tartley.com/posts/creating-a-level-for-thief-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;After &lt;a href="https://www.tartley.com/sinister-redux"&gt;Sinister Ducks&lt;/a&gt;, my &lt;a href="http://www.gamedevlessons.com/"&gt;videogame
+can't drastically accelerate.&lt;/p&gt;</description><category>gamedev</category><category>geek</category><guid>https://www.tartley.com/posts/thief-level-week-2/</guid><pubDate>Mon, 01 Feb 2010 19:20:31 GMT</pubDate></item><item><title>Creating a Level for Thief 2</title><link>https://www.tartley.com/posts/creating-a-level-for-thief-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;After &lt;a href="https://www.tartley.com/posts/sinister-redux"&gt;Sinister Ducks&lt;/a&gt;, my &lt;a href="http://www.gamedevlessons.com/"&gt;videogame
 creation mentor&lt;/a&gt; suggested that I create
 a mod for an existing game, in order to distance myself a little from
 the programming aspects of creating a game, and instead spend a little
@@ -889,7 +889,8 @@ it really was a pleasure and an education talking to every person
 present. However, I couldn't help but notice that there seems to be a
 pervasive macho streak in the game industry, sustained by the belief
 that game development is considerably harder and more creative than any
-other form of software.&lt;/p&gt;
+other form of software. Or, as I have overheard game developers saying,
+first hand, &lt;em&gt;than any other human endeavor&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Not rocket science&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Now, there's no doubt that different niches of the software industry
 vary in complexity, just as the commitment and experience of
@@ -954,4 +955,4 @@ License&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: I've only run it on Linux, but reportedly it also works on
 Windows. Thanks Xtian!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; It also reportedly works under PyPy, provided you install
-the 'functools' module. Thanks Maciej!&lt;/p&gt;</description><category>chipmunk</category><category>gamedev</category><category>geek</category><category>graphics</category><category>physics</category><category>pyglet</category><category>pymunk</category><category>python</category><category>rigid-body</category><category>software</category><guid>https://www.tartley.com/posts/sole-scion-project-v01-a-2d-rigid-body-python-game/</guid><pubDate>Wed, 18 Jun 2008 11:37:17 GMT</pubDate></item></channel></rss>
+the 'functools' module. Thanks Maciej!&lt;/p&gt;</description><category>chipmunk</category><category>did-not-finish</category><category>gamedev</category><category>geek</category><category>graphics</category><category>pyglet</category><category>pymunk</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/sole-scion-project-v01-a-2d-rigid-body-python-game/</guid><pubDate>Wed, 18 Jun 2008 11:37:17 GMT</pubDate></item></channel></rss>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!">
+<meta name="description" content="A website devoted to oneself has been described — by my own Father, no less — as the greatest act of hubris. Welcome aboard!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Made out of meat (old posts, page 19) | Made out of meat</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -77,7 +77,189 @@
 
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/a-guide-to-git-using-spatial-analogies/" class="u-url">A Guide to GIT using spatial analogies</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/your-python-our-servers-what-could-possibly-go-wrong/" class="u-url">Your Python, Our Servers : What could possibly go wrong?</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/your-python-our-servers-what-could-possibly-go-wrong/" rel="bookmark">
+            <time class="published dt-published" datetime="2011-04-01T17:33:46-05:00" itemprop="datePublished" title="2011-04-01 17:33">2011-04-01 17:33</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>We've been brainstorming for products to build. What do you think of
+this one?</p>
+<p><strong>Python Interactive Console in the Browser</strong></p>
+<p>One idea is a CPython interactive console in the browser. Client is
+Javascript, which sends the user's Python to execute in a sandbox on our
+EC2 instances. Dirigible already has the infrastructure to support
+running our user's arbitrary Python in a sandbox across our grid - so
+we'd only need to strip the spreadsheet-UI off to expose this
+functionality to end-users.</p>
+<p><a href="files/2011/04/python-in-browser.png"><img alt="Python in the browser" src="files/2011/04/python-in-browser.png" title="Python in the browser"></a></p>
+<p>Your console state is persistant - so you could start some
+investigation, or a long-running statement, then log off, and then
+reconnect to it later from another machine.</p>
+<p>Since the Python runs on our servers, all the client needs is a working
+browser with Javascript. You could run code from any device - even funky
+things like iPads which don't traditionally make installing and running
+Python very easy. Your only hinderance would be the keyboard. Since our
+servers could be beefy, it would run substantially faster. We could help
+to support running in parallel across several servers.</p>
+<p>We could provide multiple versions of Python - and keep them fully
+loaded with packages from PyPI - so you could use any combo without
+having to install anything locally.</p>
+<p>There are already <a href="http://www.trypython.org" title="trypython">some</a>
+<a href="http://runroot.com/" title="runroot">examples</a>
+<a href="http://shell.appspot.com" title="AppEngine shell">of</a>
+<a href="http://www.datamech.com/devan/trypython/trypython.py" title="datamech">in-browser</a>
+<a href="http://www.skulpt.org/" title="skulpt">Python</a> consoles like this, but none
+of them quite do what we'd hope to do.</p>
+<p>We're also thinking of providing really simple tools so you could work
+on scripts or programs locally, and then run them in the cloud with a
+single command / button.</p>
+<p>Generally we're thinking of running your stuff on our own EC2 servers.
+Other applications might involve executing stuff on your own servers,
+instead of ours, but thus far we haven't come up with applications of
+this that offer much over fabric or a combination of an SSH session and
+Unix program 'screen'.</p>
+<p>Would you use this? What for? Do you think it's totally dumb? I'd love
+to hear about it.</p>
+<p><em>Most</em> interestingly, would you pay for it? We're thinking free for
+trivial uses, a few dollars for some advanced features (access to
+networking, persistance) and scale up to support teraflop computing.</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/launch-gitk-displaying-all-extant-branches/" class="u-url">TIL: Launch Gitk displaying all branches</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/launch-gitk-displaying-all-extant-branches/" rel="bookmark">
+            <time class="published dt-published" datetime="2010-12-31T12:25:31-06:00" itemprop="datePublished" title="2010-12-31 12:25">2010-12-31 12:25</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p><strong>Update:</strong> All of the below is made totally redundant by simply using
+<code>gitk --all</code>. Thanks Russel!</p>
+<hr>
+<p>When I launch Gitk, it just displays the current branch. To display
+other branches, you must name them on the command line. To display all
+existing branches, you need to find out all the branch names:</p>
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>git<span class="w"> </span>branch
+<span class="w">  </span>create-sql-dev
+<span class="w">  </span>formula-rewrite
+*<span class="w"> </span>master
+</pre></div>
+
+<p>Then laboriously type them in to the gitk command line:</p>
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>gitk<span class="w"> </span>create-sql-dev<span class="w"> </span>formula-rewrite<span class="w"> </span>master
+</pre></div>
+
+<p>Alternatively, save this Bash snippet in a script on your PATH. I call
+mine gitka, for 'all branches':</p>
+<div class="code"><pre class="code literal-block"><span class="ch">#!/usr/bin/bash</span>
+<span class="c1"># run gitk, displaying all existing branches</span>
+<span class="k">for</span><span class="w"> </span>b<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"`git branch`"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"</span><span class="nv">$b</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">done</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-d<span class="w"> </span><span class="s2">"*"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>gitk
+</pre></div>
+
+<p><img alt="Gitk displaying all branches, not just the current ('master' in bold)" src="files/2010/12/gitk-all-branches.png" title="gitk-all-branches"></p>
+<p>This works on Windows too, if you save it as 'gitka.sh', and have Cygwin
+installed and associate the .sh filename extension with the Cygwin Bash
+executable. You can then run it as 'gitka' from a Windows command prompt
+thingy. If you then use 'ln -s gitka.sh gitka', then you can also run it
+as just 'gitka' from a Cygwin bash prompt too - without this you would
+have had to type out the full 'gitka.sh'.</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/go-to-definition-in-vim-for-python-using-ctags-on-windows/" class="u-url">TIL: 'Go to Definition' in Vim for Python using Ctags, Done Right</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/go-to-definition-in-vim-for-python-using-ctags-on-windows/" rel="bookmark">
+            <time class="published dt-published" datetime="2010-12-16T20:39:01-06:00" itemprop="datePublished" title="2010-12-16 20:39">2010-12-16 20:39</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>How to set up and configure Vim to use tags for Python development so
+that it doesn't suck.</p>
+<h3>Install Ctags</h3>
+<p>Get the latest version of <a href="http://ctags.sourceforge.net/">ctags</a>, put it
+on your PATH. Recent releases are much improved for Python.</p>
+<h3>Creating or updating tags files</h3>
+<p>You'll probably want one tags file at the root of your project, which
+will need to be created or updated whenever you make significant
+changes. Either get used to manually running the following command a
+lot:</p>
+<div class="code"><pre class="code literal-block">ctags<span class="w"> </span>-R<span class="w"> </span>.
+</pre></div>
+
+<p>or bind it to a key in your \~/.vimrc:</p>
+<div class="code"><pre class="code literal-block">map  :<span class="p">!</span><span class="k">start</span> /min ctags <span class="p">-</span>R .
+</pre></div>
+
+<p>I like to set Vim's current working directory equal to the root of
+whatever project I'm working in, so now I can press f12 to update the
+tags file for the project. The 'start /min' part is a Windows-specific
+way to run the command in the background, so Vim isn't locked up waiting
+for it to finish.</p>
+<h3>Test it out</h3>
+<p>Now, in Vim, ctrl-] will jump to the definition of the symbol under
+your text cursor. Hooray, etc. If there is more than one definition of
+that symbol, it presents a menu for you to choose from.</p>
+<h3>Turn off useless tags</h3>
+<p>By default, ctags generates tags for Python functions, classes, class
+members, variables and imports. The last two are useless to me, and they
+actually make ctrl-] more inconvenient, because they increase the
+likelyhood of finding duplicate definitions of a tag, causing the menu
+to inconveniently pop up, rather than just jumping to the tag you want.</p>
+<p>To fix this, create a \~/.ctags file:</p>
+<div class="code"><pre class="code literal-block">--python-kinds<span class="o">=</span>-iv
+--exclude<span class="o">=</span>build
+--exclude<span class="o">=</span>dist
+</pre></div>
+
+<p>The first line turns off tags generation for variables and imports. The
+second and third lines turn off generation of tags in the named dirs,
+since you almost certainly want to ignore source code in those
+directories.</p>
+<h3>Case insensitive tag matching</h3>
+<p>If your .vimrc requests case-insensitive searching by setting
+<em>ignorecase</em> (aka <em>ic</em>), then the above tag matching will also be case
+insensitive. This is irksome, because searching for the definition of
+property <em>.matrix</em> will present you with a menu asking you to choose
+between property <em>.matrix</em> and class <em>Matrix</em>, rather than just jumping
+to the property.</p>
+<p>To fix this, add this to your .vimrc:</p>
+<div class="code"><pre class="code literal-block"><span class="c">" go to defn of tag under the cursor</span>
+<span class="k">fun</span><span class="p">!</span> MatchCaseTag<span class="p">()</span>
+    <span class="k">let</span> <span class="nb">ic</span> <span class="p">=</span> &amp;<span class="nb">ic</span>
+    <span class="k">set</span> <span class="nb">noic</span>
+    <span class="k">try</span>
+        exe <span class="s1">'tjump '</span> . expand<span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+    <span class="k">finally</span>
+       <span class="k">let</span> &amp;<span class="nb">ic</span> <span class="p">=</span> <span class="nb">ic</span>
+    <span class="k">endtry</span>
+<span class="k">endfun</span>
+<span class="nb">nnoremap</span>   :<span class="k">call</span> MatchCaseTag<span class="p">()</span>
+</pre></div>
+
+<p><strong>Update:</strong>This Vim script was suggested in a comment by James Vega, in
+order to reliably restore the state of 'ignorecase' after doing the tag
+jump. Many thanks!</p>
+<p>This maps your ctrl-] key to turn off case-insensitivity while it does
+the jump to tag, then turn it back on again. Now pressing ctrl-] will
+jump directly to your property, only presenting menus on the occasion
+when the tag you search for is defined in more than one place using
+precisely the same name.</p>
+<p>Much better.</p>
+<p><strong>Update:</strong> Also see this post about adding stdlib and venv contents to
+your tags:
+<a href="https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/">https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/</a></p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/a-guide-to-git-using-spatial-analogies/" class="u-url">A Guide to GIT using spatial analogies</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -971,364 +1153,6 @@ earliest convenience.</p>
   To:        </p>
 <hr>
 <p>My name is Julio YEPES, I am a hiring manager with ...</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/more-colored-terminal-text-on-windows-ansicon/" class="u-url">TIL: More Colored Terminal text on Windows: AnsiCon</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/more-colored-terminal-text-on-windows-ansicon/" rel="bookmark">
-            <time class="published dt-published" datetime="2010-07-08T14:07:09-05:00" itemprop="datePublished" title="2010-07-08 14:07">2010-07-08 14:07</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>A reminder for myself:</p>
-<p>ANSI escape characters don't work properly in Windows terminals:</p>
-<p><img alt="Before: Raw ANSI codes. Not nice." src="files/2010/07/ansicon00-before.png"></p>
-<p>To make them work properly, use
-<a href="http://adoxa.110mb.com/ansicon/index.html">AnsiCon</a>. Unzip it somewhere
-permanent (eg. <code>%ProgramFiles%\ansicon</code>) and install it with:</p>
-<div class="code"><pre class="code literal-block">ansicon.exe -i
-</pre></div>
-
-<p>start a new terminal, and lo:</p>
-<p><img alt="After: Pretty." src="files/2010/07/ansicon01-working.png"></p>
-<p>Fine tune the appearance of the programs generating the color, for
-example customise 'hg diff' by editing \~/.hgrc:</p>
-<div class="code"><pre class="code literal-block"><span class="p p-Indicator">[</span><span class="nv">extensions</span><span class="p p-Indicator">]</span>
-<span class="l l-Scalar l-Scalar-Plain">color =</span>
-
-<span class="l l-Scalar l-Scalar-Plain">[color]</span>
-<span class="l l-Scalar l-Scalar-Plain">status.modified = yellow bold</span>
-<span class="l l-Scalar l-Scalar-Plain">status.unknown = white</span>
-<span class="l l-Scalar l-Scalar-Plain">status.deleted = red_background white bold</span>
-
-<span class="l l-Scalar l-Scalar-Plain">diff.deleted = red bold</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.inserted = green bold</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.file_a = white</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.file_b = white</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.diffline = white_background black</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.extended = yellow bold</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.hunk = underline black</span>
-<span class="l l-Scalar l-Scalar-Plain">diff.changed = yellow bold</span>
-</pre></div>
-
-<p><img alt="Fine-tuned" src="files/2010/07/ansicon02-tuned.png"></p>
-<p>ANSI is correctly stripped out if the output of a program is not a
-terminal, so the colored output won't interfere with saving to files nor
-machine-parsing of the text:</p>
-<p><img alt="Filtered" src="files/2010/07/ansicon03-filtered.png"></p>
-<p>Finally, insert some <a href="http://pueblo.sourceforge.net/doc/manual/ansi_color_codes.html">ANSI
-codes</a>
-into your <a href="http://ss64.com/nt/prompt.html">prompt</a>, by setting
-environment variable PROMPT:</p>
-<div class="code"><pre class="code literal-block">set PROMPT=$E[0;36m$P$_$E[36;1m$G$E[0m$S
-</pre></div>
-
-<p><img alt="Colored Prompt" src="files/2010/07/ansicon04-prompt.png"></p>
-<p><a href="http://tartley.com/?p=1062">Multiple</a>
-<a href="http://tartley.com/?p=863">posts</a> on colors and terminal text is
-perhaps a bit obsessive of me. I think I'm all done now.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/more-opengl-from-python/" class="u-url">More OpenGL from Python</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/more-opengl-from-python/" rel="bookmark">
-            <time class="published dt-published" datetime="2010-06-02T02:04:37-05:00" itemprop="datePublished" title="2010-06-02 02:04">2010-06-02 02:04</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>My talk, <em>Flying High : Hobbyist OpenGL from Python</em>, was accepted for
-EuroPython 2010, \o/. I don't want to reveal the best bits of my talks,
-but to whet people's appetite, this is some of what my initial
-preparation involved.</p>
-<p>One thing I'm keen on talking about is algorithmic generation of
-interesting geometry. This is an area in which the flexibility and
-expressiveness of Python can really shine.</p>
-<p>I started with a quick Shape class, to model the vertices and faces of
-an arbitrary polyhedra (3D shapes with flat faces and straight edges):</p>
-<div class="code"><pre class="code literal-block"><span class="n">Position</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">'Position'</span><span class="p">,</span> <span class="s1">'x y z'</span><span class="p">)</span>
-
-<span class="k">class</span> <span class="nc">Shape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="p">[</span><span class="n">Position</span><span class="p">(</span><span class="o">*</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vertices</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">faces</span> <span class="o">=</span> <span class="n">faces</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
-</pre></div>
-
-<p>Each face of the shape is represented as a list of integer indices into
-the vertex list. The 'faces' attribute is a list of all faces. The color
-attributes is just a 4 element tuple: (r, g, b, alpha). This class can
-now be instantiated by factory functions to form particular 3D shapes,
-such as red cubes or blue tetrahedrons:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
-    <span class="n">verts</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="p">(</span><span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
-        <span class="p">(</span><span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
-        <span class="p">(</span><span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
-        <span class="p">(</span><span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
-        <span class="p">(</span><span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
-        <span class="p">(</span><span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
-        <span class="p">(</span><span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
-        <span class="p">(</span><span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
-    <span class="p">]</span>
-    <span class="n">faces</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="c1"># left</span>
-        <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="c1"># right</span>
-        <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="c1"># front</span>
-        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="c1"># back</span>
-        <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="c1"># top</span>
-        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="c1"># bottom</span>
-    <span class="p">]</span>
-    <span class="k">return</span> <span class="n">Shape</span><span class="p">(</span><span class="n">verts</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
-</pre></div>
-
-<p>A class called 'Glyph' will convert a Shape instance into the set of
-ctypes arrays that need to be passed to OpenGL:</p>
-<p>The real Glyph class also creates arrays for color, and array indexes as
-well as vertices.</p>
-<p>Finally, we have a renderer, whose 'draw' method is invoked by our
-window draw event. This iterates through all items in our world that
-have a Glyph attribute, drawing each of them:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
-        <span class="n">gl</span><span class="o">.</span><span class="n">glPushMatrix</span><span class="p">()</span>
-
-        <span class="n">gl</span><span class="o">.</span><span class="n">glTranslatef</span><span class="p">(</span><span class="o">*</span><span class="n">position</span><span class="p">)</span>
-
-        <span class="c1"># TODO: orientation</span>
-
-        <span class="n">gl</span><span class="o">.</span><span class="n">glVertexPointer</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">gl</span><span class="o">.</span><span class="n">GL_FLOAT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">glyph</span><span class="o">.</span><span class="n">glVerts</span><span class="p">)</span>
-        <span class="n">gl</span><span class="o">.</span><span class="n">glColorPointer</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">gl</span><span class="o">.</span><span class="n">GL_FLOAT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">glyph</span><span class="o">.</span><span class="n">glColors</span><span class="p">)</span>
-        <span class="n">gl</span><span class="o">.</span><span class="n">glDrawElements</span><span class="p">(</span>
-            <span class="n">gl</span><span class="o">.</span><span class="n">GL_TRIANGLES</span><span class="p">,</span>      <span class="c1"># draw disjoint triangles</span>
-            <span class="nb">len</span><span class="p">(</span><span class="n">glyph</span><span class="o">.</span><span class="n">glIndices</span><span class="p">),</span> <span class="c1"># number of vertices to draw</span>
-            <span class="n">gl</span><span class="o">.</span><span class="n">GL_UNSIGNED_SHORT</span><span class="p">,</span> <span class="c1"># type of indices</span>
-            <span class="n">glyph</span><span class="o">.</span><span class="n">glIndices</span><span class="p">)</span>      <span class="c1"># index array</span>
-
-        <span class="n">gl</span><span class="o">.</span><span class="n">glPopMatrix</span><span class="p">()</span>
-</pre></div>
-
-<p>So we add a couple of interpenetrated Cube() shaped items into our
-world:</p>
-<div class="code"><pre class="code literal-block"><span class="n">white</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">red</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="n">world</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">GameItem</span><span class="p">(</span>
-    <span class="n">position</span><span class="o">=</span><span class="n">Position</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-    <span class="n">shape</span><span class="o">=</span><span class="n">Cube</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">white</span><span class="p">),</span>
-    <span class="n">glyph</span><span class="o">=</span><span class="n">Glyph</span><span class="p">(),</span>
-<span class="p">))</span>
-<span class="n">world</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">GameItem</span><span class="p">(</span>
-    <span class="n">position</span><span class="o">=</span><span class="n">Position</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-    <span class="n">shape</span><span class="o">=</span><span class="n">Cube</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">red</span><span class="p">),</span>
-    <span class="n">glyph</span><span class="o">=</span><span class="n">Glyph</span><span class="p">(),</span>
-<span class="p">))</span>
-</pre></div>
-
-<p>and running the program renders them:</p>
-<p><img alt="" src="files/2010/06/two-cubes.png"></p>
-<p>The flat shading is because we have no lighting yet. That gets fixed
-soon.</p>
-<p>Each cube is being drawn by a separate call to glDrawElements. This is
-fine for small numbers of items, but for performance we'll want to
-compose our geometry into single arrays that can be rendered by a single
-call to glDrawElements. To do this, we create a CompositeShape object,
-that contains several Shapes, and exposes 'vertices' and 'faces'
-attributes just like a regular Shape, which aggregate the geometry of
-all their subordinate Shapes.</p>
-<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">CompositeShape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
-
-    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">offset</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">offset</span> <span class="o">=</span> <span class="n">Position</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">child</span><span class="p">,</span> <span class="n">offset</span><span class="p">))</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">vertices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">vert</span> <span class="o">+</span> <span class="n">offset</span>
-                <span class="k">for</span> <span class="n">shape</span><span class="p">,</span> <span class="n">offset</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span>
-                <span class="k">for</span> <span class="n">vert</span> <span class="ow">in</span> <span class="n">shape</span><span class="o">.</span><span class="n">vertices</span><span class="p">)</span>
-</pre></div>
-
-<p>(The real CompositeShape class also defines 'faces', which is elided
-here.) Instances of CompositeShape can be passed directly to our
-unmodified Glyph class, allowing us to construct complex geometries out
-of many individual parts, but now they are all rendered in a single
-OpenGL API call.</p>
-<p>A new factory function creates a fancy CompositeShape called a
-CubeCluster, consisting of many randomly-positioned small cubes, each
-one colored by its position in (r, g, b) space. These are surrounded by
-a sprinkling of black cubes, a large translucent cube-shaped skin:</p>
-<p><img alt="" src="files/2010/06/cube-cluster-01-overview.png"></p>
-<p>and buried deep at the centre of the CubeCluster is some sort of
-mysterious structure:</p>
-<p><img alt="" src="files/2010/06/cube-cluster-01-center.png"></p>
-<p>So using this code, I get 60fps on modest hardware (my 2005 end-of-line
-Thinkpad T60, an ATI Radeon X1400) while rendering either:</p>
-<ul>
-<li>800 independently moving and rotating items, each a simple cube (8
-    vertices, 8 colors, no normals, 36 indices = 12 triangles) for a
-    total of 9600 triangles.</li>
-</ul>
-<p>or</p>
-<ul>
-<li>1 composite item comprising 9,000 cubes, (108,000 triangles)</li>
-</ul>
-<p>or any linear interpolation between these two extremes. (<strong>Update:</strong> see
-improvement on this noted in the final paragraph.)</p>
-<p>I've done nothing to try and tune the performance, in particular I'm
-updating and rendering every single item every frame, and I'm not using
-vertex buffers, so I suspect my geometry is being sent over the bus to
-the GPU every frame. So presumably this can be still be much improved.</p>
-<p>Next I add some basic lighting, so that our cubes don't look so flat
-shaded. Lighting needs to know normals, the vector at right angles to a
-face, so that it can figure out how how strongly each face is
-illuminated. So our Glyph needs to start generating an array of normals
-for each vertex.</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">get_normal</span><span class="p">(</span><span class="n">face</span><span class="p">,</span> <span class="n">vertices</span><span class="p">):</span>
-    <span class="n">v0</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
-    <span class="n">v1</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
-    <span class="n">v2</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">v0</span> <span class="o">-</span> <span class="n">v1</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">v2</span> <span class="o">-</span> <span class="n">v1</span>
-    <span class="k">return</span> <span class="n">b</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-
-<span class="k">class</span> <span class="nc">Glyph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-
-    <span class="k">def</span> <span class="nf">get_glnormals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="p">):</span>
-        <span class="n">face_normals</span> <span class="o">=</span> <span class="p">(</span><span class="n">get_normal</span><span class="p">(</span><span class="n">face</span><span class="p">,</span> <span class="n">shape</span><span class="o">.</span><span class="n">vertices</span><span class="p">)</span>
-                        <span class="k">for</span> <span class="n">face</span> <span class="ow">in</span> <span class="n">shape</span><span class="o">.</span><span class="n">faces</span><span class="p">)</span>
-        <span class="n">normals</span> <span class="o">=</span> <span class="p">(</span><span class="n">normal</span>
-                   <span class="k">for</span> <span class="n">face</span><span class="p">,</span> <span class="n">normal</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">shape</span><span class="o">.</span><span class="n">faces</span><span class="p">,</span> <span class="n">face_normals</span><span class="p">)</span>
-                   <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">face</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="n">gl_array</span><span class="p">(</span><span class="n">gl</span><span class="o">.</span><span class="n">GLfloat</span><span class="p">,</span> <span class="n">normals</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_glvertices</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
-<p>This generation of normals also affects the generation of vertex
-positions, colors and indices, since vertices can no longer be shared
-between different faces of a cube, because a single vertex position now
-requires a different normal for each face.</p>
-<p><img alt="" src="files/2010/06/basic-lighting.jpg"></p>
-<p>Generating normals made me think more about when I should or should not
-be using indexed vertex arrays, as opposed to simple contiguous arrays
-of vertices. My current thoughts on the matter are summarised on <a href="http://stackoverflow.com/questions/2954349/when-should-i-use-indexed-arrays-of-opengl-vertices">this
-stackoverflow
-question</a>.
-If you know a bunch about OpenGL, I'd appreciate you heading over there
-and setting me straight.</p>
-<p>Adding normals increased the vertex count required to draw the same
-geometry quite considerably, from 8 vertices for a single cube, up to
-24. The colors array increases in size correspondingly. Surprisingly,
-this didn't decrease framerate too much (we went from drawing 9,000
-cubes at 60fps down to 8,000.) However, then I converted colors from
-being floats (eg. white=(1.0, 1.0, 1.0, 1.0), four components for rgb
-and alpha)) to using unsigned bytes (e.g. white=(255, 255, 255, 255).)
-This boosted performance noticeably, so now we're up to drawing 12,000
-cubes at 60fps, with normals and lighting.</p>
-<p>Next up is to start generating some more interesting geometry, other
-than just a bunch of cubes...</p>
-<p><strong>Update:</strong> The code that generated the above screenshots is in a
-Mercurial repo at:\
-<a href="http://code.google.com/p/flyinghigh-opengl-from-python/">http://code.google.com/p/flyinghigh-opengl-from-python/</a></p>
-<p>Only the "code" directory is of any interest (the rest is just a dumping
-ground for my thoughts related to the text of the talk.) There is a
-hastily-created README in the code directory.</p>
-<p>In particular, note that the code may spend a while generating geometry
-on startup, before displaying anything. This startup time has been
-fluctuating wildly, as I add new ideas, then refine them to be
-reasonably performant. To improve performance or startup time, you might
-want to take a look in the 'flyinghigh/populate_world.py' module and
-comment out the creation of some of the GameItem instances that are
-passed to world.add().</p>
-<p>Feedback, ideas and questions all welcome.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/the-great-resolver-ide-anecdote/" class="u-url">The Great Resolver IDE Anecdote</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/the-great-resolver-ide-anecdote/" rel="bookmark">
-            <time class="published dt-published" datetime="2010-05-04T12:56:47-05:00" itemprop="datePublished" title="2010-05-04 12:56">2010-05-04 12:56</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>Found myself telling this story yet again, so I figured I should just
-post it here and start linking to it, rather than remembering, retyping
-and re-embellishing it every time.</p>
-<p>Ever since we started at <a href="http://www.resolversystems.com/">Resolver</a>,
-developers have been free to choose their own IDE (Integrated
-Development Environment, although some of the ones I'm going to talk
-about aren't so integrated, so I guess you should just read 'IDE' herein
-to mean 'development environment').</p>
-<p>Like herding cats, this of course resulted in everyone choosing a
-different IDE. At one peak, we had fourteen people, and about ten
-different IDEs. Sigh. To our incredulity though, this worked fine, and
-everyone was happy. So far, so good.</p>
-<p>We pair program, so we see a lot of each other's IDEs. In fact, we end
-up learning them all pretty thoroughly. Spending eight hours a day,
-every day, using someone else's IDE, with a bona-fide expert in that IDE
-sitting in your lap, guiding you through it, will tend to do that. After
-a few months, we all knew every IDE out there back-to-front. An example
-of how pairing spreads knowledge.</p>
-<p>Every so often, someone would change their mind about their chosen IDE.
-Having been educated about the alternatives, they would decide to
-switch. This was also fine, and everyone continued to be happy.</p>
-<p>Then, after a few months of this, an interesting thing happened.
-Gradually, one by one, twelve of our fourteen people each decided, of
-their own accord, to switch to using either Vi or Emacs.</p>
-<p>I regard this of an example of pairing not just spreading knowledge, but
-spreading <em>enlightenment</em>.</p>
-<p>They each had realised that although these hallowed text editors didn't
-have some of the more advanced features they'd come to expect from an
-IDE, such as auto-completion or 'go to definition', they were flexible
-and powerful enough that one could add such features yourself. To do so
-is a rite of passage for an experienced programmer, akin to Luke
-building his own lightsaber - so that it's customized to his precise
-needs, and he understands each nuance of its behaviour.</p>
-<p>More than that, all the conveniences of a traditional IDE made it very
-convenient to do only what the authors of the IDE had envisaged. To do
-anything else was made very difficult. If you wished to use a different
-compiler, or write in a different language than those prescribed by your
-IDE vendor, you were out of luck, and would have to learn an entirely
-different IDE to do that.</p>
-<blockquote>
-<p><em>"We shape our tools and afterwards our tools shape us."</em></p>
-<ul>
-<li>Marshall McLuhan ('The media is the message' guy)</li>
-</ul>
-</blockquote>
-<p>On one project, or two, this might seem a trivial restriction. Extended
-over the course of a lifetime, the conveniences shields a developer from
-learning anything other than how to drive an IDE, and the restrictions
-become blinkers, crippling their scope and abilities. The IDE is a
-cage... for your <em>mind</em>.</p>
-<p><img alt="" src="files/2010/05/matrix_morpheus_red_blue_pill.jpg"></p>
-<p>The outliers are worth noting: We still use Visual Studio on rare
-occasions, for the lovely built-in GUI designer. The irrepressible
-Michael Foord loves Wing, and stuck with that. Will Reade, our tame
-brainiac, stuck with transparent simplicity of the lightweight but
-surprisingly useful TextPad. Go figure.</p>
-<p><strong>Update</strong>: The coda to the outliers is also interesting. Nowadays we're
-embedded in a huge mission to free our codebase from embedded win32
-controls, so that we might have a chance of running under Mono, and
-hence on other platforms. It would be nice if we could escape Windows
-Forms altogether - I understand WPF would let us display our GUI on the
-web. Writing this post makes me wonder - if we hadn't been using Visual
-Studio's convenient GUI designer all along, is it remotely possible that
-we might have considered our choice of GUI layer more thoroughly? If we
-hadn't been entranced by the "obviously right" convenience of the Visual
-Studio GUI designer, might our minds have been free enough to have made
-this decision right the first time around?</p>
     </div>
     </article>
 </div>

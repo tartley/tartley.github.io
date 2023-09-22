@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about did-not-finish)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/did-not-finish.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 03:28:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Dhalgren</title><link>https://www.tartley.com/posts/dhalgren/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Dhalgren cover" src="https://www.tartley.com/files/2023/dhalgren.webp"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Samuel Delaney, 1975&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It broke me. I need to take another run up to this. Advice welcome.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://localhost:8000/categories/did-not-finish/"&gt;&lt;span style="background:grey; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"&gt;did-not-finish&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>did-not-finish</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/dhalgren/</guid><pubDate>Fri, 01 Sep 2023 18:23:19 GMT</pubDate></item><item><title>Astroneer Resource Graph</title><link>https://www.tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
+get each of the resources in &lt;a href="https://astroneer.space/"&gt;Astroneer&lt;/a&gt;. Click the WEBP
+thumbnail below to get the full glorious SVG, then you can '&lt;em&gt;find in page&lt;/em&gt;' on it.
+(&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>did-not-finish</category><category>geek</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Sole Scion project v0.1 : A 2D rigid-body Python game</title><link>https://www.tartley.com/posts/sole-scion-project-v01-a-2d-rigid-body-python-game/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="screenshot Sole Scion
+v1.0" src="https://www.tartley.com/files/2008/06/screenshot-sole-scion-v10.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://sethgodin.typepad.com/seths_blog/2008/06/is-it-worthy.html"&gt;Everyone&lt;/a&gt;
+today is &lt;a href="http://www.codinghorror.com/blog/archives/001134.html"&gt;abuzz&lt;/a&gt;
+with the 'release early, release often' sentiment, so I've decided to
+get in the spirit and upload the first iteration of 'Sole Scion', my
+summertime sabbatical game project.&lt;/p&gt;
+&lt;p&gt;Version 0.1 merely bounces some circles off an inclined plane
+(pictured.) I aim to transform this into a 2D graphical adventure game,
+in which I hope emergent fun will take place, once I populate the world
+with enough twisty corridors, uniquely-shaped objects that need slotting
+into the right places, and judicious instances of ornery fauna to
+contend with.&lt;/p&gt;
+&lt;p&gt;It's written in Python, using
+&lt;a href="http://wiki.slembcke.net/main/published/Chipmunk"&gt;Chipmunk&lt;/a&gt; for rigid
+body Newtonian dynamics, with Python bindings using
+&lt;a href="http://code.google.com/p/pymunk/"&gt;Pymunk&lt;/a&gt;. Rendering, gameloop, sounds,
+etc are handled by &lt;a href="http://pyglet.org"&gt;pyglet&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://code.google.com/p/sole-scion"&gt;Sole Scion is hosted on Google
+Code&lt;/a&gt;, with Subversion read-access
+and a source code tarball, including the redistributables for the above
+dependencies, should anyone be curious. It has a &lt;a href="http://www.opensource.org/licenses/bsd-license.php"&gt;New BSD
+License&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Feedback, thoughts and ideas, very welcome.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: I've only run it on Linux, but reportedly it also works on
+Windows. Thanks Xtian!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; It also reportedly works under PyPy, provided you install
+the 'functools' module. Thanks Maciej!&lt;/p&gt;</description><category>chipmunk</category><category>did-not-finish</category><category>gamedev</category><category>geek</category><category>graphics</category><category>pyglet</category><category>pymunk</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/sole-scion-project-v01-a-2d-rigid-body-python-game/</guid><pubDate>Wed, 18 Jun 2008 11:37:17 GMT</pubDate></item></channel></rss>

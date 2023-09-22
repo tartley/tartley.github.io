@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!">
+<meta name="description" content="A website devoted to oneself has been described — by my own Father, no less — as the greatest act of hubris. Welcome aboard!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Made out of meat (old posts, page 18) | Made out of meat</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -77,7 +77,365 @@
 
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/colorama-simple-cross-platform-python-api-for-colored-terminal-text/" class="u-url">colorama: Simple cross-platform Python API for colored terminal text</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/more-colored-terminal-text-on-windows-ansicon/" class="u-url">TIL: More Colored Terminal text on Windows: AnsiCon</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/more-colored-terminal-text-on-windows-ansicon/" rel="bookmark">
+            <time class="published dt-published" datetime="2010-07-08T14:07:09-05:00" itemprop="datePublished" title="2010-07-08 14:07">2010-07-08 14:07</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>A reminder for myself:</p>
+<p>ANSI escape characters don't work properly in Windows terminals:</p>
+<p><img alt="Before: Raw ANSI codes. Not nice." src="files/2010/07/ansicon00-before.png"></p>
+<p>To make them work properly, use
+<a href="http://adoxa.110mb.com/ansicon/index.html">AnsiCon</a>. Unzip it somewhere
+permanent (eg. <code>%ProgramFiles%\ansicon</code>) and install it with:</p>
+<div class="code"><pre class="code literal-block">ansicon.exe -i
+</pre></div>
+
+<p>start a new terminal, and lo:</p>
+<p><img alt="After: Pretty." src="files/2010/07/ansicon01-working.png"></p>
+<p>Fine tune the appearance of the programs generating the color, for
+example customise 'hg diff' by editing \~/.hgrc:</p>
+<div class="code"><pre class="code literal-block"><span class="p p-Indicator">[</span><span class="nv">extensions</span><span class="p p-Indicator">]</span>
+<span class="l l-Scalar l-Scalar-Plain">color =</span>
+
+<span class="l l-Scalar l-Scalar-Plain">[color]</span>
+<span class="l l-Scalar l-Scalar-Plain">status.modified = yellow bold</span>
+<span class="l l-Scalar l-Scalar-Plain">status.unknown = white</span>
+<span class="l l-Scalar l-Scalar-Plain">status.deleted = red_background white bold</span>
+
+<span class="l l-Scalar l-Scalar-Plain">diff.deleted = red bold</span>
+<span class="l l-Scalar l-Scalar-Plain">diff.inserted = green bold</span>
+<span class="l l-Scalar l-Scalar-Plain">diff.file_a = white</span>
+<span class="l l-Scalar l-Scalar-Plain">diff.file_b = white</span>
+<span class="l l-Scalar l-Scalar-Plain">diff.diffline = white_background black</span>
+<span class="l l-Scalar l-Scalar-Plain">diff.extended = yellow bold</span>
+<span class="l l-Scalar l-Scalar-Plain">diff.hunk = underline black</span>
+<span class="l l-Scalar l-Scalar-Plain">diff.changed = yellow bold</span>
+</pre></div>
+
+<p><img alt="Fine-tuned" src="files/2010/07/ansicon02-tuned.png"></p>
+<p>ANSI is correctly stripped out if the output of a program is not a
+terminal, so the colored output won't interfere with saving to files nor
+machine-parsing of the text:</p>
+<p><img alt="Filtered" src="files/2010/07/ansicon03-filtered.png"></p>
+<p>Finally, insert some <a href="http://pueblo.sourceforge.net/doc/manual/ansi_color_codes.html">ANSI
+codes</a>
+into your <a href="http://ss64.com/nt/prompt.html">prompt</a>, by setting
+environment variable PROMPT:</p>
+<div class="code"><pre class="code literal-block">set PROMPT=$E[0;36m$P$_$E[36;1m$G$E[0m$S
+</pre></div>
+
+<p><img alt="Colored Prompt" src="files/2010/07/ansicon04-prompt.png"></p>
+<p><a href="http://tartley.com/?p=1062">Multiple</a>
+<a href="http://tartley.com/?p=863">posts</a> on colors and terminal text is
+perhaps a bit obsessive of me. I think I'm all done now.</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/more-opengl-from-python/" class="u-url">More OpenGL from Python</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/more-opengl-from-python/" rel="bookmark">
+            <time class="published dt-published" datetime="2010-06-02T02:04:37-05:00" itemprop="datePublished" title="2010-06-02 02:04">2010-06-02 02:04</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>My talk, <em>Flying High : Hobbyist OpenGL from Python</em>, was accepted for
+EuroPython 2010, \o/. I don't want to reveal the best bits of my talks,
+but to whet people's appetite, this is some of what my initial
+preparation involved.</p>
+<p>One thing I'm keen on talking about is algorithmic generation of
+interesting geometry. This is an area in which the flexibility and
+expressiveness of Python can really shine.</p>
+<p>I started with a quick Shape class, to model the vertices and faces of
+an arbitrary polyhedra (3D shapes with flat faces and straight edges):</p>
+<div class="code"><pre class="code literal-block"><span class="n">Position</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">'Position'</span><span class="p">,</span> <span class="s1">'x y z'</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Shape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="p">[</span><span class="n">Position</span><span class="p">(</span><span class="o">*</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vertices</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">faces</span> <span class="o">=</span> <span class="n">faces</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+</pre></div>
+
+<p>Each face of the shape is represented as a list of integer indices into
+the vertex list. The 'faces' attribute is a list of all faces. The color
+attributes is just a 4 element tuple: (r, g, b, alpha). This class can
+now be instantiated by factory functions to form particular 3D shapes,
+such as red cubes or blue tetrahedrons:</p>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+    <span class="n">verts</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
+        <span class="p">(</span><span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
+        <span class="p">(</span><span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
+        <span class="p">(</span><span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
+        <span class="p">(</span><span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
+        <span class="p">(</span><span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
+        <span class="p">(</span><span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
+        <span class="p">(</span><span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">faces</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="c1"># left</span>
+        <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="c1"># right</span>
+        <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="c1"># front</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="c1"># back</span>
+        <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="c1"># top</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="c1"># bottom</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="n">Shape</span><span class="p">(</span><span class="n">verts</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+</pre></div>
+
+<p>A class called 'Glyph' will convert a Shape instance into the set of
+ctypes arrays that need to be passed to OpenGL:</p>
+<p>The real Glyph class also creates arrays for color, and array indexes as
+well as vertices.</p>
+<p>Finally, we have a renderer, whose 'draw' method is invoked by our
+window draw event. This iterates through all items in our world that
+have a Glyph attribute, drawing each of them:</p>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">gl</span><span class="o">.</span><span class="n">glPushMatrix</span><span class="p">()</span>
+
+        <span class="n">gl</span><span class="o">.</span><span class="n">glTranslatef</span><span class="p">(</span><span class="o">*</span><span class="n">position</span><span class="p">)</span>
+
+        <span class="c1"># TODO: orientation</span>
+
+        <span class="n">gl</span><span class="o">.</span><span class="n">glVertexPointer</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">gl</span><span class="o">.</span><span class="n">GL_FLOAT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">glyph</span><span class="o">.</span><span class="n">glVerts</span><span class="p">)</span>
+        <span class="n">gl</span><span class="o">.</span><span class="n">glColorPointer</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">gl</span><span class="o">.</span><span class="n">GL_FLOAT</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">glyph</span><span class="o">.</span><span class="n">glColors</span><span class="p">)</span>
+        <span class="n">gl</span><span class="o">.</span><span class="n">glDrawElements</span><span class="p">(</span>
+            <span class="n">gl</span><span class="o">.</span><span class="n">GL_TRIANGLES</span><span class="p">,</span>      <span class="c1"># draw disjoint triangles</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">glyph</span><span class="o">.</span><span class="n">glIndices</span><span class="p">),</span> <span class="c1"># number of vertices to draw</span>
+            <span class="n">gl</span><span class="o">.</span><span class="n">GL_UNSIGNED_SHORT</span><span class="p">,</span> <span class="c1"># type of indices</span>
+            <span class="n">glyph</span><span class="o">.</span><span class="n">glIndices</span><span class="p">)</span>      <span class="c1"># index array</span>
+
+        <span class="n">gl</span><span class="o">.</span><span class="n">glPopMatrix</span><span class="p">()</span>
+</pre></div>
+
+<p>So we add a couple of interpenetrated Cube() shaped items into our
+world:</p>
+<div class="code"><pre class="code literal-block"><span class="n">white</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">red</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">world</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">GameItem</span><span class="p">(</span>
+    <span class="n">position</span><span class="o">=</span><span class="n">Position</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="n">shape</span><span class="o">=</span><span class="n">Cube</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">white</span><span class="p">),</span>
+    <span class="n">glyph</span><span class="o">=</span><span class="n">Glyph</span><span class="p">(),</span>
+<span class="p">))</span>
+<span class="n">world</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">GameItem</span><span class="p">(</span>
+    <span class="n">position</span><span class="o">=</span><span class="n">Position</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="n">shape</span><span class="o">=</span><span class="n">Cube</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">red</span><span class="p">),</span>
+    <span class="n">glyph</span><span class="o">=</span><span class="n">Glyph</span><span class="p">(),</span>
+<span class="p">))</span>
+</pre></div>
+
+<p>and running the program renders them:</p>
+<p><img alt="" src="files/2010/06/two-cubes.png"></p>
+<p>The flat shading is because we have no lighting yet. That gets fixed
+soon.</p>
+<p>Each cube is being drawn by a separate call to glDrawElements. This is
+fine for small numbers of items, but for performance we'll want to
+compose our geometry into single arrays that can be rendered by a single
+call to glDrawElements. To do this, we create a CompositeShape object,
+that contains several Shapes, and exposes 'vertices' and 'faces'
+attributes just like a regular Shape, which aggregate the geometry of
+all their subordinate Shapes.</p>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">CompositeShape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">offset</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">offset</span> <span class="o">=</span> <span class="n">Position</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">child</span><span class="p">,</span> <span class="n">offset</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">vertices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">vert</span> <span class="o">+</span> <span class="n">offset</span>
+                <span class="k">for</span> <span class="n">shape</span><span class="p">,</span> <span class="n">offset</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span>
+                <span class="k">for</span> <span class="n">vert</span> <span class="ow">in</span> <span class="n">shape</span><span class="o">.</span><span class="n">vertices</span><span class="p">)</span>
+</pre></div>
+
+<p>(The real CompositeShape class also defines 'faces', which is elided
+here.) Instances of CompositeShape can be passed directly to our
+unmodified Glyph class, allowing us to construct complex geometries out
+of many individual parts, but now they are all rendered in a single
+OpenGL API call.</p>
+<p>A new factory function creates a fancy CompositeShape called a
+CubeCluster, consisting of many randomly-positioned small cubes, each
+one colored by its position in (r, g, b) space. These are surrounded by
+a sprinkling of black cubes, a large translucent cube-shaped skin:</p>
+<p><img alt="" src="files/2010/06/cube-cluster-01-overview.png"></p>
+<p>and buried deep at the centre of the CubeCluster is some sort of
+mysterious structure:</p>
+<p><img alt="" src="files/2010/06/cube-cluster-01-center.png"></p>
+<p>So using this code, I get 60fps on modest hardware (my 2005 end-of-line
+Thinkpad T60, an ATI Radeon X1400) while rendering either:</p>
+<ul>
+<li>800 independently moving and rotating items, each a simple cube (8
+    vertices, 8 colors, no normals, 36 indices = 12 triangles) for a
+    total of 9600 triangles.</li>
+</ul>
+<p>or</p>
+<ul>
+<li>1 composite item comprising 9,000 cubes, (108,000 triangles)</li>
+</ul>
+<p>or any linear interpolation between these two extremes. (<strong>Update:</strong> see
+improvement on this noted in the final paragraph.)</p>
+<p>I've done nothing to try and tune the performance, in particular I'm
+updating and rendering every single item every frame, and I'm not using
+vertex buffers, so I suspect my geometry is being sent over the bus to
+the GPU every frame. So presumably this can be still be much improved.</p>
+<p>Next I add some basic lighting, so that our cubes don't look so flat
+shaded. Lighting needs to know normals, the vector at right angles to a
+face, so that it can figure out how how strongly each face is
+illuminated. So our Glyph needs to start generating an array of normals
+for each vertex.</p>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">get_normal</span><span class="p">(</span><span class="n">face</span><span class="p">,</span> <span class="n">vertices</span><span class="p">):</span>
+    <span class="n">v0</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+    <span class="n">v1</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+    <span class="n">v2</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">v0</span> <span class="o">-</span> <span class="n">v1</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">v2</span> <span class="o">-</span> <span class="n">v1</span>
+    <span class="k">return</span> <span class="n">b</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Glyph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">get_glnormals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="p">):</span>
+        <span class="n">face_normals</span> <span class="o">=</span> <span class="p">(</span><span class="n">get_normal</span><span class="p">(</span><span class="n">face</span><span class="p">,</span> <span class="n">shape</span><span class="o">.</span><span class="n">vertices</span><span class="p">)</span>
+                        <span class="k">for</span> <span class="n">face</span> <span class="ow">in</span> <span class="n">shape</span><span class="o">.</span><span class="n">faces</span><span class="p">)</span>
+        <span class="n">normals</span> <span class="o">=</span> <span class="p">(</span><span class="n">normal</span>
+                   <span class="k">for</span> <span class="n">face</span><span class="p">,</span> <span class="n">normal</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">shape</span><span class="o">.</span><span class="n">faces</span><span class="p">,</span> <span class="n">face_normals</span><span class="p">)</span>
+                   <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">face</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">gl_array</span><span class="p">(</span><span class="n">gl</span><span class="o">.</span><span class="n">GLfloat</span><span class="p">,</span> <span class="n">normals</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_glvertices</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+<p>This generation of normals also affects the generation of vertex
+positions, colors and indices, since vertices can no longer be shared
+between different faces of a cube, because a single vertex position now
+requires a different normal for each face.</p>
+<p><img alt="" src="files/2010/06/basic-lighting.jpg"></p>
+<p>Generating normals made me think more about when I should or should not
+be using indexed vertex arrays, as opposed to simple contiguous arrays
+of vertices. My current thoughts on the matter are summarised on <a href="http://stackoverflow.com/questions/2954349/when-should-i-use-indexed-arrays-of-opengl-vertices">this
+stackoverflow
+question</a>.
+If you know a bunch about OpenGL, I'd appreciate you heading over there
+and setting me straight.</p>
+<p>Adding normals increased the vertex count required to draw the same
+geometry quite considerably, from 8 vertices for a single cube, up to
+24. The colors array increases in size correspondingly. Surprisingly,
+this didn't decrease framerate too much (we went from drawing 9,000
+cubes at 60fps down to 8,000.) However, then I converted colors from
+being floats (eg. white=(1.0, 1.0, 1.0, 1.0), four components for rgb
+and alpha)) to using unsigned bytes (e.g. white=(255, 255, 255, 255).)
+This boosted performance noticeably, so now we're up to drawing 12,000
+cubes at 60fps, with normals and lighting.</p>
+<p>Next up is to start generating some more interesting geometry, other
+than just a bunch of cubes...</p>
+<p><strong>Update:</strong> The code that generated the above screenshots is in a
+Mercurial repo at:\
+<a href="http://code.google.com/p/flyinghigh-opengl-from-python/">http://code.google.com/p/flyinghigh-opengl-from-python/</a></p>
+<p>Only the "code" directory is of any interest (the rest is just a dumping
+ground for my thoughts related to the text of the talk.) There is a
+hastily-created README in the code directory.</p>
+<p>In particular, note that the code may spend a while generating geometry
+on startup, before displaying anything. This startup time has been
+fluctuating wildly, as I add new ideas, then refine them to be
+reasonably performant. To improve performance or startup time, you might
+want to take a look in the 'flyinghigh/populate_world.py' module and
+comment out the creation of some of the GameItem instances that are
+passed to world.add().</p>
+<p>Feedback, ideas and questions all welcome.</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/the-great-resolver-ide-anecdote/" class="u-url">The Great Resolver IDE Anecdote</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/the-great-resolver-ide-anecdote/" rel="bookmark">
+            <time class="published dt-published" datetime="2010-05-04T12:56:47-05:00" itemprop="datePublished" title="2010-05-04 12:56">2010-05-04 12:56</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>Found myself telling this story yet again, so I figured I should just
+post it here and start linking to it, rather than remembering, retyping
+and re-embellishing it every time.</p>
+<p>Ever since we started at <a href="http://www.resolversystems.com/">Resolver</a>,
+developers have been free to choose their own IDE (Integrated
+Development Environment, although some of the ones I'm going to talk
+about aren't so integrated, so I guess you should just read 'IDE' herein
+to mean 'development environment').</p>
+<p>Like herding cats, this of course resulted in everyone choosing a
+different IDE. At one peak, we had fourteen people, and about ten
+different IDEs. Sigh. To our incredulity though, this worked fine, and
+everyone was happy. So far, so good.</p>
+<p>We pair program, so we see a lot of each other's IDEs. In fact, we end
+up learning them all pretty thoroughly. Spending eight hours a day,
+every day, using someone else's IDE, with a bona-fide expert in that IDE
+sitting in your lap, guiding you through it, will tend to do that. After
+a few months, we all knew every IDE out there back-to-front. An example
+of how pairing spreads knowledge.</p>
+<p>Every so often, someone would change their mind about their chosen IDE.
+Having been educated about the alternatives, they would decide to
+switch. This was also fine, and everyone continued to be happy.</p>
+<p>Then, after a few months of this, an interesting thing happened.
+Gradually, one by one, twelve of our fourteen people each decided, of
+their own accord, to switch to using either Vi or Emacs.</p>
+<p>I regard this of an example of pairing not just spreading knowledge, but
+spreading <em>enlightenment</em>.</p>
+<p>They each had realised that although these hallowed text editors didn't
+have some of the more advanced features they'd come to expect from an
+IDE, such as auto-completion or 'go to definition', they were flexible
+and powerful enough that one could add such features yourself. To do so
+is a rite of passage for an experienced programmer, akin to Luke
+building his own lightsaber - so that it's customized to his precise
+needs, and he understands each nuance of its behaviour.</p>
+<p>More than that, all the conveniences of a traditional IDE made it very
+convenient to do only what the authors of the IDE had envisaged. To do
+anything else was made very difficult. If you wished to use a different
+compiler, or write in a different language than those prescribed by your
+IDE vendor, you were out of luck, and would have to learn an entirely
+different IDE to do that.</p>
+<blockquote>
+<p><em>"We shape our tools and afterwards our tools shape us."</em></p>
+<ul>
+<li>Marshall McLuhan ('The media is the message' guy)</li>
+</ul>
+</blockquote>
+<p>On one project, or two, this might seem a trivial restriction. Extended
+over the course of a lifetime, the conveniences shields a developer from
+learning anything other than how to drive an IDE, and the restrictions
+become blinkers, crippling their scope and abilities. The IDE is a
+cage... for your <em>mind</em>.</p>
+<p><img alt="" src="files/2010/05/matrix_morpheus_red_blue_pill.jpg"></p>
+<p>The outliers are worth noting: We still use Visual Studio on rare
+occasions, for the lovely built-in GUI designer. The irrepressible
+Michael Foord loves Wing, and stuck with that. Will Reade, our tame
+brainiac, stuck with transparent simplicity of the lightweight but
+surprisingly useful TextPad. Go figure.</p>
+<p><strong>Update</strong>: The coda to the outliers is also interesting. Nowadays we're
+embedded in a huge mission to free our codebase from embedded win32
+controls, so that we might have a chance of running under Mono, and
+hence on other platforms. It would be nice if we could escape Windows
+Forms altogether - I understand WPF would let us display our GUI on the
+web. Writing this post makes me wonder - if we hadn't been using Visual
+Studio's convenient GUI designer all along, is it remotely possible that
+we might have considered our choice of GUI layer more thoroughly? If we
+hadn't been entranced by the "obviously right" convenience of the Visual
+Studio GUI designer, might our minds have been free enough to have made
+this decision right the first time around?</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/colorama-simple-cross-platform-python-api-for-colored-terminal-text/" class="u-url">colorama: Simple cross-platform Python API for colored terminal text</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -1184,287 +1542,6 @@ figured I'd promote that change a little.</p>
 <p>Check out the new, revamped <a href="http://www.py2exe.org/index.cgi/Tutorial">py2exe tutorial
 page</a>!</p>
 <p>That is all.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/creating-a-level-for-thief-2/" class="u-url">Creating a Level for Thief 2</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/creating-a-level-for-thief-2/" rel="bookmark">
-            <time class="published dt-published" datetime="2010-01-25T13:50:26-06:00" itemprop="datePublished" title="2010-01-25 13:50">2010-01-25 13:50</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>After <a href="sinister-redux">Sinister Ducks</a>, my <a href="http://www.gamedevlessons.com/">videogame
-creation mentor</a> suggested that I create
-a mod for an existing game, in order to distance myself a little from
-the programming aspects of creating a game, and instead spend a little
-time considering the gameplay and the art and the music from the
-perspective of the user. Sounds like useful advice.</p>
-<p>So, the last couple of weeks I've been working through the
-<a href="http://www.jasonotto.net/tutorials/CompleteTut.htm">tutorials</a> for
-<a href="http://en.wikipedia.org/wiki/DromEd">DromEd</a>, the notoriously cranky
-level editor for vintage sneak-em-up <a href="http://en.wikipedia.org/wiki/Thief:_The_Dark_Project">Thief: The Dark
-Project</a>.
-(Specifically for the sequel, <a href="http://en.wikipedia.org/wiki/Thief_II:_The_Metal_Age">Thief 2: The Metal
-Age</a>, which has a
-slightly improved engine and editor.) I chose this for three reasons:</p>
-<ol>
-<li>Released in 1998, <em>Thief</em> is old enough that the assets are simple
-    <a href="http://www.mobygames.com/game/windows/thief-ii-the-metal-age/screenshots/gameShotId,7666/">low-fidelity geometry and
-    bitmaps</a>.
-    These are easy enough for me to create and edit, plus if I
-    intersperse existing game assets with my own shoddy creations, there
-    won't be a tremendously jarring disparity in apparent quality.</li>
-<li>Even though <em>Thief</em> is ten years old and the company that created it
-    long gone, there's still <a href="http://www.ttlg.com/">a thriving
-    community</a> of amateur afficionados, churning
-    out <a href="http://www.ttlg.com/forums/showthread.php?p=1508201">new
-    missions</a> at
-    the rate of several per month, many of which are of exceedingly high
-    quality - in some cases exceeding that of the original game. I'll be
-    in good company, will have some meaningful feedback, and will have
-    forums to turn to when I get into difficulties.</li>
-<li>Last but not least, <em>Thief</em> is one of my favourite games of all
-    time. The emphasis on sneaking around and avoiding confrontation
-    suits my sensibilities. Your protagonist, Garrett, is a marvellous,
-    mercenary character. Best of all, in <em>Thief 1</em>, it reveals
-    unexpected depth halfway through - the player's expectations of a
-    succession of simple heists takes a strange twist when the powerful
-    storyline reveals itself.</li>
-</ol>
-<p>Having finished the tutorials, this weekend I broke ground on creating
-my own level, or 'fan-mission' (FM), in the parlance:</p>
-<p><img alt="Designing a Thief2 Level in DromEd" src="files/2010/01/dromed-sm.png"></p>
-<p>I'm using the DromEd Toolkit, which is DromEd with some third-party
-patches and bugfixes applied to it. My first impressions with DromEd are
-that it's very clunky and ugly, and startlingly lacking in
-documentation. I've taken to dipping into the configuration files to see
-what keyboard commands exist to experiment with. There are a bewildering
-variety of binary patches to modify the executable in various exciting
-ways, and forum posts about it, although helpful and prolific, seem
-fragmentary and rife with broken links. I've still no idea whether I
-ought to be using <em>Dromed Delux</em> instead, nor where I should get that
-from. It's a glorious chaotic riot, and it's a little intimidating.</p>
-<p>Still, having said that, the binary patches have all worked fine for me,
-and the more I use the editor, the more it's starting to grow on me.</p>
-<p>I'm setting my FM in a museum. There's already an existing museum
-mission out there, but as opposed to its marble-halled austerity, I'm
-imagining this will be more like the cramped, cosy, wood-panneled
-chaotic collection of something like the wonderful <a href="http://www.britishtours.com/360/soane-museum.html">Sir John Soane's
-Museum</a> in London.</p>
-<p>So progress as of week 1 looks like this: I've carved out some very
-basic geometry to form a stocky museum building. Here you can just about
-make out a hole in the brick facade that will form the front entrance.
-This is not the entrance that the player will likely be using:</p>
-<p><img alt="" src="files/2010/01/front-entrance.jpg"></p>
-<p>This is all very crude thus far - with repeating textures on large
-surfaces, and plain uniform lighting. There are a complete set of mostly
-rectangular ground-floor rooms, with interconnecting doorways. The
-highlight of my modelling to date is this stairway leading up to the
-(otherwise nonexistant) next floor.</p>
-<p><img alt="" src="files/2010/01/stairway.jpg"></p>
-<p>I'm not so happy with the wood texture I chose - I'll go back and look
-for something more uniform. But I am happy with the way the stairs flair
-out at the bottom. I realised in the process of creating this that this
-makes it possible to fit a flight of stairs into a smaller space than
-would otherwise be possible, by allowing the bottom few steps to
-gracefully project out into the corridor.</p>
-<p>Having finished this last night, I then dreamed about geometric
-operations on three dimensional spaces, which I think is a good sign.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/musicians-wake-up/" class="u-url">Musicians : wake up!</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/musicians-wake-up/" rel="bookmark">
-            <time class="published dt-published" datetime="2010-01-22T09:43:24-06:00" itemprop="datePublished" title="2010-01-22 09:43">2010-01-22 09:43</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>I left this as a comment <a href="http://www.tbray.org/ongoing/When/201x/2010/01/21/On-Books">somewhere
-else</a>, in
-response to someone complaining about how:</p>
-<blockquote>
-<p>"...musicians are asked to just get over the fact that no one pays for
-music... [it is] my hope that someday more people make the same
-realization that unless people to help finance records, you'll never
-get that fantastic song you can't stop listening to all summer."</p>
-</blockquote>
-<p>Hey there. I really disagree that the onus is on the rest of society to
-solve all musicians' problems. People have been copying my work on the
-internet for decades now. I'm a computer programmer. We're in exactly
-the same boat as musicians - probably more so, and have been there for
-longer. But we manage to get by.</p>
-<p>Some programmers attempt to stop copying of their work, but this is
-rarely successful. Others take a different tack. We've had to adapt. We
-acknowledge that our work will be routinely pirated on the internet, and
-we adopt our business model accordingly. We have to make and sell
-different sizes and types of tools than we were accustomed to making,
-and sell them through different channels. We have had to find other ways
-of charging for our work. My own company gives away our software for
-free. We embrace piracy as inevitable, and use it as a promotional tool.</p>
-<p>This is difficult. It is counter-intuitive, grounded as we all are in
-the scarcity economy of the physical world. It requires us to change our
-attitudes and outlook and behaviour. Sometimes we fail. We are still
-figuring out the realities of our markets in a post-internet world.
-But <em>goddammit</em> we are trying and sometimes we try things and they work.
-The software business is more diverse and thriving than it ever has been
-- despite all our work being just as freely copyable (and freely copied)
-as music.</p>
-<p>The financial hardship that musicians are feeling has always been felt
-by musicians. Copying music on the internet has not made this any worse
-than it always was. This is simply the cost of choosing to be a
-musician.</p>
-<p>Musicians must adapt, just like programmers have. It saddens me to see
-so few musicians even try. Is it really true that computer programmers
-are more flexible and adaptable and imaginative than musicians. Who
-would have thunk it?</p>
-<p>Embracing piracy as a promotional tool can allow bands to make more
-money on live shows than they have ever made selling records, but still,
-the majority of musicians sit around, complacent, thinking that the
-responsibility lies on the rest of society, to put things back the way
-they were before the internet.</p>
-<p>No. I for one refuse. Adapt or die - if you can't make it, someone else
-will take your place. By definition, that someone will be more
-adaptable, imaginative, risk-taking and dynamic. Isn't that supposed to
-be what our creatives are good at?</p>
-<p>People will doubtless think I'm being harsh - imposing my tyranny on
-struggling musicians. But I'm not. When I say "adapt or die", I'm not
-imposing my will. I'm merely reminding you of reality. If we were
-talking about a guitarist who couldn't play the guitar, we would all
-agree that they have put themselves in a bit of a paradoxical situation,
-and that they must either adapt (learn to play) or die (stop being a
-guitarist.)</p>
-<p>This is how competition works. Competition might seem harsh, but it's
-best for everyone in the long run. The poor guitarists are eventually
-persuaded by market realities to stop being guitarists and try being
-something else. The good guitarists get rewarded, and the standard of
-music available to the world is increased as a result.</p>
-<p>Instead of untalented guitarists, today we are talking about musicians
-who would like to get paid, but who don't want to expend any energy on
-figuring out how they will get paid. Can you see the paradoxical
-situation they have put themselves in? This attitude is entirely
-understandable and human - I also would enjoy locking myself in my room
-and making beautiful computer programs which nobody else need ever see.
-But if I expect to get paid for making computer programs, then I must
-interface with the reality of the world around me. It's no use me simply
-wishing that High St stores will start selling my software in
-shrinkwrapped boxes again - those days are long gone. Instead, I must
-figure out what programs people want, and produce them in a timely
-manner at high quality, promote them somehow, and figure out my angle on
-how I'm going to get people to pay.</p>
-<p>It is not too much for us to ask musicians to also have to conform to
-reality like this. If they want to make money, and the means of making
-money from music are changing, then they will have to expend a little
-energy figuring out how they are going to get people to pay. If they
-don't want to think about that at all, then fine, they won't get paid.
-Adapt or die, we'll all be better off for it.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/" class="u-url">TIL: MSWindows Programming : Propogating child process exit values out of .bat scripts</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/mswindows-programming-propogating-child-process-exit-values-out-of-bat-scripts/" rel="bookmark">
-            <time class="published dt-published" datetime="2010-01-21T20:04:25-06:00" itemprop="datePublished" title="2010-01-21 20:04">2010-01-21 20:04</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>"God <em>dammit</em>. Why won't you just DO what I WANT you hopeless pile of
-crap!"</p>
-<p>So goes the refrain. I think you know where I'm coming from. Yet again,
-I have ended up learning far more about crappy DOS scripting than I ever
-wanted to know.</p>
-<p>So I'm writing a program to automate some small task on Windows. One of
-the jobs of this tool is to modify the current environment. But I don't
-know how a child process in Windows can modify the environment of it's
-parent (namely the command-line shell that invoked it.) Can it be done?</p>
-<p>So I hack a ghastly workaround: Wrap the script in a .bat file. A .bat
-file is invoked from the command-line in the same process as the shell,
-so any change it makes to the environment are made to the environment of
-the invoking shell itself. This also has the advantage that the tool can
-now be invoked by typing 'toolname', just like on other platforms, as
-opposed to 'toolname.py' or even 'python toolname.py'. So I wrap my
-Python script 'toolname.py' with a new file, 'toolname.bat', living in
-the same directory:</p>
-<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span>
-<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span>
-
-<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span>
-<span class="n">set</span><span class="w"> </span><span class="n">THIS</span><span class="o">=</span><span class="n">THAT</span>
-</pre></div>
-
-<p>The %\~dp0 and %\~n0 gobbledygook is a batch file way of referencing the
-same drive, path and filename (minus extension) as the current script,
-to which I add '.py' to run toolname.py. Easy enough.</p>
-<p>There's a minor problem: The environment changes that need to be made
-depend on what goes on inside toolname.py. So I have that Python write a
-new batch file to the temp directory, containing all the 'set' commands
-which will replace the hardcoded 'set THIS=THAT' in the above script.
-Then we call that new temporary bat file from here:</p>
-<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span>
-<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span>
-
-<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span>
-<span class="n">call</span><span class="w"> </span><span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span>
-</pre></div>
-
-<p>Which is good enough. Presumably it will barf all over the place if run
-concurrently. But there's a more pressing problem. I need the exit value
-of this tool to be equal to the exit value from toolname.py. Currently,
-the exit value of this .bat script is always zero, because the 'call'
-command at the end is always successful.</p>
-<p>One solution I've seen used is to remember the exit value from
-toolname.py, and then use the DOS exit command to propagate this value
-out to our caller:</p>
-<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="k">tool</span>
-<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="w"> </span><span class="o">%*</span>
-<span class="n">set</span><span class="w"> </span><span class="n">EXITVAL</span><span class="o">=%</span><span class="n">ERRORLEVEL</span><span class="o">%</span>
-
-<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span>
-<span class="n">call</span><span class="w"> </span><span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span>
-
-<span class="n">exit</span><span class="w"> </span><span class="o">%</span><span class="n">EXITVAL</span><span class="o">%</span>
-</pre></div>
-
-<p>The problem with this is that 'exit' doesn't do what you think it does.
-It doesn't just stop interpreting the current script, rather it
-terminates the current interpreter, ie. the shell that is running the
-script. If you run this from a command-line, since Windows doesn't
-differentiate between a console and a shell, your window disappears.
-<em>Sigh</em>.</p>
-<p>The exit command has a fix for this: It takes a switch '/B', that causes
-it to just end the current script, rather than killing the shell. But
-now, it ignores any %EXITVAL% parameter you try to feed it, so the exit
-value of your batch file is always zero.</p>
-<p>This is what I get for developing software on Windows. Nothing ever
-works the way it ought to. It's as though everything were designed to
-oppose simple engineering idioms, like composing systems out of small,
-interchangeable parts.</p>
-<p>So here's what I finally did. The exit value of running a batch script
-can be set without using the hopelessly brain-dead 'exit' command. It is
-equal to the exit value of the last process the script invokes. So
-instead of exit, simply find a process that will exit with the value you
-need, and invoke it as the final command in your batch script:</p>
-<div class="code"><pre class="code literal-block"><span class="p">::</span> <span class="n">first</span> <span class="n">run</span> <span class="n">our</span> <span class="n">tool</span>
-<span class="n">python</span> <span class="s2">"%~dp0%~n0.py"</span><span class="p">;</span> <span class="o">%*</span>
-<span class="nb">set</span> <span class="n">EXITVAL</span><span class="o">=%</span><span class="n">ERRORLEVEL</span><span class="o">%</span>
-
-<span class="p">::</span> <span class="n">then</span> <span class="n">make</span> <span class="nb">any</span> <span class="n">changes</span> <span class="n">to</span> <span class="n">the</span> <span class="n">environment</span>
-<span class="n">call</span> <span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span>
-
-<span class="p">::</span> <span class="ow">and</span> <span class="n">propagate</span> <span class="n">the</span> <span class="n">exit</span> <span class="n">value</span> <span class="n">to</span> <span class="n">our</span> <span class="n">invoker</span>
-<span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">"import sys; sys.exit(</span><span class="si">%E</span><span class="s2">XITVAL%)"</span>
-</pre></div>
-
-<p>Bingo. I now have a Python process that can modify the environment of
-its invoking shell, and propagates the correct exit value out of the
-wrapping DOS script. [Short bow. Applause. Roses. etc.]</p>
     </div>
     </article>
 </div>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!">
+<meta name="description" content="A website devoted to oneself has been described — by my own Father, no less — as the greatest act of hubris. Welcome aboard!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Made out of meat (old posts, page 15) | Made out of meat</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -77,7 +77,405 @@
 
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/do-a-bit-of-helping-out-at-europython/" class="u-url">Do a bit of helping out at EuroPython</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/a-pythonic-switch-statement/" class="u-url">A Pythonic 'switch' statement</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/a-pythonic-switch-statement/" rel="bookmark">
+            <time class="published dt-published" datetime="2009-08-05T08:59:53-05:00" itemprop="datePublished" title="2009-08-05 08:59">2009-08-05 08:59</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>I've recently had the pleasure of providing some assistance to my lovely
+wife through her first serious Python coding, and one of many things she
+expressed surprise at was the lack of a '<em>switch</em>' statement. At the
+time, I advised her that such a statement is superfluous, and that she
+should simply use an <em>if...elif...else</em> instead. I then forgot all about
+it.</p>
+<p>Until today, when I found myself refactoring a Pythonic kind of <em>switch</em>
+into my own code.</p>
+<p>I started with this ugly little lump:</p>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">action</span> <span class="o">==</span> <span class="s1">'M'</span><span class="p">:</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_point</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">current_path</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)]</span>
+    <span class="k">elif</span> <span class="n">action</span> <span class="o">==</span> <span class="s1">'L'</span><span class="p">:</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_point</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+        <span class="n">current_path</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">action</span> <span class="ow">in</span> <span class="s1">'zZ'</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">current_path</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">current_path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">current_path</span> <span class="o">=</span> <span class="n">current_path</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_path</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ParseError</span><span class="p">(</span><span class="s1">'loop needs 3 or more verts'</span><span class="p">)</span>
+        <span class="n">loops</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_path</span><span class="p">)</span>
+        <span class="n">current_path</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s1">'unsupported svg path command: </span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">action</span><span class="p">,)</span>
+        <span class="k">raise</span> <span class="n">ParseError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</pre></div>
+
+<p>This is from the guts of an SVG parsing module I was hacking up, but
+what it actually does isn't important. Its only salient feature for
+today is that it consists of a big switch-like <em>if...elif...else</em>
+statement. I was going to be adding plenty more cases to this logic, and
+it was sure going to get ugly. How can we make it better?</p>
+<p>First, I extract the logic from each branch of the <em>if</em> into functions.
+In this case, I chose to make them methods of the current class.
+Standalone functions (outside the class, without a '<em>self</em>' parameter)
+would also work, if they didn't need access to shared state.</p>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">onMove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_point</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">current_path</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)]</span>
+
+<span class="k">def</span> <span class="nf">onLine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_point</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">current_path</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">onClose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_path</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_path</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_path</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ParseError</span><span class="p">(</span><span class="s1">'loop needs 3 or more verts'</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">loops</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_path</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">current_path</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">def</span> <span class="nf">onBadCommand</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="s1">'unsupported svg path command: </span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">action</span><span class="p">,)</span>
+    <span class="k">raise</span> <span class="n">ParseError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</pre></div>
+
+<p>Again, don't worry too much about what these functions actually do. Just
+note that I've pulled the logic out of each branch of the
+<em>if...elif...else</em> statement into separate handler functions.</p>
+<p>Second, I define a dictionary which maps action characters to one of the
+new handler functions:</p>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">lookup</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">'M'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">onMove</span><span class="p">,</span>
+        <span class="s1">'L'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">onLine</span><span class="p">,</span>
+        <span class="s1">'Z'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">onClose</span><span class="p">,</span>
+        <span class="s1">'z'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">onClose</span><span class="p">,</span>
+    <span class="p">}</span>
+</pre></div>
+
+<p>Notice how the methods are bound to self, so they operate on the current
+object as you would expect. If you used stand-alone functions instead,
+they would not need any '<em>self</em>.' qualifier here.</p>
+<p>Third, use the dictionary to lookup the function we want to call, and
+then call the returned function:</p>
+<div class="code"><pre class="code literal-block"><span class="n">handler</span> <span class="o">=</span> <span class="n">lookup</span><span class="p">[</span><span class="n">action</span><span class="p">]</span>
+<span class="n">handler</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+<p>These two lines can be tidily combined into one:</p>
+<div class="code"><pre class="code literal-block"><span class="n">loopup</span><span class="p">[</span><span class="n">action</span><span class="p">](</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+<p>Note that this is pleasantly succinct, but still very explicit about
+what's going on. We're looking up a value in a dictionary, using the
+<strong>d[key]</strong> syntax. The returned value is a function, and we are
+calling it, passing 'params', using the <strong>f()</strong> syntax.</p>
+<p>Python tries very hard to always clearly expose the details of what is
+happening to the reader like this. Nothing magically happens behind the
+scenes. And yet, by the good judgement of Guido and the healthy process
+that surrounds the language's evolving design, the code remains concise,
+without becoming verbose or cluttered with obfuscating punctuation.</p>
+<p>We haven't yet handled the final '<em>else</em>' clause from the original code.
+It can't simply become another entry in our lookup dictionary, since
+it's unclear what key (left-hand value) would go into the lookup to
+correspond to this case. We're really talking about the case when the
+'action' character can't be found in the lookup dictionary at all. The
+most explicit and readable way to handle this case is to modify the
+above line of code:</p>
+<div class="code"><pre class="code literal-block"><span class="k">if</span> <span class="n">action</span> <span class="ow">in</span> <span class="n">lookup</span><span class="p">:</span>
+    <span class="n">lookup</span><span class="p">[</span><span class="n">action</span><span class="p">](</span><span class="n">params</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">onBadCommand</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+</pre></div>
+
+<p>Saving these changes, running the tests shows it behaves identically to
+the original version. (Hint: Tests don't make code harder to change.
+Quite the opposite - tests <em>enable</em> more frequent and more intrusive
+change, by giving you the freedom to dabble with refactoring while
+remaining dead certain you aren't introducing new bugs.)</p>
+<p>Let's take a look at the final code all together:</p>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="n">lookup</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">'M'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">onMove</span><span class="p">,</span>
+        <span class="s1">'L'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">onLine</span><span class="p">,</span>
+        <span class="s1">'Z'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">onClose</span><span class="p">,</span>
+        <span class="s1">'z'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">onClose</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">action</span> <span class="ow">in</span> <span class="n">lookup</span><span class="p">:</span>
+        <span class="n">lookup</span><span class="p">[</span><span class="n">action</span><span class="p">](</span><span class="n">params</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">onBadCommand</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+</pre></div>
+
+<p>Including the new handler functions, this is considerably longer than
+the original version (19 vs 32 lines). However, it qualifies as
+preferable and 'more Pythonic' for a couple of reasons:</p>
+<ol>
+<li>It's much clearer in intent. Greater readability is introduced by
+    separating out the code which chooses what to do (the lookup dict)
+    from the actual doing (the new handler functions.) The naming of the
+    new handler functions brings enormous clarity at a stroke. Of
+    course, this could also be done with a switch statement, and
+    frequently should be.</li>
+<li>It's easily extendible. The if..elif...else construct of the first
+    version would soon have bloated to over a screen-full of garbled
+    code when we added a few more cases. The new version could add 100
+    or so new cases without really becoming much less comprehensible.</li>
+<li>It's data-driven. The lookup structure could be generated by other
+    means than simply hard-coding it locally like this. We could merge
+    several dictionaries depending on context, or create it on the fly
+    from application configuration.</li>
+</ol>
+<p>This isn't very Earth shattering, and of course the idea that I should
+be preferring polymorphism over switch-statements tickling the back of
+my mind, but hopefully someone finds it useful.</p>
+<p><strong>Update:</strong> Wow! What a flurry of completely brilliant comments - every
+single one contains something of real merit. I feel compelled to rummage
+through for a sort-of best of breed conclusion based on all of them...</p>
+<div class="code"><pre class="code literal-block"><span class="n">lookup</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'M'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_move</span><span class="p">,</span>
+    <span class="s1">'L'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_line</span><span class="p">,</span>
+    <span class="s1">'Z'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_close</span><span class="p">,</span>
+    <span class="s1">'z'</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_close</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">handler</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lookup</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_bad_command</span><span class="p">)</span>
+    <span class="n">handler</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+
+<span class="c1"># or alternatively</span>
+<span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">lookup</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_bad_command</span><span class="p">)(</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+<p>I marginally prefer the first version - the second alternative is a
+smidgeon too compact for my taste. I respect the idea to use exceptions,
+that makes a lot of sense too. Thanks for all the great ideas, everyone.</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/ironpython-in-action/" class="u-url">IronPython in Action</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/ironpython-in-action/" rel="bookmark">
+            <time class="published dt-published" datetime="2009-07-18T12:03:31-05:00" itemprop="datePublished" title="2009-07-18 12:03">2009-07-18 12:03</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p><span style="float: left">
+<img alt="IronPython in Action cover" src="files/2009/07/ironpython-in-action.jpg"></span></p>
+<p><em>by Michael Foord and Christian Muirhead (2009)</em></p>
+<p>Disclaimer: I'm friends with both the authors and was sent a freebie
+review copy by the publisher, so I'm bound to be breathlessly gushing in
+this review. Fortunately, that's easy to do, because the book really is
+great. (Except for Christian's chapters... <em>Joke!</em>)</p>
+<p>Having spent some years working with .NET, and with a series of
+intriguing personal experiments in Python under my belt, I originally
+approached IronPython some years ago with a modicum of trepidation. I
+feared that the weld between the two would be intrusively visible,
+forming distracting differences from regular Python. I feared for the
+execution environment, the data types, and perhaps even the syntax
+itself.</p>
+<p>Experience with IronPython showed these worries were needless. I have
+found IronPython to be a remarkably pleasant marriage - the same elegant
+language we know and love, given first-class status in the .NET runtime.
+Gifted with seamless interoperability with other .NET languages, the
+dowry from such an alliance turns out to be all the .NET libraries in
+the world, including the substantial and highly capable .NET standard
+libraries themselves.</p>
+<p>IronPython is, to some extent, a niche implementation of a niche
+language. However, its position seems to potentially be one of
+importance and strength. Not only does it allow Python programmers to
+use .NET libraries - and does so admirably, but it also allows the
+existing legions of .NET programmers to be introduced to the joys of
+Python. They will fall in love with it, and will be able to introduce it
+into their workplaces in a way that is politically acceptable. After
+all, it is now simply another .NET language. Since .NET is orders of
+magnitude more popular than Python, this could turn out to be an
+important source of future Python adoption.</p>
+<p>This book is aimed to satisfy programmers coming from both the Python
+and the .NET worlds, and in this it seems to succeed. It starts with
+quick overviews of concepts from each: 30 pages about Python as a
+language, and 17 pages about .NET as an environment (data types, events,
+delegates, Windows Forms, etc) - just enough to get everyone up to speed
+regardless of background, but without being so verbose as to turn anyone
+off with a surfeit of material they are already familiar with. Despite
+being brief, these sections are packed with detail and very pragmatic,
+focusing on real-world use such as inheriting from existing .NET types,
+and solving some common problems like creating Windows Forms
+applications from IronPython.</p>
+<p>This style of practical and dense informative content is continued
+throughout. Straight after the opening sections, we dive right in with
+another rapid-fire chapter, demonstrating common IronPython techniques
+by writing a non-trivial application. Woven around this ongoing example,
+the chapter discusses many immediately important topics, including duck
+typing, Python protocols, MVC, using Windows Forms to build a GUI, tab
+pages, dialogs, menus, toolbars, images, saving text files, .NET
+Streams, text file encodings, Python exceptions and lambda functions.
+These diverse topics are covered rapidly but thoroughly, giving the
+reader enough information about each to be able to use them together
+from IronPython to create a useful project.</p>
+<p>Having covered these foundations, the book then moves on to address some
+specific areas in more detail. The following chapter headings give you
+some idea of the topics which are explored in depth:</p>
+<ul>
+<li>
+<em>First-class functions in action with XML</em> - demonstrates pragmatic
+    use of functions as first-class objects, and higher-order functions
+    (functions that take other functions as arguments and return
+    modified versions.) and of course decorators. These are shown in
+    use, appropriately paired up with the .NET XmlWriter and XmlReader
+    classes, demonstrating event driven parsing of XML.</li>
+<li>
+<em>Properties, dialogs and Visual Studio</em> - Python properties, .NET
+    dialogs, and using IronPython in Visual Studio. This sounds like a
+    straightforward chapter, but as you might guess, the book gets deep
+    into the topics and is jammed full of information. By the end of the
+    chapter you'll have added to the example application to create
+    document observers, used BinaryFormatter to serialise objects, and
+    touched on Python's pickle equivalent.</li>
+<li>
+<em>Agile Testing: where dynamic typing shines</em> - From the unittest
+    module and creating tests, through mock objects, listeners, monkey
+    patching, dependency injection and functional testing. This is a
+    dense chapter in a dense book, touching along the way on Python
+    attribute lookup rules, bound and unbound methods, asynchronous
+    execution for functional testing. My only criticism is that it's
+    clearly hard for developers to 'get' testing until they have
+    hands-on experience of it, so this single-chapter, while very
+    thorough in explaining <em>how</em> to test, has an ambitious remit, and
+    doesn't have enough space to explain much of <em>why</em> we test. I guess
+    this is partially my own bias shining through here - I regard
+    testing as quite literally the most important thing to happen in
+    computer science since the invention of the compiler, and would
+    encourage anyone interested to go and read as much as they can about
+    it.</li>
+<li>
+<em>Metaprogramming, protocols and more</em> - More Python protocols,
+    dynamic attribute access, and metaclasses. The sorts of things that
+    in a static language would be deep black magic, or else completely
+    impossible, but here they are just the <em>right</em> sort of crazy. Read,
+    enjoy, and <em>unlearn</em>. We see how to create a profiling decorator,
+    that modifies the functions you pass to it, wrapping them in
+    stopwatch timing calls. We also learn about some of the more
+    advanced integration of IronPython with the .NET CLR, including
+    static compilation of IronPython code into assemblies, and one of
+    the very few additions to Python syntax that IronPython has been
+    obliged to provide - the typing of .NET arrays and generics. You'll
+    never need to use generics yourself (in Python, everything is a
+    generic), and you'll never want to go back to typed containers if
+    you can avoid it. However, you may need to deal with some from an
+    existing C# API, and this is how you do it.</li>
+</ul>
+<p>Whew! We're only halfway through! The remaining chapters are equally
+detailed, but I'm going to start skimming through them somewhat. They
+cover the interactions of IronPython with more advanced .NET topics such
+as:</p>
+<ul>
+<li>
+<em>Windows Presentation Foundation (WPF) and IronPython</em> - WPF is
+    the DirectX user interface library that is a successor to Windows
+    Forms. This includes XAML, an XML dialect for describing user
+    interfaces, decoupling their implementation from application logic.</li>
+<li>
+<em>Windows System Administration with IronPython</em> - using IronPython
+    as a scripting language for sysadmin automation tasks, from the
+    simple, such as copying files, to the complex, such as Windows
+    Management Instrumentation (WMI), administration of remote machines,
+    and a substantial discussion on the uses of PowerShell with
+    IronPython.</li>
+<li>
+<em>IronPython and</em> <em>ASP.NET</em> - building a web-based front end to the
+    sample application developed earlier. Reusable controls.</li>
+<li>
+<em>Databases and Web Services</em> - using ADO.NET to work with databases,
+    and using SOAP and REST.</li>
+<li>
+<em>Silverlight: IronPython in the browser</em> - creating Silverlight
+    applications, and accessing the browser DOM from them.</li>
+<li>
+<em>Extending IronPython with C#/.NET</em> - all about creating C# class
+    libraries for use in IronPython, calling unmanaged code from
+    IronPython, and creating interfaces on your C# classes to provide
+    dynamic, Pythonic behaviour. It also includes dynamic compilation of
+    assemblies at runtime, which opens the door to advanced
+    code-generation techniques.</li>
+<li>
+<em>Embedding the IronPython Engine</em> - many developers might want to
+    provide IronPython as a scripting language within their own
+    application, and this chapter shows you how.</li>
+</ul>
+<p>Alright, that's it! There are appendices:</p>
+<ul>
+<li>
+<em>A whirlwind tour of C#</em> - in case anyone wants more guidance while
+    looking at some of the C# code or concepts that are discussed
+    throughout the book.</li>
+<li>
+<em>Python magic methods</em> - a description of <em>all</em> the Python magic
+    double-underscore methods, which is a fabulous resource, one which l
+    haven't seen collected anywhere else, and have been referring back
+    to ever since I read the book.</li>
+</ul>
+<p>So there you have it. If you haven't inferred already, I learned
+absolutely <em>heaps</em> from this book, even though it's about a language and
+environment I've been using every day for years. I think I can say
+without any equivocation that this is the best IronPython book <em>in the
+world</em>. If you're a .NET person who is curious about Python (and believe
+me, <a href="http://xkcd.com/353/">you</a>
+<a href="http://www.paulgraham.com/avg.html">should</a>
+<a href="http://www.python.org/about/success/esr/">be</a>), or if you're a Python
+person who fancies .NET - maybe for DirectX or Silverlight or any number
+of other wonderful things, then you should absolutely go directly to the
+<a href="http://www.ironpythoninaction.com/">IronPython in Action book website</a>
+right this second and buy it.</p>
+<p>What are you still doing here?</p>
+<p><strong>Update:</strong> Good catch Carl, I forgot the all-important rating!</p>
+<p>10/10 if you already use, or are curious about using, IronPython - then
+you need this book.</p>
+<p>0/10 if dynamic languages make you break out in hives, or if .NET makes
+you think of Darth Vader, then you shouldn't touch this book with a
+barge pole.</p>
+<p><br style="clear: both"></p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/on-estimates/" class="u-url">On Estimates</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/on-estimates/" rel="bookmark">
+            <time class="published dt-published" datetime="2009-06-18T09:40:15-05:00" itemprop="datePublished" title="2009-06-18 09:40">2009-06-18 09:40</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>There is a lot of room for miscommunication about estimates, as people
+have a startling tendency to think wishfully that the sentence:</p>
+<blockquote>
+<p>I estimate that, if I really understand the problem, it is about 50%
+likely that we will be done in five weeks (if no one bothers us during
+that time).</p>
+</blockquote>
+<p>really means:</p>
+<blockquote>
+<p>I promise to have it all done five weeks from now.</p>
+</blockquote>
+<p>from <a href="https://braydie.gitbooks.io/how-to-be-a-programmer/content/en/">How to be a
+Programmer</a>,
+by Robert L. Read.</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/do-a-bit-of-helping-out-at-europython/" class="u-url">Do a bit of helping out at EuroPython</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -159,7 +557,7 @@ at PyCon, and now I feel as if I should have read this book years ago.
 Shaders solve many of the problems I've been happily messing with for
 ages, in ways that are easier to implement, more powerful, and more
 performant.</p>
-<p>I <a href="opengl-programming-guide-6th-ed">whined about the Red Book</a>, but this
+<p>I <a href="posts/opengl-programming-guide-6th-ed">whined about the Red Book</a>, but this
 "Orange" OpenGL Shading Language book is brill - just what I needed.
 Incisive without being overly terse, practical, and once it got into the
 chapters about applications of multidimensional Perlin noise it got me
@@ -421,244 +819,6 @@ loud.</p>
 <p>0/10 If you only care about beauty, but not about usefulness. Or if you
 don't have eyes.</p>
 <p><br style="clear: both"></p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/remix/" class="u-url">Remix</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/remix/" rel="bookmark">
-            <time class="published dt-published" datetime="2009-04-07T23:42:58-05:00" itemprop="datePublished" title="2009-04-07 23:42">2009-04-07 23:42</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p><span style="float: left; padding: 1em">
-<img alt="remix" src="files/2009/04/remix.jpg"></span></p>
-<p><em>by Lawrence Lessig</em>, 2008.</p>
-<p>Is creating a mix CD for a friend an act of creativity, or a criminal
-offence? When you shoot a home video of your child which has a TV on in
-the background, is there really any need for lawsuits? What business do
-federal laws have in trying to regulate this sort of activity anyway?</p>
-<p>For those, like me, who view modern copyright law as a morass of
-intractable problems, irreconcilable interests, overreaching government
-intervention and profoundly unfair restrictions on personal freedoms,
-Professor Lessig's words are a welcome infusion of clarity, pragmatism
-and respect for all interested parties.</p>
-<p>With an engaging and accessible style, he describes exactly what is
-wrong with modern copyright, with clarity and impartiality, and why this
-is a deep and pervasive problem that cuts to the heart of all that we
-value in human culture. He describes how fixing this would benefit each
-of us, from individual consumers and amateur producers, through
-professional writers, musicians and copyright holders. Then, in a
-surprisingly constructive final section, he outlines five simple changes
-to copyright law that would, at a stroke, fix all the major problems,
-vastly simplify the situation, eliminate the ambiguity over the legality
-of our everyday actions, and all without apparently causing any harm or
-loss to any interested party.</p>
-<p>Rating:</p>
-<p>10/10 If you have any interest in the forces that are reshaping our
-society and turning industries upside-down within the space of years.</p>
-<p>0/10 If you dislike freedom or free markets, or are a big fan of
-overbearing government regulation and monopolies.</p>
-<p><br style="clear: both"></p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/infinite-jest/" class="u-url">Infinite Jest</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/infinite-jest/" rel="bookmark">
-            <time class="published dt-published" datetime="2009-03-28T16:26:49-05:00" itemprop="datePublished" title="2009-03-28 16:26">2009-03-28 16:26</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p><span style="float: left">
-<img alt="Inifinite Jest" src="files/2009/02/infinitejest.jpg"></span></p>
-<p><em>by David Foster Wallace (1996)</em></p>
-<p>I've had such a diverse set of reactions to this, and how could I not?
-The writing is bold and idiosyncratic throughout. The novel's story is
-not presented in chronological order, and the timeline is obfuscated by
-the gleeful adoption of 'subsidised time', in which traditional numeric
-monikers denoting each calender year are replaced by the sponsored
-labels designated by major corporations - 'Year of the Whopper', and so
-on - a marvellous concept which nevertheless makes it completely and
-artificially impossible to tell what the hell's going on until about 500
-pages in.</p>
-<p>The whole novel unashamedly celebrates the author's literary and formal
-grammatical credentials - from the extraordinarily-crafted opening
-scene, where a tragically misunderstood literary genius disastrously
-fails a university entrance interview, with just a hint of a
-semi-autobiographical air about him. Scenes of superlative execution are
-interspersed with a narrative that is, on the whole, told in the third
-person but in the argot of the currently eminent protagonist, leading to
-large swathes of the book which are, like, more than conversational in
-their familiarity. The combination gives rise to a relentlessly
-inventive stream of neology and malapropism.</p>
-<p>While the book resoundingly makes many insightful points by the conclusion, the
-story which serves as a vehicle for their delivery is, a collision of ideas,
-introducing entirely new and unexplored premises at the 11th hour, which
-peter out, ignored and unresolved, by the final page. The jest continues
-on, I suppose.</p>
-<p>The insidious footnotes for which Wallace's writings are well-known do
-not serve to streamline the prose by separating out incidental
-annotations, but instead seem specifically employed to elevate the
-reader's awareness of the footnotes themselves. Including them in the
-main body of the text would allow for the possibility of a busy reader
-failing to give each pithy addendum it's full, weighty consideration.
-Wallace cunningly obviates this possibility, by discreetly giving pause
-to any reader assiduously trying to do their best with a challenging
-book, requiring them to invoke the titillating ritual of thumbing
-forward a literal thousand pages or so, giving an involuntary moment of
-rest in the narrative in which the reader may properly anticipate the
-mysterious text to be revealed while they dereference the footnote's
-numeric identifier, and then a second pause afterwards to properly
-digest and appreciate, while they thumb a literal thousand pages back
-again to find where they left off. Three hundred and eighty eight times,
-no less. Plus sub-footnotes, obviously. Some of these are pages-long
-tomes of critically insightful dialog between major characters. Many
-others are completely irrelevant technical specifications. I have to
-ask, what the fuck is going on here? Does this really make the novel
-somehow better? While I laughed and cried about the content of many of
-the footnotes, I remain unconvinced by the mechanism of their delivery.</p>
-<p>I rant about these aspects of style because these are definitely the
-first impressions any reader will have. Getting into the book <a href="http://kottke.org/09/03/growing-sentences-with-david-foster-wallace">does
-require a little
-work</a>.
-But fortunately Wallace more than provides the incentive to do so. The
-book ranges over many areas, but is mostly about addiction, in its many
-forms, and its relationship to freedom of will and to happiness. These
-are deep and interesting topics, and are unflinchingly explored with a
-very keen eye. For every one of the annoyances mentioned above, the book
-provides powerful rewards for those who stick it out. The
-heart-wrenching depictions of people going through the utter destruction
-of their humanity are as touching and insightful as anything I have
-read.</p>
-<p>There are some problems or tasks in life which are small enough that an
-individual can overcome them by force of will, grinding down the problem
-until it is flattened and overcome. This approach fails, however, when
-the problem is too large or too hard. Some problems cannot be crushed by
-any individual. To navigate past them requires that, instead of trying
-to demolish the problem, the individual must instead mould themselves to
-fit around the problem's existing contours. People emerge on the other
-side of these experiences triumphant but sober - having been changed to
-their core by the experience. I consider <em>Infinite Jest</em> to belong to
-this latter class of experience. From the base-camp of its 981 pages
-(plus 98 of footnotes), it is intimidating and uncompromising. You love
-it and hate it in equal measure, and it makes no attempt to pander to
-the former. But as I ploughed on, through it, week after week after
-week, I grew to enjoy it more and more and more. I began to see
-reminders of it everywhere I looked. I spotted echoes of its style in
-the speech of friends who are fans of Wallace. It began, very subtly, to
-infect my own speech and writing. The topics it covered touched me to
-the core, changing my outlook on deep issues such as religion. By the
-time I reached the very last page I emerged, bruised and weary, but also
-tremendously excited - I actually flipped it right back and re-read the
-first few chapters all over again.</p>
-<p>Now for perhaps the greatest test to date of my supposedly
-subjectivity-proof rating system. Here goes:</p>
-<p>Rating:</p>
-<p>10/10: If you are ready for a challenge, that entertains and wrenches in
-equal measure, stretching you, changing your definitions, taking you on
-a tour of regions you never knew existed. It will make you laugh and it
-will make you cry. It will leave you a different person than when you
-began.</p>
-<p>0/10: If you can't be bothered.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/letter-to-my-member-of-european-parliament-proposed-copyright-extension/" class="u-url">Letter to my Member of European Parliament : Proposed Copyright Extension</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/letter-to-my-member-of-european-parliament-proposed-copyright-extension/" rel="bookmark">
-            <time class="published dt-published" datetime="2009-03-19T14:32:20-05:00" itemprop="datePublished" title="2009-03-19 14:32">2009-03-19 14:32</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>Thursday 19 March 2009</p>
-<p>Dear Baroness Ludford, (<strong>Update</strong>: This was sent to all eleven of my
-MEPs)</p>
-<p>I am writing with reference to the European Parliament's vote on
-copyright extension for sound recordings, due to take place on March
-23rd.</p>
-<p>As you know, this is a complex issue, but I shall try my best to keep
-this short, I know you must be busy.</p>
-<p>Amongst the justification for this particular extension to the term of
-copyrights, is the idea that artists need more protection, particularly
-towards the end of their lives when their income from royalties might
-dry up as their copyrights expire.</p>
-<p>This is misleading in the extreme. Under the current 50 year term, an
-artist recording at age 25 will be protected until age 75, and any
-artist who records throughout their lifetime will be protected until
-many decades beyond their death.</p>
-<p>There is no need whatsoever to extend the term in order to benefit or
-incentivise artists.</p>
-<p>In fact, as everyone knows, artists in practice almost never end up
-owning the copyrights to their own works - the labels do. While artists
-and labels are aligned in the desire to sell as many records as
-possible, they are in direct opposition when it comes to dividing up the
-proceeds. The majority of the income from sales goes to the labels,
-because they have such an overwhelmingly dominant position of power in
-the relationship. No label is reliant upon any individual artist, while
-every artist is very much dependant on their label, to whom they are
-tied by contract for many years. Strengthening copyright only
-strengthens the position of the copyright owner, ie. the labels, at the
-expense of what little leverage the artist may have. Extending the term
-of copyright only enhances the labels' income, not the artists.</p>
-<p>It is not the role of copyright to be a protectionist measure to support
-labels who are having to adjust their business models in these times of
-great change. The last thing we need to do is to construct laws which
-chain Europe's creative industries to last-century modes of operation,
-at precisely a time when the current tumult will reveal as yet undreamed
-of exciting new ways of doing business.</p>
-<p>As you know, copyright is intended to stimulate the creation of new
-creative works, by enabling the artist to earn an income from their own
-creations.</p>
-<p>There exists significant evidence to suggest that stronger copyright may
-actually inhibit the production of creative work, by allowing
-monopoly-level profits to be reaped from ever smaller amounts of
-creative output. The composer Verdi is notable for suddenly decreasing
-his creative output when copyright laws over music were introduced in
-18th century Italy - his personal correspondence indicates that he
-simply had to work less because he was earning more from his earlier
-compositions. (note that he retained copyright over his own work.)</p>
-<p>Similarly, there is the very vital and oft-overlooked influence of the
-creative environment which our society fosters. It could well be that
-freedom to borrow and build upon inspiration from other artists is a
-vital input to the engines of creativity, and to encourage fledgling
-artists. By way of anecdotal evidence I say it would not be very
-controversial to suggest that the last great English composer of the
-Baroque period was Handel, who coincidentally died around the same year
-copyright over music was introduced in England. After that, there is a
-dearth of truly top-class composers from England, right up until the
-20th century. Meanwhile Germany, too preocupied with invasions and
-reforging of the nation to introduce copyright laws over music, went on
-to produced greats like Bach, Mozart and Beethoven, in a succession of
-creative gear-shifts which formed the romance and classical eras, all
-done with no copyright over music. *1</p>
-<p>I apologise if I have been unable to express my points very succinctly,
-but I hope I have made given you some reasons to consider rejecting this
-extension of the copyright term, or at least to consider assessing it in
-the light of evidence over its theorised effects, rather than the
-deliberately misleading suppositions put forward by those representing
-the special interests who stand to directly benefit from the proposal at
-the expense of artists and of the rest of society.</p>
-<p>With all my gratitude and respect for the work you and your fellow MEPs
-have done and will continue to do to resolve these issues,</p>
-<p>Yours sincerely,</p>
-<p>Jonathan Hartley</p>
-<p>*1 See this February 2009 Harvard paper which notes:</p>
-<blockquote>
-<p>"An attempt to determine the impact of legal changes on entry into
-composing is inconclusive. The paper shows, however, that a golden age
-of musical composition nevertheless occurred in nations that
-lackedcopyright protection for musical works."</p>
-</blockquote>
-<p><a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1336802">http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1336802</a>
-The paper is summarised persuasively in an online news article here:</p>
-<p><a href="http://www.techdirt.com/articles/20090308/1022324034.shtml">http://www.techdirt.com/articles/20090308/1022324034.shtml</a></p>
     </div>
     </article>
 </div>

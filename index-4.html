@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!">
+<meta name="description" content="A website devoted to oneself has been described — by my own Father, no less — as the greatest act of hubris. Welcome aboard!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Made out of meat (old posts, page 4) | Made out of meat</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -77,7 +77,102 @@
 
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/facade/" class="u-url">Façade</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/generics-considered-harmful/" class="u-url">Generics Considered Harmful</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/generics-considered-harmful/" rel="bookmark">
+            <time class="published dt-published" datetime="2007-06-30T15:03:34-05:00" itemprop="datePublished" title="2007-06-30 15:03">2007-06-30 15:03</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>Ken Arnold posted about the <a href="http://weblogs.java.net/blog/arnold/archive/2005/06/generics_consid_1.html">problems with
+generics</a>,
+namely that they substantially increase code complexity without
+providing commensurate benefits.</p>
+<p>He's spot on - generics are the programming language feature that never
+should have happened, and I speak as someone who, when I was a heavy
+user of C++, <em>loved</em> generics. Even now I yearn for the elegant
+consistency of the Standard Template Library. But the points Ken makes
+from a Java perspective apply equally well to C++, and C# as well. That
+generics increase both the semantic and syntactic complexity of code is
+undeniable. Their benefit as a runtime type-checking mechanism <em>does</em>
+prevent - or at least help diagnose - certain classes of bug. But these
+bugs are not generally especially common, nor difficult to diagnose or
+fix in the first place. This can be seen quite clearly when considering
+that dynamic languages, which enforce no type checking at all, do not
+suffer in development effort nor code maintainability as a result - if
+anything, they demonstrate the converse.</p>
+<p>One benefit that Ken doesn't mention is the use of generics to signal a
+programmer's intent - to make a collection homogeneous is, to a limited
+extent, to make it self-documenting. Again though, this benefit is small
+compared to the complexity costs.</p>
+<p>When I started typing I thought I had more of a point. Ho hum.</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/configuration-vs-customisation/" class="u-url">Configuration vs Customisation</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/configuration-vs-customisation/" rel="bookmark">
+            <time class="published dt-published" datetime="2007-06-29T18:19:22-05:00" itemprop="datePublished" title="2007-06-29 18:19">2007-06-29 18:19</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>I loved a <a href="http://geothought.blogspot.com/2007/06/thoughts-on-ges-next-generation-system.html">recent
+post</a>
+by GIS luminary Peter Batty about forthcoming developments in the GIS
+industry. However, I was struck by his allusions to a future release of
+Smallworld which would dispense of the problems caused by the common
+practice of individual clients writing custom software to tailor the
+system to their specific needs, by allowing sufficient data-driven
+customisation out of the box. I wrote a response which I think I'm going
+to post here as well. Suck it up.</p>
+<p>My interest and excitement was tinged with a frisson of trepidation, at
+the description of the configurable GIS behaviour. I know there's a
+whole phalanx of very smart engineers at GE, who are no doubt
+immeasurably more cognisant of the following issues than myself. But, as
+is my wont, I'm not going to let that get in the way of an opportunity
+for a jolly good rant, so here goes.</p>
+<p>Obviously data driven behaviour is brilliant. However, it's only good up
+to a point. Once the behaviour in question becomes complex enough (and a
+GIS definitely qualifies), there's a real risk of the <a href="http://worsethanfailure.com/Articles/The_Inner-Platform_Effect.aspx">Inner Platform
+effect</a>:
+In an effort to achieve the same levels of flexibility as the
+programming languages that it is designed to replace, the configuration
+system ends up replicating all their features - badly.</p>
+<p>Such an endeavour is caught between two stools. If it is insufficiently
+ambitious, the configuration will not be flexible enough to meet
+clients' needs. If it does manages to capture the power of the
+programming languages it replaces, then it is Turing complete, and all
+you have done is convert customisation using a standard, proven,
+well-known programming language into configuration using a ghastly
+proprietary language that is embedded within your configuration schema.</p>
+<p>In addition, creating such a configuration actually ends up being much
+harder for clients. It requires deep proprietary skills, as opposed to
+common skills like C#, and it cannot lean on any of the supportive
+ecosystem of tools and knowledge that an established language has built
+up over the years. Perhaps worst of all, it will *still* require
+software engineering skills to perform the configuration, and all the
+good software engineers will have run a mile.</p>
+<p>Like I say, no doubt there are smart people at GE who have been figuring
+out solutions to all this for years by now, but I'd have to hear what
+those solutions were before I'd trust such a system.</p>
+<p>To my way of thinking, the best solution to the problem is to
+acknowledge that the best way of specifying behaviour is to use a
+programming language - that is exactly what they were designed for.
+Trying to sidestep that is simply swimming against the current, and you
+need to embrace it. You want a domain specific language (DSL), so that
+it is concise and intuitive for clients, but you don't want it to be a
+proprietary language - that way lies madness. So what you need is to
+provide is a library that extends an existing, established language,
+making it into your GIS DSL. Creating DSLs from Python or Ruby is all
+the rage these days, and I believe the above chain of reasoning is why.</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/facade/" class="u-url">Façade</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -90,13 +185,15 @@
     </header><div class="e-content entry-content">
     <p><span style="float: left">
 <img alt="" src="files/2007/06/facade-game.jpg"></span></p>
-<p><em>by Procedural Arts (PC, 2006)</em> <img alt="spoilers" src="files/spoilers.svg"></p>
+<p><em>by Procedural Arts (PC, 2006)</em></p>
 <p><a href="http://www.interactivestory.net/">http://www.interactivestory.net/</a></p>
 <p><em>Façade</em> is an art and research project which aims to extend the remit
 of gaming, making a bold raid deep into rarely-explored territory. It
 opens with a voicemail, inviting you to visit old friends, and then
 presents the player with a first-person view from outside your caller's
-apartment door. Stepping up briskly, I was just getting to grips with
+apartment door.</p>
+<p><span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"><b>spoilers</b></span></p>
+<p>Stepping up briskly, I was just getting to grips with
 the mouse cursor's context-sensitive prompt to knock on the door, when I
 began to discern the muffled but unmistakable sounds of an argument
 going on inside. The familiar sinking feeling invoked as you screw up
@@ -385,199 +482,6 @@ conventional notation. Unfortunately, this seems to be something they
 have singularly failed to do. By failing to adopt and recommend a single
 notation, they seem to be ensuring that none of their ideas will ever
 gain any traction.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/copenhagen/" class="u-url">Copenhagen</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/copenhagen/" rel="bookmark">
-            <time class="published dt-published" datetime="2007-06-08T10:24:50-05:00" itemprop="datePublished" title="2007-06-08 10:24">2007-06-08 10:24</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p><img alt="Flag of Denmark" src="files/2007/06/flagofdenmark.png"></p>
-<p>Spent last weekend in lovely Copenhagen, courtesy of our
-native guide, Susan's friend Rasmus. The ever genial Witt Mathot, and
-his sidekick Mike, were also in town giving some GIS Server training
-course. Consequently I spent Monday sickasadog. Quite possibly I will
-never be the same again. Regardless, the city was terrific and its
-inhabitants warm, genuine and kind, even after an <a href="http://news.bbc.co.uk/sport2/hi/football/internationals/6715785.stm">outrageous
-travesty</a>
-inflicted by Sweden on the football pitch. Hurrah for bastions of
-civilisation, even though their politicians are, by all accounts, going
-down the pan just as fast as ours are. Through the whole weekend, I only
-said 'Dutch' when I meant 'Danish' once, which by my standards makes me
-a beacon of informed, considerate enlightenment. Defining memory:
-Pleasant post-party walks home through the city in the dawn sunlight,
-amongst streams of happy, chatting, cycling people all doing the same.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/game-on/" class="u-url">Game On: Origins</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/game-on/" rel="bookmark">
-            <time class="published dt-published" datetime="2007-05-28T12:03:47-05:00" itemprop="datePublished" title="2007-05-28 12:03">2007-05-28 12:03</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>The lovely Susan and I managed to nip into the
-<a href="http://www.sciencemuseum.org.uk/exhibitions/gameon/">Game On</a>
-exhibit at the
-<a href="http://www.sciencemuseum.org.uk/">Science Museum</a>,
-back in February,
-just before it ended. I was so glad that we did - what a delight it was!
-I couldn't believe the assemblage of classic hardware they had packed
-into those rooms, all working and playable.</p>
-<p>I wanted to write a lovingly detailed description of all the games we
-found therein, wallowing in nostalgia and techno-fetishism. But in the 3
-months since I first wrote the above paragraph, I've never got around to
-completing it, so the following annotated list of my personal highlights
-from the first section will have to suffice for the moment, though it is
-naught but a gnarled stub of the monument I had envisaged.</p>
-<h5>Spacewar! (MIT, 1962)</h5>
-<p><img alt="Spacewar! on the PDP-1's oscilloscope-like display." src="files/2007/05/sw.jpg"><em>Spacewar! on the PDP-1's oscilloscope-like display.</em></p>
-<p>Not just the strongest entry for the hotly-contested title of 'first
-ever computer game', but actually by far and away the most <em>fun</em> of any
-of the contenders, featuring a depth of gameplay that wouldn't be
-matched until <em>Defender</em>, nearly 20 years later. A two player deep-space
-duel with Newtonian physics, which remains surprisingly playable even
-today. About 200 hours of work went into writing the initial version,
-which was then refined with touches such as a background starfield which
-maps every star from the real night sky of fifth magnitude or brighter,
-precessing slowly to display all the well-known constellations as the
-game progresses. The Game-On exhibit had the original hardware on show,
-a defunct PDP-1 the size of a Hummer, which ran at 0.2MHz. In an
-inadvertent demonstration of Moore's Law, a playable simulacrum of the
-game itself was provided on a six-inch Vectrex from the '80s.</p>
-<h5>Pong (Atari, 1972)</h5>
-<p><img alt="Pong (1972)" src="files/2007/05/pong-01.png"></p>
-<p>Nolan Bushnell founds Atari, and when the local bar reports his first machine
-to be 'broken', it turns out to be due to its innards overflowing with
-quarters. Before my time, this one, but a clear indicator of things to
-come. Interestingly, many of the subsequent incarnations of Pong, for
-home consoles and the like, didn't play as well as this original model,
-since it was constructed using dedicated analog electronics, which
-enabled a rapid framerate, and commensurate fluidity of gameplay, which
-could not be matched by software implementations for years to come.</p>
-<h5>Space Invaders (Taito, 1978)</h5>
-<p><img alt="Space Invaders" src="files/2007/05/wspace_invaders.png"></p>
-<p>Triggered coin shortages in Japan, prompting the government to quadruple the
-supply of 1 Yen coins. To this day the cultural resonance lives on, as
-the French urban street artist 'Invader' is still placing his discreet
-mosaics in public places around the world, returning only when local
-authorities scrape them off, to put a small white number where the
-invader used to be. I was never quite as massively captivated by it as
-by other games, although no doubt my parents would protest that was only
-because 10p coins were in such short supply for my seven-year old self.
-I however, shall stick to my story, that perhaps the blatantly
-predictable gameplay proved fractionally less of a lure than other,
-subsequent titles that left a little more to the imagination.</p>
-<h5>Asteroids (Atari, 1979)</h5>
-<p><img alt="Asteroids" src="files/2007/05/asteroids.png"></p>
-<p>A clear descendant of the original <em>Spacewar</em>, featuring deep-space based
-Newtonian combat rendered with rotational vector graphics which afford
-an austere Kubrickian elegance to the presentation. In common with many
-games of this vintage, the terrific bass thumps and distinctive chirps
-and warbles of the sound effects were produced using custom analog
-electronics, specifically designed for the game. The combination is
-dynamite, and Asteroids went on to become Atari's greatest selling game
-of all time, tempting ten year olds such as myself into countless hours
-spent lurking around the screen edges, dreaming of a high-stakes
-lifestyle out beyond the Kuiper belt in a singleship, hunting down those
-high-scoring UFOs.</p>
-<h5>Pac Man (Namco, 1979)</h5>
-<p><img alt="Pac-Man" src="files/2007/05/pac.gif"></p>
-<p>"If computer games affected our behaviour, then by now there'd be a
-generation that had grown up running around in darkened rooms, munching
-magic pills and listening to repetitive electronic music - oh, hang on."</p>
-<h5>Missile Command (Atari, 1980)</h5>
-<p><img alt="Missile Command" src="files/2007/05/missile_a.png"></p>
-<p>The game's original design tasked the player with the defence of American
-west coast cities, from San Diego to San Francisco, while unending waves
-of nukes rained down like fireflies. Cold war tensions made that
-scenario a little too chilling for comfort, so the game was re-cast with
-a science-fiction setting. The result, with immaculate use of a
-then-novel trackball controller, and seismic sound effects, constituted
-a classic that remained a prominent and profitable entry in arcades for
-fifteen years after its release, and remains an inspiration for modern
-games such as Defcon (PC, 2006).</p>
-<h5>Battlezone (Atari, 1980)</h5>
-<p><img alt="Battlezone" src="files/2007/05/800px-arcade-atari-battlezone1.png"></p>
-<p>A trailblazing first-person perspective 3D virtual reality, and famously
-adapted by the US Army to train gunnery crews of the Bradley Fighting
-Vehicle. Myths surrounding the game abounded, of increasingly esoteric
-enemies that could be encountered with prolonged play, of continued
-progress towards the distant mountains leading to the exploration of
-exotic terrain, and the discovery of factories which were producing the
-endless supply of enemy tanks rolling your way. In reality, the hardware
-was hard-pressed to perform the required 3D calculations for even the
-simple surroundings presented at the start of the game, and there was no
-more content than could be seen within five minutes of that. And yet,
-the stark scenarios it presented blossomed within the imagination of my
-young self, offering possibilities for the presentation of limitless
-worlds, to anyone who could bring with them but a modicum of
-willing-suspension.</p>
-<h5>Defender (Williams, 1980)</h5>
-<p><img alt="Get away from me!" src="files/2007/05/defender1.gif" title="Get away from me!"></p>
-<p>While its contemporaries could often be mastered by careful, methodical
-play, memorising patterns, and the occasional bout of dexterity,
-<em>Defender</em> proved to be the ultimate test of reactions, spatial
-awareness and hand-eye skill. Once underway, the game becomes a non-stop
-roller-coaster of pant-wettingly tense action, as your gymnastically
-maneuverable craft, spitting pyrotechnic plutonium death, carefully
-rescues fragile humanoids from a sky full of of the most fiendish,
-purposeful, body-snatching, god-damned alien sons-of-bitches to ever be
-rendered in pixel. Clearly the hatred in me lives on.</p>
-<h5>End of the Early Arcade Scene</h5>
-<p>For me, Defender marks a watershed in the industry, prior to which games
-developers had to go through extraordinary contortions in order to coax
-the primitive hardware of the times into producing anything coherent on
-the screen at all. As a result, the games of the era were forced to
-model simple worlds, depicted using visuals that were highly stylised,
-to say the least. To this day I find a kind of beauty in the abstract
-minimalism that this required, a kind that, with occasional exceptions,
-is missing from games of later generations.</p>
-<p>The game developers of the day were more inventors than engineers or
-authors. Their creativity was necessarily of a predominantly
-left-brained kind, but as is so often the case, in being channeled by
-the technical restrictions they faced, that creativity responded by
-seeking out nooks and crannies in which to flourish, and then leaping
-forth, blossoming in unexpected directions, producing games with rude,
-brash exteriors, but nonetheless exuding a rugged and determined charm,
-lurching with barely contained excitement from one harebrained idea to
-the next.</p>
-<p>Defender in many ways marks the culmination of this era. Primary author
-Eugene Jarvis' legendary programming efforts wrung incredible results
-from the paltry hardware resources at his disposal, while introducing
-concepts such as the horizontally-scrolling wraparound landscape, the
-tactical awareness granted by the radar, the smart bomb - which
-perfectly offset the otherwise ruthlessly difficult play. All of these
-would remain staples in the industry for decades to come. Each one,
-arguably, an inevitable invention, an idea who's time had come, an mere
-incremental development of the exploration of virtual space that nascent
-gaming represented. But nonetheless, each one, inarguably, had never
-been done before. To bring them all together in a single sustained
-creative outburst represented a peak, a marriage of engineering, art,
-business and frivolity that had never previously been attempted.</p>
-<p>By 1981, just one year after the release of Defender, the hardware
-quickly standardised and evolved such that it no longer created such
-intrusive restrictions on creativity. The business model had been well
-established, the market assuredly huge and growing every year. The risks
-and the difficulties overcome, a mass of new game companies moved in,
-flooding the market with uninspired, profit-driven efforts and mediocre
-imitations. Programmers were relegated to programming, artists and
-modellers took over the visuals, and what should have been the central
-role, that of game design, fell in the cracks, while the other former
-partner in the creative enterprise, the players who had previously
-supplied the imagination, were made redundant.</p>
-<p>It wasn't all doom and gloom, however (no pun intended.) In the midst of
-the impending '80s game boom, there were plenty of gems, once one
-filtered through all the dross. I've found this write-up most enjoyable,
-so maybe I'll write some more about that next week...</p>
     </div>
     </article>
 </div>

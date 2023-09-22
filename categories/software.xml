@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 18:34:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Illustrating Uses of IBM Cloud Security Groups</title><link>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;blockquote&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 04:08:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Illustrating Uses of IBM Cloud Security Groups</title><link>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;blockquote&gt;
 &lt;p&gt;I wrote this high-level public-facing guide while employed by IBM, creating
 the security groups feature for IBM Cloud. It
 &lt;a href="https://web.archive.org/web/20210418195246/https://www.ibm.com/cloud/blog/illustrating-uses-ibm-cloud-security-groups"&gt;used to reside&lt;/a&gt;
@@ -163,7 +163,7 @@ accommodate many others. For more information, see
 Senior Cloud Developer&lt;/p&gt;
 &lt;p&gt;&lt;span style="float: none"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;</description><category>cloud</category><category>networking</category><category>security</category><category>software</category><guid>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</guid><pubDate>Wed, 23 Aug 2023 02:33:47 GMT</pubDate></item><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
+&lt;p&gt;&lt;/p&gt;</description><category>cloud</category><category>geek</category><category>networking</category><category>security</category><category>software</category><guid>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</guid><pubDate>Wed, 23 Aug 2023 02:33:47 GMT</pubDate></item><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
 nose and do a force push. Maybe the project requires contributions to be
 rebased or squashed. Maybe we pushed the nuclear launch codes. But there are
 failure modes:&lt;/p&gt;
@@ -257,7 +257,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;gpf
 $
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>Structured Pattern Matching in Python</title><link>https://www.tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
+&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>Structured Pattern Matching in Python</title><link>https://www.tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
 &lt;a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement"&gt;structured pattern matching&lt;/a&gt;
 when it was added in Python 3.10 a couple of years ago, and have studiously
 avoided it ever since. It seemed like a language feature that's amazingly
@@ -766,7 +766,7 @@ effectiveness in assembling great individuals to create a great team.&lt;/p&gt;
 &lt;p&gt;But in my personal experience, there is a whole lot &lt;em&gt;more&lt;/em&gt; value in creating a
 great team by instilling the right values, and then watching the members
 visibly level each other up, producing a succession of great individuals,
-and only subsequently attracting more of the same.&lt;/p&gt;</description><category>culture</category><category>geek</category><category>greatness</category><category>literature</category><category>software</category><category>vonnegut</category><guid>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</guid><pubDate>Mon, 01 Jul 2019 02:28:04 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
+and only subsequently attracting more of the same.&lt;/p&gt;</description><category>culture</category><category>geek</category><category>software</category><category>vonnegut</category><guid>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</guid><pubDate>Mon, 01 Jul 2019 02:28:04 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
 for it, called "Announce":&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/tartley/rhythmbox-plugin-announce"&gt;https://github.com/tartley/rhythmbox-plugin-announce&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Every time a new song starts to play, it announces the title using
@@ -812,7 +812,7 @@ full of packages. Point pip at it using
 'packages' directory could be checked into your project's repo, so that
 once you've checked a project out, you have everything you need to
 deploy to local VMs, even with no network connection at all. I wrote
-about this &lt;a href="https://www.tartley.com/pip-install-lightspeed-and-bulletproof"&gt;a while ago&lt;/a&gt;.&lt;/p&gt;
+about this &lt;a href="https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof"&gt;a while ago&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; Building your code separately on each host will cause
 consistency issues&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;So don't install dependencies using source packages, use wheels instead.

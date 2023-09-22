@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about graphics)</title><link>https://www.tartley.com/</link><description>Writing programs to generate images.</description><atom:link href="https://www.tartley.com/categories/graphics.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 18:34:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about graphics)</title><link>https://www.tartley.com/</link><description>Writing programs to generate images.</description><atom:link href="https://www.tartley.com/categories/graphics.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 03:37:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
 geometry to drive OpenGL from Python.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python"&gt;&lt;em&gt;&amp;lt;&amp;lt; Back to part 1&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Last time we got as far as creating some instances of our super-simple
@@ -235,7 +235,7 @@ the best performance out of PyOpenGL. I've been back and updated the
 performance stats in this post, and hope to make another post about this
 at some point when I understand what I was doing wrong.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The demonstrated&lt;/em&gt; &lt;em&gt;code&lt;/em&gt; &lt;em&gt;is available at
-&lt;a href="https://github.com/tartley/gloopy"&gt;https://github.com/tartley/gloopy&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>presentations</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</guid><pubDate>Tue, 03 Aug 2010 15:04:43 GMT</pubDate></item><item><title>Flying High: Hobbyist OpenGL from Python</title><link>https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;This is a transcript-from-memory (what I wish I'd said) of the talk I
+&lt;a href="https://github.com/tartley/gloopy"&gt;https://github.com/tartley/gloopy&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>presentations</category><category>pyglet</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</guid><pubDate>Tue, 03 Aug 2010 15:04:43 GMT</pubDate></item><item><title>Flying High: Hobbyist OpenGL from Python</title><link>https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;This is a transcript-from-memory (what I wish I'd said) of the talk I
 just gave at &lt;a href="http://www.europython.eu/"&gt;EuroPython&lt;/a&gt; 2010, for which I
 owe a debt of gratitude to Richard Jones for his last-minute moral
 support while wrestling with projectors and refresh rates; and to the
@@ -680,7 +680,7 @@ more complex shape. This will allow us to use algorithmic means to
 produce more fun geometry, and will also help us draw more complex
 shapes, composed of many simpler shapes, without requiring several
 separate OpenGL function calls for each of the simple shapes.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.tartley.com/posts/flying-high-opengl-from-python-part-2"&gt;On to Part 2 &amp;gt;&amp;gt;&lt;/a&gt;&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>presentations</category><category>python</category><guid>https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python/</guid><pubDate>Sat, 31 Jul 2010 19:58:30 GMT</pubDate></item><item><title>Loving EuroPython Tutorials</title><link>https://www.tartley.com/posts/loving-europython-tutorials/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've been loving the two days of tutorials preceding the EuroPython
+&lt;p&gt;&lt;a href="https://www.tartley.com/posts/flying-high-opengl-from-python-part-2"&gt;On to Part 2 &amp;gt;&amp;gt;&lt;/a&gt;&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>presentations</category><category>pyglet</category><category>python</category><guid>https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python/</guid><pubDate>Sat, 31 Jul 2010 19:58:30 GMT</pubDate></item><item><title>Loving EuroPython Tutorials</title><link>https://www.tartley.com/posts/loving-europython-tutorials/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've been loving the two days of tutorials preceding the EuroPython
 conference. This morning I attended &lt;a href="http://www.mechanicalcat.net/richard/log"&gt;Richard
 Jones&lt;/a&gt;' splendid &lt;em&gt;Introduction
 to Game Programming&lt;/em&gt;. It was an absolute pleasure to be walked through
@@ -700,7 +700,7 @@ flickery animated engine thrust, that made me gurgle with delight.&lt;/p&gt;
 engine thrust, and created the asteroids themselves entirely from
 scratch in Gimp. They are just rotatable bitmaps, albeit designed in
 homage of vector graphics of yore, complete with simulated CRT glow.
-Brilliant!&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/loving-europython-tutorials/</guid><pubDate>Mon, 19 Jul 2010 05:08:53 GMT</pubDate></item><item><title>More OpenGL from Python</title><link>https://www.tartley.com/posts/more-opengl-from-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;My talk, &lt;em&gt;Flying High : Hobbyist OpenGL from Python&lt;/em&gt;, was accepted for
+Brilliant!&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>graphics</category><category>pyglet</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/loving-europython-tutorials/</guid><pubDate>Mon, 19 Jul 2010 05:08:53 GMT</pubDate></item><item><title>More OpenGL from Python</title><link>https://www.tartley.com/posts/more-opengl-from-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;My talk, &lt;em&gt;Flying High : Hobbyist OpenGL from Python&lt;/em&gt;, was accepted for
 EuroPython 2010, \o/. I don't want to reveal the best bits of my talks,
 but to whet people's appetite, this is some of what my initial
 preparation involved.&lt;/p&gt;
@@ -1086,7 +1086,7 @@ problem. Since the icons on the radar on FlashBang's video don't seem to
 be scaled or rotated, maybe they could sidestep the problem by just
 displaying the icons at integer pixel co-ordinates? I don't really know
 anything about how their code works though, so I might be talking
-nonsense here.&lt;/p&gt;</description><category>graphics</category><guid>https://www.tartley.com/posts/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures/</guid><pubDate>Sun, 03 Jan 2010 21:33:10 GMT</pubDate></item><item><title>Opengl Shading Language</title><link>https://www.tartley.com/posts/opengl-shading-language/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+nonsense here.&lt;/p&gt;</description><category>graphics</category><category>pyglet</category><guid>https://www.tartley.com/posts/use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures/</guid><pubDate>Sun, 03 Jan 2010 21:33:10 GMT</pubDate></item><item><title>Opengl Shading Language</title><link>https://www.tartley.com/posts/opengl-shading-language/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="OpenGL Shading Language cover" src="https://www.tartley.com/files/2009/05/opengl-shading-language.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Randi J. Rost (2nd Edtion, 2006)&lt;/em&gt;&lt;/p&gt;
@@ -1101,7 +1101,7 @@ at PyCon, and now I feel as if I should have read this book years ago.
 Shaders solve many of the problems I've been happily messing with for
 ages, in ways that are easier to implement, more powerful, and more
 performant.&lt;/p&gt;
-&lt;p&gt;I &lt;a href="https://www.tartley.com/opengl-programming-guide-6th-ed"&gt;whined about the Red Book&lt;/a&gt;, but this
+&lt;p&gt;I &lt;a href="https://www.tartley.com/posts/opengl-programming-guide-6th-ed"&gt;whined about the Red Book&lt;/a&gt;, but this
 "Orange" OpenGL Shading Language book is brill - just what I needed.
 Incisive without being overly terse, practical, and once it got into the
 chapters about applications of multidimensional Perlin noise it got me

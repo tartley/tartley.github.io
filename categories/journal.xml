@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about journal)</title><link>https://www.tartley.com/</link><description>Events of my life.</description><atom:link href="https://www.tartley.com/categories/journal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 18:34:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>New Laptop Time!</title><link>https://www.tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about journal)</title><link>https://www.tartley.com/</link><description>Events of my life.</description><atom:link href="https://www.tartley.com/categories/journal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 04:13:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fully Operational</title><link>https://www.tartley.com/posts/fully-operational/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Now witness the power of this fully armed and operational battle station.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="My desk featuring too many computers" src="https://www.tartley.com/files/2023/desk-with-computers.webp"&gt;&lt;/p&gt;
+&lt;p&gt;New job means new laptop means it's time to clean and re-org the desk.&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;Leftmost blue skies&lt;/dt&gt;
+&lt;dd&gt;Linux laptop (a free hand-me-down from a job ten years ago). Acting as the
+house Plex / streaming media server, usually tucked away more discreetly than
+this.&lt;/dd&gt;
+&lt;dt&gt;Left top green forest&lt;/dt&gt;
+&lt;dd&gt;Heavy duty work / gaming Linux laptop ("hardware bonus" from my last
+employer). Has been my primary work machine, but sounds like it's getting
+replaced by...&lt;/dd&gt;
+&lt;dt&gt;Left bottom spaceship drawing&lt;/dt&gt;
+&lt;dd&gt;Macbook Pro (Brand new! Just unwrapped yesterday. Thank you new employer
+&lt;a href="https://lambdalabs.com"&gt;Lambda&lt;/a&gt;!) Looks like this means I'm returning to
+developing on a Mac and VMs, after a full decade on Ubuntu &amp;amp; derivatives.
+I'm told Docker for Desktop now behaves better than it used to.&lt;/dd&gt;
+&lt;dt&gt;Left bottom, under the Mac&lt;/dt&gt;
+&lt;dd&gt;You can sort of see the 10" whiteboard I use to combat ADHD by writing a
+sentence about what I'm &lt;em&gt;supposed&lt;/em&gt; to be working on, then I can spot it every
+few minutes and drag my mind back to the task in hand. (a technique described
+in the fabulous &lt;a href="https://gamkedo.gumroad.com/l/self-command/"&gt;Self Command by Chris
+DeLeon&lt;/a&gt;.&lt;/dd&gt;
+&lt;dt&gt;Center&lt;/dt&gt;
+&lt;dd&gt;Main monitor and wireless tenkeyless mechanical keyboard &amp;amp; mouse combo, all
+switchable to any of the laptops. Under the keyboard you can sort-of see the
+"Magic the Gathering" gaming mat (free from local gaming store's MtG lessons)
+pressed into duty as the world's most gigantic, beautiful, and luxurious mouse
+mat.&lt;/dd&gt;
+&lt;dt&gt;Right monitor, keyboard and mouse&lt;/dt&gt;
+&lt;dd&gt;are wired to the Windows gaming PC under the desk (not visible). The kiddo's
+current &lt;a href="https://store.steampowered.com/app/361420/ASTRONEER/"&gt;Astroneer&lt;/a&gt;
+session is visible. The monitor is switchable to any of the laptops.&lt;/dd&gt;
+&lt;dt&gt;Right tab&lt;/dt&gt;
+&lt;dd&gt;Absolute workhorse 12.6" Android tablet on which I do most of my reading, laid in the picture here just to be gratuitous.&lt;/dd&gt;
+&lt;/dl&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>keyboard</category><category>osx-dev</category><guid>https://www.tartley.com/posts/fully-operational/</guid><pubDate>Thu, 21 Sep 2023 15:51:12 GMT</pubDate></item><item><title>New Laptop Time!</title><link>https://www.tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="A laptop" src="https://www.tartley.com/files/2008/02/lappy.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;My employer, Canonical, has a "bring your own hardware" policy, trusting that
@@ -591,7 +626,391 @@ sending replacements until Newegg got involved. Seems wisest to skip this.&lt;/p
 &lt;p&gt;&lt;img alt="Memory on sale in Newegg - legit" src="https://www.tartley.com/files/2022/memory-on-sale-legit.webp"&gt;&lt;/p&gt;
 &lt;p&gt;Yes! DDR4 in a SoDIMM package, 2x16GB modules at 3,200MHz and 18CL. The latency
 isn't quite as good, but it sounds legit, so I'll take it!&lt;/p&gt;
-&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>linux</category><guid>https://www.tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>Rubik's Beginner</title><link>https://www.tartley.com/posts/rubiks-beginner/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>linux</category><guid>https://www.tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>US Civics for Naturalization Quiz</title><link>https://www.tartley.com/posts/basic-us-civics/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I had to learn 100 questions and answers for my US Naturalization civics
+quiz this week, and my default way of learning something is to organize the information
+into an essay. Not the best work I've ever done, but it got me through the
+test, so good enough. Some of these assertions seem somewhat debatable, but my
+job here is to learn what the test tells me are the right answers. In some
+places I've elaborated around the edges with extra info that isn't on the test,
+but helps me to contextualize and remember.&lt;/p&gt;
+&lt;h2&gt;History&lt;/h2&gt;
+&lt;p&gt;The region now occupied by the US was originally settled by Native Americans,
+probably travelling from the Far East, around 15,000 years ago.&lt;/p&gt;
+&lt;p&gt;Modern Native tribes include Apache, Arawak, Blackfeet, Cherokee, Cheyenne,
+Chippewa, Choctaw, Creek, Crow, Hopi, Huron, Inuit, Iroquois, Lakota, Mohegan,
+Navajo, Oneida, Pueblo, Seminole, Shawnee, Sioux, and Teton.&lt;/p&gt;
+&lt;p&gt;European colonists came to America to escape persecution, in pursuit of religious
+and political freedom, and economic opportunity.&lt;/p&gt;
+&lt;p&gt;The Atlantic slave trade took Africans to the American colonies as slaves. This
+practice was widespread by the time of the American Revolution.&lt;/p&gt;
+&lt;p&gt;The colonists decided to fight for freedom from British rule because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;They didn't want to pay high taxes to the British government without representation.&lt;/li&gt;
+&lt;li&gt;They did not like the British army being quartered in their houses.&lt;/li&gt;
+&lt;li&gt;They wanted self-government.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By the time of the declaration of independence, there were thirteen colonies that
+became the initial thirteen United States:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Connecticut&lt;/li&gt;
+&lt;li&gt;Delaware&lt;/li&gt;
+&lt;li&gt;Georgia&lt;/li&gt;
+&lt;li&gt;Maryland&lt;/li&gt;
+&lt;li&gt;Massachusetts&lt;/li&gt;
+&lt;li&gt;New Hampshire&lt;/li&gt;
+&lt;li&gt;New Jersey&lt;/li&gt;
+&lt;li&gt;New York&lt;/li&gt;
+&lt;li&gt;North Carolina&lt;/li&gt;
+&lt;li&gt;Pennsylvania&lt;/li&gt;
+&lt;li&gt;Rhode Island&lt;/li&gt;
+&lt;li&gt;South Carolina&lt;/li&gt;
+&lt;li&gt;Virginia&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These States fought the American Revolutionary War against Great Britain.&lt;/p&gt;
+&lt;p&gt;In 1803 (27 years after the declaration of independence), the United States
+bought the Louisiana territory from France.&lt;/p&gt;
+&lt;h2&gt;Founding&lt;/h2&gt;
+&lt;h3&gt;Declaration of Independence&lt;/h3&gt;
+&lt;p&gt;The &lt;em&gt;Declaration of Independence&lt;/em&gt; declared the United States to be independent
+of, and free from, the rule of Great Britain. It was written by Thomas
+Jefferson, and adopted on July 4th, 1776.&lt;/p&gt;
+&lt;p&gt;It notes the right of all men to enjoy life, liberty and the pursuit of
+happiness.&lt;/p&gt;
+&lt;h3&gt;The American Constitution&lt;/h3&gt;
+&lt;p&gt;The supreme law of the land is the &lt;em&gt;constitution&lt;/em&gt;. It sets up and defines the
+government, and also enumerates the basic rights of American citizens and
+residents.&lt;/p&gt;
+&lt;p&gt;The idea of self-government is represented in the constitution's first three
+words: "&lt;em&gt;We the people...&lt;/em&gt;".&lt;/p&gt;
+&lt;p&gt;The constitution was written at the &lt;em&gt;constitutional convention&lt;/em&gt; of 1787, by
+the &lt;em&gt;Founding Fathers&lt;/em&gt;. Its passage was supported by the Federalist Papers,
+written by James Madison, Alexander Hamilton, and John Jay, under the pseudonym
+"&lt;em&gt;Publius&lt;/em&gt;", after &lt;em&gt;Publius Valerius Poplicola&lt;/em&gt;, a Roman aristocrat who led the
+overthrow of the monarchy to found the Roman Republic in 509 BC.&lt;/p&gt;
+&lt;p&gt;Benjamin Franklin is known as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Oldest member of the constitutional convention,&lt;/li&gt;
+&lt;li&gt;The first Postmaster General of the United States,&lt;/li&gt;
+&lt;li&gt;Writer of "Poor Richard's Almanac",&lt;/li&gt;
+&lt;li&gt;Starter of the first free libraries,&lt;/li&gt;
+&lt;li&gt;A US diplomat.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;George Washington is known as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The first President&lt;/li&gt;
+&lt;li&gt;The "Father of our Country"&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The original text of the constitution has since been modified by twenty-seven
+&lt;em&gt;amendments&lt;/em&gt;, each of which is numbered, and takes the form of an addition to
+the existing text.&lt;/p&gt;
+&lt;h2&gt;Rights and Responsibilities&lt;/h2&gt;
+&lt;p&gt;The first ten amendments are known as &lt;em&gt;"the Bill of Rights"&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The first amendment prohibits the government from infringing on the right of
+residents in the US to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Establish or practice any religion, or no religion at all.&lt;/li&gt;
+&lt;li&gt;Free speech.&lt;/li&gt;
+&lt;li&gt;Freedom of the press.&lt;/li&gt;
+&lt;li&gt;Peaceably assemble.&lt;/li&gt;
+&lt;li&gt;Petition the government for a redress of grievances.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The final four items above are together known as "freedom of expression".&lt;/p&gt;
+&lt;p&gt;In addition, the constitution establishes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The right to bear arms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;US citizens are granted additional rights that do not apply to all residents,
+including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Running for federal office&lt;/li&gt;
+&lt;li&gt;Voting in federal elections&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And US citizens are additionally assigned responsibilities:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jury service&lt;/li&gt;
+&lt;li&gt;Voting in federal elections&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Voting in federal elections is thus established as both a right and a
+responsibility.&lt;/p&gt;
+&lt;p&gt;The pledge of allegiance declares loyalty to the US flag and the United States.&lt;/p&gt;
+&lt;p&gt;Ways for citizens to participate in their democracy include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Voting&lt;/li&gt;
+&lt;li&gt;Join a political party&lt;/li&gt;
+&lt;li&gt;Help with a political campaign&lt;/li&gt;
+&lt;li&gt;Join a civic or community group&lt;/li&gt;
+&lt;li&gt;Give opinions to elected officials, such as calling Senators or Representatives.&lt;/li&gt;
+&lt;li&gt;Publicly support or oppose an issue or policy.&lt;/li&gt;
+&lt;li&gt;Run for office&lt;/li&gt;
+&lt;li&gt;Write to a newspaper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When becoming a naturalized US citizen, the oath of allegiance declares one will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Give up loyalty to other countries&lt;/li&gt;
+&lt;li&gt;Be loyal to the United States&lt;/li&gt;
+&lt;li&gt;Obey the laws of the United States&lt;/li&gt;
+&lt;li&gt;Defend the constitution and laws of the United States&lt;/li&gt;
+&lt;li&gt;Serve in the US military (if the law demands it)&lt;/li&gt;
+&lt;li&gt;Serve civil projects for the nation (if the law demands it)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All men resident in the USA must register for &lt;em&gt;selective service&lt;/em&gt; (a list from which
+draftees are chosen should the need arise) between the ages of 18 and 26.&lt;/p&gt;
+&lt;p&gt;The last day to submit federal income tax forms is April 15th.&lt;/p&gt;
+&lt;h3&gt;Voting rights&lt;/h3&gt;
+&lt;p&gt;The enfranchisement and disenfranchisement of different groups has been a
+moral and political issue throughout United States history.&lt;/p&gt;
+&lt;p&gt;The original constitution did not explicitly specify who was able to vote,
+and states demonstrated considerable diversity in whom they did or did not grant
+suffrage to. In particular, most states only granted the vote to white, male,
+property owners - about 6% of the population.&lt;/p&gt;
+&lt;p&gt;In the 1820s, attitudes and state laws shifted, to allow all white males to
+vote in most states, although some laws removing the poor's right to vote
+continued until the 20th century, and practices that disproportionately
+affect the poor's ability to vote continue today.&lt;/p&gt;
+&lt;p&gt;Several constitutional amendments successively modified who can vote,
+notably:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The 15th Amendment of 1870, in the wake of the Civil War and Emancipation
+  Proclamation, prevented the denial of voting rights based on a person's race.
+  This was effectively interpreted to mean that &lt;em&gt;men&lt;/em&gt; (not women) of any race
+  could vote. However, states continued to prevent the majority of African
+  Americans in the United States from voting, via Jim Crow laws, poll taxes,
+  literacy tests, grandfather clauses and the like. Only later in the 20th
+  century were these laws ruled unconstitutional.&lt;/li&gt;
+&lt;li&gt;The 19th Amendment of 1920 allowed women to vote. However, in practice, women
+  — who were rarely in control of independent sources of income —
+  were usually still prevented from voting by the same discriminatory practices
+  that prevented voting by poor or non-white men. For example, federal laws
+  preventing banks from denying women to hold bank accounts were not passed
+  until 1960. (France was a trailblazer in this, passing equivalent laws in
+  1881, while the UK trailed, at 1975.)&lt;/li&gt;
+&lt;li&gt;The 24th amendment of 1964 prohibited using a poll tax to control who could
+  vote in federal elections.&lt;/li&gt;
+&lt;li&gt;The 26th amendment of 1971 lowered the voting age from 21 to 18. This was
+  passed in response to Vietnam War protest, which noted that if draftees were
+  considered old enough to be sent to fight, they should also be old enough to
+  vote.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following section was not part of the USCIS civics test. But I'm including it
+because it's clear that although the Declaration asserted "all men are created
+equal", subsequent laws and behavior has severely curtailed that assertion when it
+comes to issues such as being allowed to vote. So, who currently is, and is
+not, allowed to vote? Sometimes the best way to understand something is to
+trace its contours, by enumerating the exceptions.&lt;/p&gt;
+&lt;p&gt;Those who are currently legally denied the right to vote, for reasons that seem
+potentially reasonable:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Those aged under 18.&lt;/li&gt;
+&lt;li&gt;Those deemed mentally "incapacitated" or "incompetent" by a conservatorship
+  process.&lt;/li&gt;
+&lt;li&gt;Illegal or undocumented immigrants (16 million people).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following people are also legally denied the vote, for reasons that I personally
+find unreasonable:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;US Citizens and nationals who reside in the United States territories that are
+  not States, such as Puerto Rico.&lt;/li&gt;
+&lt;li&gt;Washington DC residents (718,000 people) have had the right to vote in
+  presidential elections since 1961, but no congressional elections have been
+  held there since 1801.&lt;/li&gt;
+&lt;li&gt;Non-citizen residents of the United States such as myself (13 million
+  people). This includes legal aliens in good standing, such as foreign
+  spouses, asylum claimants and refugees, who might reside within the US,
+  paying taxes, for years or decades. Contrast this with the United Kingdom,
+  for example, where people in the similar category "with leave to remain" &lt;em&gt;are&lt;/em&gt;
+  able to vote.&lt;/li&gt;
+&lt;li&gt;The homeless (580,000 people) are often excluded from voting by residency
+  requirements, or by the inability to register without a mailing address or proof
+  of identity.&lt;/li&gt;
+&lt;li&gt;Current prisoners, in almost all states (5.5 million people). Some states
+  impose a lifelong denial of voting rights to anyone with a previous felony
+  record, which affects another 5.9 million people.&lt;/li&gt;
+&lt;li&gt;US Citizens who have never established residence in the United States may be
+  denied the vote by various states.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The above categories represent 28.8 million people, around 11 percent of
+the adult population, who currently have no legal right to vote for US government
+positions due to reasons I personally find controversial or wrong.&lt;/p&gt;
+&lt;h3&gt;Activists&lt;/h3&gt;
+&lt;p&gt;Susan B Anthony was a prominent activist for womens rights and civil rights.&lt;/p&gt;
+&lt;p&gt;Martin Luther King Jr. fought for civil rights, to try and provide equality for
+Americans of all races.&lt;/p&gt;
+&lt;h2&gt;Wars&lt;/h2&gt;
+&lt;p&gt;The United States has waged many wars, including:&lt;/p&gt;
+&lt;h4&gt;18th Century Wars&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;American Revolutionary War to free America from British rule.&lt;/li&gt;
+&lt;li&gt;Cherokee-American wars&lt;/li&gt;
+&lt;li&gt;Northwest Indian War&lt;/li&gt;
+&lt;li&gt;Quasi-War (a naval war, allied with Britain, against France &amp;amp; Guadeloupe)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;19th Century Wars&lt;/h4&gt;
+&lt;p&gt;56 official wars, mostly resulting in the genocide or internment of various
+indigenous Native American nations. Sometimes the United States was allied with
+or fighting against Great Britain, and sometimes on the soil of other foes such
+as the Ottoman Empire and Morocco, China, Mexico, Spanish Florida, the
+Philippines, Cuba, Puerto Rico, or Guam. Notable among these wars were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The War of 1812 against Great Britain&lt;/li&gt;
+&lt;li&gt;The Mexican-American war, in the disputed former Mexican territories of
+  Texas, New Mexico, California and regions of Mexico.&lt;/li&gt;
+&lt;li&gt;The American Civil War.&lt;/li&gt;
+&lt;li&gt;The Spanish-American war.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;The Civil War&lt;/h4&gt;
+&lt;p&gt;The American Civil War of 1861 to 1865 was fought between the United States and
+the Confederacy of Southern States, over the issues of whether slavery was to
+remain legal in the Southern States, upon which many southern white livelihoods
+and businesses depended. This is sometimes framed as an academic disagreement about
+"States Rights" to self-government, but I personally find it hard to interpret
+that as anything other than a disingenuous fig leaf.&lt;/p&gt;
+&lt;p&gt;Abraham Lincoln lead the Northern states to victory in the Civil War, and is praised
+for saving or preserving the Union. He presided over the Emancipation
+Proclamation which ostensibly freed the slaves, although many still suffer from
+ongoing repercussions and outright racism even up to the present day.&lt;/p&gt;
+&lt;h4&gt;20th Century Wars&lt;/h4&gt;
+&lt;p&gt;31 official wars, some against outstanding Native American nations, others in
+diverse locations such as Cuba, Nicaragua, Haiti, Dominican Republic, Russia,
+Mongolia, Korea, Vietnam, Laos, Lebanon, Cambodia, Grenada, Libya, Iran &amp;amp;
+Persian Gulf, Panama, Iraq, Kuwait, Saudi Arabia, Israel, Somalia, Bosnia,
+Herzegovina, Croatia, Haiti, and Serbia.&lt;/p&gt;
+&lt;p&gt;Notable amongst these were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;World War I, during which the president was Woodrow Wilson.&lt;/li&gt;
+&lt;li&gt;World War II, against Germany, Japan and Italy, during which the president
+  was Franklin D. Roosevelt. Eisenhower was a general in this war, and
+  subsequently went on to become President.&lt;/li&gt;
+&lt;li&gt;Korean War&lt;/li&gt;
+&lt;li&gt;Vietnam War&lt;/li&gt;
+&lt;li&gt;Persian Gulf War&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;During the Cold war, the main concern of the United States was, it says here,
+communism. I'd wonder whether 'mutually assured destruction' might be a
+contender, but that is not listed as a correct answer.&lt;/p&gt;
+&lt;h4&gt;21st Century Wars&lt;/h4&gt;
+&lt;p&gt;On 11th September 2001, terrorists attacked the United States by crashing
+commercial passenger airliners into the Pentagon in Virginia near Washington
+DC, and the twin towers of the World Trade Center, destroying them and killing
+nearly 3,000 people.&lt;/p&gt;
+&lt;p&gt;This atrocity was used as a pretext for the USA's subsequent wars in Afghanistan
+and Iraq, both of which ended disasterously. The USA has also engaged in 9 other
+wars thus far this century, including Libya, Somalia &amp;amp; Syria.&lt;/p&gt;
+&lt;h2&gt;Government&lt;/h2&gt;
+&lt;p&gt;The constitution grants the federal government power to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Print money.&lt;/li&gt;
+&lt;li&gt;Declare war.&lt;/li&gt;
+&lt;li&gt;Raise an army.&lt;/li&gt;
+&lt;li&gt;Make treaties.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The states are granted power to provide:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Protection in the form of police.&lt;/li&gt;
+&lt;li&gt;Fire departments.&lt;/li&gt;
+&lt;li&gt;Schooling and education.&lt;/li&gt;
+&lt;li&gt;Driver's licenses.&lt;/li&gt;
+&lt;li&gt;Zoning and land use.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The government defined by the constitution is divided into three branches:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The executive branch is formed by the President and their administration.&lt;/li&gt;
+&lt;li&gt;The legislative branch is formed by Congress.&lt;/li&gt;
+&lt;li&gt;The judicial branch is formed by the courts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The separation of powers between these three branches forms a system of checks
+and balances that prevents any one part of government from becoming too
+powerful.&lt;/p&gt;
+&lt;h3&gt;The Executive&lt;/h3&gt;
+&lt;p&gt;The President leads the executive branch. They sign bills into law, and have
+veto power over new laws. They are the Commander in Chief of the military.
+Presidents are elected for four year terms, in a vote that takes place in
+November.&lt;/p&gt;
+&lt;p&gt;The President appoints a Cabinet of advisors. If the President cannot serve,
+succession falls to the Vice President, and then to the Speaker of the House.&lt;/p&gt;
+&lt;p&gt;Other cabinet-level positions include Attorney General, and Secretaries of
+Agriculture, Commerce, Defence, Education, Energy, Health and Human Services,
+Homeland Security, Housing and Urban Development, the Interior, Labor,
+State, Transportation, the Treasury, and Veterans Affairs.&lt;/p&gt;
+&lt;p&gt;The President is currently Joseph Robinette Biden Jr (Democratic).&lt;/p&gt;
+&lt;p&gt;The Vice President is currently Kamala Harris (Democratic).&lt;/p&gt;
+&lt;p&gt;The Speaker of the House is currently Nancy Pelosi (Democratic).&lt;/p&gt;
+&lt;h3&gt;The Legislature&lt;/h3&gt;
+&lt;p&gt;Congress makes federal laws. It comprises two parts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The Senate.&lt;/li&gt;
+&lt;li&gt;The House of Representatives.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;The Senate&lt;/h4&gt;
+&lt;p&gt;The Senate comprises two senators from each state, yielding 100 total senators.
+Each senator represents the entirety of their state. Senators are elected
+for six year terms.&lt;/p&gt;
+&lt;h4&gt;The House of Representatives&lt;/h4&gt;
+&lt;p&gt;Each state is divided into a number of &lt;em&gt;congressional districts&lt;/em&gt;, the number
+of which depends on the population of the state. Each district sends a single
+representative to the House, whose job is to represent the people of their
+specific district. Currently, this yields a total of 435 representatives.
+Representatives are elected for two year terms.&lt;/p&gt;
+&lt;h3&gt;The Judicial branch&lt;/h3&gt;
+&lt;p&gt;The courts review and explain laws, resolves disputes, and decides whether
+laws contravene the constitution.&lt;/p&gt;
+&lt;p&gt;The "rule of law" states that every individual, no matter how highly-placed,
+must obey the law, as must the government itself.&lt;/p&gt;
+&lt;p&gt;The highest court in the land is the Supreme Court, which comprises nine
+justices, lead by Chief Justice John Glover Roberts Jr.&lt;/p&gt;
+&lt;h2&gt;States, Territories, and Geography&lt;/h2&gt;
+&lt;p&gt;The United States of America contains 335 million people, of whom around 261
+million are adults. The regions of the country comprise:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;50 States (the 48 &lt;em&gt;contiguous&lt;/em&gt; States, plus Hawaii and Alaska)&lt;/li&gt;
+&lt;li&gt;Washington DC, the capital city and federal district (690,000 people).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plus other territories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;American Samoa (43,000 people).&lt;/li&gt;
+&lt;li&gt;Guam (169,000 people).&lt;/li&gt;
+&lt;li&gt;Northern Mariana Islands (56,000 people).&lt;/li&gt;
+&lt;li&gt;Puerto Rico (3,286,000 people).&lt;/li&gt;
+&lt;li&gt;United States Virgin Islands (87,000 people).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For comparison, the least populated state, Wyoming, contains 581,000 people.&lt;/p&gt;
+&lt;p&gt;The Pacific Ocean is on the West Coast of the United States, while the Atlantic
+ocean is on the East Coast.&lt;/p&gt;
+&lt;p&gt;The two longest rivers within the United States are the Missouri and the Mississippi.&lt;/p&gt;
+&lt;p&gt;The Statue of Liberty is on Liberty Island, in New York Harbour, on the Hudson River
+near the south end of Manhattan in New York City.&lt;/p&gt;
+&lt;p&gt;States that border Canada are: Maine, New Hampshire, Vermont, New York, Pennsylvania,
+Ohio, Michigan, Minnesota, North Dakota, Montana, Idaho, Washington, and Alaska.&lt;/p&gt;
+&lt;p&gt;States that border Mexico are: California, Arizona, New Mexico, and Texas.&lt;/p&gt;
+&lt;p&gt;The flag has 50 stars to represent the 50 states, and 13 stripes to represent the
+initial 13 colonies.&lt;/p&gt;
+&lt;p&gt;The national anthem is &lt;em&gt;The Star-Spangled Banner&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Independence Day is celebrated every July 4th. Other national holidays are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;New Year's Day&lt;/li&gt;
+&lt;li&gt;Martin Luther King Jr. Day&lt;/li&gt;
+&lt;li&gt;Presidents' Day&lt;/li&gt;
+&lt;li&gt;Memorial Day&lt;/li&gt;
+&lt;li&gt;Independence Day&lt;/li&gt;
+&lt;li&gt;Labor Day&lt;/li&gt;
+&lt;li&gt;Columbus Day&lt;/li&gt;
+&lt;li&gt;Veterans Day&lt;/li&gt;
+&lt;li&gt;Thanksgiving&lt;/li&gt;
+&lt;li&gt;Christmas&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;My State, Minnesota&lt;/h2&gt;
+&lt;p&gt;The capital of Minnesota is St Paul.&lt;/p&gt;
+&lt;p&gt;The current Governor of Minnesota is Tim Waltz.&lt;/p&gt;
+&lt;p&gt;The current senators for Minnesota are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amy Klobuchar (Democratic)&lt;/li&gt;
+&lt;li&gt;Tina Smith (Democratic)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The current representative for my district, the first congressional district of
+Minnesota, is Jim Hagadorn (Republican).&lt;/p&gt;
+&lt;h2&gt;Miscellanea&lt;/h2&gt;
+&lt;p&gt;The economic system of the United States is a capitalist, free market economy.&lt;/p&gt;
+&lt;p&gt;The two major political parties in the US are the Democratic and Republican
+parties.&lt;/p&gt;</description><category>journal</category><category>politics</category><guid>https://www.tartley.com/posts/basic-us-civics/</guid><pubDate>Fri, 08 Jul 2022 16:19:32 GMT</pubDate></item><item><title>Rubik's Beginner</title><link>https://www.tartley.com/posts/rubiks-beginner/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Rubik's cube on table" src="https://www.tartley.com/files/2021/rubiks-cube-on-table.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;I've never before memorized the complete set of tricks needed to solve a
@@ -610,7 +1029,7 @@ distracted from, before ever committing to memory.&lt;/p&gt;
 that I'm reading about today is considerably simpler than that, and is
 much easier to understand and memorize. So now that lingering childhood
 inadequacy is vanquished.&lt;/p&gt;
-&lt;p&gt;(Discussion &lt;a href="https://www.facebook.com/tartley/posts/10159630917927040"&gt;on Facebook&lt;/a&gt;.)&lt;/p&gt;</description><category>journal</category><guid>https://www.tartley.com/posts/rubiks-beginner/</guid><pubDate>Mon, 27 Dec 2021 04:53:22 GMT</pubDate></item><item><title>Things They Don't Tell You About Peroral Endoscopic Myotemy</title><link>https://www.tartley.com/posts/things-they-dont-tell-you-about-peroral-endoscopic-myotemy/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;p&gt;(Discussion &lt;a href="https://www.facebook.com/tartley/posts/10159630917927040"&gt;on Facebook&lt;/a&gt;.)&lt;/p&gt;</description><category>geek</category><category>journal</category><guid>https://www.tartley.com/posts/rubiks-beginner/</guid><pubDate>Mon, 27 Dec 2021 04:53:22 GMT</pubDate></item><item><title>Things They Don't Tell You About Peroral Endoscopic Myotemy</title><link>https://www.tartley.com/posts/things-they-dont-tell-you-about-peroral-endoscopic-myotemy/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="P.O.E.M." src="https://www.tartley.com/files/2021/poem.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;h4&gt;The problem&lt;/h4&gt;
@@ -833,7 +1252,7 @@ demonstrated some real problems with the bill. He suggested that I write
 it to him in a letter instead.&lt;/p&gt;
 &lt;p&gt;Probable ten or fifteen minutes had elapsed. We exchanged cordial
 pleasantries and headed out for a lovely curry down the street with my
-awesome wife.&lt;/p&gt;</description><category>geek</category><category>imho</category><category>journal</category><guid>https://www.tartley.com/posts/result-of-mp-visit-i-suck/</guid><pubDate>Sat, 05 Dec 2009 05:23:09 GMT</pubDate></item><item><title>The Difference Engine</title><link>https://www.tartley.com/posts/the-difference-engine/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+awesome wife.&lt;/p&gt;</description><category>geek</category><category>imho</category><category>journal</category><category>politics</category><guid>https://www.tartley.com/posts/result-of-mp-visit-i-suck/</guid><pubDate>Sat, 05 Dec 2009 05:23:09 GMT</pubDate></item><item><title>The Difference Engine</title><link>https://www.tartley.com/posts/the-difference-engine/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="differenceengine" src="https://www.tartley.com/files/2008/12/differenceengine.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by William Gibson and Bruce Sterling, 1990&lt;/em&gt;&lt;/p&gt;
@@ -887,7 +1306,7 @@ steam-powered information processing era, underwent a series of
 meritocratous social revolutions, and as a result was better equipped to
 continue its expansion across the globe.&lt;/p&gt;
 &lt;p&gt;Rating 7.5/10 - a splendid ripping yarn.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>exhibits</category><category>fiction</category><category>geek</category><category>journal</category><category>media</category><category>novel</category><category>science-fiction</category><category>stirling</category><guid>https://www.tartley.com/posts/the-difference-engine/</guid><pubDate>Thu, 11 Dec 2008 15:19:16 GMT</pubDate></item><item><title>The Suze...</title><link>https://www.tartley.com/posts/the-suze/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Launches a new blog, at &lt;a href="http://thesuze.com"&gt;a shiny new permenant URL&lt;/a&gt;.&lt;/p&gt;</description><category>journal</category><category>write</category><guid>https://www.tartley.com/posts/the-suze/</guid><pubDate>Fri, 17 Oct 2008 17:52:19 GMT</pubDate></item><item><title>OpenID works!</title><link>https://www.tartley.com/posts/openid-works/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2008/09/openid.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>exhibits</category><category>fiction</category><category>geek</category><category>journal</category><category>media</category><category>novel</category><category>science-fiction</category><category>stirling</category><guid>https://www.tartley.com/posts/the-difference-engine/</guid><pubDate>Thu, 11 Dec 2008 15:19:16 GMT</pubDate></item><item><title>The Suze...</title><link>https://www.tartley.com/posts/the-suze/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Launches a new blog, at &lt;a href="http://thesuze.com"&gt;a shiny new permenant URL&lt;/a&gt;.&lt;/p&gt;</description><category>journal</category><category>writing</category><guid>https://www.tartley.com/posts/the-suze/</guid><pubDate>Fri, 17 Oct 2008 17:52:19 GMT</pubDate></item><item><title>OpenID works!</title><link>https://www.tartley.com/posts/openid-works/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2008/09/openid.jpeg"&gt;&lt;/p&gt;
 &lt;p&gt;I've always been
 intrigued by &lt;a href="http://openid.net"&gt;OpenID&lt;/a&gt;, while simultaneously being
 repulsed by the identifiers that I thought users were forced to adopt.
@@ -913,96 +1332,4 @@ globally-unique OpenID username identifiers for myself:&lt;/p&gt;
 lovely to use. Get on board!&lt;/p&gt;</description><category>geek</category><category>journal</category><guid>https://www.tartley.com/posts/openid-works/</guid><pubDate>Thu, 18 Sep 2008 00:06:48 GMT</pubDate></item><item><title>Freefall</title><link>https://www.tartley.com/posts/freefall/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="http://www.youtube.com/watch?v=Bjnje6-8vCM" title="Sound of screaming"&gt;&lt;img alt="Sound of screaming" src="https://img.youtube.com/vi/Bjnje6-8vCM/0.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Me and the missus slung 200 feet in the air in a spherical 10 foot roll
 cage, on board the 'Slingshot' on the opening night of the Steel County
-Fair, Minnesota.&lt;/p&gt;</description><category>journal</category><guid>https://www.tartley.com/posts/freefall/</guid><pubDate>Thu, 14 Aug 2008 12:40:08 GMT</pubDate></item><item><title>Neogeography</title><link>https://www.tartley.com/posts/neogeography/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2008/08/co-to-ca-road-trip-map.png" title="co-to-ca-road-trip-map"&gt;&lt;/p&gt;
-&lt;p&gt;Over the summer I've been keeping a geographic journal of some of our
-recent adventures:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;dl&gt;
-&lt;dt&gt;&lt;a href="http://maps.google.com/maps/ms?ie=UTF8&amp;amp;hl=en&amp;amp;msa=0&amp;amp;msid=114555587615190768594.00044fcb05ec0c0be2012&amp;amp;ll=45.540084,-93.44283&amp;amp;spn=5.809675,14.282227&amp;amp;z=7"&gt;The Minnesota project&lt;/a&gt;&lt;/dt&gt;
-&lt;dd&gt;our summer in Blooming Prairie&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;dl&gt;
-&lt;dt&gt;&lt;a href="http://maps.google.com/maps/ms?ie=UTF8&amp;amp;hl=en&amp;amp;msa=0&amp;amp;msid=114555587615190768594.000453372a3a9329df229&amp;amp;ll=37.431251,-110.786133&amp;amp;spn=13.158173,28.564453&amp;amp;t=h&amp;amp;z=6"&gt;CO to CA&lt;/a&gt;&lt;/dt&gt;
-&lt;dd&gt;our summer roadtrip&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;It's an amusing journalling project for me, but as an exercise in
-neogeography (the distainful term Geographic Information System pros use
-to describe such upstart tools, popular with the great unwashed) I have
-to say it's pretty forlorn. The editing tool is thoroughly annoying to
-use, and the data model is none existant - you're simply crayoning
-one-off symbols on top of the map, with no ability to relate any symbol
-to any other, except by manually assigning them the same symbology. The
-ability to import KMZ is little consolation if all the resultant data is
-so unstructured. No doubt things will get better as GIS and neogeography
-borrow each other's best ideas, but for the time being this exercise
-left me disappointed.&lt;/p&gt;
-&lt;p&gt;I seem to recall that the editing tools in Google Earth are a smidgeon
-better, but still profoundly lacking. Anyone got any ideas what I should
-be using instead for personal 'for amusement' projects like this?&lt;/p&gt;</description><category>gis</category><category>journal</category><guid>https://www.tartley.com/posts/neogeography/</guid><pubDate>Mon, 11 Aug 2008 21:31:25 GMT</pubDate></item><item><title>Just Married!</title><link>https://www.tartley.com/posts/just-married/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://www.tartley.com/files/2008/05/wed.jpg"&gt;&lt;img alt="Just Married!" src="https://www.tartley.com/files/2008/05/wed.jpg" title="Just Married!"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;At
-the end of March, Susan and I exchanged rings, vows, signatures and
-thumbprints on a beach near to Tulum, Mexico, with eighty-five of our
-families and friends, plus 'TriPawd', the beach's resident three-legged
-dog.&lt;/p&gt;
-&lt;p&gt;Thanks to everyone for coming all the way to join the party and making
-it so special. It all worked out better than we could have hoped - We
-never imagined that our own wedding would be so spectacularly brilliant.
-The honeymoon in Guatemala was also astonishingly good, from watching
-the sun rise over Mayan ruins in the jungle, to hiking volcanoes
-overlooking lake Atitlan.&lt;/p&gt;
-&lt;p&gt;We've taken photos from a few people, and put a selection of the best of
-these online, listed below:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://photos.google.com/album/AF1QipOOwy2ywMiILnYGBxh3UGImNgtiKi4QCyr04WmG"&gt;Arrival in Tulum&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://photos.google.com/album/AF1QipNAqeKG0tcJkfPGSDthl-Ms_phvFVqeOthOdPdV"&gt;Thursday night party&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://photos.google.com/share/AF1QipPcz63xwl28uezPMUa40psZmkOEpGzL0LWdm3_q0eHMeCNJDXmjuHHB4BD-bbxqsQ?key=VktPczAwcmE0VEFLY2RHbEpCWVM1X084bmNFOERR"&gt;Wedding day breakfast and preparation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://photos.google.com/album/AF1QipMJbxudvhu-eKxwxxUhOA_GlYzrsnu9rOMviKi3"&gt;Wedding ceremony&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://vimeo.com/840598"&gt;Awesome little vid of the petal-throwing&lt;/a&gt;, courtesy Lindsay &amp;amp; Aaron&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://photos.google.com/album/AF1QipOYwojvKwjo9Xf-XYhe9Iscks84LVMTVuSOvNI3"&gt;Wedding reception&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://photos.google.com/album/AF1QipNRP6Z6WhM9uKyLnLE-BbWUVuazzMG1juHe-Jg3"&gt;More of Tulum&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://photos.google.com/album/AF1QipM816PgXq11ACuayazsraR6BIjRw6uUiLWrA9Oi"&gt;Boat trip&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;There are also a metric zillion other photos elsewhere too:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.flickr.com/photos/aaronindenver/sets/72157604336077174/"&gt;Aaron's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.brownsolutions.biz/administrator/components/gallery/JBs-Wedding"&gt;Al Brown's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.facebook.com/album.php?page=1&amp;amp;aid=20525&amp;amp;id=509123606"&gt;Alia's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Amanda's&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.facebook.com/album.php?aid=19098&amp;amp;id=501388030&amp;amp;op=80"&gt;one&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.facebook.com/album.php?aid=19099&amp;amp;id=501388030&amp;amp;op=80"&gt;two&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://photos.walmart.com/shareephotolib/p=120121210651609191/l=10368438/g=17690942/cobrandOid=1011/otsc=SYE/otsi=SALB/pns/share/p=120121210651609191/l=10368438/g=17690942/cobrandOid=1011/otsc=SYE/otsi=SALB"&gt;Anita's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Batty's:&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.flickr.com/photos/ebatty/sets/72157604321078488/"&gt;ceremony&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.flickr.com/photos/ebatty/sets/72157604370499812/"&gt;Tulum&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.facebook.com/album.php?aid=104393&amp;amp;id=806225359&amp;amp;op=60"&gt;Harry's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.facebook.com/album.php?aid=44698&amp;amp;id=626416349&amp;amp;op=80"&gt;Jules'&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://picasaweb.google.com/marci.pierce/Tulum"&gt;Marci's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://flickr.com/photos/neil_stone/sets/72157604415231580/"&gt;Neil's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Nixta's&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.flickr.com/photos/flixta/sets/72157604378814124/"&gt;wedding&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.flickr.com/photos/flixta/sets/72157604374702326/"&gt;environs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.flickr.com/photos/ebatty/collections/72157600828965024/"&gt;Peter's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Phil's&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://frosties.com/index.php?option=com_gallery2&amp;amp;Itemid=28&amp;amp;g2_itemId=33451"&gt;one&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://frosties.com/index.php?option=com_gallery2&amp;amp;Itemid=28&amp;amp;g2_itemId=33552"&gt;two&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://frosties.com/index.php?option=com_gallery2&amp;amp;Itemid=28&amp;amp;g2_itemId=33653"&gt;three&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.facebook.com/album.php?aid=33845&amp;amp;id=513030422&amp;amp;op=60"&gt;Steve's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://picasaweb.google.com/tiva.montalbano/SusanAndJBTulumMarch2008?authkey=5bI2u0vkCWo"&gt;Tiva's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.flickr.com/photos/atonks/sets/72157604418837612/"&gt;Tonk's&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;del&gt;Will's&lt;/del&gt; (Kodak Gallery is now defunct)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If there are more that we haven't yet seen, please
-&lt;a href="mailto:tartley@tartley.com"&gt;let us know&lt;/a&gt;!&lt;/p&gt;</description><category>journal</category><category>refried</category><guid>https://www.tartley.com/posts/just-married/</guid><pubDate>Wed, 23 Apr 2008 18:16:36 GMT</pubDate></item></channel></rss>
+Fair, Minnesota.&lt;/p&gt;</description><category>journal</category><guid>https://www.tartley.com/posts/freefall/</guid><pubDate>Thu, 14 Aug 2008 12:40:08 GMT</pubDate></item></channel></rss>

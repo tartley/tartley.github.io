@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about til)</title><link>https://www.tartley.com/</link><description>Today I learned</description><atom:link href="https://www.tartley.com/categories/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 18:34:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about til)</title><link>https://www.tartley.com/</link><description>Today I learned</description><atom:link href="https://www.tartley.com/categories/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 04:13:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
 nose and do a force push. Maybe the project requires contributions to be
 rebased or squashed. Maybe we pushed the nuclear launch codes. But there are
 failure modes:&lt;/p&gt;
@@ -93,7 +93,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;gpf
 $
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>TIL: Makefiles that are self-documenting, and process all extant files.</title><link>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;h3&gt;Self-documenting Makefiles&lt;/h3&gt;
+&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>TIL: Makefiles that are self-documenting, and process all extant files.</title><link>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;h3&gt;Self-documenting Makefiles&lt;/h3&gt;
 &lt;p&gt;A trick from years ago, but I copy it around between projects enough that it
 deserves calling out. Add a target:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;help&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## Show this help.&lt;/span&gt;
@@ -154,7 +154,7 @@ outputting the unmatched wildcard expression.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will generate one .pdf file for each extant .tex file, regardless of
-whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>command-line</category><category>geek</category><category>make</category><category>til</category><guid>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>TIL: Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
+whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>geek</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>TIL: Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
 animated gif memes, finally figured out how to do it manually. Not a universal
 process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
 &lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
@@ -232,7 +232,7 @@ text labels, then the '-layers' option re-applies optimizations. Without this
 dance, the text is all twitchy and messy.&lt;/p&gt;
 &lt;p&gt;Voilà. Imagine sending it to a co-worker who is taking on a difficult task,
 like making changes to that thorny section of the codebase that nobody likes:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>geek</category><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>video</category><category>youtube</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>TIL: Energy use per transaction for cryptocurrencies vs Visa</title><link>https://www.tartley.com/posts/energy-use-per-transaction-for-cryptocurrencies-vs-visa/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;For my own calibration, approximate current energy use for a single transaction
+&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>geek</category><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>youtube</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>TIL: Energy use per transaction for cryptocurrencies vs Visa</title><link>https://www.tartley.com/posts/energy-use-per-transaction-for-cryptocurrencies-vs-visa/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;For my own calibration, approximate current energy use for a single transaction
 in various cryptocurrencies, compared with using Visa:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -421,16 +421,7 @@ to discover that converting it into an mp3 requires just:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Where &lt;code&gt;-vn&lt;/code&gt; disables video in the output.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h4&gt;Changelog&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;2023/02/14: Wide-ranging rewrite of prose to enliven, enlink, and clarify.&lt;/li&gt;
-&lt;li&gt;2023/02/14: Swapped use of &lt;a href="https://github.com/mitsuhiko/pipsi/"&gt;&lt;em&gt;pipsi&lt;/em&gt;&lt;/a&gt;
-  tool, last released 2015, for &lt;em&gt;pipx&lt;/em&gt;, which is more useful, well-maintained
-  and popular.&lt;/li&gt;
-&lt;li&gt;2022: Added "Goal fulfillment" section, initially called "The Best Way", and
-  deprecated the previous method under "My previous inferior way".&lt;/li&gt;
-&lt;/ul&gt;</description><category>command-line</category><category>geek</category><category>linux</category><category>music</category><category>til</category><category>youtube</category><guid>https://www.tartley.com/posts/download-audio-from-youtube/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/posts/git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;</description><category>geek</category><category>linux</category><category>music</category><category>terminal</category><category>til</category><category>youtube</category><guid>https://www.tartley.com/posts/download-audio-from-youtube/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/posts/git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
 &lt;code&gt;git tag TAGNAME&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Today I learned about &lt;em&gt;annotated&lt;/em&gt; tags, created with &lt;code&gt;git tag -a -m "MESSAGE"
 TAGNAME&lt;/code&gt;. If you don't specify &lt;code&gt;-m MESSAGE&lt;/code&gt;, git annoyingly prompts you for
@@ -454,7 +445,7 @@ of the commit being pushed, so that no unreachable tags are created on origin.&l
 &lt;li&gt;Use annotated tags to share state with other developers.&lt;/li&gt;
 &lt;li&gt;To share annotated tags, either push them directly, with &lt;code&gt;git push TAGNAME&lt;/code&gt;,
    or use &lt;code&gt;git push --follow-tags&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;</description><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>TIL: ‰ is per mille</title><link>https://www.tartley.com/posts/per-mille/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;‰ or &lt;em&gt;'per mille'&lt;/em&gt; means parts per thousand.&lt;/p&gt;
+&lt;/ol&gt;</description><category>git</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>TIL: ‰ is per mille</title><link>https://www.tartley.com/posts/per-mille/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;‰ or &lt;em&gt;'per mille'&lt;/em&gt; means parts per thousand.&lt;/p&gt;
 &lt;p&gt;I wasn't aware of it until today when I idly Googled "permil", my imagined
 variation on "percent", to find that this is one of the many spellings of
 a real thing. Rarely used in English, but more common in other European
@@ -541,7 +532,7 @@ git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;m
 git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;...f
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;</description><category>geek</category><category>git</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>TIL: Listen to your phone through your PC speakers</title><link>https://www.tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
+&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;</description><category>geek</category><category>git</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>TIL: Listen to your phone through your PC speakers</title><link>https://www.tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Directs audio input (e.g. mic) to audio output (e.g. speakers),&lt;/span&gt;
 &lt;span class="c1"&gt;# then sleeps forever. Stops audio redirection when it is killed.&lt;/span&gt;

@@ -1,5 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat</title><link>https://www.tartley.com/</link><description>A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 18:34:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Illustrating Uses of IBM Cloud Security Groups</title><link>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;blockquote&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat</title><link>https://www.tartley.com/</link><description>A website devoted to oneself has been described — by my own Father, no less — as the greatest act of hubris. Welcome aboard!</description><atom:link href="https://www.tartley.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 04:13:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Aurora</title><link>https://www.tartley.com/posts/aurora/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Aurora cover" src="https://www.tartley.com/files/2023/aurora.webp"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Kim Stanley Robinson, 2015&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It has long been held by fans of science fiction that &lt;em&gt;fantasy&lt;/em&gt; is a lowly
+subset of science-fiction, or perhaps a disreputable cousin, one for whom
+the normal rules of discernment do not apply. If such unlikely and unrealistic
+things as dragons and magic are allowed, the reasoning goes, then the book
+cannot be relied upon to deliver any kind of coherent narrative experience,
+since the lapsed rule-set now allows for any old &lt;em&gt;ex machina&lt;/em&gt; plot twists to
+save the day. A magical "defeat the evil" spell? No problem. A new mythical
+creature capable of defeating the previously unassailable one? Why not? All
+reason is gone.&lt;/p&gt;
+&lt;p&gt;It's more useful though, is to invert the hierarchy of this received wisdom,
+and consider science fiction as a subset of fantasy. Mentioning this in fandom
+circles blows mental fuses. Does not compute. But the speculative flights of
+science fiction are also fantasies. Just fantasies that a particular type of
+person finds especially beguiling, compelling, and believable. To some extent,
+I concede that on occasion they are believable because they seem to be a
+reasonable extrapolation of our current situation. But no matter how reasonable
+your extrapolation seems to be, it's always possible that reality will zig
+instead of zag, and your supposedly humdrum tale of life in orbit will clash
+with the unexpected reality of suspended human spaceflight in the face of
+spiraling real-world costs. The vision that one is selling is always, to a
+greater or lesser extent, a wishful one - a &lt;em&gt;fantasy&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This becomes immediately apparent once we stray beyond the confines of low
+Earth orbit, to take in the wider scope of science fiction, the vast majority
+of which encompasses tales across the galaxy, nay, the universe, including time
+travel, teleportation booths, aliens of every color, quantum reality
+displacement, and multiversal escapades in which literally everything is
+possible. These are very clearly fantasies, and it is intensely curious to me
+why this sort of fantasy is considered more "realistic" or "believable" than,
+say, flying lizards with fiery breath. Even though the narrative hand-waving
+that explains away the former - "It's an alternate &lt;em&gt;universe&lt;/em&gt;, where different
+rules apply" - is abundantly adequate to more than completely explain anything
+in the fantasy realm.&lt;/p&gt;
+&lt;p&gt;I once asked my guru science fiction critic &lt;a href="https://damiengwalter.com/podcast/"&gt;Damien
+Walter&lt;/a&gt; what makes people consider some
+stories believable, while other are not. He replied with a statement that has
+stuck with me ever since: People are willing to invest the effort to provide
+the conceptual scaffolding around an idea to make it seem believable (e.g. to
+speculate on the mechanism that might allow for a faster-than-light
+hyper-drive) &lt;em&gt;when the story fulfills some deeper psychological need for them&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Hence, a story on the same topic as &lt;em&gt;Aurora&lt;/em&gt;, of a generation ship sent to
+colonize an Earth-like planet orbiting the nearby star of Tau Ceti, is
+(usually) a story about the triumph of modernism. Such stories leverage the
+sources of strength in the modern world, science and technology and
+&lt;em&gt;colonialism&lt;/em&gt;, and a reader who is invested in a modern world-view will feel
+validated and empowered by this type of fantasy. They will be will be willing
+to exercise whatever extracurricular creative effort is required on the part of
+the reader to make the story believable. Doing so will inspire them with the
+feeling that their world all makes sense, is leading to something, so that
+their daily grind is a part of the heroic story of how humanity transcends its
+planetary origins. This is much more fulfilling than investing any effort
+getting on board with the waning powers of superstition that are represented by
+the fantasy genre.&lt;/p&gt;
+&lt;p&gt;&lt;span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"&gt;&lt;b&gt;spoilers&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In keeping with this, Aurora's colonists are granted every conceivable boon
+that science and industry can supply. A ship fully ten kilometers across,
+enclosing twenty four massive biomes, each stuffed full of hills and lakes,
+soil and forests, microbes and wildlife. A population of well over a thousand
+human beings. Miraculous nanotech fabricators, and megatons of elemental
+feedstock to run them. A miraculous acceleration laser, fired from Titan for
+decades after departure, allowing the ship to coast up to 0.1c, making the
+journey in only seven generations, while retaining enough fuel to decelerate
+for arrival. A miraculous magnetic shield protects the ship from catastrophic
+collisions with stray particles along the way. A benign AI runs the ship,
+amusingly pressed into service as the narrator of the tale, and grows visibly
+more sentient, emotionally robust and capable as the years pass.&lt;/p&gt;
+&lt;p&gt;And hot damn, they are going to &lt;em&gt;need&lt;/em&gt; all these things, because in this story,
+human interstellar colonization is revealed for the fantasy it really is.
+Nothing works out, and the problems encountered are far bigger than anything
+the ship's designers planned for. Although the ship does limp into orbit
+around the destination planet, soon after that people start dying, major
+disagreements emerge which descend into catastrophic riots, and the ship's
+society falls apart - when have humans ever invented a reliable form of
+governance?&lt;/p&gt;
+&lt;p&gt;There is a rip-roaring final act, that stretched my credulity, but revives the
+stakes and entertainment value in what might otherwise be a relentless downer
+of a read.&lt;/p&gt;
+&lt;p&gt;The book, and interviews with the author, caused quite a stir in science
+fiction circles. People were extremely angry. The book was attacking their
+deeply held beliefs that the future of humanity is as a successfull
+space-faring species. They had invested their identity in this world-view,
+because of how it serviced their psychological needs for fulfillment and
+meaning. They had developed a religious conviction around this particular kind
+of fantasy.&lt;/p&gt;
+&lt;p&gt;The point of Aurora is to highlight the idea of human interstellar colonization
+as a dangerous distraction from the very real project of taking care of the
+long term health of our planet and our society right here on Earth. It is going
+to take &lt;em&gt;beyond&lt;/em&gt; miraculous levels of technology and resources to start
+thinking about interstellar travel. If, by some miracle, we make it to a year
+10,000 utopia, with infinite resources and the wisdom to manage them, then
+sure, we can worry about interstellar travel. But for now, can we just focus on
+some of the very basic problems of existence here on Earth, like how to make
+everyone fed and liberated, educated and fulfilled, without killing our planet
+to do it? Maybe invent some sort of government that is reliably able to do
+that? That would be nice.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/aurora/</guid><pubDate>Thu, 21 Sep 2023 20:29:16 GMT</pubDate></item><item><title>Fully Operational</title><link>https://www.tartley.com/posts/fully-operational/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Now witness the power of this fully armed and operational battle station.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="My desk featuring too many computers" src="https://www.tartley.com/files/2023/desk-with-computers.webp"&gt;&lt;/p&gt;
+&lt;p&gt;New job means new laptop means it's time to clean and re-org the desk.&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;Leftmost blue skies&lt;/dt&gt;
+&lt;dd&gt;Linux laptop (a free hand-me-down from a job ten years ago). Acting as the
+house Plex / streaming media server, usually tucked away more discreetly than
+this.&lt;/dd&gt;
+&lt;dt&gt;Left top green forest&lt;/dt&gt;
+&lt;dd&gt;Heavy duty work / gaming Linux laptop ("hardware bonus" from my last
+employer). Has been my primary work machine, but sounds like it's getting
+replaced by...&lt;/dd&gt;
+&lt;dt&gt;Left bottom spaceship drawing&lt;/dt&gt;
+&lt;dd&gt;Macbook Pro (Brand new! Just unwrapped yesterday. Thank you new employer
+&lt;a href="https://lambdalabs.com"&gt;Lambda&lt;/a&gt;!) Looks like this means I'm returning to
+developing on a Mac and VMs, after a full decade on Ubuntu &amp;amp; derivatives.
+I'm told Docker for Desktop now behaves better than it used to.&lt;/dd&gt;
+&lt;dt&gt;Left bottom, under the Mac&lt;/dt&gt;
+&lt;dd&gt;You can sort of see the 10" whiteboard I use to combat ADHD by writing a
+sentence about what I'm &lt;em&gt;supposed&lt;/em&gt; to be working on, then I can spot it every
+few minutes and drag my mind back to the task in hand. (a technique described
+in the fabulous &lt;a href="https://gamkedo.gumroad.com/l/self-command/"&gt;Self Command by Chris
+DeLeon&lt;/a&gt;.&lt;/dd&gt;
+&lt;dt&gt;Center&lt;/dt&gt;
+&lt;dd&gt;Main monitor and wireless tenkeyless mechanical keyboard &amp;amp; mouse combo, all
+switchable to any of the laptops. Under the keyboard you can sort-of see the
+"Magic the Gathering" gaming mat (free from local gaming store's MtG lessons)
+pressed into duty as the world's most gigantic, beautiful, and luxurious mouse
+mat.&lt;/dd&gt;
+&lt;dt&gt;Right monitor, keyboard and mouse&lt;/dt&gt;
+&lt;dd&gt;are wired to the Windows gaming PC under the desk (not visible). The kiddo's
+current &lt;a href="https://store.steampowered.com/app/361420/ASTRONEER/"&gt;Astroneer&lt;/a&gt;
+session is visible. The monitor is switchable to any of the laptops.&lt;/dd&gt;
+&lt;dt&gt;Right tab&lt;/dt&gt;
+&lt;dd&gt;Absolute workhorse 12.6" Android tablet on which I do most of my reading, laid in the picture here just to be gratuitous.&lt;/dd&gt;
+&lt;/dl&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>keyboard</category><category>osx-dev</category><guid>https://www.tartley.com/posts/fully-operational/</guid><pubDate>Thu, 21 Sep 2023 15:51:12 GMT</pubDate></item><item><title>Dhalgren</title><link>https://www.tartley.com/posts/dhalgren/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Dhalgren cover" src="https://www.tartley.com/files/2023/dhalgren.webp"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Samuel Delaney, 1975&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It broke me. I need to take another run up to this. Advice welcome.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://localhost:8000/categories/did-not-finish/"&gt;&lt;span style="background:grey; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"&gt;did-not-finish&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>did-not-finish</category><category>fiction</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/dhalgren/</guid><pubDate>Fri, 01 Sep 2023 18:23:19 GMT</pubDate></item><item><title>Illustrating Uses of IBM Cloud Security Groups</title><link>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;blockquote&gt;
 &lt;p&gt;I wrote this high-level public-facing guide while employed by IBM, creating
 the security groups feature for IBM Cloud. It
 &lt;a href="https://web.archive.org/web/20210418195246/https://www.ibm.com/cloud/blog/illustrating-uses-ibm-cloud-security-groups"&gt;used to reside&lt;/a&gt;
@@ -163,7 +302,7 @@ accommodate many others. For more information, see
 Senior Cloud Developer&lt;/p&gt;
 &lt;p&gt;&lt;span style="float: none"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;</description><category>cloud</category><category>networking</category><category>security</category><category>software</category><guid>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</guid><pubDate>Wed, 23 Aug 2023 02:33:47 GMT</pubDate></item><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
+&lt;p&gt;&lt;/p&gt;</description><category>cloud</category><category>geek</category><category>networking</category><category>security</category><category>software</category><guid>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</guid><pubDate>Wed, 23 Aug 2023 02:33:47 GMT</pubDate></item><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
 nose and do a force push. Maybe the project requires contributions to be
 rebased or squashed. Maybe we pushed the nuclear launch codes. But there are
 failure modes:&lt;/p&gt;
@@ -257,7 +396,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;gpf
 $
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>Structured Pattern Matching in Python</title><link>https://www.tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
+&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>Structured Pattern Matching in Python</title><link>https://www.tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
 &lt;a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement"&gt;structured pattern matching&lt;/a&gt;
 when it was added in Python 3.10 a couple of years ago, and have studiously
 avoided it ever since. It seemed like a language feature that's amazingly
@@ -708,991 +847,13 @@ outputting the unmatched wildcard expression.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will generate one .pdf file for each extant .tex file, regardless of
-whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>command-line</category><category>geek</category><category>make</category><category>til</category><guid>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>Astroneer Resource Graph</title><link>https://www.tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
+whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>geek</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>Astroneer Resource Graph</title><link>https://www.tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
 get each of the resources in &lt;a href="https://astroneer.space/"&gt;Astroneer&lt;/a&gt;. Click the WEBP
 thumbnail below to get the full glorious SVG, then you can '&lt;em&gt;find in page&lt;/em&gt;' on it.
 (&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>map</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
-&lt;img alt="Spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
-&lt;p&gt;Major spoilers ahead. It's seven years old at this point.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Soma - protagonist" src="https://www.tartley.com/files/2022/soma-protagonist.webp"&gt;
-&lt;/center&gt;&lt;br&gt;
-&lt;p&gt;Soma is a creepy survival horror game, that leans deeply into the moral and
-existential quandaries arising from the deterministic principle that it's
-possible to scan one's brain and copy the structure into some other substrate,
-yielding a second conscious entity, which thinks it is you. So there are deep
-science-fiction issues in play here, about whether we think such a scheme could
-ever possibly work, and about the practical, personal, and societal
-ramifications of it.&lt;/p&gt;
-&lt;p&gt;I loved the setup. A humdrum morning begins in your present-day Toronto
-apartment. A note on the fridge reminds you that today is the day of your
-medical appointment, a brain scan. Reaching the doctor's office by train, you
-find the experimental new type of brain scanner, run by some PhD in a
-cable-strewn side-office. Sit in the chair, don the helmet, wait for the scan
-to complete and- blink! Suddenly, you are elsewhere.&lt;/p&gt;
-&lt;p&gt;As the game progresses, it becomes obvious that the version of you that sat
-down in the seat did not experience this discontinuity. They completed the
-scan, removed the helmet, and continued their normal, everyday life.&lt;/p&gt;
-&lt;p&gt;You are not that copy. You open your eyes to a grim, decrepit cyberpunk future.
-Exploring, your only company is a menagerie of half-functional robots and
-drones, many of which are insane, and, in conversation, seem to be under the
-impression that they are human beings. It gradually becomes apparent that
-perceptual filters are in play, preventing them - and you - from noticing they
-are no longer human. At one point the ocean crashes in on you, and you drown
-for a little while, or at least think you are, but you still don't die. At that
-point you have to acknowledge the truth.&lt;/p&gt;
-&lt;p&gt;You have awoken to the year 2104, and the recorded brain scans of real humans
-are being used to animate drones. This is a scenario much like that told from a
-different perspective in the smashing short story
-&lt;a href="https://qntm.org/mmacevedo"&gt;&lt;em&gt;Lena&lt;/em&gt;&lt;/a&gt; by qntm.
-Failing systems engaged fall-backs, resulting in your obsolete brain scan being
-yanked from storage to inhabit an advanced humanoid robot, in a facility deep
-under the ocean, some time after a comet strike has scoured all life from the
-planet's surface.&lt;/p&gt;
-&lt;p&gt;If that wasn't bad enough, one facilitating technology of this nightmarish
-scenario, a black goo that mimics and improves upon electrical and biological
-circuitry it comes into contact with, has run rampant, growing probing tendrils
-which are wrecking the facility. Among other effects, it has reanimated the
-corpses of the last few humans, who skulk around, not in a good way. As our
-protagonist asks, incredulously, "You mean they've been brought back to life?".
-Our reassuring AI companion replies "Yeah, let's call it that."&lt;/p&gt;
-&lt;p&gt;The game borrows the highly effective mechanics of Frictional's previous games,
-the Amnesia and Penumbra series, where the proximity of horrific, shambling
-enemies causes your character to experience debilitating symptoms, including,
-in this case, static-y visual distortions as your neural hardware suffers from
-some overload or interference. This applies even if you simply look at an
-enemy, an act which immediately draws their attention. So your only chance to
-survive encounters is to stay well out of sight, and actively avert your eyes
-so you can't even watch what's going on. Not being able to see exactly what
-your enemies are, or what they are up to, turns out to be fabulously scary and
-atmospheric. At one point it lead directly to my wife catching me staring
-intently at a blank, black screen for a prolonged period, with a peculiar
-expression on my face, as I hid in a dark cupboard waiting for the slithering
-sounds behind me to go away.&lt;/p&gt;
-&lt;p&gt;Spurring us through this environment are not just threats to our immediate
-survival, but also the adoption of a project, to launch into space a
-solar-powered simulation, hosting all the last remaining brain scans of the
-now-defunct human race, known as the 'ARK'. This will allow the on-board sims
-to live a prolonged period of idyllic virtual existence, preserving at least
-some echo of what humanity was. Since the conceit of the game is that our
-character is a living and conscious entity that feels real emotion, the sims on
-the ARK are all presumably the same, so this seems like a worthwhile endeavor.&lt;/p&gt;
-&lt;p&gt;We are guided, motivated, and assisted by "Catherine", a simulated personality
-running on our hand-held omni-tool, based on the brain recording of an AI
-researcher, whose project during her lifetime was the ARK. Plugging her in to a
-wall or console socket lets her interface with our surroundings, activating
-power supplies and manipulating machinery. She leads us through a series of
-undersea facilities, linked by trains, submersibles, and the occasional
-disorienting trudge across the murky ocean floor, stirred up by ferocious
-currents and landslides, populated by organic-mechanical hybrid horrors that
-glide by in the darkness. I found these some of the absolute best, most
-atmospheric "walking simulator" moments I've experienced in a game.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="The ocean floor, stirred up by currents and landslides" src="https://www.tartley.com/files/2022/soma-murky.webp"&gt;
-&lt;br&gt;Is that another distant light up ahead? Good luck finding them while the currents pummel you,
-and hideous, deadly beasts loom out of the murk.
-&lt;/center&gt;&lt;br&gt;
-&lt;p&gt;Along the way, we encounter a few unforgettable scenarios. We come across the
-failing storage system in which the last remaining copy of our own brain scan
-resides. I decide to flip some buttons which delete it, prompting my character
-to respond with something like "Let this be the last time I wake up in this
-godforsaken place."&lt;/p&gt;
-&lt;p&gt;At another point, we find ourselves trapped within a collapsing facility on the
-bottom of the ocean, with the gibbering undead hammering on the door from the
-next room. There is an airlock leading out into the ocean, but we would be
-crushed at this depth. There is no way out. Luckily, Catherine is able to guide
-us into assembling a more robust robot, one capable of withstanding the
-pressure - all we have to do is sit in the chair and activate the transfer into
-it. We already did this once, back in Toronto. Easy.&lt;/p&gt;
-&lt;p&gt;Except, after the transfer, we glance back across the lab at our original - the
-pictured chap with red LED eyes - who, we notice, is still breathing. Asking
-Catherine about it, she reminds us that the brain scan is not a destructive
-operation. He's still in there, chemically subdued for the moment, but he'll
-soon wake up again, wondering why the transfer didn't work. So we are left with
-the option of stomping out of the airlock to safety, leaving him behind to his
-nightmarish fate. Or flipping a switch to deactivate him before we go.&lt;/p&gt;
-&lt;p&gt;A lot of these narrative beats work better as a game than they perhaps might in
-a written story. They emphasize the player's complicity, your moral
-culpability, which is a mode that games, for all their faults, can do better
-than any other media. Plenty of the lesser moments along the way expose the
-player to decisions about unplugging some human simulation or other which
-declares itself to be "alive", but which is gating your progress in some way.
-Some of them are yourself. Some of these acts require manhandling weighty
-cables, which require large, insistent tugging with the mouse controls. It's
-not just a disembodied button press. One has to provide a determined,
-definitive, mechanical input to end a life. In context, the guilt feels real.&lt;/p&gt;
-&lt;p&gt;Later in the journey, we finally stumble across an honest-to-goodness real,
-live human being. She describes how the rest of the humans will be gathered in
-particular locations, while she stayed to protect the ARK. But, we tell her, we
-just passed through those locations, and there were no humans remaining there.
-We both know that the planet's surface is sterile. A beat passes before she
-announces "So I'm the last human being left alive." She's deathly sick, and
-without hope. By the end of your interactions she asks you to turn off her
-life-support before you leave, and stay with her for her last wheezing moments.
-So this is how humanity ends.&lt;/p&gt;
-&lt;p&gt;Carrying on, because what else is there to do? We finally we get the ARK loaded
-into the launch system that delivers it to orbit, upload our brain scans onto
-it just before it launches, and - we've done it! Success!&lt;/p&gt;
-&lt;p&gt;There was a moment, about five minutes before the end, when I realized what was
-going to happen here, even though my character had not. It was a real emotional
-blow. I envied and pitied him for his naive hope. For believing there was still
-a way out. For, of course, the ARK's launch changed nothing for us. Our
-simulations are aboard it, but we are still sitting here, in a broken robot
-corpse in a collapsing facility at the bottom of a haunted ocean on a dead
-planet. The dispatched copy will enjoy life on the ARK, but we - like the copy
-of ourselves we left behind earlier - are stuck here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>Doomsday Clock</title><link>https://www.tartley.com/posts/doomsday-clock/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;By Geoff Johns (writer), Gary Frank (pencil) &amp;amp; Brad Anderson (colors). (2017-2019)&lt;/em&gt;
-&lt;img alt="Spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
-&lt;p&gt;The original &lt;a href="https://archive.org/details/Watchmen1987"&gt;&lt;em&gt;Watchmen&lt;/em&gt;&lt;/a&gt; is a
-seminal 12-issue superhero comic by Alan Moore (writer) &amp;amp; Dave Gibbons
-(artist), published from 1986 to 1987, that transformed the comics world. A
-superhero tale in which all-but-one of the superheroes have no superhuman
-powers at all.&lt;/p&gt;
-&lt;p&gt;The decades since have spawned a number of remakes, sequels, prequels and
-spin-offs. Zach Snyder's movie adaptation has its adherents, and the HBO
-miniseries sequel was, in my opinion, excellent. But other than that they have
-not been very good. I initially thought the 12 issue sequel &lt;em&gt;Doomsday Clock&lt;/em&gt;
-comic would fall solidly into this group, and passed it by when it came out
-a couple of years ago.&lt;/p&gt;
-&lt;p&gt;But on reading it last week, I really enjoyed it. It really swings for the
-fences, providing a smashing tale, with good arcs for both old and new
-characters, and a genuine attempt to advance the conversation that &lt;em&gt;Watchmen&lt;/em&gt;
-started by deconstructing the superhero.&lt;/p&gt;
-&lt;p&gt;We last saw Dr Manhattan at the end of &lt;em&gt;Watchmen&lt;/em&gt;, having been isolated from
-humanity by Adrien Veidt's plans, tired of his entanglement in the messy
-complexity of people's lives, threatening to leave the galaxy "for one less
-complicated".&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Manhattan's departure at the end of Watchmen" src="https://www.tartley.com/files/2022/doomsday-clock-watchmen-manhattan.webp"&gt;
-&lt;/center&gt;
-&lt;br&gt;
-&lt;p&gt;In &lt;em&gt;Doomsday Clock&lt;/em&gt;, Adrian Veidt, genius that he is, invents a means to follow
-Dr Manhattan, seeking his help with the re-emergence of imminent nuclear war
-brought about by the revelations in Rorschach's journal, and it becomes clear
-that the "simpler place" Dr Manhattan has journeyed to is the DC universe,
-populated by Superman, Batman, and the &lt;em&gt;whole&lt;/em&gt; stable of DC heroes.&lt;/p&gt;
-&lt;p&gt;Various other &lt;em&gt;Watchmen&lt;/em&gt; characters make their way, or are transferred to, the
-DC universe. This has been described across the comic industry as "the
-crossover event nobody wanted", but personally I felt it was really well done.&lt;/p&gt;
-&lt;p&gt;Two of the most prominently deceased &lt;em&gt;Watchmen&lt;/em&gt; characters are brought back
-into play, using mechanisms I thought were legitimate and, on occasion,
-laugh-out-loud satisfying as they reached their resolution.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Doomsday Clock Watchmen Comedian Alive" src="https://www.tartley.com/files/2022/doomsday-clock-comedian.webp"&gt;
-&lt;/center&gt;
-&lt;br&gt;
-&lt;p&gt;In particular, they find a way to bring back Rorschach. Or, at least, &lt;em&gt;a&lt;/em&gt;
-Rorschach. Another individual picks up the mask. This seems like the most
-controversial of the many decisions in the book, but it's handled deftly, and
-there are both similarities and differences between the old and the new
-Rorschach, making it an interesting character in its own right. In some ways
-this transformation is reminiscent of HBO Watchmen's treatment of Hooded
-Justice - retaining everything we already knew about the character, but
-performing an astonishing piece of narrative ju-jitsu to utterly transform
-everything about what that meant.&lt;/p&gt;
-&lt;p&gt;The DC heroes slowly realize their world is being altered by Dr Manhattan's
-manipulations, tying this crossover into the latest of the DC universe's
-"crisis" events, as Manhattan experiments with this reality, in order to
-understand it. In doing so, he uncovers deep truths that affect the
-inter-relationship between all the DC time-lines and universes, establishing
-that historical stories, such as Superman's original appearance in Action
-Comics of the 1930s, represent realities that still exist, out in the
-multiverse, unaffected by subsequent commercial re-ploughing that forever
-drives Superman's origin story further forward in time over the years. All
-these worlds, including the various DC pre-crisis worlds, are accessible to
-Manhattan's powers.&lt;/p&gt;
-&lt;p&gt;Incidentally, this enables DC to undo the changes wrought by the last few
-years' unpopular "New 52" era. This meant nothing to me when I started reading,
-I know basically nothing about American comics, only being familiar with the
-fabulous British &lt;em&gt;2000AD&lt;/em&gt;. I was spurred into reading around the DC lore, and by
-the time I was done, I understood that the &lt;em&gt;New 52&lt;/em&gt; reality included things
-like The Justice League's alternate roster, the early death of Clark's parents,
-which distances Superman from humanity and changes the character dramatically,
-the loss of the Justice Society of America from Earth, and the loss of Wally
-West's Flash. All these and more are written off as the effects of Dr
-Manhattan's meddling, isolated and preserved in just another spun-off part of
-the multiverse, while being jettisoned from the privileged &lt;em&gt;metaverse&lt;/em&gt;, the
-core template from which all subsequent multiversal threads are forged, as it
-reverts to more-or-less its former state when Manhattan's changes are undone
-during &lt;em&gt;Doomsday Clock&lt;/em&gt;'s story.&lt;/p&gt;
-&lt;p&gt;In doing all this, Manhattan exhibits his usual clinical detachment from the
-human consequences of his actions, setting himself up as the villain of the
-piece, an uncaring "being of inaction", in contrast to Superman, the literal
-"man of Action".&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Doomsday Clock: Superman &amp;amp; Manhattan" src="https://www.tartley.com/files/2022/doomsday-clock-superman.webp"&gt;
-&lt;/center&gt;
-&lt;br&gt;
-&lt;p&gt;This forms a genuine riposte to &lt;em&gt;Watchmen's&lt;/em&gt; criticism of the superhero genre.
-Yes, the DC heroes inhabit a simpler world, but the simplicity serves a purpose.
-Escaping the mundane enhances the mythological power of what they represent as
-symbols. Particularly the value of &lt;em&gt;hope&lt;/em&gt;, as personified by Superman, which,
-although possibly somewhat overwrought in the telling - quite literally, in
-this tale - makes all other things possible.&lt;/p&gt;
-&lt;p&gt;I was especially pleased with the quiet, understated places Doomsday Clock goes
-with &lt;em&gt;Mothman's&lt;/em&gt;, back-story. The character in &lt;em&gt;Watchmen&lt;/em&gt; was only a punchline,
-a recurring throwaway reference to instability and alcoholism, telegraphing his
-subsequent mental breakdown. But here, we see him fully fleshed out.&lt;/p&gt;
-&lt;p&gt;Like the rest of the &lt;em&gt;Watchmen&lt;/em&gt; heroes, he has no magical superhuman powers,
-but is still able to pull off entirely unexpected and superhuman-seeming
-stunts, merely by the virtue of his own unique kind of extreme mental and
-emotional resourcefulness. Flawed, but aware of his faults, and able to pull it
-together when he needs to, he befriends the younger Rorschach II during their
-overlapping stays in a mental institution, becoming a beacon of warmth,
-kindness, and generosity to the younger man.&lt;/p&gt;
-&lt;p&gt;He acts as a symbol, if you will, that just as &lt;em&gt;Watchmen's&lt;/em&gt; ruthless gaze
-influenced the wider world of comics, so the comic world gazes back. They see
-us, all the real-world, fully-rounded humans, trapped in the depths of our
-pathos, and they wonder, when will each of us learn to transcend our humdrum
-limitations, to finally act on our hopes and dreams, and &lt;em&gt;fly...&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Doomsday Clock: Mothman" src="https://www.tartley.com/files/2022/doomsday-clock-mothman.webp"&gt;
-&lt;/center&gt;
-&lt;br&gt;</description><category>book</category><category>comic</category><category>fiction</category><category>media</category><category>moore</category><category>science-fiction</category><guid>https://www.tartley.com/posts/doomsday-clock/</guid><pubDate>Fri, 23 Sep 2022 01:57:55 GMT</pubDate></item><item><title>New Laptop Time!</title><link>https://www.tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="A laptop" src="https://www.tartley.com/files/2008/02/lappy.webp"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;My employer, Canonical, has a "bring your own hardware" policy, trusting that
-their engineers would rather choose and administer their own personal laptops,
-rather than put up with standardized remotely administered corporate hardware.&lt;/p&gt;
-&lt;p&gt;My current much loved Thinkpad 460p has served faithfully since 2015, but is
-showing its age, sometimes struggling under the workload. Plus, its integrated
-graphics chipset doesn't have the power to play modern games with my kiddo.
-Battlezone 98 runs fine, but Civilization VI (2016) is annoyingly choppy,
-at about 9 frames per second.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Civilization VI screenshot" src="https://www.tartley.com/files/2022/civ-vi.webp"&gt;
-&lt;/center&gt;
-&lt;br&gt;
-&lt;p&gt;This summer I received the three-year cash-in-hand bonus earmarked as a
-"hardware refresh bonus". It's been many years since I've bought a laptop with
-the attention to detail that comes with spending one's own money. Even the
-current aging Thinkpad was a gift from a former employer. So it's been a decade
-or more since I've seriously specced out a new laptop. This post exists as a
-place to scribble down reminders of a few things I learned along the way.&lt;/p&gt;
-&lt;p&gt;I have a few constraints:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;About the same size as the current Thinkpad's 14 inches, or maybe a tiny bit
-  bigger.&lt;/li&gt;
-&lt;li&gt;I work on Ubuntu Linux, so I'll need to check it plays nicely.&lt;/li&gt;
-&lt;li&gt;It should support modern gaming.&lt;/li&gt;
-&lt;li&gt;Plenty of monitor ports, and/or the grunt to daisy chain them.&lt;/li&gt;
-&lt;li&gt;Is it too much to ask for a headphone jack in 2022?&lt;/li&gt;
-&lt;li&gt;Ability for me to open it up, swap out the battery, drives, RAM.&lt;/li&gt;
-&lt;li&gt;3:2 display would be nice, but these are rare.&lt;/li&gt;
-&lt;li&gt;A budget of $2,000 (saving a bit of my bonus for other hardware-related things.)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Reading around, I got sort-of up to speed on components.&lt;/p&gt;
-&lt;h3&gt;CPU&lt;/h3&gt;
-&lt;p&gt;The CPU buzz is around Intel's 12th generation (aka "Alder Lake"). These are
-"hybrid" CPUs, combining large high performance cores with smaller high
-efficiency cores on a single chip. They come in about 30 different variants,
-with a naming convention that looks like, for example: &lt;code&gt;Intel Core i7-12700H&lt;/code&gt;.
-This consists of:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A brand, eg. "Intel Core"&lt;/li&gt;
-&lt;li&gt;A modifier specifying a market segment, one of:&lt;ul&gt;
-&lt;li&gt;i3 Casual use&lt;/li&gt;
-&lt;li&gt;i5 Multitasking, light gaming&lt;/li&gt;
-&lt;li&gt;i7 Gaming, content creators&lt;/li&gt;
-&lt;li&gt;i9 Slightly faster, more parallel cores.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;A single or double digit generation, eg the latest is "12".&lt;/li&gt;
-&lt;li&gt;An SKU, eg the "700" above, a three or four digit number which roughly
-  corresponds to the feature-set or performance - larger is better. These are
-  only comparable within a single generation, they adopt wildly different
-  conventions in different generations.&lt;/li&gt;
-&lt;li&gt;A single or double letter suffix, eg "H" for "high performance", taken from
-  &lt;a href="https://www.intel.com/content/www/us/en/support/articles/000058567/processors/intel-core-processors.html"&gt;an idiotic irregular table&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The major alternative to an Intel processor is AMD. These aren't the current
-season's darlings of the performance benchmarks, although they do include
-several respectable contenders that might be great for my needs, as you can see
-in the following performance comparison.&lt;/p&gt;
-&lt;h4&gt;Benchmarks&lt;/h4&gt;
-&lt;p&gt;These laptop CPU performance benchmarks are culled from
-&lt;a href="https://www.cpubenchmark.net/laptop.html"&gt;www.cpubenchmark.net&lt;/a&gt;,
-sorted by the benchmark score. I included the top 20, plus a handful of notable
-others that I looked up along the way. The 'bench' column measures relative
-performance under a variety of benchmark workloads which fully utilize all
-cores. The higher this number, the better.&lt;/p&gt;
-&lt;p&gt;The number of cores is given as (p)erformance + (e)fficiency, for hybrid processors.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;CPU&lt;/th&gt;
-&lt;th style="text-align: left;"&gt;Cores&lt;/th&gt;
-&lt;th style="text-align: right;"&gt;Clock&lt;/th&gt;
-&lt;th style="text-align: right;"&gt;Cache&lt;/th&gt;
-&lt;th style="text-align: right;"&gt;Bench&lt;/th&gt;
-&lt;th&gt;Price&lt;/th&gt;
-&lt;th&gt;Laptop models &amp;amp; other notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;i9-12900HX&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;8p+8e&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;5.0GHz&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;30MB&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;36&lt;/td&gt;
-&lt;td&gt;$606&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i7-12800HX&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;8p+8e&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;25MB&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;35&lt;/td&gt;
-&lt;td&gt;$457&lt;/td&gt;
-&lt;td&gt;Thinkpad P16 ($2340).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i9-12950HX&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;8p+8e&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;30MB&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;34&lt;/td&gt;
-&lt;td&gt;$590&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i7-12850HX&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;8p+8e&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;25MB&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;31&lt;/td&gt;
-&lt;td&gt;$428&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i9-12900HK&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;30&lt;/td&gt;
-&lt;td&gt;$635&lt;/td&gt;
-&lt;td&gt;Dell XPS 15 ($2950).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i9-12900H&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;29&lt;/td&gt;
-&lt;td&gt;$617&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i7-12700H&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;27&lt;/td&gt;
-&lt;td&gt;$457&lt;/td&gt;
-&lt;td&gt;Dell XPS 17/15 ($2500), Acer Nitro 5, System76 Onyx &amp;amp; Gazelle.&lt;br&gt;&lt;strong&gt;This CPU is what I ended up getting.&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AMD Ryzen 9 6900HX&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;8&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;25&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Fastest AMD processor.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i7-12650H&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;6p+4e&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;25&lt;/td&gt;
-&lt;td&gt;$457&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i5-12600HX&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;25&lt;/td&gt;
-&lt;td&gt;$284&lt;/td&gt;
-&lt;td&gt;Fastest 12th gen i5. Suspiciously cheap.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AMD Ryzen 9 PRO 6950H&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i7-12800H&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
-&lt;td&gt;$457&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AMD Ryzen 7 PRO 6850H&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;8&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Thinkpad P15v.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AMD Ryzen 9 6900HS&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;ASUS ROG Zephyr G14.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AMD Ryzen 9 PRO 6950HS&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AMD Ryzen 7 PRO 6800H&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;23&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i9-11980HK&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;2.6GHz&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;23&lt;/td&gt;
-&lt;td&gt;$583&lt;/td&gt;
-&lt;td&gt;Fastest Intel 11th gen.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AMD Ryzen 7 6800HS CEd&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;23&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AMD Ryzen 9 5900HX&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;23&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i9-11950H&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;8&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;2.6GHz&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;22&lt;/td&gt;
-&lt;td&gt;$556&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;...&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;(I skipped a bunch here)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i7-1280P&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;4.8GHz&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;20&lt;/td&gt;
-&lt;td&gt;$482&lt;/td&gt;
-&lt;td&gt;Best Framework.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AMD Ryzen 7 5825U&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;8&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;18&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Best Dell Inspiron 15".&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i7-1260P&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;4p+8e&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;18MB&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;17&lt;/td&gt;
-&lt;td&gt;$438&lt;/td&gt;
-&lt;td&gt;XPS 13 plus, X1 Carbon gen 10, Thinkpad P14.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i7-1250U&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;2p+8e&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;12MB&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;11&lt;/td&gt;
-&lt;td&gt;$426&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;i5-6200U&lt;/td&gt;
-&lt;td style="text-align: left;"&gt;2&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;2.8GHz&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;3MB&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;3&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;My current Thinkpad T460.&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Notice my current Thinkpad's processor at the very bottom of this list, which
-is 10x slower than the CPU I ended up getting.&lt;/p&gt;
-&lt;h3&gt;Graphics&lt;/h3&gt;
-&lt;p&gt;There are plenty of otherwise fantastic laptops which don't include blazing
-fast dedicated Nvidia or AMD graphics processors, but instead only come with
-relatively humdrum graphics support integrated with the CPU. Although
-integrated GPUs have improved massively in the last few years, this wouldn't be
-fast enough to run modern games well.&lt;/p&gt;
-&lt;p&gt;To compensate, I considered pairing such laptops with an external GPU enclosure
-(eGPU), into which a top-of-the-line desktop GPU card can be plugged. I'm still
-wistfully curious about this path, but in the end opted to do without this
-complication.&lt;/p&gt;
-&lt;p&gt;Here's a table of the top laptop GPUs, culled from
-&lt;a href="https://gpu.userbenchmark.com/"&gt;gpu.userbenchmark.com&lt;/a&gt;. Unlike the CPU table,
-this isn't the top N performers, because GPUs can get crazy fast and expensive,
-so I'm looking for something middle-of-the-pack. It's just a selection of GPUs
-I looked up while researching particular laptop models.&lt;/p&gt;
-&lt;p&gt;The 'performance' column is the combined result of a variety of gaming
-benchmarks, the higher the better. The 'position' column compares the
-performance against all other benchmarked GPUs.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;GPU&lt;/th&gt;
-&lt;th style="text-align: right;"&gt;Performance&lt;/th&gt;
-&lt;th style="text-align: right;"&gt;Position&lt;/th&gt;
-&lt;th&gt;Laptop models &amp;amp; other notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Nvidia GeForce RTX 3080&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;130&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;24th&lt;/td&gt;
-&lt;td&gt;System76 Onyx option.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Nvidia GeForce RTX 3070Ti&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;122&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;27th&lt;/td&gt;
-&lt;td&gt;System76 Onyx option.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Nvidia GeForce RTX 3070&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;114&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;30th&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Nvidia GeForce RTX 3060&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;87&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;58th&lt;/td&gt;
-&lt;td&gt;Best XPS 17. System76 Gazelle. Acer Nitro 5.&lt;br&gt;&lt;strong&gt;This is the GPU I ended up getting.&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Nvidia GeForce RTX 3050Ti&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td&gt;XPS 15 option.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Nvidia GeForce RTX 3050&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;&lt;/td&gt;
-&lt;td&gt;XPS 15 option.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AMD Radeon RX 6800S&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;85&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;58th&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AMD    RX 6700M&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;79&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;65th&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Nvidia RTX A1000 4GB GDDR6&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;45&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;114th&lt;/td&gt;
-&lt;td&gt;Thinkpad P16(certified)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Nvidia T1200&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;42&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;118th&lt;/td&gt;
-&lt;td&gt;Thinkpad P15v&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Nvidia GTX 1050Ti&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;30&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;144th&lt;/td&gt;
-&lt;td&gt;My current Windows gaming desktop.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Intel Iris Xe&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;17&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;207th&lt;/td&gt;
-&lt;td&gt;Integrated. Framework. XPS 13 Plus.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Intel HD 520&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;4&lt;/td&gt;
-&lt;td style="text-align: right;"&gt;402nd&lt;/td&gt;
-&lt;td&gt;Integrated. &lt;strong&gt;My current Thinkpad T460.&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Notice the two 'integrated' entries at the bottom of the table, one of which is
-my current laptop, a full 20x slower than the GPU I ended up getting. The
-improvement ought to speed Civilization VI up to around an entirely excessive
-180 frames per second. \o/&lt;/p&gt;
-&lt;h3&gt;Laptop models&lt;/h3&gt;
-&lt;p&gt;With the above in mind, I read some reviews, and a few contenders emerged:&lt;/p&gt;
-&lt;h4&gt;Framework&lt;/h4&gt;
-&lt;p&gt;The Framework was massively tempting. It brings an entirely unprecedented
-- some might hopefully say &lt;em&gt;revolutionary&lt;/em&gt; - focus on user-repair and
-upgradability. Rather than soldering and gluing the whole thing together,
-all the Framework's components, up to and including the motherboard and
-screen, are replaceable using a single screwdriver. This is deeply appealing
-for geeks, who want to be able to repair or upgrade.&lt;/p&gt;
-&lt;p&gt;The downside that gave me pause is it is only available with integrated
-Intel-powered graphics. If they had a model including the vastly superior
-Nvidia or AMD accelerated graphics, I would have just bought one months ago,
-instead of prevaricating. But that complication, coupled with the fact that the
-Framework's performance is only mid-range for a 2022 model, put me off
-sufficiently to look around at other options.&lt;/p&gt;
-&lt;h4&gt;Dell XPS 13 plus&lt;/h4&gt;
-&lt;p&gt;The Dell XPS 13 plus looks wonderful, with official Ubuntu verification, no
-less, but just isn't physically big enough for me, and is noticeably
-underpowered. And the Dell 15 inch models seem way overpriced, for the spec,
-easily exceeding my $2,000 budget.&lt;/p&gt;
-&lt;h4&gt;HP Dev One&lt;/h4&gt;
-&lt;p&gt;The HP Dev One looks like a fabulous machine, a colleague just got one and is
-very happy with it. But again, it only has integrated graphics.&lt;/p&gt;
-&lt;h4&gt;Mac Book Pro&lt;/h4&gt;
-&lt;p&gt;I considered this, repaved to run Ubuntu, of course, but to be honest, as
-exquisite as the hardware was at one point, it seems somewhat stagnant and
-directionless now, fifteen years later. Not unimpressive, but doesn't really
-grab me.&lt;/p&gt;
-&lt;h4&gt;System76&lt;/h4&gt;
-&lt;p&gt;I looked at a whole bunch of other laptops at this point, scouring the "best
-gaming laptops of 2022" lists at Toms Hardware and elsewhere. Eventually my
-attention was drawn to System76, who, on reflection, should have been folks I
-checked out earlier in the process.&lt;/p&gt;
-&lt;p&gt;The Oryx is just a few hundred over my budget, even with the current $300 off.
-But a tricked-out Gazelle seems to check all the boxes.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt='Gazelle 15" laptop' src="https://www.tartley.com/files/2022/gazelle-15.avif"&gt;
-&lt;/center&gt;
-&lt;p&gt;They have a reasonably high-ranked 12th generation Intel i7 CPU, which seems
-to achieve good performance without wading into the diminishing returns
-of pricey i9 models. Same for the reasonably-placed Nvidia 3060 graphics. And
-the screen is just magic (judged by my admittedly idiosyncratic personal
-criteria.)&lt;/p&gt;
-&lt;p&gt;They support the lightning fast open source &lt;a href="https://www.coreboot.org"&gt;coreboot
-firmware&lt;/a&gt;, and System76 are a leading contributor to
-the project. They sell with Linux-pre-installed, and produce their own
-Ubuntu-based Linux distribution, Pop!_OS (Although stock Ubuntu runs just fine
-too.).&lt;/p&gt;
-&lt;p&gt;Going with Nvidia graphics instead of AMD does yield a performance boost, but
-the downside is that I'll have to wrestle with the opaque proprietary drivers
-from the famously uncooperative Nvidia. But in a nice gesture, System76
-&lt;a href="https://support.system76.com/articles/graphics-switch-ubuntu"&gt;documents this
-process&lt;/a&gt;, and
-lots of other stuff, such as how to replace internal components yourself, on
-their website.&lt;/p&gt;
-&lt;p&gt;Because it's proprietary closed source, Nvidia drivers have always lagged
-behind AMD's open source offerings in terms of compatibility. In particular,
-Nvidia graphics hasn't worked with the new Linux Wayland display server.
-Reading around, my impression is that it's not ready yet, but &lt;em&gt;might&lt;/em&gt; be by
-22.10 (which is next month!?), so I could stick with the older XOrg display
-server for now, without fearing that I'll get marooned there.&lt;/p&gt;
-&lt;p&gt;There are other downsides. The keyboard is reputedly mediocre, and I wish it
-didn't have a numpad. Standard layout tenkeyless for the win, every time. But I
-almost always use a USB mechanical keyboard anyhow. Also, with such greedy
-components, the battery life kinda sucks when the GPU is on and the machine is
-busy. But in the last 12 months, the only time I've run my current laptop not
-plugged in is... never? So I guess I don't care.&lt;/p&gt;
-&lt;p&gt;So &lt;a href="https://system76.com/laptops/gazelle#specs"&gt;this&lt;/a&gt; is what I ordered, with
-the 15" display and the 3060 graphics.&lt;/p&gt;
-&lt;p&gt;But I did that thing where I order it with minimal RAM and SSD storage, to
-replace with my own parts. So I'll have some screwdriver work to do after it
-arrives. The payoff is that I save about $150 by paying market rates for these
-components. In fact I already have a &lt;a href="https://www.amazon.com/WD_Black-SN850-Internal-Gaming-Solid/dp/B0B7CPSN2K"&gt;tremendous
-SSD&lt;/a&gt;
-I can use, leftover from this year's Chia cryptocurrency farming experiments,
-so that part is free. This means I can stay within my $2,000 budget, with $9 to
-spare after shipping and taxes.&lt;/p&gt;
-&lt;h3&gt;Memory&lt;/h3&gt;
-&lt;p&gt;It's generally fine to just buy whatever RAM is recommended by your vendor.
-But the most reliable and cheapest memory will often be the slowest, or at least
-the one running at a clock speed which is most widely supported by different
-motherboards. In order to get the &lt;em&gt;fastest&lt;/em&gt; memory for our particular laptop, we
-need to understand a few things.&lt;/p&gt;
-&lt;h4&gt;Physical form factor&lt;/h4&gt;
-&lt;p&gt;The current standard for RAM is DDR4. For laptops, the slim physical form
-factor is known as SoDIMM. A single circuit board of memory chips is a
-&lt;em&gt;module&lt;/em&gt;. A module connects into a motherboard &lt;em&gt;slot&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;DDR5 is supported by Intel's 12th generation processors, and AMD's newest Ryzen
-7000 series. This uses a different physical connection on the motherboard, and
-is rare thus far, outside of systems above my budget.&lt;/p&gt;
-&lt;p&gt;So I'm looking for DDR4 in a SoDIMM module. Got it.&lt;/p&gt;
-&lt;h4&gt;Ranks &amp;amp; Channels&lt;/h4&gt;
-&lt;p&gt;A module contains from one to eight 64-bit wide logical &lt;em&gt;blocks&lt;/em&gt; of data storage
-(single, dual, quad or octal &lt;em&gt;rank&lt;/em&gt;.) The chips on a module provide x1, x2, x4
-or x8 &lt;em&gt;banks&lt;/em&gt;.&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;number of chips x chip banks / 64 = module rank
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;eg. Using sixteen x4 chips will provide a single rank of memory on the module
-(16x4/64=1).&lt;/p&gt;
-&lt;p&gt;Whereas using 32 x8 chips will provide a module of 4 ranks (32x8/64=4).&lt;/p&gt;
-&lt;p&gt;This is sometimes annotated on the module using a notation like 1Rx4, as in one
-rank of x4 chips.&lt;/p&gt;
-&lt;p&gt;The reason this matters is that access to ranks is interleaved, so multiple
-ranks can provide access to data at multiples of the rate provided by a single
-rank. In order to take advantage of this, the motherboard must provide a
-commensurate number of memory access &lt;em&gt;channels&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;The
-&lt;a href="https://tech-docs.system76.com/models/gaze17/README.html"&gt;datasheet for my Gazelle&lt;/a&gt;
-says the motherboard has two memory slots, and supports dual-channel access.
-This could be fully utilized by either inserting a single dual-rank module
-(which is more expensive), or, as in the timeworn heuristic, by inserting two
-half-sized single rank modules (e.g. two 16GB modules to make 32GB total.)&lt;/p&gt;
-&lt;h4&gt;Clock frequencies and latency&lt;/h4&gt;
-&lt;p&gt;RAM has a clock frequency, measured in thousands of MHz, but "double data rate"
-chips transfer data on both the clock's rising and falling edges, so the speed
-of transfer is better measured in mega-transfers per second (MT/s), the higher
-the better.&lt;/p&gt;
-&lt;p&gt;However, it takes more than one clock cycle to perform an action. These latency
-values are sometimes quoted as a series of four integers - the number of clock
-cycles to perform particular operations, e.g. 18-18-18-43. But these are often
-abbreviated to just the first number, representing read access time, known as
-"CAS Latency" (CL), eg. CL 18, which tends to be representative. The lower this
-number is, the better.&lt;/p&gt;
-&lt;p&gt;The actual performance of the memory is determined by the product of a clock
-cycle duration (eg. 1ns at 1000MHz) and the latency number (e.g. 1ns * 18 =
-18ns)&lt;/p&gt;
-&lt;p&gt;Further, the motherboard needs to support the RAM's clock speed. In practice,
-the motherboard will negotiate with the inserted modules to find a commonly
-supported frequency, the same or less than the minimum of the rated memory
-access frequencies of the module, the motherboard, and the CPU, using an
-over-complicated and hard-to-predict process controlled by BIOS settings. I
-have no experience with this but it sounds well worth avoiding altogether by
-making sure we get modules with a rated frequency that exactly matches the
-advertised clock frequency of our motherboard.&lt;/p&gt;
-&lt;p&gt;For my new Gazelle,
-&lt;a href="https://tech-docs.system76.com/models/gaze17/README.html"&gt;the manual&lt;/a&gt;
-says that is 3,200MHz.&lt;/p&gt;
-&lt;h4&gt;Availability, pricing and scams.&lt;/h4&gt;
-&lt;p&gt;Finding CL26 latency RAM at 3,200MHz is easy, for around $70. For lower
-latencies the price goes up to about $375 for CL16, but that isn't even in
-stock anywhere.&lt;/p&gt;
-&lt;p&gt;At one point, after much searching, I found some CL16 on newegg.com:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Memory on sale in Newegg - scam" src="https://www.tartley.com/files/2022/memory-on-sale.webp"&gt;&lt;/p&gt;
-&lt;p&gt;And it is only $128! Carefully checking the specs, including those on the
-manufacturer's site, using the shown model number 'CMSX32GX4M2A3000C16',
-this is exactly what we want. 2x16GB at 3200MT/s at CL16.&lt;/p&gt;
-&lt;p&gt;While checking it out, I clicked around a bit, and at one point found:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Bad review on Newegg" src="https://www.tartley.com/files/2022/bad-review-on-newegg.webp"&gt;&lt;/p&gt;
-&lt;p&gt;This came along with a number of other negative reviews, stating customers had
-been sent memory modules that were fake, ie. imitations of the purported
-reputable manufacturer, they didn't work at the advertised clock speeds, and
-the seller had gone dark on them, taking weeks to respond to queries, and not
-sending replacements until Newegg got involved. Seems wisest to skip this.&lt;/p&gt;
-&lt;p&gt;Eventually I found an alternative:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Memory on sale in Newegg - legit" src="https://www.tartley.com/files/2022/memory-on-sale-legit.webp"&gt;&lt;/p&gt;
-&lt;p&gt;Yes! DDR4 in a SoDIMM package, 2x16GB modules at 3,200MHz and 18CL. The latency
-isn't quite as good, but it sounds legit, so I'll take it!&lt;/p&gt;
-&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>linux</category><guid>https://www.tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>Neuromancer</title><link>https://www.tartley.com/posts/neuromancer/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left; padding: 1em;"&gt;
-&lt;img alt="Neuromancer cover" src="https://www.tartley.com/files/2022/neuromancer-cover.webp"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;by William Gibson, 1984.&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;The sky above the port was the color of television, tuned to a dead channel.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;So opens William Gibson's debut novel, and it is to his eternal credit that we
-all still remember the line now, nearly forty years later. I don't usually do
-audiobooks, but I made an exception for this.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;The bartender’s smile widened. His ugliness was the stuff of legend. In an
-age of affordable beauty, there was something heraldic about his lack of it.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Unlike the majority of the beloved science fiction of my youth, Gibson's
-poetic, literary style has only increased in my estimation over the subsequent
-decades.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Cyberspace. A consensual hallucination experienced daily by billions of
-legitimate operators, in every nation. By children, being taught mathematical
-concepts. A graphic representation of data abstracted from the banks of every
-computer in the human system. Unthinkable complexity. Lines of light ranged
-in the nonspace of the mind, clusters and constellations of data. Like city
-lights, receding.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The consensual hallucination might seem prosaic now, but one has to remember
-this was written back when the internet connected less than 1,000 hosts,
-accessed via green screen text terminals on university campuses.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;He'd made the classic mistake, the one he'd sworn he'd never make. He stole
-from his employers. [...] Of course he was welcome, they told him, welcome
-to the money. And he was going to need it. Because — still smiling
-— they were going to make sure he never worked again. They damaged his
-nervous system with a wartime Russian mycotoxin. Strapped to a bed in a
-Memphis hotel, his talent burning out micron by micron, he hallucinated for
-thirty hours. The damage was minute, subtle, and utterly effective. For Case,
-who lived for the bodiless exultation of cyberspace, it was the Fall. In the
-bars he'd frequented as a cowboy hotshot, the elite stance involved a certain
-relaxed contempt for the flesh. The body was meat. Case fell into the prison
-of his own flesh.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;He introduced the world to cyberpunk, combining the fatalistic noire of Blade
-Runner with the relentless dehumanizing advances of a libertarian tech
-dystopia, to create a startlingly original warning of our possible future that
-looks, as the decades tumble by, increasingly on-the-nose.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;A year here and he still dreamed of cyberspace, hope fading nightly. All the
-speed he took, all the turns he'd taken and the corners he cut in Night City,
-and he'd still see the matrix in his dreams, bright lattices of logic
-unfolding across that colourless void... The Sprawl was a long, strange way
-home now over the Pacific, and he was no console man, no cyberspace cowboy.
-Just another hustler, trying to make it through. But the dreams came on in
-the Japanese night like livewire voodoo, and he'd cry for it, cry in his
-sleep, and wake alone in the dark, curled in his capsule in some coffin
-hotel, hands clawed into the bedslab, temper foam bunched between his
-fingers, trying to reach the console that wasn't there.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;There are several versions of Neuromancer as an audiobook. The slightly
-abridged six-hour version &lt;a href="https://archive.org/details/NeuromancerReadByWilliamGibson"&gt;available for free at the Internet
-Archive&lt;/a&gt; is notable
-for two things: it is read by William Gibson himself, and it is an extremely
-low quality rip from an audiocassette.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Night City wasn’t there for its inhabitants, but as a deliberately
-unsupervised playground for technology itself. Like a deranged experiment in
-social Darwinism, designed by a bored researcher who kept one thumb
-permanently on the fast-forward button. Biz here was a constant subliminal
-hum, and death the accepted punishment for laziness, carelessness, lack of
-grace, failure to heed the demands of an intricate protocol.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The audio quality might make anyone immediately pass this version by. It isn't
-just noisy, but features discernible wow and flutter - artifacts characteristic
-of the stretching or uneven speed of its original tape based media.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;He closed his eyes. Found the ridged face of the power stud. And in the
-bloodlit dark behind his eyes, silver phosphenes boiled in from the edge of
-space, hypnagogic images jerking past like a film compiled of random frames.
-Symbols, figures, faces, a blurred, fragmented mandala of visual information.
-Please, he prayed, now- A gray disk, the color of Chiba sky. Now- Disk
-beginning to rotate, faster, becoming a sphere of paler gray. Expanding- And
-flowed, flowered for him, fluid neon origami trick, the unfolding of
-distanceless home, his country, transparent 3D chessboard extending to
-infinity. Inner eye opening to the stepped scarlet pyramid of the Eastern
-Seaboard Fission Authority burning beyond the green cubes of Mitsubishi Bank
-of America, and high and very far away he saw the spiral arms of the military
-systems, forever beyond his reach. And somewhere he was laughing, in a
-white-painted loft, distant fingers caressing the deck, tears of release
-streaking his face.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;But I'd urge you to stick with it. For the author's reedy, Virginia-inflected
-voice has a cadence that holds the attention. A rhythm of tone and emphasis
-that, for me, works considerably better than the practiced glossiness of more
-recent, more professional recordings.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;"The moment, I mean the nanosecond, that one of those things starts figuring
-out ways to make itself smarter, Turing’ll wipe it. Nobody trusts those
-fuckers, you know that. Every AI ever built has an electromagnetic shotgun
-wired to its forehead."&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;By the end of the second chapter, I'd stopped being bothered by the audio
-quality, and by chapter three, it had become an intrinsic part of the
-experience.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;It was disturbing to think of the Flatline as a construct, a hardwired ROM
-cassette replicating a dead man's skills, obsessions, kneejerk responses.&lt;br&gt;
-[...]&lt;br&gt;
-He slotted some ice, connected the construct, and jacked in.
-It was exactly the sensation of someone reading over his shoulder.
-He coughed.&lt;br&gt;
-  "Dix? McCoy? That you man?' His throat was tight.&lt;br&gt;
-"Hey, bro," said a directionless voice.&lt;br&gt;
-"It's Case, man. Remember?"&lt;br&gt;
-"Miami, joeboy, quick study."&lt;br&gt;
-"What's the last thing you remember before I spoke to you, Dix?"&lt;br&gt;
-"Nothin'."&lt;br&gt;
-"Hang on." He disconnected the construct. The presence was gone. He reconnected it. "Dix? Who am I?"&lt;br&gt;
-"You got me hung, Jack. Who the fuck are you?"&lt;br&gt;
-"Remember being here, a second ago?"&lt;br&gt;
-"No."&lt;br&gt;
-"Know how a ROM personality matrix works?"&lt;br&gt;
-"Sure, bro, it's a firmware construct."&lt;br&gt;
-"So I jack it into the bank I'm using, I can give it sequential, real time memory?"&lt;br&gt;
-"Guess so," said the construct.&lt;br&gt;
-"Okay, Dix. You &lt;b&gt;are&lt;/b&gt; a ROM construct. Got me?"&lt;br&gt;
-"If you say so," said the construct. "Who are you?"&lt;br&gt;
-"Case."&lt;br&gt;
-"Miami," said the voice, "joeboy, quick study."&lt;br&gt;
-"Right. And for starts, Dix, you and me, we're gonna sleaze over to London grid and access a little data. You game for that?"&lt;br&gt;
-"You gonna tell me I got a choice, boy?"&lt;br&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;A distortion so thoroughly appropriate to the underlying material
-it was as though Gibson had planned it this way all along, speaking directly to
-me via a weak signal, projected through time by the noisy filters of this
-obsolete electro-mechanical recording mechanism. The words at once clear and
-irrevocably decayed, fuzzy sounding but still stark and unmistakable in their
-meaning.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;"Dixie?"&lt;br&gt;
-"Yeah."&lt;br&gt;
-"You ever try to crack an AI?"&lt;br&gt;
-"Sure. I flatlined. First time. I was larkin', jacked up real high, out by Rio heavy commerce sector. Big biz, multinationals, Government of Brazil lit up like a Christmas tree. Just larkin' around, you know? And then I started picking up on this one cube, maybe three levels higher up. Jacked up there and made a pass."&lt;br&gt;
-"What did it look like, the visual?"&lt;br&gt;
-"White cube."&lt;br&gt;
-"How'd you know it was an AI?"&lt;br&gt;
-"How'd I know? Jesus. It was the densest ice I'd ever seen. So what else was it? The military down there don't have any thing like that. Anyway, I jacked out and told my computer to look it up."&lt;br&gt;
-"Yeah?"&lt;br&gt;
-"It was on the Turing Registry. AI. Frog company owned its Rio mainframe."&lt;br&gt;
-Case chewed his lower lip and gazed out across the plateaus of the Eastern Seaboard Fission Authority, into the infinite neuroelectronic void of the matrix. "Tessier-Ashpool, Dixie?"&lt;br&gt;
-"Tessier, yeah."&lt;br&gt;
-"And you went back?"&lt;br&gt;
-"Sure. I was crazy. Figured I'd try to cut it. Hit the first strata and that's all she wrote. My joeboy smelled the skin frying and pulled the trodes off me. Mean shit, that ice."&lt;br&gt;
-"And your EEG was flat."&lt;br&gt;
-"Well, that's the stuff of legend, ain't it?'&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Five out of five stars. A riveting performance.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>audiobook</category><category>book</category><category>cyberpunk</category><category>media</category><category>novel</category><category>science-fiction</category><guid>https://www.tartley.com/posts/neuromancer/</guid><pubDate>Mon, 19 Sep 2022 16:22:12 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>did-not-finish</category><category>geek</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Gallery of Drawings</title><link>https://www.tartley.com/posts/gallery-of-drawings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;This blog now has
+&lt;a href="http://localhost:8000/galleries/Drawings/"&gt;a gallery of my drawings&lt;/a&gt;.
+A middle-aged outburst from the dying embers of my creativity has produced some
+devastatingly inept scrawls. I weep for having caused them to impinge upon your
+consciousness.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>creative</category><category>drawing</category><category>media</category><guid>https://www.tartley.com/posts/gallery-of-drawings/</guid><pubDate>Wed, 01 Mar 2023 18:23:19 GMT</pubDate></item></channel></rss>

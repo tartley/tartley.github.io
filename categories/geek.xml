@@ -1,5 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ the domain tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Aug 2023 18:34:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 04:13:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fully Operational</title><link>https://www.tartley.com/posts/fully-operational/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Now witness the power of this fully armed and operational battle station.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="My desk featuring too many computers" src="https://www.tartley.com/files/2023/desk-with-computers.webp"&gt;&lt;/p&gt;
+&lt;p&gt;New job means new laptop means it's time to clean and re-org the desk.&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;Leftmost blue skies&lt;/dt&gt;
+&lt;dd&gt;Linux laptop (a free hand-me-down from a job ten years ago). Acting as the
+house Plex / streaming media server, usually tucked away more discreetly than
+this.&lt;/dd&gt;
+&lt;dt&gt;Left top green forest&lt;/dt&gt;
+&lt;dd&gt;Heavy duty work / gaming Linux laptop ("hardware bonus" from my last
+employer). Has been my primary work machine, but sounds like it's getting
+replaced by...&lt;/dd&gt;
+&lt;dt&gt;Left bottom spaceship drawing&lt;/dt&gt;
+&lt;dd&gt;Macbook Pro (Brand new! Just unwrapped yesterday. Thank you new employer
+&lt;a href="https://lambdalabs.com"&gt;Lambda&lt;/a&gt;!) Looks like this means I'm returning to
+developing on a Mac and VMs, after a full decade on Ubuntu &amp;amp; derivatives.
+I'm told Docker for Desktop now behaves better than it used to.&lt;/dd&gt;
+&lt;dt&gt;Left bottom, under the Mac&lt;/dt&gt;
+&lt;dd&gt;You can sort of see the 10" whiteboard I use to combat ADHD by writing a
+sentence about what I'm &lt;em&gt;supposed&lt;/em&gt; to be working on, then I can spot it every
+few minutes and drag my mind back to the task in hand. (a technique described
+in the fabulous &lt;a href="https://gamkedo.gumroad.com/l/self-command/"&gt;Self Command by Chris
+DeLeon&lt;/a&gt;.&lt;/dd&gt;
+&lt;dt&gt;Center&lt;/dt&gt;
+&lt;dd&gt;Main monitor and wireless tenkeyless mechanical keyboard &amp;amp; mouse combo, all
+switchable to any of the laptops. Under the keyboard you can sort-of see the
+"Magic the Gathering" gaming mat (free from local gaming store's MtG lessons)
+pressed into duty as the world's most gigantic, beautiful, and luxurious mouse
+mat.&lt;/dd&gt;
+&lt;dt&gt;Right monitor, keyboard and mouse&lt;/dt&gt;
+&lt;dd&gt;are wired to the Windows gaming PC under the desk (not visible). The kiddo's
+current &lt;a href="https://store.steampowered.com/app/361420/ASTRONEER/"&gt;Astroneer&lt;/a&gt;
+session is visible. The monitor is switchable to any of the laptops.&lt;/dd&gt;
+&lt;dt&gt;Right tab&lt;/dt&gt;
+&lt;dd&gt;Absolute workhorse 12.6" Android tablet on which I do most of my reading, laid in the picture here just to be gratuitous.&lt;/dd&gt;
+&lt;/dl&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>keyboard</category><category>osx-dev</category><guid>https://www.tartley.com/posts/fully-operational/</guid><pubDate>Thu, 21 Sep 2023 15:51:12 GMT</pubDate></item><item><title>Illustrating Uses of IBM Cloud Security Groups</title><link>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;blockquote&gt;
+&lt;p&gt;I wrote this high-level public-facing guide while employed by IBM, creating
+the security groups feature for IBM Cloud. It
+&lt;a href="https://web.archive.org/web/20210418195246/https://www.ibm.com/cloud/blog/illustrating-uses-ibm-cloud-security-groups"&gt;used to reside&lt;/a&gt;
+on the IBM blog, but has recently been replaced by newer content, so I've
+preserved it here for posterity.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This article illustrates a few possible uses of IBM Cloud Security Groups, a
+per-instance firewall for IBM Cloud virtual instances.&lt;/p&gt;
+&lt;h3&gt;Why Use Security Groups?&lt;/h3&gt;
+&lt;p&gt;Security groups firewall your IBM Cloud applications from nefarious network
+traffic, protecting you and your company from the efforts of “industrious
+users” trying to bring down your application, or make off with your customer's
+credit card details. If those sound like sub-optimal outcomes for your
+situation, read on…&lt;/p&gt;
+&lt;h3&gt;Allow Incoming SSH Connections&lt;/h3&gt;
+&lt;p&gt;The simplest use of security groups is to allow a single type of network
+connection to your instances, blocking all other traffic. For example, to allow
+only incoming SSH connections, which are TCP connections on port 22. All other
+types of traffic, such as ICMP ‘ping' connections, or TCP connections on other
+ports, are blocked. Fig 1. A security group configured to allow incoming SSH&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A diagram representing SSH connections being allowed from support engineer to instances within security group 1, while ping connections are denied" src="https://www.tartley.com/files/2023/ibm-cloud/1_allow-ssh-1.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 1. A security group configured to allow incoming SSH.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;When instances 1 &amp;amp; 2 are added to your security group, firewalls are created
+directly on those instances,configured to allow or deny the corresponding
+traffic. Hence, your support engineer can create SSH connections, but cannot
+send arbitrary network traffic.&lt;/p&gt;
+&lt;h3&gt;Allow SSH from a Specified IP Address&lt;/h3&gt;
+&lt;p&gt;The above scenario allows SSH connection attempts from any IP address. To
+increase security, you might only allow connections from a particular instance.
+Fig 2. A security group configured to allow incoming SSH connections (TCP port
+22) from a particular IP address.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A diagram representing SSH conections being allowed from a known IP address to instances within security group 1, while connections from a disgruntled employee at a different IP address are denied" src="https://www.tartley.com/files/2023/ibm-cloud/2_allow-ssh-one-ip.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 2. A security group configured to allow incoming SSH connections (TCP port
+22) from a particular IP address.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The security group has been configured with the IP address used by a support
+engineer – the single instance that is authorized to make a connection.
+Connections from other instances are blocked.&lt;/p&gt;
+&lt;p&gt;As well as allowing traffic from a single IP address, security groups can be
+configured with a CIDR block, to allow traffic from all instances on that
+subnet. Fig 3. A security group configured to allow incoming SSH connections
+(TCP port 22) from all instances on a given subnet.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A diagram representing SSH conections being allowed from a known subnet to instances within security group 1, while connections from a hacker at an IP address ouside the subet are denied" src="https://www.tartley.com/files/2023/ibm-cloud/3_allow-ssh-subnet.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 3. A security group configured to allow incoming SSH connections (TCP port
+22) from all instances on a given subnet.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The diagram shows instances on an authorized subnet (deploy1 &amp;amp; deploy2),
+representing a project CI/CD infrastructure, all being able to make SSH
+connections to our protected instances, for example to deploy updates to our
+application. Other instances, such as an enterprising hacker, are blocked.&lt;/p&gt;
+&lt;h3&gt;Allow Application Instances to Access a Distributed Data Store&lt;/h3&gt;
+&lt;p&gt;Another use case would be to allow application servers to access the nodes of a
+distributed data store. To do this, we'll make a few changes to the above
+security group configuration.&lt;/p&gt;
+&lt;p&gt;Firstly, we modify the open port from SSH's 22, to MongoDB's default query API
+port of 27017.&lt;/p&gt;
+&lt;p&gt;Secondly, security group 1 is now allowing the creation of outgoing network
+connections, from our application instances, where previously it was allowing
+incoming connections. Security group rules can manage traffic in either
+direction.&lt;/p&gt;
+&lt;p&gt;Thirdly, we don't want our data store instances to be unprotected, so we'll put
+them into a security group of their own. Since there's now two security groups,
+we'll give them names: “app” and “db”.&lt;/p&gt;
+&lt;p&gt;For now, security group “db” allows all incoming MongoDB queries (TCP
+connections on 27017), without restricting the IP addresses allowed to make
+connections. We'll fix that soon. Fig 4. Two security groups configured to
+allow application servers to send queries to MongoDB nodes on a subnet.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='A diagram representing queries from instances in security group "app" being allowed to connect to port 27017 of the subnet of instances in security group "db", which similarly allows incoming connections on TCP port 27017' src="https://www.tartley.com/files/2023/ibm-cloud/4_allow-app-servers-access-db-subnet.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 4. Two security groups configured to allow application servers to send
+queries to MongoDB nodes on a subnet.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For clarity, these diagrams don't show the many connections which are blocked
+by this setup - which are, of course, the whole point of security groups.
+On the above diagram, blocked connections would include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;On app instances:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;All incoming connections.&lt;/li&gt;
+&lt;li&gt;Outgoing connections that aren't TCP, or are on the wrong port.&lt;/li&gt;
+&lt;li&gt;Outgoing connections to anything other than a DB instance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On DB instances:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;All outgoing connections.&lt;/li&gt;
+&lt;li&gt;Incoming connections that aren't TCP, or are on the wrong port.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This setup does have a couple of problems. It relies on our MongoDB instances
+all residing on a single subnet. Worse, as mentioned earlier, it allows any IP
+address in the world to make queries to MongoDB. We'll fix both of these next.&lt;/p&gt;
+&lt;h3&gt;Using Remote Groups to Specify Arbitrary IP Addresses&lt;/h3&gt;
+&lt;p&gt;Specifying allowed instances using a CIDR block can be inappropriate. It's
+often preferable to specify a set of arbitrary IP addresses instead. We can do
+this by using a second security group – known as a remote group – to contain
+the set of allowed instances. Our first security group can then refer to the
+remote group to specify which instances are allowed.&lt;/p&gt;
+&lt;p&gt;In our example above, we would modify the “app” security group by dropping the
+CIDR block, and replacing it with a reference to “db” as a remote security
+group.&lt;/p&gt;
+&lt;p&gt;Similarly, we would modify the “db” group to use “app” as a remote group, only
+allowing connections from the members of that group. Fig 5. Two security groups
+configured to allow application servers to send queries to MongoDB nodes using
+remote groups.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='A diagram representing instances in security group "app" being allowed to connect to instances in security group "db", via port 27017 only' src="https://www.tartley.com/files/2023/ibm-cloud/5_allow-app-servers-access-db-remote.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 5. Two security groups configured to allow application servers to send
+queries to MongoDB nodes using remote groups.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This has several advantages. Firstly, our data store no longer accepts
+malicious queries from hackers all over the internet – only from our app
+instances.&lt;/p&gt;
+&lt;p&gt;Secondly, our data store instances no longer need occupy a subnet, they can
+have arbitrary IP addresses.&lt;/p&gt;
+&lt;p&gt;Because the security groups now specify allowed hosts by referencing each
+other, when the members of either group changes, the instance level firewalling
+rules on all instances are updated automatically, to allow or deny traffic
+based on the new membership.&lt;/p&gt;
+&lt;p&gt;This configuration starts to show what makes security groups a flexible,
+dynamic, low-maintenance solution.&lt;/p&gt;
+&lt;h3&gt;Accepting Web Requests&lt;/h3&gt;
+&lt;p&gt;Our application instances aren't any use without a web front end. We put our
+web instances into their own security group (“web”), which allows incoming
+requests from users on the web, and outgoing API requests to our app instances,
+on port 61516.&lt;/p&gt;
+&lt;p&gt;Similarly, we need to add a second rule to the “app” security group, to allow
+incoming requests from “web”. Fig 6. A traditional three-tier application using
+remote security groups.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='A diagram representing a user connecting via port 80 to instances in security group "web", which connect to instances in group "app" via port 61516, which connect to group "db" via port 27017' src="https://www.tartley.com/files/2023/ibm-cloud/6_web-app-db.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 6. A traditional three-tier application using remote security groups.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The more types of server we add to our setup, the more benefit “remote” groups
+provide, by minimizing setup configuration, and by automatically keeping
+firewalling rules up to date when group membership changes.&lt;/p&gt;
+&lt;p&gt;A future blog post will discuss how to set up this three-tier scenario, and
+describe details such as how to use multiple network interfaces on an instance,
+such as the web instances which will use a public IP address exposed to users,
+versus a private IP exposed to the API instances.&lt;/p&gt;
+&lt;h3&gt;Add a Bastion&lt;/h3&gt;
+&lt;p&gt;We need some way to access our servers, so that we can, for example, deploy new
+versions of our application. Commonly this is achieved using a bastion server,
+which provides a single, carefully hardened point of access.&lt;/p&gt;
+&lt;p&gt;Here we add a bastion server, and modify all our security groups to allow SSH
+access from the bastion to all our instances. The bastion instance itself would
+be configured to only allow incoming connections from the appropriate points in
+a CI/CD infrastructure (not shown.) Fig 7. Adding a bastion server with SSH
+access to all other instances.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='A diagram representing the same elements as figure 6 above, with the addition of a "bastion" group which connects to all instances via SSH on port 22' src="https://www.tartley.com/files/2023/ibm-cloud/7_bastion.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 7. Adding a bastion server with SSH access to all other instances.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This is starting to look like a realistic setup for a modest but scalable
+multi-tier application.&lt;/p&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;Security groups are a flexible and powerful way to firewall network traffic to
+and from your system's instances. We've shown how they might be used in a few
+typical scenarios, and hopefully demonstrated that they are flexible enough to
+accommodate many others. For more information, see
+&lt;a href="https://cloud.ibm.com/docs/security-groups/sg_index.html"&gt;Getting Started with Security Groups&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Jonathan Hartley's smiley face" src="https://www.tartley.com/files/2023/ibm-cloud/jonathan-hartley.webp"&gt;
+&lt;/span&gt;
+&lt;br&gt;
+&lt;strong&gt;Jonathan Hartley&lt;/strong&gt;&lt;br&gt;
+Senior Cloud Developer&lt;/p&gt;
+&lt;p&gt;&lt;span style="float: none"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</description><category>cloud</category><category>geek</category><category>networking</category><category>security</category><category>software</category><guid>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</guid><pubDate>Wed, 23 Aug 2023 02:33:47 GMT</pubDate></item><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
 nose and do a force push. Maybe the project requires contributions to be
 rebased or squashed. Maybe we pushed the nuclear launch codes. But there are
 failure modes:&lt;/p&gt;
@@ -93,7 +292,7 @@ $&lt;span class="w"&gt; &lt;/span&gt;gpf
 $
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><category>version-control</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>Structured Pattern Matching in Python</title><link>https://www.tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
+&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>Structured Pattern Matching in Python</title><link>https://www.tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
 &lt;a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement"&gt;structured pattern matching&lt;/a&gt;
 when it was added in Python 3.10 a couple of years ago, and have studiously
 avoided it ever since. It seemed like a language feature that's amazingly
@@ -493,13 +692,11 @@ outputting the unmatched wildcard expression.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will generate one .pdf file for each extant .tex file, regardless of
-whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>command-line</category><category>geek</category><category>make</category><category>til</category><guid>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>Astroneer Resource Graph</title><link>https://www.tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
+whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>geek</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>Astroneer Resource Graph</title><link>https://www.tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
 get each of the resources in &lt;a href="https://astroneer.space/"&gt;Astroneer&lt;/a&gt;. Click the WEBP
 thumbnail below to get the full glorious SVG, then you can '&lt;em&gt;find in page&lt;/em&gt;' on it.
 (&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>map</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;
-&lt;img alt="Spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
-&lt;p&gt;Major spoilers ahead. It's seven years old at this point.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>did-not-finish</category><category>geek</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
 &lt;img alt="Soma - protagonist" src="https://www.tartley.com/files/2022/soma-protagonist.webp"&gt;
 &lt;/center&gt;&lt;br&gt;
@@ -510,6 +707,7 @@ yielding a second conscious entity, which thinks it is you. So there are deep
 science-fiction issues in play here, about whether we think such a scheme could
 ever possibly work, and about the practical, personal, and societal
 ramifications of it.&lt;/p&gt;
+&lt;p&gt;Major &lt;span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"&gt;spoilers&lt;/span&gt; ahead. It's seven years old at this point.&lt;/p&gt;
 &lt;p&gt;I loved the setup. A humdrum morning begins in your present-day Toronto
 apartment. A note on the fridge reminds you that today is the day of your
 medical appointment, a brain scan. Reaching the doctor's office by train, you
@@ -1237,137 +1435,23 @@ beasts, and then fly exuberantly above the sunlit clouds, forever curving back
 to seek each other's life-giving sustenance.&lt;/p&gt;
 &lt;p&gt;I don't know who the two internet randos were, with whom I shared the first and
 second halves of my journey. But in those minutes together, we lived a
-lifetime's worth.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/journey/</guid><pubDate>Mon, 09 May 2022 11:22:20 GMT</pubDate></item><item><title>TIL: Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
-animated gif memes, finally figured out how to do it manually. Not a universal
-process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
-&lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
-show the commands as I used them, as I was figuring each step out.&lt;/p&gt;
-&lt;h4&gt;1. Download a video&lt;/h4&gt;
-&lt;p&gt;Starting from a video on YouTube:&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6-gJMs6DwuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;To download this locally,
-&lt;a href="https://github.com/ytdl-org/youtube-dl"&gt;install &lt;code&gt;youtube-dl&lt;/code&gt;&lt;/a&gt;,
-hit the YouTube &lt;em&gt;share&lt;/em&gt; button to grab the video's encoded URL,
-and:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl https://youtu.be/6-gJMs6DwuE -o Ash.mp4
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This gives me an 850KB .mp4 video file.&lt;/p&gt;
-&lt;h4&gt;2. Split&lt;/h4&gt;
-&lt;p&gt;I only want the final few seconds. To remove the start of the video,
-keeping from 6.5 seconds until the end:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -hide_banner -i Ash.mp4 -acodec copy -vcodec libx264 -ss 00:00:06.5 Ash-split.mp4
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Args to ffmpeg are position sensitive. Specifying '-ss' (to split the file)
-before the input ('-i') can't create the split at an accurate location, since
-it has to guess whereabouts in the file the given timestamp will occur. But
-putting it after the input (as done here) means it can split accurately on the
-given timestamp, since the file has been processed by the time this arg gets
-actioned, so accurate timestamp/frame conversion is known, at the cost of
-having had to process even the parts of the video that are then discarded.&lt;/p&gt;
-&lt;p&gt;Vcodec of libx264 is specified because, according to stackoverflow,
-"&lt;a href="https://stackoverflow.com/questions/5651654/ffmpeg-how-to-split-video-efficiently#comment85070704_13289426"&gt;scenes in mp4 are broken&lt;/a&gt;", whatever that means,
-and specifying "copy", as most people do, gives me an output with no video,
-only audio.&lt;/p&gt;
-&lt;p&gt;This results in a three second, 217KB .mp4 video file. (the following is just an
-image of it).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split.webp" src="https://www.tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
-&lt;h4&gt;3. Crop&lt;/h4&gt;
-&lt;p&gt;To crop out the black bars from the top and bottom:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -hide_banner -i Ash-split.mp4 -vf 'crop=iw:365' Ash-split-crop.mp4
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Here, we crop it to the input width "iw", and 365 high. In the absense of
-any offset ordinates for the crop, ffmpeg defaults to centering them, so this
-365 pixels are taken from the (spatial, vertical) middle of the video, which is
-exactly what we want.&lt;/p&gt;
-&lt;p&gt;This results in a three second, 220KB .mp4 video file.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://www.tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
-&lt;h3&gt;4. Resize and convert to gif&lt;/h3&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="s s-Atom"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;hide_banner&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;vf&lt;/span&gt; &lt;span class="s s-Atom"&gt;'scale=512:-1'&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;resize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;gif&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This results in a grainy-but-passable three second 750KB animated .gif:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
-&lt;p&gt;The file size can be smaller, if you care, most easily by splitting a shorter
-video clip, reducing the frame rate, or reducing the 'scale' in this step.&lt;/p&gt;
-&lt;p&gt;Alternately, this could be done using ImageMagik's 'convert', but the result
-of that was a very large (10MB) file and played very slowly, and I wasn't
-immediately sure how to fix that.&lt;/p&gt;
-&lt;h3&gt;5. Add text&lt;/h3&gt;
-&lt;p&gt;Using Imagemagik's 'convert':&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;convert \
-    Ash-split-crop-resize.gif \
-    -coalesce \
-    -font impact -pointsize 36 -fill white -stroke black -strokewidth 2 \
-    -gravity north -annotate +0+0 'I can''t lie about your chances, but' \
-    -gravity south -annotate +0+0 'you have my sympathies' \
-    -layers Optimize \
-    Ash-split-crop-resize-text.gif
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The '-coalesce' option removes all the .gif optimizations, then we apply the
-text labels, then the '-layers' option re-applies optimizations. Without this
-dance, the text is all twitchy and messy.&lt;/p&gt;
-&lt;p&gt;Voilà. Imagine sending it to a co-worker who is taking on a difficult task,
-like making changes to that thorny section of the codebase that nobody likes:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>geek</category><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>video</category><category>youtube</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>Subnautica: Below Zero</title><link>https://www.tartley.com/posts/subnautica-below-zero/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;on Windows, published 2021&lt;/em&gt;. &lt;img alt="spoilers" src="https://www.tartley.com/files/spoilers.svg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://subnautica.fandom.com/wiki/Subnautica_Wiki"&gt;Subnautica&lt;/a&gt;,
-and its icy sequel,
-"&lt;a href="https://subnautica.fandom.com/wiki/Subnautica:_Below_Zero"&gt;Below Zero&lt;/a&gt;",
-have perhaps been my favorite
-games of the last few years. The majority of their run time takes place under
-the colorful waters of an alien ocean. It's been a joy to sit side-by-size
-with Zander for tense scuba cave dives, or piloting vehicles through
-vertiginous underwater cave systems, headlights straining through the murk to
-reveal wonders. It has inspired
-&lt;a href="https://www.reddit.com/r/Subnautica_Below_Zero/comments/r82l3i/birthday_cake_no_spoilers/"&gt;cake&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Part of the games take place on land though. I &lt;em&gt;started&lt;/em&gt; drawing a map of Below
-Zero's Glacial Basin region just to keep track of where we'd been. To make sure
-we visited all the locations, found all the MacGuffins (I'm looking at &lt;em&gt;you&lt;/em&gt;,
-pesky antidote), and experienced all that there was to experience.&lt;/p&gt;
-&lt;p&gt;But as those goals approached completion, I &lt;em&gt;finished&lt;/em&gt; drawing it because it
-had become a therapeutic experience. Happily exploring away, mesmerised by the
-scenery, avoiding hostile wildlife, uncovering the ruins of ancient alien
-artifacts. Reckoning distances by eye, scribbling down what we found, updating
-and correcting the map as we went. Being lost in the experience. Simply a joy.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.reddit.com/r/Subnautica_Below_Zero/comments/qutkqz/hand_drawn_map_of_southern_glacial_region_wip/"&gt;Reddit is encouraging me&lt;/a&gt;
-to tackle the tricky Actic Spires area, too. &lt;em&gt;&amp;lt;Rubs hands&amp;gt;...&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Subnautica screenshot" src="https://www.tartley.com/files/2021/subnatica-below-zero-map-glacial-basin.png"&gt;
+lifetime's worth.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/journey/</guid><pubDate>Mon, 09 May 2022 11:22:20 GMT</pubDate></item><item><title>Rubik's Beginner</title><link>https://www.tartley.com/posts/rubiks-beginner/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Rubik's cube on table" src="https://www.tartley.com/files/2021/rubiks-cube-on-table.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>geek</category><category>map</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/subnautica-below-zero/</guid><pubDate>Mon, 22 Nov 2021 22:24:22 GMT</pubDate></item><item><title>Manifold Garden</title><link>https://www.tartley.com/posts/manifold-garden/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Manifold Garden screenshot" src="https://www.tartley.com/files/2021/manifold-garden.jpg"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Windows, 2019&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;This was always going to turn my head, marrying a marvellous geometric engine
-to an austere, flat-shaded renderer. Bewildering portals, seamlessly disguised
-as humble doorways, are the simplest of its tricks. More pervasive, levels are
-wraparound along all three spatial dimensions, as can be seen by the
-disorienting arrays of geometry - the current level, infinitely repeated,
-offset or re-oriented - marching to the vanishing points, dwindling to infinity
-in all directions.&lt;/p&gt;
-&lt;p&gt;This is no mere trippy backdrop. Gravity can be trivially flipped to lie along
-any cardinal axis, and one will routinely step off, into a yawning, infinite
-abyss, to fall through the entire level, and beyond, through and amongst the
-infinite constellations of geometry, airsteering all the way, to land,
-unharmed, anywhere that's exposed to the direction you're falling from. It
-becomes a form of teleportation, used to get from A to B almost as frequently
-as simply walking around.&lt;/p&gt;
-&lt;p&gt;This non-Euclidean wrapping is baked deeply into the visuals, the engine, and
-the gameplay. But for all that technical mastery, the puzzles themselves aren't
-as deep and creative and varied as those in the ostensibly similar, but
-less technically accomplished, &lt;em&gt;Antichamber&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Having said that, there's something entirely appropriate in this. The puzzles
-end up being as much rituals as a head-scratchers, holy spatial rites one
-performs to unleash the deeply evocative visuals towards the end of each level
-- a faceted and angular psychedelic, coupled with unnerving reformulations of
-reality straight out of Farbrausch's
-&lt;em&gt;&lt;a href="https://www.youtube.com/watch?v=wqu_IpkOYBg"&gt;Debris&lt;/a&gt;&lt;/em&gt;. By the final level,
-this crescendos in scenes reminiscent of &lt;em&gt;2001: A Space Odyssey&lt;/em&gt;, profound in
-both the intimacy of my commune with godhood, and in my continued inability to
-understand what I had achieved. Created a universe, probably? Yeah, probably.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/manifold-garden/</guid><pubDate>Tue, 05 Oct 2021 03:16:08 GMT</pubDate></item></channel></rss>
+&lt;p&gt;I've never before memorized the complete set of tricks needed to solve a
+rubik's cube... until today! My first completion with no reference to my notes
+took 3 minutes and 5 seconds. Wine and chocolate motivators as pictured.&lt;/p&gt;
+&lt;p&gt;Rubik's cubes first came out outside Hungary in 1980, when I was 9. A year or
+two after that, I got my hands on an nth generation photocopy of handwritten
+instructions for solving one, derived by a mathematically-inclined friend of a
+friend of my Dad. (The things we used to do before the internet!)&lt;/p&gt;
+&lt;p&gt;I memorized the first few phases, so have always been able to do the first two
+layers. But the last parts of that solution involved remembering a couple of 15
+or 20 move sequences, which apparently ten-year-old me got bored of, or
+distracted from, before ever committing to memory.&lt;/p&gt;
+&lt;p&gt;It turns out that
+&lt;a href="https://ruwix.com/the-rubiks-cube/how-to-solve-the-rubiks-cube-beginners-method/"&gt;the modern "beginner's method"&lt;/a&gt;
+that I'm reading about today is considerably simpler than that, and is
+much easier to understand and memorize. So now that lingering childhood
+inadequacy is vanquished.&lt;/p&gt;
+&lt;p&gt;(Discussion &lt;a href="https://www.facebook.com/tartley/posts/10159630917927040"&gt;on Facebook&lt;/a&gt;.)&lt;/p&gt;</description><category>geek</category><category>journal</category><guid>https://www.tartley.com/posts/rubiks-beginner/</guid><pubDate>Mon, 27 Dec 2021 04:53:22 GMT</pubDate></item></channel></rss>

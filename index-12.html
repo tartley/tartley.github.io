@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!">
+<meta name="description" content="A website devoted to oneself has been described — by my own Father, no less — as the greatest act of hubris. Welcome aboard!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Made out of meat (old posts, page 12) | Made out of meat</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -77,7 +77,119 @@
 
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/the-suze/" class="u-url">The Suze...</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/london-geek-night-game-dev/" class="u-url">London Geek Night : Game Dev</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/london-geek-night-game-dev/" rel="bookmark">
+            <time class="published dt-published" datetime="2008-11-22T14:19:48-06:00" itemprop="datePublished" title="2008-11-22 14:19">2008-11-22 14:19</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>Last night was Game Dev night at the London Geek meet in the
+ThoughtWorks offices. It was really enjoyable, I really enjoyed the
+talks, and meeting and chatting to everyone there.</p>
+<p>Interestingly, there were a bunch of comments throughout the evening
+that confirmed some long-standing suspicions I've had about professional
+game development. I'm not pointedly directing this at any individuals -
+it really was a pleasure and an education talking to every person
+present. However, I couldn't help but notice that there seems to be a
+pervasive macho streak in the game industry, sustained by the belief
+that game development is considerably harder and more creative than any
+other form of software. Or, as I have overheard game developers saying,
+first hand, <em>than any other human endeavor</em>.</p>
+<p><strong>Not rocket science</strong></p>
+<p>Now, there's no doubt that different niches of the software industry
+vary in complexity, just as the commitment and experience of
+individuals, teams and organisations varies over an enormous range. I
+have no doubt that game development lies on the upper part of that
+spectrum rather than in the middle. But I also have no doubt that there
+are lots of other software industries which are just as complex,
+demanding and creative as game development.</p>
+<p>Game dev is not special or unique in having many hard problems to solve.
+When game devs claim that it is, it simply looks like a defensive
+reaction to the pervasive belief outside the industry that games are
+trivial time-wasting distractions, and that creating them must therefore
+be one of the easiest and most lightweight aspects of IT.</p>
+<p>This would be merely silly self-delusion if that was as far as it went,
+but this state of affairs actually has huge damaging knock-on effects.
+The belief that they are tackling projects which are harder than other
+software projects leads to an attitude verging on arrogance - an
+assumption of superiority, and that they have nothing to learn from the
+rest of the software industry. As a result, game dev shops don't even
+attempt to talk to other software engineers about their common craft,
+and as a result the engineering prowess of the game industry actually
+<em>lags behind</em> the rest of the software industry by five or ten years.
+Practices and techniques which are <em>de rigour</em> in the rest of the
+industry these days, such as test-driven development and continuous
+integration, are virtually unknown in the game industry. Examples during
+last night's discussion, which were held up as indicators of how
+difficult and complex game dev is, appeared to many people in the room
+to simply be symptoms of clearly bad design.</p>
+<p>The legendary long hours and project burnout in the game industry is
+actually a symptom of this - far from being the most capable engineers
+amongst us, the reason they are working such ungodly hours is to
+compensate for poor software engineering. The rest of the software
+industry used to suffer from a similar overwork problem, but you know
+what? We figured it out, decades ago now. It's notable to me that other
+industries which suffer from overwork and burnout (eg. the finance
+industry) are also buzzing with arrogance and secrecy.</p>
+<p>Humility and communication are pre-requisites for any learning. Jeez,
+get over yourselves and go learn how to run a software project.</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/opengl-programming-guide-6th-ed/" class="u-url">OpenGL Programming Guide, 6th ed.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/opengl-programming-guide-6th-ed/" rel="bookmark">
+            <time class="published dt-published" datetime="2008-11-03T18:48:55-06:00" itemprop="datePublished" title="2008-11-03 18:48">2008-11-03 18:48</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p><span style="float: left">
+<img alt="" src="files/2008/10/opengl-programming-guide.jpg"></span></p>
+<p>Written by none other
+than the OpenGL architecture review board themselves, this is the de
+facto starting point for anyone learning how to write programs to draw
+computer graphics using the OpenGL graphics API. As such, the entire
+breadth of OpenGL is described in these 800 weighty pages.</p>
+<p>This comes with one or two questionable implications. Firstly, the
+authors, being the authoritative source, are obliged to cover the
+entirety of the OpenGL interface, even though portions of it are now
+obsolete, having been supplanted in practice by newer techniques. The
+older methods are still present, and are described here on an equal
+footing with the later additions.</p>
+<p>Similarly, to avoid getting embroiled in the idiosyncrasies of any
+particular vendor's implementation of OpenGL, there is never more than
+an occasional vague allusion to the potential performance implications
+of using one approach over another. The concept of using vertex arrays
+is covered in a general-principles sort of way, as are vertex buffer
+objects, with the admonition to "prefer them over explicit calls to
+glVertex() for performance" buried in an appendix-like chapter near the
+end. The idea that rendering primitives of GL_TRIANGLES is heavily
+optimised on modern graphics cards receives no mention, from which I
+mistakenly inferred that other primitive types such as
+GL_TRIANGLE_STRIPs, with their lower apparent vertex counts, are a
+preferable alternative.</p>
+<p>This egalitarian presentation means that the book can rightly claim to
+be an unbiased description of OpenGL the interface, and is lent a
+long-term relevance by giving no bias towards any particular vendor, nor
+being subject to the fashions of rendering techniques that sweep through
+the industry every few years. On the other hand, it also means that the
+book is considerably larger than most people learning OpenGL will need,
+and fails to cover many of the vastly performance-enhancing techniques
+that have become standard throughout the industry.</p>
+<p>Rating: 6/10.</p>
+<p>I bought the 'Orange' Shader Language book next. Can anyone recommend
+one of the other OpenGL books that are out there? Since they are all 800
+pages I'd rather not wade through them all to find the best one.</p>
+<p><br style="clear: both"></p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/the-suze/" class="u-url">The Suze...</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -386,57 +498,6 @@ adolescent. But I don't think that would amount to very much. So it's a
 stylistic experience, at any rate. Very '<em>A Portrait of the Artist as a
 Young Man</em>' I'm sure, and you've got to give him his due.</p>
 <p>Rating: 7/10 - Bloody Salinger, he never listens to anyone, him.</p>
-<p><br style="clear: both"></p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/breakfast-of-champions/" class="u-url">Breakfast of Champions</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/breakfast-of-champions/" rel="bookmark">
-            <time class="published dt-published" datetime="2008-08-27T15:45:56-05:00" itemprop="datePublished" title="2008-08-27 15:45">2008-08-27 15:45</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p><span style="float: left">
-<img alt="" src="files/2008/08/breakfast-of-champions.jpg"></span></p>
-<p><em>by Kurt Vonnegut (1973)</em></p>
-<p>po
-I've always loved Vonnegut (who doesn't?) but I'd avoided this since
-seeing the <a href="http://www.imdb.com/title/tt0120618/">painful 1999 movie</a>
-made of it, proof if ever it were needed that some books are simply
-unfilmable.</p>
-<p>The novel, however, is everything we love about Vonnegut. His clarity,
-wit, grumpiness and simplicity. The story of ordinary people in a small
-midwestern town reads like a playful Hemmingway, but forms a therapeutic
-rumination on the nature of sanity, and the author's own relationship
-with it, in the insane world we find ourselves in.</p>
-<p>Rating: 7/10 - and so on.</p>
-<p><br style="clear: both"></p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/hackers-and-painters/" class="u-url">Hackers and Painters</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/hackers-and-painters/" rel="bookmark">
-            <time class="published dt-published" datetime="2008-08-27T15:06:48-05:00" itemprop="datePublished" title="2008-08-27 15:06">2008-08-27 15:06</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p><span style="float: left">
-<img alt="" src="files/2008/08/hackers__painters2.jpg"></span></p>
-<p><em>by Paul Graham (2004)</em></p>
-<p>I'd already stumbled across many of the <a href="http://www.paulgraham.com/articles.html">individual
-essays</a> that this is comprised
-of, but it was still hugely entertaining and educational to discover
-some of Graham's essays that I hadn't read yet. He covers a wide variety
-of topics, and inevitably for such a collection, the components vary in
-quality, but generally they are extremely engaging. I only regret having
-to grab them in dead-tree format since I lost my iPhone. Ohdeary.</p>
-<p>Rating: 8/10 - a brilliant read</p>
 <p><br style="clear: both"></p>
     </div>
     </article>

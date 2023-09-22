@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="A website devoted to oneself has been described, by my Father, no less, as the greatest act of hubris. Welcome aboard!">
+<meta name="description" content="A website devoted to oneself has been described — by my own Father, no less — as the greatest act of hubris. Welcome aboard!">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Made out of meat (old posts, page 25) | Made out of meat</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -77,7 +77,166 @@
 
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/starship-troopers/" class="u-url">Starship Troopers</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/three-parts-dead/" class="u-url">Three Parts Dead</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/three-parts-dead/" rel="bookmark">
+            <time class="published dt-published" datetime="2021-12-15T23:16:46-06:00" itemprop="datePublished" title="2021-12-15 23:16">2021-12-15 23:16</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p><span style="float: left">
+<img alt="Three Parts Dead cover" src="files/2021/three-parts-dead-cover.webp"></span></p>
+<p><em>by Max Gladstone (2012).</em></p>
+<p>A loveable romp. Technical witchcraft. Lawyerly magic wielders. Murdered gods.
+What's not to like?</p>
+<p>But will I continue with the series? I think... not. Which is actually a good
+thing - there are just
+<a href="https://www.goodreads.com/book/show/189147.To_Your_Scattered_Bodies_Go">so</a>
+<a href="https://www.goodreads.com/book/show/968902.Dying_Inside">many</a>
+<a href="https://www.goodreads.com/book/show/26187256-the-thing-itself">other</a>
+<a href="https://www.goodreads.com/book/show/36836025-the-electric-state">things</a>
+<a href="https://www.goodreads.com/book/show/25372801-all-the-birds-in-the-sky">I'm</a>
+<a href="https://www.goodreads.com/book/show/42036538-gideon-the-ninth">dying</a>
+<a href="https://www.goodreads.com/book/show/13821.Lord_of_Light">to</a>
+<a href="https://www.goodreads.com/book/show/13259270-free-will">read</a>
+<a href="https://www.goodreads.com/book/show/50202953-piranesi">right</a>
+<a href="https://www.goodreads.com/book/show/31379914-the-collapsing-empire">now</a>.</p>
+<p><br style="clear: left"></p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/creating-animated-meme-gifs-on-the-command-line/" class="u-url">TIL: Creating Animated Meme GIFs on the Command-Line</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/creating-animated-meme-gifs-on-the-command-line/" rel="bookmark">
+            <time class="published dt-published" datetime="2021-12-08T15:32:10-06:00" itemprop="datePublished" title="2021-12-08 15:32">2021-12-08 15:32</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>Got sick of navigating the limitations of various online services to create
+animated gif memes, finally figured out how to do it manually. Not a universal
+process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)</p>
+<p>All of of the ffmpeg invocations could probably be combined into one, but I
+show the commands as I used them, as I was figuring each step out.</p>
+<h4>1. Download a video</h4>
+<p>Starting from a video on YouTube:</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6-gJMs6DwuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p></p>
+
+<p>To download this locally,
+<a href="https://github.com/ytdl-org/youtube-dl">install <code>youtube-dl</code></a>,
+hit the YouTube <em>share</em> button to grab the video's encoded URL,
+and:</p>
+<div class="code"><pre class="code literal-block">youtube-dl https://youtu.be/6-gJMs6DwuE -o Ash.mp4
+</pre></div>
+
+<p>This gives me an 850KB .mp4 video file.</p>
+<h4>2. Split</h4>
+<p>I only want the final few seconds. To remove the start of the video,
+keeping from 6.5 seconds until the end:</p>
+<div class="code"><pre class="code literal-block">ffmpeg -hide_banner -i Ash.mp4 -acodec copy -vcodec libx264 -ss 00:00:06.5 Ash-split.mp4
+</pre></div>
+
+<p>Args to ffmpeg are position sensitive. Specifying '-ss' (to split the file)
+before the input ('-i') can't create the split at an accurate location, since
+it has to guess whereabouts in the file the given timestamp will occur. But
+putting it after the input (as done here) means it can split accurately on the
+given timestamp, since the file has been processed by the time this arg gets
+actioned, so accurate timestamp/frame conversion is known, at the cost of
+having had to process even the parts of the video that are then discarded.</p>
+<p>Vcodec of libx264 is specified because, according to stackoverflow,
+"<a href="https://stackoverflow.com/questions/5651654/ffmpeg-how-to-split-video-efficiently#comment85070704_13289426">scenes in mp4 are broken</a>", whatever that means,
+and specifying "copy", as most people do, gives me an output with no video,
+only audio.</p>
+<p>This results in a three second, 217KB .mp4 video file. (the following is just an
+image of it).</p>
+<p><img alt="ash-split.webp" src="files/2021/ash-split.webp"></p>
+<h4>3. Crop</h4>
+<p>To crop out the black bars from the top and bottom:</p>
+<div class="code"><pre class="code literal-block">ffmpeg -hide_banner -i Ash-split.mp4 -vf 'crop=iw:365' Ash-split-crop.mp4
+</pre></div>
+
+<p>Here, we crop it to the input width "iw", and 365 high. In the absense of
+any offset ordinates for the crop, ffmpeg defaults to centering them, so this
+365 pixels are taken from the (spatial, vertical) middle of the video, which is
+exactly what we want.</p>
+<p>This results in a three second, 220KB .mp4 video file.</p>
+<p><img alt="ash-split-crop.webp" src="files/2021/ash-split-crop.webp"></p>
+<h3>4. Resize and convert to gif</h3>
+<div class="code"><pre class="code literal-block"><span class="s s-Atom">ffmpeg</span> <span class="o">-</span><span class="s s-Atom">hide_banner</span> <span class="o">-</span><span class="s s-Atom">i</span> <span class="nv">Ash</span><span class="o">-</span><span class="s s-Atom">split</span><span class="o">-</span><span class="s s-Atom">crop</span><span class="p">.</span><span class="s s-Atom">mp4</span> <span class="o">-</span><span class="s s-Atom">vf</span> <span class="s s-Atom">'scale=512:-1'</span> <span class="nv">Ash</span><span class="o">-</span><span class="s s-Atom">split</span><span class="o">-</span><span class="s s-Atom">crop</span><span class="o">-</span><span class="s s-Atom">resize</span><span class="p">.</span><span class="s s-Atom">gif</span>
+</pre></div>
+
+<p>This results in a grainy-but-passable three second 750KB animated .gif:</p>
+<p><img alt="ash-split-crop-resize.gif" src="files/2021/ash-split-crop-resize.gif"></p>
+<p>The file size can be smaller, if you care, most easily by splitting a shorter
+video clip, reducing the frame rate, or reducing the 'scale' in this step.</p>
+<p>Alternately, this could be done using ImageMagik's 'convert', but the result
+of that was a very large (10MB) file and played very slowly, and I wasn't
+immediately sure how to fix that.</p>
+<h3>5. Add text</h3>
+<p>Using Imagemagik's 'convert':</p>
+<div class="code"><pre class="code literal-block">convert \
+    Ash-split-crop-resize.gif \
+    -coalesce \
+    -font impact -pointsize 36 -fill white -stroke black -strokewidth 2 \
+    -gravity north -annotate +0+0 'I can''t lie about your chances, but' \
+    -gravity south -annotate +0+0 'you have my sympathies' \
+    -layers Optimize \
+    Ash-split-crop-resize-text.gif
+</pre></div>
+
+<p>The '-coalesce' option removes all the .gif optimizations, then we apply the
+text labels, then the '-layers' option re-applies optimizations. Without this
+dance, the text is all twitchy and messy.</p>
+<p>Voilà. Imagine sending it to a co-worker who is taking on a difficult task,
+like making changes to that thorny section of the codebase that nobody likes:</p>
+<p><img alt="ash-split-crop-resize-text.gif" src="files/2021/ash-split-crop-resize-text.gif"></p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/subnautica-below-zero/" class="u-url">Subnautica: Below Zero</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/subnautica-below-zero/" rel="bookmark">
+            <time class="published dt-published" datetime="2021-11-22T16:24:22-06:00" itemprop="datePublished" title="2021-11-22 16:24">2021-11-22 16:24</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p><em>on Windows, published 2021</em>.</p>
+<p><span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"><b>spoilers</b></span>, obviously. This is a map of an area in the game, revealing many of its secrets.</p>
+<p><a href="https://subnautica.fandom.com/wiki/Subnautica_Wiki">Subnautica</a>,
+and its icy sequel,
+"<a href="https://subnautica.fandom.com/wiki/Subnautica:_Below_Zero">Below Zero</a>",
+have perhaps been my favorite
+games of the last few years. The majority of their run time takes place under
+the colorful waters of an alien ocean. It's been a joy to sit side-by-size
+with Zander for tense scuba cave dives, or piloting vehicles through
+vertiginous underwater cave systems, headlights straining through the murk to
+reveal wonders. It has inspired
+<a href="https://www.reddit.com/r/Subnautica_Below_Zero/comments/r82l3i/birthday_cake_no_spoilers/">cake</a>.</p>
+<p>Part of the games take place on land though. I <em>started</em> drawing a map of Below
+Zero's Glacial Basin region just to keep track of where we'd been. To make sure
+we visited all the locations, found all the MacGuffins (I'm looking at <em>you</em>,
+pesky antidote), and experienced all that there was to experience.</p>
+<p>But as those goals approached completion, I <em>finished</em> drawing it because it
+had become a therapeutic experience. Happily exploring away, mesmerised by the
+scenery, avoiding hostile wildlife, uncovering the ruins of ancient alien
+artifacts. Reckoning distances by eye, scribbling down what we found, updating
+and correcting the map as we went. Being lost in the experience. Simply a joy.</p>
+<p><a href="https://www.reddit.com/r/Subnautica_Below_Zero/comments/qutkqz/hand_drawn_map_of_southern_glacial_region_wip/">Reddit is encouraging me</a>
+to tackle the tricky Actic Spires area, too. <em>&lt;Rubs hands&gt;...</em></p>
+<p><span style="float: left">
+<img alt="Subnautica screenshot" src="files/2021/subnatica-below-zero-map-glacial-basin.png"></span></p>
+<p><br style="clear: left"></p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/starship-troopers/" class="u-url">Starship Troopers</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -138,17 +297,18 @@ SF looked like 60 years ago.</p>
     </header><div class="e-content entry-content">
     <p><span style="float: left">
 <img alt="This Is How You Lose the Time War cover" src="files/2021/this-is-how-you-lose-the-time-war-cover.jpg"></span></p>
-<p><em>by Amal El-Mohtar &amp; Max Gladstone, 2019</em> <img alt="spoilers" src="files/spoilers.svg"></p>
+<p><em>by Amal El-Mohtar &amp; Max Gladstone, 2019</em></p>
 <p>It's a marvellous literary romp, deploying the tropes and language of science
-fiction to deliver a scintillatingly poetic payload of — dare I say it —
+fiction to deliver a scintillating, poetic payload of — dare I say it —
 credible romance.</p>
+<p><span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;">spoilers</span></p>
 <p>The combatants in the Time War seek to bring about historical outcomes which
 predispose those futures which will result in the generation of their own
 particular civilisation.</p>
 <p>In one future, humans have embraced machine-oriented augmentation, uploads,
 and all that that implies. In the other, transformation is wrought by
 biological means, accepting humankind's role as a part of a natural ecosystem,
-boostrapping the whole to greatness by a ruthless application of evolutionary
+bootstrapping the whole to greatness by a ruthless application of evolutionary
 principles. Each finds the other repulsive, and their existence is mutually
 exclusive. From our perspective, they appear equally awe-inspiring and terrible
 to behold.</p>
@@ -169,8 +329,8 @@ each other's skills has grown to full-blown giddy all-out love. But where to,
 from there? Their communications to date are already traitorous - grounds for
 terminal repercussions. Nowhen in the multiverse are they safe from their
 respective commanders. Losing the time war would mean they no longer — had
-never — existed. Winning the time war would mean the same for their opposite
-number.</p>
+never — existed. Winning the time war would mean the same for their now
+beloved opposite number.</p>
 <p>At which point, the novel cleverly folds back on itself - these are consummate
 masters of time, and subtle but decisive influence, after all - to perform an
 act of escapology, hinting to us that all their previous acts and letters could
@@ -226,7 +386,7 @@ times. Something about Children of Time was just too easygoing for me.</p>
     </header><div class="e-content entry-content">
     <p><span style="float: left">
 <img alt="The Buried Giant cover" src="files/2021/the-buried-giant-cover.jpg"></span></p>
-<p><em>by Kazuo Ishiguro, 2015</em> <img alt="spoilers" src="files/spoilers.svg"></p>
+<p><em>by Kazuo Ishiguro, 2015</em></p>
 <p>A mythical tale, set in post-Arthurian England. Author Kazuo Ishiguro, Nobel
 prize winner for literature, is also famous for Klara and the Sun, Never Let
 Me Go, and The Remains of the Day (yes, that one about butlers.)</p>
@@ -234,6 +394,7 @@ Me Go, and The Remains of the Day (yes, that one about butlers.)</p>
 observation of English and Western culture and myth benefits from that
 transplant's perspective - at once deeply at home in England, and also
 an outsider to it.</p>
+<p><span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;">spoilers</span></p>
 <p>The tale is populated by ragged peoples, affected by a pervasive amnesia.
 Elderly couple Axl and Beatrice abruptly decide to leave their village of damp,
 hobbit-like underground burrows to visit a son they'd forgotten they had.</p>
@@ -392,13 +553,13 @@ this crescendos in scenes reminiscent of <em>2001: A Space Odyssey</em>, profoun
 both the intimacy of my commune with godhood, and in my continued inability to
 understand what I had achieved. Created a universe, probably? Yeah, probably.</p>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/the-glass-bead-game-by-hermann-hesse-1943/" class="u-url">The Glass Bead Game</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/the-glass-bead-game/" class="u-url">The Glass Bead Game</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
             </span></p>
             <p class="dateline">
-            <a href="posts/the-glass-bead-game-by-hermann-hesse-1943/" rel="bookmark">
+            <a href="posts/the-glass-bead-game/" rel="bookmark">
             <time class="published dt-published" datetime="2021-08-20T13:37:25-05:00" itemprop="datePublished" title="2021-08-20 13:37">2021-08-20 13:37</time></a>
             </p>
         </div>
@@ -406,7 +567,7 @@ understand what I had achieved. Created a universe, probably? Yeah, probably.</p
     <p><span style="float: left">
 <img alt="The Glass Bead Game cover" src="files/2021/glass-bead-game-cover.jpg"></span></p>
 <p><em>by Hermann Hesse (1943). Translated from German to English with evident
-devotion and expertise by Clara Winston &amp; Richard Winston.</em> <img alt="spoilers" src="files/spoilers.svg"></p>
+devotion and expertise by Clara Winston &amp; Richard Winston.</em></p>
 <p>This novel is described by some as the culmination of Hesse's career, for
 which he received a Nobel Prize for Literature. Many reviews on
 <a href="https://www.goodreads.com/book/show/16634.The_Glass_Bead_Game">Goodreads</a>
@@ -414,6 +575,7 @@ cite it as a life-changing novel, or as a singular all-time favorite book.</p>
 <p>I must confess with some sadness that I must have entirely missed the point. I
 have not enjoyed it <em>at all</em>. The number of books I failed to finish in my
 life is surely less than five, and this very nearly became one of them.</p>
+<p><span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;">spoilers</span></p>
 <p>The first half describes Knecht's education and career within the rarefied
 academic atmosphere of some distant future European state's "pedagogical
 province", wherein (exclusively male) scholars devote their time to
@@ -472,572 +634,7 @@ as Friedrich Nietzsche, others being acquaintances of the author.</p>
 <p>All of which seems reasonable, but doesn't really help me understand what I
 just read. Perhaps each tale of Knecht, in focussing on one human trait,
 is lacking because it undervalues the other three. Perhaps. ¯\<em>(ツ)</em>/¯</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/keyboard-coolermaster-ck530s-missing-manual/" class="u-url">Keyboard CoolerMaster CK530's Missing Manual</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/keyboard-coolermaster-ck530s-missing-manual/" rel="bookmark">
-            <time class="published dt-published" datetime="2021-07-23T13:41:50-05:00" itemprop="datePublished" title="2021-07-23 13:41">2021-07-23 13:41</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>I have a
-<a href="https://www.coolermaster.com/catalog/peripheral/keyboards/ck530/">CoolerMaster CK530</a>
-mechanical keyboard, which I love. It might have come with a small printed
-manual, but if it did, I no longer have it, and I'm failing to find one online.
-Here's are some things I've gleaned from experimentation.
-If there's a manual I've overlooked, or if you have corrections,
-<a href="https://twitter.com/tartley">let me know</a>.</p>
-<p>The <a href="https://coolermaster.egnyte.com/dl/8NuIc843wQ/?">Quickstart guide</a>
-provides a list of key strokes, but no explanations. I've reproduced
-the table here, with tweaks for understandability, and added more descriptions
-below.</p>
-<table>
-<thead><tr>
-<th></th>
-<th></th>
-</tr></thead>
-<tbody>
-<tr>
-<td>Select a mode <br>
-</td>
-<td></td>
-</tr>
-<tr>
-<td><code>fn + F5</code></td>
-<td>Cycle modes.</td>
-</tr>
-<tr>
-<td><code>fn + F8</code></td>
-<td>Demo (automatically cycles through modes).</td>
-</tr>
-<tr>
-<td>Tweak mode <br>
-</td>
-<td></td>
-</tr>
-<tr>
-<td><code>fn + F1</code></td>
-<td>Cycle 8 color variations of the current mode.</td>
-</tr>
-<tr>
-<td><code>fn + F2</code></td>
-<td>Red level 0-9.</td>
-</tr>
-<tr>
-<td><code>fn + F3</code></td>
-<td>Green level 0-9.</td>
-</tr>
-<tr>
-<td><code>fn + F4</code></td>
-<td>Blue level 0-9.</td>
-</tr>
-<tr>
-<td><code>fn + F6</code></td>
-<td>Foreground color. (See <a href="posts/keyboard-coolermaster-ck530s-missing-manual/#foreground-and-background-colors">below</a>.)</td>
-</tr>
-<tr>
-<td><code>fn + F7</code></td>
-<td>Background color.</td>
-</tr>
-<tr>
-<td><code>fn + Up</code></td>
-<td>Faster.</td>
-</tr>
-<tr>
-<td><code>fn + Down</code></td>
-<td>Slower.</td>
-</tr>
-<tr>
-<td><code>fn + Left</code></td>
-<td>Forwards.</td>
-</tr>
-<tr>
-<td><code>fn + Right</code></td>
-<td>Backwards.</td>
-</tr>
-<tr>
-<td><code>fn + F10</code></td>
-<td>In "custom" mode, define color of each key.</td>
-</tr>
-<tr>
-<td>Profiles <br>
-</td>
-<td></td>
-</tr>
-<tr>
-<td><code>fn + Esc</code></td>
-<td>Default profile</td>
-</tr>
-<tr>
-<td><code>fn + 1</code></td>
-<td>Profile 1 (see mnemonic "P1" - "P4" on sides of these keys)</td>
-</tr>
-<tr>
-<td><code>fn + 2</code></td>
-<td>Profile 2</td>
-</tr>
-<tr>
-<td><code>fn + 3</code></td>
-<td>Profile 3</td>
-</tr>
-<tr>
-<td><code>fn + 4</code></td>
-<td>Profile 4</td>
-</tr>
-<tr>
-<td><code>fn + r</code></td>
-<td>Reset current profile to default appearance. (Hold 3 secs.)</td>
-</tr>
-<tr>
-<td><code>fn + e</code></td>
-<td>Reset all profiles to default appearance. (Hold 3 secs.)</td>
-</tr>
-<tr>
-<td>Macros <br>
-</td>
-<td></td>
-</tr>
-<tr>
-<td><code>fn + F11</code></td>
-<td>Record a macro</td>
-</tr>
-<tr>
-<td><code>fn + F12</code></td>
-<td>Delete macro</td>
-</tr>
-<tr>
-<td><code>fn + PrtSc</code></td>
-<td>Single</td>
-</tr>
-<tr>
-<td><code>fn + ScrLk</code></td>
-<td>Infinite loop</td>
-</tr>
-<tr>
-<td><code>fn + Pause</code></td>
-<td>Repeat</td>
-</tr>
-<tr>
-<td>Media <br>
-</td>
-<td></td>
-</tr>
-<tr>
-<td><code>fn + Ins</code></td>
-<td>Play / pause</td>
-</tr>
-<tr>
-<td><code>fn + Home</code></td>
-<td>Next track</td>
-</tr>
-<tr>
-<td><code>fn + Del</code></td>
-<td>Stop</td>
-</tr>
-<tr>
-<td><code>fn + End</code></td>
-<td>Previous track</td>
-</tr>
-<tr>
-<td><code>fn + PgUp</code></td>
-<td>Volume up</td>
-</tr>
-<tr>
-<td><code>fn + PgDown</code></td>
-<td>Volume down</td>
-</tr>
-<tr>
-<td>Lock <br>
-</td>
-<td></td>
-</tr>
-<tr>
-<td><code>fn + F9</code></td>
-<td>Cycle unlocked(off) / lock windows key(red) / lock whole keyboard(green)</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<p>Many of these are self-explanatory. For the rest:</p>
-<h3>Using modes</h3>
-<p><code>fn</code> is the "Coolermaster" key, on the bottom row key between right Windows and
-right Ctrl.</p>
-<p>When holding <code>fn</code>, several keys might light up, depending on the current
-mode:</p>
-<ul>
-<li>
-<code>ESC/1/2/3/4</code> - one of these keys flashes white to show which profile
-  (see <a href="posts/keyboard-coolermaster-ck530s-missing-manual/#profiles">below</a>) is currently in use.</li>
-<li>If the current mode allows you to select a color to use, then <code>F2/F3/F4</code>
-  will light up to show the currently selected color's levels of
-  red/green/blue.</li>
-<li>If the current mode allows <em>two</em> colors to be set (foreground &amp; background),
-  then one of <code>F6/F7</code> will flash white, to show which is currently affected. (See <a href="posts/keyboard-coolermaster-ck530s-missing-manual/#foreground-and-background-colors">below</a>.)</li>
-</ul>
-<p>Pressing <code>fn + F5</code> cycles through:</p>
-<table>
-<thead><tr>
-<th>Mode</th>
-<th style="text-align: center;">Foreground</th>
-<th style="text-align: center;">. Background</th>
-<th style="text-align: center;">. Reactive.</th>
-</tr></thead>
-<tbody>
-<tr>
-<td>1. All off</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td>2. Static (all one color)</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td>3. Rainbow wave</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td>4. Crosshair</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-</tr>
-<tr>
-<td>5. Reactive fade</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-</tr>
-<tr>
-<td>6. Custom (see <a href="posts/keyboard-coolermaster-ck530s-missing-manual/#custom-mode">below</a>)</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td>7. Stars</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td>8. Rain</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td>9. Color cycle</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td>10. Breathing</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td>11. Ripple</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-</tr>
-<tr>
-<td>12. Reactive punch</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">✅</td>
-</tr>
-<tr>
-<td>13. Arcing</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-</tr>
-<tr>
-<td>15. Fireball</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-</tr>
-<tr>
-<td>16. Tornado (color spin)</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td>17. Reactive tornado</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">✅</td>
-</tr>
-<tr>
-<td>18. Water ripple</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-</tr>
-<tr>
-<td>19. Snake</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">✅</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<p>Modes marked "reactive" react to key-presses. Mostly this lights up a pattern
-around the pressed key. In the case of "snake", you can play using the arrow
-keys.</p>
-<p><span id="foreground-and-background-colors"></span></p>
-<h3>Foreground &amp; background colors</h3>
-<p>Many of the modes have a foreground effect that you can change the color of.
-For example, in the <em>all-one-color</em> mode (officially called "static")
-you can select the color with which all keys are lit, using <code>fn + F2/F3/F4</code>.</p>
-<p>Some of the modes also have a second color, the background, that you can set
-separately. You can see if a mode offers this by selecting the mode and holding
-<code>fn</code>. If this mode offers two settable colors, then either <code>F6</code> or <code>F7</code> will
-flash white, to show you which one you are currently setting.</p>
-<p>Press <code>fn + F6/F7</code> to choose foreground or background,
-then use <code>fn + F2/F3/F4</code> to set it.</p>
-<p><span id="custom-mode"></span></p>
-<h3>Custom mode</h3>
-<p>Custom (mode #6 above) lets the user assign a different color to each key.</p>
-<ol>
-<li>First, cycle through modes using <code>fn + F5</code> until you reach custom mode.
-   It can be tricky to identify when you've reached it. Use the list of modes
-   above to help.</li>
-<li>While in custom mode, press <code>fn + F10</code> to edit key colors.</li>
-<li>Select a color using <code>fn + F2/F3/F4</code>.</li>
-<li>Press all the keys you want lit in the selected color. Pressing the same key
-   again turns it unlit.</li>
-<li>Repeat steps 3 &amp; 4 for other color/key combinations.</li>
-<li>Finally, save to your current profile (see <a href="posts/keyboard-coolermaster-ck530s-missing-manual/#profiles">below</a>) by holding
-   <code>fn</code> and pressing your current profile key (whichever of <code>Esc/1/2/3/4</code> is
-   flashing white.)</li>
-</ol>
-<p>Some wrinkles:</p>
-<p>I can't manage to set a color for the <code>fn</code> key itself, which always appears
-unlit in this mode.</p>
-<p>The caps lock key is unlit in this mode, unless caps lock is on.
-Similarly, scroll lock seems to always be unlit for me in this mode,
-although it is lit in other modes.</p>
-<p>When you try to assign a color to whichever one of <code>Esc/1/2/3/4</code> is lit white,
-to indicate the active profile, then nothing visible happens, but it is
-working. You have to save (step 6 above).
-Then you can see whether you successfully assigned the color,
-or pressed the key one too many times and left it unlit.</p>
-<p>While editing key colors, if you wait, without exit/saving, pressing nothing
-for a minute or so, then key color editing times out, cancelling all your
-changes since step 2.</p>
-<p><span id="profiles"></span></p>
-<h3>Profiles</h3>
-<p>There are five "profiles", each of which can be used to save the current
-state of the keyboard.</p>
-<p>The profiles are accessed using <code>fn + 1/2/3/4/Esc</code>. <code>Esc</code> is the "default"
-profile. Current keyboard settings (e.g. illumination mode and customized
-colors) can be saved to one of the five profiles, and then loaded back later.
-Are macros stored in a profile? Don't know.</p>
-<p>The current profile is shown when you hold <code>fn</code>, by one of <code>1/2/3/4/Esc</code>
-flashing white. While keeping FN pressed:</p>
-<ul>
-<li>
-<p>Pressing the flashing profile key will save the keyboard state to your
-  current profile.</p>
-</li>
-<li>
-<p>Pressing any of the other profile keys will LOAD that profile,
-  losing the current keyboard state.</p>
-</li>
-</ul>
-<p>Hence, to save changes to an arbitrary profile, you need to select that
-profile <em>before</em> making the changes.</p>
-<p>When turning the keyboard on (ie. Plugging the USB cable into a computer),
-the active profile will be whichever one was last active.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/self-calm/" class="u-url">Self-Calm</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/self-calm/" rel="bookmark">
-            <time class="published dt-published" datetime="2021-06-03T07:38:57-05:00" itemprop="datePublished" title="2021-06-03 07:38">2021-06-03 07:38</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p><span style="float: left">
-<img alt="Self Calm cover" src="files/2021/self-calm-cover.jpg"></span></p>
-<p><em>by Chris DeLeon (2018)</em></p>
-<p>Roman Emperor Marcus Auralias' notes, traditionally titled <em>Meditations</em>,
-are a foundational text for practical Stoicism. They comprise a multitude of
-observations and recommendations, grouped into sections such as "Keeping
-thoughts tranquil", and "Cooperation, collaboration and contribution". They
-offer advice for living a contented life, with less regret, sorrow, anger and
-fear.</p>
-<p>Several translations exist, themselves dated from through the ages. This book
-combines them, to synthesize a text which doesn't hew as precisely to the
-original as a straight translation might, but is instead intended to have the
-most relevance to modern ears.</p>
-<p>Confession: It's taken me <em>months</em> to get through it. Partly this is because
-I've allowed myself to be distracted by more gaudy and immediate books along
-the way. Partly it's because I found the best way to read this was <em>slowly</em>.
-Practically every paragraph is worth reflecting upon, to consider how it
-applies to my own life, and ponder what practical, specific next steps are
-implied.</p>
-<p>If I had to criticize, it would only be the superficial wrinkle that there's
-a lot of repetition, such as hundreds of suggestions to not fear death.
-Apparently the original documents were accumulated over decades of Auralias'
-life.</p>
-<p>Genuinely life changing.</p>
-<p>You can get the epub for free from
-<a href="https://gumroad.com/l/self-calm">the author's gumroad page</a>.</p>
-<p><br style="clear: left"></p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/things-they-dont-tell-you-about-peroral-endoscopic-myotemy/" class="u-url">Things They Don't Tell You About Peroral Endoscopic Myotemy</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/things-they-dont-tell-you-about-peroral-endoscopic-myotemy/" rel="bookmark">
-            <time class="published dt-published" datetime="2021-06-02T10:50:10-05:00" itemprop="datePublished" title="2021-06-02 10:50">2021-06-02 10:50</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p><span style="float: left">
-<img alt="P.O.E.M." src="files/2021/poem.jpg"></span></p>
-<h4>The problem</h4>
-<p>This year I was diagnosed with achalasia. It's a rare condition in which nerve
-damage causes weak and poorly coordinated swallowing in the esophagus,
-including a reluctance of the lower esophageal sphincter, leading to the
-stomach, to properly relax at the appropriate moment.</p>
-<p>This leads to difficulty swallowing, regurgitation, and a column of liquid
-sitting in the esophagus, which becomes distended, losing elasticity and tone.
-The cause of the nerve damage is unknown, and has probably been accumulating
-for decades. It's reasonable to assume this is mixed up in some way with
-various ailments of my guts over the years (celiac, eosinophilic esophagitis,
-chronic hiccups), but causal relationships are unknown.</p>
-<h4>A solution, of sorts</h4>
-<p>Peroral endoscopic myotomy (POEM) is a surgical procedure intended to allow the
-esophagus to drain properly, avoiding further distension. Surgery happens
-through a tube down the throat, from where they cut into the muscle wall of the
-oesophagus, then tunnel down to the outside of the lower esophageal sphincter.
-There, they cut some of the muscle, making the sphincter less tightly clenched,
-so that food can pass more easily.</p>
-<p>For me, my symptoms were a nuisance, but perfectly endurable. The main goal
-of the procedure was preventative - reduction in future damage to my esophagus.
-Plus, there's an outside chance that maybe eliminating that standing fluid
-might improve other matters, such as reducing irritation which maybe causes my
-hiccups? Long shot, but worth a try.</p>
-<p>There's a lot of information given to the patient through the process, but
-these are the things that were still surprises to me.</p>
-<h4>Day 0. The procedure.</h4>
-<p>I've undergone a lot of regular endoscopic inspections or biopsies. At some
-point, in London's splendid Imperial College Hospital, I discovered the cheat
-code is to ask to do these unsedated. It's a few minutes of slightly
-nightmarish discomfort, to watch a burly gentleman hand-over-hand several feet
-of black rubber garden hose directly into your mouth. But the payoffs are that
-without any anesthetic, there's no need to fast, the procedure itself is
-simpler and safer, and best of all, recovery time is much reduced. Given a
-few minutes to compose yourself, you can cycle or drive yourself home right
-afterwards, making it a 45 minute appointment, instead of writing off most of
-the day.</p>
-<p>However, going unsedated for the more substantial POEM obviously isn't an
-option. It requires more than the simple sedation I've experienced before,
-since apparently there's a phase at the end where they check you're regaining
-consciousness and are able to breathe for yourself before they remove the
-apparatus that's been breathing for you while you are paralyzed for the
-procedure. This is the sort of detail that is kindly elided from the regular
-patient briefing, which only came up because we were asking questions.</p>
-<p>I only remember coming around sometime after that point, and my first thought,
-unplanned, was to test whether I could perform square and cube roots in my
-head. Apparently that's my brain's idea of a power-on self test. I could do
-small integers, like 27 -&gt; 3, but had the presence of mind enough to see that's
-just relying on remembered sequences. I was able to envision the process to do
-the calculation for something which isn't a cube, like 28, but I failed to
-actually execute any iterations of it.</p>
-<p>I said hello to a nurse sat beside me, but resisted the urge to chatter at her
-about my mental state. Somehow, even I could see that from her perspective,
-that would be like talking to drunk people. So now I'm doing it at you instead.</p>
-<p>After a while they rolled me into my own room, and stuck a big pad over my
-butt. <em>Foreshadowing!</em> I fuzzily thought. I stayed in hospital overnight, for
-tests the next day. Forever grateful for Suze's visits even though I wasn't
-the best of company. :-)</p>
-<p>My hiccups didn't reappear through the first few hours of my recovery, even
-though I spent the time propped upright in bed. This is pretty unusual - they
-usually return within seconds of me sitting up. But when they did return, they
-were pretty painful. What I call "hiccups" is partly a spasm of the esophagus
-itself - precisely where I'd just been cut and then clamped and sutered back
-together. So I asked the nurse to dial up the pain meds, at first with breezy
-British grit, and then with increasingly wild eyes and white knuckles
-as they took a while to figure out a few local administrative issues, like
-where the person with the keys to the drugs locker had gone. Rode out the rest
-of the day in style.</p>
-<h4>Day 1. Restart the line</h4>
-<p>I'd brought a bunch of things for my two day hospital stay, books and media and
-headphones and my own cozy pajamas to wear while garrulously socializing with
-staff and adjacent patients. That was all a total waste of time. I was a write
-off the entire time I was there, not able to muster the bandwidth even to watch
-TV. I saw a single episode of Schitt's Creek at one point because Suze kindly
-propped it up in front of me, but I couldn't manage a 2nd. I just dozed, and
-was wheeled to a barium x-ray, to check I wasn't leaking anywhere untoward.</p>
-<p>At some point during this day, my digestive tract started up again. It became
-apparent that it had just been on strike, inactive, since the surgery. I felt
-it ripple distressingly back into action, along with some impressive gurgles.
-The big pad they'd stuck on me the day before turned out not to be vital in
-this instance, but I can very much understand how it often might be.</p>
-<p>The nurse introduced me to a plastic device for measuring and exercising my
-ability to inhale deeply, on which I could occasionally surpass the initial
-expectation of 1,000 points.</p>
-<p>My ambitions for the day were to get out of bed and take a 2 minute walk, and
-later in the day to tolerate my first drinks, some water and fruit juices,
-sufficiently to get approved to go home. Leaving hospital with some
-prescription, gluten free, clear liquid pain killers proved to be an impossible
-administrative nightmare. Nobody's fault, the system is broken. The concept of
-"insurance" for healthcare is inherently dysfunctional.</p>
-<h4>Day 2. Home again</h4>
-<p>At home for five days of a clear liquid diet. This means water, strained fruit
-juices &amp; drinks without suspensions (i.e. no particles floating in it to make
-it opaque), tea or coffee without milk, clear broths. Also, slightly bizarrely,
-jello, since it may be eaten while solid, but at room (or body) temperature,
-it's a liquid. I demurred on Suze's threat to make jello shots.</p>
-<p>Ambitions for today were to rise from the sofa for a shower, and a walk or two
-around the inside of the house. Scoring 1,500 points on the breathe-o-meter.
-Importantly, I now have it together enough to be able to watch some dumb TV.</p>
-<h4>Day 3. Outdoors.</h4>
-<p>Ambitions today were to take a walk or two around our yard. Scoring 2,000
-points on the breathe-o-meter! Yay, progress. Able to concentrate enough to
-read.</p>
-<h4>Day 4.</h4>
-<p>Ambitions today were to take a couple of walks around the block. Scoring 3,500
-points on the breathe-o-meter. I have no idea what my baseline was.</p>
-<h4>Day 5.</h4>
-<p>First full day and night without any pain killers. Ambitions for today were to
-take it easy and not mow the lawn (check!). Might have to get someone in to do
-it for us. I'd be writhing in guilt if Suze had to go out and manhandle our
-temperamental mower around. 4,500 on the breathe-o-meter.</p>
-<h4>Day 6.</h4>
-<p>Back to work - from home, at a desk.</p>
-<p>Over lunch I visit the hospital for an x-ray and more tests. I was hoping to
-graduate to a soft food diet today, but surgeon says that, although he's happy
-with my progress, out of an abundance of caution he's going to keep me on clear
-liquids until day 9. Then a soft food diet for six weeks. C'est la vie. Back
-home to more apple juice. At least I'm still under instructions to take it
-easy, so retain my excuse for not mowing the lawn...</p>
-<p><br style="clear: left"></p>
+<p>Rating: 10/10 if you are not me. 2/10 if you are me.</p>
     </div>
     </article>
 </div>
