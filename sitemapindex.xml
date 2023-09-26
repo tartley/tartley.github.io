@@ -39,11 +39,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/book.xml</loc>
-  <lastmod>2023-09-22T04:05:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/c.xml</loc>
-  <lastmod>2023-08-23T19:20:00Z</lastmod>
+  <lastmod>2023-09-22T19:13:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/cc%2B%2B.xml</loc>
@@ -52,10 +48,6 @@
  <sitemap>
   <loc>https://www.tartley.com/categories/chipmunk.xml</loc>
   <lastmod>2023-09-22T03:28:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/civilisation.xml</loc>
-  <lastmod>2023-08-23T19:20:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/cloud.xml</loc>
@@ -72,10 +64,6 @@
  <sitemap>
   <loc>https://www.tartley.com/categories/comic.xml</loc>
   <lastmod>2023-09-22T04:05:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/command-line.xml</loc>
-  <lastmod>2023-08-23T19:20:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/completed.xml</loc>
@@ -114,10 +102,6 @@
   <lastmod>2023-09-21T19:38:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/draw.xml</loc>
-  <lastmod>2023-09-21T17:36:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/drawing.xml</loc>
   <lastmod>2023-09-22T03:42:00Z</lastmod>
  </sitemap>
@@ -128,10 +112,6 @@
  <sitemap>
   <loc>https://www.tartley.com/categories/ds.xml</loc>
   <lastmod>2023-09-21T19:38:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/economics.xml</loc>
-  <lastmod>2023-08-23T19:20:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/environment.xml</loc>
@@ -155,7 +135,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/fiction.xml</loc>
-  <lastmod>2023-09-22T04:05:00Z</lastmod>
+  <lastmod>2023-09-26T03:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/file-watcher.xml</loc>
@@ -175,7 +155,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/geek.xml</loc>
-  <lastmod>2023-09-22T04:13:00Z</lastmod>
+  <lastmod>2023-09-22T19:13:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/gig.xml</loc>
@@ -194,20 +174,12 @@
   <lastmod>2023-09-22T03:37:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/greatness.xml</loc>
-  <lastmod>2023-08-23T19:20:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/guest-blogger.xml</loc>
   <lastmod>2023-09-22T03:19:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/gumby.xml</loc>
-  <lastmod>2023-08-23T19:20:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/hardware.xml</loc>
-  <lastmod>2023-09-22T03:21:00Z</lastmod>
+  <lastmod>2023-09-22T19:13:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/history.xml</loc>
@@ -231,11 +203,11 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/journal.xml</loc>
-  <lastmod>2023-09-22T04:13:00Z</lastmod>
+  <lastmod>2023-09-22T19:13:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/keyboard.xml</loc>
-  <lastmod>2023-09-22T03:21:00Z</lastmod>
+  <lastmod>2023-09-22T19:13:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/law.xml</loc>
@@ -246,20 +218,8 @@
   <lastmod>2023-09-22T03:34:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/linking.xml</loc>
-  <lastmod>2023-09-21T17:46:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/linux.xml</loc>
   <lastmod>2023-09-22T04:13:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/literature.xml</loc>
-  <lastmod>2023-09-21T17:43:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/make.xml</loc>
-  <lastmod>2023-09-21T19:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/manual.xml</loc>
@@ -275,7 +235,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/media.xml</loc>
-  <lastmod>2023-09-22T04:05:00Z</lastmod>
+  <lastmod>2023-09-26T03:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/meetup.xml</loc>
@@ -295,7 +255,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/movie.xml</loc>
-  <lastmod>2023-09-22T04:02:00Z</lastmod>
+  <lastmod>2023-09-26T03:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/mswin-dev.xml</loc>
@@ -306,20 +266,8 @@
   <lastmod>2023-09-22T04:13:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/musical.xml</loc>
-  <lastmod>2023-09-21T19:38:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/myth.xml</loc>
   <lastmod>2023-09-22T02:59:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/mythical.xml</loc>
-  <lastmod>2023-09-22T02:58:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/mythology.xml</loc>
-  <lastmod>2023-09-22T02:58:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/networking.xml</loc>
@@ -335,35 +283,19 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/novel.xml</loc>
-  <lastmod>2023-09-22T03:10:00Z</lastmod>
+  <lastmod>2023-09-22T19:13:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/novella.xml</loc>
   <lastmod>2023-09-22T04:04:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/orchestra.xml</loc>
-  <lastmod>2023-09-22T03:29:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/osx-dev.xml</loc>
-  <lastmod>2023-09-22T03:21:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/personal.xml</loc>
-  <lastmod>2023-09-22T03:19:00Z</lastmod>
+  <lastmod>2023-09-22T19:13:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/philosophy.xml</loc>
   <lastmod>2023-09-22T03:40:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/physics.xml</loc>
-  <lastmod>2023-09-22T03:27:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/podcast.xml</loc>
-  <lastmod>2023-09-04T02:18:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/politics.xml</loc>
@@ -375,10 +307,6 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/ps2.xml</loc>
-  <lastmod>2023-09-21T19:38:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/psychology.xml</loc>
   <lastmod>2023-09-21T19:38:00Z</lastmod>
  </sitemap>
  <sitemap>
@@ -402,16 +330,12 @@
   <lastmod>2023-09-22T03:39:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/rigid-body.xml</loc>
-  <lastmod>2023-09-22T03:27:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/russell.xml</loc>
   <lastmod>2023-09-22T03:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/science-fiction.xml</loc>
-  <lastmod>2023-09-22T04:05:00Z</lastmod>
+  <lastmod>2023-09-26T03:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/science.xml</loc>
@@ -426,16 +350,8 @@
   <lastmod>2023-09-22T04:04:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/show.xml</loc>
-  <lastmod>2023-09-21T17:44:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/software.xml</loc>
   <lastmod>2023-09-22T04:08:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/spoilers.xml</loc>
-  <lastmod>2023-09-21T16:34:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/startups.xml</loc>
@@ -444,10 +360,6 @@
  <sitemap>
   <loc>https://www.tartley.com/categories/stirling.xml</loc>
   <lastmod>2023-09-21T19:38:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/sustainability.xml</loc>
-  <lastmod>2023-09-21T16:03:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/tartleycom.xml</loc>
@@ -460,10 +372,6 @@
  <sitemap>
   <loc>https://www.tartley.com/categories/testing.xml</loc>
   <lastmod>2023-09-22T03:37:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/the-fountain.xml</loc>
-  <lastmod>2023-09-22T04:01:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/theater.xml</loc>
@@ -482,22 +390,6 @@
   <lastmod>2023-09-21T19:38:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/tv.xml</loc>
-  <lastmod>2023-08-23T19:20:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/vandalism.xml</loc>
-  <lastmod>2023-09-21T17:46:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/version-control.xml</loc>
-  <lastmod>2023-09-22T04:08:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/video.xml</loc>
-  <lastmod>2023-09-22T04:13:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/videogame.xml</loc>
   <lastmod>2023-09-22T02:56:00Z</lastmod>
  </sitemap>
@@ -514,16 +406,8 @@
   <lastmod>2023-09-21T19:38:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://www.tartley.com/categories/web.xml</loc>
-  <lastmod>2023-09-22T02:51:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://www.tartley.com/categories/windows.xml</loc>
   <lastmod>2023-09-22T02:56:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/categories/write.xml</loc>
-  <lastmod>2023-09-22T04:13:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/categories/writing.xml</loc>
@@ -543,10 +427,10 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/rss.xml</loc>
-  <lastmod>2023-09-22T04:13:00Z</lastmod>
+  <lastmod>2023-09-26T03:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/sitemap.xml</loc>
-  <lastmod>2023-09-22T04:13:00Z</lastmod>
+  <lastmod>2023-09-26T03:40:00Z</lastmod>
  </sitemap>
 </sitemapindex>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about osx-dev)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/osx-dev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 03:21:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fully Operational</title><link>https://www.tartley.com/posts/fully-operational/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Now witness the power of this fully armed and operational battle station.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about osx-dev)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/osx-dev.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 19:13:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fully Operational</title><link>https://www.tartley.com/posts/fully-operational/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Now witness the power of this fully armed and operational battle station.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="My desk featuring too many computers" src="https://www.tartley.com/files/2023/desk-with-computers.webp"&gt;&lt;/p&gt;
 &lt;p&gt;New job means new laptop means it's time to clean and re-org the desk.&lt;/p&gt;
 &lt;dl&gt;
@@ -20,20 +20,21 @@ I'm told Docker for Desktop now behaves better than it used to.&lt;/dd&gt;
 &lt;dd&gt;You can sort of see the 10" whiteboard I use to combat ADHD by writing a
 sentence about what I'm &lt;em&gt;supposed&lt;/em&gt; to be working on, then I can spot it every
 few minutes and drag my mind back to the task in hand. (a technique described
-in the fabulous &lt;a href="https://gamkedo.gumroad.com/l/self-command/"&gt;Self Command by Chris
-DeLeon&lt;/a&gt;.&lt;/dd&gt;
+in the fabulous
+&lt;a href="https://gamkedo.gumroad.com/l/self-command/"&gt;Self Command by Chris DeLeon&lt;/a&gt;.&lt;/dd&gt;
 &lt;dt&gt;Center&lt;/dt&gt;
 &lt;dd&gt;Main monitor and wireless tenkeyless mechanical keyboard &amp;amp; mouse combo, all
 switchable to any of the laptops. Under the keyboard you can sort-of see the
-"Magic the Gathering" gaming mat (free from local gaming store's MtG lessons)
-pressed into duty as the world's most gigantic, beautiful, and luxurious mouse
-mat.&lt;/dd&gt;
+&lt;a href="https://ultrapro.com/collections/gaming-accessories-magic-the-gathering/type_playmat"&gt;Magic the Gathering 13x24" gaming mat&lt;/a&gt;
+(free from local gaming store's MtG lessons) pressed into duty as the world's
+most gigantic, beautiful, and luxurious mouse mat.&lt;/dd&gt;
 &lt;dt&gt;Right monitor, keyboard and mouse&lt;/dt&gt;
 &lt;dd&gt;are wired to the Windows gaming PC under the desk (not visible). The kiddo's
 current &lt;a href="https://store.steampowered.com/app/361420/ASTRONEER/"&gt;Astroneer&lt;/a&gt;
 session is visible. The monitor is switchable to any of the laptops.&lt;/dd&gt;
 &lt;dt&gt;Right tab&lt;/dt&gt;
-&lt;dd&gt;Absolute workhorse 12.6" Android tablet on which I do most of my reading, laid in the picture here just to be gratuitous.&lt;/dd&gt;
+&lt;dd&gt;Absolute workhorse 12.6" Android tablet on which I do most of my reading,
+laid in the picture here just to be gratuitous.&lt;/dd&gt;
 &lt;/dl&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>keyboard</category><category>osx-dev</category><guid>https://www.tartley.com/posts/fully-operational/</guid><pubDate>Thu, 21 Sep 2023 15:51:12 GMT</pubDate></item><item><title>Encrypted zip files on OSX</title><link>https://www.tartley.com/posts/encrypted-zip-files-on-osx/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; I've since switched to KeePassXC, the community fork of KeePassX,
 an open source, cross-platorm, local-first, encrypted password storage program.&lt;/p&gt;
 &lt;hr&gt;
