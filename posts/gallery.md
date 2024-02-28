@@ -6,7 +6,7 @@
 -->
 
 This blog now has
-[a gallery of my drawings](http://localhost:8000/galleries/Drawings/).
+[a gallery of my drawings](/galleries/Drawings/).
 A middle-aged outburst from the dying embers of my creativity has produced some
 devastatingly inept scrawls. I weep for having caused them to impinge upon your
 consciousness.

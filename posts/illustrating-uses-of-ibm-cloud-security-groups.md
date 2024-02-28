@@ -130,9 +130,7 @@ CIDR block, and replacing it with a reference to “db” as a remote security
 group.
 
 Similarly, we would modify the “db” group to use “app” as a remote group, only
-allowing connections from the members of that group. Fig 5. Two security groups
-configured to allow application servers to send queries to MongoDB nodes using
-remote groups.
+allowing connections from the members of that group.
 
 ![A diagram representing instances in security group "app" being allowed to connect to instances in security group "db", via port 27017 only](/files/2023/ibm-cloud/5_allow-app-servers-access-db-remote.webp)
 

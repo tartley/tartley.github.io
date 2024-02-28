@@ -4,7 +4,7 @@
 .. date: 2020-06-11 16:12:34 UTC-05:00
 -->
 
-A website dedicated to oneself has been described — by my own Father, no less — as the greatest act of hubris. Welcome aboard!
+A website dedicated to oneself has been described — by my own father, no less — as the greatest act of hubris. Welcome aboard!
 
 ## Contact Jonathan Hartley
 
