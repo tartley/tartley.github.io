@@ -9,14 +9,12 @@
 How to set up and configure Vim to use tags for Python development so
 that it doesn't suck.
 
-Install Ctags
--------------
+## Install Ctags
 
-Get the latest version of [ctags](http://ctags.sourceforge.net/), put it
-on your PATH. Recent releases are much improved for Python.
+Install the latest version of [Universal Ctags](https://github.com/universal-ctags/ctags),
+an active fork of the venerable unmaintained Exuberant Ctags.
 
-Creating or updating tags files
--------------------------------
+## Creating or updating tags files
 
 You'll probably want one tags file at the root of your project, which
 will need to be created or updated whenever you make significant
@@ -27,35 +25,32 @@ lot:
 ctags -R .
 ```
 
-or bind it to a key in your \~/.vimrc:
+or bind it to a key in your `~/.vimrc`:
+
 
 ``` vim
-map  :!start /min ctags -R .
+noremap <f12> :silent !ctags -R .<CR>
 ```
 
 I like to set Vim's current working directory equal to the root of
-whatever project I'm working in, so now I can press f12 to update the
-tags file for the project. The 'start /min' part is a Windows-specific
-way to run the command in the background, so Vim isn't locked up waiting
-for it to finish.
+whatever project I'm working in, so now I can press `f12` to update the
+tags file for the project.
 
-Test it out
------------
+## Test it out
 
-Now, in Vim, ctrl-\] will jump to the definition of the symbol under
+Now, in Vim, `ctrl-]` will jump to the definition of the symbol under
 your text cursor. Hooray, etc. If there is more than one definition of
 that symbol, it presents a menu for you to choose from.
 
-Turn off useless tags
----------------------
+## Turn off useless tags
 
 By default, ctags generates tags for Python functions, classes, class
 members, variables and imports. The last two are useless to me, and they
-actually make ctrl-\] more inconvenient, because they increase the
+actually make `ctrl-]` more inconvenient, because they increase the
 likelyhood of finding duplicate definitions of a tag, causing the menu
 to inconveniently pop up, rather than just jumping to the tag you want.
 
-To fix this, create a \~/.ctags file:
+To fix this, create a `~/.ctags` file:
 
 ``` bash
 --python-kinds=-iv
@@ -68,8 +63,7 @@ second and third lines turn off generation of tags in the named dirs,
 since you almost certainly want to ignore source code in those
 directories.
 
-Case insensitive tag matching
------------------------------
+## Case insensitive tag matching
 
 If your .vimrc requests case-insensitive searching by setting
 *ignorecase* (aka *ic*), then the above tag matching will also be case
@@ -81,25 +75,27 @@ to the property.
 To fix this, add this to your .vimrc:
 
 ``` vim
-" go to defn of tag under the cursor
+" Go to defn of tag under the cursor, using case-sensitive matching,
+" then restore the previous case sensitivity setting.
 fun! MatchCaseTag()
     let ic = &ic
     set noic
     try
+        " tjump jumps directly to a single match, or presents a menu
         exe 'tjump ' . expand('')
     finally
        let &ic = ic
     endtry
 endfun
-nnoremap   :call MatchCaseTag()
+nnoremap <silent> <C-]> :call TagJumpMatchCase()<CR>
 ```
 
-**Update:**This Vim script was suggested in a comment by James Vega, in
+*This Vim script was suggested in a comment by James Vega, in
 order to reliably restore the state of 'ignorecase' after doing the tag
-jump. Many thanks!
+jump. Many thanks!*
 
-This maps your ctrl-\] key to turn off case-insensitivity while it does
-the jump to tag, then turn it back on again. Now pressing ctrl-\] will
+This maps your `ctrl-]` key to turn off case-insensitivity while it does
+the jump to tag, then turn it back on again. Now pressing `ctrl-]` will
 jump directly to your property, only presenting menus on the occasion
 when the tag you search for is defined in more than one place using
 precisely the same name.
