@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 19:13:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fully Operational</title><link>https://www.tartley.com/posts/fully-operational/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Now witness the power of this fully armed and operational battle station.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jul 2024 19:12:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fully Operational</title><link>https://www.tartley.com/posts/fully-operational/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Now witness the power of this fully armed and operational battle station.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="My desk featuring too many computers" src="https://www.tartley.com/files/2023/desk-with-computers.webp"&gt;&lt;/p&gt;
 &lt;p&gt;New job means new laptop means it's time to clean and re-org the desk.&lt;/p&gt;
 &lt;dl&gt;
@@ -137,9 +137,7 @@ remote group to specify which instances are allowed.&lt;/p&gt;
 CIDR block, and replacing it with a reference to “db” as a remote security
 group.&lt;/p&gt;
 &lt;p&gt;Similarly, we would modify the “db” group to use “app” as a remote group, only
-allowing connections from the members of that group. Fig 5. Two security groups
-configured to allow application servers to send queries to MongoDB nodes using
-remote groups.&lt;/p&gt;
+allowing connections from the members of that group.&lt;/p&gt;
 &lt;p&gt;&lt;img alt='A diagram representing instances in security group "app" being allowed to connect to instances in security group "db", via port 27017 only' src="https://www.tartley.com/files/2023/ibm-cloud/5_allow-app-servers-access-db-remote.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Fig 5. Two security groups configured to allow application servers to send
 queries to MongoDB nodes using remote groups.&lt;/em&gt;&lt;/p&gt;

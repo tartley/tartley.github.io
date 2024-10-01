@@ -186,8 +186,8 @@ have had to type out the full 'gitka.sh'.</p>
     <p>How to set up and configure Vim to use tags for Python development so
 that it doesn't suck.</p>
 <h3>Install Ctags</h3>
-<p>Get the latest version of <a href="http://ctags.sourceforge.net/">ctags</a>, put it
-on your PATH. Recent releases are much improved for Python.</p>
+<p>Install the latest version of <a href="https://github.com/universal-ctags/ctags">Universal Ctags</a>,
+an active fork of the venerable unmaintained Exuberant Ctags.</p>
 <h3>Creating or updating tags files</h3>
 <p>You'll probably want one tags file at the root of your project, which
 will need to be created or updated whenever you make significant
@@ -196,26 +196,24 @@ lot:</p>
 <div class="code"><pre class="code literal-block">ctags<span class="w"> </span>-R<span class="w"> </span>.
 </pre></div>
 
-<p>or bind it to a key in your \~/.vimrc:</p>
-<div class="code"><pre class="code literal-block">map  :<span class="p">!</span><span class="k">start</span> /min ctags <span class="p">-</span>R .
+<p>or bind it to a key in your <code>~/.vimrc</code>:</p>
+<div class="code"><pre class="code literal-block"><span class="nb">noremap</span> <span class="p">&lt;</span>f12<span class="p">&gt;</span> :<span class="k">silent</span> <span class="p">!</span>ctags <span class="p">-</span>R .<span class="p">&lt;</span>CR<span class="p">&gt;</span>
 </pre></div>
 
 <p>I like to set Vim's current working directory equal to the root of
-whatever project I'm working in, so now I can press f12 to update the
-tags file for the project. The 'start /min' part is a Windows-specific
-way to run the command in the background, so Vim isn't locked up waiting
-for it to finish.</p>
+whatever project I'm working in, so now I can press <code>f12</code> to update the
+tags file for the project.</p>
 <h3>Test it out</h3>
-<p>Now, in Vim, ctrl-] will jump to the definition of the symbol under
+<p>Now, in Vim, <code>ctrl-]</code> will jump to the definition of the symbol under
 your text cursor. Hooray, etc. If there is more than one definition of
 that symbol, it presents a menu for you to choose from.</p>
 <h3>Turn off useless tags</h3>
 <p>By default, ctags generates tags for Python functions, classes, class
 members, variables and imports. The last two are useless to me, and they
-actually make ctrl-] more inconvenient, because they increase the
+actually make <code>ctrl-]</code> more inconvenient, because they increase the
 likelyhood of finding duplicate definitions of a tag, causing the menu
 to inconveniently pop up, rather than just jumping to the tag you want.</p>
-<p>To fix this, create a \~/.ctags file:</p>
+<p>To fix this, create a <code>~/.ctags</code> file:</p>
 <div class="code"><pre class="code literal-block">--python-kinds<span class="o">=</span>-iv
 --exclude<span class="o">=</span>build
 --exclude<span class="o">=</span>dist
@@ -233,24 +231,26 @@ property <em>.matrix</em> will present you with a menu asking you to choose
 between property <em>.matrix</em> and class <em>Matrix</em>, rather than just jumping
 to the property.</p>
 <p>To fix this, add this to your .vimrc:</p>
-<div class="code"><pre class="code literal-block"><span class="c">" go to defn of tag under the cursor</span>
+<div class="code"><pre class="code literal-block"><span class="c">" Go to defn of tag under the cursor, using case-sensitive matching,</span>
+<span class="c">" then restore the previous case sensitivity setting.</span>
 <span class="k">fun</span><span class="p">!</span> MatchCaseTag<span class="p">()</span>
     <span class="k">let</span> <span class="nb">ic</span> <span class="p">=</span> &amp;<span class="nb">ic</span>
     <span class="k">set</span> <span class="nb">noic</span>
     <span class="k">try</span>
+<span class="c">        " tjump jumps directly to a single match, or presents a menu</span>
         exe <span class="s1">'tjump '</span> . expand<span class="p">(</span><span class="s1">''</span><span class="p">)</span>
     <span class="k">finally</span>
        <span class="k">let</span> &amp;<span class="nb">ic</span> <span class="p">=</span> <span class="nb">ic</span>
     <span class="k">endtry</span>
 <span class="k">endfun</span>
-<span class="nb">nnoremap</span>   :<span class="k">call</span> MatchCaseTag<span class="p">()</span>
+<span class="nb">nnoremap</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span>]<span class="p">&gt;</span> :<span class="k">call</span> TagJumpMatchCase<span class="p">()&lt;</span>CR<span class="p">&gt;</span>
 </pre></div>
 
-<p><strong>Update:</strong>This Vim script was suggested in a comment by James Vega, in
+<p><em>This Vim script was suggested in a comment by James Vega, in
 order to reliably restore the state of 'ignorecase' after doing the tag
-jump. Many thanks!</p>
-<p>This maps your ctrl-] key to turn off case-insensitivity while it does
-the jump to tag, then turn it back on again. Now pressing ctrl-] will
+jump. Many thanks!</em></p>
+<p>This maps your <code>ctrl-]</code> key to turn off case-insensitivity while it does
+the jump to tag, then turn it back on again. Now pressing <code>ctrl-]</code> will
 jump directly to your property, only presenting menus on the occasion
 when the tag you search for is defined in more than one place using
 precisely the same name.</p>

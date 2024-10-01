@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about vim)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/vim.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 21 Sep 2023 19:38:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about vim)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/vim.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jul 2024 19:12:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
 editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
 &lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -74,8 +74,8 @@ executable. Otherwise, or if you get "ImportError: No module named
 site"?, see Richard's comments below.&lt;/p&gt;</description><category>geek</category><category>osx-dev</category><category>python</category><category>software</category><category>terminal</category><category>vim</category><guid>https://www.tartley.com/posts/compiling-macvim-with-python-2-7/</guid><pubDate>Tue, 18 Oct 2011 17:25:03 GMT</pubDate></item><item><title>TIL: 'Go to Definition' in Vim for Python using Ctags, Done Right</title><link>https://www.tartley.com/posts/go-to-definition-in-vim-for-python-using-ctags-on-windows/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;How to set up and configure Vim to use tags for Python development so
 that it doesn't suck.&lt;/p&gt;
 &lt;h3&gt;Install Ctags&lt;/h3&gt;
-&lt;p&gt;Get the latest version of &lt;a href="http://ctags.sourceforge.net/"&gt;ctags&lt;/a&gt;, put it
-on your PATH. Recent releases are much improved for Python.&lt;/p&gt;
+&lt;p&gt;Install the latest version of &lt;a href="https://github.com/universal-ctags/ctags"&gt;Universal Ctags&lt;/a&gt;,
+an active fork of the venerable unmaintained Exuberant Ctags.&lt;/p&gt;
 &lt;h3&gt;Creating or updating tags files&lt;/h3&gt;
 &lt;p&gt;You'll probably want one tags file at the root of your project, which
 will need to be created or updated whenever you make significant
@@ -84,26 +84,24 @@ lot:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ctags&lt;span class="w"&gt; &lt;/span&gt;-R&lt;span class="w"&gt; &lt;/span&gt;.
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;or bind it to a key in your \~/.vimrc:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;map  :&lt;span class="p"&gt;!&lt;/span&gt;&lt;span class="k"&gt;start&lt;/span&gt; /min ctags &lt;span class="p"&gt;-&lt;/span&gt;R .
+&lt;p&gt;or bind it to a key in your &lt;code&gt;~/.vimrc&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nb"&gt;noremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;f12&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;silent&lt;/span&gt; &lt;span class="p"&gt;!&lt;/span&gt;ctags &lt;span class="p"&gt;-&lt;/span&gt;R .&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;I like to set Vim's current working directory equal to the root of
-whatever project I'm working in, so now I can press f12 to update the
-tags file for the project. The 'start /min' part is a Windows-specific
-way to run the command in the background, so Vim isn't locked up waiting
-for it to finish.&lt;/p&gt;
+whatever project I'm working in, so now I can press &lt;code&gt;f12&lt;/code&gt; to update the
+tags file for the project.&lt;/p&gt;
 &lt;h3&gt;Test it out&lt;/h3&gt;
-&lt;p&gt;Now, in Vim, ctrl-] will jump to the definition of the symbol under
+&lt;p&gt;Now, in Vim, &lt;code&gt;ctrl-]&lt;/code&gt; will jump to the definition of the symbol under
 your text cursor. Hooray, etc. If there is more than one definition of
 that symbol, it presents a menu for you to choose from.&lt;/p&gt;
 &lt;h3&gt;Turn off useless tags&lt;/h3&gt;
 &lt;p&gt;By default, ctags generates tags for Python functions, classes, class
 members, variables and imports. The last two are useless to me, and they
-actually make ctrl-] more inconvenient, because they increase the
+actually make &lt;code&gt;ctrl-]&lt;/code&gt; more inconvenient, because they increase the
 likelyhood of finding duplicate definitions of a tag, causing the menu
 to inconveniently pop up, rather than just jumping to the tag you want.&lt;/p&gt;
-&lt;p&gt;To fix this, create a \~/.ctags file:&lt;/p&gt;
+&lt;p&gt;To fix this, create a &lt;code&gt;~/.ctags&lt;/code&gt; file:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;--python-kinds&lt;span class="o"&gt;=&lt;/span&gt;-iv
 --exclude&lt;span class="o"&gt;=&lt;/span&gt;build
 --exclude&lt;span class="o"&gt;=&lt;/span&gt;dist
@@ -121,24 +119,26 @@ property &lt;em&gt;.matrix&lt;/em&gt; will present you with a menu asking you to
 between property &lt;em&gt;.matrix&lt;/em&gt; and class &lt;em&gt;Matrix&lt;/em&gt;, rather than just jumping
 to the property.&lt;/p&gt;
 &lt;p&gt;To fix this, add this to your .vimrc:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" go to defn of tag under the cursor&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Go to defn of tag under the cursor, using case-sensitive matching,&lt;/span&gt;
+&lt;span class="c"&gt;" then restore the previous case sensitivity setting.&lt;/span&gt;
 &lt;span class="k"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; MatchCaseTag&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nb"&gt;ic&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;ic&lt;/span&gt;
     &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;noic&lt;/span&gt;
     &lt;span class="k"&gt;try&lt;/span&gt;
+&lt;span class="c"&gt;        " tjump jumps directly to a single match, or presents a menu&lt;/span&gt;
         exe &lt;span class="s1"&gt;'tjump '&lt;/span&gt; . expand&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="k"&gt;finally&lt;/span&gt;
        &lt;span class="k"&gt;let&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;ic&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;ic&lt;/span&gt;
     &lt;span class="k"&gt;endtry&lt;/span&gt;
 &lt;span class="k"&gt;endfun&lt;/span&gt;
-&lt;span class="nb"&gt;nnoremap&lt;/span&gt;   :&lt;span class="k"&gt;call&lt;/span&gt; MatchCaseTag&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;]&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;call&lt;/span&gt; TagJumpMatchCase&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt;This Vim script was suggested in a comment by James Vega, in
+&lt;p&gt;&lt;em&gt;This Vim script was suggested in a comment by James Vega, in
 order to reliably restore the state of 'ignorecase' after doing the tag
-jump. Many thanks!&lt;/p&gt;
-&lt;p&gt;This maps your ctrl-] key to turn off case-insensitivity while it does
-the jump to tag, then turn it back on again. Now pressing ctrl-] will
+jump. Many thanks!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This maps your &lt;code&gt;ctrl-]&lt;/code&gt; key to turn off case-insensitivity while it does
+the jump to tag, then turn it back on again. Now pressing &lt;code&gt;ctrl-]&lt;/code&gt; will
 jump directly to your property, only presenting menus on the occasion
 when the tag you search for is defined in more than one place using
 precisely the same name.&lt;/p&gt;
