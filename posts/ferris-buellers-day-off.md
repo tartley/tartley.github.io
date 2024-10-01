@@ -42,7 +42,7 @@ specially for the film, based on an old Louis Armstrong song,
 [*Let My People Go*](https://youtu.be/fHbC8Nhd46s?autoplay=1). Fortunately for us,
 one man was obsessed about it enough to actually recreate a full length
 song based on the snippets from the movie. Here is Daniel Simone's
-[Let My Cameron Go](https://youtu.be/MDEXlOk_suM?autoplay=1), is
+[Let My Cameron Go](https://youtu.be/MDEXlOk_suM?autoplay=1),
 full of a lush Pink Floyd sound, and ripe with the sort of ecstatic
 anticipation that even Roger Waters would be proud of.
 
