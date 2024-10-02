@@ -1,0 +1,51 @@
+A:link {
+	COLOR: #0000bb
+}
+A:visited {
+	COLOR: #000055
+}
+A.external {
+	COLOR: #bb0000
+}
+A.external:visited {
+	COLOR: #550000
+}
+A:hover {
+	COLOR: #0000ff; BACKGROUND-COLOR: white
+}
+A.external:hover {
+	COLOR: #ff0000; BACKGROUND-COLOR: white
+}
+BODY {
+	COLOR: black; FONT-FAMILY: arial; BACKGROUND-COLOR: #cccccc
+}
+TH {
+	COLOR: white; BACKGROUND-COLOR: dimgray
+}
+P {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; MARGIN-TOP: 8px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px
+}
+.clsTiny {
+	FONT-FAMILY: arial
+}
+.clsH1bar {
+	PADDING-RIGHT: 0pt; PADDING-LEFT: 4pt; PADDING-BOTTOM: 0pt; WIDTH: 100%; PADDING-TOP: 0pt; BACKGROUND-COLOR: navy; TEXT-ALIGN: left
+}
+.clsH1font {
+	BORDER-RIGHT: 0pt; BORDER-TOP: 0pt; FONT: bold 2.5em Arial; BORDER-LEFT: 0pt; COLOR: white; BORDER-BOTTOM: 0pt
+}
+.clsSubtitle {
+	COLOR: white; FONT-FAMILY: arial
+}
+.clsH2bar {
+	PADDING-RIGHT: 4pt; PADDING-LEFT: 4pt; PADDING-BOTTOM: 1pt; WIDTH: 100%; PADDING-TOP: 1pt; BACKGROUND-COLOR: navy
+}
+.clsH2font {
+	FONT-WEIGHT: bold; COLOR: white
+}
+.clsButton {
+	FONT-WEIGHT: bold; COLOR: white; BACKGROUND-COLOR: navy; TEXT-ALIGN: center
+}
+.clsHeader {
+	FONT-WEIGHT: bold
+}
