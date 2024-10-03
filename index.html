@@ -11,7 +11,7 @@
 <link rel="canonical" href="https://www.tartley.com/">
 <link rel="icon" href="welcome.gif" sizes="16x16">
 <link rel="next" href="index-27.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/ferris-buellers-day-off/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/til-shell-environment-variable-tricks/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -76,7 +76,39 @@
 
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/ferris-buellers-day-off/" class="u-url">Ferris Bueller's Day Off</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-shell-environment-variable-tricks/" class="u-url">TIL: Shell environment variable tricks</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/til-shell-environment-variable-tricks/" rel="bookmark">
+            <time class="published dt-published" datetime="2024-10-03T15:37:27-05:00" itemprop="datePublished" title="2024-10-03 15:37">2024-10-03 15:37</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p><code>envsubst</code> is an executable you likely already have on your PATH (part of the gettext package, often
+installed with dev packages), which is a convenient way to replace <code>$VAR</code> or <code>${VAR}</code> style
+environment variables with their values. This allows rendering templates without heavyweight
+tools like Ansible, Jinja, or embedding with heredocs. Usage is:</p>
+<div class="code"><pre class="code literal-block">envsubstr &lt;template &gt;rendered
+</pre></div>
+
+<p>For example:</p>
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>envsubstr<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="s2">"Hello </span><span class="nv">$USER</span><span class="s2">"</span>
+Hello<span class="w"> </span>jonathan
+</pre></div>
+
+<p>If you'd like to use KEY=value declarations from a dotenv-style <code>.env</code> file, you can auto-export
+them by setting the <code>-a</code> Bash option:</p>
+<div class="code"><pre class="code literal-block">set -a; source .env; set +a
+</pre></div>
+
+<p>Something I've managed to avoid ever realizing for 30 years, but now that I've seen it I can't
+imagine a week going by without using it. The kind of thing that should be part of everyone's "Week
+1 in a terminal" training that formal education courses never include.</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/ferris-buellers-day-off/" class="u-url">Ferris Bueller's Day Off</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -1035,80 +1067,6 @@ world and its money. Instead of coastal liberals, refer to coastal elites. But a
 </li>
 </ol>
 </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/makefiles-that-are-self-documenting-and-process-all-extant-files/" class="u-url">TIL: Makefiles that are self-documenting, and process all extant files.</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/makefiles-that-are-self-documenting-and-process-all-extant-files/" rel="bookmark">
-            <time class="published dt-published" datetime="2023-07-06T11:50:16-05:00" itemprop="datePublished" title="2023-07-06 11:50">2023-07-06 11:50</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <h3>Self-documenting Makefiles</h3>
-<p>A trick from years ago, but I copy it around between projects enough that it
-deserves calling out. Add a target:</p>
-<div class="code"><pre class="code literal-block"><span class="nf">help</span><span class="o">:</span><span class="w"> </span><span class="c">## Show this help.</span>
-<span class="c">    @# Optionally add 'sort' before 'awk'</span>
-<span class="w">    </span>@grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">'^[a-zA-Z_\.%-]+:.*?## .*$$'</span><span class="w"> </span><span class="k">$(</span>MAKEFILE_LIST<span class="k">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'</span>
-<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">help</span>
-</pre></div>
-
-<p>Decorate other targets with a descriptive '##' comment, like "<em>Show this help</em>"
-above. Now calling the 'help' target will summarize all the things the Makefile
-can do. eg:</p>
-<div class="code"><pre class="code literal-block">$ make help
-help       Show this help.
-setup      Install required system packages using 'apt install'.
-%.pdf      Generate given PDF from corresponding .tex file.
-all        Convert all .tex files to PDF.
-</pre></div>
-
-<p>You might choose to make 'help' the first target in the Makefile, so that it
-gets triggered when the user runs <code>make</code> without arguments.</p>
-<h3>Process all extant files</h3>
-<p>Make's canonical paradigm is that you tell it the name of the file to generate,
-and it uses the tree of dependencies specified in the Makefile to figure out
-how to build it. Typically you'll use automatic variables like "$&lt;" to represent
-the wildcarded source filename:</p>
-<div class="code"><pre class="code literal-block"><span class="nf">%.pdf</span><span class="o">:</span><span class="w"> </span>%.<span class="n">tex</span> <span class="c">## Generate given PDF from corresponding .tex file.</span>
-<span class="w">    </span>pdflatex<span class="w"> </span>$&lt;
-</pre></div>
-
-<p>The pitfall is that when invoking this, you have to name all the PDF files you
-want to generate. If the names are a fixed part of your build, they can be
-embedded in the Makefile itself:</p>
-<div class="code"><pre class="code literal-block"><span class="nf">all</span><span class="o">:</span><span class="w"> </span><span class="n">one</span>.<span class="n">pdf</span> <span class="n">two</span>.<span class="n">pdf</span> <span class="n">three</span>.<span class="n">pdf</span>
-</pre></div>
-
-<p>But if their names are dynamic, you have to specify them on the command line,
-which is a pain:</p>
-<div class="code"><pre class="code literal-block">$<span class="w"> </span>make<span class="w"> </span>one.pdf<span class="w"> </span>two.pdf<span class="w"> </span>three.pdf
-</pre></div>
-
-<p>This is easy enough when <em>re-</em>generating all the PDFs that already exist:</p>
-<div class="code"><pre class="code literal-block">$<span class="w"> </span>make<span class="w"> </span>*.pdf
-</pre></div>
-
-<p>but is no help when you just have a bunch of .tex files and you just want Make
-to build all of them. This is going the opposite way to canonical make usage.
-We want to specify the existing source files (<code>*.tex</code>, in this case), and have
-Make build the resulting products.</p>
-<p>To do it, we need our Makefile to enumerate the existing source files:</p>
-<div class="code"><pre class="code literal-block"><span class="nv">TEX_FILES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>wildcard<span class="w"> </span>*.tex<span class="k">)</span>
-</pre></div>
-
-<p>Using the 'wildcard' function here behaves better than a bare wildcard
-expansion, e.g. it produces no output when there are no matches, rather than
-outputting the unmatched wildcard expression.</p>
-<p>Then use a substitution to generate the list of .pdf filenames:</p>
-<div class="code"><pre class="code literal-block"><span class="nv">all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TEX_FILES:%.tex<span class="o">=</span>%.pdf<span class="k">)</span>
-</pre></div>
-
-<p>Now <code>make all</code> will generate one .pdf file for each extant .tex file, regardless of
-whether the corresponding .pdf files already exist or not.</p>
-    </div>
     </article>
 </div>
 
