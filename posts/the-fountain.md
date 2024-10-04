@@ -2,7 +2,7 @@
 .. title: The Fountain
 .. slug: the-fountain
 .. date: 2007-03-13 11:09:11-05:00
-.. tags: media,movie,fiction,science-fiction,aronofsky
+.. tags: media,movie,fiction,science-fiction
 -->
 
 *Writer/Director: Darren Aronofsky.Starring: Hugh Jackman, Rachel Weisz. (2006)* [![Internet Movie Database](/files/2007/03/imdb.png)](http://imdb.com/title/tt0414993/)
