@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about lessig)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/lessig.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 15:43:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>[SOLVED]UK Digital Economy Bill</title><link>https://www.tartley.com/posts/solveduk-digital-economy-bill/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;So my splendid talented intelligent handsome friend Robert (who is also
+my boss, of sorts) today shared this smashing post:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://gizmodo.com/5417318/my-6247-royalty-statement-how-major-labels-cook-the-books-with-digital-downloads"&gt;My \$62.47 Royalty Statement: How Major Labels Cook the Books with
+Digital
+Downloads&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;About one aspect of how artists get ripped off by the labels. It's not
+required reading, but you can if you like. I'll wait.&lt;/p&gt;
+&lt;p&gt;Hey. So it made me realise that a very possible fix to the dreadful
+abuse of artists by the labels is possible. Even better, the solution to
+this appalling situation is also the solution to the dire problems with
+the UK's Digital Economy Bill.&lt;/p&gt;
+&lt;p&gt;So the UK govt. are debating a new bill, part of which introduces
+measures to ruthlessly pursue illegal downloaders. There are some
+problems with this, namely that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;someone (probably the ISPs) will have to monitor what everyone
+    downloads, and report people downloading anything that trips their
+    filters for 'copyrighted work'. Understandably, they don't want to
+    do this.&lt;/li&gt;
+&lt;li&gt;It will cost lots to implement - currently estimated at 100
+    million, but of course the ensuing arms race with encrypted
+    downloads will inflate that. Has anyone compared this with the
+    &lt;em&gt;actual&lt;/em&gt; economic losses that it is aiming to fix? (not just the
+    inflated ones self-reported by those with most to gain.)&lt;/li&gt;
+&lt;li&gt;It is literally impossible to automatically detect breach of
+    copyright accurately - it can't be done just by looking at the bits.
+    There will be lots of false positives and false negatives.&lt;/li&gt;
+&lt;li&gt;It will be easy to get around, using encryption or similar
+    technologies to evade detection. It will not fix the problem it aims
+    to fix.&lt;/li&gt;
+&lt;li&gt;It requires representatives of the state to intrusively monitor
+    every single thing we do online.&lt;/li&gt;
+&lt;li&gt;The false positives will target and punish many innocent people,
+    who have no way to demonstrate their innocence.&lt;/li&gt;
+&lt;li&gt;Perhaps worst of all, its presumption of guilt will have a chilling
+    effect on many legal and morally justifiable uses of the internet,
+    including business models of the present and the future.&lt;/li&gt;
+&lt;li&gt;They are talking about disconnection from the internet as a
+    potential punitive measure for persistent downloaders. Most internet
+    connections are shared by several people, and many of us use each
+    other's connections all the time. Disconnecting one person for
+    something that someone else downloaded is flagrantly wrong, and
+    without wishing to be melodramatic, collective punishment like this
+    is, strictly speaking, in breach of article 33 of the Geneva
+    Convention. Plus it makes free wi-fi impossible to provide. Are we
+    meant to be &lt;em&gt;destroying&lt;/em&gt; the digital economy?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If your country doesn't have a Bill like this, rest assured, it soon
+will have.&lt;/p&gt;
+&lt;p&gt;Anyhow, it's clear to me that there's no use in railing against the Bill
+unless one has an alternative to offer. The debate in the House of Lords
+yesterday made it clear that the mood there is that millions are
+flouting the law with illegal downloads to rip off artists and Something
+Must Be Done.&lt;/p&gt;
+&lt;p&gt;So what's the alternative? The solution is the final chapter from
+Stanford Law Prof. Lawrence Lessig's book '&lt;a href="http://www.amazon.co.uk/Free-Culture-Nature-Future-Creativity/dp/0143034650"&gt;Free
+Culture&lt;/a&gt;',
+that describes how to fix the whole copyright mess in such a way that
+will make everybody happy. Artists will get paid in abundance, very
+fairly, in a market-driven way, and the payment will be direct to them.
+The labels will be eliminated from the loop. No state monitoring of what
+people download will be required. Everybody will be able to continue to
+download whatever they like from wherever they like, for free (at point
+of use), legally and with clear conscience. Best of all, the creation of
+new business models and grass-roots creativity such as songs and other
+content will be stimulated through the roof. Whichever country first
+introduced this would lead the world in a creative tidal wave that
+embraces the powers of the internet, rather than fighting against them.&lt;/p&gt;
+&lt;p&gt;I'm not going to write what the copyright fix is here. I have to go to
+work and I'm still in my pajamas. Oh alright, here's the quick quick
+version. We add a tax to every high bandwidth internet connection. The
+money goes in a pot. Then a central agency samples how many of each
+creative work is being downloaded. This is just a sample - it needn't be
+tied to any individual downloader, so it is cheap to do and unintrusive.
+Then we distribute the money in the pot to artists, in proportion to the
+number of downloads they had.&lt;/p&gt;
+&lt;p&gt;This quick version has some holes in it. Prof. Lessig ties it all up in
+his book. Yes it has some problems - taxes are never popular, and more
+expensive internet connections are not what we want. But these problems
+are small and soluble, compared to what is currently being discussed
+instead.&lt;/p&gt;
+&lt;p&gt;I know this is so starry-eyed idealistic that it has no chance of being
+seriously discussed. But I decided last night that I have to at least
+give it a try.&lt;/p&gt;
+&lt;p&gt;Readers from the UK - Do YOU have even the slightest inkling of
+interest in suggesting this to your own MP? Or at least pointing out the
+downsides of the current Bill? It would just be one evening out of your
+life. I'm visiting mine this weekend. Email me if you have any interest
+at all. I can lead you through the process, it's simple.&lt;/p&gt;</description><category>geek</category><category>imho</category><category>lessig</category><category>politics</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/solveduk-digital-economy-bill/</guid><pubDate>Thu, 03 Dec 2009 16:04:59 GMT</pubDate></item><item><title>Remix</title><link>https://www.tartley.com/posts/remix/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left; padding: 1em"&gt;
+&lt;img alt="remix" src="https://www.tartley.com/files/2009/04/remix.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Lawrence Lessig&lt;/em&gt;, 2008.&lt;/p&gt;
+&lt;p&gt;Is creating a mix CD for a friend an act of creativity, or a criminal
+offence? When you shoot a home video of your child which has a TV on in
+the background, is there really any need for lawsuits? What business do
+federal laws have in trying to regulate this sort of activity anyway?&lt;/p&gt;
+&lt;p&gt;For those, like me, who view modern copyright law as a morass of
+intractable problems, irreconcilable interests, overreaching government
+intervention and profoundly unfair restrictions on personal freedoms,
+Professor Lessig's words are a welcome infusion of clarity, pragmatism
+and respect for all interested parties.&lt;/p&gt;
+&lt;p&gt;With an engaging and accessible style, he describes exactly what is
+wrong with modern copyright, with clarity and impartiality, and why this
+is a deep and pervasive problem that cuts to the heart of all that we
+value in human culture. He describes how fixing this would benefit each
+of us, from individual consumers and amateur producers, through
+professional writers, musicians and copyright holders. Then, in a
+surprisingly constructive final section, he outlines five simple changes
+to copyright law that would, at a stroke, fix all the major problems,
+vastly simplify the situation, eliminate the ambiguity over the legality
+of our everyday actions, and all without apparently causing any harm or
+loss to any interested party.&lt;/p&gt;
+&lt;p&gt;Rating:&lt;/p&gt;
+&lt;p&gt;10/10 If you have any interest in the forces that are reshaping our
+society and turning industries upside-down within the space of years.&lt;/p&gt;
+&lt;p&gt;0/10 If you dislike freedom or free markets, or are a big fan of
+overbearing government regulation and monopolies.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>culture</category><category>internet</category><category>law</category><category>lessig</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/remix/</guid><pubDate>Wed, 08 Apr 2009 04:42:58 GMT</pubDate></item><item><title>Free Culture</title><link>https://www.tartley.com/posts/free-culture/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Free Culture" src="https://www.tartley.com/files/2008/02/free-culture.jpg"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Lawrence Lessig (2004)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Accessible, entertaining, rich with historical perspective, and cuts
+incisively to the core of modern society's conflict over intellectual
+property. To my mind, one of the most important books of the decade. I'd
+highly recommend it. And it's available for free from your iPhone's
+built-in ebooks installer, or
+&lt;a href="http://www.free-culture.cc/freecontent/"&gt;as a pdf&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Rating: 10/10. Blimey.&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>culture</category><category>internet</category><category>law</category><category>lessig</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/free-culture/</guid><pubDate>Mon, 25 Feb 2008 20:08:18 GMT</pubDate></item></channel></rss>

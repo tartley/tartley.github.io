@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 15:43:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Shell environment variable tricks</title><link>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;envsubst&lt;/code&gt; is an executable you likely already have on your PATH (part of the gettext package, often
+installed with dev packages), which is a convenient way to replace &lt;code&gt;$VAR&lt;/code&gt; or &lt;code&gt;${VAR}&lt;/code&gt; style
+environment variables with their values. This allows rendering templates without heavyweight
+tools like Ansible, Jinja, or embedding with heredocs. Usage is:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;envsubstr &amp;lt;template &amp;gt;rendered
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;envsubstr&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s2"&gt;"Hello &lt;/span&gt;&lt;span class="nv"&gt;$USER&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+Hello&lt;span class="w"&gt; &lt;/span&gt;jonathan
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you'd like to use KEY=value declarations from a dotenv-style &lt;code&gt;.env&lt;/code&gt; file, you can auto-export
+them by setting the &lt;code&gt;-a&lt;/code&gt; Bash option:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;set -a; source .env; set +a
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Something I've managed to avoid ever realizing for 30 years, but now that I've seen it I can't
+imagine a week going by without using it. The kind of thing that should be part of everyone's "Week
+1 in a terminal" training that formal education courses never include.&lt;/p&gt;</description><category>bash</category><category>geek</category><category>linux</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</guid><pubDate>Thu, 03 Oct 2024 20:37:27 GMT</pubDate></item><item><title>Illustrating Uses of IBM Cloud Security Groups</title><link>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;blockquote&gt;
+&lt;p&gt;I wrote this high-level public-facing guide while employed by IBM, creating
+the security groups feature for IBM Cloud. It
+&lt;a href="https://web.archive.org/web/20210418195246/https://www.ibm.com/cloud/blog/illustrating-uses-ibm-cloud-security-groups"&gt;used to reside&lt;/a&gt;
+on the IBM blog, but has recently been replaced by newer content, so I've
+preserved it here for posterity.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This article illustrates a few possible uses of IBM Cloud Security Groups, a
+per-instance firewall for IBM Cloud virtual instances.&lt;/p&gt;
+&lt;h3&gt;Why Use Security Groups?&lt;/h3&gt;
+&lt;p&gt;Security groups firewall your IBM Cloud applications from nefarious network
+traffic, protecting you and your company from the efforts of “industrious
+users” trying to bring down your application, or make off with your customer's
+credit card details. If those sound like sub-optimal outcomes for your
+situation, read on…&lt;/p&gt;
+&lt;h3&gt;Allow Incoming SSH Connections&lt;/h3&gt;
+&lt;p&gt;The simplest use of security groups is to allow a single type of network
+connection to your instances, blocking all other traffic. For example, to allow
+only incoming SSH connections, which are TCP connections on port 22. All other
+types of traffic, such as ICMP ‘ping' connections, or TCP connections on other
+ports, are blocked. Fig 1. A security group configured to allow incoming SSH&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A diagram representing SSH connections being allowed from support engineer to instances within security group 1, while ping connections are denied" src="https://www.tartley.com/files/2023/ibm-cloud/1_allow-ssh-1.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 1. A security group configured to allow incoming SSH.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;When instances 1 &amp;amp; 2 are added to your security group, firewalls are created
+directly on those instances,configured to allow or deny the corresponding
+traffic. Hence, your support engineer can create SSH connections, but cannot
+send arbitrary network traffic.&lt;/p&gt;
+&lt;h3&gt;Allow SSH from a Specified IP Address&lt;/h3&gt;
+&lt;p&gt;The above scenario allows SSH connection attempts from any IP address. To
+increase security, you might only allow connections from a particular instance.
+Fig 2. A security group configured to allow incoming SSH connections (TCP port
+22) from a particular IP address.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A diagram representing SSH conections being allowed from a known IP address to instances within security group 1, while connections from a disgruntled employee at a different IP address are denied" src="https://www.tartley.com/files/2023/ibm-cloud/2_allow-ssh-one-ip.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 2. A security group configured to allow incoming SSH connections (TCP port
+22) from a particular IP address.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The security group has been configured with the IP address used by a support
+engineer – the single instance that is authorized to make a connection.
+Connections from other instances are blocked.&lt;/p&gt;
+&lt;p&gt;As well as allowing traffic from a single IP address, security groups can be
+configured with a CIDR block, to allow traffic from all instances on that
+subnet. Fig 3. A security group configured to allow incoming SSH connections
+(TCP port 22) from all instances on a given subnet.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A diagram representing SSH conections being allowed from a known subnet to instances within security group 1, while connections from a hacker at an IP address ouside the subet are denied" src="https://www.tartley.com/files/2023/ibm-cloud/3_allow-ssh-subnet.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 3. A security group configured to allow incoming SSH connections (TCP port
+22) from all instances on a given subnet.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The diagram shows instances on an authorized subnet (deploy1 &amp;amp; deploy2),
+representing a project CI/CD infrastructure, all being able to make SSH
+connections to our protected instances, for example to deploy updates to our
+application. Other instances, such as an enterprising hacker, are blocked.&lt;/p&gt;
+&lt;h3&gt;Allow Application Instances to Access a Distributed Data Store&lt;/h3&gt;
+&lt;p&gt;Another use case would be to allow application servers to access the nodes of a
+distributed data store. To do this, we'll make a few changes to the above
+security group configuration.&lt;/p&gt;
+&lt;p&gt;Firstly, we modify the open port from SSH's 22, to MongoDB's default query API
+port of 27017.&lt;/p&gt;
+&lt;p&gt;Secondly, security group 1 is now allowing the creation of outgoing network
+connections, from our application instances, where previously it was allowing
+incoming connections. Security group rules can manage traffic in either
+direction.&lt;/p&gt;
+&lt;p&gt;Thirdly, we don't want our data store instances to be unprotected, so we'll put
+them into a security group of their own. Since there's now two security groups,
+we'll give them names: “app” and “db”.&lt;/p&gt;
+&lt;p&gt;For now, security group “db” allows all incoming MongoDB queries (TCP
+connections on 27017), without restricting the IP addresses allowed to make
+connections. We'll fix that soon. Fig 4. Two security groups configured to
+allow application servers to send queries to MongoDB nodes on a subnet.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='A diagram representing queries from instances in security group "app" being allowed to connect to port 27017 of the subnet of instances in security group "db", which similarly allows incoming connections on TCP port 27017' src="https://www.tartley.com/files/2023/ibm-cloud/4_allow-app-servers-access-db-subnet.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 4. Two security groups configured to allow application servers to send
+queries to MongoDB nodes on a subnet.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For clarity, these diagrams don't show the many connections which are blocked
+by this setup - which are, of course, the whole point of security groups.
+On the above diagram, blocked connections would include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;On app instances:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;All incoming connections.&lt;/li&gt;
+&lt;li&gt;Outgoing connections that aren't TCP, or are on the wrong port.&lt;/li&gt;
+&lt;li&gt;Outgoing connections to anything other than a DB instance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On DB instances:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;All outgoing connections.&lt;/li&gt;
+&lt;li&gt;Incoming connections that aren't TCP, or are on the wrong port.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This setup does have a couple of problems. It relies on our MongoDB instances
+all residing on a single subnet. Worse, as mentioned earlier, it allows any IP
+address in the world to make queries to MongoDB. We'll fix both of these next.&lt;/p&gt;
+&lt;h3&gt;Using Remote Groups to Specify Arbitrary IP Addresses&lt;/h3&gt;
+&lt;p&gt;Specifying allowed instances using a CIDR block can be inappropriate. It's
+often preferable to specify a set of arbitrary IP addresses instead. We can do
+this by using a second security group – known as a remote group – to contain
+the set of allowed instances. Our first security group can then refer to the
+remote group to specify which instances are allowed.&lt;/p&gt;
+&lt;p&gt;In our example above, we would modify the “app” security group by dropping the
+CIDR block, and replacing it with a reference to “db” as a remote security
+group.&lt;/p&gt;
+&lt;p&gt;Similarly, we would modify the “db” group to use “app” as a remote group, only
+allowing connections from the members of that group.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='A diagram representing instances in security group "app" being allowed to connect to instances in security group "db", via port 27017 only' src="https://www.tartley.com/files/2023/ibm-cloud/5_allow-app-servers-access-db-remote.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 5. Two security groups configured to allow application servers to send
+queries to MongoDB nodes using remote groups.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This has several advantages. Firstly, our data store no longer accepts
+malicious queries from hackers all over the internet – only from our app
+instances.&lt;/p&gt;
+&lt;p&gt;Secondly, our data store instances no longer need occupy a subnet, they can
+have arbitrary IP addresses.&lt;/p&gt;
+&lt;p&gt;Because the security groups now specify allowed hosts by referencing each
+other, when the members of either group changes, the instance level firewalling
+rules on all instances are updated automatically, to allow or deny traffic
+based on the new membership.&lt;/p&gt;
+&lt;p&gt;This configuration starts to show what makes security groups a flexible,
+dynamic, low-maintenance solution.&lt;/p&gt;
+&lt;h3&gt;Accepting Web Requests&lt;/h3&gt;
+&lt;p&gt;Our application instances aren't any use without a web front end. We put our
+web instances into their own security group (“web”), which allows incoming
+requests from users on the web, and outgoing API requests to our app instances,
+on port 61516.&lt;/p&gt;
+&lt;p&gt;Similarly, we need to add a second rule to the “app” security group, to allow
+incoming requests from “web”. Fig 6. A traditional three-tier application using
+remote security groups.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='A diagram representing a user connecting via port 80 to instances in security group "web", which connect to instances in group "app" via port 61516, which connect to group "db" via port 27017' src="https://www.tartley.com/files/2023/ibm-cloud/6_web-app-db.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 6. A traditional three-tier application using remote security groups.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The more types of server we add to our setup, the more benefit “remote” groups
+provide, by minimizing setup configuration, and by automatically keeping
+firewalling rules up to date when group membership changes.&lt;/p&gt;
+&lt;p&gt;A future blog post will discuss how to set up this three-tier scenario, and
+describe details such as how to use multiple network interfaces on an instance,
+such as the web instances which will use a public IP address exposed to users,
+versus a private IP exposed to the API instances.&lt;/p&gt;
+&lt;h3&gt;Add a Bastion&lt;/h3&gt;
+&lt;p&gt;We need some way to access our servers, so that we can, for example, deploy new
+versions of our application. Commonly this is achieved using a bastion server,
+which provides a single, carefully hardened point of access.&lt;/p&gt;
+&lt;p&gt;Here we add a bastion server, and modify all our security groups to allow SSH
+access from the bastion to all our instances. The bastion instance itself would
+be configured to only allow incoming connections from the appropriate points in
+a CI/CD infrastructure (not shown.) Fig 7. Adding a bastion server with SSH
+access to all other instances.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='A diagram representing the same elements as figure 6 above, with the addition of a "bastion" group which connects to all instances via SSH on port 22' src="https://www.tartley.com/files/2023/ibm-cloud/7_bastion.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 7. Adding a bastion server with SSH access to all other instances.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This is starting to look like a realistic setup for a modest but scalable
+multi-tier application.&lt;/p&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;Security groups are a flexible and powerful way to firewall network traffic to
+and from your system's instances. We've shown how they might be used in a few
+typical scenarios, and hopefully demonstrated that they are flexible enough to
+accommodate many others. For more information, see
+&lt;a href="https://cloud.ibm.com/docs/security-groups/sg_index.html"&gt;Getting Started with Security Groups&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Jonathan Hartley's smiley face" src="https://www.tartley.com/files/2023/ibm-cloud/jonathan-hartley.webp"&gt;
+&lt;/span&gt;
+&lt;br&gt;
+&lt;strong&gt;Jonathan Hartley&lt;/strong&gt;&lt;br&gt;
+Senior Cloud Developer&lt;/p&gt;
+&lt;p&gt;&lt;span style="float: none"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</description><category>cloud</category><category>geek</category><category>networking</category><category>security</category><category>software</category><guid>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</guid><pubDate>Wed, 23 Aug 2023 02:33:47 GMT</pubDate></item><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
+nose and do a force push. Maybe the project requires contributions to be
+rebased or squashed. Maybe we pushed the nuclear launch codes. But there are
+failure modes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You might be accidentally pushing to or from the wrong branch, and hence are
+  about to blow away valuable work at the remote. Yes, is unlikely, and can be
+  fixed after the fact, but who knows how much embarrassing disruption and
+  confusion you'll cause the team before you realize what you did.&lt;/li&gt;
+&lt;li&gt;Do you &lt;em&gt;always&lt;/em&gt; remember to check the state of the remote, to make sure there
+  isn't unexpected extra commits on the remote that you'll unknowingly blow
+  away when you push? Do you enjoy always having to type those extra commands
+  to pull and check the remote commits?&lt;/li&gt;
+&lt;li&gt;No matter how conscientious we are about checking the above, there is a race
+  condition. We might check the remote, then someone else pushes valuable
+  changes, then we force push and blow them away.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Although there are conventions that can help with all the above (e.g. only ever
+force pushing to your own fork, to which nobody else ever pushes), they aren't
+generally watertight. (e.g. you might have pushed something yourself, before
+vacation, and forgotten about it.)&lt;/p&gt;
+&lt;p&gt;So the generally agreed method to avoid the above failure modes is "be more
+careful", which sounds to me like the common prelude to failure. What we need
+are push's newer command-line options:&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;code&gt;--force-with-lease&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;Like &lt;code&gt;--force&lt;/code&gt;, but refuses to push if the remote ref doesn't point at the
+same commit that our local remote-tracking branch 'origin/mybranch' thinks it
+should. So if someone else pushes something to the remote's 'mybranch' just
+before we try to force push, our push will fail until we pull (and, in theory,
+inspect) those commits that we were about to blow away.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;It turns out that this is inadequate. One might have fetched an up-to-date remote
+branch, but somehow or other ended up with our local HEAD on a divergent branch
+anyway:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;C origin/mybranch
+|
+B¹   B² HEAD mybranch
+ \ /
+  A
+  |
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In this situation, &lt;code&gt;--force-with-lease&lt;/code&gt; will allow us to push, not only blowing
+away the original commit B¹, as we intended, but also C, which was maybe pushed
+by someone else before we fetched.&lt;/p&gt;
+&lt;p&gt;To guard against this, we can use the even newer option:&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;code&gt;--force-if-includes&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;This makes &lt;code&gt;--force-with-lease&lt;/code&gt; even more strict about rejecting pushes,
+using clever heuristics on your local reflog, to check that the remote ref
+being updated doesn't include commits which have never been part of your local
+branch.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Upshot is, I plan to default to always replacing uses of &lt;code&gt;--force&lt;/code&gt; with:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;--force-if-includes&lt;span class="w"&gt; &lt;/span&gt;...
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That's a lot to type, the options don't have short versions, and it's easy to forget to
+do. Hence, shadow &lt;code&gt;git&lt;/code&gt; to enforce it, and make it easy. In .bashrc or similar:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# Shadow git to warn againt the use of 'git push -f'&lt;/span&gt;
+git&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;is_push&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;is_force&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;arg&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"push"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;is_push&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"-f"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"--force"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;is_force&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$is_push&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$is_force&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="c1"&gt;# Suggest alternative commands.&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"git push -f: Consider 'git push --force-with-lease --force-if-includes' instead, which is aliased to 'gpf'"&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;# Run the given command, using the git executable instead of this function.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;# git push force: using the new, safer alternatives to --force&lt;/span&gt;
+gpf&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;# Older versions of git don't have --force-if-includes. Fallback to omitting it.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;!&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--quiet&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;--force-if-includes&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--quiet&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then trying to do it wrong tells you how to easily do it right:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;-f
+git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;-f:&lt;span class="w"&gt; &lt;/span&gt;Consider&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'git push --force-with-lease --force-if-includes'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;instead,&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;aliased&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'gpf'&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+$&lt;span class="w"&gt; &lt;/span&gt;gpf
+$
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>Structured Pattern Matching in Python</title><link>https://www.tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
+&lt;a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement"&gt;structured pattern matching&lt;/a&gt;
+when it was added in Python 3.10 a couple of years ago, and have studiously
+avoided it ever since. It seemed like a language feature that's amazingly
+useful in one or two places, like writing a parser, say, and is a horrifically
+over-complicated mis-step just about everywhere else.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; A day after writing this I see that Guido van
+Rossum wrote exactly that,
+&lt;a href="https://github.com/gvanrossum/patma/blob/master/examples/expr.py"&gt;a parser&lt;/a&gt;,
+to showcase the feature. I'm guessing he writes a lot of parsers. I definitely
+don't write enough of them to think this language feature is worth the extra
+complexity it brings.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Regardless, I really ought to remember how it works, so this is my attempt to
+make the details stick, by writing about it.&lt;/p&gt;
+&lt;p&gt;If you're not me, you really ought to be reading about it from the source instead:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://peps.python.org/pep-0634/"&gt;PEP 643&lt;/a&gt;: Specification.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://peps.python.org/pep-0635/"&gt;PEP 635&lt;/a&gt;: Motivation and rationale.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://peps.python.org/pep-0636/"&gt;PEP 636&lt;/a&gt;: A tutorial.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Basic structure&lt;/h2&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;EXPRESSION&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;PATTERN1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;PATTERN2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;_&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This evaluates the &lt;code&gt;match&lt;/code&gt; EXPRESSION, then tries to match it against each
+&lt;code&gt;case&lt;/code&gt; PATTERN, executing the body of the first case that matches, falling back
+to the optional final &lt;code&gt;_&lt;/code&gt; default case. (&lt;code&gt;match&lt;/code&gt; and &lt;code&gt;case&lt;/code&gt; are not keywords,
+except in the context of a match...case block, so you can continue using them
+as variable names elsewhere.)&lt;/p&gt;
+&lt;p&gt;But what are PATTERNs, and how are they tested for a match?&lt;/p&gt;
+&lt;h2&gt;Patterns&lt;/h2&gt;
+&lt;p&gt;Patterns can be any of the following. As becomes increasingly obvious down the
+list, the real power of this feature comes from composing each of these
+patterns with the others. For complicated patterns, parentheses can be used to
+indicate order of operations.&lt;/p&gt;
+&lt;h3&gt;Literals&lt;/h3&gt;
+&lt;p&gt;Like other languages' traditional &lt;code&gt;switch&lt;/code&gt; statement:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;mycommand&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'start'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;_&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;CommandNotFoundError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mycommand&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Such literal case patterns may be strings (including raw and byte-strings, but
+not f-strings), numbers, booleans or None.&lt;/p&gt;
+&lt;p&gt;Such cases are compared with equality:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mf"&gt;123.0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;except for booleans and None, which are compared using &lt;code&gt;is&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Any&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__eq__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+
+&lt;span class="n"&gt;myfalse&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Any&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;myfalse&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# Doesn't match, even though myfalse == False&lt;/span&gt;
+        &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Variable names&lt;/h3&gt;
+&lt;p&gt;We can replace a literal with a variable name, to capture the value of the match
+expression.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'start'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;unknown&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variable 'unknown' is assigned the value of command&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The 'default' case pattern &lt;code&gt;_&lt;/code&gt; is just a special case variable name which
+binds no name.&lt;/p&gt;
+&lt;p&gt;Beware the common error of using "constants" as the case pattern:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="n"&gt;NOT_FOUND&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;404&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;NOT_FOUND&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# bad&lt;/span&gt;
+        &lt;span class="n"&gt;handle_404&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The above case is intended to test for &lt;code&gt;error == NOT_FOUND&lt;/code&gt;, but instead
+assigns the variable &lt;code&gt;NOT_FOUND = error&lt;/code&gt;. The best defense is to always include
+a default catch-all case at the end, which causes the above &lt;code&gt;NOT_FOUND&lt;/code&gt; case to
+produce a SyntaxError:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="n"&gt;NOT_FOUND&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;404&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;NOT_FOUND&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;handle_404&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;_&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;pass&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="n"&gt;SyntaxError&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;capture&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'NOT_FOUND'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;makes&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;remaining&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;patterns&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;unreachable&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To use a 'constant' in a case pattern like this, qualify it with a dotted name,
+such as by using an &lt;code&gt;enum.Enum&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NOT_FOUND&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# correctly matches&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Sequences&lt;/h3&gt;
+&lt;p&gt;Using a list-like or tuple-like syntax, matches must have the right number of
+items. Like Python's existing iterable unpacking feature. Use &lt;code&gt;*&lt;/code&gt; to match the
+rest of a sequence. Included variable names are set if a case matches by all
+other criteria.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'start'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variable name=command[1]&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variable name=command[1]&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variables name=command[1], delay=command[2]&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;extra&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variables name=command[1], delay=command[2] &amp;amp; extra=command[3:]&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;_&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;BadCommand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Mappings&lt;/h3&gt;
+&lt;p&gt;Using a dict-like syntax. The match expression must must contain a
+corresponding mapping, and can contain other keys, too. Use &lt;code&gt;**&lt;/code&gt; to match the
+rest of a mapping.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'host'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;hostname&lt;/span&gt;&lt;span class="p"&gt;}:&lt;/span&gt;
+        &lt;span class="c1"&gt;# 'config' must contain key 'host'. New variable hostname=config['host']&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'port'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;portnumber&lt;/span&gt;&lt;span class="p"&gt;}:&lt;/span&gt;
+        &lt;span class="c1"&gt;# 'config' must contain key 'port'. New variable portnumber=config['port']&lt;/span&gt;
+        &lt;span class="c1"&gt;# Remember we only use the first matching case.&lt;/span&gt;
+        &lt;span class="c1"&gt;# If 'config' contains 'host', then this 'port' case will not match.&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'scheme'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;extras&lt;/span&gt;&lt;span class="p"&gt;}:&lt;/span&gt;
+        &lt;span class="c1"&gt;# new variables 'scheme' and 'extras' are assigned.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Case patterns may contain more than one key-value pair. The match expression must
+contain all of them to match.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s1"&gt;'host'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;hostname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;'port'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;portnumber&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="p"&gt;}:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Objects and their attributes&lt;/h3&gt;
+&lt;p&gt;Using class syntax, the value must match an isinstance check with the given class:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Click&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="c1"&gt;# handle click&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="c1"&gt;# handle key press&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Beware the common error of omitting the parentheses:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;myval&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Click&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# bad&lt;/span&gt;
+        &lt;span class="c1"&gt;# handle clicks&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The above case is intended to test for &lt;code&gt;isinstance(myval, Click)&lt;/code&gt;, but instead
+creates a new var, &lt;code&gt;Click = myval&lt;/code&gt;. The best defence against this error is to
+always include a default catch-all at the end, which makes the &lt;code&gt;Click&lt;/code&gt; catch-all
+produce an error by making subsequent patterns unreachable.&lt;/p&gt;
+&lt;p&gt;Attribute values for the class can be given, which must also match.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'q'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;release&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;game&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;quit&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="n"&gt;handle_keypress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Values can also be passed as positional args to the class-like case syntax:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'q'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If the class is a namedtuple or dataclass, then positional args to a class-like
+case pattern can automatically be handled using the unambiguous ordering of its
+attributes:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nd"&gt;@dataclass&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
+    &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
+
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'dash'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'golden'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'dash'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'golden'&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But for regular classes, the ordering of the class attributes is ambiguous.
+To fix this, add a &lt;code&gt;__match_args__&lt;/code&gt; attribute on the class, a tuple which
+specifies which class attributes, in which order, can be specified in a case
+pattern:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;__match_args__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'key_name'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'release'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;event&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'q'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;release&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'q'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;As you might expect, the literal positional args can be replaced with variable
+names to capture attribute values instead:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="c1"&gt;# names unimportant, order matters&lt;/span&gt;
+        &lt;span class="n"&gt;handle_keypress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Positional sub-patterns behave slightly differently for builtins &lt;code&gt;bool&lt;/code&gt;,
+&lt;code&gt;bytearray&lt;/code&gt;, &lt;code&gt;bytes&lt;/code&gt;, &lt;code&gt;dict&lt;/code&gt;, &lt;code&gt;float&lt;/code&gt;, &lt;code&gt;frozenset&lt;/code&gt;, &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;list&lt;/code&gt;, &lt;code&gt;set&lt;/code&gt;,
+&lt;code&gt;str&lt;/code&gt;, and &lt;code&gt;tuple&lt;/code&gt;. A positional value is matched by equality against the match
+expression itself, rather than an attribute on it:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;123.0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# would also match if it wasn't shadowed&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Similarly, a positional variable is assigned the value of the match expression
+itself, not an attribute on that value:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+   &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The values passed as keyword or positional args to class-like case patterns can
+be more than just literals or variable names. In fact they can use &lt;em&gt;any&lt;/em&gt; of the
+listed pattern types. For example, they could be a nested instance of this
+class-like syntax:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt;
+
+&lt;span class="n"&gt;mycar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Location&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;mycar&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Location&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;))):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches, and captures 'x' and 'y'&lt;/span&gt;
+
+&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;
+&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Combine patterns using &lt;code&gt;|&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;To match either one pattern or another:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'true'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'on'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'yes'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches any of those values&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Capture sub-patterns using &lt;code&gt;as&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;We've seen how we can either match against a value, or capture the value using
+a variable name. We can do both using &lt;code&gt;as&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'a'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'b'&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ab&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches either value, captures what the value actually was&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This might not be much use when capturing the whole match expression like that.
+If the match expression is just a variable, then we could instead simply refer
+to that variable. But using &lt;code&gt;as&lt;/code&gt; can be useful when the match expression is
+lengthy or has side-effects:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;events&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_next&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyDown&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;key_event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;or to capture just a component of the whole expression. Contrived example:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'a'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'b'&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ab&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'c'&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matchs ['a', 'c'] or ['b', 'c'], and captures the first letter in 'ab'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4&gt;An &lt;code&gt;if&lt;/code&gt; guard clause&lt;/h4&gt;
+&lt;p&gt;Add arbitrary conditions to the match:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches integers less than 100&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Or, alternatively:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches integers less than 100&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Complications&lt;/h2&gt;
+&lt;p&gt;This feature seems rife with complexity. The flexible syntax of case patterns
+forms a new mini-language, embedded within Python. It has many similarities to
+Python, but also many initially unintuitive differences.&lt;/p&gt;
+&lt;p&gt;For example, a class-like case pattern such as &lt;code&gt;case Click():&lt;/code&gt;. Anywhere else
+in the language, the expression like &lt;code&gt;Click(...)&lt;/code&gt; would create an instance of the
+&lt;code&gt;Click&lt;/code&gt; class. In a case statement, it instead is doing things like
+&lt;code&gt;isinstance&lt;/code&gt; and &lt;code&gt;hasattr&lt;/code&gt; checks.&lt;/p&gt;
+&lt;p&gt;Similarly, including variable names doesn't return the variable value as in
+ordinary Python. Instead it binds a value as that name. This is the source of
+the annoying gotcha described above, that bare "constants" like &lt;code&gt;NOT_FOUND&lt;/code&gt;
+behave very unexpectedly when used as case expressions.&lt;/p&gt;
+&lt;p&gt;There are a few places in real-world code where structured pattern matching
+will produce nicer code than the equivalent using nested &lt;code&gt;elif&lt;/code&gt;s. But equally,
+there are a lot of places where the &lt;code&gt;elif&lt;/code&gt;s are a more natural match.
+Developers now get to choose which they're going to use, and then later
+disagree with each other about it, or simply change their mind, and end up
+converting code from one to the other.&lt;/p&gt;
+&lt;p&gt;If this was a simple feature, with low overheads, then I'd forgive its
+inclusion in the language, accepting the costs in return for the marginal and
+unevenly distributed benefits.&lt;/p&gt;
+&lt;p&gt;But it's really not simple. In addition to Python programmers all having to
+do an exercise like this post just to add it to their mental toolbox, it needs
+maintenance effort, not just in CPython but in other implementations too, and
+needs handling by tools such as syntax highlighters, type checkers. It really
+doesn't seem like a net win to me, &lt;em&gt;unless&lt;/em&gt; you're writing way more parsers
+than the average programmer, which no doubt the champions of this feature are.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/structured-pattern-matching-in-python/</guid><pubDate>Sat, 29 Jul 2023 23:15:26 GMT</pubDate></item><item><title>TIL: Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But often you'd like to reformat just a section of the file, while leaving
+everything else intact. In principle, it's easy to tell Vim to just send the
+current visual selection:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the visual selection&lt;/span&gt;
+xnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;(Note that both the above Vim configuration snippets map the same key
+sequence -- leader (commonly comma) followed by lower case b. These can be
+defined simultaneously, because the second one uses 'xnoremap', meaning it is
+used only while a visual selection exists, while the first uses 'nnoremap', so
+is used all other times.)&lt;/p&gt;
+&lt;p&gt;But if the given code starts with an indent on the first line, for example if
+it comes from lines in the middle of a function, then this won't work. Black
+parses the given code into a Python abstract syntax tree (AST), and a leading
+indent is a syntax error - it's just not valid Python.&lt;/p&gt;
+&lt;p&gt;I filed a hopeful &lt;a href="https://github.com/psf/black/issues/1352"&gt;issue with Black&lt;/a&gt;,
+suggesting they could handle this case, but it was a long shot and hasn't
+gained much enthusiasm.&lt;/p&gt;
+&lt;p&gt;So, I present a tiny Python3 wrapper, &lt;em&gt;enblacken&lt;/em&gt;, which:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unindents the given code such that the first line has no indent.&lt;/li&gt;
+&lt;li&gt;Passes the result to Black.&lt;/li&gt;
+&lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/main/bin/enblacken"&gt;enblacken on github&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><category>til</category><category>vim</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>LXD for Development Environments.</title><link>https://www.tartley.com/posts/lxd-for-dev-env/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="https://twitter.com/hjwp/status/1249636076660174849"&gt;@hjwp asks&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I would be interested in seeing some example lxd config files,
+bash command history when creating, etc?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here goes then.&lt;/p&gt;
+&lt;p&gt;I have one LXD container running for each nontrivial development project I'm
+working on.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;ls
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;NAME&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;STATE&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;IPV4&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;IPV6&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;TYPE&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;SNAPSHOTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;devicegw&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.228&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;ident&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.4&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;revs&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.151&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;siab&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.128&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;tartley-com&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.161&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Out of the gate we see one source of confusion. "LXD", the daemon, is a
+newer project that builds on top of "LXC" the containers. However the user
+interface to all the new LXD-goodness is through a command-line called "lxc",
+which replaces the older command line tool called "lxd". :-/&lt;/p&gt;
+&lt;p&gt;To create a new one:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;time&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;launch&lt;span class="w"&gt; &lt;/span&gt;ubuntu:16.04&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;default&lt;span class="w"&gt; &lt;/span&gt;-p&lt;span class="w"&gt; &lt;/span&gt;jhartley&lt;span class="w"&gt; &lt;/span&gt;demo
+Creating&lt;span class="w"&gt; &lt;/span&gt;demo
+Starting&lt;span class="w"&gt; &lt;/span&gt;demo
+real&lt;span class="w"&gt;    &lt;/span&gt;0m9.593s
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once created, they take about 3 seconds to stop and 0.5 seconds to start.&lt;/p&gt;
+&lt;p&gt;Those "-p" options cause the container to use two &lt;em&gt;profiles&lt;/em&gt;. They are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;em&gt;default&lt;/em&gt; profile, which I've never touched. It's just doing whatever it
+   always does.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;em&gt;jhartley&lt;/em&gt; profile, I created in a one-off step by running a Bash script
+   derived from instructions one of my colleagues passed around. I'll describe
+   it at the end.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once a new container is up, we can execute commands directly on it:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;exec&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;hostname
+demo
+$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;exec&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;whoami
+root
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Or SSH to them using their IP address:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;ls&lt;span class="w"&gt; &lt;/span&gt;demo
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;NAME&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;STATE&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;IPV4&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;IPV6&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;TYPE&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;SNAPSHOTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;demo&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;RUNNING&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.162&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;eth0&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;CONTAINER&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;
+jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.44.99.162
+...
+Warning:&lt;span class="w"&gt; &lt;/span&gt;Permanently&lt;span class="w"&gt; &lt;/span&gt;added&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'10.44.99.162'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;ECDSA&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;the&lt;span class="w"&gt; &lt;/span&gt;list&lt;span class="w"&gt; &lt;/span&gt;of&lt;span class="w"&gt; &lt;/span&gt;known&lt;span class="w"&gt; &lt;/span&gt;hosts.
+Welcome&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;Ubuntu&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;16&lt;/span&gt;.04.6&lt;span class="w"&gt; &lt;/span&gt;LTS&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;GNU/Linux&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;.4.0-25-generic&lt;span class="w"&gt; &lt;/span&gt;x86_64&lt;span class="o"&gt;)&lt;/span&gt;
+jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Better than using IP addresses, you can run a DNS server to recognize
+&lt;code&gt;{containername}.lxd&lt;/code&gt; hostnames. (This part is from
+&lt;a href="https://discuss.linuxcontainers.org/t/a-way-to-resolve-container-lxd-from-host-in-all-cases/3698"&gt;here&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;Find your lxd bridge IPv4 address&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;lxc&lt;span class="w"&gt; &lt;/span&gt;network&lt;span class="w"&gt; &lt;/span&gt;show&lt;span class="w"&gt; &lt;/span&gt;lxdbr0
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Create file &lt;code&gt;/etc/systemd/network/lxd.network&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;[Match]&lt;/span&gt;
+&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;lxdbr0&lt;/span&gt;
+
+&lt;span class="k"&gt;[Network]&lt;/span&gt;
+&lt;span class="na"&gt;Address&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR/24&lt;/span&gt;
+&lt;span class="na"&gt;DNS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;IPADDR&lt;/span&gt;
+&lt;span class="na"&gt;Domains&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;~lxd&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Where IPADDR is the lxdbr0 IPv4 address.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;systemctl&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;enable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;systemd-networkd
+sudo&lt;span class="w"&gt; &lt;/span&gt;reboot&lt;span class="w"&gt; &lt;/span&gt;now
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@t460&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;demo.lxd
+jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# \o/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;One nice thing is that DNS works both from the host and on the containers,
+so your services can be configured by default to talk to each other at
+SERVICE1.lxd, SERVICE2.lxd. Then running them in containers on your host
+they would just find each other. We don't actually do this, but it seems
+trivially easy to do. I should ask why we don't.&lt;/p&gt;
+&lt;p&gt;In practice I wrap up the ssh command with my accumulated foibles:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;jhartley@demo&lt;span class="w"&gt; &lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-a&lt;span class="w"&gt; &lt;/span&gt;lssh
+lssh&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;function&lt;/span&gt;
+lssh&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;TERM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;xterm-color&lt;span class="w"&gt; &lt;/span&gt;ssh&lt;span class="w"&gt; &lt;/span&gt;-A&lt;span class="w"&gt; &lt;/span&gt;-t&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;.lxd"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;--&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"cd &lt;/span&gt;&lt;span class="nv"&gt;$PWD&lt;/span&gt;&lt;span class="s2"&gt; &amp;amp;&amp;amp; exec &lt;/span&gt;&lt;span class="nv"&gt;$SHELL&lt;/span&gt;&lt;span class="s2"&gt; -l"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I forget why -A and -t were required. The rest is mostly just to start the
+shell on the container in the same directory as I was in on the host. There
+is probably a simpler way.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;The booooooring bits:&lt;/p&gt;
+&lt;p&gt;When we started the container, we mentioned
+&lt;a href="https://www.tartley.com/files/2020/setup-lxd-profile.sh"&gt;a one-off setup script&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The script does a few things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Creates a new key pair specifically to SSH to the container.&lt;/li&gt;
+&lt;li&gt;Creates the custom &lt;em&gt;jhartley&lt;/em&gt; profile, which causes all containers started
+   with it to:&lt;/li&gt;
+&lt;li&gt;Create a new user on the container with user and group ID mapped to
+      those of my user on the host, presumably so that file permissions work
+      for...&lt;/li&gt;
+&lt;li&gt;Mount my $HOME directory on the container. Might not always be what you
+      want, but works for me right now.&lt;/li&gt;
+&lt;li&gt;Doubtless due to my own misunderstanding somewhere, in order to get working
+   IPv4 connections to my containers, I had to disable IPv6 connections to
+   them.&lt;/li&gt;
+&lt;/ol&gt;</description><category>geek</category><category>linux</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/lxd-for-dev-env/</guid><pubDate>Mon, 20 Apr 2020 18:57:47 GMT</pubDate></item><item><title>Vonnegut on software development teams.</title><link>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;So here's a thing. Spotted this in some of Kurt Vonnegut's personal
+correspondence, talking about an instructor of his named Slotkin:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What Slotkin said was this: no man who achieved greatness in the arts operated
+by himself; he was top man in a group of like-minded individuals. This works
+out fine for the cubists, and Slotkin had plenty of good evidence for its
+applying to Goethe, Thoreau, Hemingway, and just about anybody you care to
+name.&lt;/p&gt;
+&lt;p&gt;If this isn't 100% true, it's true enough to be interesting—and maybe helpful.&lt;/p&gt;
+&lt;p&gt;The school gives a man, Slotkin said, the fantastic amount of guts it takes to
+add to culture. It gives him morale, esprit de corps, the resources of many
+brains, and—maybe most important—one-sidedness with assurance.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Reminds me powerfully of my growing impressions of the environment a person
+needs to be in in order to do great things in software. There is no doubt some
+effectiveness in assembling great individuals to create a great team.&lt;/p&gt;
+&lt;p&gt;But in my personal experience, there is a whole lot &lt;em&gt;more&lt;/em&gt; value in creating a
+great team by instilling the right values, and then watching the members
+visibly level each other up, producing a succession of great individuals,
+and only subsequently attracting more of the same.&lt;/p&gt;</description><category>culture</category><category>geek</category><category>software</category><category>vonnegut</category><guid>https://www.tartley.com/posts/vonnegut-on-software-development-teams/</guid><pubDate>Mon, 01 Jul 2019 02:28:04 GMT</pubDate></item><item><title>Rhythmbox plugin: "Announce"</title><link>https://www.tartley.com/posts/rhythmbox-plugin-announce/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I use the Linux music player "Rhythmbox". This morning I wrote a plugin
+for it, called "Announce":&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/tartley/rhythmbox-plugin-announce"&gt;https://github.com/tartley/rhythmbox-plugin-announce&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Every time a new song starts to play, it announces the title using
+speech synthesis. I like it when I'm listening to some new music I'm not
+familiar with, but am away from the computer. Then I can still know
+which track is which.&lt;/p&gt;
+&lt;p&gt;If the album or artist names are different from the previous track, then
+it includes those in the announcement, too.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/rhythmbox-plugin-announce/</guid><pubDate>Mon, 16 May 2016 01:34:48 GMT</pubDate></item><item><title>Google Chrome Credit</title><link>https://www.tartley.com/posts/google-chrome-credit/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I just noticed: Open Chrome, go to &lt;code&gt;chrome://credits/&lt;/code&gt;, search in page,
+'show licence', and:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;img alt="chrome-credit" src="https://www.tartley.com/files/2016/01/chrome-credit.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Which is nice. Not bad for a dirty weekend hack.&lt;/p&gt;</description><category>geek</category><category>software</category><guid>https://www.tartley.com/posts/google-chrome-credit/</guid><pubDate>Thu, 21 Jan 2016 05:10:47 GMT</pubDate></item><item><title>PyRochesterMN</title><link>https://www.tartley.com/posts/pyrochestermn/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Announcing the world's newest Python User Group, PyRochesterMN, based in
+Rochester, Minnesota, USA.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; We've had a couple of name &amp;amp; hosting changes since:&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/PyRochesterMN"&gt;http://www.meetup.com/PyRochesterMN&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/RochesTech"&gt;http://www.meetup.com/RochesTech&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.reddit.com/r/rochestertech/"&gt;https://www.reddit.com/r/rochestertech/&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>meetup</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pyrochestermn/</guid><pubDate>Thu, 21 Jan 2016 03:01:27 GMT</pubDate></item></channel></rss>

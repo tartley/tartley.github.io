@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about vim)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/vim.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 15:43:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But often you'd like to reformat just a section of the file, while leaving
+everything else intact. In principle, it's easy to tell Vim to just send the
+current visual selection:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the visual selection&lt;/span&gt;
+xnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;(Note that both the above Vim configuration snippets map the same key
+sequence -- leader (commonly comma) followed by lower case b. These can be
+defined simultaneously, because the second one uses 'xnoremap', meaning it is
+used only while a visual selection exists, while the first uses 'nnoremap', so
+is used all other times.)&lt;/p&gt;
+&lt;p&gt;But if the given code starts with an indent on the first line, for example if
+it comes from lines in the middle of a function, then this won't work. Black
+parses the given code into a Python abstract syntax tree (AST), and a leading
+indent is a syntax error - it's just not valid Python.&lt;/p&gt;
+&lt;p&gt;I filed a hopeful &lt;a href="https://github.com/psf/black/issues/1352"&gt;issue with Black&lt;/a&gt;,
+suggesting they could handle this case, but it was a long shot and hasn't
+gained much enthusiasm.&lt;/p&gt;
+&lt;p&gt;So, I present a tiny Python3 wrapper, &lt;em&gt;enblacken&lt;/em&gt;, which:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unindents the given code such that the first line has no indent.&lt;/li&gt;
+&lt;li&gt;Passes the result to Black.&lt;/li&gt;
+&lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/main/bin/enblacken"&gt;enblacken on github&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><category>til</category><category>vim</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>Compiling MacVim with Python 2.7</title><link>https://www.tartley.com/posts/compiling-macvim-with-python-2-7/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I love the brilliant Vim plugin
+&lt;a href="http://www.vim.org/scripts/script.php?script_id=2441"&gt;pyflakes-vim&lt;/a&gt;,
+which highlights errors &amp;amp; warnings, and since I got a MacBook for work,
+I've been using MacVim a lot.&lt;/p&gt;
+&lt;p&gt;This combination has a problem, that MacVim uses the OSX system default
+Python 2.6, so pyflakes is unable to handle Python 2.7 syntax, such as
+set literals. These are marked as a syntax errors, which prevents the
+rest of the file from being parsed.&lt;/p&gt;
+&lt;p&gt;The solution is to compile your own MacVim, using Python 2.7 instead of
+the system Python. The following commands got MacVim compiled for me:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+git&lt;span class="w"&gt; &lt;/span&gt;clone&lt;span class="w"&gt; &lt;/span&gt;git://github.com/b4winckler/macvim.git
+&lt;span class="nb"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;macvim/src
+&lt;span class="nb"&gt;export&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;LDFLAGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;-L/usr/lib
+./configure&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--with-features&lt;span class="o"&gt;=&lt;/span&gt;huge&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--enable-rubyinterp&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--enable-perlinterp&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--enable-cscope&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--enable-pythoninterp&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;--with-python-config-dir&lt;span class="o"&gt;=&lt;/span&gt;/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config
+make
+open&lt;span class="w"&gt; &lt;/span&gt;MacVim/build/Release
+&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Drag&lt;span class="w"&gt; &lt;/span&gt;MacVim.app&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;your&lt;span class="w"&gt; &lt;/span&gt;Applications&lt;span class="w"&gt; &lt;/span&gt;directory
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Without the LDFLAGS setting, I was missing some symbols at link. The
+--with-python-config-dir entry came from typing 'which python' to find
+where my Python 2.7 install lives, and modifying that result to find its
+'config' directory (whatever that is) near to the binary.&lt;/p&gt;
+&lt;p&gt;As indicated, install by dragging the resulting
+macvim/src/MacVim/build/Release/MacVim.app into your Applications
+directory.&lt;/p&gt;
+&lt;p&gt;Open up MacVim, and check out the built-in Python version:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;sys&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
+&lt;span class="mf"&gt;2.7.1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r271&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;86882&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Nov&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2010&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;35&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;34&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And files with set literals are now correctly parsed for errors.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This only works if the Python 2.7 is your default 'python'
+executable. Otherwise, or if you get "ImportError: No module named
+site"?, see Richard's comments below.&lt;/p&gt;</description><category>geek</category><category>osx-dev</category><category>python</category><category>software</category><category>terminal</category><category>vim</category><guid>https://www.tartley.com/posts/compiling-macvim-with-python-2-7/</guid><pubDate>Tue, 18 Oct 2011 17:25:03 GMT</pubDate></item><item><title>TIL: 'Go to Definition' in Vim for Python using Ctags, Done Right</title><link>https://www.tartley.com/posts/go-to-definition-in-vim-for-python-using-ctags-on-windows/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;How to set up and configure Vim to use tags for Python development so
+that it doesn't suck.&lt;/p&gt;
+&lt;h3&gt;Install Ctags&lt;/h3&gt;
+&lt;p&gt;Install the latest version of &lt;a href="https://github.com/universal-ctags/ctags"&gt;Universal Ctags&lt;/a&gt;,
+an active fork of the venerable unmaintained Exuberant Ctags.&lt;/p&gt;
+&lt;h3&gt;Creating or updating tags files&lt;/h3&gt;
+&lt;p&gt;You'll probably want one tags file at the root of your project, which
+will need to be created or updated whenever you make significant
+changes. Either get used to manually running the following command a
+lot:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ctags&lt;span class="w"&gt; &lt;/span&gt;-R&lt;span class="w"&gt; &lt;/span&gt;.
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;or bind it to a key in your &lt;code&gt;~/.vimrc&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nb"&gt;noremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;f12&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;silent&lt;/span&gt; &lt;span class="p"&gt;!&lt;/span&gt;ctags &lt;span class="p"&gt;-&lt;/span&gt;R .&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I like to set Vim's current working directory equal to the root of
+whatever project I'm working in, so now I can press &lt;code&gt;f12&lt;/code&gt; to update the
+tags file for the project.&lt;/p&gt;
+&lt;h3&gt;Test it out&lt;/h3&gt;
+&lt;p&gt;Now, in Vim, &lt;code&gt;ctrl-]&lt;/code&gt; will jump to the definition of the symbol under
+your text cursor. Hooray, etc. If there is more than one definition of
+that symbol, it presents a menu for you to choose from.&lt;/p&gt;
+&lt;h3&gt;Turn off useless tags&lt;/h3&gt;
+&lt;p&gt;By default, ctags generates tags for Python functions, classes, class
+members, variables and imports. The last two are useless to me, and they
+actually make &lt;code&gt;ctrl-]&lt;/code&gt; more inconvenient, because they increase the
+likelyhood of finding duplicate definitions of a tag, causing the menu
+to inconveniently pop up, rather than just jumping to the tag you want.&lt;/p&gt;
+&lt;p&gt;To fix this, create a &lt;code&gt;~/.ctags&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;--python-kinds&lt;span class="o"&gt;=&lt;/span&gt;-iv
+--exclude&lt;span class="o"&gt;=&lt;/span&gt;build
+--exclude&lt;span class="o"&gt;=&lt;/span&gt;dist
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The first line turns off tags generation for variables and imports. The
+second and third lines turn off generation of tags in the named dirs,
+since you almost certainly want to ignore source code in those
+directories.&lt;/p&gt;
+&lt;h3&gt;Case insensitive tag matching&lt;/h3&gt;
+&lt;p&gt;If your .vimrc requests case-insensitive searching by setting
+&lt;em&gt;ignorecase&lt;/em&gt; (aka &lt;em&gt;ic&lt;/em&gt;), then the above tag matching will also be case
+insensitive. This is irksome, because searching for the definition of
+property &lt;em&gt;.matrix&lt;/em&gt; will present you with a menu asking you to choose
+between property &lt;em&gt;.matrix&lt;/em&gt; and class &lt;em&gt;Matrix&lt;/em&gt;, rather than just jumping
+to the property.&lt;/p&gt;
+&lt;p&gt;To fix this, add this to your .vimrc:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Go to defn of tag under the cursor, using case-sensitive matching,&lt;/span&gt;
+&lt;span class="c"&gt;" then restore the previous case sensitivity setting.&lt;/span&gt;
+&lt;span class="k"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; MatchCaseTag&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nb"&gt;ic&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;ic&lt;/span&gt;
+    &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;noic&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;
+&lt;span class="c"&gt;        " tjump jumps directly to a single match, or presents a menu&lt;/span&gt;
+        exe &lt;span class="s1"&gt;'tjump '&lt;/span&gt; . expand&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;finally&lt;/span&gt;
+       &lt;span class="k"&gt;let&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;ic&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;ic&lt;/span&gt;
+    &lt;span class="k"&gt;endtry&lt;/span&gt;
+&lt;span class="k"&gt;endfun&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;silent&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;]&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;call&lt;/span&gt; TagJumpMatchCase&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;This Vim script was suggested in a comment by James Vega, in
+order to reliably restore the state of 'ignorecase' after doing the tag
+jump. Many thanks!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This maps your &lt;code&gt;ctrl-]&lt;/code&gt; key to turn off case-insensitivity while it does
+the jump to tag, then turn it back on again. Now pressing &lt;code&gt;ctrl-]&lt;/code&gt; will
+jump directly to your property, only presenting menus on the occasion
+when the tag you search for is defined in more than one place using
+precisely the same name.&lt;/p&gt;
+&lt;p&gt;Much better.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Also see this post about adding stdlib and venv contents to
+your tags:
+&lt;a href="https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/"&gt;https://www.fusionbox.com/blog/detail/navigating-your-django-project-with-vim-and-ctags/590/&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>mswin-dev</category><category>python</category><category>software</category><category>terminal</category><category>til</category><category>vim</category><guid>https://www.tartley.com/posts/go-to-definition-in-vim-for-python-using-ctags-on-windows/</guid><pubDate>Fri, 17 Dec 2010 02:39:01 GMT</pubDate></item></channel></rss>

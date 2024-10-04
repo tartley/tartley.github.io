@@ -1,0 +1,1456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/tags/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 15:43:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Shell environment variable tricks</title><link>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;envsubst&lt;/code&gt; is an executable you likely already have on your PATH (part of the gettext package, often
+installed with dev packages), which is a convenient way to replace &lt;code&gt;$VAR&lt;/code&gt; or &lt;code&gt;${VAR}&lt;/code&gt; style
+environment variables with their values. This allows rendering templates without heavyweight
+tools like Ansible, Jinja, or embedding with heredocs. Usage is:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;envsubstr &amp;lt;template &amp;gt;rendered
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;envsubstr&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s2"&gt;"Hello &lt;/span&gt;&lt;span class="nv"&gt;$USER&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+Hello&lt;span class="w"&gt; &lt;/span&gt;jonathan
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you'd like to use KEY=value declarations from a dotenv-style &lt;code&gt;.env&lt;/code&gt; file, you can auto-export
+them by setting the &lt;code&gt;-a&lt;/code&gt; Bash option:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;set -a; source .env; set +a
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Something I've managed to avoid ever realizing for 30 years, but now that I've seen it I can't
+imagine a week going by without using it. The kind of thing that should be part of everyone's "Week
+1 in a terminal" training that formal education courses never include.&lt;/p&gt;</description><category>bash</category><category>geek</category><category>linux</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</guid><pubDate>Thu, 03 Oct 2024 20:37:27 GMT</pubDate></item><item><title>Fully Operational</title><link>https://www.tartley.com/posts/fully-operational/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Now witness the power of this fully armed and operational battle station.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="My desk featuring too many computers" src="https://www.tartley.com/files/2023/desk-with-computers.webp"&gt;&lt;/p&gt;
+&lt;p&gt;New job means new laptop means it's time to clean and re-org the desk.&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;Leftmost blue skies&lt;/dt&gt;
+&lt;dd&gt;Linux laptop (a free hand-me-down from a job ten years ago). Acting as the
+house Plex / streaming media server, usually tucked away more discreetly than
+this.&lt;/dd&gt;
+&lt;dt&gt;Left top green forest&lt;/dt&gt;
+&lt;dd&gt;Heavy duty work / gaming Linux laptop ("hardware bonus" from my last
+employer). Has been my primary work machine, but sounds like it's getting
+replaced by...&lt;/dd&gt;
+&lt;dt&gt;Left bottom spaceship drawing&lt;/dt&gt;
+&lt;dd&gt;Macbook Pro (Brand new! Just unwrapped yesterday. Thank you new employer
+&lt;a href="https://lambdalabs.com"&gt;Lambda&lt;/a&gt;!) Looks like this means I'm returning to
+developing on a Mac and VMs, after a full decade on Ubuntu &amp;amp; derivatives.
+I'm told Docker for Desktop now behaves better than it used to.&lt;/dd&gt;
+&lt;dt&gt;Left bottom, under the Mac&lt;/dt&gt;
+&lt;dd&gt;You can sort of see the 10" whiteboard I use to combat ADHD by writing a
+sentence about what I'm &lt;em&gt;supposed&lt;/em&gt; to be working on, then I can spot it every
+few minutes and drag my mind back to the task in hand. (a technique described
+in the fabulous
+&lt;a href="https://gamkedo.gumroad.com/l/self-command/"&gt;Self Command by Chris DeLeon&lt;/a&gt;.&lt;/dd&gt;
+&lt;dt&gt;Center&lt;/dt&gt;
+&lt;dd&gt;Main monitor and wireless tenkeyless mechanical keyboard &amp;amp; mouse combo, all
+switchable to any of the laptops. Under the keyboard you can sort-of see the
+&lt;a href="https://ultrapro.com/collections/gaming-accessories-magic-the-gathering/type_playmat"&gt;Magic the Gathering 13x24" gaming mat&lt;/a&gt;
+(free from local gaming store's MtG lessons) pressed into duty as the world's
+most gigantic, beautiful, and luxurious mouse mat.&lt;/dd&gt;
+&lt;dt&gt;Right monitor, keyboard and mouse&lt;/dt&gt;
+&lt;dd&gt;are wired to the Windows gaming PC under the desk (not visible). The kiddo's
+current &lt;a href="https://store.steampowered.com/app/361420/ASTRONEER/"&gt;Astroneer&lt;/a&gt;
+session is visible. The monitor is switchable to any of the laptops.&lt;/dd&gt;
+&lt;dt&gt;Right tab&lt;/dt&gt;
+&lt;dd&gt;Absolute workhorse 12.6" Android tablet on which I do most of my reading,
+laid in the picture here just to be gratuitous.&lt;/dd&gt;
+&lt;/dl&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>keyboard</category><category>osx-dev</category><guid>https://www.tartley.com/posts/fully-operational/</guid><pubDate>Thu, 21 Sep 2023 15:51:12 GMT</pubDate></item><item><title>Illustrating Uses of IBM Cloud Security Groups</title><link>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;blockquote&gt;
+&lt;p&gt;I wrote this high-level public-facing guide while employed by IBM, creating
+the security groups feature for IBM Cloud. It
+&lt;a href="https://web.archive.org/web/20210418195246/https://www.ibm.com/cloud/blog/illustrating-uses-ibm-cloud-security-groups"&gt;used to reside&lt;/a&gt;
+on the IBM blog, but has recently been replaced by newer content, so I've
+preserved it here for posterity.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This article illustrates a few possible uses of IBM Cloud Security Groups, a
+per-instance firewall for IBM Cloud virtual instances.&lt;/p&gt;
+&lt;h3&gt;Why Use Security Groups?&lt;/h3&gt;
+&lt;p&gt;Security groups firewall your IBM Cloud applications from nefarious network
+traffic, protecting you and your company from the efforts of “industrious
+users” trying to bring down your application, or make off with your customer's
+credit card details. If those sound like sub-optimal outcomes for your
+situation, read on…&lt;/p&gt;
+&lt;h3&gt;Allow Incoming SSH Connections&lt;/h3&gt;
+&lt;p&gt;The simplest use of security groups is to allow a single type of network
+connection to your instances, blocking all other traffic. For example, to allow
+only incoming SSH connections, which are TCP connections on port 22. All other
+types of traffic, such as ICMP ‘ping' connections, or TCP connections on other
+ports, are blocked. Fig 1. A security group configured to allow incoming SSH&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A diagram representing SSH connections being allowed from support engineer to instances within security group 1, while ping connections are denied" src="https://www.tartley.com/files/2023/ibm-cloud/1_allow-ssh-1.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 1. A security group configured to allow incoming SSH.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;When instances 1 &amp;amp; 2 are added to your security group, firewalls are created
+directly on those instances,configured to allow or deny the corresponding
+traffic. Hence, your support engineer can create SSH connections, but cannot
+send arbitrary network traffic.&lt;/p&gt;
+&lt;h3&gt;Allow SSH from a Specified IP Address&lt;/h3&gt;
+&lt;p&gt;The above scenario allows SSH connection attempts from any IP address. To
+increase security, you might only allow connections from a particular instance.
+Fig 2. A security group configured to allow incoming SSH connections (TCP port
+22) from a particular IP address.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A diagram representing SSH conections being allowed from a known IP address to instances within security group 1, while connections from a disgruntled employee at a different IP address are denied" src="https://www.tartley.com/files/2023/ibm-cloud/2_allow-ssh-one-ip.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 2. A security group configured to allow incoming SSH connections (TCP port
+22) from a particular IP address.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The security group has been configured with the IP address used by a support
+engineer – the single instance that is authorized to make a connection.
+Connections from other instances are blocked.&lt;/p&gt;
+&lt;p&gt;As well as allowing traffic from a single IP address, security groups can be
+configured with a CIDR block, to allow traffic from all instances on that
+subnet. Fig 3. A security group configured to allow incoming SSH connections
+(TCP port 22) from all instances on a given subnet.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A diagram representing SSH conections being allowed from a known subnet to instances within security group 1, while connections from a hacker at an IP address ouside the subet are denied" src="https://www.tartley.com/files/2023/ibm-cloud/3_allow-ssh-subnet.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 3. A security group configured to allow incoming SSH connections (TCP port
+22) from all instances on a given subnet.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The diagram shows instances on an authorized subnet (deploy1 &amp;amp; deploy2),
+representing a project CI/CD infrastructure, all being able to make SSH
+connections to our protected instances, for example to deploy updates to our
+application. Other instances, such as an enterprising hacker, are blocked.&lt;/p&gt;
+&lt;h3&gt;Allow Application Instances to Access a Distributed Data Store&lt;/h3&gt;
+&lt;p&gt;Another use case would be to allow application servers to access the nodes of a
+distributed data store. To do this, we'll make a few changes to the above
+security group configuration.&lt;/p&gt;
+&lt;p&gt;Firstly, we modify the open port from SSH's 22, to MongoDB's default query API
+port of 27017.&lt;/p&gt;
+&lt;p&gt;Secondly, security group 1 is now allowing the creation of outgoing network
+connections, from our application instances, where previously it was allowing
+incoming connections. Security group rules can manage traffic in either
+direction.&lt;/p&gt;
+&lt;p&gt;Thirdly, we don't want our data store instances to be unprotected, so we'll put
+them into a security group of their own. Since there's now two security groups,
+we'll give them names: “app” and “db”.&lt;/p&gt;
+&lt;p&gt;For now, security group “db” allows all incoming MongoDB queries (TCP
+connections on 27017), without restricting the IP addresses allowed to make
+connections. We'll fix that soon. Fig 4. Two security groups configured to
+allow application servers to send queries to MongoDB nodes on a subnet.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='A diagram representing queries from instances in security group "app" being allowed to connect to port 27017 of the subnet of instances in security group "db", which similarly allows incoming connections on TCP port 27017' src="https://www.tartley.com/files/2023/ibm-cloud/4_allow-app-servers-access-db-subnet.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 4. Two security groups configured to allow application servers to send
+queries to MongoDB nodes on a subnet.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For clarity, these diagrams don't show the many connections which are blocked
+by this setup - which are, of course, the whole point of security groups.
+On the above diagram, blocked connections would include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;On app instances:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;All incoming connections.&lt;/li&gt;
+&lt;li&gt;Outgoing connections that aren't TCP, or are on the wrong port.&lt;/li&gt;
+&lt;li&gt;Outgoing connections to anything other than a DB instance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On DB instances:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;All outgoing connections.&lt;/li&gt;
+&lt;li&gt;Incoming connections that aren't TCP, or are on the wrong port.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This setup does have a couple of problems. It relies on our MongoDB instances
+all residing on a single subnet. Worse, as mentioned earlier, it allows any IP
+address in the world to make queries to MongoDB. We'll fix both of these next.&lt;/p&gt;
+&lt;h3&gt;Using Remote Groups to Specify Arbitrary IP Addresses&lt;/h3&gt;
+&lt;p&gt;Specifying allowed instances using a CIDR block can be inappropriate. It's
+often preferable to specify a set of arbitrary IP addresses instead. We can do
+this by using a second security group – known as a remote group – to contain
+the set of allowed instances. Our first security group can then refer to the
+remote group to specify which instances are allowed.&lt;/p&gt;
+&lt;p&gt;In our example above, we would modify the “app” security group by dropping the
+CIDR block, and replacing it with a reference to “db” as a remote security
+group.&lt;/p&gt;
+&lt;p&gt;Similarly, we would modify the “db” group to use “app” as a remote group, only
+allowing connections from the members of that group.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='A diagram representing instances in security group "app" being allowed to connect to instances in security group "db", via port 27017 only' src="https://www.tartley.com/files/2023/ibm-cloud/5_allow-app-servers-access-db-remote.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 5. Two security groups configured to allow application servers to send
+queries to MongoDB nodes using remote groups.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This has several advantages. Firstly, our data store no longer accepts
+malicious queries from hackers all over the internet – only from our app
+instances.&lt;/p&gt;
+&lt;p&gt;Secondly, our data store instances no longer need occupy a subnet, they can
+have arbitrary IP addresses.&lt;/p&gt;
+&lt;p&gt;Because the security groups now specify allowed hosts by referencing each
+other, when the members of either group changes, the instance level firewalling
+rules on all instances are updated automatically, to allow or deny traffic
+based on the new membership.&lt;/p&gt;
+&lt;p&gt;This configuration starts to show what makes security groups a flexible,
+dynamic, low-maintenance solution.&lt;/p&gt;
+&lt;h3&gt;Accepting Web Requests&lt;/h3&gt;
+&lt;p&gt;Our application instances aren't any use without a web front end. We put our
+web instances into their own security group (“web”), which allows incoming
+requests from users on the web, and outgoing API requests to our app instances,
+on port 61516.&lt;/p&gt;
+&lt;p&gt;Similarly, we need to add a second rule to the “app” security group, to allow
+incoming requests from “web”. Fig 6. A traditional three-tier application using
+remote security groups.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='A diagram representing a user connecting via port 80 to instances in security group "web", which connect to instances in group "app" via port 61516, which connect to group "db" via port 27017' src="https://www.tartley.com/files/2023/ibm-cloud/6_web-app-db.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 6. A traditional three-tier application using remote security groups.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The more types of server we add to our setup, the more benefit “remote” groups
+provide, by minimizing setup configuration, and by automatically keeping
+firewalling rules up to date when group membership changes.&lt;/p&gt;
+&lt;p&gt;A future blog post will discuss how to set up this three-tier scenario, and
+describe details such as how to use multiple network interfaces on an instance,
+such as the web instances which will use a public IP address exposed to users,
+versus a private IP exposed to the API instances.&lt;/p&gt;
+&lt;h3&gt;Add a Bastion&lt;/h3&gt;
+&lt;p&gt;We need some way to access our servers, so that we can, for example, deploy new
+versions of our application. Commonly this is achieved using a bastion server,
+which provides a single, carefully hardened point of access.&lt;/p&gt;
+&lt;p&gt;Here we add a bastion server, and modify all our security groups to allow SSH
+access from the bastion to all our instances. The bastion instance itself would
+be configured to only allow incoming connections from the appropriate points in
+a CI/CD infrastructure (not shown.) Fig 7. Adding a bastion server with SSH
+access to all other instances.&lt;/p&gt;
+&lt;p&gt;&lt;img alt='A diagram representing the same elements as figure 6 above, with the addition of a "bastion" group which connects to all instances via SSH on port 22' src="https://www.tartley.com/files/2023/ibm-cloud/7_bastion.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fig 7. Adding a bastion server with SSH access to all other instances.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This is starting to look like a realistic setup for a modest but scalable
+multi-tier application.&lt;/p&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;Security groups are a flexible and powerful way to firewall network traffic to
+and from your system's instances. We've shown how they might be used in a few
+typical scenarios, and hopefully demonstrated that they are flexible enough to
+accommodate many others. For more information, see
+&lt;a href="https://cloud.ibm.com/docs/security-groups/sg_index.html"&gt;Getting Started with Security Groups&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="Jonathan Hartley's smiley face" src="https://www.tartley.com/files/2023/ibm-cloud/jonathan-hartley.webp"&gt;
+&lt;/span&gt;
+&lt;br&gt;
+&lt;strong&gt;Jonathan Hartley&lt;/strong&gt;&lt;br&gt;
+Senior Cloud Developer&lt;/p&gt;
+&lt;p&gt;&lt;span style="float: none"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</description><category>cloud</category><category>geek</category><category>networking</category><category>security</category><category>software</category><guid>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</guid><pubDate>Wed, 23 Aug 2023 02:33:47 GMT</pubDate></item><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
+nose and do a force push. Maybe the project requires contributions to be
+rebased or squashed. Maybe we pushed the nuclear launch codes. But there are
+failure modes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You might be accidentally pushing to or from the wrong branch, and hence are
+  about to blow away valuable work at the remote. Yes, is unlikely, and can be
+  fixed after the fact, but who knows how much embarrassing disruption and
+  confusion you'll cause the team before you realize what you did.&lt;/li&gt;
+&lt;li&gt;Do you &lt;em&gt;always&lt;/em&gt; remember to check the state of the remote, to make sure there
+  isn't unexpected extra commits on the remote that you'll unknowingly blow
+  away when you push? Do you enjoy always having to type those extra commands
+  to pull and check the remote commits?&lt;/li&gt;
+&lt;li&gt;No matter how conscientious we are about checking the above, there is a race
+  condition. We might check the remote, then someone else pushes valuable
+  changes, then we force push and blow them away.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Although there are conventions that can help with all the above (e.g. only ever
+force pushing to your own fork, to which nobody else ever pushes), they aren't
+generally watertight. (e.g. you might have pushed something yourself, before
+vacation, and forgotten about it.)&lt;/p&gt;
+&lt;p&gt;So the generally agreed method to avoid the above failure modes is "be more
+careful", which sounds to me like the common prelude to failure. What we need
+are push's newer command-line options:&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;code&gt;--force-with-lease&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;Like &lt;code&gt;--force&lt;/code&gt;, but refuses to push if the remote ref doesn't point at the
+same commit that our local remote-tracking branch 'origin/mybranch' thinks it
+should. So if someone else pushes something to the remote's 'mybranch' just
+before we try to force push, our push will fail until we pull (and, in theory,
+inspect) those commits that we were about to blow away.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;It turns out that this is inadequate. One might have fetched an up-to-date remote
+branch, but somehow or other ended up with our local HEAD on a divergent branch
+anyway:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;C origin/mybranch
+|
+B¹   B² HEAD mybranch
+ \ /
+  A
+  |
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In this situation, &lt;code&gt;--force-with-lease&lt;/code&gt; will allow us to push, not only blowing
+away the original commit B¹, as we intended, but also C, which was maybe pushed
+by someone else before we fetched.&lt;/p&gt;
+&lt;p&gt;To guard against this, we can use the even newer option:&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;code&gt;--force-if-includes&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;This makes &lt;code&gt;--force-with-lease&lt;/code&gt; even more strict about rejecting pushes,
+using clever heuristics on your local reflog, to check that the remote ref
+being updated doesn't include commits which have never been part of your local
+branch.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Upshot is, I plan to default to always replacing uses of &lt;code&gt;--force&lt;/code&gt; with:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;--force-if-includes&lt;span class="w"&gt; &lt;/span&gt;...
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That's a lot to type, the options don't have short versions, and it's easy to forget to
+do. Hence, shadow &lt;code&gt;git&lt;/code&gt; to enforce it, and make it easy. In .bashrc or similar:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# Shadow git to warn againt the use of 'git push -f'&lt;/span&gt;
+git&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;is_push&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;is_force&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;arg&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"push"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;is_push&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"-f"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"--force"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;is_force&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$is_push&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$is_force&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="c1"&gt;# Suggest alternative commands.&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"git push -f: Consider 'git push --force-with-lease --force-if-includes' instead, which is aliased to 'gpf'"&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;# Run the given command, using the git executable instead of this function.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;# git push force: using the new, safer alternatives to --force&lt;/span&gt;
+gpf&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;# Older versions of git don't have --force-if-includes. Fallback to omitting it.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;!&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--quiet&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;--force-if-includes&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--quiet&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then trying to do it wrong tells you how to easily do it right:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;-f
+git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;-f:&lt;span class="w"&gt; &lt;/span&gt;Consider&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'git push --force-with-lease --force-if-includes'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;instead,&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;aliased&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'gpf'&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+$&lt;span class="w"&gt; &lt;/span&gt;gpf
+$
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>Structured Pattern Matching in Python</title><link>https://www.tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
+&lt;a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement"&gt;structured pattern matching&lt;/a&gt;
+when it was added in Python 3.10 a couple of years ago, and have studiously
+avoided it ever since. It seemed like a language feature that's amazingly
+useful in one or two places, like writing a parser, say, and is a horrifically
+over-complicated mis-step just about everywhere else.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; A day after writing this I see that Guido van
+Rossum wrote exactly that,
+&lt;a href="https://github.com/gvanrossum/patma/blob/master/examples/expr.py"&gt;a parser&lt;/a&gt;,
+to showcase the feature. I'm guessing he writes a lot of parsers. I definitely
+don't write enough of them to think this language feature is worth the extra
+complexity it brings.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Regardless, I really ought to remember how it works, so this is my attempt to
+make the details stick, by writing about it.&lt;/p&gt;
+&lt;p&gt;If you're not me, you really ought to be reading about it from the source instead:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://peps.python.org/pep-0634/"&gt;PEP 643&lt;/a&gt;: Specification.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://peps.python.org/pep-0635/"&gt;PEP 635&lt;/a&gt;: Motivation and rationale.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://peps.python.org/pep-0636/"&gt;PEP 636&lt;/a&gt;: A tutorial.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Basic structure&lt;/h2&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;EXPRESSION&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;PATTERN1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;PATTERN2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;_&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This evaluates the &lt;code&gt;match&lt;/code&gt; EXPRESSION, then tries to match it against each
+&lt;code&gt;case&lt;/code&gt; PATTERN, executing the body of the first case that matches, falling back
+to the optional final &lt;code&gt;_&lt;/code&gt; default case. (&lt;code&gt;match&lt;/code&gt; and &lt;code&gt;case&lt;/code&gt; are not keywords,
+except in the context of a match...case block, so you can continue using them
+as variable names elsewhere.)&lt;/p&gt;
+&lt;p&gt;But what are PATTERNs, and how are they tested for a match?&lt;/p&gt;
+&lt;h2&gt;Patterns&lt;/h2&gt;
+&lt;p&gt;Patterns can be any of the following. As becomes increasingly obvious down the
+list, the real power of this feature comes from composing each of these
+patterns with the others. For complicated patterns, parentheses can be used to
+indicate order of operations.&lt;/p&gt;
+&lt;h3&gt;Literals&lt;/h3&gt;
+&lt;p&gt;Like other languages' traditional &lt;code&gt;switch&lt;/code&gt; statement:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;mycommand&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'start'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;_&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;CommandNotFoundError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mycommand&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Such literal case patterns may be strings (including raw and byte-strings, but
+not f-strings), numbers, booleans or None.&lt;/p&gt;
+&lt;p&gt;Such cases are compared with equality:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mf"&gt;123.0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;except for booleans and None, which are compared using &lt;code&gt;is&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Any&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__eq__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+
+&lt;span class="n"&gt;myfalse&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Any&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;myfalse&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# Doesn't match, even though myfalse == False&lt;/span&gt;
+        &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Variable names&lt;/h3&gt;
+&lt;p&gt;We can replace a literal with a variable name, to capture the value of the match
+expression.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'start'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;unknown&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variable 'unknown' is assigned the value of command&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The 'default' case pattern &lt;code&gt;_&lt;/code&gt; is just a special case variable name which
+binds no name.&lt;/p&gt;
+&lt;p&gt;Beware the common error of using "constants" as the case pattern:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="n"&gt;NOT_FOUND&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;404&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;NOT_FOUND&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# bad&lt;/span&gt;
+        &lt;span class="n"&gt;handle_404&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The above case is intended to test for &lt;code&gt;error == NOT_FOUND&lt;/code&gt;, but instead
+assigns the variable &lt;code&gt;NOT_FOUND = error&lt;/code&gt;. The best defense is to always include
+a default catch-all case at the end, which causes the above &lt;code&gt;NOT_FOUND&lt;/code&gt; case to
+produce a SyntaxError:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="n"&gt;NOT_FOUND&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;404&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;NOT_FOUND&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;handle_404&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;_&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;pass&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="n"&gt;SyntaxError&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;capture&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'NOT_FOUND'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;makes&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;remaining&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;patterns&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;unreachable&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To use a 'constant' in a case pattern like this, qualify it with a dotted name,
+such as by using an &lt;code&gt;enum.Enum&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NOT_FOUND&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# correctly matches&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Sequences&lt;/h3&gt;
+&lt;p&gt;Using a list-like or tuple-like syntax, matches must have the right number of
+items. Like Python's existing iterable unpacking feature. Use &lt;code&gt;*&lt;/code&gt; to match the
+rest of a sequence. Included variable names are set if a case matches by all
+other criteria.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'start'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variable name=command[1]&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variable name=command[1]&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variables name=command[1], delay=command[2]&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'stop'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;delay&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;extra&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# New variables name=command[1], delay=command[2] &amp;amp; extra=command[3:]&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;_&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="n"&gt;BadCommand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Mappings&lt;/h3&gt;
+&lt;p&gt;Using a dict-like syntax. The match expression must must contain a
+corresponding mapping, and can contain other keys, too. Use &lt;code&gt;**&lt;/code&gt; to match the
+rest of a mapping.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'host'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;hostname&lt;/span&gt;&lt;span class="p"&gt;}:&lt;/span&gt;
+        &lt;span class="c1"&gt;# 'config' must contain key 'host'. New variable hostname=config['host']&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'port'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;portnumber&lt;/span&gt;&lt;span class="p"&gt;}:&lt;/span&gt;
+        &lt;span class="c1"&gt;# 'config' must contain key 'port'. New variable portnumber=config['port']&lt;/span&gt;
+        &lt;span class="c1"&gt;# Remember we only use the first matching case.&lt;/span&gt;
+        &lt;span class="c1"&gt;# If 'config' contains 'host', then this 'port' case will not match.&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;'scheme'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;scheme&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;extras&lt;/span&gt;&lt;span class="p"&gt;}:&lt;/span&gt;
+        &lt;span class="c1"&gt;# new variables 'scheme' and 'extras' are assigned.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Case patterns may contain more than one key-value pair. The match expression must
+contain all of them to match.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s1"&gt;'host'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;hostname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s1"&gt;'port'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;portnumber&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="p"&gt;}:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Objects and their attributes&lt;/h3&gt;
+&lt;p&gt;Using class syntax, the value must match an isinstance check with the given class:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Click&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="c1"&gt;# handle click&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="c1"&gt;# handle key press&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Beware the common error of omitting the parentheses:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;myval&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Click&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# bad&lt;/span&gt;
+        &lt;span class="c1"&gt;# handle clicks&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The above case is intended to test for &lt;code&gt;isinstance(myval, Click)&lt;/code&gt;, but instead
+creates a new var, &lt;code&gt;Click = myval&lt;/code&gt;. The best defence against this error is to
+always include a default catch-all at the end, which makes the &lt;code&gt;Click&lt;/code&gt; catch-all
+produce an error by making subsequent patterns unreachable.&lt;/p&gt;
+&lt;p&gt;Attribute values for the class can be given, which must also match.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'q'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;release&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;game&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;quit&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="n"&gt;handle_keypress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Values can also be passed as positional args to the class-like case syntax:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'q'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If the class is a namedtuple or dataclass, then positional args to a class-like
+case pattern can automatically be handled using the unambiguous ordering of its
+attributes:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nd"&gt;@dataclass&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
+    &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
+
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'dash'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'golden'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'dash'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'golden'&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But for regular classes, the ordering of the class attributes is ambiguous.
+To fix this, add a &lt;code&gt;__match_args__&lt;/code&gt; attribute on the class, a tuple which
+specifies which class attributes, in which order, can be specified in a case
+pattern:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;__match_args__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'key_name'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'release'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;event&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'q'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;release&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'q'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;As you might expect, the literal positional args can be replaced with variable
+names to capture attribute values instead:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="c1"&gt;# names unimportant, order matters&lt;/span&gt;
+        &lt;span class="n"&gt;handle_keypress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Positional sub-patterns behave slightly differently for builtins &lt;code&gt;bool&lt;/code&gt;,
+&lt;code&gt;bytearray&lt;/code&gt;, &lt;code&gt;bytes&lt;/code&gt;, &lt;code&gt;dict&lt;/code&gt;, &lt;code&gt;float&lt;/code&gt;, &lt;code&gt;frozenset&lt;/code&gt;, &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;list&lt;/code&gt;, &lt;code&gt;set&lt;/code&gt;,
+&lt;code&gt;str&lt;/code&gt;, and &lt;code&gt;tuple&lt;/code&gt;. A positional value is matched by equality against the match
+expression itself, rather than an attribute on it:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;123.0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# would also match if it wasn't shadowed&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Similarly, a positional variable is assigned the value of the match expression
+itself, not an attribute on that value:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+   &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The values passed as keyword or positional args to class-like case patterns can
+be more than just literals or variable names. In fact they can use &lt;em&gt;any&lt;/em&gt; of the
+listed pattern types. For example, they could be a nested instance of this
+class-like syntax:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt;
+
+&lt;span class="n"&gt;mycar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Location&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;mycar&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Location&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;))):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches, and captures 'x' and 'y'&lt;/span&gt;
+
+&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;
+&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Combine patterns using &lt;code&gt;|&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;To match either one pattern or another:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'true'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'on'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'yes'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches any of those values&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Capture sub-patterns using &lt;code&gt;as&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;We've seen how we can either match against a value, or capture the value using
+a variable name. We can do both using &lt;code&gt;as&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s1"&gt;'a'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'b'&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ab&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches either value, captures what the value actually was&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This might not be much use when capturing the whole match expression like that.
+If the match expression is just a variable, then we could instead simply refer
+to that variable. But using &lt;code&gt;as&lt;/code&gt; can be useful when the match expression is
+lengthy or has side-effects:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;events&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_next&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;KeyDown&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;key_event&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;or to capture just a component of the whole expression. Contrived example:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'a'&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="s1"&gt;'b'&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ab&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'c'&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c1"&gt;# matchs ['a', 'c'] or ['b', 'c'], and captures the first letter in 'ab'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4&gt;An &lt;code&gt;if&lt;/code&gt; guard clause&lt;/h4&gt;
+&lt;p&gt;Add arbitrary conditions to the match:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches integers less than 100&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Or, alternatively:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# matches integers less than 100&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Complications&lt;/h2&gt;
+&lt;p&gt;This feature seems rife with complexity. The flexible syntax of case patterns
+forms a new mini-language, embedded within Python. It has many similarities to
+Python, but also many initially unintuitive differences.&lt;/p&gt;
+&lt;p&gt;For example, a class-like case pattern such as &lt;code&gt;case Click():&lt;/code&gt;. Anywhere else
+in the language, the expression like &lt;code&gt;Click(...)&lt;/code&gt; would create an instance of the
+&lt;code&gt;Click&lt;/code&gt; class. In a case statement, it instead is doing things like
+&lt;code&gt;isinstance&lt;/code&gt; and &lt;code&gt;hasattr&lt;/code&gt; checks.&lt;/p&gt;
+&lt;p&gt;Similarly, including variable names doesn't return the variable value as in
+ordinary Python. Instead it binds a value as that name. This is the source of
+the annoying gotcha described above, that bare "constants" like &lt;code&gt;NOT_FOUND&lt;/code&gt;
+behave very unexpectedly when used as case expressions.&lt;/p&gt;
+&lt;p&gt;There are a few places in real-world code where structured pattern matching
+will produce nicer code than the equivalent using nested &lt;code&gt;elif&lt;/code&gt;s. But equally,
+there are a lot of places where the &lt;code&gt;elif&lt;/code&gt;s are a more natural match.
+Developers now get to choose which they're going to use, and then later
+disagree with each other about it, or simply change their mind, and end up
+converting code from one to the other.&lt;/p&gt;
+&lt;p&gt;If this was a simple feature, with low overheads, then I'd forgive its
+inclusion in the language, accepting the costs in return for the marginal and
+unevenly distributed benefits.&lt;/p&gt;
+&lt;p&gt;But it's really not simple. In addition to Python programmers all having to
+do an exercise like this post just to add it to their mental toolbox, it needs
+maintenance effort, not just in CPython but in other implementations too, and
+needs handling by tools such as syntax highlighters, type checkers. It really
+doesn't seem like a net win to me, &lt;em&gt;unless&lt;/em&gt; you're writing way more parsers
+than the average programmer, which no doubt the champions of this feature are.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/structured-pattern-matching-in-python/</guid><pubDate>Sat, 29 Jul 2023 23:15:26 GMT</pubDate></item><item><title>TIL: Makefiles that are self-documenting, and process all extant files.</title><link>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;h3&gt;Self-documenting Makefiles&lt;/h3&gt;
+&lt;p&gt;A trick from years ago, but I copy it around between projects enough that it
+deserves calling out. Add a target:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;help&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## Show this help.&lt;/span&gt;
+&lt;span class="c"&gt;    @# Optionally add 'sort' before 'awk'&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;@grep&lt;span class="w"&gt; &lt;/span&gt;-E&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'^[a-zA-Z_\.%-]+:.*?## .*$$'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;MAKEFILE_LIST&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;awk&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'&lt;/span&gt;
+&lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;help&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Decorate other targets with a descriptive '##' comment, like "&lt;em&gt;Show this help&lt;/em&gt;"
+above. Now calling the 'help' target will summarize all the things the Makefile
+can do. eg:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ make help
+help       Show this help.
+setup      Install required system packages using 'apt install'.
+%.pdf      Generate given PDF from corresponding .tex file.
+all        Convert all .tex files to PDF.
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You might choose to make 'help' the first target in the Makefile, so that it
+gets triggered when the user runs &lt;code&gt;make&lt;/code&gt; without arguments.&lt;/p&gt;
+&lt;h3&gt;Process all extant files&lt;/h3&gt;
+&lt;p&gt;Make's canonical paradigm is that you tell it the name of the file to generate,
+and it uses the tree of dependencies specified in the Makefile to figure out
+how to build it. Typically you'll use automatic variables like "$&amp;lt;" to represent
+the wildcarded source filename:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;%.pdf&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;%.&lt;span class="n"&gt;tex&lt;/span&gt; &lt;span class="c"&gt;## Generate given PDF from corresponding .tex file.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;pdflatex&lt;span class="w"&gt; &lt;/span&gt;$&amp;lt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The pitfall is that when invoking this, you have to name all the PDF files you
+want to generate. If the names are a fixed part of your build, they can be
+embedded in the Makefile itself:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;one&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt; &lt;span class="n"&gt;two&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt; &lt;span class="n"&gt;three&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But if their names are dynamic, you have to specify them on the command line,
+which is a pain:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;one.pdf&lt;span class="w"&gt; &lt;/span&gt;two.pdf&lt;span class="w"&gt; &lt;/span&gt;three.pdf
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is easy enough when &lt;em&gt;re-&lt;/em&gt;generating all the PDFs that already exist:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;*.pdf
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;but is no help when you just have a bunch of .tex files and you just want Make
+to build all of them. This is going the opposite way to canonical make usage.
+We want to specify the existing source files (&lt;code&gt;*.tex&lt;/code&gt;, in this case), and have
+Make build the resulting products.&lt;/p&gt;
+&lt;p&gt;To do it, we need our Makefile to enumerate the existing source files:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;TEX_FILES&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;wildcard&lt;span class="w"&gt; &lt;/span&gt;*.tex&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Using the 'wildcard' function here behaves better than a bare wildcard
+expansion, e.g. it produces no output when there are no matches, rather than
+outputting the unmatched wildcard expression.&lt;/p&gt;
+&lt;p&gt;Then use a substitution to generate the list of .pdf filenames:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;all&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;TEX_FILES:%.tex&lt;span class="o"&gt;=&lt;/span&gt;%.pdf&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will generate one .pdf file for each extant .tex file, regardless of
+whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>geek</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>Astroneer Resource Graph</title><link>https://www.tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
+get each of the resources in &lt;a href="https://astroneer.space/"&gt;Astroneer&lt;/a&gt;. Click the WEBP
+thumbnail below to get the full glorious SVG, then you can '&lt;em&gt;find in page&lt;/em&gt;' on it.
+(&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.svg"&gt;&lt;img alt="Astroneer Resource Graph" src="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph-thumb.webp"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>did-not-finish</category><category>geek</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/astroneer-resource-graph/</guid><pubDate>Tue, 11 Apr 2023 15:01:51 GMT</pubDate></item><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;center&gt;
+&lt;img alt="Soma - protagonist" src="https://www.tartley.com/files/2022/soma-protagonist.webp"&gt;
+&lt;/center&gt;&lt;br&gt;
+&lt;p&gt;Soma is a creepy survival horror game, that leans deeply into the moral and
+existential quandaries arising from the deterministic principle that it's
+possible to scan one's brain and copy the structure into some other substrate,
+yielding a second conscious entity, which thinks it is you. So there are deep
+science-fiction issues in play here, about whether we think such a scheme could
+ever possibly work, and about the practical, personal, and societal
+ramifications of it.&lt;/p&gt;
+&lt;p&gt;Major &lt;span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"&gt;spoilers&lt;/span&gt; ahead. It's seven years old at this point.&lt;/p&gt;
+&lt;p&gt;I loved the setup. A humdrum morning begins in your present-day Toronto
+apartment. A note on the fridge reminds you that today is the day of your
+medical appointment, a brain scan. Reaching the doctor's office by train, you
+find the experimental new type of brain scanner, run by some PhD in a
+cable-strewn side-office. Sit in the chair, don the helmet, wait for the scan
+to complete and- blink! Suddenly, you are elsewhere.&lt;/p&gt;
+&lt;p&gt;As the game progresses, it becomes obvious that the version of you that sat
+down in the seat did not experience this discontinuity. They completed the
+scan, removed the helmet, and continued their normal, everyday life.&lt;/p&gt;
+&lt;p&gt;You are not that copy. You open your eyes to a grim, decrepit cyberpunk future.
+Exploring, your only company is a menagerie of half-functional robots and
+drones, many of which are insane, and, in conversation, seem to be under the
+impression that they are human beings. It gradually becomes apparent that
+perceptual filters are in play, preventing them - and you - from noticing they
+are no longer human. At one point the ocean crashes in on you, and you drown
+for a little while, or at least think you are, but you still don't die. At that
+point you have to acknowledge the truth.&lt;/p&gt;
+&lt;p&gt;You have awoken to the year 2104, and the recorded brain scans of real humans
+are being used to animate drones. This is a scenario much like that told from a
+different perspective in the smashing short story
+&lt;a href="https://qntm.org/mmacevedo"&gt;&lt;em&gt;Lena&lt;/em&gt;&lt;/a&gt; by qntm.
+Failing systems engaged fall-backs, resulting in your obsolete brain scan being
+yanked from storage to inhabit an advanced humanoid robot, in a facility deep
+under the ocean, some time after a comet strike has scoured all life from the
+planet's surface.&lt;/p&gt;
+&lt;p&gt;If that wasn't bad enough, one facilitating technology of this nightmarish
+scenario, a black goo that mimics and improves upon electrical and biological
+circuitry it comes into contact with, has run rampant, growing probing tendrils
+which are wrecking the facility. Among other effects, it has reanimated the
+corpses of the last few humans, who skulk around, not in a good way. As our
+protagonist asks, incredulously, "You mean they've been brought back to life?".
+Our reassuring AI companion replies "Yeah, let's call it that."&lt;/p&gt;
+&lt;p&gt;The game borrows the highly effective mechanics of Frictional's previous games,
+the Amnesia and Penumbra series, where the proximity of horrific, shambling
+enemies causes your character to experience debilitating symptoms, including,
+in this case, static-y visual distortions as your neural hardware suffers from
+some overload or interference. This applies even if you simply look at an
+enemy, an act which immediately draws their attention. So your only chance to
+survive encounters is to stay well out of sight, and actively avert your eyes
+so you can't even watch what's going on. Not being able to see exactly what
+your enemies are, or what they are up to, turns out to be fabulously scary and
+atmospheric. At one point it lead directly to my wife catching me staring
+intently at a blank, black screen for a prolonged period, with a peculiar
+expression on my face, as I hid in a dark cupboard waiting for the slithering
+sounds behind me to go away.&lt;/p&gt;
+&lt;p&gt;Spurring us through this environment are not just threats to our immediate
+survival, but also the adoption of a project, to launch into space a
+solar-powered simulation, hosting all the last remaining brain scans of the
+now-defunct human race, known as the 'ARK'. This will allow the on-board sims
+to live a prolonged period of idyllic virtual existence, preserving at least
+some echo of what humanity was. Since the conceit of the game is that our
+character is a living and conscious entity that feels real emotion, the sims on
+the ARK are all presumably the same, so this seems like a worthwhile endeavor.&lt;/p&gt;
+&lt;p&gt;We are guided, motivated, and assisted by "Catherine", a simulated personality
+running on our hand-held omni-tool, based on the brain recording of an AI
+researcher, whose project during her lifetime was the ARK. Plugging her in to a
+wall or console socket lets her interface with our surroundings, activating
+power supplies and manipulating machinery. She leads us through a series of
+undersea facilities, linked by trains, submersibles, and the occasional
+disorienting trudge across the murky ocean floor, stirred up by ferocious
+currents and landslides, populated by organic-mechanical hybrid horrors that
+glide by in the darkness. I found these some of the absolute best, most
+atmospheric "walking simulator" moments I've experienced in a game.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;center&gt;
+&lt;img alt="The ocean floor, stirred up by currents and landslides" src="https://www.tartley.com/files/2022/soma-murky.webp"&gt;
+&lt;br&gt;Is that another distant light up ahead? Good luck finding them while the currents pummel you,
+and hideous, deadly beasts loom out of the murk.
+&lt;/center&gt;&lt;br&gt;
+&lt;p&gt;Along the way, we encounter a few unforgettable scenarios. We come across the
+failing storage system in which the last remaining copy of our own brain scan
+resides. I decide to flip some buttons which delete it, prompting my character
+to respond with something like "Let this be the last time I wake up in this
+godforsaken place."&lt;/p&gt;
+&lt;p&gt;At another point, we find ourselves trapped within a collapsing facility on the
+bottom of the ocean, with the gibbering undead hammering on the door from the
+next room. There is an airlock leading out into the ocean, but we would be
+crushed at this depth. There is no way out. Luckily, Catherine is able to guide
+us into assembling a more robust robot, one capable of withstanding the
+pressure - all we have to do is sit in the chair and activate the transfer into
+it. We already did this once, back in Toronto. Easy.&lt;/p&gt;
+&lt;p&gt;Except, after the transfer, we glance back across the lab at our original - the
+pictured chap with red LED eyes - who, we notice, is still breathing. Asking
+Catherine about it, she reminds us that the brain scan is not a destructive
+operation. He's still in there, chemically subdued for the moment, but he'll
+soon wake up again, wondering why the transfer didn't work. So we are left with
+the option of stomping out of the airlock to safety, leaving him behind to his
+nightmarish fate. Or flipping a switch to deactivate him before we go.&lt;/p&gt;
+&lt;p&gt;A lot of these narrative beats work better as a game than they perhaps might in
+a written story. They emphasize the player's complicity, your moral
+culpability, which is a mode that games, for all their faults, can do better
+than any other media. Plenty of the lesser moments along the way expose the
+player to decisions about unplugging some human simulation or other which
+declares itself to be "alive", but which is gating your progress in some way.
+Some of them are yourself. Some of these acts require manhandling weighty
+cables, which require large, insistent tugging with the mouse controls. It's
+not just a disembodied button press. One has to provide a determined,
+definitive, mechanical input to end a life. In context, the guilt feels real.&lt;/p&gt;
+&lt;p&gt;Later in the journey, we finally stumble across an honest-to-goodness real,
+live human being. She describes how the rest of the humans will be gathered in
+particular locations, while she stayed to protect the ARK. But, we tell her, we
+just passed through those locations, and there were no humans remaining there.
+We both know that the planet's surface is sterile. A beat passes before she
+announces "So I'm the last human being left alive." She's deathly sick, and
+without hope. By the end of your interactions she asks you to turn off her
+life-support before you leave, and stay with her for her last wheezing moments.
+So this is how humanity ends.&lt;/p&gt;
+&lt;p&gt;Carrying on, because what else is there to do? We finally we get the ARK loaded
+into the launch system that delivers it to orbit, upload our brain scans onto
+it just before it launches, and - we've done it! Success!&lt;/p&gt;
+&lt;p&gt;There was a moment, about five minutes before the end, when I realized what was
+going to happen here, even though my character had not. It was a real emotional
+blow. I envied and pitied him for his naive hope. For believing there was still
+a way out. For, of course, the ARK's launch changed nothing for us. Our
+simulations are aboard it, but we are still sitting here, in a broken robot
+corpse in a collapsing facility at the bottom of a haunted ocean on a dead
+planet. The dispatched copy will enjoy life on the ARK, but we - like the copy
+of ourselves we left behind earlier - are stuck here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>New Laptop Time!</title><link>https://www.tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;img alt="A laptop" src="https://www.tartley.com/files/2008/02/lappy.webp"&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;My employer, Canonical, has a "bring your own hardware" policy, trusting that
+their engineers would rather choose and administer their own personal laptops,
+rather than put up with standardized remotely administered corporate hardware.&lt;/p&gt;
+&lt;p&gt;My current much loved Thinkpad 460p has served faithfully since 2015, but is
+showing its age, sometimes struggling under the workload. Plus, its integrated
+graphics chipset doesn't have the power to play modern games with my kiddo.
+Battlezone 98 runs fine, but Civilization VI (2016) is annoyingly choppy,
+at about 9 frames per second.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;center&gt;
+&lt;img alt="Civilization VI screenshot" src="https://www.tartley.com/files/2022/civ-vi.webp"&gt;
+&lt;/center&gt;
+&lt;br&gt;
+&lt;p&gt;This summer I received the three-year cash-in-hand bonus earmarked as a
+"hardware refresh bonus". It's been many years since I've bought a laptop with
+the attention to detail that comes with spending one's own money. Even the
+current aging Thinkpad was a gift from a former employer. So it's been a decade
+or more since I've seriously specced out a new laptop. This post exists as a
+place to scribble down reminders of a few things I learned along the way.&lt;/p&gt;
+&lt;p&gt;I have a few constraints:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;About the same size as the current Thinkpad's 14 inches, or maybe a tiny bit
+  bigger.&lt;/li&gt;
+&lt;li&gt;I work on Ubuntu Linux, so I'll need to check it plays nicely.&lt;/li&gt;
+&lt;li&gt;It should support modern gaming.&lt;/li&gt;
+&lt;li&gt;Plenty of monitor ports, and/or the grunt to daisy chain them.&lt;/li&gt;
+&lt;li&gt;Is it too much to ask for a headphone jack in 2022?&lt;/li&gt;
+&lt;li&gt;Ability for me to open it up, swap out the battery, drives, RAM.&lt;/li&gt;
+&lt;li&gt;3:2 display would be nice, but these are rare.&lt;/li&gt;
+&lt;li&gt;A budget of $2,000 (saving a bit of my bonus for other hardware-related things.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reading around, I got sort-of up to speed on components.&lt;/p&gt;
+&lt;h3&gt;CPU&lt;/h3&gt;
+&lt;p&gt;The CPU buzz is around Intel's 12th generation (aka "Alder Lake"). These are
+"hybrid" CPUs, combining large high performance cores with smaller high
+efficiency cores on a single chip. They come in about 30 different variants,
+with a naming convention that looks like, for example: &lt;code&gt;Intel Core i7-12700H&lt;/code&gt;.
+This consists of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A brand, eg. "Intel Core"&lt;/li&gt;
+&lt;li&gt;A modifier specifying a market segment, one of:&lt;ul&gt;
+&lt;li&gt;i3 Casual use&lt;/li&gt;
+&lt;li&gt;i5 Multitasking, light gaming&lt;/li&gt;
+&lt;li&gt;i7 Gaming, content creators&lt;/li&gt;
+&lt;li&gt;i9 Slightly faster, more parallel cores.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A single or double digit generation, eg the latest is "12".&lt;/li&gt;
+&lt;li&gt;An SKU, eg the "700" above, a three or four digit number which roughly
+  corresponds to the feature-set or performance - larger is better. These are
+  only comparable within a single generation, they adopt wildly different
+  conventions in different generations.&lt;/li&gt;
+&lt;li&gt;A single or double letter suffix, eg "H" for "high performance", taken from
+  &lt;a href="https://www.intel.com/content/www/us/en/support/articles/000058567/processors/intel-core-processors.html"&gt;an idiotic irregular table&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The major alternative to an Intel processor is AMD. These aren't the current
+season's darlings of the performance benchmarks, although they do include
+several respectable contenders that might be great for my needs, as you can see
+in the following performance comparison.&lt;/p&gt;
+&lt;h4&gt;Benchmarks&lt;/h4&gt;
+&lt;p&gt;These laptop CPU performance benchmarks are culled from
+&lt;a href="https://www.cpubenchmark.net/laptop.html"&gt;www.cpubenchmark.net&lt;/a&gt;,
+sorted by the benchmark score. I included the top 20, plus a handful of notable
+others that I looked up along the way. The 'bench' column measures relative
+performance under a variety of benchmark workloads which fully utilize all
+cores. The higher this number, the better.&lt;/p&gt;
+&lt;p&gt;The number of cores is given as (p)erformance + (e)fficiency, for hybrid processors.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;CPU&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Cores&lt;/th&gt;
+&lt;th style="text-align: right;"&gt;Clock&lt;/th&gt;
+&lt;th style="text-align: right;"&gt;Cache&lt;/th&gt;
+&lt;th style="text-align: right;"&gt;Bench&lt;/th&gt;
+&lt;th&gt;Price&lt;/th&gt;
+&lt;th&gt;Laptop models &amp;amp; other notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;i9-12900HX&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;5.0GHz&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;30MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;36&lt;/td&gt;
+&lt;td&gt;$606&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-12800HX&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;25MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;35&lt;/td&gt;
+&lt;td&gt;$457&lt;/td&gt;
+&lt;td&gt;Thinkpad P16 ($2340).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i9-12950HX&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;30MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;34&lt;/td&gt;
+&lt;td&gt;$590&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-12850HX&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;25MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;31&lt;/td&gt;
+&lt;td&gt;$428&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i9-12900HK&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;30&lt;/td&gt;
+&lt;td&gt;$635&lt;/td&gt;
+&lt;td&gt;Dell XPS 15 ($2950).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i9-12900H&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;29&lt;/td&gt;
+&lt;td&gt;$617&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-12700H&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;27&lt;/td&gt;
+&lt;td&gt;$457&lt;/td&gt;
+&lt;td&gt;Dell XPS 17/15 ($2500), Acer Nitro 5, System76 Onyx &amp;amp; Gazelle.&lt;br&gt;&lt;strong&gt;This CPU is what I ended up getting.&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 9 6900HX&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;25&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Fastest AMD processor.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-12650H&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;6p+4e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;25&lt;/td&gt;
+&lt;td&gt;$457&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i5-12600HX&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;25&lt;/td&gt;
+&lt;td&gt;$284&lt;/td&gt;
+&lt;td&gt;Fastest 12th gen i5. Suspiciously cheap.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 9 PRO 6950H&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-12800H&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
+&lt;td&gt;$457&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 7 PRO 6850H&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Thinkpad P15v.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 9 6900HS&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;ASUS ROG Zephyr G14.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 9 PRO 6950HS&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 7 PRO 6800H&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;23&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i9-11980HK&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;2.6GHz&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;23&lt;/td&gt;
+&lt;td&gt;$583&lt;/td&gt;
+&lt;td&gt;Fastest Intel 11th gen.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 7 6800HS CEd&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;23&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 9 5900HX&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;23&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i9-11950H&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;2.6GHz&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;22&lt;/td&gt;
+&lt;td&gt;$556&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;(I skipped a bunch here)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-1280P&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;6p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;4.8GHz&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;20&lt;/td&gt;
+&lt;td&gt;$482&lt;/td&gt;
+&lt;td&gt;Best Framework.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Ryzen 7 5825U&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;8&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;18&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Best Dell Inspiron 15".&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-1260P&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;4p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;18MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;17&lt;/td&gt;
+&lt;td&gt;$438&lt;/td&gt;
+&lt;td&gt;XPS 13 plus, X1 Carbon gen 10, Thinkpad P14.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i7-1250U&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;2p+8e&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;12MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;11&lt;/td&gt;
+&lt;td&gt;$426&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;i5-6200U&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;2&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;2.8GHz&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;3MB&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;My current Thinkpad T460.&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Notice my current Thinkpad's processor at the very bottom of this list, which
+is 10x slower than the CPU I ended up getting.&lt;/p&gt;
+&lt;h3&gt;Graphics&lt;/h3&gt;
+&lt;p&gt;There are plenty of otherwise fantastic laptops which don't include blazing
+fast dedicated Nvidia or AMD graphics processors, but instead only come with
+relatively humdrum graphics support integrated with the CPU. Although
+integrated GPUs have improved massively in the last few years, this wouldn't be
+fast enough to run modern games well.&lt;/p&gt;
+&lt;p&gt;To compensate, I considered pairing such laptops with an external GPU enclosure
+(eGPU), into which a top-of-the-line desktop GPU card can be plugged. I'm still
+wistfully curious about this path, but in the end opted to do without this
+complication.&lt;/p&gt;
+&lt;p&gt;Here's a table of the top laptop GPUs, culled from
+&lt;a href="https://gpu.userbenchmark.com/"&gt;gpu.userbenchmark.com&lt;/a&gt;. Unlike the CPU table,
+this isn't the top N performers, because GPUs can get crazy fast and expensive,
+so I'm looking for something middle-of-the-pack. It's just a selection of GPUs
+I looked up while researching particular laptop models.&lt;/p&gt;
+&lt;p&gt;The 'performance' column is the combined result of a variety of gaming
+benchmarks, the higher the better. The 'position' column compares the
+performance against all other benchmarked GPUs.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;GPU&lt;/th&gt;
+&lt;th style="text-align: right;"&gt;Performance&lt;/th&gt;
+&lt;th style="text-align: right;"&gt;Position&lt;/th&gt;
+&lt;th&gt;Laptop models &amp;amp; other notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia GeForce RTX 3080&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;130&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;24th&lt;/td&gt;
+&lt;td&gt;System76 Onyx option.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia GeForce RTX 3070Ti&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;122&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;27th&lt;/td&gt;
+&lt;td&gt;System76 Onyx option.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia GeForce RTX 3070&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;114&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;30th&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia GeForce RTX 3060&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;87&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;58th&lt;/td&gt;
+&lt;td&gt;Best XPS 17. System76 Gazelle. Acer Nitro 5.&lt;br&gt;&lt;strong&gt;This is the GPU I ended up getting.&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia GeForce RTX 3050Ti&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td&gt;XPS 15 option.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia GeForce RTX 3050&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;&lt;/td&gt;
+&lt;td&gt;XPS 15 option.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD Radeon RX 6800S&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;85&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;58th&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AMD    RX 6700M&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;79&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;65th&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia RTX A1000 4GB GDDR6&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;45&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;114th&lt;/td&gt;
+&lt;td&gt;Thinkpad P16(certified)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia T1200&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;42&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;118th&lt;/td&gt;
+&lt;td&gt;Thinkpad P15v&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nvidia GTX 1050Ti&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;30&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;144th&lt;/td&gt;
+&lt;td&gt;My current Windows gaming desktop.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Intel Iris Xe&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;17&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;207th&lt;/td&gt;
+&lt;td&gt;Integrated. Framework. XPS 13 Plus.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Intel HD 520&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;4&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;402nd&lt;/td&gt;
+&lt;td&gt;Integrated. &lt;strong&gt;My current Thinkpad T460.&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Notice the two 'integrated' entries at the bottom of the table, one of which is
+my current laptop, a full 20x slower than the GPU I ended up getting. The
+improvement ought to speed Civilization VI up to around an entirely excessive
+180 frames per second. \o/&lt;/p&gt;
+&lt;h3&gt;Laptop models&lt;/h3&gt;
+&lt;p&gt;With the above in mind, I read some reviews, and a few contenders emerged:&lt;/p&gt;
+&lt;h4&gt;Framework&lt;/h4&gt;
+&lt;p&gt;The Framework was massively tempting. It brings an entirely unprecedented
+- some might hopefully say &lt;em&gt;revolutionary&lt;/em&gt; - focus on user-repair and
+upgradability. Rather than soldering and gluing the whole thing together,
+all the Framework's components, up to and including the motherboard and
+screen, are replaceable using a single screwdriver. This is deeply appealing
+for geeks, who want to be able to repair or upgrade.&lt;/p&gt;
+&lt;p&gt;The downside that gave me pause is it is only available with integrated
+Intel-powered graphics. If they had a model including the vastly superior
+Nvidia or AMD accelerated graphics, I would have just bought one months ago,
+instead of prevaricating. But that complication, coupled with the fact that the
+Framework's performance is only mid-range for a 2022 model, put me off
+sufficiently to look around at other options.&lt;/p&gt;
+&lt;h4&gt;Dell XPS 13 plus&lt;/h4&gt;
+&lt;p&gt;The Dell XPS 13 plus looks wonderful, with official Ubuntu verification, no
+less, but just isn't physically big enough for me, and is noticeably
+underpowered. And the Dell 15 inch models seem way overpriced, for the spec,
+easily exceeding my $2,000 budget.&lt;/p&gt;
+&lt;h4&gt;HP Dev One&lt;/h4&gt;
+&lt;p&gt;The HP Dev One looks like a fabulous machine, a colleague just got one and is
+very happy with it. But again, it only has integrated graphics.&lt;/p&gt;
+&lt;h4&gt;Mac Book Pro&lt;/h4&gt;
+&lt;p&gt;I considered this, repaved to run Ubuntu, of course, but to be honest, as
+exquisite as the hardware was at one point, it seems somewhat stagnant and
+directionless now, fifteen years later. Not unimpressive, but doesn't really
+grab me.&lt;/p&gt;
+&lt;h4&gt;System76&lt;/h4&gt;
+&lt;p&gt;I looked at a whole bunch of other laptops at this point, scouring the "best
+gaming laptops of 2022" lists at Toms Hardware and elsewhere. Eventually my
+attention was drawn to System76, who, on reflection, should have been folks I
+checked out earlier in the process.&lt;/p&gt;
+&lt;p&gt;The Oryx is just a few hundred over my budget, even with the current $300 off.
+But a tricked-out Gazelle seems to check all the boxes.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;center&gt;
+&lt;img alt='Gazelle 15" laptop' src="https://www.tartley.com/files/2022/gazelle-15.avif"&gt;
+&lt;/center&gt;
+&lt;p&gt;They have a reasonably high-ranked 12th generation Intel i7 CPU, which seems
+to achieve good performance without wading into the diminishing returns
+of pricey i9 models. Same for the reasonably-placed Nvidia 3060 graphics. And
+the screen is just magic (judged by my admittedly idiosyncratic personal
+criteria.)&lt;/p&gt;
+&lt;p&gt;They support the lightning fast open source &lt;a href="https://www.coreboot.org"&gt;coreboot
+firmware&lt;/a&gt;, and System76 are a leading contributor to
+the project. They sell with Linux-pre-installed, and produce their own
+Ubuntu-based Linux distribution, Pop!_OS (Although stock Ubuntu runs just fine
+too.).&lt;/p&gt;
+&lt;p&gt;Going with Nvidia graphics instead of AMD does yield a performance boost, but
+the downside is that I'll have to wrestle with the opaque proprietary drivers
+from the famously uncooperative Nvidia. But in a nice gesture, System76
+&lt;a href="https://support.system76.com/articles/graphics-switch-ubuntu"&gt;documents this
+process&lt;/a&gt;, and
+lots of other stuff, such as how to replace internal components yourself, on
+their website.&lt;/p&gt;
+&lt;p&gt;Because it's proprietary closed source, Nvidia drivers have always lagged
+behind AMD's open source offerings in terms of compatibility. In particular,
+Nvidia graphics hasn't worked with the new Linux Wayland display server.
+Reading around, my impression is that it's not ready yet, but &lt;em&gt;might&lt;/em&gt; be by
+22.10 (which is next month!?), so I could stick with the older XOrg display
+server for now, without fearing that I'll get marooned there.&lt;/p&gt;
+&lt;p&gt;There are other downsides. The keyboard is reputedly mediocre, and I wish it
+didn't have a numpad. Standard layout tenkeyless for the win, every time. But I
+almost always use a USB mechanical keyboard anyhow. Also, with such greedy
+components, the battery life kinda sucks when the GPU is on and the machine is
+busy. But in the last 12 months, the only time I've run my current laptop not
+plugged in is... never? So I guess I don't care.&lt;/p&gt;
+&lt;p&gt;So &lt;a href="https://system76.com/laptops/gazelle#specs"&gt;this&lt;/a&gt; is what I ordered, with
+the 15" display and the 3060 graphics.&lt;/p&gt;
+&lt;p&gt;But I did that thing where I order it with minimal RAM and SSD storage, to
+replace with my own parts. So I'll have some screwdriver work to do after it
+arrives. The payoff is that I save about $150 by paying market rates for these
+components. In fact I already have a &lt;a href="https://www.amazon.com/WD_Black-SN850-Internal-Gaming-Solid/dp/B0B7CPSN2K"&gt;tremendous
+SSD&lt;/a&gt;
+I can use, leftover from this year's Chia cryptocurrency farming experiments,
+so that part is free. This means I can stay within my $2,000 budget, with $9 to
+spare after shipping and taxes.&lt;/p&gt;
+&lt;h3&gt;Memory&lt;/h3&gt;
+&lt;p&gt;It's generally fine to just buy whatever RAM is recommended by your vendor.
+But the most reliable and cheapest memory will often be the slowest, or at least
+the one running at a clock speed which is most widely supported by different
+motherboards. In order to get the &lt;em&gt;fastest&lt;/em&gt; memory for our particular laptop, we
+need to understand a few things.&lt;/p&gt;
+&lt;h4&gt;Physical form factor&lt;/h4&gt;
+&lt;p&gt;The current standard for RAM is DDR4. For laptops, the slim physical form
+factor is known as SoDIMM. A single circuit board of memory chips is a
+&lt;em&gt;module&lt;/em&gt;. A module connects into a motherboard &lt;em&gt;slot&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;DDR5 is supported by Intel's 12th generation processors, and AMD's newest Ryzen
+7000 series. This uses a different physical connection on the motherboard, and
+is rare thus far, outside of systems above my budget.&lt;/p&gt;
+&lt;p&gt;So I'm looking for DDR4 in a SoDIMM module. Got it.&lt;/p&gt;
+&lt;h4&gt;Ranks &amp;amp; Channels&lt;/h4&gt;
+&lt;p&gt;A module contains from one to eight 64-bit wide logical &lt;em&gt;blocks&lt;/em&gt; of data storage
+(single, dual, quad or octal &lt;em&gt;rank&lt;/em&gt;.) The chips on a module provide x1, x2, x4
+or x8 &lt;em&gt;banks&lt;/em&gt;.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;number of chips x chip banks / 64 = module rank
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;eg. Using sixteen x4 chips will provide a single rank of memory on the module
+(16x4/64=1).&lt;/p&gt;
+&lt;p&gt;Whereas using 32 x8 chips will provide a module of 4 ranks (32x8/64=4).&lt;/p&gt;
+&lt;p&gt;This is sometimes annotated on the module using a notation like 1Rx4, as in one
+rank of x4 chips.&lt;/p&gt;
+&lt;p&gt;The reason this matters is that access to ranks is interleaved, so multiple
+ranks can provide access to data at multiples of the rate provided by a single
+rank. In order to take advantage of this, the motherboard must provide a
+commensurate number of memory access &lt;em&gt;channels&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The
+&lt;a href="https://tech-docs.system76.com/models/gaze17/README.html"&gt;datasheet for my Gazelle&lt;/a&gt;
+says the motherboard has two memory slots, and supports dual-channel access.
+This could be fully utilized by either inserting a single dual-rank module
+(which is more expensive), or, as in the timeworn heuristic, by inserting two
+half-sized single rank modules (e.g. two 16GB modules to make 32GB total.)&lt;/p&gt;
+&lt;h4&gt;Clock frequencies and latency&lt;/h4&gt;
+&lt;p&gt;RAM has a clock frequency, measured in thousands of MHz, but "double data rate"
+chips transfer data on both the clock's rising and falling edges, so the speed
+of transfer is better measured in mega-transfers per second (MT/s), the higher
+the better.&lt;/p&gt;
+&lt;p&gt;However, it takes more than one clock cycle to perform an action. These latency
+values are sometimes quoted as a series of four integers - the number of clock
+cycles to perform particular operations, e.g. 18-18-18-43. But these are often
+abbreviated to just the first number, representing read access time, known as
+"CAS Latency" (CL), eg. CL 18, which tends to be representative. The lower this
+number is, the better.&lt;/p&gt;
+&lt;p&gt;The actual performance of the memory is determined by the product of a clock
+cycle duration (eg. 1ns at 1000MHz) and the latency number (e.g. 1ns * 18 =
+18ns)&lt;/p&gt;
+&lt;p&gt;Further, the motherboard needs to support the RAM's clock speed. In practice,
+the motherboard will negotiate with the inserted modules to find a commonly
+supported frequency, the same or less than the minimum of the rated memory
+access frequencies of the module, the motherboard, and the CPU, using an
+over-complicated and hard-to-predict process controlled by BIOS settings. I
+have no experience with this but it sounds well worth avoiding altogether by
+making sure we get modules with a rated frequency that exactly matches the
+advertised clock frequency of our motherboard.&lt;/p&gt;
+&lt;p&gt;For my new Gazelle,
+&lt;a href="https://tech-docs.system76.com/models/gaze17/README.html"&gt;the manual&lt;/a&gt;
+says that is 3,200MHz.&lt;/p&gt;
+&lt;h4&gt;Availability, pricing and scams.&lt;/h4&gt;
+&lt;p&gt;Finding CL26 latency RAM at 3,200MHz is easy, for around $70. For lower
+latencies the price goes up to about $375 for CL16, but that isn't even in
+stock anywhere.&lt;/p&gt;
+&lt;p&gt;At one point, after much searching, I found some CL16 on newegg.com:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Memory on sale in Newegg - scam" src="https://www.tartley.com/files/2022/memory-on-sale.webp"&gt;&lt;/p&gt;
+&lt;p&gt;And it is only $128! Carefully checking the specs, including those on the
+manufacturer's site, using the shown model number 'CMSX32GX4M2A3000C16',
+this is exactly what we want. 2x16GB at 3200MT/s at CL16.&lt;/p&gt;
+&lt;p&gt;While checking it out, I clicked around a bit, and at one point found:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bad review on Newegg" src="https://www.tartley.com/files/2022/bad-review-on-newegg.webp"&gt;&lt;/p&gt;
+&lt;p&gt;This came along with a number of other negative reviews, stating customers had
+been sent memory modules that were fake, ie. imitations of the purported
+reputable manufacturer, they didn't work at the advertised clock speeds, and
+the seller had gone dark on them, taking weeks to respond to queries, and not
+sending replacements until Newegg got involved. Seems wisest to skip this.&lt;/p&gt;
+&lt;p&gt;Eventually I found an alternative:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Memory on sale in Newegg - legit" src="https://www.tartley.com/files/2022/memory-on-sale-legit.webp"&gt;&lt;/p&gt;
+&lt;p&gt;Yes! DDR4 in a SoDIMM package, 2x16GB modules at 3,200MHz and 18CL. The latency
+isn't quite as good, but it sounds legit, so I'll take it!&lt;/p&gt;
+&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>linux</category><guid>https://www.tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>Journey</title><link>https://www.tartley.com/posts/journey/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/journey-screenshot.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Released on PlayStation 3 by thatgamecompany in 2012. Played on Windows 10 in
+2022.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The slow-paced opening scenes, alternately trudging up and then surfing down
+sunbaked desert dunes, failed to sustain Zander's interest, so I ended up
+playing through its short runtime by myself.&lt;/p&gt;
+&lt;p&gt;In some ways it's an indictment of videogame culture that ten years later it
+still feels so fresh and radical to pair players up with another internet
+rando, while giving them no means to communicate or interact other than helping
+each other out, either leading by example, or exchanging wordless shouts. It
+seems like a pretty limited repertoire at first. I'm half tempted to just wander
+off ahead, alone, into the endless desert.&lt;/p&gt;
+&lt;p&gt;Then, you realize that standing close enough together recharges each other's
+magical flying scarves. Suddenly, it's enough. You cling to each other for dear
+life through the howling storms, double back to rescue each other from prowling
+beasts, and then fly exuberantly above the sunlit clouds, forever curving back
+to seek each other's life-giving sustenance.&lt;/p&gt;
+&lt;p&gt;I don't know who the two internet randos were, with whom I shared the first and
+second halves of my journey. But in those minutes together, we lived a
+lifetime's worth.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/journey/</guid><pubDate>Mon, 09 May 2022 11:22:20 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about meetup)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/meetup.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 15:43:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>PyRochesterMN</title><link>https://www.tartley.com/posts/pyrochestermn/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Announcing the world's newest Python User Group, PyRochesterMN, based in
+Rochester, Minnesota, USA.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; We've had a couple of name &amp;amp; hosting changes since:&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/PyRochesterMN"&gt;http://www.meetup.com/PyRochesterMN&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/RochesTech"&gt;http://www.meetup.com/RochesTech&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.reddit.com/r/rochestertech/"&gt;https://www.reddit.com/r/rochestertech/&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>meetup</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pyrochestermn/</guid><pubDate>Thu, 21 Jan 2016 03:01:27 GMT</pubDate></item><item><title>London Geek Night : Game Dev</title><link>https://www.tartley.com/posts/london-geek-night-game-dev/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Last night was Game Dev night at the London Geek meet in the
+ThoughtWorks offices. It was really enjoyable, I really enjoyed the
+talks, and meeting and chatting to everyone there.&lt;/p&gt;
+&lt;p&gt;Interestingly, there were a bunch of comments throughout the evening
+that confirmed some long-standing suspicions I've had about professional
+game development. I'm not pointedly directing this at any individuals -
+it really was a pleasure and an education talking to every person
+present. However, I couldn't help but notice that there seems to be a
+pervasive macho streak in the game industry, sustained by the belief
+that game development is considerably harder and more creative than any
+other form of software. Or, as I have overheard game developers saying,
+first hand, &lt;em&gt;than any other human endeavor&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Not rocket science&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now, there's no doubt that different niches of the software industry
+vary in complexity, just as the commitment and experience of
+individuals, teams and organisations varies over an enormous range. I
+have no doubt that game development lies on the upper part of that
+spectrum rather than in the middle. But I also have no doubt that there
+are lots of other software industries which are just as complex,
+demanding and creative as game development.&lt;/p&gt;
+&lt;p&gt;Game dev is not special or unique in having many hard problems to solve.
+When game devs claim that it is, it simply looks like a defensive
+reaction to the pervasive belief outside the industry that games are
+trivial time-wasting distractions, and that creating them must therefore
+be one of the easiest and most lightweight aspects of IT.&lt;/p&gt;
+&lt;p&gt;This would be merely silly self-delusion if that was as far as it went,
+but this state of affairs actually has huge damaging knock-on effects.
+The belief that they are tackling projects which are harder than other
+software projects leads to an attitude verging on arrogance - an
+assumption of superiority, and that they have nothing to learn from the
+rest of the software industry. As a result, game dev shops don't even
+attempt to talk to other software engineers about their common craft,
+and as a result the engineering prowess of the game industry actually
+&lt;em&gt;lags behind&lt;/em&gt; the rest of the software industry by five or ten years.
+Practices and techniques which are &lt;em&gt;de rigour&lt;/em&gt; in the rest of the
+industry these days, such as test-driven development and continuous
+integration, are virtually unknown in the game industry. Examples during
+last night's discussion, which were held up as indicators of how
+difficult and complex game dev is, appeared to many people in the room
+to simply be symptoms of clearly bad design.&lt;/p&gt;
+&lt;p&gt;The legendary long hours and project burnout in the game industry is
+actually a symptom of this - far from being the most capable engineers
+amongst us, the reason they are working such ungodly hours is to
+compensate for poor software engineering. The rest of the software
+industry used to suffer from a similar overwork problem, but you know
+what? We figured it out, decades ago now. It's notable to me that other
+industries which suffer from overwork and burnout (eg. the finance
+industry) are also buzzing with arrogance and secrecy.&lt;/p&gt;
+&lt;p&gt;Humility and communication are pre-requisites for any learning. Jeez,
+get over yourselves and go learn how to run a software project.&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>meetup</category><category>software</category><guid>https://www.tartley.com/posts/london-geek-night-game-dev/</guid><pubDate>Sat, 22 Nov 2008 20:19:48 GMT</pubDate></item><item><title>PyCon UK 2007</title><link>https://www.tartley.com/posts/pycon-uk-2007/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="PyCon UK 2007 view from the front" src="https://www.tartley.com/files/2007/09/pycon.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Had a marvellous time at &lt;a href="http://pyconuk.org/index.html"&gt;PyCon UK
+2007&lt;/a&gt;, a conference about the
+&lt;a href="http://python.org"&gt;Python&lt;/a&gt; programming language. In the event everyone
+from &lt;a href="http://resolversystems.com"&gt;Resolver&lt;/a&gt; bar one of our directors
+went along. We met loads of great and interesting folks, heard many
+excellent talks, and gave a few of our own:
+&lt;a href="http://www.voidspace.org.uk/python/weblog/index.shtml"&gt;Michael&lt;/a&gt; talked
+about &lt;a href="http://www.voidspace.org.uk/ironpython/webide/webide.html"&gt;driving Microsoft's natty new Silverlight technology using
+IronPython&lt;/a&gt;.
+Giles talked about his concept of the &lt;em&gt;New Age of the Amateur:
+End-user Computing without Tears&lt;/em&gt;, and I gave a little talk about
+test-driven development for beginners, which can be downloaded here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.tartley.com/files/2007/11/tddbrookssilverbullet.zip" title="TddBrooksSilverBullet.zip (871kb)"&gt;TddBrooksSilverBullet.zip
+    (871kb)&lt;/a&gt;
+    (zip of the presentation and accompanying source code)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;My few &lt;a href="https://photos.google.com/album/AF1QipMCq2rBgyBpQLK596zqHJVTAdQu0yUe9ngrXWEb"&gt;photos&lt;/a&gt; are also online.&lt;/p&gt;</description><category>geek</category><category>meetup</category><category>presentations</category><category>python</category><category>software</category><category>testing</category><guid>https://www.tartley.com/posts/pycon-uk-2007/</guid><pubDate>Thu, 13 Sep 2007 18:57:26 GMT</pubDate></item></channel></rss>

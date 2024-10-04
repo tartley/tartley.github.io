@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about til)</title><link>https://www.tartley.com/</link><description>Today I learned</description><atom:link href="https://www.tartley.com/tags/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 15:43:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Shell environment variable tricks</title><link>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;envsubst&lt;/code&gt; is an executable you likely already have on your PATH (part of the gettext package, often
+installed with dev packages), which is a convenient way to replace &lt;code&gt;$VAR&lt;/code&gt; or &lt;code&gt;${VAR}&lt;/code&gt; style
+environment variables with their values. This allows rendering templates without heavyweight
+tools like Ansible, Jinja, or embedding with heredocs. Usage is:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;envsubstr &amp;lt;template &amp;gt;rendered
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;envsubstr&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s2"&gt;"Hello &lt;/span&gt;&lt;span class="nv"&gt;$USER&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+Hello&lt;span class="w"&gt; &lt;/span&gt;jonathan
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you'd like to use KEY=value declarations from a dotenv-style &lt;code&gt;.env&lt;/code&gt; file, you can auto-export
+them by setting the &lt;code&gt;-a&lt;/code&gt; Bash option:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;set -a; source .env; set +a
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Something I've managed to avoid ever realizing for 30 years, but now that I've seen it I can't
+imagine a week going by without using it. The kind of thing that should be part of everyone's "Week
+1 in a terminal" training that formal education courses never include.&lt;/p&gt;</description><category>bash</category><category>geek</category><category>linux</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</guid><pubDate>Thu, 03 Oct 2024 20:37:27 GMT</pubDate></item><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
+nose and do a force push. Maybe the project requires contributions to be
+rebased or squashed. Maybe we pushed the nuclear launch codes. But there are
+failure modes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You might be accidentally pushing to or from the wrong branch, and hence are
+  about to blow away valuable work at the remote. Yes, is unlikely, and can be
+  fixed after the fact, but who knows how much embarrassing disruption and
+  confusion you'll cause the team before you realize what you did.&lt;/li&gt;
+&lt;li&gt;Do you &lt;em&gt;always&lt;/em&gt; remember to check the state of the remote, to make sure there
+  isn't unexpected extra commits on the remote that you'll unknowingly blow
+  away when you push? Do you enjoy always having to type those extra commands
+  to pull and check the remote commits?&lt;/li&gt;
+&lt;li&gt;No matter how conscientious we are about checking the above, there is a race
+  condition. We might check the remote, then someone else pushes valuable
+  changes, then we force push and blow them away.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Although there are conventions that can help with all the above (e.g. only ever
+force pushing to your own fork, to which nobody else ever pushes), they aren't
+generally watertight. (e.g. you might have pushed something yourself, before
+vacation, and forgotten about it.)&lt;/p&gt;
+&lt;p&gt;So the generally agreed method to avoid the above failure modes is "be more
+careful", which sounds to me like the common prelude to failure. What we need
+are push's newer command-line options:&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;code&gt;--force-with-lease&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;Like &lt;code&gt;--force&lt;/code&gt;, but refuses to push if the remote ref doesn't point at the
+same commit that our local remote-tracking branch 'origin/mybranch' thinks it
+should. So if someone else pushes something to the remote's 'mybranch' just
+before we try to force push, our push will fail until we pull (and, in theory,
+inspect) those commits that we were about to blow away.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;It turns out that this is inadequate. One might have fetched an up-to-date remote
+branch, but somehow or other ended up with our local HEAD on a divergent branch
+anyway:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;C origin/mybranch
+|
+B¹   B² HEAD mybranch
+ \ /
+  A
+  |
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In this situation, &lt;code&gt;--force-with-lease&lt;/code&gt; will allow us to push, not only blowing
+away the original commit B¹, as we intended, but also C, which was maybe pushed
+by someone else before we fetched.&lt;/p&gt;
+&lt;p&gt;To guard against this, we can use the even newer option:&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;code&gt;--force-if-includes&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;This makes &lt;code&gt;--force-with-lease&lt;/code&gt; even more strict about rejecting pushes,
+using clever heuristics on your local reflog, to check that the remote ref
+being updated doesn't include commits which have never been part of your local
+branch.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Upshot is, I plan to default to always replacing uses of &lt;code&gt;--force&lt;/code&gt; with:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;--force-if-includes&lt;span class="w"&gt; &lt;/span&gt;...
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That's a lot to type, the options don't have short versions, and it's easy to forget to
+do. Hence, shadow &lt;code&gt;git&lt;/code&gt; to enforce it, and make it easy. In .bashrc or similar:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# Shadow git to warn againt the use of 'git push -f'&lt;/span&gt;
+git&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;is_push&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;is_force&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;arg&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"push"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;is_push&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"-f"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"--force"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;is_force&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$is_push&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$is_force&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="c1"&gt;# Suggest alternative commands.&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"git push -f: Consider 'git push --force-with-lease --force-if-includes' instead, which is aliased to 'gpf'"&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;# Run the given command, using the git executable instead of this function.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;# git push force: using the new, safer alternatives to --force&lt;/span&gt;
+gpf&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;# Older versions of git don't have --force-if-includes. Fallback to omitting it.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;!&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--quiet&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;--force-if-includes&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--quiet&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then trying to do it wrong tells you how to easily do it right:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;-f
+git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;-f:&lt;span class="w"&gt; &lt;/span&gt;Consider&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'git push --force-with-lease --force-if-includes'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;instead,&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;aliased&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'gpf'&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+$&lt;span class="w"&gt; &lt;/span&gt;gpf
+$
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item><item><title>TIL: Makefiles that are self-documenting, and process all extant files.</title><link>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;h3&gt;Self-documenting Makefiles&lt;/h3&gt;
+&lt;p&gt;A trick from years ago, but I copy it around between projects enough that it
+deserves calling out. Add a target:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;help&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## Show this help.&lt;/span&gt;
+&lt;span class="c"&gt;    @# Optionally add 'sort' before 'awk'&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;@grep&lt;span class="w"&gt; &lt;/span&gt;-E&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'^[a-zA-Z_\.%-]+:.*?## .*$$'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;MAKEFILE_LIST&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;awk&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'&lt;/span&gt;
+&lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;help&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Decorate other targets with a descriptive '##' comment, like "&lt;em&gt;Show this help&lt;/em&gt;"
+above. Now calling the 'help' target will summarize all the things the Makefile
+can do. eg:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ make help
+help       Show this help.
+setup      Install required system packages using 'apt install'.
+%.pdf      Generate given PDF from corresponding .tex file.
+all        Convert all .tex files to PDF.
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You might choose to make 'help' the first target in the Makefile, so that it
+gets triggered when the user runs &lt;code&gt;make&lt;/code&gt; without arguments.&lt;/p&gt;
+&lt;h3&gt;Process all extant files&lt;/h3&gt;
+&lt;p&gt;Make's canonical paradigm is that you tell it the name of the file to generate,
+and it uses the tree of dependencies specified in the Makefile to figure out
+how to build it. Typically you'll use automatic variables like "$&amp;lt;" to represent
+the wildcarded source filename:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;%.pdf&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;%.&lt;span class="n"&gt;tex&lt;/span&gt; &lt;span class="c"&gt;## Generate given PDF from corresponding .tex file.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;pdflatex&lt;span class="w"&gt; &lt;/span&gt;$&amp;lt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The pitfall is that when invoking this, you have to name all the PDF files you
+want to generate. If the names are a fixed part of your build, they can be
+embedded in the Makefile itself:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;one&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt; &lt;span class="n"&gt;two&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt; &lt;span class="n"&gt;three&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But if their names are dynamic, you have to specify them on the command line,
+which is a pain:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;one.pdf&lt;span class="w"&gt; &lt;/span&gt;two.pdf&lt;span class="w"&gt; &lt;/span&gt;three.pdf
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is easy enough when &lt;em&gt;re-&lt;/em&gt;generating all the PDFs that already exist:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;*.pdf
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;but is no help when you just have a bunch of .tex files and you just want Make
+to build all of them. This is going the opposite way to canonical make usage.
+We want to specify the existing source files (&lt;code&gt;*.tex&lt;/code&gt;, in this case), and have
+Make build the resulting products.&lt;/p&gt;
+&lt;p&gt;To do it, we need our Makefile to enumerate the existing source files:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;TEX_FILES&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;wildcard&lt;span class="w"&gt; &lt;/span&gt;*.tex&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Using the 'wildcard' function here behaves better than a bare wildcard
+expansion, e.g. it produces no output when there are no matches, rather than
+outputting the unmatched wildcard expression.&lt;/p&gt;
+&lt;p&gt;Then use a substitution to generate the list of .pdf filenames:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;all&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;TEX_FILES:%.tex&lt;span class="o"&gt;=&lt;/span&gt;%.pdf&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will generate one .pdf file for each extant .tex file, regardless of
+whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>geek</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item><item><title>TIL: Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
+animated gif memes, finally figured out how to do it manually. Not a universal
+process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
+&lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
+show the commands as I used them, as I was figuring each step out.&lt;/p&gt;
+&lt;h4&gt;1. Download a video&lt;/h4&gt;
+&lt;p&gt;Starting from a video on YouTube:&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6-gJMs6DwuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;To download this locally,
+&lt;a href="https://github.com/ytdl-org/youtube-dl"&gt;install &lt;code&gt;youtube-dl&lt;/code&gt;&lt;/a&gt;,
+hit the YouTube &lt;em&gt;share&lt;/em&gt; button to grab the video's encoded URL,
+and:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl https://youtu.be/6-gJMs6DwuE -o Ash.mp4
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This gives me an 850KB .mp4 video file.&lt;/p&gt;
+&lt;h4&gt;2. Split&lt;/h4&gt;
+&lt;p&gt;I only want the final few seconds. To remove the start of the video,
+keeping from 6.5 seconds until the end:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -hide_banner -i Ash.mp4 -acodec copy -vcodec libx264 -ss 00:00:06.5 Ash-split.mp4
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Args to ffmpeg are position sensitive. Specifying '-ss' (to split the file)
+before the input ('-i') can't create the split at an accurate location, since
+it has to guess whereabouts in the file the given timestamp will occur. But
+putting it after the input (as done here) means it can split accurately on the
+given timestamp, since the file has been processed by the time this arg gets
+actioned, so accurate timestamp/frame conversion is known, at the cost of
+having had to process even the parts of the video that are then discarded.&lt;/p&gt;
+&lt;p&gt;Vcodec of libx264 is specified because, according to stackoverflow,
+"&lt;a href="https://stackoverflow.com/questions/5651654/ffmpeg-how-to-split-video-efficiently#comment85070704_13289426"&gt;scenes in mp4 are broken&lt;/a&gt;", whatever that means,
+and specifying "copy", as most people do, gives me an output with no video,
+only audio.&lt;/p&gt;
+&lt;p&gt;This results in a three second, 217KB .mp4 video file. (the following is just an
+image of it).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split.webp" src="https://www.tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
+&lt;h4&gt;3. Crop&lt;/h4&gt;
+&lt;p&gt;To crop out the black bars from the top and bottom:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -hide_banner -i Ash-split.mp4 -vf 'crop=iw:365' Ash-split-crop.mp4
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, we crop it to the input width "iw", and 365 high. In the absense of
+any offset ordinates for the crop, ffmpeg defaults to centering them, so this
+365 pixels are taken from the (spatial, vertical) middle of the video, which is
+exactly what we want.&lt;/p&gt;
+&lt;p&gt;This results in a three second, 220KB .mp4 video file.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://www.tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
+&lt;h3&gt;4. Resize and convert to gif&lt;/h3&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="s s-Atom"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;hide_banner&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;vf&lt;/span&gt; &lt;span class="s s-Atom"&gt;'scale=512:-1'&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;resize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;gif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This results in a grainy-but-passable three second 750KB animated .gif:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
+&lt;p&gt;The file size can be smaller, if you care, most easily by splitting a shorter
+video clip, reducing the frame rate, or reducing the 'scale' in this step.&lt;/p&gt;
+&lt;p&gt;Alternately, this could be done using ImageMagik's 'convert', but the result
+of that was a very large (10MB) file and played very slowly, and I wasn't
+immediately sure how to fix that.&lt;/p&gt;
+&lt;h3&gt;5. Add text&lt;/h3&gt;
+&lt;p&gt;Using Imagemagik's 'convert':&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;convert \
+    Ash-split-crop-resize.gif \
+    -coalesce \
+    -font impact -pointsize 36 -fill white -stroke black -strokewidth 2 \
+    -gravity north -annotate +0+0 'I can''t lie about your chances, but' \
+    -gravity south -annotate +0+0 'you have my sympathies' \
+    -layers Optimize \
+    Ash-split-crop-resize-text.gif
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The '-coalesce' option removes all the .gif optimizations, then we apply the
+text labels, then the '-layers' option re-applies optimizations. Without this
+dance, the text is all twitchy and messy.&lt;/p&gt;
+&lt;p&gt;Voilà. Imagine sending it to a co-worker who is taking on a difficult task,
+like making changes to that thorny section of the codebase that nobody likes:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>geek</category><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>youtube</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>TIL: Energy use per transaction for cryptocurrencies vs Visa</title><link>https://www.tartley.com/posts/energy-use-per-transaction-for-cryptocurrencies-vs-visa/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;For my own calibration, approximate current energy use for a single transaction
+in various cryptocurrencies, compared with using Visa:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Currency &lt;/th&gt;
+&lt;th&gt;Symbol &lt;/th&gt;
+&lt;th style="text-align: right;"&gt;Energy use&lt;br&gt;per txn(Wh) &lt;/th&gt;
+&lt;th&gt;Equivalent&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Bitcoin&lt;/td&gt;
+&lt;td&gt;BTC&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;1,000,000 &lt;/td&gt;
+&lt;td&gt;Hot tub, 150 hours&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ethereum&lt;/td&gt;
+&lt;td&gt;ETH&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;62,000 &lt;/td&gt;
+&lt;td&gt;Nissan Leaf, 1.5 charges&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Litecoin&lt;/td&gt;
+&lt;td&gt;LTC&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;19,000 &lt;/td&gt;
+&lt;td&gt;Clothes washer, 8 loads&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Chia&lt;/td&gt;
+&lt;td&gt;XCH&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;2,000 &lt;/td&gt;
+&lt;td&gt;Dishwasher, 1 hour&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cardano&lt;/td&gt;
+&lt;td&gt;ADA&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;500 &lt;/td&gt;
+&lt;td&gt;Computer &amp;amp; monitor, 1 hour&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dogecoin&lt;/td&gt;
+&lt;td&gt;DOGE&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;120 &lt;/td&gt;
+&lt;td&gt;Humidifier, 1 hour&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ripple&lt;/td&gt;
+&lt;td&gt;XRP&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;79 &lt;/td&gt;
+&lt;td&gt;Amazon echo telling 2 jokes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Visa&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;1.5 &lt;/td&gt;
+&lt;td&gt;LED light bulb for 9 minutes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nano&lt;/td&gt;
+&lt;td&gt;NANO&lt;/td&gt;
+&lt;td style="text-align: right;"&gt;0.1 &lt;/td&gt;
+&lt;td&gt;LED light bulb for 30 seconds&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;br&gt;
+Sources&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I got most crypto energy use from
+  &lt;a href="https://www.benzinga.com/markets/cryptocurrency/21/05/21098323/elon-musk-says-tesla-looking-at-other-cryptos-who-use-less-than-1-of-bitcoins-energy-which"&gt;this roundup&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;For Visa, I used the figures from &lt;a href="https://digiconomist.net/bitcoin-energy-consumption"&gt;this breakdown&lt;/a&gt;,
+  and &lt;a href="https://digiconomist.net/bitcoin-energy-consumption"&gt;this one&lt;/a&gt;, which agrees.&lt;/li&gt;
+&lt;li&gt;For Bitcoin, I took a rounded figure roughly between those quoted on the
+  above two sources (710kWh and 1,123kWh). A single figure precision is
+  probably most appropriate anyhow. &lt;strong&gt;Update&lt;/strong&gt;: The digiconomist article above
+  is updated as the Bitcoin energy use increases over time with proof
+  difficulty, and it's now at almost double the figure I quoted above,
+  at 1,800 kWh/txn.&lt;/li&gt;
+&lt;li&gt;For Chia, I did my own hacky calculation.
+  &lt;a href="https://chiapower.org/"&gt;Chia Power estimates 6MW&lt;/a&gt;
+  in total is used by the Chia network, at current size of 4EiB.
+  Meanwhile, &lt;a href="https://www.chiaexplorer.com/charts/transaction-volume"&gt;Chia Explorer shows a hard-to-read graph&lt;/a&gt;
+  which I'm eyeballing to get a rough average of 3,000 transactions per hour.
+  6 Megawatts divided by 3k per hour gives an energy use per transaction
+  of 2kW.&lt;/li&gt;
+&lt;li&gt;For Nano, I'm using commonly-cited figures in
+  &lt;a href="https://www.reddit.com/r/nanocurrency/comments/7ucw1a/the_entire_nano_network_is_so_efficient_that/"&gt;Reddit posts&lt;/a&gt;
+  (yuk), but the math seems to hold up as far as I can see.&lt;/li&gt;
+&lt;li&gt;For equivalent household energy uses, I used
+  &lt;a href="https://electricityplans.com/kwh-kilowatt-hour-can-power/"&gt;this&lt;/a&gt; and &lt;a href="http://www.wrecc.com/what-uses-watts-in-your-home/"&gt;this&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Notable standout here is NANO, which actually has an order of magnitude &lt;em&gt;lower&lt;/em&gt;
+energy use than Visa. There are other low-energy use cryptocurrencies in this
+bracket, such as IOTA and HBAR. They face some criticism from Bitcoin
+maximalists that reducing energy use undermines the value proposition, or
+reduces security. But to my layman's ears, these arguments don't hold water.
+Certainly communities like NANO seem much more open to honest discussion of
+NANO's shortfalls than most crypto communities, which is a healthy sign, and it
+makes me inclined to trust their counter-assertions that NANO's security is
+really OK.&lt;/p&gt;
+&lt;p&gt;Something's not quite right here though. The Chia whitepaper estimates 10,000
+times better energy efficiency than Bitcoin, by my figures above only show
+1,000.&lt;/p&gt;
+&lt;p&gt;They probably know how to calculate this better than I do. So perhaps my figure
+for Chia is high? I understand the value per transaction will come down as
+Chia starts handling more transactions, which seems reasonable. Perhaps the
+white paper refers to that future hypothetical efficiency?&lt;/p&gt;
+&lt;p&gt;On the other hand, many of the other cryptocurrencies listed above will
+become more efficient in the future too (e.g. Bitcoin is in the process
+of deploying its lightning network, which will reduce per transaction
+energy use.)  So I think it's fair to leave the above figures as they are,
+as a snapshot of current reality.&lt;/p&gt;</description><category>cryptocurrency</category><category>environment</category><category>til</category><guid>https://www.tartley.com/posts/energy-use-per-transaction-for-cryptocurrencies-vs-visa/</guid><pubDate>Thu, 13 May 2021 21:09:33 GMT</pubDate></item><item><title>TIL: Download audio from YouTube</title><link>https://www.tartley.com/posts/download-audio-from-youtube/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;For the sort of weirdos who still host their own music files, but aren't
+preciously audiophile about it. Aaaaand also I'm wording this with the
+assumption you're a Linux, command-line and Python nerd.&lt;/p&gt;
+&lt;p&gt;Sometimes it's a video which is explicitly Creative Commons. Other times, it's
+a friend's otherwise unpublished non-commercial thing. Or maybe it's a massive
+commercial product from a famously litigious corporate behemoth, but you've
+already bought the soundtrack and you just really &lt;em&gt;really&lt;/em&gt; wish you had a
+version which had the exact same sound effects or dialog or arrangement that
+you or your child has grown to love from obsessive movie re-watches.&lt;/p&gt;
+&lt;p&gt;I've got ya.&lt;/p&gt;
+&lt;h3&gt;One-off setup:&lt;/h3&gt;
+&lt;p&gt;Install &lt;a href="https://ffmpeg.org/"&gt;&lt;em&gt;ffmpeg&lt;/em&gt;&lt;/a&gt;, a venerable open-source command-line
+video/audio conversion tool.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;ffmpeg
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, install &lt;a href="https://pypa.github.io/pipx/"&gt;&lt;em&gt;pipx&lt;/em&gt;&lt;/a&gt;, a tool to install
+commmand-line tools that are distributed as Python packages:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;pipx
+python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pipx&lt;span class="w"&gt; &lt;/span&gt;ensurepath
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, use pipx to install the &lt;a href="https://youtube-dl.org/"&gt;&lt;em&gt;youtube-dl&lt;/em&gt;&lt;/a&gt;, an
+oft-sued but never vanquished tool to download YouTube videos. (We're using
+the Python package because the apt package is too old to work):&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pipx&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;youtube-dl
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Goal fulfillment&lt;/h3&gt;
+&lt;p&gt;Here, download your precious audio:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;-x&lt;span class="w"&gt; &lt;/span&gt;--audio-format&lt;span class="o"&gt;=&lt;/span&gt;best&lt;span class="w"&gt; &lt;/span&gt;URL
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;URL&lt;/code&gt; is the encoded version of the video URL (i.e. like "youtu.be/XXX"),
+  obtained by hitting the 'share' button on the YouTube page.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-x&lt;/code&gt; requests just the audio part, with no video.&lt;/li&gt;
+&lt;li&gt;While &lt;code&gt;--audio-format=best&lt;/code&gt; is ostensibly the default setting, meaning
+  YouTube decides which format to send, using &lt;code&gt;-x&lt;/code&gt; seems to fail if we don't
+  specify this explicitly. Alternatively, you can explicitly request "aac",
+  "flac", "mp3", "m4a", "opus", "vorbis", or "wav". As I understand it, YouTube
+  will only send the requested format if the uploader provided it. If they
+  didn't then we get whatever YouTube provides and then convert it locally
+  using ffmpeg. So you sometimes won't be getting the benefit of those lossless
+  formats.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But mp3 works well enough for &lt;a href="https://www.youtube.com/watch?v=VSJWvzLuGz8"&gt;my&lt;/a&gt;
+&lt;a href="https://www.youtube.com/watch?v=ENVIoR2f-Qgh"&gt;needs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Alternatively, for playlists:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;-x&lt;span class="w"&gt; &lt;/span&gt;--audio-format&lt;span class="o"&gt;=&lt;/span&gt;best&lt;span class="w"&gt; &lt;/span&gt;--yes-playlist&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;URL
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--yes-playlist&lt;/code&gt; / &lt;code&gt;--no-playlist&lt;/code&gt; chooses which to download if the URL you
+  provide is both a playlist and a video.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-i&lt;/code&gt; ignores errors, so one bad track in the playlist doesn't stop the whole
+  thing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;My previous inferior way&lt;/h3&gt;
+&lt;p&gt;This method is worse because it downloads the whole video file before
+extracting audio locally, and the download gets throttled by YouTube in
+some way, which of late is very slow indeed, i.e. substantially slower
+than watching the video.&lt;/p&gt;
+&lt;p&gt;Download the video from YouTube:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;URL
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This results in a webm file. I have no idea what that is, and am relieved
+to discover that converting it into an mp3 requires just:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;MyVideoFile&lt;span class="w"&gt; &lt;/span&gt;-vn&lt;span class="w"&gt; &lt;/span&gt;MyAudioFile.mp3
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Where &lt;code&gt;-vn&lt;/code&gt; disables video in the output.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;</description><category>geek</category><category>linux</category><category>music</category><category>terminal</category><category>til</category><category>youtube</category><guid>https://www.tartley.com/posts/download-audio-from-youtube/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item><item><title>TIL: Git Annotated Tags</title><link>https://www.tartley.com/posts/git-annotated-tags/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've previously only ever used git's regular &lt;em&gt;lightweight&lt;/em&gt; tags, created with
+&lt;code&gt;git tag TAGNAME&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Today I learned about &lt;em&gt;annotated&lt;/em&gt; tags, created with &lt;code&gt;git tag -a -m "MESSAGE"
+TAGNAME&lt;/code&gt;. If you don't specify &lt;code&gt;-m MESSAGE&lt;/code&gt;, git annoyingly prompts you for
+one, but it will accept &lt;code&gt;-m ""&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Annotated tags store the creator, created timestamp, and the message. This
+might occasionally be useful for understanding what happened. A release tagged
+this way shows us who created the release, and when, which might differ from
+when the commit was created.&lt;/p&gt;
+&lt;p&gt;But more importantly is the different handling of lightweight versus
+annotated tags when pushing to the server.&lt;/p&gt;
+&lt;p&gt;Habitually, I've been using &lt;code&gt;git push --tags&lt;/code&gt;. But this is slightly broken, in
+that it pushes &lt;em&gt;all&lt;/em&gt; tags. Some tags might be intended as my private local
+development state. Some of them might be unreachable in the origin repo.&lt;/p&gt;
+&lt;p&gt;To address these issues, newer versions of &lt;code&gt;git push&lt;/code&gt; introduced
+&lt;code&gt;--follow-tags&lt;/code&gt;, which only pushes annotated tags which are on ancestors
+of the commit being pushed, so that no unreachable tags are created on origin.&lt;/p&gt;
+&lt;p&gt;Hence, a better workflow is:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Use regular lightweight tags for local state.
+   Keep them private by never using &lt;code&gt;git push --tags&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Use annotated tags to share state with other developers.&lt;/li&gt;
+&lt;li&gt;To share annotated tags, either push them directly, with &lt;code&gt;git push TAGNAME&lt;/code&gt;,
+   or use &lt;code&gt;git push --follow-tags&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;</description><category>git</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/git-annotated-tags/</guid><pubDate>Sat, 17 Oct 2020 05:40:24 GMT</pubDate></item><item><title>TIL: ‰ is per mille</title><link>https://www.tartley.com/posts/per-mille/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;‰ or &lt;em&gt;'per mille'&lt;/em&gt; means parts per thousand.&lt;/p&gt;
+&lt;p&gt;I wasn't aware of it until today when I idly Googled "permil", my imagined
+variation on "percent", to find that this is one of the many spellings of
+a real thing. Rarely used in English, but more common in other European
+languages.&lt;/p&gt;
+&lt;p&gt;Now that I see the symbol, I remember seeing it as a child, on an old
+typewriter that my Grandfather used. What's old is new.&lt;/p&gt;</description><category>til</category><guid>https://www.tartley.com/posts/per-mille/</guid><pubDate>Sat, 17 Oct 2020 05:25:45 GMT</pubDate></item><item><title>TIL: Format Python Snippets with Black.</title><link>https://www.tartley.com/posts/format-python-snippets-with-black/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Black, the opinionated Python code formatter, can easily be invoked from your
+editor to reformat a whole file. For example, from Vim:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the whole file&lt;/span&gt;
+&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;$&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But often you'd like to reformat just a section of the file, while leaving
+everything else intact. In principle, it's easy to tell Vim to just send the
+current visual selection:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c"&gt;" Black(Python) format the visual selection&lt;/span&gt;
+xnoremap &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;Leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;b&lt;/span&gt; :&lt;span class="p"&gt;!&lt;/span&gt;black &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;q&lt;/span&gt; &lt;span class="p"&gt;-&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;(Note that both the above Vim configuration snippets map the same key
+sequence -- leader (commonly comma) followed by lower case b. These can be
+defined simultaneously, because the second one uses 'xnoremap', meaning it is
+used only while a visual selection exists, while the first uses 'nnoremap', so
+is used all other times.)&lt;/p&gt;
+&lt;p&gt;But if the given code starts with an indent on the first line, for example if
+it comes from lines in the middle of a function, then this won't work. Black
+parses the given code into a Python abstract syntax tree (AST), and a leading
+indent is a syntax error - it's just not valid Python.&lt;/p&gt;
+&lt;p&gt;I filed a hopeful &lt;a href="https://github.com/psf/black/issues/1352"&gt;issue with Black&lt;/a&gt;,
+suggesting they could handle this case, but it was a long shot and hasn't
+gained much enthusiasm.&lt;/p&gt;
+&lt;p&gt;So, I present a tiny Python3 wrapper, &lt;em&gt;enblacken&lt;/em&gt;, which:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unindents the given code such that the first line has no indent.&lt;/li&gt;
+&lt;li&gt;Passes the result to Black.&lt;/li&gt;
+&lt;li&gt;Reindents Black's output, by the same amount as the original unindent.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See &lt;a href="https://github.com/tartley/dotfiles/blob/main/bin/enblacken"&gt;enblacken on github&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><category>til</category><category>vim</category><guid>https://www.tartley.com/posts/format-python-snippets-with-black/</guid><pubDate>Tue, 09 Jun 2020 19:36:58 GMT</pubDate></item><item><title>TIL: When to use three dots vs two in Git</title><link>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I endlessly misremember when to use '...' in git versus '..'. That ends
+today:&lt;/p&gt;
+&lt;p&gt;To see the commits or diffs introduced by a branch (the filled circles ●):&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;     f
+    +●  m           git log m..f
+     |  ○
+    +●  |           git diff m...f
+      \ ○
+       \|
+        ○
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To see the commits or diffs between the tip of one branch and another:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;     f              git log m...f
+    +●  m           All commits look the same,
+     |  ●-          unless you use --left-right, which
+    +●  |           shows where each commit comes from.
+      \ ●-
+       \|           git diff m..f
+        ○           '-' commits are shown inverted,
+                     i.e. additions as deletions.
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To see the commits from 'f' back to the beginning of time:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;     f
+    +●  m           git log f
+     |  ○
+    +●  |           (diffs back to start of time are just
+      \ ○            the contents of the working tree)
+       \|
+       +●
+        |
+       +●
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Throughout, omitted branchname defaults to current HEAD, i.e, the one of the
+above that you almost always want:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;m...f
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;is the same as&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;checkout&lt;span class="w"&gt; &lt;/span&gt;f
+git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;m...
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;checkout&lt;span class="w"&gt; &lt;/span&gt;m
+git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;...f
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;</description><category>geek</category><category>git</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item></channel></rss>

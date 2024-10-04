@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about youtube)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/youtube.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 15:43:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
+animated gif memes, finally figured out how to do it manually. Not a universal
+process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
+&lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
+show the commands as I used them, as I was figuring each step out.&lt;/p&gt;
+&lt;h4&gt;1. Download a video&lt;/h4&gt;
+&lt;p&gt;Starting from a video on YouTube:&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6-gJMs6DwuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;To download this locally,
+&lt;a href="https://github.com/ytdl-org/youtube-dl"&gt;install &lt;code&gt;youtube-dl&lt;/code&gt;&lt;/a&gt;,
+hit the YouTube &lt;em&gt;share&lt;/em&gt; button to grab the video's encoded URL,
+and:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl https://youtu.be/6-gJMs6DwuE -o Ash.mp4
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This gives me an 850KB .mp4 video file.&lt;/p&gt;
+&lt;h4&gt;2. Split&lt;/h4&gt;
+&lt;p&gt;I only want the final few seconds. To remove the start of the video,
+keeping from 6.5 seconds until the end:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -hide_banner -i Ash.mp4 -acodec copy -vcodec libx264 -ss 00:00:06.5 Ash-split.mp4
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Args to ffmpeg are position sensitive. Specifying '-ss' (to split the file)
+before the input ('-i') can't create the split at an accurate location, since
+it has to guess whereabouts in the file the given timestamp will occur. But
+putting it after the input (as done here) means it can split accurately on the
+given timestamp, since the file has been processed by the time this arg gets
+actioned, so accurate timestamp/frame conversion is known, at the cost of
+having had to process even the parts of the video that are then discarded.&lt;/p&gt;
+&lt;p&gt;Vcodec of libx264 is specified because, according to stackoverflow,
+"&lt;a href="https://stackoverflow.com/questions/5651654/ffmpeg-how-to-split-video-efficiently#comment85070704_13289426"&gt;scenes in mp4 are broken&lt;/a&gt;", whatever that means,
+and specifying "copy", as most people do, gives me an output with no video,
+only audio.&lt;/p&gt;
+&lt;p&gt;This results in a three second, 217KB .mp4 video file. (the following is just an
+image of it).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split.webp" src="https://www.tartley.com/files/2021/ash-split.webp"&gt;&lt;/p&gt;
+&lt;h4&gt;3. Crop&lt;/h4&gt;
+&lt;p&gt;To crop out the black bars from the top and bottom:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg -hide_banner -i Ash-split.mp4 -vf 'crop=iw:365' Ash-split-crop.mp4
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, we crop it to the input width "iw", and 365 high. In the absense of
+any offset ordinates for the crop, ffmpeg defaults to centering them, so this
+365 pixels are taken from the (spatial, vertical) middle of the video, which is
+exactly what we want.&lt;/p&gt;
+&lt;p&gt;This results in a three second, 220KB .mp4 video file.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop.webp" src="https://www.tartley.com/files/2021/ash-split-crop.webp"&gt;&lt;/p&gt;
+&lt;h3&gt;4. Resize and convert to gif&lt;/h3&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="s s-Atom"&gt;ffmpeg&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;hide_banner&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;mp4&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;vf&lt;/span&gt; &lt;span class="s s-Atom"&gt;'scale=512:-1'&lt;/span&gt; &lt;span class="nv"&gt;Ash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;split&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;crop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="s s-Atom"&gt;resize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="s s-Atom"&gt;gif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This results in a grainy-but-passable three second 750KB animated .gif:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop-resize.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize.gif"&gt;&lt;/p&gt;
+&lt;p&gt;The file size can be smaller, if you care, most easily by splitting a shorter
+video clip, reducing the frame rate, or reducing the 'scale' in this step.&lt;/p&gt;
+&lt;p&gt;Alternately, this could be done using ImageMagik's 'convert', but the result
+of that was a very large (10MB) file and played very slowly, and I wasn't
+immediately sure how to fix that.&lt;/p&gt;
+&lt;h3&gt;5. Add text&lt;/h3&gt;
+&lt;p&gt;Using Imagemagik's 'convert':&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;convert \
+    Ash-split-crop-resize.gif \
+    -coalesce \
+    -font impact -pointsize 36 -fill white -stroke black -strokewidth 2 \
+    -gravity north -annotate +0+0 'I can''t lie about your chances, but' \
+    -gravity south -annotate +0+0 'you have my sympathies' \
+    -layers Optimize \
+    Ash-split-crop-resize-text.gif
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The '-coalesce' option removes all the .gif optimizations, then we apply the
+text labels, then the '-layers' option re-applies optimizations. Without this
+dance, the text is all twitchy and messy.&lt;/p&gt;
+&lt;p&gt;Voilà. Imagine sending it to a co-worker who is taking on a difficult task,
+like making changes to that thorny section of the codebase that nobody likes:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ash-split-crop-resize-text.gif" src="https://www.tartley.com/files/2021/ash-split-crop-resize-text.gif"&gt;&lt;/p&gt;</description><category>geek</category><category>image</category><category>linux</category><category>terminal</category><category>til</category><category>youtube</category><guid>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</guid><pubDate>Wed, 08 Dec 2021 21:32:10 GMT</pubDate></item><item><title>TIL: Download audio from YouTube</title><link>https://www.tartley.com/posts/download-audio-from-youtube/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;For the sort of weirdos who still host their own music files, but aren't
+preciously audiophile about it. Aaaaand also I'm wording this with the
+assumption you're a Linux, command-line and Python nerd.&lt;/p&gt;
+&lt;p&gt;Sometimes it's a video which is explicitly Creative Commons. Other times, it's
+a friend's otherwise unpublished non-commercial thing. Or maybe it's a massive
+commercial product from a famously litigious corporate behemoth, but you've
+already bought the soundtrack and you just really &lt;em&gt;really&lt;/em&gt; wish you had a
+version which had the exact same sound effects or dialog or arrangement that
+you or your child has grown to love from obsessive movie re-watches.&lt;/p&gt;
+&lt;p&gt;I've got ya.&lt;/p&gt;
+&lt;h3&gt;One-off setup:&lt;/h3&gt;
+&lt;p&gt;Install &lt;a href="https://ffmpeg.org/"&gt;&lt;em&gt;ffmpeg&lt;/em&gt;&lt;/a&gt;, a venerable open-source command-line
+video/audio conversion tool.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;ffmpeg
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, install &lt;a href="https://pypa.github.io/pipx/"&gt;&lt;em&gt;pipx&lt;/em&gt;&lt;/a&gt;, a tool to install
+commmand-line tools that are distributed as Python packages:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;pipx
+python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pipx&lt;span class="w"&gt; &lt;/span&gt;ensurepath
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, use pipx to install the &lt;a href="https://youtube-dl.org/"&gt;&lt;em&gt;youtube-dl&lt;/em&gt;&lt;/a&gt;, an
+oft-sued but never vanquished tool to download YouTube videos. (We're using
+the Python package because the apt package is too old to work):&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pipx&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;youtube-dl
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Goal fulfillment&lt;/h3&gt;
+&lt;p&gt;Here, download your precious audio:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;-x&lt;span class="w"&gt; &lt;/span&gt;--audio-format&lt;span class="o"&gt;=&lt;/span&gt;best&lt;span class="w"&gt; &lt;/span&gt;URL
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;URL&lt;/code&gt; is the encoded version of the video URL (i.e. like "youtu.be/XXX"),
+  obtained by hitting the 'share' button on the YouTube page.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-x&lt;/code&gt; requests just the audio part, with no video.&lt;/li&gt;
+&lt;li&gt;While &lt;code&gt;--audio-format=best&lt;/code&gt; is ostensibly the default setting, meaning
+  YouTube decides which format to send, using &lt;code&gt;-x&lt;/code&gt; seems to fail if we don't
+  specify this explicitly. Alternatively, you can explicitly request "aac",
+  "flac", "mp3", "m4a", "opus", "vorbis", or "wav". As I understand it, YouTube
+  will only send the requested format if the uploader provided it. If they
+  didn't then we get whatever YouTube provides and then convert it locally
+  using ffmpeg. So you sometimes won't be getting the benefit of those lossless
+  formats.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But mp3 works well enough for &lt;a href="https://www.youtube.com/watch?v=VSJWvzLuGz8"&gt;my&lt;/a&gt;
+&lt;a href="https://www.youtube.com/watch?v=ENVIoR2f-Qgh"&gt;needs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Alternatively, for playlists:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;-x&lt;span class="w"&gt; &lt;/span&gt;--audio-format&lt;span class="o"&gt;=&lt;/span&gt;best&lt;span class="w"&gt; &lt;/span&gt;--yes-playlist&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;URL
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--yes-playlist&lt;/code&gt; / &lt;code&gt;--no-playlist&lt;/code&gt; chooses which to download if the URL you
+  provide is both a playlist and a video.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-i&lt;/code&gt; ignores errors, so one bad track in the playlist doesn't stop the whole
+  thing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;My previous inferior way&lt;/h3&gt;
+&lt;p&gt;This method is worse because it downloads the whole video file before
+extracting audio locally, and the download gets throttled by YouTube in
+some way, which of late is very slow indeed, i.e. substantially slower
+than watching the video.&lt;/p&gt;
+&lt;p&gt;Download the video from YouTube:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;youtube-dl&lt;span class="w"&gt; &lt;/span&gt;URL
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This results in a webm file. I have no idea what that is, and am relieved
+to discover that converting it into an mp3 requires just:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ffmpeg&lt;span class="w"&gt; &lt;/span&gt;-i&lt;span class="w"&gt; &lt;/span&gt;MyVideoFile&lt;span class="w"&gt; &lt;/span&gt;-vn&lt;span class="w"&gt; &lt;/span&gt;MyAudioFile.mp3
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Where &lt;code&gt;-vn&lt;/code&gt; disables video in the output.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;</description><category>geek</category><category>linux</category><category>music</category><category>terminal</category><category>til</category><category>youtube</category><guid>https://www.tartley.com/posts/download-audio-from-youtube/</guid><pubDate>Thu, 13 May 2021 16:18:33 GMT</pubDate></item></channel></rss>
