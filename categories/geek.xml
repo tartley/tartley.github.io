@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jul 2024 19:12:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fully Operational</title><link>https://www.tartley.com/posts/fully-operational/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Now witness the power of this fully armed and operational battle station.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/categories/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 14:52:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Shell environment variable tricks</title><link>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;envsubst&lt;/code&gt; is an executable you likely already have on your PATH (part of the gettext package, often
+installed with dev packages), which is a convenient way to replace &lt;code&gt;$VAR&lt;/code&gt; or &lt;code&gt;${VAR}&lt;/code&gt; style
+environment variables with their values. This allows rendering templates without heavyweight
+tools like Ansible, Jinja, or embedding with heredocs. Usage is:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;envsubstr &amp;lt;template &amp;gt;rendered
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;envsubstr&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s2"&gt;"Hello &lt;/span&gt;&lt;span class="nv"&gt;$USER&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+Hello&lt;span class="w"&gt; &lt;/span&gt;jonathan
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you'd like to use KEY=value declarations from a dotenv-style &lt;code&gt;.env&lt;/code&gt; file, you can auto-export
+them by setting the &lt;code&gt;-a&lt;/code&gt; Bash option:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;set -a; source .env; set +a
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Something I've managed to avoid ever realizing for 30 years, but now that I've seen it I can't
+imagine a week going by without using it. The kind of thing that should be part of everyone's "Week
+1 in a terminal" training that formal education courses never include.&lt;/p&gt;</description><category>bash</category><category>geek</category><category>linux</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</guid><pubDate>Thu, 03 Oct 2024 20:37:27 GMT</pubDate></item><item><title>Fully Operational</title><link>https://www.tartley.com/posts/fully-operational/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Now witness the power of this fully armed and operational battle station.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="My desk featuring too many computers" src="https://www.tartley.com/files/2023/desk-with-computers.webp"&gt;&lt;/p&gt;
 &lt;p&gt;New job means new laptop means it's time to clean and re-org the desk.&lt;/p&gt;
 &lt;dl&gt;
@@ -361,7 +380,7 @@ not f-strings), numbers, booleans or None.&lt;/p&gt;
 &lt;span class="n"&gt;myfalse&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Any&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
 &lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;myfalse&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;case&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="c1"&gt;# Doesn't match, even though myfalse == False&lt;/span&gt;
         &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -1434,23 +1453,4 @@ beasts, and then fly exuberantly above the sunlit clouds, forever curving back
 to seek each other's life-giving sustenance.&lt;/p&gt;
 &lt;p&gt;I don't know who the two internet randos were, with whom I shared the first and
 second halves of my journey. But in those minutes together, we lived a
-lifetime's worth.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/journey/</guid><pubDate>Mon, 09 May 2022 11:22:20 GMT</pubDate></item><item><title>Rubik's Beginner</title><link>https://www.tartley.com/posts/rubiks-beginner/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Rubik's cube on table" src="https://www.tartley.com/files/2021/rubiks-cube-on-table.webp"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;I've never before memorized the complete set of tricks needed to solve a
-rubik's cube... until today! My first completion with no reference to my notes
-took 3 minutes and 5 seconds. Wine and chocolate motivators as pictured.&lt;/p&gt;
-&lt;p&gt;Rubik's cubes first came out outside Hungary in 1980, when I was 9. A year or
-two after that, I got my hands on an nth generation photocopy of handwritten
-instructions for solving one, derived by a mathematically-inclined friend of a
-friend of my Dad. (The things we used to do before the internet!)&lt;/p&gt;
-&lt;p&gt;I memorized the first few phases, so have always been able to do the first two
-layers. But the last parts of that solution involved remembering a couple of 15
-or 20 move sequences, which apparently ten-year-old me got bored of, or
-distracted from, before ever committing to memory.&lt;/p&gt;
-&lt;p&gt;It turns out that
-&lt;a href="https://ruwix.com/the-rubiks-cube/how-to-solve-the-rubiks-cube-beginners-method/"&gt;the modern "beginner's method"&lt;/a&gt;
-that I'm reading about today is considerably simpler than that, and is
-much easier to understand and memorize. So now that lingering childhood
-inadequacy is vanquished.&lt;/p&gt;
-&lt;p&gt;(Discussion &lt;a href="https://www.facebook.com/tartley/posts/10159630917927040"&gt;on Facebook&lt;/a&gt;.)&lt;/p&gt;</description><category>geek</category><category>journal</category><guid>https://www.tartley.com/posts/rubiks-beginner/</guid><pubDate>Mon, 27 Dec 2021 04:53:22 GMT</pubDate></item></channel></rss>
+lifetime's worth.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>videogame</category><category>windows</category><guid>https://www.tartley.com/posts/journey/</guid><pubDate>Mon, 09 May 2022 11:22:20 GMT</pubDate></item></channel></rss>

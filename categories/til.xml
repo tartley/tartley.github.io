@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about til)</title><link>https://www.tartley.com/</link><description>Today I learned</description><atom:link href="https://www.tartley.com/categories/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jul 2024 19:12:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about til)</title><link>https://www.tartley.com/</link><description>Today I learned</description><atom:link href="https://www.tartley.com/categories/til.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 14:52:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Shell environment variable tricks</title><link>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;envsubst&lt;/code&gt; is an executable you likely already have on your PATH (part of the gettext package, often
+installed with dev packages), which is a convenient way to replace &lt;code&gt;$VAR&lt;/code&gt; or &lt;code&gt;${VAR}&lt;/code&gt; style
+environment variables with their values. This allows rendering templates without heavyweight
+tools like Ansible, Jinja, or embedding with heredocs. Usage is:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;envsubstr &amp;lt;template &amp;gt;rendered
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;envsubstr&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s2"&gt;"Hello &lt;/span&gt;&lt;span class="nv"&gt;$USER&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+Hello&lt;span class="w"&gt; &lt;/span&gt;jonathan
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you'd like to use KEY=value declarations from a dotenv-style &lt;code&gt;.env&lt;/code&gt; file, you can auto-export
+them by setting the &lt;code&gt;-a&lt;/code&gt; Bash option:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;set -a; source .env; set +a
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Something I've managed to avoid ever realizing for 30 years, but now that I've seen it I can't
+imagine a week going by without using it. The kind of thing that should be part of everyone's "Week
+1 in a terminal" training that formal education courses never include.&lt;/p&gt;</description><category>bash</category><category>geek</category><category>linux</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</guid><pubDate>Thu, 03 Oct 2024 20:37:27 GMT</pubDate></item><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
 nose and do a force push. Maybe the project requires contributions to be
 rebased or squashed. Maybe we pushed the nuclear launch codes. But there are
 failure modes:&lt;/p&gt;
@@ -532,25 +551,4 @@ git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;m
 git&lt;span class="w"&gt; &lt;/span&gt;diff&lt;span class="w"&gt; &lt;/span&gt;...f
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;</description><category>geek</category><category>git</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item><item><title>TIL: Listen to your phone through your PC speakers</title><link>https://www.tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Directs audio input (e.g. mic) to audio output (e.g. speakers),&lt;/span&gt;
-&lt;span class="c1"&gt;# then sleeps forever. Stops audio redirection when it is killed.&lt;/span&gt;
-&lt;span class="c1"&gt;# So, for example, plug your phone into the PC's mic, run 'listen',&lt;/span&gt;
-&lt;span class="c1"&gt;# and listen to phone audio through your computer's speakers.&lt;/span&gt;
-&lt;span class="c1"&gt;#&lt;/span&gt;
-&lt;span class="c1"&gt;# Requires:&lt;/span&gt;
-&lt;span class="c1"&gt;# sudo apt-get install pactl # Ubuntu&lt;/span&gt;
-
-&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-e
-
-&lt;span class="nv"&gt;module&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;pactl&lt;span class="w"&gt; &lt;/span&gt;load-module&lt;span class="w"&gt; &lt;/span&gt;module-loopback&lt;span class="k"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;cleanup&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;pactl&lt;span class="w"&gt; &lt;/span&gt;unload-module&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$module&lt;/span&gt;
-&lt;span class="o"&gt;}&lt;/span&gt;
-
-&lt;span class="nb"&gt;trap&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;cleanup&lt;span class="w"&gt; &lt;/span&gt;EXIT
-
-sleep&lt;span class="w"&gt; &lt;/span&gt;infinity
-&lt;/pre&gt;&lt;/div&gt;</description><category>geek</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/listen-to-your-phone-through-your-pc-speakers/</guid><pubDate>Sun, 15 Mar 2015 15:50:09 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Is there a word for unicode ascii art?&lt;/p&gt;</description><category>geek</category><category>git</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/git-when-to-use-three-dots-vs-two/</guid><pubDate>Tue, 25 Aug 2015 16:51:30 GMT</pubDate></item></channel></rss>

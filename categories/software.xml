@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jul 2024 19:12:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Illustrating Uses of IBM Cloud Security Groups</title><link>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;blockquote&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about software)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 14:52:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Shell environment variable tricks</title><link>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;envsubst&lt;/code&gt; is an executable you likely already have on your PATH (part of the gettext package, often
+installed with dev packages), which is a convenient way to replace &lt;code&gt;$VAR&lt;/code&gt; or &lt;code&gt;${VAR}&lt;/code&gt; style
+environment variables with their values. This allows rendering templates without heavyweight
+tools like Ansible, Jinja, or embedding with heredocs. Usage is:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;envsubstr &amp;lt;template &amp;gt;rendered
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;envsubstr&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s2"&gt;"Hello &lt;/span&gt;&lt;span class="nv"&gt;$USER&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+Hello&lt;span class="w"&gt; &lt;/span&gt;jonathan
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you'd like to use KEY=value declarations from a dotenv-style &lt;code&gt;.env&lt;/code&gt; file, you can auto-export
+them by setting the &lt;code&gt;-a&lt;/code&gt; Bash option:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;set -a; source .env; set +a
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Something I've managed to avoid ever realizing for 30 years, but now that I've seen it I can't
+imagine a week going by without using it. The kind of thing that should be part of everyone's "Week
+1 in a terminal" training that formal education courses never include.&lt;/p&gt;</description><category>bash</category><category>geek</category><category>linux</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</guid><pubDate>Thu, 03 Oct 2024 20:37:27 GMT</pubDate></item><item><title>Illustrating Uses of IBM Cloud Security Groups</title><link>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;blockquote&gt;
 &lt;p&gt;I wrote this high-level public-facing guide while employed by IBM, creating
 the security groups feature for IBM Cloud. It
 &lt;a href="https://web.archive.org/web/20210418195246/https://www.ibm.com/cloud/blog/illustrating-uses-ibm-cloud-security-groups"&gt;used to reside&lt;/a&gt;
@@ -325,7 +344,7 @@ not f-strings), numbers, booleans or None.&lt;/p&gt;
 &lt;span class="n"&gt;myfalse&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Any&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
 &lt;span class="k"&gt;match&lt;/span&gt; &lt;span class="n"&gt;myfalse&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;case&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="c1"&gt;# Doesn't match, even though myfalse == False&lt;/span&gt;
         &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="kc"&gt;False&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -780,59 +799,4 @@ Rochester, Minnesota, USA.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; We've had a couple of name &amp;amp; hosting changes since:&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/PyRochesterMN"&gt;http://www.meetup.com/PyRochesterMN&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;&lt;a href="http://www.meetup.com/RochesTech"&gt;http://www.meetup.com/RochesTech&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.reddit.com/r/rochestertech/"&gt;https://www.reddit.com/r/rochestertech/&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>meetup</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pyrochestermn/</guid><pubDate>Thu, 21 Jan 2016 03:01:27 GMT</pubDate></item><item><title>Thoughts on Nylas' "How We Deploy Code"</title><link>https://www.tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Some thoughts on &lt;a href="https://nylas.com/blog/packaging-deploying-python"&gt;Nylas' post "How We Deploy
-Code."&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The goals of making deployment consistent, reliable and fast are very
-laudable, and the conclusion involving creating Debian packages is just
-great. But in the spirit of geek nitpicking, I can't help but think the
-justifications given are misguided, and overlook a simpler solution.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; pip does not offer a "revert deploy" strategy&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Yes it does. Throw away the virtualenv and create a new one using the
-requirements.txt from an earlier release. This might be slow, but you
-can both speed it up (see below), and you can keep old versioned
-virtualenvs around, as a cache of the output of this slow step, so that
-reverts (the time when you really want deploys to go quickly) require
-only a couple of symlinks.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Oooh, and I just had an idea. You could version virtualenvs
-using a hash of the requirements, so that deploys which do not change
-dependencies can share the same virtualenv. I've never tried that - it
-might work?!?!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; Installing dependencies with pip can make deploys painfully
-slow&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This is true. But it's not the final word on the matter.&lt;/p&gt;
-&lt;p&gt;Firstly, don't grab the dependencies you're installing from PyPI. Have a
-local cache of them. That speeds up the install tremendously, not just
-because no download takes place, but also because no trawling of PyPI
-and author sites for possible alternate versions takes place. Some
-people use a local PyPI instance, but I like simply using a directory
-full of packages. Point pip at it using
-'&lt;code&gt;pip install --no-index --find-links=packages -r requirements&lt;/code&gt;'. The
-'packages' directory could be checked into your project's repo, so that
-once you've checked a project out, you have everything you need to
-deploy to local VMs, even with no network connection at all. I wrote
-about this &lt;a href="https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof"&gt;a while ago&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; Building your code separately on each host will cause
-consistency issues&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;So don't install dependencies using source packages, use wheels instead.
-Then any slow or unreliable build step is done once, when you create the
-packages directory, while deployment is now reliable and requires no
-development tools on the production server such as compilers, headers,
-etc.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; As a bonus, this will again substantially speed up the
-creation of your virtualenv when deploying.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;gt;&amp;gt; Deploys will fail if the PyPI or your git server are down&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;PyPI outages (or a package author deleting their package, which happens
-routinely) are not a problem if you're deploying from a local source of
-packages.&lt;/p&gt;
-&lt;p&gt;I agree that application code deployment shouldn't be done using a 'git
-pull'. Accessibility to GitHub shouldn't be a single point of failure,
-and the fewer development tools needed on production servers the better.
-So export the code from git into a tar file when you cut a release, and
-then push it out using scp at deploy time.&lt;/p&gt;
-&lt;p&gt;Having said all that, there are still advantages to having your whole
-app and its dependencies handled by a single mechanism like Debian
-packages, rather than more bug-prone ad-hoc scripts and Ansible config.
-So I'm not at all against the final conclusions of the Nylas article.
-(Hugs to you folks at Nylas!)&lt;/p&gt;
-&lt;p&gt;Dashed this out in ten minutes between daycare pickup and dinner being
-ready. Apologies for the inevitable shoddyness.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/thoughts-on-nylas-how-we-deploy-code/</guid><pubDate>Wed, 22 Jul 2015 00:06:02 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://www.reddit.com/r/rochestertech/"&gt;https://www.reddit.com/r/rochestertech/&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>meetup</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/pyrochestermn/</guid><pubDate>Thu, 21 Jan 2016 03:01:27 GMT</pubDate></item></channel></rss>

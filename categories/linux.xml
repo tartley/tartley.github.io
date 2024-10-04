@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2023 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 22 Sep 2023 04:13:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Made out of meat (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/categories/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 14:52:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Shell environment variable tricks</title><link>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;envsubst&lt;/code&gt; is an executable you likely already have on your PATH (part of the gettext package, often
+installed with dev packages), which is a convenient way to replace &lt;code&gt;$VAR&lt;/code&gt; or &lt;code&gt;${VAR}&lt;/code&gt; style
+environment variables with their values. This allows rendering templates without heavyweight
+tools like Ansible, Jinja, or embedding with heredocs. Usage is:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;envsubstr &amp;lt;template &amp;gt;rendered
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;envsubstr&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s2"&gt;"Hello &lt;/span&gt;&lt;span class="nv"&gt;$USER&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+Hello&lt;span class="w"&gt; &lt;/span&gt;jonathan
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you'd like to use KEY=value declarations from a dotenv-style &lt;code&gt;.env&lt;/code&gt; file, you can auto-export
+them by setting the &lt;code&gt;-a&lt;/code&gt; Bash option:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;set -a; source .env; set +a
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Something I've managed to avoid ever realizing for 30 years, but now that I've seen it I can't
+imagine a week going by without using it. The kind of thing that should be part of everyone's "Week
+1 in a terminal" training that formal education courses never include.&lt;/p&gt;</description><category>bash</category><category>geek</category><category>linux</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</guid><pubDate>Thu, 03 Oct 2024 20:37:27 GMT</pubDate></item><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;
 &lt;img alt="Soma - protagonist" src="https://www.tartley.com/files/2022/soma-protagonist.webp"&gt;
 &lt;/center&gt;&lt;br&gt;
@@ -1151,66 +1170,4 @@ to whichever profile you mark as default in the ProfileManager, but
 right clicking lets you select the home or work profile explicitly. Open
 each, and change the theme in one of them so the windows are visually
 distinct.&lt;/p&gt;
-&lt;p&gt;Tested on Ubuntu, RHEL 7.3, probably works on all Gnome3 desktops.&lt;/p&gt;</description><category>geek</category><category>linux</category><guid>https://www.tartley.com/posts/running-multiple-firefox-profiles/</guid><pubDate>Thu, 22 Feb 2018 00:40:55 GMT</pubDate></item><item><title>Automate Gnome keybindings</title><link>https://www.tartley.com/posts/automate-gnome-keybindings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Sick of manual GUI twiddling to fix inconsistent keybindings on various
-computers. Solved once and for all, by a new script in my personal
-workstation setup bucket:&lt;/p&gt;
-&lt;p&gt;Warning: This:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;works great on RHEL,&lt;/li&gt;
-&lt;li&gt;doesn't all work on Ubuntu&amp;lt;=17.04, I suspect because Unity has
-    it's own set of keybinds that are defined elsewhere.&lt;/li&gt;
-&lt;li&gt;works great on Ubuntu 17.10. especially if you go in manually to
-    disable the built-in keybinding for Super-V, which displays the
-    calendar and notifications window, which shadows my 'toggle window
-    maximize vertically'.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
-
-&lt;span class="nv"&gt;kb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'org.gnome.desktop.wm.keybindings'&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Switcher, between windows not apps, uses alt-tab and alt-grave&lt;/span&gt;
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;switch-windows&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['Tab']"&lt;/span&gt;
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;switch-windows-backward&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['grave', 'Tab']"&lt;/span&gt;
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;switch-applications&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"[]"&lt;/span&gt;
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;switch-applications-backward&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"[]"&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Window maximize toggle, super-up&lt;/span&gt;
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;maximize&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"[]"&lt;/span&gt;
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;toggle-maximized&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['Up']"&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Window maximize vertically toggle, super-v&lt;/span&gt;
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;maximize-vertically&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['v']"&lt;/span&gt;
-
-&lt;span class="c1"&gt;# run command, super-r&lt;/span&gt;
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$kb&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;panel-run-dialog&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['r', 'F2']"&lt;/span&gt;
-
-
-&lt;span class="c1"&gt;# Custom commands&lt;/span&gt;
-
-&lt;span class="nv"&gt;mk&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'org.gnome.settings-daemon.plugins.media-keys'&lt;/span&gt;
-&lt;span class="nv"&gt;ckb&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings'&lt;/span&gt;
-
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;custom-keybindings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"['&lt;/span&gt;&lt;span class="nv"&gt;$ckb&lt;/span&gt;&lt;span class="s2"&gt;/custom0/', '&lt;/span&gt;&lt;span class="nv"&gt;$ckb&lt;/span&gt;&lt;span class="s2"&gt;/custom1/']"&lt;/span&gt;
-
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/&lt;span class="w"&gt; &lt;/span&gt;name&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"screen off"&lt;/span&gt;
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"screenoff"&lt;/span&gt;
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom0/&lt;span class="w"&gt; &lt;/span&gt;binding&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"z"&lt;/span&gt;
-
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/&lt;span class="w"&gt; &lt;/span&gt;name&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"terminal"&lt;/span&gt;
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;command&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"terminal"&lt;/span&gt;
-gsettings&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$mk&lt;/span&gt;.custom-keybinding:&lt;span class="nv"&gt;$ckb&lt;/span&gt;/custom1/&lt;span class="w"&gt; &lt;/span&gt;binding&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"t"&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Embedded in that is the ultimate solution to my longstanding irk with
-Unity and Gnome's default window switcher (alt-tab.) By default it
-groups windows of a single application together, requiring some extra
--grave pressing to navigate between windows within an application.&lt;/p&gt;
-&lt;p&gt;This not only requires way more effort, but also breaks the expected
-behaviour of just tapping alt-tab to go back to the last used window.
-Instead it goes back to the last used application, so you can't toggle
-between two windows of the same application, eg. two terminals. Absolute
-madness.&lt;/p&gt;
-&lt;p&gt;The above modifies alt-tab to just cycle through all windows, ungrouped,
-which fixes the ability to toggle between last two windows. Also,
-alt-grave is provided as an alternative to cycle backwards through the
-windows, which is easier to hit than shift-alt-tab.&lt;/p&gt;</description><category>bash</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/automate-gnome-keybindings/</guid><pubDate>Thu, 05 Oct 2017 01:06:47 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Tested on Ubuntu, RHEL 7.3, probably works on all Gnome3 desktops.&lt;/p&gt;</description><category>geek</category><category>linux</category><guid>https://www.tartley.com/posts/running-multiple-firefox-profiles/</guid><pubDate>Thu, 22 Feb 2018 00:40:55 GMT</pubDate></item></channel></rss>

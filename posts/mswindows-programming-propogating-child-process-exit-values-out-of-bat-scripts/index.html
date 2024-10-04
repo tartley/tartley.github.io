@@ -62,7 +62,7 @@ I have ended up learning far more about crappy DOS sc">
 <a href="../../rss.xml">RSS</a>
                 </li>
 <li>
-<a href="../../pages/about/">About</a>
+<a href="../../about/">About</a>
 
                 
             </li>
@@ -176,15 +176,15 @@ can be set without using the hopelessly brain-dead 'exit' command. It is
 equal to the exit value of the last process the script invokes. So
 instead of exit, simply find a process that will exit with the value you
 need, and invoke it as the final command in your batch script:</p>
-<div class="code"><pre class="code literal-block"><span class="p">::</span> <span class="n">first</span> <span class="n">run</span> <span class="n">our</span> <span class="n">tool</span>
-<span class="n">python</span> <span class="s2">"%~dp0%~n0.py"</span><span class="p">;</span> <span class="o">%*</span>
-<span class="nb">set</span> <span class="n">EXITVAL</span><span class="o">=%</span><span class="n">ERRORLEVEL</span><span class="o">%</span>
+<div class="code"><pre class="code literal-block"><span class="p">::</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="n">tool</span>
+<span class="n">python</span><span class="w"> </span><span class="s2">"%~dp0%~n0.py"</span><span class="p">;</span><span class="w"> </span><span class="o">%*</span>
+<span class="nb">set</span><span class="w"> </span><span class="n">EXITVAL</span><span class="o">=%</span><span class="n">ERRORLEVEL</span><span class="o">%</span>
 
-<span class="p">::</span> <span class="n">then</span> <span class="n">make</span> <span class="nb">any</span> <span class="n">changes</span> <span class="n">to</span> <span class="n">the</span> <span class="n">environment</span>
-<span class="n">call</span> <span class="o">%</span><span class="n">Temp</span><span class="o">%</span>\<span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span>
+<span class="p">::</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="nb">any</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span>
+<span class="n">call</span><span class="w"> </span><span class="o">%</span><span class="n">Temp</span><span class="o">%</span><span class="w">\</span><span class="o">%~</span><span class="n">n0</span><span class="o">-</span><span class="n">setvar</span><span class="o">.</span><span class="n">bat</span>
 
-<span class="p">::</span> <span class="ow">and</span> <span class="n">propagate</span> <span class="n">the</span> <span class="n">exit</span> <span class="n">value</span> <span class="n">to</span> <span class="n">our</span> <span class="n">invoker</span>
-<span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">"import sys; sys.exit(</span><span class="si">%E</span><span class="s2">XITVAL%)"</span>
+<span class="p">::</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">propagate</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">exit</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">our</span><span class="w"> </span><span class="n">invoker</span>
+<span class="n">python</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="s2">"import sys; sys.exit(</span><span class="si">%E</span><span class="s2">XITVAL%)"</span>
 </pre></div>
 
 <p>Bingo. I now have a Python process that can modify the environment of
