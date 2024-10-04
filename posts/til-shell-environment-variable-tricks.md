@@ -2,7 +2,7 @@
 .. title: TIL: Shell environment variable tricks
 .. slug: til-shell-environment-variable-tricks
 .. date: 2024-10-03 15:37:27 UTC-05:00
-.. tags: bash terminal linux software geek
+.. tags: til bash terminal linux software geek
 .. type: text
 -->
 
