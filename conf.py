@@ -17,7 +17,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Jonathan Hartley"  # (translatable)
-BLOG_TITLE = "Made out of meat"  # (translatable)
+BLOG_TITLE = "tartley.com"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://www.tartley.com/"
@@ -76,7 +76,7 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/archive.html", "Posts"),
-        ("/categories/", "Tags"),
+        ("/tags/", "Tags"),
         ("/galleries/Drawings", "Gallery"),
         ("/rss.xml", "RSS"),
         ("/about/", "About"),
@@ -297,7 +297,7 @@ NEW_POST_DATE_PATH = False
 # output / TRANSLATION[lang] / TAG_PATH / tag.html (list of posts for a tag)
 # output / TRANSLATION[lang] / TAG_PATH / tag RSS_EXTENSION (RSS feed for a tag)
 # (translatable)
-# TAG_PATH = "categories"
+TAG_PATH = "tags"
 
 # By default, the list of tags is stored in
 #     output / TRANSLATION[lang] / TAG_PATH / index.html
