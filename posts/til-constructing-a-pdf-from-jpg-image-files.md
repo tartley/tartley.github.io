@@ -87,6 +87,34 @@ all: $(output) ## Build final output PDF
 .PHONY: all
 ```
 
+Where 'make-bookmarks' is a bash script that generates the intermediate 'bookmarks.txt' file:
+
+```bash
+#!/usr/bin/env bash
+
+set -e # exit on error
+set -u # treat unset vars as errors
+# set -x # debugging output
+set -o pipefail
+
+# Generate a bookmarks file for all the matching PDF files
+
+fmt="BookmarkBegin
+BookmarkTitle: %s
+BookmarkLevel: 1
+BookmarkPageNumber: %d
+"
+
+declare -a files=(chapter*.pdf)
+page=1
+for file in "${files[@]}"; do
+    title="${file%.*}"
+    printf "$fmt" "$title" "$page"
+    num_pages="$(pdftk "$file" dump_data | grep NumberOfPages | awk '{print $2}')"
+    page=$((page + num_pages))
+done
+```
+
 Now `make all` will produce the final output.pdf. You might want to open up the generated
 bookmarks.txt and edit the placeholder "chapter01" names. Then run `make all` again to
 regenerate the final output PDF with your fixed chapter names.
