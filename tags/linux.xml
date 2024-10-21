@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 21 Oct 2024 15:52:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Constructing a PDF from .jpg image files</title><link>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have some folders of .jpg images that make up a comic. I want to convert them into a PDF to read
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 21 Oct 2024 16:40:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Constructing a PDF from .jpg image files</title><link>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have some folders of .jpg images that make up a comic. I want to convert them into a PDF to read
 on my tab and other devices, and import into by bookshelf in Calibre.&lt;/p&gt;
-&lt;h3&gt;0. Install some prerequisites&lt;/h3&gt;
+&lt;h3&gt;1. Install some prerequisites&lt;/h3&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;imagemagick&lt;span class="w"&gt; &lt;/span&gt;pdftk
 &lt;/pre&gt;&lt;/div&gt;
 
+&lt;h3&gt;2. Do the conversion&lt;/h3&gt;
 &lt;p&gt;The versatile ImageMagick has a 'convert' command that seems to handle it:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;convert&lt;span class="w"&gt; &lt;/span&gt;*.jpg&lt;span class="w"&gt; &lt;/span&gt;output.pdf
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;But this has some issues:&lt;/p&gt;
-&lt;h3&gt;1. Convert security policy denies handling PDF files&lt;/h3&gt;
+&lt;h4&gt;2.1. Failure due to security policy&lt;/h4&gt;
 &lt;p&gt;'convert' currently refuses to generate PDFs: 'attempt to perform an operation not allowed by the security policy'. Apply the fix described on &lt;a href="https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion"&gt;StackOverflow&lt;/a&gt;. :eyeroll:&lt;/p&gt;
-&lt;h3&gt;2. Convert barfs on running out of disk cache&lt;/h3&gt;
-&lt;p&gt;Don't close that editor! In the same policy.xml you were just editing are resource size declarations for memory and disk. If convert barf with an error about running out of cache space, then bump
+&lt;h4&gt;2.2. Failure due to cache space&lt;/h4&gt;
+&lt;p&gt;You might not need this fix if you generate smaller documents, or generate chapter-by-chapter as
+described below, but here it is in case.&lt;/p&gt;
+&lt;p&gt;Don't close that editor! In the same policy.xml you were just editing are resource size declarations for memory and disk. If 'convert' barfs with an error about running out of cache space, then bump
 up the disk resource size. I set mine to 8GB. &lt;a href="https://unix.stackexchange.com/questions/329530/increasing-imagemagick-memory-disk-limits"&gt;StackOverflow again&lt;/a&gt; for details. :eyeroll: again.&lt;/p&gt;
-&lt;p&gt;You might not need this fix if you generate the document chapter-by-chapter as described below,
-but here it is in case.&lt;/p&gt;
-&lt;h3&gt;3. Including a table of contents&lt;/h3&gt;
+&lt;h3&gt;3. Include a table of contents&lt;/h3&gt;
 &lt;p&gt;I want to add bookmarks to the generated PDF marking each chapter.&lt;/p&gt;
-&lt;p&gt;Put the .jpgs into subdirectories by chapter:&lt;/p&gt;
+&lt;p&gt;Put the .jpgs into subdirectories by chapter, eg:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;src/
 |--chapter01/
 |  |--0001.jpg
@@ -33,6 +34,11 @@ but here it is in case.&lt;/p&gt;
 ...
 &lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;Pad the chapter numbers with preceding zeros so that they sort into the correct order. I added
+an artificial 'chapter00' containing the front cover, separate from individual chapters.&lt;/p&gt;
+&lt;p&gt;Now we need to generate individual PDFs for each chapter. We can then use 'pdftk' to
+count the number of pages in each chapter, and use those counts to place bookmarks on
+the correct pages when pfdtk combines the chapters into one final output PDF.&lt;/p&gt;
 &lt;p&gt;I ended up regenerating each chapter a bunch while I tweaked the content, such as deleting adverts
 from the images. So I put these commands into a Makefile:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;help&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## Show this help.&lt;/span&gt;
@@ -91,7 +97,8 @@ from the images. So I put these commands into a Makefile:&lt;/p&gt;
 
 &lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will produce the final output.pdf. You might want to open up the generated
 bookmarks.txt and edit the placeholder "chapter01" names. Then run &lt;code&gt;make all&lt;/code&gt; again to
-regenerate the final output PDF with your fixed chapter names.&lt;/p&gt;</description><category>bash</category><category>comics</category><category>geek</category><category>linux</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</guid><pubDate>Mon, 21 Oct 2024 14:55:18 GMT</pubDate></item><item><title>TIL: Shell environment variable tricks</title><link>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;envsubst&lt;/code&gt; is an executable you likely already have on your PATH (part of the gettext package, often
+regenerate the final output PDF with your fixed chapter names.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Rorschach II meets Adrian" src="https://www.tartley.com/files/2024/doomsday-clock-r2-meets-adrian.webp"&gt;&lt;/p&gt;</description><category>bash</category><category>comics</category><category>geek</category><category>linux</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</guid><pubDate>Mon, 21 Oct 2024 14:55:18 GMT</pubDate></item><item><title>TIL: Shell environment variable tricks</title><link>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;envsubst&lt;/code&gt; is an executable you likely already have on your PATH (part of the gettext package, often
 installed with dev packages), which is a convenient way to replace &lt;code&gt;$VAR&lt;/code&gt; or &lt;code&gt;${VAR}&lt;/code&gt; style
 environment variables with their values. This allows rendering templates without heavyweight
 tools like Ansible, Jinja, or embedding with heredocs. Usage is:&lt;/p&gt;
