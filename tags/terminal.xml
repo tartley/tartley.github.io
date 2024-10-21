@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about terminal)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/terminal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 21 Oct 2024 15:47:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Constructing a PDF from .jpg image files</title><link>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have some folders of .jpg images that make up a comic. I want to convert them into a PDF to read
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about terminal)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/terminal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 21 Oct 2024 15:52:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Constructing a PDF from .jpg image files</title><link>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have some folders of .jpg images that make up a comic. I want to convert them into a PDF to read
 on my tab and other devices, and import into by bookshelf in Calibre.&lt;/p&gt;
 &lt;h3&gt;0. Install some prerequisites&lt;/h3&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;imagemagick&lt;span class="w"&gt; &lt;/span&gt;pdftk
@@ -61,6 +61,32 @@ from the images. So I put these commands into a Makefile:&lt;/p&gt;
 
 &lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;output&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="c"&gt;## Build final output PDF&lt;/span&gt;
 &lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Where 'make-bookmarks' is a bash script that generates the intermediate 'bookmarks.txt' file:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="ch"&gt;#!/usr/bin/env bash&lt;/span&gt;
+
+&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-e&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# exit on error&lt;/span&gt;
+&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-u&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# treat unset vars as errors&lt;/span&gt;
+&lt;span class="c1"&gt;# set -x # debugging output&lt;/span&gt;
+&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;pipefail
+
+&lt;span class="c1"&gt;# Generate a bookmarks file for all the matching PDF files&lt;/span&gt;
+
+&lt;span class="nv"&gt;fmt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"BookmarkBegin&lt;/span&gt;
+&lt;span class="s2"&gt;BookmarkTitle: %s&lt;/span&gt;
+&lt;span class="s2"&gt;BookmarkLevel: 1&lt;/span&gt;
+&lt;span class="s2"&gt;BookmarkPageNumber: %d&lt;/span&gt;
+&lt;span class="s2"&gt;"&lt;/span&gt;
+
+&lt;span class="nb"&gt;declare&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-a&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;files&lt;/span&gt;&lt;span class="o"&gt;=(&lt;/span&gt;chapter*.pdf&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;page&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;file&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;files&lt;/span&gt;&lt;span class="p"&gt;[@]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;title&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;file&lt;/span&gt;&lt;span class="p"&gt;%.*&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;printf&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$fmt&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$title&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$page&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;num_pages&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;pdftk&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$file&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;dump_data&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;grep&lt;span class="w"&gt; &lt;/span&gt;NumberOfPages&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;awk&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'{print $2}'&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;page&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$((&lt;/span&gt;&lt;span class="nv"&gt;page&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;num_pages&lt;/span&gt;&lt;span class="k"&gt;))&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will produce the final output.pdf. You might want to open up the generated

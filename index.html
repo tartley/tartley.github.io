@@ -151,6 +151,32 @@ from the images. So I put these commands into a Makefile:</p>
 <span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">all</span>
 </pre></div>
 
+<p>Where 'make-bookmarks' is a bash script that generates the intermediate 'bookmarks.txt' file:</p>
+<div class="code"><pre class="code literal-block"><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="nb">set</span><span class="w"> </span>-e<span class="w"> </span><span class="c1"># exit on error</span>
+<span class="nb">set</span><span class="w"> </span>-u<span class="w"> </span><span class="c1"># treat unset vars as errors</span>
+<span class="c1"># set -x # debugging output</span>
+<span class="nb">set</span><span class="w"> </span>-o<span class="w"> </span>pipefail
+
+<span class="c1"># Generate a bookmarks file for all the matching PDF files</span>
+
+<span class="nv">fmt</span><span class="o">=</span><span class="s2">"BookmarkBegin</span>
+<span class="s2">BookmarkTitle: %s</span>
+<span class="s2">BookmarkLevel: 1</span>
+<span class="s2">BookmarkPageNumber: %d</span>
+<span class="s2">"</span>
+
+<span class="nb">declare</span><span class="w"> </span>-a<span class="w"> </span><span class="nv">files</span><span class="o">=(</span>chapter*.pdf<span class="o">)</span>
+<span class="nv">page</span><span class="o">=</span><span class="m">1</span>
+<span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">files</span><span class="p">[@]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nv">title</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">file</span><span class="p">%.*</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">    </span><span class="nb">printf</span><span class="w"> </span><span class="s2">"</span><span class="nv">$fmt</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$title</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$page</span><span class="s2">"</span>
+<span class="w">    </span><span class="nv">num_pages</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>pdftk<span class="w"> </span><span class="s2">"</span><span class="nv">$file</span><span class="s2">"</span><span class="w"> </span>dump_data<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>NumberOfPages<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">'{print $2}'</span><span class="k">)</span><span class="s2">"</span>
+<span class="w">    </span><span class="nv">page</span><span class="o">=</span><span class="k">$((</span><span class="nv">page</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">num_pages</span><span class="k">))</span>
+<span class="k">done</span>
+</pre></div>
+
 <p>Now <code>make all</code> will produce the final output.pdf. You might want to open up the generated
 bookmarks.txt and edit the placeholder "chapter01" names. Then run <code>make all</code> again to
 regenerate the final output PDF with your fixed chapter names.</p>
