@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about terminal)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/terminal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 15:43:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Shell environment variable tricks</title><link>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;envsubst&lt;/code&gt; is an executable you likely already have on your PATH (part of the gettext package, often
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about terminal)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/terminal.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 21 Oct 2024 15:47:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Constructing a PDF from .jpg image files</title><link>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have some folders of .jpg images that make up a comic. I want to convert them into a PDF to read
+on my tab and other devices, and import into by bookshelf in Calibre.&lt;/p&gt;
+&lt;h3&gt;0. Install some prerequisites&lt;/h3&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;imagemagick&lt;span class="w"&gt; &lt;/span&gt;pdftk
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The versatile ImageMagick has a 'convert' command that seems to handle it:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;convert&lt;span class="w"&gt; &lt;/span&gt;*.jpg&lt;span class="w"&gt; &lt;/span&gt;output.pdf
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But this has some issues:&lt;/p&gt;
+&lt;h3&gt;1. Convert security policy denies handling PDF files&lt;/h3&gt;
+&lt;p&gt;'convert' currently refuses to generate PDFs: 'attempt to perform an operation not allowed by the security policy'. Apply the fix described on &lt;a href="https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion"&gt;StackOverflow&lt;/a&gt;. :eyeroll:&lt;/p&gt;
+&lt;h3&gt;2. Convert barfs on running out of disk cache&lt;/h3&gt;
+&lt;p&gt;Don't close that editor! In the same policy.xml you were just editing are resource size declarations for memory and disk. If convert barf with an error about running out of cache space, then bump
+up the disk resource size. I set mine to 8GB. &lt;a href="https://unix.stackexchange.com/questions/329530/increasing-imagemagick-memory-disk-limits"&gt;StackOverflow again&lt;/a&gt; for details. :eyeroll: again.&lt;/p&gt;
+&lt;p&gt;You might not need this fix if you generate the document chapter-by-chapter as described below,
+but here it is in case.&lt;/p&gt;
+&lt;h3&gt;3. Including a table of contents&lt;/h3&gt;
+&lt;p&gt;I want to add bookmarks to the generated PDF marking each chapter.&lt;/p&gt;
+&lt;p&gt;Put the .jpgs into subdirectories by chapter:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;src/
+|--chapter01/
+|  |--0001.jpg
+|  |--0002.jpg
+|  |  ...
+|--chapter02/
+|  |--0001.jpg
+|  |--0002.jpg
+|  |  ...
+|
+...
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I ended up regenerating each chapter a bunch while I tweaked the content, such as deleting adverts
+from the images. So I put these commands into a Makefile:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;help&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## Show this help.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;@grep&lt;span class="w"&gt; &lt;/span&gt;-E&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'^[^_][a-zA-Z_\/\.%-]+:.*?## .*$$'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;MAKEFILE_LIST&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;awk&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-12s\033[0m %s\n", $$1, $$2}'&lt;/span&gt;
+&lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;help&lt;/span&gt;
+
+&lt;span class="nv"&gt;chapter_dirs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;wildcard&lt;span class="w"&gt; &lt;/span&gt;src/*&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;chapters&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;chapter_dirs:src/%&lt;span class="o"&gt;=&lt;/span&gt;%&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;chapter_pdfs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;chapters:%&lt;span class="o"&gt;=&lt;/span&gt;%.pdf&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;bookmarks&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;bookmarks.txt
+&lt;span class="nv"&gt;output&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;output.pdf
+
+&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## Delete all generated PDFs&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;rm&lt;span class="w"&gt; &lt;/span&gt;-f&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;chapter_pdfs&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;output&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;clean&lt;/span&gt;
+
+&lt;span class="nf"&gt;chapter%.pdf&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;src&lt;/span&gt;/&lt;span class="n"&gt;chapter&lt;/span&gt;%/*.&lt;span class="n"&gt;jpg&lt;/span&gt; &lt;span class="c"&gt;## Each individual chapter, use 2 digits&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;convert&lt;span class="w"&gt; &lt;/span&gt;src/chapter&lt;span class="nv"&gt;$*&lt;/span&gt;/*.jpg&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;
+
+&lt;span class="nf"&gt;$(bookmarks)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;chapter_pdfs&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;./make-bookmarks&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&lt;span class="k"&gt;$(&lt;/span&gt;bookmarks&lt;span class="k"&gt;)&lt;/span&gt;
+
+&lt;span class="nf"&gt;$(output)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;chapter_pdfs&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;bookmarks&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;pdftk&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;chapter_pdfs&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;cat&lt;span class="w"&gt; &lt;/span&gt;output&lt;span class="w"&gt; &lt;/span&gt;-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;pdftk&lt;span class="w"&gt; &lt;/span&gt;-&lt;span class="w"&gt; &lt;/span&gt;update_info&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;bookmarks&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;output&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;output&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+
+&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;output&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="c"&gt;## Build final output PDF&lt;/span&gt;
+&lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will produce the final output.pdf. You might want to open up the generated
+bookmarks.txt and edit the placeholder "chapter01" names. Then run &lt;code&gt;make all&lt;/code&gt; again to
+regenerate the final output PDF with your fixed chapter names.&lt;/p&gt;</description><category>bash</category><category>comics</category><category>geek</category><category>linux</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</guid><pubDate>Mon, 21 Oct 2024 14:55:18 GMT</pubDate></item><item><title>TIL: Shell environment variable tricks</title><link>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;envsubst&lt;/code&gt; is an executable you likely already have on your PATH (part of the gettext package, often
 installed with dev packages), which is a convenient way to replace &lt;code&gt;$VAR&lt;/code&gt; or &lt;code&gt;${VAR}&lt;/code&gt; style
 environment variables with their values. This allows rendering templates without heavyweight
 tools like Ansible, Jinja, or embedding with heredocs. Usage is:&lt;/p&gt;
@@ -574,35 +640,4 @@ or at least filing an issue there to try and get some help.&lt;/p&gt;
 &lt;p&gt;But compare it with a regular vector font. Here's Ubuntu Mono, the &lt;em&gt;best&lt;/em&gt; of
 the vector fonts I could find at these sizes. Blurry and inconsistent and hard
 to read:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;</description><category>dina</category><category>fonts</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>Installing Colout</title><link>https://www.tartley.com/posts/installing-colout/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Colout on PyPI now works just fine, all the following is needless.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;But &lt;code&gt;pip install colout&lt;/code&gt; from PyPI is broken, and has been for many months,
-due to a typo in the
-&lt;a href="https://pypi.org/project/colout/"&gt;latest (v0.5) PyPI release&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I've tried to contact the author, with email and
-&lt;a href="https://github.com/nojhan/colout/issues/101i"&gt;issues&lt;/a&gt; on the
-&lt;a href="https://github.com/nojhan/colout/issues"&gt;Colout Github project&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This has had no effect, although I see the author has made substantial commits
-to the Github project in that time, including fixing this problem and tagging a
-new v0.6 version, although has not released any of that to PyPI.&lt;/p&gt;
-&lt;p&gt;So, in increasing order of desirability, you can either:&lt;/p&gt;
-&lt;p&gt;Clone the latest repo &lt;a href="https://github.com/nojhan/colout"&gt;from Github&lt;/a&gt;, and
-install from that:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# cd to the clone, then&lt;/span&gt;
-python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;.
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Or, pip install the version I uploaded to PyPI, which is a straight copy of the
-latest Github at the time:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;colout-fix
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Or, best of all, pip install straight from the original Github repo:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;git+git://github.com/nojhan/colout.git
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Note that, throughout, we're using &lt;code&gt;--user&lt;/code&gt;, so that you can install
-development tools like this system-wide for the current user, without needing a
-virtualenv, without needing root access, and without modifying your installed
-Python system libraries.&lt;/p&gt;</description><category>geek</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;</description><category>dina</category><category>fonts</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item></channel></rss>

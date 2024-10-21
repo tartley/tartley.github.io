@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://www.tartley.com/</loc>
-  <lastmod>2024-10-04T15:21:00Z</lastmod>
+  <lastmod>2024-10-21T14:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/1998/</loc>
@@ -39,7 +39,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2024-10-04T15:43:00Z</lastmod>
+  <lastmod>2024-10-21T15:47:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/files/Jonathan-Hartley-r%C3%A9sum%C3%A9.html</loc>
@@ -131,7 +131,11 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-27.html</loc>
-  <lastmod>2024-10-04T15:43:00Z</lastmod>
+  <lastmod>2024-10-21T14:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/index-28.html</loc>
+  <lastmod>2024-10-21T14:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-3.html</loc>
@@ -1206,6 +1210,10 @@
   <lastmod>2024-10-04T15:21:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</loc>
+  <lastmod>2024-10-21T14:55:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tartley.com/posts/til-git-push-force-with-lease/</loc>
   <lastmod>2024-10-04T15:21:00Z</lastmod>
  </url>
@@ -1283,7 +1291,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/tags/</loc>
-  <lastmod>2024-10-04T15:21:00Z</lastmod>
+  <lastmod>2024-10-21T14:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/tags/animation/</loc>
@@ -1291,10 +1299,6 @@
  </url>
  <url>
   <loc>https://www.tartley.com/tags/arcade/</loc>
-  <lastmod>2024-10-04T15:21:00Z</lastmod>
- </url>
- <url>
-  <loc>https://www.tartley.com/tags/aronofsky/</loc>
   <lastmod>2024-10-04T15:21:00Z</lastmod>
  </url>
  <url>
@@ -1344,6 +1348,10 @@
  <url>
   <loc>https://www.tartley.com/tags/comic/</loc>
   <lastmod>2024-10-04T15:21:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/tags/comics/</loc>
+  <lastmod>2024-10-21T14:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/tags/completed/</loc>

@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 15:43:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Shell environment variable tricks</title><link>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;envsubst&lt;/code&gt; is an executable you likely already have on your PATH (part of the gettext package, often
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 21 Oct 2024 15:47:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Constructing a PDF from .jpg image files</title><link>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have some folders of .jpg images that make up a comic. I want to convert them into a PDF to read
+on my tab and other devices, and import into by bookshelf in Calibre.&lt;/p&gt;
+&lt;h3&gt;0. Install some prerequisites&lt;/h3&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;imagemagick&lt;span class="w"&gt; &lt;/span&gt;pdftk
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The versatile ImageMagick has a 'convert' command that seems to handle it:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;convert&lt;span class="w"&gt; &lt;/span&gt;*.jpg&lt;span class="w"&gt; &lt;/span&gt;output.pdf
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;But this has some issues:&lt;/p&gt;
+&lt;h3&gt;1. Convert security policy denies handling PDF files&lt;/h3&gt;
+&lt;p&gt;'convert' currently refuses to generate PDFs: 'attempt to perform an operation not allowed by the security policy'. Apply the fix described on &lt;a href="https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion"&gt;StackOverflow&lt;/a&gt;. :eyeroll:&lt;/p&gt;
+&lt;h3&gt;2. Convert barfs on running out of disk cache&lt;/h3&gt;
+&lt;p&gt;Don't close that editor! In the same policy.xml you were just editing are resource size declarations for memory and disk. If convert barf with an error about running out of cache space, then bump
+up the disk resource size. I set mine to 8GB. &lt;a href="https://unix.stackexchange.com/questions/329530/increasing-imagemagick-memory-disk-limits"&gt;StackOverflow again&lt;/a&gt; for details. :eyeroll: again.&lt;/p&gt;
+&lt;p&gt;You might not need this fix if you generate the document chapter-by-chapter as described below,
+but here it is in case.&lt;/p&gt;
+&lt;h3&gt;3. Including a table of contents&lt;/h3&gt;
+&lt;p&gt;I want to add bookmarks to the generated PDF marking each chapter.&lt;/p&gt;
+&lt;p&gt;Put the .jpgs into subdirectories by chapter:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;src/
+|--chapter01/
+|  |--0001.jpg
+|  |--0002.jpg
+|  |  ...
+|--chapter02/
+|  |--0001.jpg
+|  |--0002.jpg
+|  |  ...
+|
+...
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I ended up regenerating each chapter a bunch while I tweaked the content, such as deleting adverts
+from the images. So I put these commands into a Makefile:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;help&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## Show this help.&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;@grep&lt;span class="w"&gt; &lt;/span&gt;-E&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'^[^_][a-zA-Z_\/\.%-]+:.*?## .*$$'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;MAKEFILE_LIST&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;awk&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-12s\033[0m %s\n", $$1, $$2}'&lt;/span&gt;
+&lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;help&lt;/span&gt;
+
+&lt;span class="nv"&gt;chapter_dirs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;wildcard&lt;span class="w"&gt; &lt;/span&gt;src/*&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;chapters&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;chapter_dirs:src/%&lt;span class="o"&gt;=&lt;/span&gt;%&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;chapter_pdfs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;chapters:%&lt;span class="o"&gt;=&lt;/span&gt;%.pdf&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;bookmarks&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;bookmarks.txt
+&lt;span class="nv"&gt;output&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;output.pdf
+
+&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## Delete all generated PDFs&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;rm&lt;span class="w"&gt; &lt;/span&gt;-f&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;chapter_pdfs&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;output&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;clean&lt;/span&gt;
+
+&lt;span class="nf"&gt;chapter%.pdf&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;src&lt;/span&gt;/&lt;span class="n"&gt;chapter&lt;/span&gt;%/*.&lt;span class="n"&gt;jpg&lt;/span&gt; &lt;span class="c"&gt;## Each individual chapter, use 2 digits&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;convert&lt;span class="w"&gt; &lt;/span&gt;src/chapter&lt;span class="nv"&gt;$*&lt;/span&gt;/*.jpg&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;
+
+&lt;span class="nf"&gt;$(bookmarks)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;chapter_pdfs&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;./make-bookmarks&lt;span class="w"&gt; &lt;/span&gt;&amp;gt;&lt;span class="k"&gt;$(&lt;/span&gt;bookmarks&lt;span class="k"&gt;)&lt;/span&gt;
+
+&lt;span class="nf"&gt;$(output)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;chapter_pdfs&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;bookmarks&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;pdftk&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;chapter_pdfs&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;cat&lt;span class="w"&gt; &lt;/span&gt;output&lt;span class="w"&gt; &lt;/span&gt;-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;pdftk&lt;span class="w"&gt; &lt;/span&gt;-&lt;span class="w"&gt; &lt;/span&gt;update_info&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;bookmarks&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;output&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;output&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+
+&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;output&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="c"&gt;## Build final output PDF&lt;/span&gt;
+&lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will produce the final output.pdf. You might want to open up the generated
+bookmarks.txt and edit the placeholder "chapter01" names. Then run &lt;code&gt;make all&lt;/code&gt; again to
+regenerate the final output PDF with your fixed chapter names.&lt;/p&gt;</description><category>bash</category><category>comics</category><category>geek</category><category>linux</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</guid><pubDate>Mon, 21 Oct 2024 14:55:18 GMT</pubDate></item><item><title>TIL: Shell environment variable tricks</title><link>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;code&gt;envsubst&lt;/code&gt; is an executable you likely already have on your PATH (part of the gettext package, often
 installed with dev packages), which is a convenient way to replace &lt;code&gt;$VAR&lt;/code&gt; or &lt;code&gt;${VAR}&lt;/code&gt; style
 environment variables with their values. This allows rendering templates without heavyweight
 tools like Ansible, Jinja, or embedding with heredocs. Usage is:&lt;/p&gt;
@@ -1123,51 +1189,4 @@ latest Github at the time:&lt;/p&gt;
 &lt;p&gt;Note that, throughout, we're using &lt;code&gt;--user&lt;/code&gt;, so that you can install
 development tools like this system-wide for the current user, without needing a
 virtualenv, without needing root access, and without modifying your installed
-Python system libraries.&lt;/p&gt;</description><category>geek</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item><item><title>Running Multiple Firefox Profiles on Linux</title><link>https://www.tartley.com/posts/running-multiple-firefox-profiles/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I recently switched from Chrome to Firefox. It's so &lt;em&gt;fast&lt;/em&gt;, and easier
-to trust that Mozilla has my privacy and interests at heart than Google
-does.&lt;/p&gt;
-&lt;p&gt;I want to run a second profile at work, to keep a distinct set of open
-tabs, bookmarks, and the like. Here's how I did it:&lt;/p&gt;
-&lt;p&gt;Close all Firefox windows. Run the Profile Manager with &lt;code&gt;firefox -p&lt;/code&gt;.
-Create a second profile.&lt;/p&gt;
-&lt;p&gt;Open Firefox and find the directories your profiles live by browsing to
-&lt;code&gt;about:profiles&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Substitute those directories into this firefox.desktop file, where I've
-marked 'XXX':&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# Gnome3 .desktop file for Firefox with multiple profiles&lt;/span&gt;
-&lt;span class="k"&gt;[Desktop Entry]&lt;/span&gt;
-&lt;span class="na"&gt;Version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;1.0&lt;/span&gt;
-&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Firefox&lt;/span&gt;
-&lt;span class="na"&gt;Comment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Browse the web&lt;/span&gt;
-&lt;span class="na"&gt;GenericName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Web Browser&lt;/span&gt;
-&lt;span class="na"&gt;Keywords&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Internet;WWW;Browser;Web;Explorer&lt;/span&gt;
-&lt;span class="na"&gt;Type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Application&lt;/span&gt;
-&lt;span class="na"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;firefox --no-remote %u&lt;/span&gt;
-&lt;span class="na"&gt;Terminal&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;false&lt;/span&gt;
-&lt;span class="na"&gt;X-MultipleArgs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;false&lt;/span&gt;
-&lt;span class="na"&gt;Icon&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;firefox&lt;/span&gt;
-&lt;span class="na"&gt;Categories&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;GNOME;GTK;Network;WebBrowser;&lt;/span&gt;
-&lt;span class="na"&gt;Actions&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;home;work&lt;/span&gt;
-&lt;span class="na"&gt;MimeType&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;&lt;/span&gt;
-&lt;span class="na"&gt;StartupNotify&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;true&lt;/span&gt;
-
-&lt;span class="k"&gt;[Desktop Action home]&lt;/span&gt;
-&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Firefox (home)&lt;/span&gt;
-&lt;span class="na"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;firefox --profile .mozilla/firefox/XXX --no-remote %u&lt;/span&gt;
-
-&lt;span class="k"&gt;[Desktop Action work]&lt;/span&gt;
-&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Firefox (work)&lt;/span&gt;
-&lt;span class="na"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;firefox --profile .mozilla/firefox/XXX --no-remote %u&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Save the above as firefox.desktop and install using:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;desktop-file-validate&lt;span class="w"&gt; &lt;/span&gt;firefox.desktop
-$&lt;span class="w"&gt; &lt;/span&gt;desktop-file-install&lt;span class="w"&gt; &lt;/span&gt;--dir&lt;span class="o"&gt;=&lt;/span&gt;.local/share/applications&lt;span class="w"&gt; &lt;/span&gt;firefox.desktop
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This results in a Firefox icon in your applications menu that defaults
-to whichever profile you mark as default in the ProfileManager, but
-right clicking lets you select the home or work profile explicitly. Open
-each, and change the theme in one of them so the windows are visually
-distinct.&lt;/p&gt;
-&lt;p&gt;Tested on Ubuntu, RHEL 7.3, probably works on all Gnome3 desktops.&lt;/p&gt;</description><category>geek</category><category>linux</category><guid>https://www.tartley.com/posts/running-multiple-firefox-profiles/</guid><pubDate>Thu, 22 Feb 2018 00:40:55 GMT</pubDate></item></channel></rss>
+Python system libraries.&lt;/p&gt;</description><category>geek</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item></channel></rss>
