@@ -7,19 +7,19 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://www.tartley.com/galleries/Drawings/rss.xml</loc>
-  <lastmod>2024-11-04T01:18:00Z</lastmod>
+  <lastmod>2024-11-04T22:02:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/galleries/rss.xml</loc>
-  <lastmod>2024-11-04T01:18:00Z</lastmod>
+  <lastmod>2024-11-04T22:02:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/rss.xml</loc>
-  <lastmod>2024-11-04T03:22:00Z</lastmod>
+  <lastmod>2024-11-04T22:17:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/sitemap.xml</loc>
-  <lastmod>2024-11-04T03:22:00Z</lastmod>
+  <lastmod>2024-11-04T22:17:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/animation.xml</loc>
@@ -79,7 +79,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/completed.xml</loc>
-  <lastmod>2024-10-04T15:43:00Z</lastmod>
+  <lastmod>2024-11-04T22:17:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/creative.xml</loc>
@@ -167,7 +167,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/geek.xml</loc>
-  <lastmod>2024-11-04T03:22:00Z</lastmod>
+  <lastmod>2024-11-04T22:17:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/gig.xml</loc>
@@ -231,7 +231,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/linux.xml</loc>
-  <lastmod>2024-11-04T01:19:00Z</lastmod>
+  <lastmod>2024-11-04T22:17:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/manual.xml</loc>
@@ -247,7 +247,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/media.xml</loc>
-  <lastmod>2024-10-04T15:43:00Z</lastmod>
+  <lastmod>2024-11-04T22:17:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/meetup.xml</loc>
@@ -403,7 +403,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/videogame.xml</loc>
-  <lastmod>2024-10-04T15:43:00Z</lastmod>
+  <lastmod>2024-11-04T22:17:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/vim.xml</loc>
