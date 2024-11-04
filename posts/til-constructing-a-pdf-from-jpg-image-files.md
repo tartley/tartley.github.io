@@ -2,7 +2,7 @@
 .. title: TIL: Constructing a PDF from .jpg image files
 .. slug: til-constructing-a-pdf-from-jpg-image-files
 .. date: 2024-10-21 09:55:18 UTC-05:00
-.. tags: comics,til,bash,geek,linux,terminal
+.. tags: comic,til,bash,geek,linux,terminal
 .. type: text
 -->
 
