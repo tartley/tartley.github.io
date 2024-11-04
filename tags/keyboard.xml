@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about keyboard)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/keyboard.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 15:43:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fully Operational</title><link>https://www.tartley.com/posts/fully-operational/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Now witness the power of this fully armed and operational battle station.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about keyboard)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/keyboard.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 04 Nov 2024 03:06:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Overhauled Manual for Epomaker Galaxy80 Tri-Mode Keyboard</title><link>https://www.tartley.com/posts/overhauled-manual-for-epomaker-galaxy80-keyboard/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Loving the new keyboard, an Epomaker Galaxy80 with Feker Marble White switches.&lt;/p&gt;
+&lt;p&gt;My requirements are pretty much the same as last time I bough a keyboard:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tenkeyless layout, or TKL as it's known, i.e. without a numpad. The kiddo and
+  I fit two side-by-side gaming stations at this desk, and the extra
+  mouse-swiping space is precious, as is the ergonomics of putting the mouse
+  just a few inches closer.&lt;/li&gt;
+&lt;li&gt;Standard ANSI layout, to match the other keyboards I commonly use.&lt;/li&gt;
+&lt;li&gt;Mechanical, although I'm not experienced enough to know a good one from a bad
+  one.&lt;/li&gt;
+&lt;li&gt;At least two connections which are easy to switch between, for work and
+  personal computers. This one has five, three of which are Bluetooth.&lt;/li&gt;
+&lt;li&gt;At least one of those connections should be reasonably low latency, i.e. &amp;lt;5ms,
+  which means wired or a dedicated 2.4GHz dongle, not Bluetooth. The Galaxy80
+  has both. I'm a long way away from being a pro gamer, but even down here in
+  the GamerDad leagues, I seem to be more aware of annoying latency than most
+  people are.&lt;/li&gt;
+&lt;li&gt;Backlit. I don't especially care about per-key RGB, but that seems to be
+  extremely common. Shine-through keycaps would be nice, but these seem to be
+  increasingly rare outside of garish gamer-boi cyber-monstrosities, so not a
+  big deal.&lt;/li&gt;
+&lt;li&gt;Hot-swappable switches. This is the requirement I compromised on last time I
+  bought a keyboard, settling for the Logitech G915, which was great, but got
+  old after switches started failing. I'm tired of desoldering them and am
+  noping out to buy something else, a mere 16 months later.&lt;/li&gt;
+&lt;li&gt;Not egregiously incompatible with Linux. It would be hard to find a keyboard
+  which doesn't actually work with Linux, but maybe some manufacturer has buried
+  some vital configuration detail in badly written Windows-only configuration
+  software that doesn't play nice with Wine, etc.&lt;/li&gt;
+&lt;li&gt;Without expensive features I don't need, like configurable activation height,
+  or OLED screens.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The switches are described as sounding "like marbles clacking", which worried me
+that they might be too loud and piercing. But now it's arrived, they are
+actually quieter than any other mechanical switch I've had. The sound is deeper
+than I expected. Recognizably like marbles, but merged with the sound of
+pebbles, and a hint of a wooden xylophone.&lt;/p&gt;
+&lt;p&gt;I really like it! Although since pulling the trigger I've seen that Reddit
+doesn't like Epomaker. I'm just not going to read those posts for now.&lt;/p&gt;
+&lt;p&gt;As seems traditional with all keyboards, the manual is quite hard to read.
+Here's &lt;a href="https://www.tartley.com/files/2024/Keyboard-Ecomaker-Galaxy80-tri-mode-mine.pdf"&gt;my overhauled manual&lt;/a&gt;, for future reference.&lt;/p&gt;
+&lt;hr&gt;</description><category>geek</category><category>hardware</category><category>keyboard</category><category>manual</category><guid>https://www.tartley.com/posts/overhauled-manual-for-epomaker-galaxy80-keyboard/</guid><pubDate>Mon, 04 Nov 2024 00:22:45 GMT</pubDate></item><item><title>Fully Operational</title><link>https://www.tartley.com/posts/fully-operational/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Now witness the power of this fully armed and operational battle station.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="My desk featuring too many computers" src="https://www.tartley.com/files/2023/desk-with-computers.webp"&gt;&lt;/p&gt;
 &lt;p&gt;New job means new laptop means it's time to clean and re-org the desk.&lt;/p&gt;
 &lt;dl&gt;
