@@ -50,5 +50,15 @@ doesn't like Epomaker. I'm just not going to read those posts for now.
 As seems traditional with all keyboards, the manual is quite hard to read.
 Here's [my overhauled manual](/files/2024/Keyboard-Ecomaker-Galaxy80-tri-mode-mine.pdf), for future reference.
 
+**Update**: The incantations needed to get function keys working the way
+you want them to on Ubuntu :eyeroll: etc ([via Reddit](https://www.reddit.com/r/Epomaker/comments/1bte204/galaxy80_cant_use_functionkeys_in_linux/)):
+
+```bash
+echo "options hid_apple fnmode=2" | sudo tee /etc/modprobe.d/hid_apple.conf
+sudo update-initramfs -u
+```
+
+and reboot.
+
 ---
 
