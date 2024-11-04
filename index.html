@@ -128,8 +128,10 @@ pebbles, and a hint of a wooden xylophone.</p>
 doesn't like Epomaker. I'm just not going to read those posts for now.</p>
 <p>As seems traditional with all keyboards, the manual is quite hard to read.
 Here's <a href="files/2024/Keyboard-Ecomaker-Galaxy80-tri-mode-mine.pdf">my overhauled manual</a>, for future reference.</p>
-<p><strong>Update</strong>: The incantations needed to get function keys working the way
-you want them to on Ubuntu :eyeroll: etc (<a href="https://www.reddit.com/r/Epomaker/comments/1bte204/galaxy80_cant_use_functionkeys_in_linux/">via Reddit</a>):</p>
+<p><strong>Update</strong>: The incantations needed to get function keys working the way you
+want them to on Ubuntu :eyeroll: etc. Despite the mention of 'apple' in here,
+this still assumes you have the keyboard switched into 'Win' mode. (<a href="https://www.reddit.com/r/Epomaker/comments/1bte204/galaxy80_cant_use_functionkeys_in_linux/">via
+Reddit</a>):</p>
 <div class="code"><pre class="code literal-block"><span class="nb">echo</span><span class="w"> </span><span class="s2">"options hid_apple fnmode=2"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/modprobe.d/hid_apple.conf
 sudo<span class="w"> </span>update-initramfs<span class="w"> </span>-u
 </pre></div>
