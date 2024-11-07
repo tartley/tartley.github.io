@@ -58,7 +58,7 @@ generations of home consoles and handhelds, but the most significant
 technical evolution came with *Super Mario 64* (1996), which made a
 superlative triumph out of the difficult transition to 3D, one that
 continues to stymie many of his
-[contemporaries](http://www.joystiq.com/2006/12/13/what-funk-is-sega-in/)
+[contemporaries](https://www.engadget.com/2006-12-13-what-funk-is-sega-in.html)
 even to this day. Meanwhile, Mario continues to form the iconic mainstay
 character in what is generally recognised as the most successful, and
 certainly the most influential, videogame series of all time.
