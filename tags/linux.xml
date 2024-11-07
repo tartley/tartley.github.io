@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Nov 2024 02:49:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>That Which Gave Chase</title><link>https://www.tartley.com/posts/that-which-gave-chase/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2024/that-which-gave-chase.jpg"&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Thu, 07 Nov 2024 21:06:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>That Which Gave Chase</title><link>https://www.tartley.com/posts/that-which-gave-chase/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2024/that-which-gave-chase.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Released in 2023, played on Linux in 2024.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Mush your dog sled across cruel Arctic wastelands, driven onwards by a brisk and intense companion, who hired you to take him back to some remote spot, where it becomes apparent he had some sort of revelation, or maybe a breakdown.&lt;/p&gt;
 &lt;p&gt;The low-res, dithered presentation conveys the harsh, blinding conditions, as you struggle to make out details through the relentless wind and ice. Smash cuts disorient you, making the days and nights of the journey blur into one another, leaving only fragmentary, disjointed memories: sledding across the ice; nights in crude wooden huts, collapsing into rough bunks; righting the sled while your companion curses you for a fool; silent moments alone, outside in the dark; mounting the sled before dawn. The sense is of endless, exhausting time spent covering the distance, through punishing conditions, and it's surprisingly evocative.&lt;/p&gt;
@@ -842,7 +842,59 @@ sending replacements until Newegg got involved. Seems wisest to skip this.&lt;/p
 &lt;p&gt;&lt;img alt="Memory on sale in Newegg - legit" src="https://www.tartley.com/files/2022/memory-on-sale-legit.webp"&gt;&lt;/p&gt;
 &lt;p&gt;Yes! DDR4 in a SoDIMM package, 2x16GB modules at 3,200MHz and 18CL. The latency
 isn't quite as good, but it sounds legit, so I'll take it!&lt;/p&gt;
-&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>linux</category><guid>https://www.tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>TIL: Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
+&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>linux</category><guid>https://www.tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>Infra</title><link>https://www.tartley.com/posts/infra/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2024/infra.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Released in 2016, played by me on Linux in 2022.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;So much to love about this game. My enjoyment was perhaps stoked by my initial
+expectation that such a humdrum, non-mainstream game idea - of a civil engineer
+performing building inspections, documenting elements such as cracks and exposed
+rebar - must surely be a modest indie offering. But that expectation was vastly
+exceeded by the overwhelming generosity of the included content, providing level
+after level after level, all rich in geometry and atmosphere, navigable pathways
+surrounded by loads of non-essential scene setting, from broom cupboards to
+passing container ships, replete with specially coded set-pieces, and a story
+that expands in scope beyond all possible initial expectations.&lt;/p&gt;
+&lt;p&gt;It is filled with puzzles that are grounded in the atmospheric setting, having
+me clamber under cobweb-strewn desks with a flashlight, looking for tripped
+circuit breakers. The setting itself builds beautifully, starting with my
+inspection of bridges and decrepit sawmills as I wander along a small overgrown
+river path, but increasing in scope and severity as we continue downstream into
+town, culminating in varied and ambitious city facilities, from water treatment
+plants, abandoned sprawling secret WWI facilities, and various types of railway
+and power stations.&lt;/p&gt;
+&lt;p&gt;The puzzle difficulty is perfectly judged, demanding about the limit of effort I
+could bring to bear, and only on one or two occasions did I give up and find
+solutions online, leading overall to a tremendous sense of accomplishment. &lt;/p&gt;
+&lt;p&gt;The storyline exposes longstanding secretive corruption in the city, explaining
+both the pervasive neglect and sabotage that your inspections reveal, and it
+provides a variety of creative reasons why the buildings on your route are
+either long-abandoned, or else hastily evacuated moments before your arrival.&lt;/p&gt;
+&lt;p&gt;This gives you gloriously free reign over the facilities you pass through,
+opening up possibilities to perform ad-hoc repairs as you go. In particular, I
+particularly loved the way a successful navigation of levels like the water
+treatment plant requires the player to cross reference wall charts showing how
+the plant operates, with computer schematics showing the state of various
+machinery and valves, and overlay on top of that an understanding of a few signs
+and hand-written notes left behind by operators, to remind themselves about
+proper operating procedures, broken equipment, workarounds, and switches that
+were wired up backwards. And once you figure out this abstract understanding of
+what needs to be done, you have to map it all onto the actual 3D spatial layout
+of the massive hardware all around you, which often spans multiple buildings.
+Just delightful.&lt;/p&gt;
+&lt;p&gt;I should probably also mention the penultimate level, which is one of the most
+ambitious of many bold experiments that keep the levels diverse and surprising,
+by straying away from the core conceit. In this case that means navigating the
+locked-down hallways of an alternative, mushroom obsessed commune, squatting in
+a depressing tower block surrounded by trash. While this level is laudable for
+being the boldest of these experiments, and represents an important pillar of
+the narrative, an alternate society dropping out from the dysfunction induced in
+the city by the main story line. However, it didn't quite land for me, and I
+soon consulted an online walkthrough, without which I think I would have been
+trudging its grimy corridors for a long and dispiriting time. As it was, in
+contrast to the entire rest of the game, I was pleased to get it done as quickly
+as possible and move on without getting into its optional exploration and
+side-quests.&lt;/p&gt;
+&lt;p&gt;But other than that one level, I &lt;em&gt;loved&lt;/em&gt; this game, and played it with a passion
+and obsession that burned fiercely for weeks.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/infra/</guid><pubDate>Sun, 07 Aug 2022 20:43:24 GMT</pubDate></item><item><title>TIL: Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
 animated gif memes, finally figured out how to do it manually. Not a universal
 process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
 &lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
@@ -1188,12 +1240,4 @@ or at least filing an issue there to try and get some help.&lt;/p&gt;
 &lt;p&gt;But compare it with a regular vector font. Here's Ubuntu Mono, the &lt;em&gt;best&lt;/em&gt; of
 the vector fonts I could find at these sizes. Blurry and inconsistent and hard
 to read:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;</description><category>dina</category><category>fonts</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>Conky.</title><link>https://www.tartley.com/posts/conky/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;In the typical mad-scientist thrills-per-minute that is the Linux way,
-adding a CPU meter to my desktop involved crafting
-&lt;a href="https://github.com/tartley/dotfiles/tree/main/.config/conky"&gt;my own conky configuration file&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;As always, building your own is a chore that crops up when you least expect
-it. But on the other hand, the opportunity for functional and aesthetic
-work results in something artisnally crafted to exactly meet your own personal
-needs. Something you can feel a little pride about. An elegant weapon,
-for a more... civilized age.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="An elegant weapon, for a more... civilised age." src="https://www.tartley.com/files/2020/conky.jpg"&gt;&lt;/p&gt;</description><category>linux</category><guid>https://www.tartley.com/posts/conky/</guid><pubDate>Wed, 15 Jan 2020 22:09:13 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;</description><category>dina</category><category>fonts</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item></channel></rss>

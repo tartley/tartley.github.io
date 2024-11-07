@@ -77,81 +77,7 @@
 
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/makefiles-that-are-self-documenting-and-process-all-extant-files/" class="u-url">TIL: Makefiles that are self-documenting, and process all extant files.</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/makefiles-that-are-self-documenting-and-process-all-extant-files/" rel="bookmark">
-            <time class="published dt-published" datetime="2023-07-06T11:50:16-05:00" itemprop="datePublished" title="2023-07-06 11:50">2023-07-06 11:50</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <h3>Self-documenting Makefiles</h3>
-<p>A trick from years ago, but I copy it around between projects enough that it
-deserves calling out. Add a target:</p>
-<div class="code"><pre class="code literal-block"><span class="nf">help</span><span class="o">:</span><span class="w"> </span><span class="c">## Show this help.</span>
-<span class="c">    @# Optionally add 'sort' before 'awk'</span>
-<span class="w">    </span>@grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">'^[a-zA-Z_\.%-]+:.*?## .*$$'</span><span class="w"> </span><span class="k">$(</span>MAKEFILE_LIST<span class="k">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'</span>
-<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">help</span>
-</pre></div>
-
-<p>Decorate other targets with a descriptive '##' comment, like "<em>Show this help</em>"
-above. Now calling the 'help' target will summarize all the things the Makefile
-can do. eg:</p>
-<div class="code"><pre class="code literal-block">$ make help
-help       Show this help.
-setup      Install required system packages using 'apt install'.
-%.pdf      Generate given PDF from corresponding .tex file.
-all        Convert all .tex files to PDF.
-</pre></div>
-
-<p>You might choose to make 'help' the first target in the Makefile, so that it
-gets triggered when the user runs <code>make</code> without arguments.</p>
-<h3>Process all extant files</h3>
-<p>Make's canonical paradigm is that you tell it the name of the file to generate,
-and it uses the tree of dependencies specified in the Makefile to figure out
-how to build it. Typically you'll use automatic variables like "$&lt;" to represent
-the wildcarded source filename:</p>
-<div class="code"><pre class="code literal-block"><span class="nf">%.pdf</span><span class="o">:</span><span class="w"> </span>%.<span class="n">tex</span> <span class="c">## Generate given PDF from corresponding .tex file.</span>
-<span class="w">    </span>pdflatex<span class="w"> </span>$&lt;
-</pre></div>
-
-<p>The pitfall is that when invoking this, you have to name all the PDF files you
-want to generate. If the names are a fixed part of your build, they can be
-embedded in the Makefile itself:</p>
-<div class="code"><pre class="code literal-block"><span class="nf">all</span><span class="o">:</span><span class="w"> </span><span class="n">one</span>.<span class="n">pdf</span> <span class="n">two</span>.<span class="n">pdf</span> <span class="n">three</span>.<span class="n">pdf</span>
-</pre></div>
-
-<p>But if their names are dynamic, you have to specify them on the command line,
-which is a pain:</p>
-<div class="code"><pre class="code literal-block">$<span class="w"> </span>make<span class="w"> </span>one.pdf<span class="w"> </span>two.pdf<span class="w"> </span>three.pdf
-</pre></div>
-
-<p>This is easy enough when <em>re-</em>generating all the PDFs that already exist:</p>
-<div class="code"><pre class="code literal-block">$<span class="w"> </span>make<span class="w"> </span>*.pdf
-</pre></div>
-
-<p>but is no help when you just have a bunch of .tex files and you just want Make
-to build all of them. This is going the opposite way to canonical make usage.
-We want to specify the existing source files (<code>*.tex</code>, in this case), and have
-Make build the resulting products.</p>
-<p>To do it, we need our Makefile to enumerate the existing source files:</p>
-<div class="code"><pre class="code literal-block"><span class="nv">TEX_FILES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>wildcard<span class="w"> </span>*.tex<span class="k">)</span>
-</pre></div>
-
-<p>Using the 'wildcard' function here behaves better than a bare wildcard
-expansion, e.g. it produces no output when there are no matches, rather than
-outputting the unmatched wildcard expression.</p>
-<p>Then use a substitution to generate the list of .pdf filenames:</p>
-<div class="code"><pre class="code literal-block"><span class="nv">all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>TEX_FILES:%.tex<span class="o">=</span>%.pdf<span class="k">)</span>
-</pre></div>
-
-<p>Now <code>make all</code> will generate one .pdf file for each extant .tex file, regardless of
-whether the corresponding .pdf files already exist or not.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/astroneer-resource-graph/" class="u-url">Astroneer Resource Graph</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/astroneer-resource-graph/" class="u-url">Astroneer Resource Graph</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -1231,6 +1157,71 @@ Case chewed his lower lip and gazed out across the plateaus of the Eastern Seabo
 </blockquote>
 <p>Five out of five stars. A riveting performance.</p>
 <p><br style="clear: left"></p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/infra/" class="u-url">Infra</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/infra/" rel="bookmark">
+            <time class="published dt-published" datetime="2022-08-07T14:43:24-06:00" itemprop="datePublished" title="2022-08-07 14:43">2022-08-07 14:43</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p><img alt="" src="files/2024/infra.jpg"></p>
+<p><em>Released in 2016, played by me on Linux in 2022.</em></p>
+<p>So much to love about this game. My enjoyment was perhaps stoked by my initial
+expectation that such a humdrum, non-mainstream game idea - of a civil engineer
+performing building inspections, documenting elements such as cracks and exposed
+rebar - must surely be a modest indie offering. But that expectation was vastly
+exceeded by the overwhelming generosity of the included content, providing level
+after level after level, all rich in geometry and atmosphere, navigable pathways
+surrounded by loads of non-essential scene setting, from broom cupboards to
+passing container ships, replete with specially coded set-pieces, and a story
+that expands in scope beyond all possible initial expectations.</p>
+<p>It is filled with puzzles that are grounded in the atmospheric setting, having
+me clamber under cobweb-strewn desks with a flashlight, looking for tripped
+circuit breakers. The setting itself builds beautifully, starting with my
+inspection of bridges and decrepit sawmills as I wander along a small overgrown
+river path, but increasing in scope and severity as we continue downstream into
+town, culminating in varied and ambitious city facilities, from water treatment
+plants, abandoned sprawling secret WWI facilities, and various types of railway
+and power stations.</p>
+<p>The puzzle difficulty is perfectly judged, demanding about the limit of effort I
+could bring to bear, and only on one or two occasions did I give up and find
+solutions online, leading overall to a tremendous sense of accomplishment. </p>
+<p>The storyline exposes longstanding secretive corruption in the city, explaining
+both the pervasive neglect and sabotage that your inspections reveal, and it
+provides a variety of creative reasons why the buildings on your route are
+either long-abandoned, or else hastily evacuated moments before your arrival.</p>
+<p>This gives you gloriously free reign over the facilities you pass through,
+opening up possibilities to perform ad-hoc repairs as you go. In particular, I
+particularly loved the way a successful navigation of levels like the water
+treatment plant requires the player to cross reference wall charts showing how
+the plant operates, with computer schematics showing the state of various
+machinery and valves, and overlay on top of that an understanding of a few signs
+and hand-written notes left behind by operators, to remind themselves about
+proper operating procedures, broken equipment, workarounds, and switches that
+were wired up backwards. And once you figure out this abstract understanding of
+what needs to be done, you have to map it all onto the actual 3D spatial layout
+of the massive hardware all around you, which often spans multiple buildings.
+Just delightful.</p>
+<p>I should probably also mention the penultimate level, which is one of the most
+ambitious of many bold experiments that keep the levels diverse and surprising,
+by straying away from the core conceit. In this case that means navigating the
+locked-down hallways of an alternative, mushroom obsessed commune, squatting in
+a depressing tower block surrounded by trash. While this level is laudable for
+being the boldest of these experiments, and represents an important pillar of
+the narrative, an alternate society dropping out from the dysfunction induced in
+the city by the main story line. However, it didn't quite land for me, and I
+soon consulted an online walkthrough, without which I think I would have been
+trudging its grimy corridors for a long and dispiriting time. As it was, in
+contrast to the entire rest of the game, I was pleased to get it done as quickly
+as possible and move on without getting into its optional exploration and
+side-quests.</p>
+<p>But other than that one level, I <em>loved</em> this game, and played it with a passion
+and obsession that burned fiercely for weeks.</p>
     </div>
     </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/basic-us-civics/" class="u-url">US Civics for Naturalization Quiz</a></h1>
         <div class="metadata">
