@@ -9,6 +9,8 @@
 
 *Released in 2023, played on Linux in 2024.*
 
+<span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"><b>spoilers</b></span>
+
 Mush your dog sled across cruel Arctic wastelands, driven onwards by a brisk and intense companion, who hired you to take him back to some remote spot, where it becomes apparent he had some sort of revelation, or maybe a breakdown.
 
 The low-res, dithered presentation conveys the harsh, blinding conditions, as you struggle to make out details through the relentless wind and ice. Smash cuts disorient you, making the days and nights of the journey blur into one another, leaving only fragmentary, disjointed memories: sledding across the ice; nights in crude wooden huts, collapsing into rough bunks; righting the sled while your companion curses you for a fool; silent moments alone, outside in the dark; mounting the sled before dawn. The sense is of endless, exhausting time spent covering the distance, through punishing conditions, and it's surprisingly evocative.
