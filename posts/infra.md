@@ -2,7 +2,7 @@
 .. title: Infra
 .. slug: infra
 .. date: 2022-08-07 14:43:24 UTC-06:00
-.. tags: videogame, geek, linux, media, completed
+.. tags: videogame,geek,linux,media,completed,drugs
 -->
 
 ![](/files/2024/infra.jpg)

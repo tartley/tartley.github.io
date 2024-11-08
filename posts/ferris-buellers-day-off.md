@@ -48,5 +48,8 @@ anticipation that even Roger Waters would be proud of.
 
 Duly [added to my rotation](/posts/download-audio-from-youtube/) for next time I'm sick.
 
+**Update:** Dany Boyd's CinemaStix posted [a lovely YouTube about how Ferris isn't the main
+character of this movie](https://youtu.be/DaMimdNNnAw?si=diaI1lde64EL7OPE).
+
 <br style="clear: left" /><br />
 
