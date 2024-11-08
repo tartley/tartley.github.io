@@ -15,5 +15,7 @@ The low-res, dithered presentation conveys the harsh, blinding conditions, as yo
 
 The narrative leans into the disorientation, making nothing clear. Your companion becomes increasingly cryptic. He urges you onward, never pausing more than absolutely necessary. The deer behave increasingly strangely. Your companion regales you with sickening tales of the investigative mistreatment he subjected them to on his previous visit. By the time the strange mushrooms come into play it is very obvious that you are in a place to which you should never have come, very far from anywhere or anyone, with mounting dread, alone with with a madman. What happened the last time he took this route? What did he leave behind here? What awaits at your journey's end?
 
+It's hard to know whether the difficulty of interpretation, or the non-literal aspects of your journey, are intended as the result of your character's mushroom-induced fever, or the pretensions of intrusively figurative allusions. Most likely, it seems to be both. The deliberate ambiguity runs deep.
+
 Doesn't outstay its welcome, all done in an hour. But the memories remain.
 
