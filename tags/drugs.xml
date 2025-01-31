@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about drugs)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/drugs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 04 Oct 2024 15:43:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Infinite Jest</title><link>https://www.tartley.com/posts/infinite-jest/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about drugs)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/drugs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 31 Jan 2025 05:36:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>That Which Gave Chase</title><link>https://www.tartley.com/posts/that-which-gave-chase/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2024/that-which-gave-chase.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Released in 2023, played on Linux in 2024.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"&gt;&lt;b&gt;spoilers&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Mush your dog sled across cruel Arctic wastelands, driven onwards by a brisk and intense companion, who hired you to take him back to some remote spot, where it becomes apparent he had some sort of revelation, or maybe a breakdown.&lt;/p&gt;
+&lt;p&gt;The low-res, dithered presentation conveys the harsh, blinding conditions, as you struggle to make out details through the relentless wind and ice. The days and nights of the journey blur into one another, leaving you only fragmentary, disjointed memories:
+sledding across the ice;
+arriving at crude wooden huts for the night;
+mounting the sled before dawn;
+collapsing into rough bunks; 
+righting the sled while your companion curses you for a fool;
+silent moments alone.&lt;/p&gt;
+&lt;p&gt;Smash cuts amongst snowy wastes echo &lt;a href="https://readcomic.me/comic/nemo-heart-of-ice/issue-full/31"&gt;the discontinuities in Alan Moore's "&lt;em&gt;Nemo: Heart of Ice&lt;/em&gt;"&lt;/a&gt;, albeit this is a far more understated tale. The sense is of a protracted, exhausting time spent covering the distance, through punishing conditions, and it's surprisingly evocative.&lt;/p&gt;
+&lt;p&gt;The narrative leans into the disorientation, making nothing clear. Your companion becomes increasingly cryptic. He urges you onward, never pausing more than absolutely necessary. The deer behave increasingly strangely. Your companion regales you with sickening tales of the investigative mistreatment he subjected them to on his previous visit. By the time the strange mushrooms come into play it is very obvious that you are in a place to which you should never have come, very far from anywhere or anyone, with mounting dread, alone with with a madman. What happened the last time he took this route? What did he leave behind here? What awaits at your journey's end?&lt;/p&gt;
+&lt;p&gt;It's hard to know whether the difficulty of interpretation, or the non-literal aspects of your journey, are intended as the result of your character's mushroom-induced fever, or the pretensions of intrusively figurative allusions. Most likely, it seems to be both. The deliberate ambiguity runs deep.&lt;/p&gt;
+&lt;p&gt;Doesn't outstay its welcome, all done in an hour. But the memories remain.&lt;/p&gt;</description><category>completed</category><category>drugs</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/that-which-gave-chase/</guid><pubDate>Mon, 04 Nov 2024 21:56:38 GMT</pubDate></item><item><title>Infra</title><link>https://www.tartley.com/posts/infra/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2024/infra.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Released in 2016, played by me on Linux in 2022.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;So much to love about this game. My enjoyment was perhaps stoked by my initial
+expectation that such a humdrum, non-mainstream game idea - of a civil engineer
+performing building inspections, documenting elements such as cracks and exposed
+rebar - must surely be a modest indie offering. But that expectation was vastly
+exceeded by the overwhelming generosity of the included content, providing level
+after level after level, all rich in geometry and atmosphere, navigable pathways
+surrounded by loads of non-essential scene setting, from broom cupboards to
+passing container ships, replete with specially coded set-pieces, and a story
+that expands in scope beyond all possible initial expectations.&lt;/p&gt;
+&lt;p&gt;It is filled with puzzles that are grounded in the atmospheric setting, having
+me clamber under cobweb-strewn desks with a flashlight, looking for tripped
+circuit breakers. The setting itself builds beautifully, starting with my
+inspection of bridges and decrepit sawmills as I wander along a small overgrown
+river path, but increasing in scope and severity as we continue downstream into
+town, culminating in varied and ambitious city facilities, from water treatment
+plants, abandoned sprawling secret WWI facilities, and various types of railway
+and power stations.&lt;/p&gt;
+&lt;p&gt;The puzzle difficulty is perfectly judged, demanding about the limit of effort I
+could bring to bear, and only on one or two occasions did I give up and find
+solutions online, leading overall to a tremendous sense of accomplishment. &lt;/p&gt;
+&lt;p&gt;The storyline exposes longstanding secretive corruption in the city, explaining
+both the pervasive neglect and sabotage that your inspections reveal, and it
+provides a variety of creative reasons why the buildings on your route are
+either long-abandoned, or else hastily evacuated moments before your arrival.&lt;/p&gt;
+&lt;p&gt;This gives you gloriously free reign over the facilities you pass through,
+opening up possibilities to perform ad-hoc repairs as you go. In particular, I
+particularly loved the way a successful navigation of levels like the water
+treatment plant requires the player to cross reference wall charts showing how
+the plant operates, with computer schematics showing the state of various
+machinery and valves, and overlay on top of that an understanding of a few signs
+and hand-written notes left behind by operators, to remind themselves about
+proper operating procedures, broken equipment, workarounds, and switches that
+were wired up backwards. And once you figure out this abstract understanding of
+what needs to be done, you have to map it all onto the actual 3D spatial layout
+of the massive hardware all around you, which often spans multiple buildings.
+Just delightful.&lt;/p&gt;
+&lt;p&gt;I should probably also mention the penultimate level, which is one of the most
+ambitious of many bold experiments that keep the levels diverse and surprising,
+by straying away from the core conceit. In this case that means navigating the
+locked-down hallways of an alternative, mushroom obsessed commune, squatting in
+a depressing tower block surrounded by trash. While this level is laudable for
+being the boldest of these experiments, and represents an important pillar of
+the narrative, an alternate society dropping out from the dysfunction induced in
+the city by the main story line. However, it didn't quite land for me, and I
+soon consulted an online walkthrough, without which I think I would have been
+trudging its grimy corridors for a long and dispiriting time. As it was, in
+contrast to the entire rest of the game, I was pleased to get it done as quickly
+as possible and move on without getting into its optional exploration and
+side-quests.&lt;/p&gt;
+&lt;p&gt;But other than that one level, I &lt;em&gt;loved&lt;/em&gt; this game, and played it with a passion
+and obsession that burned fiercely for weeks.&lt;/p&gt;</description><category>completed</category><category>drugs</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/infra/</guid><pubDate>Sun, 07 Aug 2022 20:43:24 GMT</pubDate></item><item><title>Infinite Jest</title><link>https://www.tartley.com/posts/infinite-jest/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="Inifinite Jest" src="https://www.tartley.com/files/2009/02/infinitejest.jpg"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by David Foster Wallace (1996)&lt;/em&gt;&lt;/p&gt;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about videogame)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/videogame.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 08 Nov 2024 20:16:36 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>That Which Gave Chase</title><link>https://www.tartley.com/posts/that-which-gave-chase/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2024/that-which-gave-chase.jpg"&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about videogame)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/videogame.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 31 Jan 2025 05:36:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>That Which Gave Chase</title><link>https://www.tartley.com/posts/that-which-gave-chase/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2024/that-which-gave-chase.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Released in 2023, played on Linux in 2024.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"&gt;&lt;b&gt;spoilers&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Mush your dog sled across cruel Arctic wastelands, driven onwards by a brisk and intense companion, who hired you to take him back to some remote spot, where it becomes apparent he had some sort of revelation, or maybe a breakdown.&lt;/p&gt;
@@ -13,7 +13,7 @@ silent moments alone.&lt;/p&gt;
 &lt;p&gt;Smash cuts amongst snowy wastes echo &lt;a href="https://readcomic.me/comic/nemo-heart-of-ice/issue-full/31"&gt;the discontinuities in Alan Moore's "&lt;em&gt;Nemo: Heart of Ice&lt;/em&gt;"&lt;/a&gt;, albeit this is a far more understated tale. The sense is of a protracted, exhausting time spent covering the distance, through punishing conditions, and it's surprisingly evocative.&lt;/p&gt;
 &lt;p&gt;The narrative leans into the disorientation, making nothing clear. Your companion becomes increasingly cryptic. He urges you onward, never pausing more than absolutely necessary. The deer behave increasingly strangely. Your companion regales you with sickening tales of the investigative mistreatment he subjected them to on his previous visit. By the time the strange mushrooms come into play it is very obvious that you are in a place to which you should never have come, very far from anywhere or anyone, with mounting dread, alone with with a madman. What happened the last time he took this route? What did he leave behind here? What awaits at your journey's end?&lt;/p&gt;
 &lt;p&gt;It's hard to know whether the difficulty of interpretation, or the non-literal aspects of your journey, are intended as the result of your character's mushroom-induced fever, or the pretensions of intrusively figurative allusions. Most likely, it seems to be both. The deliberate ambiguity runs deep.&lt;/p&gt;
-&lt;p&gt;Doesn't outstay its welcome, all done in an hour. But the memories remain.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/that-which-gave-chase/</guid><pubDate>Mon, 04 Nov 2024 21:56:38 GMT</pubDate></item><item><title>Astroneer Resource Graph</title><link>https://www.tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
+&lt;p&gt;Doesn't outstay its welcome, all done in an hour. But the memories remain.&lt;/p&gt;</description><category>completed</category><category>drugs</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/that-which-gave-chase/</guid><pubDate>Mon, 04 Nov 2024 21:56:38 GMT</pubDate></item><item><title>Astroneer Resource Graph</title><link>https://www.tartley.com/posts/astroneer-resource-graph/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Used the trusty &lt;a href="https://graphviz.org/"&gt;Graphviz&lt;/a&gt; to whip up a diagram showing how to
 get each of the resources in &lt;a href="https://astroneer.space/"&gt;Astroneer&lt;/a&gt;. Click the WEBP
 thumbnail below to get the full glorious SVG, then you can '&lt;em&gt;find in page&lt;/em&gt;' on it.
 (&lt;a href="https://www.tartley.com/files/2023/astroneer/astroneer-resources-graph.dot"&gt;Diagram source&lt;/a&gt;)&lt;/p&gt;
@@ -197,7 +197,7 @@ contrast to the entire rest of the game, I was pleased to get it done as quickly
 as possible and move on without getting into its optional exploration and
 side-quests.&lt;/p&gt;
 &lt;p&gt;But other than that one level, I &lt;em&gt;loved&lt;/em&gt; this game, and played it with a passion
-and obsession that burned fiercely for weeks.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/infra/</guid><pubDate>Sun, 07 Aug 2022 20:43:24 GMT</pubDate></item><item><title>Journey</title><link>https://www.tartley.com/posts/journey/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/journey-screenshot.webp"&gt;&lt;/p&gt;
+and obsession that burned fiercely for weeks.&lt;/p&gt;</description><category>completed</category><category>drugs</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/infra/</guid><pubDate>Sun, 07 Aug 2022 20:43:24 GMT</pubDate></item><item><title>Journey</title><link>https://www.tartley.com/posts/journey/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2022/journey-screenshot.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Released on PlayStation 3 by thatgamecompany in 2012. Played on Windows 10 in
 2022.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The slow-paced opening scenes, alternately trudging up and then surfing down
@@ -292,100 +292,155 @@ felt welcomed to his world. Join us - we'll be on the sofa.&lt;/p&gt;
 &lt;p&gt;10/10 if you understand that games have the potential to become the
 dominant art form of the 21st century.&lt;/p&gt;
 &lt;p&gt;0/10 if it's just for kids, innit?&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>geek</category><category>media</category><category>non-fiction</category><category>videogame</category><guid>https://www.tartley.com/posts/this-gaming-life-travels-in-three-cities/</guid><pubDate>Tue, 04 Feb 2014 02:31:29 GMT</pubDate></item><item><title>Legend of Zelda : The Phantom Hourglass</title><link>https://www.tartley.com/posts/legend-of-zelda-the-phantom-hourglass/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="Phantom Hourglass" src="https://www.tartley.com/files/2008/05/phantom-hourglass.jpg"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Nintendo, 2008&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Nintendo spin off a &lt;em&gt;fourteenth&lt;/em&gt; iteration of the familiar and
-oh-so-beloved franchise. I'd only previously played the
-preposterously-sub-titled &lt;em&gt;Ocarina of Time&lt;/em&gt; on the N64, of which I
-retain fond, sepia-coloured memories.&lt;/p&gt;
-&lt;p&gt;I found &lt;em&gt;Phantom Hourglass&lt;/em&gt; to be engaging, and played it to a
-thoroughly jolly completion over the course of a couple of months. The
-gameplay and plot are a tad more casual and lightweight than &lt;em&gt;Ocarina&lt;/em&gt;,
-as befitting play snatched while on-the-go on the handheld platform.&lt;/p&gt;
-&lt;p&gt;Using the DS stylus to control Link is delightfully transparent and
-intuitive. Just as for a mouse, however, expert users will eventually
-eschew it for many actions, preferring the speed, precision and
-tactility of distinct physical buttons.&lt;/p&gt;
-&lt;p&gt;On the down side, some of the puzzles are downright contrived. After
-introducing a handy little map, on which you can scrawl notes and
-reminders for yourself, the game then promptly takes it away again for
-&lt;em&gt;exactly&lt;/em&gt; the levels on which it would be of most use, proclaiming 'you
-can't use the map here, some sort of magic prevents it.' Right. Up
-yours.&lt;/p&gt;
-&lt;p&gt;Equally intrusive, the dialog is entirely Nintendo-esque cutesy Japanese
-schmultz, and it would have improved the game no end for it to have been
-entirely absent.&lt;/p&gt;
-&lt;p&gt;Such niggles are few and far between, though. Time for another go of the
-newfangled rating system.&lt;/p&gt;
-&lt;p&gt;Rating: Place yourself somewhere between...&lt;/p&gt;
-&lt;p&gt;10/10 if you're into a deftly executed handheld riff on the Zelda
-series, beautifully integrated with the affordances and sensibilities of
-the hosting hardware in that way that only Nintendo can do. Lots to love
-here.&lt;/p&gt;
-&lt;p&gt;0/10 if you're done with revisiting timeworn ideas, even ones as
-compelling and charming as this, and yearn for a resurgence in
-experimental originality to kick the gaming industry out of one or two
-ruts (such as having a blind spot for crappy dialog.)&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>completed</category><category>ds</category><category>geek</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/legend-of-zelda-the-phantom-hourglass/</guid><pubDate>Fri, 16 Jan 2009 20:36:05 GMT</pubDate></item><item><title>Shadow of the Colossus</title><link>https://www.tartley.com/posts/shadow-of-the-colossus/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="" src="https://www.tartley.com/files/2009/01/sotc4-300x225.jpg"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Team ICO, PS2, 2005.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;As is common for a title released in the autumn years of a console's
-lifetime, the programmers at Team ICO have mastered the PS2 hardware,
-and wring the utmost from it for this virtuoso performance.&lt;/p&gt;
-&lt;p&gt;The gameplay consists of nothing more than a series of sixteen boss
-fights between your character and a succession of gigantic mythical
-creatures, each rising from the landscape upon your approach. Half
-stone, half furry flesh, these colossi shake the earth as they walk, and
-facing up to them, armed with nothing but a sword and a bow, elicits a
-genuine rush of fear, firstly as their size and magnificence become
-apparent, then as they stand up, and then, finally, terrifyingly, as
-they &lt;em&gt;see you&lt;/em&gt;. Like moments from a piercing dream, playing this game is
-an experience that will not be forgotten.&lt;/p&gt;
-&lt;p&gt;It's in this emotive ability that the game's strength lies, and the
-initial adrenaline is only the most coarse example of it. Those disposed
-to gallop directly in the hinted direction of the the next objective
-would be missing out on large parts of what &lt;em&gt;Colossus&lt;/em&gt; has to offer, and
-would be well advised to ease back, enjoy the view, and take some
-pleasure from the journey. For fully half your time will be spent
-traversing this epic landscape in search of your next quarry, and the
-landscape is fantastic, in every sense. Across open plains, rent by
-canyons and gorges spanned by ancient, elegant arches, past thundering
-waterfalls, though shafts of sunlight across boulder-strewn forest
-floors. Cutting through mighty, vine-covered ruins, now occupied only by
-lizards and hawks.&lt;/p&gt;
-&lt;p&gt;This tranquil exploration is punctuated by the excitement of the
-battles, forming a delightful sense of anticipation. The battles
-themselves are gripping and rewarding, and provides a enough of a
-challenge to stimulate a corresponding level of victorious elation upon
-bringing down each of the colossi. Interestingly, as the game
-progresses, the tone of the animations and solemn music begin to subtly
-expose these victories for what they are: the slaughter of a magical,
-unique and irreplaceable creature, leaving the world a more forlorn and
-empty place. This effectively leverages the player's third-person
-complicity in the killings, eventually evoking feelings of guilt for
-your premeditated attacks on your ultimately vulnerable victims.
-Reflective of your character's determination, heedlessly pursuing an
-outcome that is hinted at in his own deteriorating appearance, you have
-no choice but to carry on.&lt;/p&gt;
-&lt;p&gt;Overlaid on this evolving cyclic structure, a delicate narrative is
-unobtrusively woven, complete with possibly the most affecting death of
-a character in any videogame to date. The story culminates by
-exquisitely dovetailing with the opening of the game &lt;em&gt;Ico&lt;/em&gt; (PS2, Team
-Ico, 2001), making this &lt;em&gt;Ico'&lt;/em&gt;s prequel (and finally explaining that
-game's protagonist's stigmatic horns.)&lt;/p&gt;
-&lt;p&gt;I've said it before and I'll say it again. Videogames are a nascent,
-immature medium. None amongst us can so much as dream of what they will
-one day be capable of. Look upon works such as this as history in the
-making, the first time a human has wrought a creative endeavour such as
-this, pushing forward the expectations and outlook of the whole
-industry, and spellbinding a generation.&lt;/p&gt;
-&lt;p&gt;Alright, we're done here. You may leave. Time for me to begin my
-experiments with a new subjectivity-proof rating system:&lt;/p&gt;
-&lt;p&gt;Rating: Position yourself appropriately somewhere between:&lt;/p&gt;
-&lt;p&gt;10/10 if you wish to enjoy the state of the art in what videogames as a
-medium are capable of.&lt;/p&gt;
-&lt;p&gt;0/10 if you are incapable of appreciating beauty or have no soul.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>ps2</category><category>videogame</category><guid>https://www.tartley.com/posts/shadow-of-the-colossus/</guid><pubDate>Fri, 16 Jan 2009 01:33:59 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>book</category><category>geek</category><category>media</category><category>non-fiction</category><category>videogame</category><guid>https://www.tartley.com/posts/this-gaming-life-travels-in-three-cities/</guid><pubDate>Tue, 04 Feb 2014 02:31:29 GMT</pubDate></item><item><title>Thief Level : Week 2</title><link>https://www.tartley.com/posts/thief-level-week-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;This week I spent a little while considering the backstory of the level,
+and now have at least a rudimentary scenario: Garrett the thief is
+taking an opportunistic foray into the local Shope of Curiosities,
+having heard that their prize exhibit, the McGuffin of Antioc, has been
+removed from its high-security public display, in order to be cleaned or
+maintained somewhere on-site.&lt;/p&gt;
+&lt;p&gt;On top of this, I've been refining the layout of the museum building,
+starting with the two-storey entrance hall, complete with a balcony
+running round it:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="sketch of museum's two-storey main entrance hall" src="https://www.tartley.com/files/2010/02/w02-sketch-entrance.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Plus, I've been planning the possible routes a thief might take to get
+from one room to another. Generally, the conventional paths - in through
+the main entrance and up the stairs and down the corridor - will be
+blocked by guards. So the player has to clamber up the outside of the
+building, explore the roof, dangle from a rope, pick a lock, find a key
+in the janitor's quarters, which opens all the windows, and ledges
+outside a couple of windows lead somewhere interesting, etc. I don't
+want it to turn into a key fetch quest, but at the same time, I don't
+want the player to be able to simply waltz all through the whole
+building. I've tried to engineer a single interesting primary route
+through the building, with the possibility of a few minor variations so
+players feel like they can exercise some freedom and decision making.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="sketch of ground floor" src="https://www.tartley.com/files/2010/02/w02-sketch-ground-floor.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Having done all that, I'm now quite happy that my plans are sufficient
+to produce a small but adequate level. I'll aim to get that complete,
+and any fancy window dressing I can layer on top will be a bonus.&lt;/p&gt;
+&lt;p&gt;I completed the modelling of all the rooms in the building, and
+doorframes inbetween them. I applied some quick floorboard textures to
+differentiate the floors and ceilings from the walls. Here you can see
+the view from the main entrance, looking into the two-storey entrance
+hall, with the balcony around it visible up on the next level:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="main entraince with floorboards" src="https://www.tartley.com/files/2010/02/w02-main-entrance.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;And the view while approaching the top of the stairs, looking down over
+the balcony. There will be a railing when it's done:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Approaching the top of the stairs" src="https://www.tartley.com/files/2010/02/w02-top-of-stairs-balcony.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Thanks heaps to Qolelis for a comment with a tip about textures on
+stairways, to rotate the texture 90 degrees on each stair's vertical
+rise. I only just saw that, but will definitely apply it this week.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: I feel a bit self-concious that I'm creating the bare
+minimum that could qualify to be a Thief level. There is not yet a
+lively, engaging backstory to the level, complete with colorful
+characters, cleverly intertwined with the canon of the original game.&lt;/p&gt;
+&lt;p&gt;Similarly, the mechanical contents of my level are as simple as
+possible. I haven't stretched myself, thinking of imaginative locations
+or motives for Garrett to explore. I do not plan to have any clever
+special objects or custom scripting in my level, defining dramatic
+changing mission objectives as the player reveals new information. It's
+a very straightforward 'get into a building, steal the loot, and get
+out'.&lt;/p&gt;
+&lt;p&gt;Partly this is very deliberate - I want the level to be as minimal as it
+can possibly be, so as keep it achievable. But also, this is partly in
+response to my feeling that being creative is hard, especially when
+under pressure. Right now I feel as though I have enough to worry about
+just getting to grips with the minutia of the level editor. I almost
+feel as if I need to become comfortable with that before I can relax
+enough to get creative with it.&lt;/p&gt;
+&lt;p&gt;This isn't entirely unexpected. Clearly one cannot do great work on
+one's first attempt. But at the same time, I don't want to just 'give
+up' on the creative aspects. I want to do as good a job as I can do,
+under the constraints of a small, straightforward 'first time' level
+done in a reasonable timeframe. So maybe I just need to keep iterating.
+Embelish the dramatic backstory little by little, see what occurs to me
+as I go on. Look for some flash of inspiration as I bury myself in the
+process. Fair enough. Baby steps.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update 2:&lt;/strong&gt; I created a quick TODO list, as a first approximation of
+how much work there is to be done. I ended up with a list of 67
+mandatory items (eg. Add doors inside each door frame; First pass at
+lighting; Add balcony railing.) In addition I have 18 optional items
+(eg. Add carpets and rugs; Hide moss arrows in the garden; Entrance hall
+main exhibit.) The screenshots above represent about six completed items
+(eg. Dromed tutorials; first floor rooms; doorways and arches between
+rooms; staircase.) So at the current rate, it's roughly 28 weeks of
+work, which is double or triple what I'd planned on. Hopefully my rate
+of completing items will increase substantially as I get into the
+groove. I'll have to monitor this going forward, and slash scope if I
+can't drastically accelerate.&lt;/p&gt;</description><category>gamedev</category><category>geek</category><category>thief</category><category>videogame</category><guid>https://www.tartley.com/posts/thief-level-week-2/</guid><pubDate>Mon, 01 Feb 2010 19:20:31 GMT</pubDate></item><item><title>Creating a Level for Thief 2</title><link>https://www.tartley.com/posts/creating-a-level-for-thief-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;After &lt;a href="https://www.tartley.com/posts/sinister-redux"&gt;Sinister Ducks&lt;/a&gt;, my &lt;a href="http://www.gamedevlessons.com/"&gt;videogame
+creation mentor&lt;/a&gt; suggested that I create
+a mod for an existing game, in order to distance myself a little from
+the programming aspects of creating a game, and instead spend a little
+time considering the gameplay and the art and the music from the
+perspective of the user. Sounds like useful advice.&lt;/p&gt;
+&lt;p&gt;So, the last couple of weeks I've been working through the
+&lt;a href="http://www.jasonotto.net/tutorials/CompleteTut.htm"&gt;tutorials&lt;/a&gt; for
+&lt;a href="http://en.wikipedia.org/wiki/DromEd"&gt;DromEd&lt;/a&gt;, the notoriously cranky
+level editor for vintage sneak-em-up &lt;a href="http://en.wikipedia.org/wiki/Thief:_The_Dark_Project"&gt;Thief: The Dark
+Project&lt;/a&gt;.
+(Specifically for the sequel, &lt;a href="http://en.wikipedia.org/wiki/Thief_II:_The_Metal_Age"&gt;Thief 2: The Metal
+Age&lt;/a&gt;, which has a
+slightly improved engine and editor.) I chose this for three reasons:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Released in 1998, &lt;em&gt;Thief&lt;/em&gt; is old enough that the assets are simple
+    &lt;a href="http://www.mobygames.com/game/windows/thief-ii-the-metal-age/screenshots/gameShotId,7666/"&gt;low-fidelity geometry and
+    bitmaps&lt;/a&gt;.
+    These are easy enough for me to create and edit, plus if I
+    intersperse existing game assets with my own shoddy creations, there
+    won't be a tremendously jarring disparity in apparent quality.&lt;/li&gt;
+&lt;li&gt;Even though &lt;em&gt;Thief&lt;/em&gt; is ten years old and the company that created it
+    long gone, there's still &lt;a href="http://www.ttlg.com/"&gt;a thriving
+    community&lt;/a&gt; of amateur afficionados, churning
+    out &lt;a href="http://www.ttlg.com/forums/showthread.php?p=1508201"&gt;new
+    missions&lt;/a&gt; at
+    the rate of several per month, many of which are of exceedingly high
+    quality - in some cases exceeding that of the original game. I'll be
+    in good company, will have some meaningful feedback, and will have
+    forums to turn to when I get into difficulties.&lt;/li&gt;
+&lt;li&gt;Last but not least, &lt;em&gt;Thief&lt;/em&gt; is one of my favourite games of all
+    time. The emphasis on sneaking around and avoiding confrontation
+    suits my sensibilities. Your protagonist, Garrett, is a marvellous,
+    mercenary character. Best of all, in &lt;em&gt;Thief 1&lt;/em&gt;, it reveals
+    unexpected depth halfway through - the player's expectations of a
+    succession of simple heists takes a strange twist when the powerful
+    storyline reveals itself.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Having finished the tutorials, this weekend I broke ground on creating
+my own level, or 'fan-mission' (FM), in the parlance:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Designing a Thief2 Level in DromEd" src="https://www.tartley.com/files/2010/01/dromed-sm.png"&gt;&lt;/p&gt;
+&lt;p&gt;I'm using the DromEd Toolkit, which is DromEd with some third-party
+patches and bugfixes applied to it. My first impressions with DromEd are
+that it's very clunky and ugly, and startlingly lacking in
+documentation. I've taken to dipping into the configuration files to see
+what keyboard commands exist to experiment with. There are a bewildering
+variety of binary patches to modify the executable in various exciting
+ways, and forum posts about it, although helpful and prolific, seem
+fragmentary and rife with broken links. I've still no idea whether I
+ought to be using &lt;em&gt;Dromed Delux&lt;/em&gt; instead, nor where I should get that
+from. It's a glorious chaotic riot, and it's a little intimidating.&lt;/p&gt;
+&lt;p&gt;Still, having said that, the binary patches have all worked fine for me,
+and the more I use the editor, the more it's starting to grow on me.&lt;/p&gt;
+&lt;p&gt;I'm setting my FM in a museum. There's already an existing museum
+mission out there, but as opposed to its marble-halled austerity, I'm
+imagining this will be more like the cramped, cosy, wood-panneled
+chaotic collection of something like the wonderful &lt;a href="http://www.britishtours.com/360/soane-museum.html"&gt;Sir John Soane's
+Museum&lt;/a&gt; in London.&lt;/p&gt;
+&lt;p&gt;So progress as of week 1 looks like this: I've carved out some very
+basic geometry to form a stocky museum building. Here you can just about
+make out a hole in the brick facade that will form the front entrance.
+This is not the entrance that the player will likely be using:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/front-entrance.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;This is all very crude thus far - with repeating textures on large
+surfaces, and plain uniform lighting. There are a complete set of mostly
+rectangular ground-floor rooms, with interconnecting doorways. The
+highlight of my modelling to date is this stairway leading up to the
+(otherwise nonexistant) next floor.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2010/01/stairway.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;I'm not so happy with the wood texture I chose - I'll go back and look
+for something more uniform. But I am happy with the way the stairs flair
+out at the bottom. I realised in the process of creating this that this
+makes it possible to fit a flight of stairs into a smaller space than
+would otherwise be possible, by allowing the bottom few steps to
+gracefully project out into the corridor.&lt;/p&gt;
+&lt;p&gt;Having finished this last night, I then dreamed about geometric
+operations on three dimensional spaces, which I think is a good sign.&lt;/p&gt;</description><category>creative</category><category>gamedev</category><category>geek</category><category>thief</category><category>videogame</category><guid>https://www.tartley.com/posts/creating-a-level-for-thief-2/</guid><pubDate>Mon, 25 Jan 2010 19:50:26 GMT</pubDate></item></channel></rss>
