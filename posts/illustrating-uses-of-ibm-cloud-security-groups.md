@@ -5,8 +5,8 @@
 .. tags: geek,software,networking,security,cloud
 -->
 
-> I wrote this high-level public-facing guide while employed by IBM, creating
-> the security groups feature for IBM Cloud. It
+> I wrote this high-level public-facing guide while employed by IBM, implementing
+> the security groups feature for IBM Cloud in Go and PHP (don't ask). It
 > [used to reside](https://web.archive.org/web/20210418195246/https://www.ibm.com/cloud/blog/illustrating-uses-ibm-cloud-security-groups)
 > on the IBM blog, but has recently been replaced by newer content, so I've
 > preserved it here for posterity.
