@@ -11,7 +11,7 @@
 <link rel="canonical" href="https://www.tartley.com/">
 <link rel="icon" href="welcome.gif" sizes="16x16">
 <link rel="next" href="index-28.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/that-which-gave-chase/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/the-black-parade-level-04-deaths-dominion/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -76,7 +76,31 @@
 
     <a rel="me" href="https://mastodon.social/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/that-which-gave-chase/" class="u-url">That Which Gave Chase</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/the-black-parade-level-04-deaths-dominion/" class="u-url">The Black Parade: Level 04: Death's Dominion</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/the-black-parade-level-04-deaths-dominion/" rel="bookmark">
+            <time class="published dt-published" datetime="2025-02-06T20:33:01-06:00" itemprop="datePublished" title="2025-02-06 20:33">2025-02-06 20:33</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>So. Looking Glass's seminal 1998 PC game <em>Thief: The Dark Project</em> spawned an active and long-lived
+modding community, who created hundreds of fan-made extra levels, many of which are extremely artful
+and creative.</p>
+<p>One group of particularly obsessed loons spent seven years crafting an extraordinary set of such
+levels, forming an entirely new single-player campaign for the game, named <em>The Black Parade</em>. This
+was released last year and I only just became aware of it. I'm four missions in, absolutely loving
+it, and completely lost in the catacombs beneath the pseudo-medieval city.</p>
+<p>Hence, my lovingly hand-drawn map of mission 4, Death's Dominion:</p>
+<p><span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"><b>spoilers</b></span></p>
+<p><span style="float: left">
+<img alt="Map of mission 4, Death's Dominion" src="files/2025/Thief-Black.Parade-04DeathsDominion.800x.q95.webp"></span></p>
+<p><br style="clear: left"><br></p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/that-which-gave-chase/" class="u-url">That Which Gave Chase</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -570,179 +594,6 @@ laid in the picture here just to be gratuitous.</dd>
 <p>It broke me. I need to take another run up to this. Advice welcome.</p>
 <p><a href="http://localhost:8000/categories/did-not-finish/"><span style="background:grey; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;">did-not-finish</span></a></p>
 <p><br style="clear: left"></p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/illustrating-uses-of-ibm-cloud-security-groups/" class="u-url">Illustrating Uses of IBM Cloud Security Groups</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/illustrating-uses-of-ibm-cloud-security-groups/" rel="bookmark">
-            <time class="published dt-published" datetime="2023-08-22T21:33:47-05:00" itemprop="datePublished" title="2023-08-22 21:33">2023-08-22 21:33</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <blockquote>
-<p>I wrote this high-level public-facing guide while employed by IBM, implementing
-the security groups feature for IBM Cloud in Go and PHP (don't ask). It
-<a href="https://web.archive.org/web/20210418195246/https://www.ibm.com/cloud/blog/illustrating-uses-ibm-cloud-security-groups">used to reside</a>
-on the IBM blog, but has recently been replaced by newer content, so I've
-preserved it here for posterity.</p>
-</blockquote>
-<p>This article illustrates a few possible uses of IBM Cloud Security Groups, a
-per-instance firewall for IBM Cloud virtual instances.</p>
-<h3>Why Use Security Groups?</h3>
-<p>Security groups firewall your IBM Cloud applications from nefarious network
-traffic, protecting you and your company from the efforts of “industrious
-users” trying to bring down your application, or make off with your customer's
-credit card details. If those sound like sub-optimal outcomes for your
-situation, read on…</p>
-<h3>Allow Incoming SSH Connections</h3>
-<p>The simplest use of security groups is to allow a single type of network
-connection to your instances, blocking all other traffic. For example, to allow
-only incoming SSH connections, which are TCP connections on port 22. All other
-types of traffic, such as ICMP ‘ping' connections, or TCP connections on other
-ports, are blocked. Fig 1. A security group configured to allow incoming SSH</p>
-<p><img alt="A diagram representing SSH connections being allowed from support engineer to instances within security group 1, while ping connections are denied" src="files/2023/ibm-cloud/1_allow-ssh-1.webp"></p>
-<p><em>Fig 1. A security group configured to allow incoming SSH.</em></p>
-<p>When instances 1 &amp; 2 are added to your security group, firewalls are created
-directly on those instances,configured to allow or deny the corresponding
-traffic. Hence, your support engineer can create SSH connections, but cannot
-send arbitrary network traffic.</p>
-<h3>Allow SSH from a Specified IP Address</h3>
-<p>The above scenario allows SSH connection attempts from any IP address. To
-increase security, you might only allow connections from a particular instance.
-Fig 2. A security group configured to allow incoming SSH connections (TCP port
-22) from a particular IP address.</p>
-<p><img alt="A diagram representing SSH conections being allowed from a known IP address to instances within security group 1, while connections from a disgruntled employee at a different IP address are denied" src="files/2023/ibm-cloud/2_allow-ssh-one-ip.webp"></p>
-<p><em>Fig 2. A security group configured to allow incoming SSH connections (TCP port
-22) from a particular IP address.</em></p>
-<p>The security group has been configured with the IP address used by a support
-engineer – the single instance that is authorized to make a connection.
-Connections from other instances are blocked.</p>
-<p>As well as allowing traffic from a single IP address, security groups can be
-configured with a CIDR block, to allow traffic from all instances on that
-subnet. Fig 3. A security group configured to allow incoming SSH connections
-(TCP port 22) from all instances on a given subnet.</p>
-<p><img alt="A diagram representing SSH conections being allowed from a known subnet to instances within security group 1, while connections from a hacker at an IP address ouside the subet are denied" src="files/2023/ibm-cloud/3_allow-ssh-subnet.webp"></p>
-<p><em>Fig 3. A security group configured to allow incoming SSH connections (TCP port
-22) from all instances on a given subnet.</em></p>
-<p>The diagram shows instances on an authorized subnet (deploy1 &amp; deploy2),
-representing a project CI/CD infrastructure, all being able to make SSH
-connections to our protected instances, for example to deploy updates to our
-application. Other instances, such as an enterprising hacker, are blocked.</p>
-<h3>Allow Application Instances to Access a Distributed Data Store</h3>
-<p>Another use case would be to allow application servers to access the nodes of a
-distributed data store. To do this, we'll make a few changes to the above
-security group configuration.</p>
-<p>Firstly, we modify the open port from SSH's 22, to MongoDB's default query API
-port of 27017.</p>
-<p>Secondly, security group 1 is now allowing the creation of outgoing network
-connections, from our application instances, where previously it was allowing
-incoming connections. Security group rules can manage traffic in either
-direction.</p>
-<p>Thirdly, we don't want our data store instances to be unprotected, so we'll put
-them into a security group of their own. Since there's now two security groups,
-we'll give them names: “app” and “db”.</p>
-<p>For now, security group “db” allows all incoming MongoDB queries (TCP
-connections on 27017), without restricting the IP addresses allowed to make
-connections. We'll fix that soon. Fig 4. Two security groups configured to
-allow application servers to send queries to MongoDB nodes on a subnet.</p>
-<p><img alt='A diagram representing queries from instances in security group "app" being allowed to connect to port 27017 of the subnet of instances in security group "db", which similarly allows incoming connections on TCP port 27017' src="files/2023/ibm-cloud/4_allow-app-servers-access-db-subnet.webp"></p>
-<p><em>Fig 4. Two security groups configured to allow application servers to send
-queries to MongoDB nodes on a subnet.</em></p>
-<p>For clarity, these diagrams don't show the many connections which are blocked
-by this setup - which are, of course, the whole point of security groups.
-On the above diagram, blocked connections would include:</p>
-<ul>
-<li>
-<p>On app instances:</p>
-<ul>
-<li>All incoming connections.</li>
-<li>Outgoing connections that aren't TCP, or are on the wrong port.</li>
-<li>Outgoing connections to anything other than a DB instance.</li>
-</ul>
-</li>
-<li>
-<p>On DB instances:</p>
-<ul>
-<li>All outgoing connections.</li>
-<li>Incoming connections that aren't TCP, or are on the wrong port.</li>
-</ul>
-</li>
-</ul>
-<p>This setup does have a couple of problems. It relies on our MongoDB instances
-all residing on a single subnet. Worse, as mentioned earlier, it allows any IP
-address in the world to make queries to MongoDB. We'll fix both of these next.</p>
-<h3>Using Remote Groups to Specify Arbitrary IP Addresses</h3>
-<p>Specifying allowed instances using a CIDR block can be inappropriate. It's
-often preferable to specify a set of arbitrary IP addresses instead. We can do
-this by using a second security group – known as a remote group – to contain
-the set of allowed instances. Our first security group can then refer to the
-remote group to specify which instances are allowed.</p>
-<p>In our example above, we would modify the “app” security group by dropping the
-CIDR block, and replacing it with a reference to “db” as a remote security
-group.</p>
-<p>Similarly, we would modify the “db” group to use “app” as a remote group, only
-allowing connections from the members of that group.</p>
-<p><img alt='A diagram representing instances in security group "app" being allowed to connect to instances in security group "db", via port 27017 only' src="files/2023/ibm-cloud/5_allow-app-servers-access-db-remote.webp"></p>
-<p><em>Fig 5. Two security groups configured to allow application servers to send
-queries to MongoDB nodes using remote groups.</em></p>
-<p>This has several advantages. Firstly, our data store no longer accepts
-malicious queries from hackers all over the internet – only from our app
-instances.</p>
-<p>Secondly, our data store instances no longer need occupy a subnet, they can
-have arbitrary IP addresses.</p>
-<p>Because the security groups now specify allowed hosts by referencing each
-other, when the members of either group changes, the instance level firewalling
-rules on all instances are updated automatically, to allow or deny traffic
-based on the new membership.</p>
-<p>This configuration starts to show what makes security groups a flexible,
-dynamic, low-maintenance solution.</p>
-<h3>Accepting Web Requests</h3>
-<p>Our application instances aren't any use without a web front end. We put our
-web instances into their own security group (“web”), which allows incoming
-requests from users on the web, and outgoing API requests to our app instances,
-on port 61516.</p>
-<p>Similarly, we need to add a second rule to the “app” security group, to allow
-incoming requests from “web”. Fig 6. A traditional three-tier application using
-remote security groups.</p>
-<p><img alt='A diagram representing a user connecting via port 80 to instances in security group "web", which connect to instances in group "app" via port 61516, which connect to group "db" via port 27017' src="files/2023/ibm-cloud/6_web-app-db.webp"></p>
-<p><em>Fig 6. A traditional three-tier application using remote security groups.</em></p>
-<p>The more types of server we add to our setup, the more benefit “remote” groups
-provide, by minimizing setup configuration, and by automatically keeping
-firewalling rules up to date when group membership changes.</p>
-<p>A future blog post will discuss how to set up this three-tier scenario, and
-describe details such as how to use multiple network interfaces on an instance,
-such as the web instances which will use a public IP address exposed to users,
-versus a private IP exposed to the API instances.</p>
-<h3>Add a Bastion</h3>
-<p>We need some way to access our servers, so that we can, for example, deploy new
-versions of our application. Commonly this is achieved using a bastion server,
-which provides a single, carefully hardened point of access.</p>
-<p>Here we add a bastion server, and modify all our security groups to allow SSH
-access from the bastion to all our instances. The bastion instance itself would
-be configured to only allow incoming connections from the appropriate points in
-a CI/CD infrastructure (not shown.) Fig 7. Adding a bastion server with SSH
-access to all other instances.</p>
-<p><img alt='A diagram representing the same elements as figure 6 above, with the addition of a "bastion" group which connects to all instances via SSH on port 22' src="files/2023/ibm-cloud/7_bastion.webp"></p>
-<p><em>Fig 7. Adding a bastion server with SSH access to all other instances.</em></p>
-<p>This is starting to look like a realistic setup for a modest but scalable
-multi-tier application.</p>
-<h3>Conclusion</h3>
-<p>Security groups are a flexible and powerful way to firewall network traffic to
-and from your system's instances. We've shown how they might be used in a few
-typical scenarios, and hopefully demonstrated that they are flexible enough to
-accommodate many others. For more information, see
-<a href="https://cloud.ibm.com/docs/security-groups/sg_index.html">Getting Started with Security Groups</a>.</p>
-<hr>
-<p><span style="float: left">
-<img alt="Jonathan Hartley's smiley face" src="files/2023/ibm-cloud/jonathan-hartley.webp"></span>
-<br><strong>Jonathan Hartley</strong><br>
-Senior Cloud Developer</p>
-<p><span style="float: none"></span></p>
-<p></p>
-<p></p>
     </div>
     </article>
 </div>
