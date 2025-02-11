@@ -2,7 +2,7 @@
 .. title: Manifold Garden
 .. slug: manifold-garden
 .. date: 2021-10-04 22:16:08 UTC-05:00
-.. tags: geek,media,videogame,windows,completed
+.. tags: geek,media,videogame,pc,completed
 -->
 
 <span style="float: left">

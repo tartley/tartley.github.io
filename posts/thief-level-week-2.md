@@ -2,7 +2,7 @@
 .. title: Thief Level : Week 2
 .. slug: thief-level-week-2
 .. date: 2010-02-01 13:20:31-06:00
-.. tags: geek,gamedev,thief,videogame
+.. tags: geek,gamedev,thief,videogame,pc
 -->
 
 

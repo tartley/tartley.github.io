@@ -2,7 +2,7 @@
 .. title: Sinister Redux
 .. slug: sinister-redux
 .. date: 2010-01-09 15:57:47-06:00
-.. tags: geek,software,python,graphics,videogame
+.. tags: geek,software,python,graphics,videogame,pc
 -->
 
 

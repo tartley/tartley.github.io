@@ -2,7 +2,7 @@
 .. title: Subnautica: Below Zero
 .. slug: subnautica-below-zero
 .. date: 2021-11-22 16:24:22 UTC-06:00
-.. tags: geek,media,videogame,map,completed
+.. tags: geek,media,videogame,map,completed,pc
 -->
 
 *PC, published 2021*.

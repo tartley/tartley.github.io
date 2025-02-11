@@ -2,7 +2,7 @@
 .. title: Journey
 .. slug: journey
 .. date: 2022-05-09 06:22:20 UTC-05:00
-.. tags: geek,media,videogame,windows,completed
+.. tags: geek,media,videogame,pc,completed
 -->
 
 ![](/files/2022/journey-screenshot.webp)

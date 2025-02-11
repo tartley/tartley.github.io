@@ -1,5 +1,5 @@
 <!--
-.. title: Conky.
+.. title: Conky
 .. slug: conky
 .. date: 2020-01-15 16:09:13-06:00
 .. tags: linux

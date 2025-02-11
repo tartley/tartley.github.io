@@ -2,7 +2,7 @@
 .. title: Soma
 .. slug: soma
 .. date: 2022-10-04 13:51:16 UTC-05:00
-.. tags: geek,media,videogame,linux,completed
+.. tags: geek,media,videogame,pc,completed
 -->
 
 *by Frictional Games, published 2015*

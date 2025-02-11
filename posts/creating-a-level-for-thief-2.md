@@ -2,7 +2,7 @@
 .. title: Creating a Level for Thief 2
 .. slug: creating-a-level-for-thief-2
 .. date: 2010-01-25 13:50:26-06:00
-.. tags: creative,geek,gamedev,thief,videogame
+.. tags: creative,geek,gamedev,thief,videogame,pc
 -->
 
 
