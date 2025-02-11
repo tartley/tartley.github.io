@@ -2,7 +2,7 @@
 .. title: The Black Parade: Level 04: Death's Dominion
 .. slug: the-black-parade-level-04-deaths-dominion
 .. date: 2025-02-06 20:33:01 UTC-06:00
-.. tags: geek, media, videogame, thief, spoilers
+.. tags: geek, media, videogame, map, thief, spoilers
 -->
 
 So. Looking Glass's seminal 1998 PC game *Thief: The Dark Project* spawned an active and long-lived
