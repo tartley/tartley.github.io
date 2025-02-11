@@ -24,6 +24,6 @@ A website dedicated to oneself has been described — by my own father, no less 
 <span style="float: left">
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/files/2020/creative-commons-by-nc-sa.png" width=88 height=31 /></a>
 </span>
-<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Content on tartley.com</span>, by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com/pages/about" property="cc:attributionName" rel="cc:attributionURL">Jonathan Hartley</a>, is licensed under the<br/><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Content on tartley.com</span>, by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.tartley.com/about" property="cc:attributionName" rel="cc:attributionURL">Jonathan Hartley</a>, is licensed under the<br/><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.
 <span style="float: none">
 
