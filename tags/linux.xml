@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 31 Jan 2025 05:36:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>That Which Gave Chase</title><link>https://www.tartley.com/posts/that-which-gave-chase/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2024/that-which-gave-chase.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Released in 2023, played on Linux in 2024.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"&gt;&lt;b&gt;spoilers&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Mush your dog sled across cruel Arctic wastelands, driven onwards by a brisk and intense companion, who hired you to take him back to some remote spot, where it becomes apparent he had some sort of revelation, or maybe a breakdown.&lt;/p&gt;
-&lt;p&gt;The low-res, dithered presentation conveys the harsh, blinding conditions, as you struggle to make out details through the relentless wind and ice. The days and nights of the journey blur into one another, leaving you only fragmentary, disjointed memories:
-sledding across the ice;
-arriving at crude wooden huts for the night;
-mounting the sled before dawn;
-collapsing into rough bunks; 
-righting the sled while your companion curses you for a fool;
-silent moments alone.&lt;/p&gt;
-&lt;p&gt;Smash cuts amongst snowy wastes echo &lt;a href="https://readcomic.me/comic/nemo-heart-of-ice/issue-full/31"&gt;the discontinuities in Alan Moore's "&lt;em&gt;Nemo: Heart of Ice&lt;/em&gt;"&lt;/a&gt;, albeit this is a far more understated tale. The sense is of a protracted, exhausting time spent covering the distance, through punishing conditions, and it's surprisingly evocative.&lt;/p&gt;
-&lt;p&gt;The narrative leans into the disorientation, making nothing clear. Your companion becomes increasingly cryptic. He urges you onward, never pausing more than absolutely necessary. The deer behave increasingly strangely. Your companion regales you with sickening tales of the investigative mistreatment he subjected them to on his previous visit. By the time the strange mushrooms come into play it is very obvious that you are in a place to which you should never have come, very far from anywhere or anyone, with mounting dread, alone with with a madman. What happened the last time he took this route? What did he leave behind here? What awaits at your journey's end?&lt;/p&gt;
-&lt;p&gt;It's hard to know whether the difficulty of interpretation, or the non-literal aspects of your journey, are intended as the result of your character's mushroom-induced fever, or the pretensions of intrusively figurative allusions. Most likely, it seems to be both. The deliberate ambiguity runs deep.&lt;/p&gt;
-&lt;p&gt;Doesn't outstay its welcome, all done in an hour. But the memories remain.&lt;/p&gt;</description><category>completed</category><category>drugs</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/that-which-gave-chase/</guid><pubDate>Mon, 04 Nov 2024 21:56:38 GMT</pubDate></item><item><title>TIL: Constructing a PDF from .jpg image files</title><link>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have some folders of .jpg images that make up a comic. I want to convert them into a PDF to read
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about linux)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/linux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 11 Feb 2025 14:54:39 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Constructing a PDF from .jpg image files</title><link>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have some folders of .jpg images that make up a comic. I want to convert them into a PDF to read
 on my tab and other devices, and import into by bookshelf in Calibre.&lt;/p&gt;
 &lt;h3&gt;1. Install some prerequisites&lt;/h3&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;imagemagick&lt;span class="w"&gt; &lt;/span&gt;pdftk
@@ -131,135 +117,7 @@ them by setting the &lt;code&gt;-a&lt;/code&gt; Bash option:&lt;/p&gt;
 
 &lt;p&gt;Something I've managed to avoid ever realizing for 30 years, but now that I've seen it I can't
 imagine a week going by without using it. The kind of thing that should be part of everyone's "Week
-1 in a terminal" training that formal education courses never include.&lt;/p&gt;</description><category>bash</category><category>geek</category><category>linux</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</guid><pubDate>Thu, 03 Oct 2024 20:37:27 GMT</pubDate></item><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Soma - protagonist" src="https://www.tartley.com/files/2022/soma-protagonist.webp"&gt;
-&lt;/center&gt;&lt;br&gt;
-&lt;p&gt;Soma is a creepy survival horror game, that leans deeply into the moral and
-existential quandaries arising from the deterministic principle that it's
-possible to scan one's brain and copy the structure into some other substrate,
-yielding a second conscious entity, which thinks it is you. So there are deep
-science-fiction issues in play here, about whether we think such a scheme could
-ever possibly work, and about the practical, personal, and societal
-ramifications of it.&lt;/p&gt;
-&lt;p&gt;Major &lt;span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"&gt;spoilers&lt;/span&gt; ahead. It's seven years old at this point.&lt;/p&gt;
-&lt;p&gt;I loved the setup. A humdrum morning begins in your present-day Toronto
-apartment. A note on the fridge reminds you that today is the day of your
-medical appointment, a brain scan. Reaching the doctor's office by train, you
-find the experimental new type of brain scanner, run by some PhD in a
-cable-strewn side-office. Sit in the chair, don the helmet, wait for the scan
-to complete and- blink! Suddenly, you are elsewhere.&lt;/p&gt;
-&lt;p&gt;As the game progresses, it becomes obvious that the version of you that sat
-down in the seat did not experience this discontinuity. They completed the
-scan, removed the helmet, and continued their normal, everyday life.&lt;/p&gt;
-&lt;p&gt;You are not that copy. You open your eyes to a grim, decrepit cyberpunk future.
-Exploring, your only company is a menagerie of half-functional robots and
-drones, many of which are insane, and, in conversation, seem to be under the
-impression that they are human beings. It gradually becomes apparent that
-perceptual filters are in play, preventing them - and you - from noticing they
-are no longer human. At one point the ocean crashes in on you, and you drown
-for a little while, or at least think you are, but you still don't die. At that
-point you have to acknowledge the truth.&lt;/p&gt;
-&lt;p&gt;You have awoken to the year 2104, and the recorded brain scans of real humans
-are being used to animate drones. This is a scenario much like that told from a
-different perspective in the smashing short story
-&lt;a href="https://qntm.org/mmacevedo"&gt;&lt;em&gt;Lena&lt;/em&gt;&lt;/a&gt; by qntm.
-Failing systems engaged fall-backs, resulting in your obsolete brain scan being
-yanked from storage to inhabit an advanced humanoid robot, in a facility deep
-under the ocean, some time after a comet strike has scoured all life from the
-planet's surface.&lt;/p&gt;
-&lt;p&gt;If that wasn't bad enough, one facilitating technology of this nightmarish
-scenario, a black goo that mimics and improves upon electrical and biological
-circuitry it comes into contact with, has run rampant, growing probing tendrils
-which are wrecking the facility. Among other effects, it has reanimated the
-corpses of the last few humans, who skulk around, not in a good way. As our
-protagonist asks, incredulously, "You mean they've been brought back to life?".
-Our reassuring AI companion replies "Yeah, let's call it that."&lt;/p&gt;
-&lt;p&gt;The game borrows the highly effective mechanics of Frictional's previous games,
-the Amnesia and Penumbra series, where the proximity of horrific, shambling
-enemies causes your character to experience debilitating symptoms, including,
-in this case, static-y visual distortions as your neural hardware suffers from
-some overload or interference. This applies even if you simply look at an
-enemy, an act which immediately draws their attention. So your only chance to
-survive encounters is to stay well out of sight, and actively avert your eyes
-so you can't even watch what's going on. Not being able to see exactly what
-your enemies are, or what they are up to, turns out to be fabulously scary and
-atmospheric. At one point it lead directly to my wife catching me staring
-intently at a blank, black screen for a prolonged period, with a peculiar
-expression on my face, as I hid in a dark cupboard waiting for the slithering
-sounds behind me to go away.&lt;/p&gt;
-&lt;p&gt;Spurring us through this environment are not just threats to our immediate
-survival, but also the adoption of a project, to launch into space a
-solar-powered simulation, hosting all the last remaining brain scans of the
-now-defunct human race, known as the 'ARK'. This will allow the on-board sims
-to live a prolonged period of idyllic virtual existence, preserving at least
-some echo of what humanity was. Since the conceit of the game is that our
-character is a living and conscious entity that feels real emotion, the sims on
-the ARK are all presumably the same, so this seems like a worthwhile endeavor.&lt;/p&gt;
-&lt;p&gt;We are guided, motivated, and assisted by "Catherine", a simulated personality
-running on our hand-held omni-tool, based on the brain recording of an AI
-researcher, whose project during her lifetime was the ARK. Plugging her in to a
-wall or console socket lets her interface with our surroundings, activating
-power supplies and manipulating machinery. She leads us through a series of
-undersea facilities, linked by trains, submersibles, and the occasional
-disorienting trudge across the murky ocean floor, stirred up by ferocious
-currents and landslides, populated by organic-mechanical hybrid horrors that
-glide by in the darkness. I found these some of the absolute best, most
-atmospheric "walking simulator" moments I've experienced in a game.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="The ocean floor, stirred up by currents and landslides" src="https://www.tartley.com/files/2022/soma-murky.webp"&gt;
-&lt;br&gt;Is that another distant light up ahead? Good luck finding them while the currents pummel you,
-and hideous, deadly beasts loom out of the murk.
-&lt;/center&gt;&lt;br&gt;
-&lt;p&gt;Along the way, we encounter a few unforgettable scenarios. We come across the
-failing storage system in which the last remaining copy of our own brain scan
-resides. I decide to flip some buttons which delete it, prompting my character
-to respond with something like "Let this be the last time I wake up in this
-godforsaken place."&lt;/p&gt;
-&lt;p&gt;At another point, we find ourselves trapped within a collapsing facility on the
-bottom of the ocean, with the gibbering undead hammering on the door from the
-next room. There is an airlock leading out into the ocean, but we would be
-crushed at this depth. There is no way out. Luckily, Catherine is able to guide
-us into assembling a more robust robot, one capable of withstanding the
-pressure - all we have to do is sit in the chair and activate the transfer into
-it. We already did this once, back in Toronto. Easy.&lt;/p&gt;
-&lt;p&gt;Except, after the transfer, we glance back across the lab at our original - the
-pictured chap with red LED eyes - who, we notice, is still breathing. Asking
-Catherine about it, she reminds us that the brain scan is not a destructive
-operation. He's still in there, chemically subdued for the moment, but he'll
-soon wake up again, wondering why the transfer didn't work. So we are left with
-the option of stomping out of the airlock to safety, leaving him behind to his
-nightmarish fate. Or flipping a switch to deactivate him before we go.&lt;/p&gt;
-&lt;p&gt;A lot of these narrative beats work better as a game than they perhaps might in
-a written story. They emphasize the player's complicity, your moral
-culpability, which is a mode that games, for all their faults, can do better
-than any other media. Plenty of the lesser moments along the way expose the
-player to decisions about unplugging some human simulation or other which
-declares itself to be "alive", but which is gating your progress in some way.
-Some of them are yourself. Some of these acts require manhandling weighty
-cables, which require large, insistent tugging with the mouse controls. It's
-not just a disembodied button press. One has to provide a determined,
-definitive, mechanical input to end a life. In context, the guilt feels real.&lt;/p&gt;
-&lt;p&gt;Later in the journey, we finally stumble across an honest-to-goodness real,
-live human being. She describes how the rest of the humans will be gathered in
-particular locations, while she stayed to protect the ARK. But, we tell her, we
-just passed through those locations, and there were no humans remaining there.
-We both know that the planet's surface is sterile. A beat passes before she
-announces "So I'm the last human being left alive." She's deathly sick, and
-without hope. By the end of your interactions she asks you to turn off her
-life-support before you leave, and stay with her for her last wheezing moments.
-So this is how humanity ends.&lt;/p&gt;
-&lt;p&gt;Carrying on, because what else is there to do? We finally we get the ARK loaded
-into the launch system that delivers it to orbit, upload our brain scans onto
-it just before it launches, and - we've done it! Success!&lt;/p&gt;
-&lt;p&gt;There was a moment, about five minutes before the end, when I realized what was
-going to happen here, even though my character had not. It was a real emotional
-blow. I envied and pitied him for his naive hope. For believing there was still
-a way out. For, of course, the ARK's launch changed nothing for us. Our
-simulations are aboard it, but we are still sitting here, in a broken robot
-corpse in a collapsing facility at the bottom of a haunted ocean on a dead
-planet. The dispatched copy will enjoy life on the ARK, but we - like the copy
-of ourselves we left behind earlier - are stuck here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>New Laptop Time!</title><link>https://www.tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+1 in a terminal" training that formal education courses never include.&lt;/p&gt;</description><category>bash</category><category>geek</category><category>linux</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-shell-environment-variable-tricks/</guid><pubDate>Thu, 03 Oct 2024 20:37:27 GMT</pubDate></item><item><title>New Laptop Time!</title><link>https://www.tartley.com/posts/new-laptop-time/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
 &lt;img alt="A laptop" src="https://www.tartley.com/files/2008/02/lappy.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;My employer, Canonical, has a "bring your own hardware" policy, trusting that
@@ -851,59 +709,7 @@ sending replacements until Newegg got involved. Seems wisest to skip this.&lt;/p
 &lt;p&gt;&lt;img alt="Memory on sale in Newegg - legit" src="https://www.tartley.com/files/2022/memory-on-sale-legit.webp"&gt;&lt;/p&gt;
 &lt;p&gt;Yes! DDR4 in a SoDIMM package, 2x16GB modules at 3,200MHz and 18CL. The latency
 isn't quite as good, but it sounds legit, so I'll take it!&lt;/p&gt;
-&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>linux</category><guid>https://www.tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>Infra</title><link>https://www.tartley.com/posts/infra/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2024/infra.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Released in 2016, played by me on Linux in 2022.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;So much to love about this game. My enjoyment was perhaps stoked by my initial
-expectation that such a humdrum, non-mainstream game idea - of a civil engineer
-performing building inspections, documenting elements such as cracks and exposed
-rebar - must surely be a modest indie offering. But that expectation was vastly
-exceeded by the overwhelming generosity of the included content, providing level
-after level after level, all rich in geometry and atmosphere, navigable pathways
-surrounded by loads of non-essential scene setting, from broom cupboards to
-passing container ships, replete with specially coded set-pieces, and a story
-that expands in scope beyond all possible initial expectations.&lt;/p&gt;
-&lt;p&gt;It is filled with puzzles that are grounded in the atmospheric setting, having
-me clamber under cobweb-strewn desks with a flashlight, looking for tripped
-circuit breakers. The setting itself builds beautifully, starting with my
-inspection of bridges and decrepit sawmills as I wander along a small overgrown
-river path, but increasing in scope and severity as we continue downstream into
-town, culminating in varied and ambitious city facilities, from water treatment
-plants, abandoned sprawling secret WWI facilities, and various types of railway
-and power stations.&lt;/p&gt;
-&lt;p&gt;The puzzle difficulty is perfectly judged, demanding about the limit of effort I
-could bring to bear, and only on one or two occasions did I give up and find
-solutions online, leading overall to a tremendous sense of accomplishment. &lt;/p&gt;
-&lt;p&gt;The storyline exposes longstanding secretive corruption in the city, explaining
-both the pervasive neglect and sabotage that your inspections reveal, and it
-provides a variety of creative reasons why the buildings on your route are
-either long-abandoned, or else hastily evacuated moments before your arrival.&lt;/p&gt;
-&lt;p&gt;This gives you gloriously free reign over the facilities you pass through,
-opening up possibilities to perform ad-hoc repairs as you go. In particular, I
-particularly loved the way a successful navigation of levels like the water
-treatment plant requires the player to cross reference wall charts showing how
-the plant operates, with computer schematics showing the state of various
-machinery and valves, and overlay on top of that an understanding of a few signs
-and hand-written notes left behind by operators, to remind themselves about
-proper operating procedures, broken equipment, workarounds, and switches that
-were wired up backwards. And once you figure out this abstract understanding of
-what needs to be done, you have to map it all onto the actual 3D spatial layout
-of the massive hardware all around you, which often spans multiple buildings.
-Just delightful.&lt;/p&gt;
-&lt;p&gt;I should probably also mention the penultimate level, which is one of the most
-ambitious of many bold experiments that keep the levels diverse and surprising,
-by straying away from the core conceit. In this case that means navigating the
-locked-down hallways of an alternative, mushroom obsessed commune, squatting in
-a depressing tower block surrounded by trash. While this level is laudable for
-being the boldest of these experiments, and represents an important pillar of
-the narrative, an alternate society dropping out from the dysfunction induced in
-the city by the main story line. However, it didn't quite land for me, and I
-soon consulted an online walkthrough, without which I think I would have been
-trudging its grimy corridors for a long and dispiriting time. As it was, in
-contrast to the entire rest of the game, I was pleased to get it done as quickly
-as possible and move on without getting into its optional exploration and
-side-quests.&lt;/p&gt;
-&lt;p&gt;But other than that one level, I &lt;em&gt;loved&lt;/em&gt; this game, and played it with a passion
-and obsession that burned fiercely for weeks.&lt;/p&gt;</description><category>completed</category><category>drugs</category><category>geek</category><category>linux</category><category>media</category><category>videogame</category><guid>https://www.tartley.com/posts/infra/</guid><pubDate>Sun, 07 Aug 2022 20:43:24 GMT</pubDate></item><item><title>TIL: Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
+&lt;p&gt;And with that, I'm done. Now just awaiting the deliveries to arrive...&lt;/p&gt;</description><category>geek</category><category>hardware</category><category>journal</category><category>linux</category><guid>https://www.tartley.com/posts/new-laptop-time/</guid><pubDate>Wed, 21 Sep 2022 16:59:02 GMT</pubDate></item><item><title>TIL: Creating Animated Meme GIFs on the Command-Line</title><link>https://www.tartley.com/posts/creating-animated-meme-gifs-on-the-command-line/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Got sick of navigating the limitations of various online services to create
 animated gif memes, finally figured out how to do it manually. Not a universal
 process, just what worked for my situation. (Which is Ubuntu 21.10, "Impish".)&lt;/p&gt;
 &lt;p&gt;All of of the ffmpeg invocations could probably be combined into one, but I
@@ -1249,4 +1055,90 @@ or at least filing an issue there to try and get some help.&lt;/p&gt;
 &lt;p&gt;But compare it with a regular vector font. Here's Ubuntu Mono, the &lt;em&gt;best&lt;/em&gt; of
 the vector fonts I could find at these sizes. Blurry and inconsistent and hard
 to read:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;</description><category>dina</category><category>fonts</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2020/terminal-ubuntumono-small-ll.png"&gt;&lt;/p&gt;</description><category>dina</category><category>fonts</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/dina-as-otf/</guid><pubDate>Wed, 05 Feb 2020 20:51:33 GMT</pubDate></item><item><title>Conky</title><link>https://www.tartley.com/posts/conky/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;In the typical mad-scientist thrills-per-minute that is the Linux way,
+adding a CPU meter to my desktop involved crafting
+&lt;a href="https://github.com/tartley/dotfiles/tree/main/.config/conky"&gt;my own conky configuration file&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As always, building your own is a chore that crops up when you least expect
+it. But on the other hand, the opportunity for functional and aesthetic
+work results in something artisnally crafted to exactly meet your own personal
+needs. Something you can feel a little pride about. An elegant weapon,
+for a more... civilized age.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="An elegant weapon, for a more... civilised age." src="https://www.tartley.com/files/2020/conky.jpg"&gt;&lt;/p&gt;</description><category>linux</category><guid>https://www.tartley.com/posts/conky/</guid><pubDate>Wed, 15 Jan 2020 22:09:13 GMT</pubDate></item><item><title>Installing Colout</title><link>https://www.tartley.com/posts/installing-colout/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;a href="http://nojhan.github.io/colout/"&gt;Colout&lt;/a&gt; is amazing, I use it all the time.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Colout on PyPI now works just fine, all the following is needless.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;But &lt;code&gt;pip install colout&lt;/code&gt; from PyPI is broken, and has been for many months,
+due to a typo in the
+&lt;a href="https://pypi.org/project/colout/"&gt;latest (v0.5) PyPI release&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I've tried to contact the author, with email and
+&lt;a href="https://github.com/nojhan/colout/issues/101i"&gt;issues&lt;/a&gt; on the
+&lt;a href="https://github.com/nojhan/colout/issues"&gt;Colout Github project&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This has had no effect, although I see the author has made substantial commits
+to the Github project in that time, including fixing this problem and tagging a
+new v0.6 version, although has not released any of that to PyPI.&lt;/p&gt;
+&lt;p&gt;So, in increasing order of desirability, you can either:&lt;/p&gt;
+&lt;p&gt;Clone the latest repo &lt;a href="https://github.com/nojhan/colout"&gt;from Github&lt;/a&gt;, and
+install from that:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# cd to the clone, then&lt;/span&gt;
+python3&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;.
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Or, pip install the version I uploaded to PyPI, which is a straight copy of the
+latest Github at the time:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;colout-fix
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Or, best of all, pip install straight from the original Github repo:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;--user&lt;span class="w"&gt; &lt;/span&gt;git+git://github.com/nojhan/colout.git
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that, throughout, we're using &lt;code&gt;--user&lt;/code&gt;, so that you can install
+development tools like this system-wide for the current user, without needing a
+virtualenv, without needing root access, and without modifying your installed
+Python system libraries.&lt;/p&gt;</description><category>geek</category><category>linux</category><category>terminal</category><guid>https://www.tartley.com/posts/installing-colout/</guid><pubDate>Sat, 26 Jan 2019 00:40:55 GMT</pubDate></item><item><title>Running Multiple Firefox Profiles on Linux</title><link>https://www.tartley.com/posts/running-multiple-firefox-profiles/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I recently switched from Chrome to Firefox. It's so &lt;em&gt;fast&lt;/em&gt;, and easier
+to trust that Mozilla has my privacy and interests at heart than Google
+does.&lt;/p&gt;
+&lt;p&gt;I want to run a second profile at work, to keep a distinct set of open
+tabs, bookmarks, and the like. Here's how I did it:&lt;/p&gt;
+&lt;p&gt;Close all Firefox windows. Run the Profile Manager with &lt;code&gt;firefox -p&lt;/code&gt;.
+Create a second profile.&lt;/p&gt;
+&lt;p&gt;Open Firefox and find the directories your profiles live by browsing to
+&lt;code&gt;about:profiles&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Substitute those directories into this firefox.desktop file, where I've
+marked 'XXX':&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# Gnome3 .desktop file for Firefox with multiple profiles&lt;/span&gt;
+&lt;span class="k"&gt;[Desktop Entry]&lt;/span&gt;
+&lt;span class="na"&gt;Version&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;1.0&lt;/span&gt;
+&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Firefox&lt;/span&gt;
+&lt;span class="na"&gt;Comment&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Browse the web&lt;/span&gt;
+&lt;span class="na"&gt;GenericName&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Web Browser&lt;/span&gt;
+&lt;span class="na"&gt;Keywords&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Internet;WWW;Browser;Web;Explorer&lt;/span&gt;
+&lt;span class="na"&gt;Type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Application&lt;/span&gt;
+&lt;span class="na"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;firefox --no-remote %u&lt;/span&gt;
+&lt;span class="na"&gt;Terminal&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;false&lt;/span&gt;
+&lt;span class="na"&gt;X-MultipleArgs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;false&lt;/span&gt;
+&lt;span class="na"&gt;Icon&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;firefox&lt;/span&gt;
+&lt;span class="na"&gt;Categories&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;GNOME;GTK;Network;WebBrowser;&lt;/span&gt;
+&lt;span class="na"&gt;Actions&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;home;work&lt;/span&gt;
+&lt;span class="na"&gt;MimeType&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;&lt;/span&gt;
+&lt;span class="na"&gt;StartupNotify&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;true&lt;/span&gt;
+
+&lt;span class="k"&gt;[Desktop Action home]&lt;/span&gt;
+&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Firefox (home)&lt;/span&gt;
+&lt;span class="na"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;firefox --profile .mozilla/firefox/XXX --no-remote %u&lt;/span&gt;
+
+&lt;span class="k"&gt;[Desktop Action work]&lt;/span&gt;
+&lt;span class="na"&gt;Name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Firefox (work)&lt;/span&gt;
+&lt;span class="na"&gt;Exec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;firefox --profile .mozilla/firefox/XXX --no-remote %u&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Save the above as firefox.desktop and install using:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;desktop-file-validate&lt;span class="w"&gt; &lt;/span&gt;firefox.desktop
+$&lt;span class="w"&gt; &lt;/span&gt;desktop-file-install&lt;span class="w"&gt; &lt;/span&gt;--dir&lt;span class="o"&gt;=&lt;/span&gt;.local/share/applications&lt;span class="w"&gt; &lt;/span&gt;firefox.desktop
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This results in a Firefox icon in your applications menu that defaults
+to whichever profile you mark as default in the ProfileManager, but
+right clicking lets you select the home or work profile explicitly. Open
+each, and change the theme in one of them so the windows are visually
+distinct.&lt;/p&gt;
+&lt;p&gt;Tested on Ubuntu, RHEL 7.3, probably works on all Gnome3 desktops.&lt;/p&gt;</description><category>geek</category><category>linux</category><guid>https://www.tartley.com/posts/running-multiple-firefox-profiles/</guid><pubDate>Thu, 22 Feb 2018 00:40:55 GMT</pubDate></item></channel></rss>
