@@ -334,7 +334,6 @@ TAG_DESCRIPTIONS = {
        "gis": "Geographical Information Systems",
        "git": "Source code control.",
        "graphics": "Writing programs to generate images.",
-       "gumby": "",
        "image": "",
        "imho": "In my humble opinion.",
        "journal": "Events of my life.",
@@ -539,7 +538,7 @@ HIDDEN_AUTHORS = ['Guest']
 # Optional HTML that displayed on “main” blog index.html files.
 # May be used for a greeting. (translatable)
 FRONT_INDEX_HEADER = {
-    DEFAULT_LANG: '<a rel="me" href="https://fosstodon.org/@tartley">Mastodon</a>'
+    DEFAULT_LANG: '<a rel="me" href="https://fosstodon.org/@tartley" />'
 }
 
 # Create per-month archives instead of per-year
