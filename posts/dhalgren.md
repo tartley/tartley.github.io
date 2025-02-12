@@ -23,12 +23,15 @@ going to attempt a quick summary of the plot.
 <center>✻  ✻  ✻</center><br />
 
 The main character, Kid, is not simply an unreliable narrator, but is actually
-delusional. Or he might be. His sanity remains unknowable. The city of Bellona's
-physical environment is deadly unpredictable, laws of cause and effect no longer
-apply, and the sense of chaotic unreality permeates everything. The social order
-is gone, as people wander from one encounter to the next, making friends or
-enemies or lovers on an hour-by-hour basis. Everyone is vulnerable to rape and
-death at the hands of the literally monstrous Scorpion gangs.
+amnesiac, and delusional. Or he might be. His sanity remains unknowable.
+Certainly he cannot tell right from left, and hence is constantly getting lost.
+The city of Bellona's physical environment is deadly unpredictable, laws of
+cause and effect no longer apply, time is out of joint, and occasionally the
+clouds part to reveal two moons. A sense of chaotic unreality permeates
+everything. The social order is gone, as people wander from one encounter to the
+next, making friends or enemies or lovers on an hour-by-hour basis. Everyone is
+vulnerable to rape and death at the hands of the literally monstrous Scorpion
+gangs.
 
 Kid discovers a notebook, containing unsettling entries which, glimpsed,
 are very similar to passages from the novel we are reading. Perhaps it is
