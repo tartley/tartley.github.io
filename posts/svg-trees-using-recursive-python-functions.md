@@ -2,7 +2,7 @@
 .. title: SVG Trees using recursive Python functions
 .. slug: svg-trees-using-recursive-python-functions
 .. date: 2025-02-28 11:10:27 UTC-06:00
-.. tags: creative,graphics,genart,svg,python
+.. tags: geek,creative,graphics,genart,svg,python
 -->
 
 Inspired by a woodland hike under the first blue skies we've seen this year, I

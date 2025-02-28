@@ -2,7 +2,7 @@
 .. title: Use light-opacity RGBA to fix halo artifacts along edges of textures
 .. slug: use-light-opacity-rgba-to-fix-halo-artifacts-along-edges-of-textures
 .. date: 2010-01-03 15:33:10-06:00
-.. tags: graphics,pyglet
+.. tags: geek,graphics,pyglet
 -->
 
 This is a quick post in response to the Vimeo video post [Getting Rid of
@@ -36,12 +36,13 @@ interpolation between the RGBA of your transparent pixels, and your icon
 texture color. For example, for various transparencies of purple on top of 
 a blue background:
 
-| <span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/opaque-purple.png "opaque-purple")</span> **icon** (1, 0, 1, 1) fully opaque purple
-| <span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/halfwhite-purple.png "halfwhite-purple")</span> **interpolation** (1, 0.5, 1, 0.5) half-transparent whitish-purple
-| <span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/transparent-white.png "transparent-white")</span> **background** (1, 1, 1, 0) fully transparent white
+color | purpose | r,g,b,a | color description
+-|-|-|-
+<br /><span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/opaque-purple.png "opaque-purple")</span><br /><br /> | icon | (1, 0, 1, 1) | fully opaque purple
+<br /><span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/halfwhite-purple.png "halfwhite-purple")</span><br /><br /> | interpolation | (1, 0.5, 1, 0.5) | half-transparent whitish-purple
+<br /><span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/transparent-white.png "transparent-white")</span><br /><br /> | background | (1, 1, 1, 0) | fully transparent white  
 
-(_Update: I think some CSS nuance has been lost in a website migration. On
-quick glance, this doesn't seem to look like I expect it to, any more._)
+<br />
 
 The intermediate color isn't actually very close to white, but in
 contrast to the pure purple it abuts against, it's significantly paler,
@@ -57,9 +58,13 @@ common - change your transparent pixels to be the same color as whatever
 colors they abut against. The background pixels are now
 fully-transparent purple, giving us:
 
-| <span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/opaque-purple.png "opaque-purple")</span> **icon** (1, 0, 1, 1) fully opaque purple
-| <span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/halftransparent-purple.png "halftransparent-purple")</span> **interpolation** (1, 0, 1, 0.5) half-transparent whitish-purple
-| <span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/transparent-white.png "transparent-purple")</span> **background** (1, 0, 1, 0) fully transparent purple
+color | purpose | r,g,b,a | color description
+-|-|-|-
+<br /><span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/opaque-purple.png "opaque-purple")</span><br /><br /> | icon | (1, 0, 1, 1) | fully opaque purple
+<br /><span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/halftransparent-purple.png "halftransparent-purple")</span><br /><br /> | interpolation | (1, 0, 1, 0.5) | half-transparent purple
+<br /><span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/transparent-white.png "transparent-purple")</span><br /><br /> | background | (1, 0, 1, 0) | fully transparent purple
+
+<br />
 
 So now the interpolation ends up being half-transparent pure purple.
 This eliminates the white halo artefact, as demonstrated in the video.
@@ -130,9 +135,13 @@ interpolation process, resulting in the same RGBA values as would have
 been calculated before, but now we have a different interpretation of
 what those values mean:
 
-| <span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/opaque-purple.png "opaque-purple")</span> **icon** (1, 0, 1, 1) - pure purple that fully overwrites the previous color
-| <span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/halftransparent-purple.png "halftransparent-purple")</span> **interpolation** (0.5, 0, 0.5, 0.5) - half-bright purple mixed with 50% of the prev dest color
-| <span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/transparent-white.png "transparent-white")</span> **background** (0, 0, 0, 0) - fully transparent (no color)
+color | purpose | r,g,b,a | color description
+-|-|-|-
+<br /><span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/opaque-purple.png "opaque-purple")</span><br /><br /> | icon | (1, 0, 1, 1) |  pure purple that fully overwrites the previous color
+<br /><span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/halftransparent-purple.png "halftransparent-purple")</span><br /><br /> | interpolation | (0.5, 0, 0.5, 0.5) | half-bright purple mixed with 50% of the prev dest color
+<br /><span style="background-color: #0088ff; padding: 1em;">![](/files/2010/01/transparent-white.png "transparent-white")</span><br /><br /> | background | (0, 0, 0, 0) | fully transparent (no color)
+
+<br />
 
 The interpolated color is now blended with the previous destination
 color using the new OpenGL blend mode:

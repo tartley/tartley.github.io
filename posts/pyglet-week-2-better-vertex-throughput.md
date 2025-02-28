@@ -2,7 +2,7 @@
 .. title: pyglet week 2: Better Vertex Throughput
 .. slug: pyglet-week-2-better-vertex-throughput
 .. date: 2008-02-16 04:24:33-06:00
-.. tags: geek,software,python,graphics,pyglet
+.. tags: geek,software,python,graphics,genart,pyglet
 -->
 
 In last week's
