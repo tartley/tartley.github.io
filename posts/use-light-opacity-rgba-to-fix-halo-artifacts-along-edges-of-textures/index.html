@@ -22,6 +22,7 @@ Safari).
 Thanks to FlashB">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2010-01-03T15:33:10-06:00">
+<meta property="article:tag" content="geek">
 <meta property="article:tag" content="graphics">
 <meta property="article:tag" content="pyglet">
 </head>
@@ -124,11 +125,41 @@ understanding of it.</p>
 interpolation between the RGBA of your transparent pixels, and your icon
 texture color. For example, for various transparencies of purple on top of 
 a blue background:</p>
-<p>| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/opaque-purple.png" title="opaque-purple"></span> <strong>icon</strong> (1, 0, 1, 1) fully opaque purple
-| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/halfwhite-purple.png" title="halfwhite-purple"></span> <strong>interpolation</strong> (1, 0.5, 1, 0.5) half-transparent whitish-purple
-| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/transparent-white.png" title="transparent-white"></span> <strong>background</strong> (1, 1, 1, 0) fully transparent white</p>
-<p>(<em>Update: I think some CSS nuance has been lost in a website migration. On
-quick glance, this doesn't seem to look like I expect it to, any more.</em>)</p>
+<table>
+<thead><tr>
+<th>color</th>
+<th>purpose</th>
+<th>r,g,b,a</th>
+<th>color description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+<br><span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/opaque-purple.png" title="opaque-purple"></span><br><br>
+</td>
+<td>icon</td>
+<td>(1, 0, 1, 1)</td>
+<td>fully opaque purple</td>
+</tr>
+<tr>
+<td>
+<br><span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/halfwhite-purple.png" title="halfwhite-purple"></span><br><br>
+</td>
+<td>interpolation</td>
+<td>(1, 0.5, 1, 0.5)</td>
+<td>half-transparent whitish-purple</td>
+</tr>
+<tr>
+<td>
+<br><span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/transparent-white.png" title="transparent-white"></span><br><br>
+</td>
+<td>background</td>
+<td>(1, 1, 1, 0)</td>
+<td>fully transparent white</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
 <p>The intermediate color isn't actually very close to white, but in
 contrast to the pure purple it abuts against, it's significantly paler,
 and causes the 'white looking halo' effect around the edge of the purple
@@ -140,9 +171,41 @@ of the haloes from white to black.</p>
 common - change your transparent pixels to be the same color as whatever
 colors they abut against. The background pixels are now
 fully-transparent purple, giving us:</p>
-<p>| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/opaque-purple.png" title="opaque-purple"></span> <strong>icon</strong> (1, 0, 1, 1) fully opaque purple
-| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/halftransparent-purple.png" title="halftransparent-purple"></span> <strong>interpolation</strong> (1, 0, 1, 0.5) half-transparent whitish-purple
-| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/transparent-white.png" title="transparent-purple"></span> <strong>background</strong> (1, 0, 1, 0) fully transparent purple</p>
+<table>
+<thead><tr>
+<th>color</th>
+<th>purpose</th>
+<th>r,g,b,a</th>
+<th>color description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+<br><span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/opaque-purple.png" title="opaque-purple"></span><br><br>
+</td>
+<td>icon</td>
+<td>(1, 0, 1, 1)</td>
+<td>fully opaque purple</td>
+</tr>
+<tr>
+<td>
+<br><span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/halftransparent-purple.png" title="halftransparent-purple"></span><br><br>
+</td>
+<td>interpolation</td>
+<td>(1, 0, 1, 0.5)</td>
+<td>half-transparent purple</td>
+</tr>
+<tr>
+<td>
+<br><span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/transparent-white.png" title="transparent-purple"></span><br><br>
+</td>
+<td>background</td>
+<td>(1, 0, 1, 0)</td>
+<td>fully transparent purple</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
 <p>So now the interpolation ends up being half-transparent pure purple.
 This eliminates the white halo artefact, as demonstrated in the video.
 The only minor downside is that the artist has to make sure the
@@ -198,9 +261,41 @@ means.</p>
 interpolation process, resulting in the same RGBA values as would have
 been calculated before, but now we have a different interpretation of
 what those values mean:</p>
-<p>| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/opaque-purple.png" title="opaque-purple"></span> <strong>icon</strong> (1, 0, 1, 1) - pure purple that fully overwrites the previous color
-| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/halftransparent-purple.png" title="halftransparent-purple"></span> <strong>interpolation</strong> (0.5, 0, 0.5, 0.5) - half-bright purple mixed with 50% of the prev dest color
-| <span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/transparent-white.png" title="transparent-white"></span> <strong>background</strong> (0, 0, 0, 0) - fully transparent (no color)</p>
+<table>
+<thead><tr>
+<th>color</th>
+<th>purpose</th>
+<th>r,g,b,a</th>
+<th>color description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+<br><span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/opaque-purple.png" title="opaque-purple"></span><br><br>
+</td>
+<td>icon</td>
+<td>(1, 0, 1, 1)</td>
+<td>pure purple that fully overwrites the previous color</td>
+</tr>
+<tr>
+<td>
+<br><span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/halftransparent-purple.png" title="halftransparent-purple"></span><br><br>
+</td>
+<td>interpolation</td>
+<td>(0.5, 0, 0.5, 0.5)</td>
+<td>half-bright purple mixed with 50% of the prev dest color</td>
+</tr>
+<tr>
+<td>
+<br><span style="background-color: #0088ff; padding: 1em;"><img alt="" src="../../files/2010/01/transparent-white.png" title="transparent-white"></span><br><br>
+</td>
+<td>background</td>
+<td>(0, 0, 0, 0)</td>
+<td>fully transparent (no color)</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
 <p>The interpolated color is now blended with the previous destination
 color using the new OpenGL blend mode:</p>
 <div class="code"><pre class="code literal-block"><span class="n">dest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">src</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dest</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">alpha</span><span class="p">)</span>
@@ -223,7 +318,8 @@ anything about how their code works though, so I might be talking
 nonsense here.</p>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../tags/graphics/" rel="tag">graphics</a></li>
+<li><a class="tag p-category" href="../../tags/geek/" rel="tag">geek</a></li>
+            <li><a class="tag p-category" href="../../tags/graphics/" rel="tag">graphics</a></li>
             <li><a class="tag p-category" href="../../tags/pyglet/" rel="tag">pyglet</a></li>
         </ul>
 <ul class="pager hidden-print">

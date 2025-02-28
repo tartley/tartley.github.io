@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/tags/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 21 Feb 2025 16:20:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Black Parade: Level 04: Death's Dominion</title><link>https://www.tartley.com/posts/the-black-parade-level-04-deaths-dominion/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;So. Looking Glass's seminal 1998 PC game &lt;em&gt;Thief: The Dark Project&lt;/em&gt; spawned an active and long-lived
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/tags/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 28 Feb 2025 18:39:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>SVG Trees using recursive Python functions</title><link>https://www.tartley.com/posts/svg-trees-using-recursive-python-functions/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Inspired by a woodland hike under the first blue skies we've seen this year, I
+got home and showed the kiddo how to draw an SVG tree with recursive functions
+in Python.&lt;/p&gt;
+&lt;p&gt;At first the generated shape looked kinda lumpy and uninspiring, but it did
+demonstrate the principle. We were thinking of calling it a day, but I did a
+little bit of tweaking on parameters to control how each branch differs in
+length and direction from its parent. Suddenly, the generated shape really came
+alive, and started to look a lot more like the trees we'd seen on our hike that
+afternoon.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Silhouette of tree against a blue sky, drawn by a Python program" src="https://www.tartley.com/files/2025/tree-art.lossy.webp"&gt;&lt;/p&gt;
+&lt;p&gt;This image uses a recursion depth of 18, yielding 2^18 twigs, i.e. 250,000,
+which generates a 100MB SVG file. This takes about ten seconds to generate, and
+another ten to display in an SVG viewer. Alternatively, I can convert the SVG to
+a lossy webp, as displayed here, which is only 280kB and displays instantly.&lt;/p&gt;
+&lt;p&gt;Pushing the generation to greater recursion depth makes my SVG viewer and
+conversion tools start to stutter and barf. Presumably I could be smarter about
+the SVG I generate -- maybe generating the outline of the tree as points on
+fewer, more complex polygons, instead of a polygon for each branch segment? No
+matter, the artifact is the thing here, and it's done now.&lt;/p&gt;
+&lt;p&gt;Source is at &lt;a href="https://github.com/tartley/tree-art"&gt;https://github.com/tartley/tree-art&lt;/a&gt;.&lt;/p&gt;</description><category>creative</category><category>geek</category><category>genart</category><category>graphics</category><category>python</category><category>svg</category><guid>https://www.tartley.com/posts/svg-trees-using-recursive-python-functions/</guid><pubDate>Fri, 28 Feb 2025 17:10:27 GMT</pubDate></item><item><title>The Black Parade: Level 04: Death's Dominion</title><link>https://www.tartley.com/posts/the-black-parade-level-04-deaths-dominion/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;So. Looking Glass's seminal 1998 PC game &lt;em&gt;Thief: The Dark Project&lt;/em&gt; spawned an active and long-lived
 modding community, who created hundreds of fan-made extra levels, many of which are extremely artful
 and creative.&lt;/p&gt;
 &lt;p&gt;One group of particularly obsessed loons spent seven years crafting an extraordinary set of such
@@ -825,65 +844,4 @@ do an exercise like this post just to add it to their mental toolbox, it needs
 maintenance effort, not just in CPython but in other implementations too, and
 needs handling by tools such as syntax highlighters, type checkers. It really
 doesn't seem like a net win to me, &lt;em&gt;unless&lt;/em&gt; you're writing way more parsers
-than the average programmer, which no doubt the champions of this feature are.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/structured-pattern-matching-in-python/</guid><pubDate>Sat, 29 Jul 2023 23:15:26 GMT</pubDate></item><item><title>TIL: Makefiles that are self-documenting, and process all extant files.</title><link>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;h3&gt;Self-documenting Makefiles&lt;/h3&gt;
-&lt;p&gt;A trick from years ago, but I copy it around between projects enough that it
-deserves calling out. Add a target:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;help&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;## Show this help.&lt;/span&gt;
-&lt;span class="c"&gt;    @# Optionally add 'sort' before 'awk'&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;@grep&lt;span class="w"&gt; &lt;/span&gt;-E&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'^[a-zA-Z_\.%-]+:.*?## .*$$'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;MAKEFILE_LIST&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;awk&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'&lt;/span&gt;
-&lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;help&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Decorate other targets with a descriptive '##' comment, like "&lt;em&gt;Show this help&lt;/em&gt;"
-above. Now calling the 'help' target will summarize all the things the Makefile
-can do. eg:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$ make help
-help       Show this help.
-setup      Install required system packages using 'apt install'.
-%.pdf      Generate given PDF from corresponding .tex file.
-all        Convert all .tex files to PDF.
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;You might choose to make 'help' the first target in the Makefile, so that it
-gets triggered when the user runs &lt;code&gt;make&lt;/code&gt; without arguments.&lt;/p&gt;
-&lt;h3&gt;Process all extant files&lt;/h3&gt;
-&lt;p&gt;Make's canonical paradigm is that you tell it the name of the file to generate,
-and it uses the tree of dependencies specified in the Makefile to figure out
-how to build it. Typically you'll use automatic variables like "$&amp;lt;" to represent
-the wildcarded source filename:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;%.pdf&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;%.&lt;span class="n"&gt;tex&lt;/span&gt; &lt;span class="c"&gt;## Generate given PDF from corresponding .tex file.&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;pdflatex&lt;span class="w"&gt; &lt;/span&gt;$&amp;lt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The pitfall is that when invoking this, you have to name all the PDF files you
-want to generate. If the names are a fixed part of your build, they can be
-embedded in the Makefile itself:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;one&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt; &lt;span class="n"&gt;two&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt; &lt;span class="n"&gt;three&lt;/span&gt;.&lt;span class="n"&gt;pdf&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;But if their names are dynamic, you have to specify them on the command line,
-which is a pain:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;one.pdf&lt;span class="w"&gt; &lt;/span&gt;two.pdf&lt;span class="w"&gt; &lt;/span&gt;three.pdf
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This is easy enough when &lt;em&gt;re-&lt;/em&gt;generating all the PDFs that already exist:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;*.pdf
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;but is no help when you just have a bunch of .tex files and you just want Make
-to build all of them. This is going the opposite way to canonical make usage.
-We want to specify the existing source files (&lt;code&gt;*.tex&lt;/code&gt;, in this case), and have
-Make build the resulting products.&lt;/p&gt;
-&lt;p&gt;To do it, we need our Makefile to enumerate the existing source files:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;TEX_FILES&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;wildcard&lt;span class="w"&gt; &lt;/span&gt;*.tex&lt;span class="k"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Using the 'wildcard' function here behaves better than a bare wildcard
-expansion, e.g. it produces no output when there are no matches, rather than
-outputting the unmatched wildcard expression.&lt;/p&gt;
-&lt;p&gt;Then use a substitution to generate the list of .pdf filenames:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;all&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;TEX_FILES:%.tex&lt;span class="o"&gt;=&lt;/span&gt;%.pdf&lt;span class="k"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now &lt;code&gt;make all&lt;/code&gt; will generate one .pdf file for each extant .tex file, regardless of
-whether the corresponding .pdf files already exist or not.&lt;/p&gt;</description><category>geek</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/makefiles-that-are-self-documenting-and-process-all-extant-files/</guid><pubDate>Thu, 06 Jul 2023 16:50:16 GMT</pubDate></item></channel></rss>
+than the average programmer, which no doubt the champions of this feature are.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/structured-pattern-matching-in-python/</guid><pubDate>Sat, 29 Jul 2023 23:15:26 GMT</pubDate></item></channel></rss>

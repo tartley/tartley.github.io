@@ -39,7 +39,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/archive.html</loc>
-  <lastmod>2025-02-28T18:08:00Z</lastmod>
+  <lastmod>2025-02-28T18:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/files/Jonathan-Hartley-resume.html</loc>
@@ -87,15 +87,15 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-17.html</loc>
-  <lastmod>2025-02-21T16:20:00Z</lastmod>
+  <lastmod>2025-02-28T18:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-18.html</loc>
-  <lastmod>2025-02-12T17:59:00Z</lastmod>
+  <lastmod>2025-02-28T18:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-19.html</loc>
-  <lastmod>2025-02-12T17:59:00Z</lastmod>
+  <lastmod>2025-02-28T18:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-2.html</loc>
@@ -159,11 +159,11 @@
  </url>
  <url>
   <loc>https://www.tartley.com/index-8.html</loc>
-  <lastmod>2025-02-12T17:59:00Z</lastmod>
+  <lastmod>2025-02-28T18:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/index-9.html</loc>
-  <lastmod>2025-02-12T17:59:00Z</lastmod>
+  <lastmod>2025-02-28T18:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/posts/112263/</loc>
@@ -1311,7 +1311,7 @@
  </url>
  <url>
   <loc>https://www.tartley.com/tags/</loc>
-  <lastmod>2025-02-28T17:53:00Z</lastmod>
+  <lastmod>2025-02-28T18:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/tags/animation/</loc>
@@ -1620,6 +1620,10 @@
  <url>
   <loc>https://www.tartley.com/tags/ps2/</loc>
   <lastmod>2025-01-31T05:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tartley.com/tags/pygle/</loc>
+  <lastmod>2025-02-28T18:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tartley.com/tags/pyglet/</loc>
