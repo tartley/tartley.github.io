@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about creative)</title><link>https://www.tartley.com/</link><description>Generating instead of consuming.</description><atom:link href="https://www.tartley.com/tags/creative.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Wed, 12 Feb 2025 17:59:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Gallery of Drawings</title><link>https://www.tartley.com/posts/gallery-of-drawings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;This blog now has
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about creative)</title><link>https://www.tartley.com/</link><description>Generating instead of consuming.</description><atom:link href="https://www.tartley.com/tags/creative.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 28 Feb 2025 18:08:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>SVG Trees using recursive Python functions</title><link>https://www.tartley.com/posts/svg-trees-using-recursive-python-functions/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Inspired by a woodland hike under the first blue skies we've seen this year, I
+got home and showed the kiddo how to draw an SVG tree with recursive functions
+in Python.&lt;/p&gt;
+&lt;p&gt;At first the generated shape looked kinda lumpy and uninspiring, but it did
+demonstrate the principle. We were thinking of calling it a day, but I did a
+little bit of tweaking on parameters to control how each branch differs in
+length and direction from its parent. Suddenly, the generated shape really came
+alive, and started to look a lot more like the trees we'd seen on our hike that
+afternoon.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Silhouette of tree against a blue sky, drawn by a Python program" src="https://www.tartley.com/files/2025/tree-art.lossy.webp"&gt;&lt;/p&gt;
+&lt;p&gt;This image uses a recursion depth of 18, yielding 2^18 twigs, i.e. 250,000,
+which generates a 100MB SVG file. This takes about ten seconds to generate, and
+another ten to display in an SVG viewer. Alternatively, I can convert the SVG to
+a lossy webp, as displayed here, which is only 280kB and displays instantly.&lt;/p&gt;
+&lt;p&gt;Pushing the generation to greater recursion depth makes my SVG viewer and
+conversion tools start to stutter and barf. Presumably I could be smarter about
+the SVG I generate -- maybe generating the outline of the tree as points on
+fewer, more complex polygons, instead of a polygon for each branch segment? No
+matter, the artifact is the thing here, and it's done now.&lt;/p&gt;
+&lt;p&gt;Source is at &lt;a href="https://github.com/tartley/tree-art"&gt;https://github.com/tartley/tree-art&lt;/a&gt;.&lt;/p&gt;</description><category>creative</category><category>genart</category><category>graphics</category><category>python</category><category>svg</category><guid>https://www.tartley.com/posts/svg-trees-using-recursive-python-functions/</guid><pubDate>Fri, 28 Feb 2025 17:10:27 GMT</pubDate></item><item><title>Gallery of Drawings</title><link>https://www.tartley.com/posts/gallery-of-drawings/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;This blog now has
 &lt;a href="https://www.tartley.com/galleries/Drawings/"&gt;a gallery of my drawings&lt;/a&gt;.
 A middle-aged outburst from the dying embers of my creativity has produced some
 devastatingly inept scrawls. I weep for having caused them to impinge upon your

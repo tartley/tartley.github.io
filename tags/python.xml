@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about python)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 21 Feb 2025 16:20:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Structured Pattern Matching in Python</title><link>https://www.tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about python)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 28 Feb 2025 18:08:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>SVG Trees using recursive Python functions</title><link>https://www.tartley.com/posts/svg-trees-using-recursive-python-functions/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Inspired by a woodland hike under the first blue skies we've seen this year, I
+got home and showed the kiddo how to draw an SVG tree with recursive functions
+in Python.&lt;/p&gt;
+&lt;p&gt;At first the generated shape looked kinda lumpy and uninspiring, but it did
+demonstrate the principle. We were thinking of calling it a day, but I did a
+little bit of tweaking on parameters to control how each branch differs in
+length and direction from its parent. Suddenly, the generated shape really came
+alive, and started to look a lot more like the trees we'd seen on our hike that
+afternoon.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Silhouette of tree against a blue sky, drawn by a Python program" src="https://www.tartley.com/files/2025/tree-art.lossy.webp"&gt;&lt;/p&gt;
+&lt;p&gt;This image uses a recursion depth of 18, yielding 2^18 twigs, i.e. 250,000,
+which generates a 100MB SVG file. This takes about ten seconds to generate, and
+another ten to display in an SVG viewer. Alternatively, I can convert the SVG to
+a lossy webp, as displayed here, which is only 280kB and displays instantly.&lt;/p&gt;
+&lt;p&gt;Pushing the generation to greater recursion depth makes my SVG viewer and
+conversion tools start to stutter and barf. Presumably I could be smarter about
+the SVG I generate -- maybe generating the outline of the tree as points on
+fewer, more complex polygons, instead of a polygon for each branch segment? No
+matter, the artifact is the thing here, and it's done now.&lt;/p&gt;
+&lt;p&gt;Source is at &lt;a href="https://github.com/tartley/tree-art"&gt;https://github.com/tartley/tree-art&lt;/a&gt;.&lt;/p&gt;</description><category>creative</category><category>genart</category><category>graphics</category><category>python</category><category>svg</category><guid>https://www.tartley.com/posts/svg-trees-using-recursive-python-functions/</guid><pubDate>Fri, 28 Feb 2025 17:10:27 GMT</pubDate></item><item><title>Structured Pattern Matching in Python</title><link>https://www.tartley.com/posts/structured-pattern-matching-in-python/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I read through descriptions of
 &lt;a href="https://docs.python.org/3.11/reference/compound_stmts.html#the-match-statement"&gt;structured pattern matching&lt;/a&gt;
 when it was added in Python 3.10 a couple of years ago, and have studiously
 avoided it ever since. It seemed like a language feature that's amazingly
@@ -646,15 +665,4 @@ directory.&lt;/p&gt;
 &lt;p&gt;And files with set literals are now correctly parsed for errors.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This only works if the Python 2.7 is your default 'python'
 executable. Otherwise, or if you get "ImportError: No module named
-site"?, see Richard's comments below.&lt;/p&gt;</description><category>geek</category><category>osx-dev</category><category>python</category><category>software</category><category>terminal</category><category>vim</category><guid>https://www.tartley.com/posts/compiling-macvim-with-python-2-7/</guid><pubDate>Tue, 18 Oct 2011 17:25:03 GMT</pubDate></item><item><title>Python 2.7 regular expression cheatsheet</title><link>https://www.tartley.com/posts/python-2-7-regular-expression-cheatsheet/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Couldn't find one of these, so I whipped one up.&lt;/p&gt;
-&lt;p&gt;Bit of restructured text:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/blob/master/cheatsheet.rst"&gt;https://github.com/tartley/python-regex-cheatsheet/blob/master/cheatsheet.rst&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Install some Python packages:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/blob/master/requirements.txt"&gt;https://github.com/tartley/python-regex-cheatsheet/blob/master/requirements.txt&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Invoke rst2pdf:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/blob/master/Makefile"&gt;https://github.com/tartley/python-regex-cheatsheet/blob/master/Makefile&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Get a nice PDF out:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf"&gt;Python 2.7 regular expression
-cheatsheet&lt;/a&gt;
-(click this link or the image for the most up-to-date PDF from github.)&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/tartley/python-regex-cheatsheet/releases/download/v0.3.3/cheatsheet.pdf"&gt;&lt;img alt="" src="https://www.tartley.com/files/2011/10/Python-regular-expression-cheatsheet-0.3.0.png" title="Python regular expression cheatsheet 0.3.3"&gt;&lt;/a&gt;&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/python-2-7-regular-expression-cheatsheet/</guid><pubDate>Fri, 14 Oct 2011 16:20:11 GMT</pubDate></item></channel></rss>
+site"?, see Richard's comments below.&lt;/p&gt;</description><category>geek</category><category>osx-dev</category><category>python</category><category>software</category><category>terminal</category><category>vim</category><guid>https://www.tartley.com/posts/compiling-macvim-with-python-2-7/</guid><pubDate>Tue, 18 Oct 2011 17:25:03 GMT</pubDate></item></channel></rss>

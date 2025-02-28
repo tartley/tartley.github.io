@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about graphics)</title><link>https://www.tartley.com/</link><description>Writing programs to generate images.</description><atom:link href="https://www.tartley.com/tags/graphics.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 21 Feb 2025 16:20:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about graphics)</title><link>https://www.tartley.com/</link><description>Writing programs to generate images.</description><atom:link href="https://www.tartley.com/tags/graphics.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 28 Feb 2025 18:08:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>SVG Trees using recursive Python functions</title><link>https://www.tartley.com/posts/svg-trees-using-recursive-python-functions/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Inspired by a woodland hike under the first blue skies we've seen this year, I
+got home and showed the kiddo how to draw an SVG tree with recursive functions
+in Python.&lt;/p&gt;
+&lt;p&gt;At first the generated shape looked kinda lumpy and uninspiring, but it did
+demonstrate the principle. We were thinking of calling it a day, but I did a
+little bit of tweaking on parameters to control how each branch differs in
+length and direction from its parent. Suddenly, the generated shape really came
+alive, and started to look a lot more like the trees we'd seen on our hike that
+afternoon.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Silhouette of tree against a blue sky, drawn by a Python program" src="https://www.tartley.com/files/2025/tree-art.lossy.webp"&gt;&lt;/p&gt;
+&lt;p&gt;This image uses a recursion depth of 18, yielding 2^18 twigs, i.e. 250,000,
+which generates a 100MB SVG file. This takes about ten seconds to generate, and
+another ten to display in an SVG viewer. Alternatively, I can convert the SVG to
+a lossy webp, as displayed here, which is only 280kB and displays instantly.&lt;/p&gt;
+&lt;p&gt;Pushing the generation to greater recursion depth makes my SVG viewer and
+conversion tools start to stutter and barf. Presumably I could be smarter about
+the SVG I generate -- maybe generating the outline of the tree as points on
+fewer, more complex polygons, instead of a polygon for each branch segment? No
+matter, the artifact is the thing here, and it's done now.&lt;/p&gt;
+&lt;p&gt;Source is at &lt;a href="https://github.com/tartley/tree-art"&gt;https://github.com/tartley/tree-art&lt;/a&gt;.&lt;/p&gt;</description><category>creative</category><category>genart</category><category>graphics</category><category>python</category><category>svg</category><guid>https://www.tartley.com/posts/svg-trees-using-recursive-python-functions/</guid><pubDate>Fri, 28 Feb 2025 17:10:27 GMT</pubDate></item><item><title>Flying High: OpenGL from Python, Part 2</title><link>https://www.tartley.com/posts/flying-high-opengl-from-python-part-2/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;This is second in a series of articles about algorithmically generating
 geometry to drive OpenGL from Python.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.tartley.com/posts/flying-high-hobbyist-opengl-from-python"&gt;&lt;em&gt;&amp;lt;&amp;lt; Back to part 1&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Last time we got as far as creating some instances of our super-simple
@@ -1152,42 +1171,4 @@ you.&lt;/p&gt;
 loud.&lt;/p&gt;
 &lt;p&gt;0/10 If you only care about beauty, but not about usefulness. Or if you
 don't have eyes.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>graphics</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/envisioning-information/</guid><pubDate>Tue, 14 Apr 2009 18:07:07 GMT</pubDate></item><item><title>OpenGL Programming Guide, 6th ed.</title><link>https://www.tartley.com/posts/opengl-programming-guide-6th-ed/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
-&lt;img alt="" src="https://www.tartley.com/files/2008/10/opengl-programming-guide.jpg"&gt;
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Written by none other
-than the OpenGL architecture review board themselves, this is the de
-facto starting point for anyone learning how to write programs to draw
-computer graphics using the OpenGL graphics API. As such, the entire
-breadth of OpenGL is described in these 800 weighty pages.&lt;/p&gt;
-&lt;p&gt;This comes with one or two questionable implications. Firstly, the
-authors, being the authoritative source, are obliged to cover the
-entirety of the OpenGL interface, even though portions of it are now
-obsolete, having been supplanted in practice by newer techniques. The
-older methods are still present, and are described here on an equal
-footing with the later additions.&lt;/p&gt;
-&lt;p&gt;Similarly, to avoid getting embroiled in the idiosyncrasies of any
-particular vendor's implementation of OpenGL, there is never more than
-an occasional vague allusion to the potential performance implications
-of using one approach over another. The concept of using vertex arrays
-is covered in a general-principles sort of way, as are vertex buffer
-objects, with the admonition to "prefer them over explicit calls to
-glVertex() for performance" buried in an appendix-like chapter near the
-end. The idea that rendering primitives of GL_TRIANGLES is heavily
-optimised on modern graphics cards receives no mention, from which I
-mistakenly inferred that other primitive types such as
-GL_TRIANGLE_STRIPs, with their lower apparent vertex counts, are a
-preferable alternative.&lt;/p&gt;
-&lt;p&gt;This egalitarian presentation means that the book can rightly claim to
-be an unbiased description of OpenGL the interface, and is lent a
-long-term relevance by giving no bias towards any particular vendor, nor
-being subject to the fashions of rendering techniques that sweep through
-the industry every few years. On the other hand, it also means that the
-book is considerably larger than most people learning OpenGL will need,
-and fails to cover many of the vastly performance-enhancing techniques
-that have become standard throughout the industry.&lt;/p&gt;
-&lt;p&gt;Rating: 6/10.&lt;/p&gt;
-&lt;p&gt;I bought the 'Orange' Shader Language book next. Can anyone recommend
-one of the other OpenGL books that are out there? Since they are all 800
-pages I'd rather not wade through them all to find the best one.&lt;/p&gt;
-&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>geek</category><category>graphics</category><category>media</category><category>non-fiction</category><category>software</category><guid>https://www.tartley.com/posts/opengl-programming-guide-6th-ed/</guid><pubDate>Tue, 04 Nov 2008 00:48:55 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;br style="clear: both"&gt;&lt;/p&gt;</description><category>book</category><category>graphics</category><category>media</category><category>non-fiction</category><guid>https://www.tartley.com/posts/envisioning-information/</guid><pubDate>Tue, 14 Apr 2009 18:07:07 GMT</pubDate></item></channel></rss>
