@@ -7,7 +7,7 @@
 -->
 
 I have some folders of .jpg images that make up a comic. I want to convert them into a PDF to read
-on my tab and other devices, and import into by bookshelf in Calibre.
+on my tab and other devices, and import into my Calibre bookshelf.
 
 ## 1. Install some prerequisites
 
