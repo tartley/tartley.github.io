@@ -11,7 +11,7 @@
 <link rel="canonical" href="https://www.tartley.com/">
 <link rel="icon" href="welcome.gif" sizes="16x16">
 <link rel="next" href="index-28.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/svg-trees-using-recursive-python-functions/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/integer-division-with-recurring-decimals/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -76,7 +76,174 @@
 
     <a rel="me" href="https://fosstodon.org/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/svg-trees-using-recursive-python-functions/" class="u-url">SVG Trees using recursive Python functions</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/integer-division-with-recurring-decimals/" class="u-url">Integer Division With Recurring Decimals</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/integer-division-with-recurring-decimals/" rel="bookmark">
+            <time class="published dt-published" datetime="2025-03-03T12:42:50-06:00" itemprop="datePublished" title="2025-03-03 12:42">2025-03-03 12:42</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>I've been doing some programming tests and puzzles while job hunting lately. One
+quick challenge was quite nice, reminding me a bit of <a href="https://projecteuler.net/">Project
+Euler</a> questions, and I nerd sniped myself into doing
+a 2nd pass at it here.</p>
+<h3>Question</h3>
+<p>Produce a Python function which takes two integers, <code>numerator</code> and
+<code>denominator</code>, and returns the result of their division as a decimal fraction in
+a string. E.g:</p>
+<div class="code"><pre class="code literal-block"><span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"0.25"</span>
+</pre></div>
+
+<p>If the decimal places contain an infinite recurring pattern of digits, then
+enclose the recurring digits in parentheses. E.g:</p>
+<div class="code"><pre class="code literal-block"><span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"0.(3)"</span>
+<span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"0.(142857)"</span>
+</pre></div>
+
+<h3>Wrong approaches</h3>
+<p>Evaluating the division using normal floats is going to trip you up in several
+ways with the limited precision.</p>
+<p>For one, a large enough denominator might have a recurring sequence which is
+longer than the number of decimal places you have available (more on this
+later), which makes it impossible to detect recurring sequences by examining the
+division's decimal digits.</p>
+<p>Worse, the inherent imprecision of floating point, e.g. if a simple division
+like 10/3 comes back as 3.3333333333333335, then examining the trailing digits
+of this looking for recurring digits is going to be problematic.</p>
+<p>Using the <code>decimal</code> module does markedly improve precision and control. But
+infinitely repeating sequences are still going to return results like
+<code>Decimal(20) / Decimal(3) -&gt; Decimal('6.666666666666666666666666667')</code>, which is
+going to trip us up.</p>
+<p>We can sidestep all these complexities if we see that the question is asking us
+to perform this division ourselves, longhand. We are going back to elementary
+school! Wheee!</p>
+<h3>Better</h3>
+<p>Let's just do basic division first, ignoring infinite or recurring digits:</p>
+<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">divide</span><span class="p">(</span><span class="n">numerator</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">denominator</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="c1"># Accumulate parts of our result here</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">int_part</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">numerator</span> <span class="o">//</span> <span class="n">denominator</span><span class="p">)</span>
+        <span class="n">remainder</span> <span class="o">=</span> <span class="n">numerator</span> <span class="o">%</span> <span class="n">denominator</span>
+        <span class="n">numerator</span> <span class="o">=</span> <span class="n">remainder</span> <span class="o">*</span> <span class="mi">10</span>
+        <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">int_part</span><span class="p">)</span>
+
+        <span class="c1"># If there is no remainder, we are done</span>
+        <span class="k">if</span> <span class="n">remainder</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+
+        <span class="c1"># Add a decimal point after our first integer part</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"."</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+
+<p>The only confusing parts of this are that <code>int_part</code> might contain several
+digits on the first iteration, but is only ever one decimal digit thereafter.
+Plus we have to be careful to get the ordering right for our checks to exit
+the loop, versus appending the decimal point to the output, to avoid weird
+looking outputs like <code>divide(6, 2) -&gt; "3."</code>.</p>
+<p>Trying this out:</p>
+<div class="code"><pre class="code literal-block"><span class="o">&gt;&gt;&gt;</span> <span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="s1">'0.25'</span>
+</pre></div>
+
+<p>It works! But we haven't yet handled infinite decimals, they result in an
+infinite loop:</p>
+<div class="code"><pre class="code literal-block"><span class="o">&gt;&gt;&gt;</span> <span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># Hangs!</span>
+</pre></div>
+
+<h3>Recurring digits</h3>
+<p>Because we're dividing integers, we cannot get infinitely varying decimal
+places. If we have an infinite number of decimal places, it must be because
+of a cycle of one or more recurring digits. To detect such a cycle we have to
+notice a couple of things.</p>
+<p>First, simply seeing a digit in the output which we have seen before is not
+enough. Looking at the three assignments at the start of the above while-loop,
+which capture our state:</p>
+<div class="code"><pre class="code literal-block"><span class="n">int_part</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">numerator</span> <span class="o">//</span> <span class="n">denominator</span><span class="p">)</span>
+<span class="n">remainder</span> <span class="o">=</span> <span class="n">numerator</span> <span class="o">%</span> <span class="n">denominator</span>
+<span class="n">numerator</span> <span class="o">=</span> <span class="n">remainder</span> <span class="o">*</span> <span class="mi">10</span>
+</pre></div>
+
+<p>Here, <code>int_part</code> gets the value of each successive decimal digit. However
+if it takes on the same value as in a previous iteration, the accompanying
+remainder might be different, and it is the remainder which is used to
+generate the numerator for the next iteration, and hence generate the
+sequence of digits after this.</p>
+<p>So, as we already knew from common sense, two iterations with the same
+<code>int_part</code> may go on to produce different sequences of subsequent digits.
+However, The value of <code>remainder</code> is the only thing which determines the inputs
+to our next iteration:</p>
+<ul>
+<li>
+<code>int_part</code> depends on <code>numerator</code> and on <code>denominator</code> (which is constant)</li>
+<li>
+<code>numerator</code> depends on <code>remainder</code>.</li>
+</ul>
+<p>Hence, two iterations might produce different digits, but produce the same
+remainder, and from that point onwards, they will be in lockstep. If we find two
+such iterations, then we have detected an infinite recurring cycle of digits.</p>
+<p>So, before the loop begins, initialize a dict:</p>
+<div class="code"><pre class="code literal-block"><span class="c1"># Remainders seen to date, mapped to their position in the result</span>
+<span class="n">remainders</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></div>
+
+<p>Then inside the loop, after everything else, use our new dict to detect if we
+have seen the current remainder before:</p>
+<div class="code"><pre class="code literal-block"><span class="c1"># If we have seen this remainder before, we are now in exactly the</span>
+<span class="c1"># same state as then, so we have found a recurring digit sequence.</span>
+<span class="k">if</span> <span class="n">remainder</span> <span class="ow">in</span> <span class="n">remainders</span><span class="p">:</span>
+    <span class="c1"># We have found a cycle of decimal digits! Insert parens into our results,</span>
+    <span class="c1"># from the last seen position of this remainder, up to the current digit.</span>
+    <span class="n">last_pos</span> <span class="o">=</span> <span class="n">remainders</span><span class="p">[</span><span class="n">remainder</span><span class="p">]</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">results</span><span class="p">[:</span><span class="n">last_pos</span><span class="p">]</span> <span class="o">+</span>
+        <span class="p">[</span><span class="s2">"("</span><span class="p">]</span> <span class="o">+</span>
+        <span class="n">results</span><span class="p">[</span><span class="n">last_pos</span><span class="p">:]</span> <span class="o">+</span>
+        <span class="p">[</span><span class="s2">")"</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="k">break</span>
+<span class="c1"># Remember the position at which we saw this remainder</span>
+<span class="n">remainders</span><span class="p">[</span><span class="n">remainder</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+
+<p>Trying this out:</p>
+<div class="code"><pre class="code literal-block"><span class="o">&gt;&gt;&gt;</span> <span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="mf">0.</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="mf">0.</span><span class="p">(</span><span class="mi">142857</span><span class="p">)</span>
+</pre></div>
+
+<p>OMG it works!</p>
+<h3>Defensive coding</h3>
+<p>We're putatively done, but the grumpy old dev in me is uncomfortable leaving
+that <code>while True</code> in there. By deduction, we always must eventually hit the <code>if
+&lt;condition&gt;: break</code> to escape from it, so ostensibly it's fine. But if I have a
+bug in the code or my reasoning, then it might lead to an infinite loop, in some
+scenario I'm not thinking of. Can we limit the number of iterations in some
+other, foolproof way? Turns out we can.</p>
+<p>We've seen already that a repeated value of <code>remainder</code> means we can break
+from the loop. Also, notice that <code>remainder</code>, given by:</p>
+<div class="code"><pre class="code literal-block"><span class="n">remainder</span> <span class="o">=</span> <span class="n">numerator</span> <span class="o">%</span> <span class="n">denominator</span>
+</pre></div>
+
+<p>can only take values from <code>0</code> to <code>denominator - 1</code>. So it can have <code>denominator</code>
+possible values, and this is the maximum number of iterations we will ever need.</p>
+<p>Hence, we can safely replace the <code>while(True)</code> with:</p>
+<div class="code"><pre class="code literal-block"><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">denominator</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+
+<p>Splendid! Much less anxiety-inducing</p>
+<p>The source is on <a href="https://github.com/tartley/division">github</a>.</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/svg-trees-using-recursive-python-functions/" class="u-url">SVG Trees using recursive Python functions</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -234,7 +401,7 @@ sudo<span class="w"> </span>update-initramfs<span class="w"> </span>-u
         </div>
     </header><div class="e-content entry-content">
     <p>I have some folders of .jpg images that make up a comic. I want to convert them into a PDF to read
-on my tab and other devices, and import into by bookshelf in Calibre.</p>
+on my tab and other devices, and import into my Calibre bookshelf.</p>
 <h3>1. Install some prerequisites</h3>
 <div class="code"><pre class="code literal-block">sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>imagemagick<span class="w"> </span>pdftk
 </pre></div>
@@ -560,55 +727,6 @@ to do it? Maybe invent some sort of government that is reliably able to do
 that? That would be nice.</p>
 <p><br style="clear: left"></p>
     </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/fully-operational/" class="u-url">Fully Operational</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/fully-operational/" rel="bookmark">
-            <time class="published dt-published" datetime="2023-09-21T10:51:12-05:00" itemprop="datePublished" title="2023-09-21 10:51">2023-09-21 10:51</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>Now witness the power of this fully armed and operational battle station.</p>
-<p><img alt="My desk featuring too many computers" src="files/2023/desk-with-computers.webp"></p>
-<p>New job means new laptop means it's time to clean and re-org the desk.</p>
-<dl>
-<dt>Leftmost blue skies</dt>
-<dd>Linux laptop (a free hand-me-down from a job ten years ago). Acting as the
-house Plex / streaming media server, usually tucked away more discreetly than
-this.</dd>
-<dt>Left top green forest</dt>
-<dd>Heavy duty work / gaming Linux laptop ("hardware bonus" from my last
-employer). Has been my primary work machine, but sounds like it's getting
-replaced by...</dd>
-<dt>Left bottom spaceship drawing</dt>
-<dd>Macbook Pro (Brand new! Just unwrapped yesterday. Thank you new employer
-<a href="https://lambdalabs.com">Lambda</a>!) Looks like this means I'm returning to
-developing on a Mac and VMs, after a full decade on Ubuntu &amp; derivatives.
-I'm told Docker for Desktop now behaves better than it used to.</dd>
-<dt>Left bottom, under the Mac</dt>
-<dd>You can sort of see the 10" whiteboard I use to combat ADHD by writing a
-sentence about what I'm <em>supposed</em> to be working on, then I can spot it every
-few minutes and drag my mind back to the task in hand. (a technique described
-in the fabulous
-<a href="https://gamkedo.gumroad.com/l/self-command/">Self Command by Chris DeLeon</a>.</dd>
-<dt>Center</dt>
-<dd>Main monitor and wireless tenkeyless mechanical keyboard &amp; mouse combo, all
-switchable to any of the laptops. Under the keyboard you can sort-of see the
-<a href="https://ultrapro.com/collections/gaming-accessories-magic-the-gathering/type_playmat">Magic the Gathering 13x24" gaming mat</a>
-(free from local gaming store's MtG lessons) pressed into duty as the world's
-most gigantic, beautiful, and luxurious mouse mat.</dd>
-<dt>Right monitor, keyboard and mouse</dt>
-<dd>are wired to the Windows gaming PC under the desk (not visible). The kiddo's
-current <a href="https://store.steampowered.com/app/361420/ASTRONEER/">Astroneer</a>
-session is visible. The monitor is switchable to any of the laptops.</dd>
-<dt>Right tab</dt>
-<dd>Absolute workhorse 12.6" Android tablet on which I do most of my reading,
-laid in the picture here just to be gratuitous.</dd>
-</dl>
-</div>
     </article>
 </div>
 

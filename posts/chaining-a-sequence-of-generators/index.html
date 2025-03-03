@@ -112,7 +112,7 @@ one row at a time through each of the generators:</p>
 </pre></div>
 
 <p>where each called function except the last is actually a generator, e.g:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">parse</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
         <span class="k">yield</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
 </pre></div>
@@ -145,7 +145,7 @@ thought this through.</p>
 <p>Luckily, before embarking on that, I realised today I've been
 over-complicating the whole thing. There's no need for decorators, nor
 for the cute '|' syntax. I just need a plain old function:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">link</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="o">*</span><span class="n">transforms</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">link</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="o">*</span><span class="n">transforms</span><span class="p">):</span>
     <span class="n">args</span> <span class="o">=</span> <span class="n">source</span>
     <span class="k">for</span> <span class="n">transform</span> <span class="ow">in</span> <span class="n">transforms</span><span class="p">:</span>
         <span class="n">args</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
