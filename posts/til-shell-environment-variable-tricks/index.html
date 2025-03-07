@@ -104,14 +104,16 @@ environment v">
 installed with dev packages), which is a convenient way to replace <code>$VAR</code> or <code>${VAR}</code> style
 environment variables with their values. This allows rendering templates without heavyweight
 tools like Ansible, Jinja, or embedding with heredocs. Usage is:</p>
-<div class="code"><pre class="code literal-block">envsubstr &lt;template &gt;rendered
+<div class="code"><pre class="code literal-block">envsubst &lt;template &gt;rendered
 </pre></div>
 
 <p>For example:</p>
-<div class="code"><pre class="code literal-block">$<span class="w"> </span>envsubstr<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="s2">"Hello </span><span class="nv">$USER</span><span class="s2">"</span>
+<div class="code"><pre class="code literal-block">$<span class="w"> </span>envsubst<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="s1">'Hello $USER'</span>
 Hello<span class="w"> </span>jonathan
 </pre></div>
 
+<p>(Note the use of single quotes so that <code>$USER</code> isn't expanded by our shell, as
+it wouldn't be in the file which <code>&lt;&lt;&lt;</code> is emulating for us.)</p>
 <p>If you'd like to use KEY=value declarations from a dotenv-style <code>.env</code> file, you can auto-export
 them by setting the <code>-a</code> Bash option:</p>
 <div class="code"><pre class="code literal-block">set -a; source .env; set +a
