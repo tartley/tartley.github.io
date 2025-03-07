@@ -12,15 +12,18 @@ environment variables with their values. This allows rendering templates without
 tools like Ansible, Jinja, or embedding with heredocs. Usage is:
 
 ```
-envsubstr <template >rendered
+envsubst <template >rendered
 ```
 
 For example:
 
 ```
-$ envsubstr <<<"Hello $USER"
+$ envsubst <<<'Hello $USER'
 Hello jonathan
 ```
+
+(Note the use of single quotes so that `$USER` isn't expanded by our shell, as
+it wouldn't be in the file which `<<<` is emulating for us.)
 
 If you'd like to use KEY=value declarations from a dotenv-style `.env` file, you can auto-export
 them by setting the `-a` Bash option:
