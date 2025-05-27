@@ -116,13 +116,13 @@ there's less code, and more pretty pictures.</em></p>
 <h3><strong>Composite Shapes</strong></h3>
 <p>In order to create more complex shapes by composing instances of
 existing ones, we need a simple composite shape:</p>
-<div class="code"><pre class="code literal-block"><span class="k">class</span><span class="w"> </span><span class="nc">MultiShape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">MultiShape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">matrices</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">matrices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Matrix</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">orientation</span><span class="p">))</span>
 </pre></div>
@@ -147,7 +147,7 @@ face_colors. Here is how MultiShape provides a sequence of vertices, by
 chaining the vertices of all its children, each vertex transformed by
 the matrix of the relevant child shape:</p>
 <div class="code"><pre class="code literal-block"><span class="nd">@property</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">vertices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">vertices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span>
         <span class="n">matrix</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">vertex</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">child</span><span class="p">,</span> <span class="n">matrix</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">matrices</span><span class="p">)</span>
@@ -167,7 +167,7 @@ face indices and face_colors, by aggregating those of its children.</p>
 <p>Using MultiShape, we can now easily compose groups of our basic Shapes.
 A new factory function composes a bunch of cubes into the same
 MultiShape:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">CubeCorners</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">color1</span><span class="p">,</span> <span class="n">color2</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">CubeCorners</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">color1</span><span class="p">,</span> <span class="n">color2</span><span class="p">):</span>
     <span class="n">multi</span> <span class="o">=</span> <span class="n">MultiShape</span><span class="p">()</span>
     <span class="n">multi</span><span class="o">.</span><span class="n">add</span><span class="p">(</span>
         <span class="n">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">repeat</span><span class="p">(</span><span class="n">color1</span><span class="p">)),</span>
@@ -183,7 +183,7 @@ MultiShape:</p>
 
 <p><img alt="A cluster of cubes, rendered in one glDrawElements call" src="../../files/2010/07/screen-cube-cluster2.png" title="A cluster of cubes, rendered in one glDrawElements call"></p>
 <p>Another new factory function, <em>RingOf:</em></p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">RingOf</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">RingOf</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
     <span class="n">multi</span> <span class="o">=</span> <span class="n">MultiShape</span><span class="p">()</span>
     <span class="n">angle</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">orientation</span> <span class="o">=</span> <span class="n">Orientation</span><span class="p">()</span>
@@ -207,7 +207,7 @@ ring of cubes:</p>
 in this context I'm counting as a success.</p>
 <p>If we can compose basic shapes into rings, we can also compose rings
 into... um... <em>tri-axis-rings</em>:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">TriRing</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">colors</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">TriRing</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">colors</span><span class="p">):</span>
     <span class="n">multi</span> <span class="o">=</span> <span class="n">MultiShape</span><span class="p">()</span>
     <span class="n">ring</span> <span class="o">=</span> <span class="n">RingOf</span><span class="p">(</span><span class="n">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">colors</span><span class="p">),</span> <span class="n">radius</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
     <span class="n">multi</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ring</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="n">Orientation</span><span class="p">(</span><span class="n">XAxis</span><span class="p">))</span>
@@ -235,7 +235,7 @@ OpenGL vertex buffers (I don't think my hardware supports that), so all
 the geometry is being sent needlessly over the bus to the GPU every
 frame.</p>
 <p>How about an alternative, the RgbCubeCluster:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">RgbCubeCluster</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">cluster_edge</span><span class="p">,</span> <span class="n">cube_count</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">RgbCubeCluster</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">cluster_edge</span><span class="p">,</span> <span class="n">cube_count</span><span class="p">):</span>
     <span class="n">cluster</span> <span class="o">=</span> <span class="n">MultiShape</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="n">cube_count</span><span class="p">):</span>
         <span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">Random</span><span class="p">()</span>

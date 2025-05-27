@@ -137,16 +137,16 @@ entities which are offset and rotated depending on the position of the
 camera, followed by a 'hudProjection', for drawing things that should be
 drawn in the style of a 'heads-up display', ie. always aligned with the
 screen, like text messages and frames-per-second (fps) counters.</p>
-<div class="code"><pre class="code literal-block"><span class="k">class</span><span class="w"> </span><span class="nc">App</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">App</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">world</span> <span class="o">=</span> <span class="n">World</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">win</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">Window</span><span class="p">(</span><span class="n">fullscreen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">vsync</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">camera</span> <span class="o">=</span> <span class="n">Camera</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mf">100.0</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">hud</span> <span class="o">=</span> <span class="n">Hud</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="p">)</span>
         <span class="n">clock</span><span class="o">.</span><span class="n">set_fps_limit</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">mainLoop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">mainLoop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">has_exit</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">dispatch_events</span><span class="p">()</span>
 
@@ -173,14 +173,14 @@ new Entity object at a random location every 0.25 seconds.</p>
 amount dependent on its size.</p>
 <p>Drawing the world merely clears the output buffer, resets the modelview
 matrix, and then asks each Entity to draw itself.</p>
-<div class="code"><pre class="code literal-block"><span class="k">class</span><span class="w"> </span><span class="nc">World</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">World</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ents</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nextEntId</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spawn</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">spawnEntity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dt</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">spawnEntity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dt</span><span class="p">):</span>
         <span class="n">size</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">)</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">)</span>
         <span class="n">y</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">)</span>
@@ -190,11 +190,11 @@ matrix, and then asks each Entity to draw itself.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">nextEntId</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">return</span> <span class="n">ent</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">tick</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">tick</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ents</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
             <span class="n">ent</span><span class="o">.</span><span class="n">rot</span> <span class="o">+=</span> <span class="mf">10.0</span> <span class="o">/</span> <span class="n">ent</span><span class="o">.</span><span class="n">size</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">glClear</span><span class="p">(</span><span class="n">GL_COLOR_BUFFER_BIT</span><span class="p">)</span>
         <span class="n">glMatrixMode</span><span class="p">(</span><span class="n">GL_MODELVIEW</span><span class="p">);</span>
         <span class="n">glLoadIdentity</span><span class="p">();</span>
@@ -207,16 +207,16 @@ matrix, and then asks each Entity to draw itself.</p>
 It also knows how to draw itself, using a series of OpenGL calls. For
 now, I just draw a triangle for each entity, pointing along its
 orientation.</p>
-<div class="code"><pre class="code literal-block"><span class="k">class</span><span class="w"> </span><span class="nc">Entity</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Entity</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">rot</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">rot</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rot</span> <span class="o">=</span> <span class="n">rot</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">glLoadIdentity</span><span class="p">()</span>
         <span class="n">glTranslatef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
         <span class="n">glRotatef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rot</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -240,13 +240,13 @@ world, and rotate.</p>
 <p>Note that the widthRatio calculated in worldProjection() will do an
 integer division by default. To fix it, I imported real division (ie.
 <code>from __future__ import division</code>)</p>
-<div class="code"><pre class="code literal-block"><span class="k">class</span><span class="w"> </span><span class="nc">Camera</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Camera</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">win</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">win</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">win</span> <span class="o">=</span> <span class="n">win</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">zoom</span> <span class="o">=</span> <span class="n">zoom</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">worldProjection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">worldProjection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">glMatrixMode</span><span class="p">(</span><span class="n">GL_PROJECTION</span><span class="p">)</span>
         <span class="n">glLoadIdentity</span><span class="p">()</span>
         <span class="n">widthRatio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">height</span>
@@ -256,7 +256,7 @@ integer division by default. To fix it, I imported real division (ie.
             <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">zoom</span><span class="p">,</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">zoom</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">hudProjection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">hudProjection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">glMatrixMode</span><span class="p">(</span><span class="n">GL_PROJECTION</span><span class="p">)</span>
         <span class="n">glLoadIdentity</span><span class="p">()</span>
         <span class="n">gluOrtho2D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
@@ -268,9 +268,9 @@ an fps counter. The draw() method renders both these to the screen. It
 is worth noting that pyglet handles text like this smartly, rasterising
 the Text object to a bitmap when it is first created, and then rapidly
 drawing that to the screen using a textured quad in the draw() method.</p>
-<div class="code"><pre class="code literal-block"><span class="k">class</span><span class="w"> </span><span class="nc">Hud</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Hud</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">win</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">win</span><span class="p">):</span>
         <span class="n">helv</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'Helvetica'</span><span class="p">,</span> <span class="n">win</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mf">15.0</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span>
             <span class="n">helv</span><span class="p">,</span>
@@ -283,7 +283,7 @@ drawing that to the screen using a textured quad in the draw() method.</p>
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fps</span> <span class="o">=</span> <span class="n">clock</span><span class="o">.</span><span class="n">ClockDisplay</span><span class="p">()</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">glMatrixMode</span><span class="p">(</span><span class="n">GL_MODELVIEW</span><span class="p">);</span>
         <span class="n">glLoadIdentity</span><span class="p">();</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>

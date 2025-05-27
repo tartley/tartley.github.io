@@ -11,7 +11,7 @@
 <link rel="canonical" href="https://www.tartley.com/">
 <link rel="icon" href="welcome.gif" sizes="16x16">
 <link rel="next" href="index-28.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/integer-division-with-recurring-decimals/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/tactical-breach-wizards/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -76,7 +76,70 @@
 
     <a rel="me" href="https://fosstodon.org/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/integer-division-with-recurring-decimals/" class="u-url">Integer Division With Recurring Decimals</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/tactical-breach-wizards/" class="u-url">Tactical Breach Wizards</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/tactical-breach-wizards/" rel="bookmark">
+            <time class="published dt-published" datetime="2025-05-26T16:43:45-05:00" itemprop="datePublished" title="2025-05-26 16:43">2025-05-26 16:43</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p><img alt="Tactical Breach Wizards screenshot." src="files/2025/tactical-breach-wizards.lossy.webp"></p>
+<p><em>Released in 2024 by Suspicious Developments.</em></p>
+<p>I was toying with the idea of advancing the kiddo's videogaming curriculum into
+a turn-based tactics phase, maybe starting with the genius of 1994's <a href="https://en.wikipedia.org/wiki/UFO%3A_Enemy_Unknown">UFO:Enemy
+Unknown</a>, on which I spent
+endlessly fascinated evenings of my youth, or maybe one of the better of its
+numerous sequels and offshoots.</p>
+<p>Somehow I was distracted from that plan by multiple people enthusing about last
+year's <a href="https://en.wikipedia.org/wiki/Tactical_Breach_Wizards">Tactical Breach
+Wizards</a>, and I'm so glad
+that I was.</p>
+<p>It is <em>such</em> a lovely, synergistic blend of gameplay mechanics, setting,
+characters, story, plot-twists and whip-smart dialog, making substantial
+improvements on the traditional bombastic and yet intensely thoughtful
+turn-based formula.</p>
+<p>First, it defuses the self-righteous seriousness of the genre's customary tone
+by replacing the gurning muscle-bound military types with a bunch of special-ops
+<em>wizards</em>. Still formidably competent, but now replete with pointy hats,
+hazardous runes, and bejeweled wands protruding from their assault rifle
+barrels.</p>
+<p>Further, while presenting a thrilling facade of enemies dispatched in a dizzying
+flurry of rapid-fire magic, the game explicitly disavows wanton killing. While
+one of our characters does sneer at the stance, your team is revealed early-on
+to use only nonlethal take-downs. This is soon followed up by a cut-scene which
+shows your team leaving a building after a mission, revealing the enemies you
+earlier dispatched out of eighth floor windows floating gently earthwards, each
+safely cocooned in a magical bubble.</p>
+<p>Second, a fundamental mechanic bestows one of your characters with the gift
+of magical foresight, allowing you to see the outcome of planned actions before
+you actually commit to them.</p>
+<p>It's a slick narrative integration of a mechanic that serves multiple purposes.
+Preventing the anguish of losing a character due to dumb bad luck means the
+player is freed up to experiment more, trying audacious plans rather than
+playing it safe. Then, when it all goes wrong, you can rewind just a smidgeon,
+and try out nearby alternatives, until you have it all <em>just</em> right, bouncing
+generative combos back and forth between characters, unleashing staggering waves
+of action, discovering gleefully that a level you initially thought to be an
+impossible slog is actually completable in a single turn. When combined with the
+inventive diversity of each character's specific talents, it simultaneously
+presents real challenges, while allowing the construction of surprising
+solutions that leave one feeling feeling incredibly clever and creative.</p>
+<p>It's not often worthwhile dwelling on the characters in a videogame, but here
+they are the stars of the show. Distinctive, flawed and intensely likeable each
+in their own way, with personalities and back-stories that resonate so
+pleasingly with their in-game abilities. The writing is just top notch, with
+phenomenal dialog, giving the group as a whole a fresh, wholesome and real-talk
+vibe.</p>
+<p>This is an all-time classic in my book, and has been fabulous to experience
+alongside the 13 year-old kiddo, as we've each run parallel games through to
+completion, ogling over each other's shoulders to get sneak previews of
+encounters we haven't seen yet.</p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/integer-division-with-recurring-decimals/" class="u-url">Integer Division With Recurring Decimals</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
@@ -123,7 +186,7 @@ to perform this division ourselves, longhand. We are going back to elementary
 school! Wheee!</p>
 <h3>Better</h3>
 <p>Let's just do basic division first, ignoring infinite or recurring digits:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">divide</span><span class="p">(</span><span class="n">numerator</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">denominator</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="n">numerator</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">denominator</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="c1"># Accumulate parts of our result here</span>
     <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -618,116 +681,6 @@ recontextualizes and improves the earlier film.</p>
 <p>Rating: 10/10 if you like mindbending SF horror, 0/10 if you prefer something a
 bit more polished and comfortable.</p>
 <p><br></p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/aurora/" class="u-url">Aurora</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Jonathan Hartley
-            </span></p>
-            <p class="dateline">
-            <a href="posts/aurora/" rel="bookmark">
-            <time class="published dt-published" datetime="2023-09-21T15:29:16-05:00" itemprop="datePublished" title="2023-09-21 15:29">2023-09-21 15:29</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p><span style="float: left">
-<img alt="Aurora cover" src="files/2023/aurora.webp"></span></p>
-<p><em>by Kim Stanley Robinson, 2015</em></p>
-<p>It has long been held by fans of science fiction that <em>fantasy</em> is a lowly
-subset of science-fiction, or perhaps a disreputable cousin, one for whom
-the normal rules of discernment do not apply. If such unlikely and unrealistic
-things as dragons and magic are allowed, the reasoning goes, then the book
-cannot be relied upon to deliver any kind of coherent narrative experience,
-since the lapsed rule-set now allows for any old <em>ex machina</em> plot twists to
-save the day. A magical "defeat the evil" spell? No problem. A new mythical
-creature capable of defeating the previously unassailable one? Why not? All
-reason is gone.</p>
-<p>It's more useful though, is to invert the hierarchy of this received wisdom,
-and consider science fiction as a subset of fantasy. Mentioning this in fandom
-circles blows mental fuses. Does not compute. But the speculative flights of
-science fiction are also fantasies. Just fantasies that a particular type of
-person finds especially beguiling, compelling, and believable. To some extent,
-I concede that on occasion they are believable because they seem to be a
-reasonable extrapolation of our current situation. But no matter how reasonable
-your extrapolation seems to be, it's always possible that reality will zig
-instead of zag, and even the most humdrum tale of a rocket man's life will
-find itself at odds with the unexpected reality of suspended human spaceflight
-in the face of spiraling real-world costs. The vision that one is selling is
-always, to a greater or lesser extent, a wishful one - a <em>fantasy</em>.</p>
-<p>This becomes immediately apparent once we stray beyond the confines of low
-Earth orbit, to take in the wider scope of science fiction, the vast majority
-of which encompasses tales across the galaxy, nay, the universe, including time
-travel, teleportation booths, aliens of every color, quantum reality
-displacement, and multiversal escapades in which literally everything is
-possible. These are very clearly fantasies, and it is intensely curious to me
-why this sort of fantasy is considered more "realistic" or "believable" than,
-say, flying lizards with fiery breath. Even though the narrative hand-waving
-that explains away the former - "It's an alternate <em>universe</em>, where different
-rules apply" - is abundantly adequate to more than completely explain anything
-in the fantasy realm.</p>
-<p>I once asked my guru science fiction critic <a href="https://damiengwalter.com/podcast/">Damien
-Walter</a> what makes people consider some
-stories believable, while other are not. He replied with a statement that has
-stuck with me ever since: People are willing to invest the effort to provide
-the conceptual scaffolding around an idea to make it seem believable (e.g. to
-speculate on the mechanism that might allow for a faster-than-light
-hyper-drive) <em>when the story fulfills some deeper psychological need for them</em>.</p>
-<p>Hence, a story on the same topic as <em>Aurora</em>, of a generation ship sent to
-colonize an Earth-like planet orbiting the nearby star of Tau Ceti, is
-(usually) a story about the triumph of modernism. Such stories leverage the
-sources of strength in the modern world, science and technology and
-<em>colonialism</em>, and a reader who is invested in a modern world-view will feel
-validated and empowered by this type of fantasy. They will be will be willing
-to exercise whatever extracurricular creative effort is required on the part of
-the reader to make the story believable. Doing so will inspire them with the
-feeling that their world all makes sense, is leading to something, so that
-their daily grind is a part of the heroic story of how humanity transcends its
-planetary origins. This is much more fulfilling than investing any effort
-getting on board with the waning powers of superstition that are represented by
-the fantasy genre.</p>
-<p><span style="background:#bb2200; color:white; border-radius: 1em; padding-left: 0.5em; padding-right: 0.5em; padding-top: 2px;"><b>spoilers</b></span></p>
-<p>In keeping with this, Aurora's colonists are granted every conceivable boon
-that science and industry can supply. A ship fully ten kilometers across,
-enclosing twenty four massive biomes, each stuffed full of hills and lakes,
-soil and forests, microbes and wildlife. A population of well over a thousand
-human beings. Miraculous nanotech fabricators, and megatons of elemental
-feedstock to run them. A miraculous acceleration laser, fired from Titan for
-decades after departure, allowing the ship to coast up to 0.1c, making the
-journey in only seven generations, while retaining enough fuel to decelerate
-for arrival. A miraculous magnetic shield protects the ship from catastrophic
-collisions with stray particles along the way. A benign AI runs the ship,
-amusingly pressed into service as the narrator of the tale, and grows visibly
-more sentient, emotionally robust and capable as the years pass.</p>
-<p>And hot damn, they are going to <em>need</em> all these things, because in this story,
-human interstellar colonization is revealed for the fantasy it really is.
-Nothing works out, and the problems encountered are far bigger than anything
-the ship's designers planned for. Although the ship does limp into orbit
-around the destination planet, soon after that people start dying, major
-disagreements emerge which descend into catastrophic riots, and the ship's
-society falls apart - when have humans ever invented a reliable form of
-governance?</p>
-<p>There is a rip-roaring final act, that stretched my credulity, but revives the
-stakes and entertainment value in what might otherwise be a relentless downer
-of a read.</p>
-<p>The book, and interviews with the author, caused quite a stir in science
-fiction circles. People were extremely angry. The book was attacking their
-deeply held beliefs that the future of humanity is as a successfull
-space-faring species. They had invested their identity in this world-view,
-because of how it serviced their psychological needs for fulfillment and
-meaning. They had developed a religious conviction around this particular kind
-of fantasy.</p>
-<p>The point of Aurora is to highlight the idea of human interstellar colonization
-as a dangerous distraction from the very real project of taking care of the
-long term health of our planet and our society right here on Earth. It is going
-to take <em>beyond</em> miraculous levels of technology and resources to start
-thinking about interstellar travel. If, by some miracle, we make it to a year
-10,000 utopia, with infinite resources and the wisdom to manage them, then
-sure, we can worry about interstellar travel. But for now, can we just focus on
-some of the very basic problems of existence here on Earth, like how to make
-everyone fed and liberated, educated and fulfilled, without killing our planet
-to do it? Maybe invent some sort of government that is reliably able to do
-that? That would be nice.</p>
-<p><br style="clear: left"></p>
     </div>
     </article>
 </div>

@@ -137,7 +137,7 @@ one row at a time through each of the generators:</p>
 </pre></div>
 
 <p>where each called function except the last is actually a generator, e.g:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">parse</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
         <span class="k">yield</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
 </pre></div>
@@ -170,7 +170,7 @@ thought this through.</p>
 <p>Luckily, before embarking on that, I realised today I've been
 over-complicating the whole thing. There's no need for decorators, nor
 for the cute '|' syntax. I just need a plain old function:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">link</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="o">*</span><span class="n">transforms</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">link</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="o">*</span><span class="n">transforms</span><span class="p">):</span>
     <span class="n">args</span> <span class="o">=</span> <span class="n">source</span>
     <span class="k">for</span> <span class="n">transform</span> <span class="ow">in</span> <span class="n">transforms</span><span class="p">:</span>
         <span class="n">args</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
@@ -423,8 +423,8 @@ where my Python 2.7 install lives, and modifying that result to find its
 macvim/src/MacVim/build/Release/MacVim.app into your Applications
 directory.</p>
 <p>Open up MacVim, and check out the built-in Python version:</p>
-<div class="code"><pre class="code literal-block"><span class="p">:</span><span class="n">python</span> <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="p">;</span> <span class="nb">print</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span>
-<span class="mf">2.7.1</span> <span class="p">(</span><span class="n">r271</span><span class="p">:</span><span class="mi">86882</span><span class="n">M</span><span class="p">,</span> <span class="n">Nov</span> <span class="mi">30</span> <span class="mi">2010</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">34</span><span class="p">)</span>
+<div class="code"><pre class="code literal-block"><span class="p">:</span><span class="n">python</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span><span class="p">;</span><span class="w"> </span><span class="nb">print</span><span class="w"> </span><span class="n">sys</span><span class="o">.</span><span class="n">version</span>
+<span class="mf">2.7.1</span><span class="w"> </span><span class="p">(</span><span class="n">r271</span><span class="p">:</span><span class="mi">86882</span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">Nov</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="mi">2010</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">34</span><span class="p">)</span>
 </pre></div>
 
 <p>And files with set literals are now correctly parsed for errors.</p>

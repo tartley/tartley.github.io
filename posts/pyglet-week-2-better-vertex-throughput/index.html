@@ -136,13 +136,13 @@ penalty.</p>
 vertex list using the following new static member on class Entity. Note
 that I have coined the term <em>shard</em> to describe the individual triangles
 rendered by class Entity:</p>
-<div class="code"><pre class="code literal-block"><span class="k">class</span><span class="w"> </span><span class="nc">Entity</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Entity</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="n">numShards</span> <span class="o">=</span> <span class="mi">5</span>
     <span class="n">vertsGl</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">_generateVerts</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">_generateVerts</span><span class="p">():</span>
         <span class="n">verts</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Entity</span><span class="o">.</span><span class="n">numShards</span><span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
             <span class="n">bearing</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">/</span> <span class="n">Entity</span><span class="o">.</span><span class="n">numShards</span>
@@ -168,7 +168,7 @@ Entity.__init__(), and the resulting arrays are stored on the
 instance (not shown).</p>
 <p>This vertex and color arrays can then be rendered as a triangle fan
 using the following Entity.draw() method:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">glLoadIdentity</span><span class="p">()</span>
     <span class="n">glTranslatef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
     <span class="n">glRotatef</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">rot</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>

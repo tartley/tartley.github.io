@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/tags/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Fri, 07 Mar 2025 18:54:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Integer Division With Recurring Decimals</title><link>https://www.tartley.com/posts/integer-division-with-recurring-decimals/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've been doing some programming tests and puzzles while job hunting lately. One
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about geek)</title><link>https://www.tartley.com/</link><description>Of interest to nerds.</description><atom:link href="https://www.tartley.com/tags/geek.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 27 May 2025 04:37:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tactical Breach Wizards</title><link>https://www.tartley.com/posts/tactical-breach-wizards/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="Tactical Breach Wizards screenshot." src="https://www.tartley.com/files/2025/tactical-breach-wizards.lossy.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Released in 2024 by Suspicious Developments.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I was toying with the idea of advancing the kiddo's videogaming curriculum into
+a turn-based tactics phase, maybe starting with the genius of 1994's &lt;a href="https://en.wikipedia.org/wiki/UFO%3A_Enemy_Unknown"&gt;UFO:Enemy
+Unknown&lt;/a&gt;, on which I spent
+endlessly fascinated evenings of my youth, or maybe one of the better of its
+numerous sequels and offshoots.&lt;/p&gt;
+&lt;p&gt;Somehow I was distracted from that plan by multiple people enthusing about last
+year's &lt;a href="https://en.wikipedia.org/wiki/Tactical_Breach_Wizards"&gt;Tactical Breach
+Wizards&lt;/a&gt;, and I'm so glad
+that I was.&lt;/p&gt;
+&lt;p&gt;It is &lt;em&gt;such&lt;/em&gt; a lovely, synergistic blend of gameplay mechanics, setting,
+characters, story, plot-twists and whip-smart dialog, making substantial
+improvements on the traditional bombastic and yet intensely thoughtful
+turn-based formula.&lt;/p&gt;
+&lt;p&gt;First, it defuses the self-righteous seriousness of the genre's customary tone
+by replacing the gurning muscle-bound military types with a bunch of special-ops
+&lt;em&gt;wizards&lt;/em&gt;. Still formidably competent, but now replete with pointy hats,
+hazardous runes, and bejeweled wands protruding from their assault rifle
+barrels.&lt;/p&gt;
+&lt;p&gt;Further, while presenting a thrilling facade of enemies dispatched in a dizzying
+flurry of rapid-fire magic, the game explicitly disavows wanton killing. While
+one of our characters does sneer at the stance, your team is revealed early-on
+to use only nonlethal take-downs. This is soon followed up by a cut-scene which
+shows your team leaving a building after a mission, revealing the enemies you
+earlier dispatched out of eighth floor windows floating gently earthwards, each
+safely cocooned in a magical bubble.&lt;/p&gt;
+&lt;p&gt;Second, a fundamental mechanic bestows one of your characters with the gift
+of magical foresight, allowing you to see the outcome of planned actions before
+you actually commit to them.&lt;/p&gt;
+&lt;p&gt;It's a slick narrative integration of a mechanic that serves multiple purposes.
+Preventing the anguish of losing a character due to dumb bad luck means the
+player is freed up to experiment more, trying audacious plans rather than
+playing it safe. Then, when it all goes wrong, you can rewind just a smidgeon,
+and try out nearby alternatives, until you have it all &lt;em&gt;just&lt;/em&gt; right, bouncing
+generative combos back and forth between characters, unleashing staggering waves
+of action, discovering gleefully that a level you initially thought to be an
+impossible slog is actually completable in a single turn. When combined with the
+inventive diversity of each character's specific talents, it simultaneously
+presents real challenges, while allowing the construction of surprising
+solutions that leave one feeling feeling incredibly clever and creative.&lt;/p&gt;
+&lt;p&gt;It's not often worthwhile dwelling on the characters in a videogame, but here
+they are the stars of the show. Distinctive, flawed and intensely likeable each
+in their own way, with personalities and back-stories that resonate so
+pleasingly with their in-game abilities. The writing is just top notch, with
+phenomenal dialog, giving the group as a whole a fresh, wholesome and real-talk
+vibe.&lt;/p&gt;
+&lt;p&gt;This is an all-time classic in my book, and has been fabulous to experience
+alongside the 13 year-old kiddo, as we've each run parallel games through to
+completion, ogling over each other's shoulders to get sneak previews of
+encounters we haven't seen yet.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>pc</category><category>videogame</category><guid>https://www.tartley.com/posts/tactical-breach-wizards/</guid><pubDate>Mon, 26 May 2025 21:43:45 GMT</pubDate></item><item><title>Integer Division With Recurring Decimals</title><link>https://www.tartley.com/posts/integer-division-with-recurring-decimals/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've been doing some programming tests and puzzles while job hunting lately. One
 quick challenge was quite nice, reminding me a bit of &lt;a href="https://projecteuler.net/"&gt;Project
 Euler&lt;/a&gt; questions, and I nerd sniped myself into doing
 a 2nd pass at it here.&lt;/p&gt;
@@ -35,7 +85,7 @@ to perform this division ourselves, longhand. We are going back to elementary
 school! Wheee!&lt;/p&gt;
 &lt;h3&gt;Better&lt;/h3&gt;
 &lt;p&gt;Let's just do basic division first, ignoring infinite or recurring digits:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;numerator&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;denominator&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;numerator&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;denominator&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="c1"&gt;# Accumulate parts of our result here&lt;/span&gt;
     &lt;span class="n"&gt;results&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
     &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -565,98 +615,4 @@ accommodate many others. For more information, see
 Senior Cloud Developer&lt;/p&gt;
 &lt;p&gt;&lt;span style="float: none"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;</description><category>cloud</category><category>geek</category><category>networking</category><category>security</category><category>software</category><guid>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</guid><pubDate>Wed, 23 Aug 2023 02:33:47 GMT</pubDate></item><item><title>TIL: git push --force-with-lease</title><link>https://www.tartley.com/posts/til-git-push-force-with-lease/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Don't ever type &lt;code&gt;git push --force&lt;/code&gt;. Yes, there are times we have to hold our
-nose and do a force push. Maybe the project requires contributions to be
-rebased or squashed. Maybe we pushed the nuclear launch codes. But there are
-failure modes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;You might be accidentally pushing to or from the wrong branch, and hence are
-  about to blow away valuable work at the remote. Yes, is unlikely, and can be
-  fixed after the fact, but who knows how much embarrassing disruption and
-  confusion you'll cause the team before you realize what you did.&lt;/li&gt;
-&lt;li&gt;Do you &lt;em&gt;always&lt;/em&gt; remember to check the state of the remote, to make sure there
-  isn't unexpected extra commits on the remote that you'll unknowingly blow
-  away when you push? Do you enjoy always having to type those extra commands
-  to pull and check the remote commits?&lt;/li&gt;
-&lt;li&gt;No matter how conscientious we are about checking the above, there is a race
-  condition. We might check the remote, then someone else pushes valuable
-  changes, then we force push and blow them away.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Although there are conventions that can help with all the above (e.g. only ever
-force pushing to your own fork, to which nobody else ever pushes), they aren't
-generally watertight. (e.g. you might have pushed something yourself, before
-vacation, and forgotten about it.)&lt;/p&gt;
-&lt;p&gt;So the generally agreed method to avoid the above failure modes is "be more
-careful", which sounds to me like the common prelude to failure. What we need
-are push's newer command-line options:&lt;/p&gt;
-&lt;dl&gt;
-&lt;dt&gt;&lt;code&gt;--force-with-lease&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;Like &lt;code&gt;--force&lt;/code&gt;, but refuses to push if the remote ref doesn't point at the
-same commit that our local remote-tracking branch 'origin/mybranch' thinks it
-should. So if someone else pushes something to the remote's 'mybranch' just
-before we try to force push, our push will fail until we pull (and, in theory,
-inspect) those commits that we were about to blow away.&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;p&gt;It turns out that this is inadequate. One might have fetched an up-to-date remote
-branch, but somehow or other ended up with our local HEAD on a divergent branch
-anyway:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;C origin/mybranch
-|
-B¹   B² HEAD mybranch
- \ /
-  A
-  |
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;In this situation, &lt;code&gt;--force-with-lease&lt;/code&gt; will allow us to push, not only blowing
-away the original commit B¹, as we intended, but also C, which was maybe pushed
-by someone else before we fetched.&lt;/p&gt;
-&lt;p&gt;To guard against this, we can use the even newer option:&lt;/p&gt;
-&lt;dl&gt;
-&lt;dt&gt;&lt;code&gt;--force-if-includes&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;This makes &lt;code&gt;--force-with-lease&lt;/code&gt; even more strict about rejecting pushes,
-using clever heuristics on your local reflog, to check that the remote ref
-being updated doesn't include commits which have never been part of your local
-branch.&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;p&gt;Upshot is, I plan to default to always replacing uses of &lt;code&gt;--force&lt;/code&gt; with:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;--force-if-includes&lt;span class="w"&gt; &lt;/span&gt;...
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;That's a lot to type, the options don't have short versions, and it's easy to forget to
-do. Hence, shadow &lt;code&gt;git&lt;/code&gt; to enforce it, and make it easy. In .bashrc or similar:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# Shadow git to warn againt the use of 'git push -f'&lt;/span&gt;
-git&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;is_push&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nv"&gt;is_force&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;arg&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"push"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;is_push&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"-f"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;-o&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$arg&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"--force"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;is_force&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;done&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$is_push&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$is_force&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;then&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="c1"&gt;# Suggest alternative commands.&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"git push -f: Consider 'git push --force-with-lease --force-if-includes' instead, which is aliased to 'gpf'"&lt;/span&gt;
-&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;fi&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;# Run the given command, using the git executable instead of this function.&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
-&lt;span class="o"&gt;}&lt;/span&gt;
-
-&lt;span class="c1"&gt;# git push force: using the new, safer alternatives to --force&lt;/span&gt;
-gpf&lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;{&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;# Older versions of git don't have --force-if-includes. Fallback to omitting it.&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;!&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--quiet&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;--force-if-includes&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;then&lt;/span&gt;
-&lt;span class="w"&gt;      &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;--quiet&lt;span class="w"&gt; &lt;/span&gt;--force-with-lease&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;fi&lt;/span&gt;
-&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then trying to do it wrong tells you how to easily do it right:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;$&lt;span class="w"&gt; &lt;/span&gt;git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;-f
-git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;-f:&lt;span class="w"&gt; &lt;/span&gt;Consider&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'git push --force-with-lease --force-if-includes'&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;instead,&lt;span class="w"&gt; &lt;/span&gt;which&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;aliased&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'gpf'&lt;/span&gt;
-&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
-$&lt;span class="w"&gt; &lt;/span&gt;gpf
-$
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;(The [1] is my prompt telling me that the last command had an error exit value.)&lt;/p&gt;</description><category>geek</category><category>git</category><category>software</category><category>terminal</category><category>til</category><guid>https://www.tartley.com/posts/til-git-push-force-with-lease/</guid><pubDate>Fri, 04 Aug 2023 18:48:19 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;/p&gt;</description><category>cloud</category><category>geek</category><category>networking</category><category>security</category><category>software</category><guid>https://www.tartley.com/posts/illustrating-uses-of-ibm-cloud-security-groups/</guid><pubDate>Wed, 23 Aug 2023 02:33:47 GMT</pubDate></item></channel></rss>

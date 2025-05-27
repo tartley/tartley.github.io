@@ -164,8 +164,8 @@ not f-strings), numbers, booleans or None.</p>
 </pre></div>
 
 <p>except for booleans and None, which are compared using <code>is</code>:</p>
-<div class="code"><pre class="code literal-block"><span class="k">class</span><span class="w"> </span><span class="nc">Any</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Any</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">True</span>
 
 <span class="n">myfalse</span> <span class="o">=</span> <span class="n">Any</span><span class="p">()</span>
@@ -301,7 +301,7 @@ produce an error by making subsequent patterns unreachable.</p>
 case pattern can automatically be handled using the unambiguous ordering of its
 attributes:</p>
 <div class="code"><pre class="code literal-block"><span class="nd">@dataclass</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">Dog</span><span class="p">:</span>
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">color</span><span class="p">:</span> <span class="nb">str</span>
 
@@ -316,7 +316,7 @@ attributes:</p>
 To fix this, add a <code>__match_args__</code> attribute on the class, a tuple which
 specifies which class attributes, in which order, can be specified in a case
 pattern:</p>
-<div class="code"><pre class="code literal-block"><span class="k">class</span><span class="w"> </span><span class="nc">KeyPress</span><span class="p">:</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">KeyPress</span><span class="p">:</span>
     <span class="n">__match_args__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'key_name'</span><span class="p">,</span> <span class="s1">'release'</span><span class="p">)</span>
 
 <span class="n">event</span> <span class="o">=</span> <span class="n">KeyPress</span><span class="p">(</span><span class="n">key_name</span><span class="o">=</span><span class="s1">'q'</span><span class="p">,</span> <span class="n">release</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -357,13 +357,13 @@ itself, not an attribute on that value:</p>
 be more than just literals or variable names. In fact they can use <em>any</em> of the
 listed pattern types. For example, they could be a nested instance of this
 class-like syntax:</p>
-<div class="code"><pre class="code literal-block"><span class="k">class</span><span class="w"> </span><span class="nc">Location</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">Location</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">Car</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">location</span>
 
 <span class="n">mycar</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">Location</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">))</span>

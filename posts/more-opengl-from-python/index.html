@@ -110,8 +110,8 @@ expressiveness of Python can really shine.</p>
 an arbitrary polyhedra (3D shapes with flat faces and straight edges):</p>
 <div class="code"><pre class="code literal-block"><span class="n">Position</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">'Position'</span><span class="p">,</span> <span class="s1">'x y z'</span><span class="p">)</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">Shape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">Shape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vertices</span> <span class="o">=</span> <span class="p">[</span><span class="n">Position</span><span class="p">(</span><span class="o">*</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vertices</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">faces</span> <span class="o">=</span> <span class="n">faces</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
@@ -122,7 +122,7 @@ the vertex list. The 'faces' attribute is a list of all faces. The color
 attributes is just a 4 element tuple: (r, g, b, alpha). This class can
 now be instantiated by factory functions to form particular 3D shapes,
 such as red cubes or blue tetrahedrons:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">Cube</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
     <span class="n">verts</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">(</span><span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
         <span class="p">(</span><span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="n">edge</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span>
@@ -151,7 +151,7 @@ well as vertices.</p>
 <p>Finally, we have a renderer, whose 'draw' method is invoked by our
 window draw event. This iterates through all items in our world that
 have a Glyph attribute, drawing each of them:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
         <span class="n">gl</span><span class="o">.</span><span class="n">glPushMatrix</span><span class="p">()</span>
 
@@ -198,18 +198,18 @@ call to glDrawElements. To do this, we create a CompositeShape object,
 that contains several Shapes, and exposes 'vertices' and 'faces'
 attributes just like a regular Shape, which aggregate the geometry of
 all their subordinate Shapes.</p>
-<div class="code"><pre class="code literal-block"><span class="k">class</span><span class="w"> </span><span class="nc">CompositeShape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">class</span> <span class="nc">CompositeShape</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">offset</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">offset</span> <span class="o">=</span> <span class="n">Position</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">child</span><span class="p">,</span> <span class="n">offset</span><span class="p">))</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">vertices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">vertices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">vert</span> <span class="o">+</span> <span class="n">offset</span>
                 <span class="k">for</span> <span class="n">shape</span><span class="p">,</span> <span class="n">offset</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span>
                 <span class="k">for</span> <span class="n">vert</span> <span class="ow">in</span> <span class="n">shape</span><span class="o">.</span><span class="n">vertices</span><span class="p">)</span>
@@ -250,7 +250,7 @@ shaded. Lighting needs to know normals, the vector at right angles to a
 face, so that it can figure out how how strongly each face is
 illuminated. So our Glyph needs to start generating an array of normals
 for each vertex.</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">get_normal</span><span class="p">(</span><span class="n">face</span><span class="p">,</span> <span class="n">vertices</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">get_normal</span><span class="p">(</span><span class="n">face</span><span class="p">,</span> <span class="n">vertices</span><span class="p">):</span>
     <span class="n">v0</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
     <span class="n">v1</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
     <span class="n">v2</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">face</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
@@ -258,9 +258,9 @@ for each vertex.</p>
     <span class="n">b</span> <span class="o">=</span> <span class="n">v2</span> <span class="o">-</span> <span class="n">v1</span>
     <span class="k">return</span> <span class="n">b</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">Glyph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">Glyph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">get_glnormals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get_glnormals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="p">):</span>
         <span class="n">face_normals</span> <span class="o">=</span> <span class="p">(</span><span class="n">get_normal</span><span class="p">(</span><span class="n">face</span><span class="p">,</span> <span class="n">shape</span><span class="o">.</span><span class="n">vertices</span><span class="p">)</span>
                         <span class="k">for</span> <span class="n">face</span> <span class="ow">in</span> <span class="n">shape</span><span class="o">.</span><span class="n">faces</span><span class="p">)</span>
         <span class="n">normals</span> <span class="o">=</span> <span class="p">(</span><span class="n">normal</span>

@@ -206,11 +206,11 @@ described in the user story, and verifies the application responds as
 expected. To create an acceptance test, at Resolver Systems we paste the
 entire user story, as comments, into a new test method, on a class
 derived from Python's <code>unittest.TestCase</code>.</p>
-<div class="code"><pre class="code literal-block"><span class="kn">from</span><span class="w"> </span><span class="nn">unittest</span><span class="w"> </span><span class="kn">import</span> <span class="n">main</span> <span class="k">as</span> <span class="n">run_test</span><span class="p">,</span> <span class="n">TestCase</span>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">main</span> <span class="k">as</span> <span class="n">run_test</span><span class="p">,</span> <span class="n">TestCase</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">AT001_AddItems</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">AT001_AddItems</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_additems</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_additems</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># 1. Alice starts WizBang. The window appears.</span>
         <span class="c1"># 2. She sees the three default list entries:</span>
         <span class="c1">#    'one', 'two', 'three'. Nothing is selected.</span>
@@ -243,7 +243,7 @@ manually, either by setting an environment variable:</p>
 
 <p>or by appending this directory to <code>sys.path</code> inside your IronPython
 install's <code>Lib\site.py</code> file:</p>
-<div class="code"><pre class="code literal-block"><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<div class="code"><pre class="code literal-block"><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">r</span><span class="s1">'C:\Python25\Lib'</span><span class="p">)</span>
 </pre></div>
 
@@ -255,7 +255,7 @@ the CPython standard library:</p>
 <li>IronPython 2.6: Python 2.6</li>
 </ul>
 <p>Once this is done, test it out by starting <code>ipy.exe</code>, and typing:</p>
-<div class="code"><pre class="code literal-block"><span class="o">&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">unittest</span>
+<div class="code"><pre class="code literal-block"><span class="o">&gt;</span> <span class="kn">import</span> <span class="nn">unittest</span>
 </pre></div>
 
 <p>If this works without complaint, exit <em>ipy.exe</em>, and run the nascent
@@ -291,7 +291,7 @@ of having to instantiate and populate .NET collection classes.</p>
 to the containing .NET <em>assembly</em>. An assembly is a physical chunk of
 code, usually contained in a DLL file. To add a reference, use the <code>clr</code>
 module, which is built-in to IronPython:</p>
-<div class="code"><pre class="code literal-block"><span class="kn">import</span><span class="w"> </span><span class="nn">clr</span>
+<div class="code"><pre class="code literal-block"><span class="kn">import</span> <span class="nn">clr</span>
 <span class="n">clr</span><span class="o">.</span><span class="n">AddReference</span><span class="p">(</span><span class="s1">'System.Windows.Forms'</span><span class="p">)</span>
 </pre></div>
 
@@ -303,7 +303,7 @@ standard library, the assemblies are usually given the same name as the
 namespace they implement. This is the case here, so once the above
 assembly is referenced, we can import code from the
 <em>System.Windows.Forms</em> namespace just as if it was a Python module:</p>
-<div class="code"><pre class="code literal-block"><span class="kn">from</span><span class="w"> </span><span class="nn">System.Windows.Forms</span><span class="w"> </span><span class="kn">import</span> <span class="n">Form</span>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span> <span class="nn">System.Windows.Forms</span> <span class="kn">import</span> <span class="n">Form</span>
 <span class="n">form</span> <span class="o">=</span> <span class="n">Form</span><span class="p">()</span>
 <span class="n">form</span><span class="o">.</span><span class="n">Show</span><span class="p">()</span>
 </pre></div>
@@ -470,30 +470,30 @@ library we use.</p>
 <code>AcceptanceTest</code>, which looks like this:</p>
 <div class="code"><pre class="code literal-block"><span class="c1"># Python acceptance test base class</span>
 <span class="c1"># References .NET assemblies - requires IronPython</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">clr</span>
+<span class="kn">import</span> <span class="nn">clr</span>
 <span class="n">clr</span><span class="o">.</span><span class="n">AddReference</span><span class="p">(</span><span class="s1">'WizBang'</span><span class="p">)</span>
 
 <span class="c1"># import from .NET namespaces - requires IronPython</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">System.Threading</span><span class="w"> </span><span class="kn">import</span> <span class="n">ApartmentState</span><span class="p">,</span> <span class="n">Thread</span><span class="p">,</span> <span class="n">ThreadStart</span>
+<span class="kn">from</span> <span class="nn">System.Threading</span> <span class="kn">import</span> <span class="n">ApartmentState</span><span class="p">,</span> <span class="n">Thread</span><span class="p">,</span> <span class="n">ThreadStart</span>
 
 <span class="c1"># import from the Python standard library</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">unittest</span><span class="w"> </span><span class="kn">import</span> <span class="n">TestCase</span>
+<span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">TestCase</span>
 
 <span class="c1"># import from the .NET namespace of the system under test</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">WizBang</span><span class="w"> </span><span class="kn">import</span> <span class="n">Program</span>
+<span class="kn">from</span> <span class="nn">WizBang</span> <span class="kn">import</span> <span class="n">Program</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">AcceptanceTest</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">AcceptanceTest</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Starts up the program under test (PUT) on a new thread at the start</span>
 <span class="sd">    of each test, and shut it down again after each test has run</span>
 <span class="sd">    """</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
         <span class="n">TestCase</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">program</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">eventloop</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">TestCase</span><span class="o">.</span><span class="n">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">program</span> <span class="o">=</span> <span class="n">Program</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">eventloop</span> <span class="o">=</span> <span class="n">Thread</span><span class="p">(</span><span class="n">ThreadStart</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="o">.</span><span class="n">Start</span><span class="p">))</span>
@@ -502,7 +502,7 @@ library we use.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">eventloop</span><span class="o">.</span><span class="n">Start</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="o">.</span><span class="n">eventloopReady</span><span class="o">.</span><span class="n">WaitOne</span><span class="p">()</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="o">.</span><span class="n">Stop</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">eventloop</span><span class="o">.</span><span class="n">Join</span><span class="p">()</span>
         <span class="n">TestCase</span><span class="o">.</span><span class="n">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -529,13 +529,13 @@ ended.</p>
 <p>This can all be tried out, by modifying <code>AT001_AddItems</code> to inherit from
 <code>AcceptanceTest</code> instead of <code>TestCase</code>, and adding a sleep in the body
 of the test method, before the fail:</p>
-<div class="code"><pre class="code literal-block"><span class="kn">from</span><span class="w"> </span><span class="nn">System.Threading</span><span class="w"> </span><span class="kn">import</span> <span class="n">Thread</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">unittest</span><span class="w"> </span><span class="kn">import</span> <span class="n">main</span> <span class="k">as</span> <span class="n">run_test</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">AcceptanceTest</span><span class="w"> </span><span class="kn">import</span> <span class="n">AcceptanceTest</span>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span> <span class="nn">System.Threading</span> <span class="kn">import</span> <span class="n">Thread</span>
+<span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">main</span> <span class="k">as</span> <span class="n">run_test</span>
+<span class="kn">from</span> <span class="nn">AcceptanceTest</span> <span class="kn">import</span> <span class="n">AcceptanceTest</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">AT001_AddItems</span><span class="p">(</span><span class="n">AcceptanceTest</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">AT001_AddItems</span><span class="p">(</span><span class="n">AcceptanceTest</span><span class="p">):</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">test_add_address</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_add_address</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># 1. Alice starts WizBang. The window appears.</span>
         <span class="c1"># etc (not yet implimented)</span>
 
@@ -564,9 +564,9 @@ behaviour of the main form.</p>
 <p>We can now start coding the requirements that have been pasted into our
 acceptance test as comments. We might be tempted to implement the first
 requirement of the acceptance test as follows:</p>
-<div class="code"><pre class="code literal-block"><span class="kn">import</span><span class="w"> </span><span class="nn">clr</span>
+<div class="code"><pre class="code literal-block"><span class="kn">import</span> <span class="nn">clr</span>
 <span class="n">clr</span><span class="o">.</span><span class="n">AddReference</span><span class="p">(</span><span class="s1">'WizBang'</span><span class="p">)</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">WizBang</span><span class="w"> </span><span class="kn">import</span> <span class="n">AllForms</span>
+<span class="kn">from</span> <span class="nn">WizBang</span> <span class="kn">import</span> <span class="n">AllForms</span>
 
 <span class="c1"># 1. Alice starts WizBang. The window appears.</span>
 <span class="n">mainform</span> <span class="o">=</span> <span class="n">AllForms</span><span class="o">.</span><span class="n">mainform</span>
@@ -600,9 +600,9 @@ appropriate delegate can be constructed using the IronPython construct
 <code>CallTarget0</code>, which denotes a delegate taking zero arguments.</p>
 <p>The above sounds like quite a mouthful, and the code is correspondingly
 verbose:</p>
-<div class="code"><pre class="code literal-block"><span class="kn">import</span><span class="w"> </span><span class="nn">clr</span>
+<div class="code"><pre class="code literal-block"><span class="kn">import</span> <span class="nn">clr</span>
 <span class="n">clr</span><span class="o">.</span><span class="n">AddReference</span><span class="p">(</span><span class="s1">'IronPython'</span><span class="p">)</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">IronPython.Runtime.Calls</span><span class="w"> </span><span class="kn">import</span> <span class="n">CallTarget0</span>
+<span class="kn">from</span> <span class="nn">IronPython.Runtime.Calls</span> <span class="kn">import</span> <span class="n">CallTarget0</span>
 
 <span class="c1"># 1. Alice starts WizBang. The window appears.</span>
 <span class="n">getVisible</span> <span class="o">=</span> <span class="n">CallTarget0</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">mainform</span><span class="o">.</span><span class="n">Visible</span><span class="p">)</span>
@@ -621,7 +621,7 @@ throughout our acceptance tests, whenever the properties or methods of a
 control are accessed. Such code can be abbreviated slightly, by defining
 a method on <code>AcceptanceTest</code>, to help us invoke on the main form's
 thread:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">on_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">on_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="o">.</span><span class="n">mainform</span><span class="o">.</span><span class="n">Invoke</span><span class="p">(</span><span class="n">CallTarget0</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
 </pre></div>
 
@@ -642,7 +642,7 @@ example, consider the second user story requirement:</p>
 <p>The function <code>assert_list_at_startup()</code>, shown below, can now have
 access to properties on all controls without using <code>Invoke()</code>, since it
 runs entirely on the GUI thread:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">assert_list_at_startup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">assert_list_at_startup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">wizList</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="o">.</span><span class="n">mainform</span><span class="o">.</span><span class="n">Controls</span><span class="p">[</span><span class="s1">'WizList'</span><span class="p">]</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">wizList</span><span class="o">.</span><span class="n">SelectedIndex</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
         <span class="s1">'should be nothing selected'</span><span class="p">)</span>
@@ -663,8 +663,8 @@ handler which fixes this, reconstituting the entire stack trace even
 across thread boundaries.</p>
 <p>Wrapping callables, as <code>on_gui()</code> does, is often usefully implemented as
 a decorator. This can be provided by our AcceptanceTest module:</p>
-<div class="code"><pre class="code literal-block"><span class="k">def</span><span class="w"> </span><span class="nf">guithread</span><span class="p">(</span><span class="n">target</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="code"><pre class="code literal-block"><span class="k">def</span> <span class="nf">guithread</span><span class="p">(</span><span class="n">target</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">test</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">test</span><span class="o">.</span><span class="n">on_gui</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">target</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">wrapper</span>
@@ -677,7 +677,7 @@ not work.</p>
 <p>Functions like <code>assert_list_at_startup()</code>, above, which make frequent
 access to properties of controls, can now be decorated:</p>
 <div class="code"><pre class="code literal-block"><span class="nd">@guithread</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">assert_list_at_startup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">assert_list_at_startup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="n">wizList</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">program</span><span class="o">.</span><span class="n">mainform</span><span class="o">.</span><span class="n">Controls</span><span class="p">[</span><span class="s1">'WizList'</span><span class="p">]</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">wizList</span><span class="o">.</span><span class="n">SelectedIndex</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
     <span class="c1"># etc</span>
@@ -710,7 +710,7 @@ some input to the SUT, simulating the actions of a user:</p>
 our test can use. A small utility method on <code>AcceptanceTest</code> calls this
 on the GUI thread:</p>
 <div class="code"><pre class="code literal-block"><span class="nd">@guithread</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">click_button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">form</span><span class="p">,</span> <span class="n">buttonName</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">click_button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">form</span><span class="p">,</span> <span class="n">buttonName</span><span class="p">):</span>
     <span class="n">form</span><span class="o">.</span><span class="n">Controls</span><span class="p">[</span><span class="n">buttonName</span><span class="p">]</span><span class="o">.</span><span class="n">PerformClick</span><span class="p">()</span>
 </pre></div>
 
@@ -773,7 +773,7 @@ implemented using the techniques discussed thus far:</p>
 <p>Where <code>set_text()</code> is a small helper function provided by
 <code>AcceptanceTest</code>:</p>
 <div class="code"><pre class="code literal-block"><span class="nd">@guithread</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">set_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">textbox</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">set_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">textbox</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
     <span class="n">textbox</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="n">text</span>
 </pre></div>
 
@@ -789,7 +789,7 @@ actually experience it.</p>
 <p>The simplest way to improve on this for the moment is to explicitly test
 for these conditions:</p>
 <div class="code"><pre class="code literal-block"><span class="nd">@guithread</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">set_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">textbox</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">set_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">textbox</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">textbox</span><span class="o">.</span><span class="n">Visible</span><span class="p">,</span> <span class="s1">'textbox should be visible'</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">textbox</span><span class="o">.</span><span class="n">Focused</span><span class="p">,</span> <span class="s1">'textbox should have focus'</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">textbox</span><span class="o">.</span><span class="n">Enabled</span><span class="p">,</span> <span class="s1">'textbox should be enabled'</span><span class="p">)</span>
@@ -817,7 +817,7 @@ requirement is straightforward:</p>
 
 <p>where:</p>
 <div class="code"><pre class="code literal-block"><span class="nd">@guithread</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">assert_list_after_add</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">assert_list_after_add</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">item_count</span><span class="p">(),</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">'should be 4 items'</span><span class="p">)</span>
     <span class="n">wizList</span> <span class="o">=</span> <span class="n">AllForms</span><span class="o">.</span><span class="n">mainForm</span><span class="o">.</span><span class="n">Controls</span><span class="p">[</span><span class="s1">'WizList'</span><span class="p">]</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">wizList</span><span class="o">.</span><span class="n">Items</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="s1">'hello'</span><span class="p">,</span> <span class="s1">'list[3] wrong'</span><span class="p">)</span>
@@ -833,7 +833,7 @@ the <em>add item</em> form:</p>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">ListBox</span><span class="w"> </span><span class="n">wizList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AllForms</span><span class="p">.</span><span class="n">mainForm</span><span class="p">.</span><span class="n">WizList</span><span class="p">;</span>
 <span class="w">    </span><span class="n">wizList</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">addItem</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
-<span class="w">    </span><span class="n">wizList</span><span class="p">.</span><span class="n">SelectedIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wizList</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">wizList</span><span class="p">.</span><span class="n">SelectedIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wizList</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">;</span>
 <span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
 <span class="p">}</span>
 </pre></div>
