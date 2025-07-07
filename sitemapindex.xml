@@ -15,11 +15,11 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/rss.xml</loc>
-  <lastmod>2025-07-07T14:42:00Z</lastmod>
+  <lastmod>2025-07-07T14:54:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/sitemap.xml</loc>
-  <lastmod>2025-07-07T14:42:00Z</lastmod>
+  <lastmod>2025-07-07T14:54:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/animation.xml</loc>
@@ -64,10 +64,6 @@
  <sitemap>
   <loc>https://www.tartley.com/tags/cloud.xml</loc>
   <lastmod>2025-06-01T01:33:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://www.tartley.com/tags/code.xml</loc>
-  <lastmod>2025-07-07T14:05:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/cognition.xml</loc>
@@ -347,7 +343,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/python.xml</loc>
-  <lastmod>2025-07-07T14:42:00Z</lastmod>
+  <lastmod>2025-07-07T14:54:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/qntm.xml</loc>
@@ -379,7 +375,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/software.xml</loc>
-  <lastmod>2025-07-07T14:42:00Z</lastmod>
+  <lastmod>2025-07-07T14:54:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/spoilers.xml</loc>
@@ -403,7 +399,7 @@
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/teaching.xml</loc>
-  <lastmod>2025-07-07T14:42:00Z</lastmod>
+  <lastmod>2025-07-07T14:54:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://www.tartley.com/tags/terminal.xml</loc>
