@@ -1,5 +1,6 @@
-python3-venv
 libxml2-dev
 libxslt1-dev
 libjpeg-dev
+python3-gdbm
+python3-venv
 
