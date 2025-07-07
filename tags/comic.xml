@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about comic)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/comic.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 26 May 2025 23:19:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TIL: Constructing a PDF from .jpg image files</title><link>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have some folders of .jpg images that make up a comic. I want to convert them into a PDF to read
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about comic)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/comic.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 07 Jul 2025 13:20:53 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Here</title><link>https://www.tartley.com/posts/here/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="Here cover" src="https://www.tartley.com/files/2025/here.webp"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;by Richard McGuire (the 304 page graphic novel, not the original 6 page
+comic.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;If you dug &lt;em&gt;Understanding Comics&lt;/em&gt; then you will probably like this. Every panel is a view of the exact same space, occupied by a modest living room in our time, but the frames span a vast time period, and are presented in a chaotic, overlapping, non-chronological way that heightens the drama of several stories that happen, at times, to pass by that location. Experimental stuff.&lt;/p&gt;
+&lt;p&gt;I hear there will be a movie. Reminds me of the movies of Alan Moore's comics, which entirely missed the point that he was exploring what could be done in the comic medium which doesn't work in others.&lt;/p&gt;</description><category>book</category><category>comic</category><category>fiction</category><category>media</category><guid>https://www.tartley.com/posts/here/</guid><pubDate>Sat, 31 May 2025 14:24:15 GMT</pubDate></item><item><title>TIL: Constructing a PDF from .jpg image files</title><link>https://www.tartley.com/posts/til-constructing-a-pdf-from-jpg-image-files/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I have some folders of .jpg images that make up a comic. I want to convert them into a PDF to read
 on my tab and other devices, and import into my Calibre bookshelf.&lt;/p&gt;
 &lt;h3&gt;1. Install some prerequisites&lt;/h3&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;imagemagick&lt;span class="w"&gt; &lt;/span&gt;pdftk
@@ -127,10 +131,10 @@ started by deconstructing the superhero.&lt;/p&gt;
 humanity by Adrien Veidt's plans, tired of his entanglement in the messy
 complexity of people's lives, threatening to leave the galaxy "for one less
 complicated".&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Manhattan's departure at the end of Watchmen" src="https://www.tartley.com/files/2022/doomsday-clock-watchmen-manhattan.webp"&gt;
+&lt;center&gt;
+![Manhattan's departure at the end of Watchmen](/files/2022/doomsday-clock-watchmen-manhattan.webp)
 &lt;/center&gt;
-&lt;br&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;In &lt;em&gt;Doomsday Clock&lt;/em&gt;, Adrian Veidt, genius that he is, invents a means to follow
 Dr Manhattan, seeking his help with the re-emergence of imminent nuclear war
 brought about by the revelations in Rorschach's journal, and it becomes clear
@@ -142,10 +146,10 @@ crossover event nobody wanted", but personally I felt it was really well done.&l
 &lt;p&gt;Two of the most prominently deceased &lt;em&gt;Watchmen&lt;/em&gt; characters are brought back
 into play, using mechanisms I thought were legitimate and, on occasion,
 laugh-out-loud satisfying as they reached their resolution.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Doomsday Clock Watchmen Comedian Alive" src="https://www.tartley.com/files/2022/doomsday-clock-comedian.webp"&gt;
+&lt;center&gt;
+![Doomsday Clock Watchmen Comedian Alive](/files/2022/doomsday-clock-comedian.webp)
 &lt;/center&gt;
-&lt;br&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;In particular, they find a way to bring back Rorschach. Or, at least, &lt;em&gt;a&lt;/em&gt;
 Rorschach. Another individual picks up the mask. This seems like the most
 controversial of the many decisions in the book, but it's handled deftly, and
@@ -188,10 +192,10 @@ during &lt;em&gt;Doomsday Clock&lt;/em&gt;'s story.&lt;/p&gt;
 human consequences of his actions, setting himself up as the villain of the
 piece, an uncaring "being of inaction", in contrast to Superman, the literal
 "man of Action".&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Doomsday Clock: Superman &amp;amp; Manhattan" src="https://www.tartley.com/files/2022/doomsday-clock-superman.webp"&gt;
+&lt;center&gt;
+![Doomsday Clock: Superman &amp;amp; Manhattan](/files/2022/doomsday-clock-superman.webp)
 &lt;/center&gt;
-&lt;br&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;This forms a genuine riposte to &lt;em&gt;Watchmen's&lt;/em&gt; criticism of the superhero genre.
 Yes, the DC heroes inhabit a simpler world, but the simplicity serves a purpose.
 Escaping the mundane enhances the mythological power of what they represent as
@@ -214,10 +218,10 @@ influenced the wider world of comics, so the comic world gazes back. They see
 us, all the real-world, fully-rounded humans, trapped in the depths of our
 pathos, and they wonder, when will each of us learn to transcend our humdrum
 limitations, to finally act on our hopes and dreams, and &lt;em&gt;fly...&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Doomsday Clock: Mothman" src="https://www.tartley.com/files/2022/doomsday-clock-mothman.webp"&gt;
+&lt;center&gt;
+![Doomsday Clock: Mothman](/files/2022/doomsday-clock-mothman.webp)
 &lt;/center&gt;
-&lt;br&gt;</description><category>book</category><category>comic</category><category>fiction</category><category>media</category><category>moore</category><category>science-fiction</category><guid>https://www.tartley.com/posts/doomsday-clock/</guid><pubDate>Fri, 23 Sep 2022 01:57:55 GMT</pubDate></item><item><title>The Electric State</title><link>https://www.tartley.com/posts/the-electric-state/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: right"&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;</description><category>book</category><category>comic</category><category>fiction</category><category>media</category><category>moore</category><category>science-fiction</category><guid>https://www.tartley.com/posts/doomsday-clock/</guid><pubDate>Fri, 23 Sep 2022 01:57:55 GMT</pubDate></item><item><title>The Electric State</title><link>https://www.tartley.com/posts/the-electric-state/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: right"&gt;
 &lt;img alt="The Electric State cover" src="https://www.tartley.com/files/2022/the-electric-state-cover.webp"&gt;
 &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;by Simon Stålenhag (2017)&lt;/em&gt;&lt;/p&gt;

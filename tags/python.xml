@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about python)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 26 May 2025 23:19:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Integer Division With Recurring Decimals</title><link>https://www.tartley.com/posts/integer-division-with-recurring-decimals/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've been doing some programming tests and puzzles while job hunting lately. One
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about python)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Mon, 07 Jul 2025 14:42:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Code in Place</title><link>https://www.tartley.com/posts/code-in-place/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;span style="float: left"&gt;
+&lt;a href="https://digitalcredential.stanford.edu/check/33D48CE3B18525700116E06E5009FAAA4331AEE03E75C6F2D0A3E235B454A6A7dlVFMkhoaCt6Z1g3Q0c5U2ozTnh3aEZqSm96RTFWU1dRNUpWZzVqYnBvRlZKV0VE"&gt;&lt;img alt="Code in Place completion" src="https://www.tartley.com/files/2025/code-in-place.webp"&gt;&lt;/a&gt;
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Code in Place 2025 has ended. I participated as a Section Leader, tutoring a small group of beginner programmers through learning basic coding in Python. We covered fundamental programming - variables and loops and conditionals and data-structures, and used them to cajole small on-screen robots into moving around and performing tasks, and to draw some graphics with lines and filled shapes.&lt;/p&gt;
+&lt;p&gt;The course was open to all, so there were many self-driven members of the public, as well as students looking for credit. These were not computer science CS106A students, but instead were studying something else and wanted to add a little bit of programming as an extra skill on the side. &lt;/p&gt;
+&lt;p&gt;The interesting thing about Code in Place is that it aims to investigate &lt;em&gt;scaling&lt;/em&gt; the teaching experience, not only by making the course available to 40,000 members of the public, but by recruiting 4,000 teaching volunteers to act as Section Leaders, guiding the students through the material. The application for section leader involved some basic competency questions, and an interesting task to record a video of me teaching some basic programming concepts. This all helped me to understand that I need to scale down my expectations of what is "self-evident", reminding me that beginners need to be taught &lt;em&gt;from the beginning&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Once the classes started, I heard complaints in the teachers' forums that other classes suffered from chronic absenteeism, or from students simply not doing the work. But my students were absolutely fabulous, reliably showing up on time, doing all the exercises, and engaging honestly and curiously in the classes. I think that students were sorted into age groups that tend to be not too dissimilar to their Section Leader, so perhaps I had an older-than-average cohort, which might partly explain how I got so lucky.&lt;/p&gt;
+&lt;p&gt;Regardless of how it happened, it was a rewarding experience, seeing people rapidly grow their abilities, and become confident where they had originally been fearful. I'm already looking forward to next year's course!&lt;/p&gt;
+&lt;p&gt;&lt;br style="clear: left"&gt;&lt;/p&gt;</description><category>python</category><category>software</category><category>teaching</category><guid>https://www.tartley.com/posts/code-in-place/</guid><pubDate>Mon, 07 Jul 2025 14:03:35 GMT</pubDate></item><item><title>Integer Division With Recurring Decimals</title><link>https://www.tartley.com/posts/integer-division-with-recurring-decimals/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;I've been doing some programming tests and puzzles while job hunting lately. One
 quick challenge was quite nice, reminding me a bit of &lt;a href="https://projecteuler.net/"&gt;Project
 Euler&lt;/a&gt; questions, and I nerd sniped myself into doing
 a 2nd pass at it here.&lt;/p&gt;
@@ -35,7 +43,7 @@ to perform this division ourselves, longhand. We are going back to elementary
 school! Wheee!&lt;/p&gt;
 &lt;h3&gt;Better&lt;/h3&gt;
 &lt;p&gt;Let's just do basic division first, ignoring infinite or recurring digits:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;numerator&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;denominator&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;numerator&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;denominator&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="c1"&gt;# Accumulate parts of our result here&lt;/span&gt;
     &lt;span class="n"&gt;results&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
     &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
@@ -233,8 +241,8 @@ not f-strings), numbers, booleans or None.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;except for booleans and None, which are compared using &lt;code&gt;is&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Any&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__eq__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Any&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="fm"&gt;__eq__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
 
 &lt;span class="n"&gt;myfalse&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Any&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -370,7 +378,7 @@ produce an error by making subsequent patterns unreachable.&lt;/p&gt;
 case pattern can automatically be handled using the unambiguous ordering of its
 attributes:&lt;/p&gt;
 &lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nd"&gt;@dataclass&lt;/span&gt;
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Dog&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
     &lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;
 
@@ -385,7 +393,7 @@ attributes:&lt;/p&gt;
 To fix this, add a &lt;code&gt;__match_args__&lt;/code&gt; attribute on the class, a tuple which
 specifies which class attributes, in which order, can be specified in a case
 pattern:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;__match_args__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'key_name'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'release'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="n"&gt;event&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;KeyPress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key_name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'q'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;release&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -426,13 +434,13 @@ itself, not an attribute on that value:&lt;/p&gt;
 be more than just literals or variable names. In fact they can use &lt;em&gt;any&lt;/em&gt; of the
 listed pattern types. For example, they could be a nested instance of this
 class-like syntax:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
 
-&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt;
 
 &lt;span class="n"&gt;mycar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Car&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Location&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -622,7 +630,7 @@ one row at a time through each of the generators:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;where each called function except the last is actually a generator, e.g:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rows&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rows&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;rows&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -655,7 +663,7 @@ thought this through.&lt;/p&gt;
 &lt;p&gt;Luckily, before embarking on that, I realised today I've been
 over-complicating the whole thing. There's no need for decorators, nor
 for the cute '|' syntax. I just need a plain old function:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;link&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;transforms&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;link&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;transforms&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt;
     &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;transform&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;transforms&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -720,60 +728,4 @@ no network. You might choose to treat 'packages' as ephemeral.&lt;/p&gt;
 pattern has now been &lt;a href="http://www.pip-installer.org/en/latest/cookbook.html#fast-local-installs"&gt;explicitly called out in the
 documentation&lt;/a&gt;,
 which was substantially reorganised and improved with the recent 1.3
-release.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</guid><pubDate>Fri, 08 Mar 2013 15:29:09 GMT</pubDate></item><item><title>Hexagonal Django</title><link>https://www.tartley.com/posts/hexagonal-django/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;The last few weeks I've been thinking about the architectural pattern
-known as &lt;a href="http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html"&gt;Clean, Onion, Hexagonal, or
-Ports'n'Adaptors&lt;/a&gt;.
-I'm curious if many people are applying it in the Django world.&lt;/p&gt;
-&lt;p&gt;The premise is for your core application entity classes and business
-rules to be plain old objects, with no dependencies. In particular, they
-are not dependent on the interfaces between your application and
-external systems, such as your persistence mechanism, or your web
-framework. Instead, external interface components depend upon your core
-business objects. This essentially moves the database from the 'bottom'
-layer of the old traditional 'three layer architecture', to form a part
-of the topmost layer - a sibling with the 'UI.'&lt;/p&gt;
-&lt;p&gt;For inbound messages (e.g handling a web request) this is
-straightforward - Django calls your view code which calls your business
-layer, but keep your business layer separate from your Django code, so
-it is stand-alone and unit-testable. For outbound messages, such as then
-rendering the web page in response, it's slightly more complicated: Your
-business logic must pass the result (typically a pure data structure)
-back to your web-aware code, but without your business logic depending
-on the web-aware component. This requires an inversion of control.&lt;/p&gt;
-&lt;p&gt;That way, all your business logic can easily be tested in unit tests,
-with no mocking required. You still need some end-to-end tests to verify
-integration, but you shouldn't need to involve your UI or database in
-testing every detail of your business logic.&lt;/p&gt;
-&lt;p&gt;Also, you can easily switch out your external system interfaces, such as
-persistence, to use another RDBMS, another ORM, a NoSQL store, or an
-in-memory version for testing Since the core of your application doesn't
-have any dependency on these components, it is oblivious to the
-change. The business logic, because it doesn't depend on Django, is no
-longer riddled with Django's convenient ORM database access.&lt;/p&gt;
-&lt;p&gt;Same thing goes for switching out your web framework, or calling the
-same logic from web UI or web API calls. And again, for switching out
-your UI: add a command line application, or a console UI. The core
-application logic is unaffected, and your new interface components
-contain only the code that is specific to that interface's concerns.&lt;/p&gt;
-&lt;p&gt;Another side effect is that your web framework, if you're using one,
-becomes a peripheral detail which depends upon your core application,
-rather than the other way round. Your Django project would become a
-subdirectory of your project, rather than dominating your project
-directory structure. Since the business logic formerly contained within
-it is now elsewhere (in your core business objects) the Django project
-is now very thin. Views, for example, are delegations to single
-business-layer functions. The Django project now contains just the
-web-oriented aspects of your project, as it should.&lt;/p&gt;
-&lt;p&gt;These ideas all seem like relatively straightforward software
-engineering, and I feel a bit foolish for not having been aware of them
-all these years. I console myself that I'm not alone.&lt;/p&gt;
-&lt;p&gt;UncleBob's Ruby Midwest keynote "&lt;a href="https://www.tartley.com/posts/hexagonal-django/%20http:/www.confreaks.com/videos/759-rubymidwest2011-keynote-architecture-the-lost-years"&gt;Architecture - The Lost
-Years&lt;/a&gt;"
-attributes one source of this idea to Ivar Jacobsen's 1994 book &lt;a href="https://www.tartley.com/posts/hexagonal-django/%20http:/www.amazon.co.uk/Object-oriented-Software-Engineering-Approach-Press/dp/0201544350"&gt;Object
-Oriented Software Engineering : A Use Case Driven
-Approach&lt;/a&gt;
-(2nd-hand hardbacks cheap on Amazon.)&lt;/p&gt;
-&lt;p&gt;I see a few people applying these ideas to Rails, but are many people
-out there doing this in Django? I plan to refactor a small vertical
-slice of our monster Django app into this style, to try and prove the
-idea for myself.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><guid>https://www.tartley.com/posts/hexagonal-django/</guid><pubDate>Tue, 04 Dec 2012 20:42:01 GMT</pubDate></item></channel></rss>
+release.&lt;/p&gt;</description><category>geek</category><category>python</category><category>software</category><category>terminal</category><guid>https://www.tartley.com/posts/pip-install-lightspeed-and-bulletproof/</guid><pubDate>Fri, 08 Mar 2013 15:29:09 GMT</pubDate></item></channel></rss>

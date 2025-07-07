@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about completed)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/completed.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 27 May 2025 13:33:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tactical Breach Wizards</title><link>https://www.tartley.com/posts/tactical-breach-wizards/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="Tactical Breach Wizards screenshot." src="https://www.tartley.com/files/2025/tactical-breach-wizards.lossy.webp"&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about completed)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/completed.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 01 Jun 2025 01:33:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tactical Breach Wizards</title><link>https://www.tartley.com/posts/tactical-breach-wizards/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="Tactical Breach Wizards screenshot." src="https://www.tartley.com/files/2025/tactical-breach-wizards.lossy.webp"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;In this house, we use the metric system. Released in 2024 by Suspicious Developments.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I was toying with the idea of advancing the kiddo's videogaming curriculum into
 a turn-based tactics phase, maybe starting with the genius of 1994's &lt;a href="https://en.wikipedia.org/wiki/UFO%3A_Enemy_Unknown"&gt;UFO:Enemy
@@ -62,9 +62,9 @@ silent moments alone.&lt;/p&gt;
 &lt;p&gt;The narrative leans into the disorientation, making nothing clear. Your companion becomes increasingly cryptic. He urges you onward, never pausing more than absolutely necessary. The deer behave increasingly strangely. Your companion regales you with sickening tales of the investigative mistreatment he subjected them to on his previous visit. By the time the strange mushrooms come into play it is very obvious that you are in a place to which you should never have come, very far from anywhere or anyone, with mounting dread, alone with with a madman. What happened the last time he took this route? What did he leave behind here? What awaits at your journey's end?&lt;/p&gt;
 &lt;p&gt;It's hard to know whether the difficulty of interpretation, or the non-literal aspects of your journey, are intended as the result of your character's mushroom-induced fever, or the pretensions of intrusively figurative allusions. Most likely, it seems to be both. The deliberate ambiguity runs deep.&lt;/p&gt;
 &lt;p&gt;Doesn't outstay its welcome, all done in an hour. But the memories remain.&lt;/p&gt;</description><category>completed</category><category>drugs</category><category>geek</category><category>media</category><category>pc</category><category>videogame</category><guid>https://www.tartley.com/posts/that-which-gave-chase/</guid><pubDate>Mon, 04 Nov 2024 21:56:38 GMT</pubDate></item><item><title>Soma</title><link>https://www.tartley.com/posts/soma/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;em&gt;by Frictional Games, published 2015&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="Soma - protagonist" src="https://www.tartley.com/files/2022/soma-protagonist.webp"&gt;
-&lt;/center&gt;&lt;br&gt;
+&lt;center&gt;
+![Soma - protagonist](/files/2022/soma-protagonist.webp)
+&lt;/center&gt;
 &lt;p&gt;Soma is a creepy survival horror game, that leans deeply into the moral and
 existential quandaries arising from the deterministic principle that it's
 possible to scan one's brain and copy the structure into some other substrate,
@@ -136,11 +136,11 @@ disorienting trudge across the murky ocean floor, stirred up by ferocious
 currents and landslides, populated by organic-mechanical hybrid horrors that
 glide by in the darkness. I found these some of the absolute best, most
 atmospheric "walking simulator" moments I've experienced in a game.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;center&gt;
-&lt;img alt="The ocean floor, stirred up by currents and landslides" src="https://www.tartley.com/files/2022/soma-murky.webp"&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;center&gt;
+![The ocean floor, stirred up by currents and landslides](/files/2022/soma-murky.webp)
 &lt;br&gt;Is that another distant light up ahead? Good luck finding them while the currents pummel you,
 and hideous, deadly beasts loom out of the murk.
-&lt;/center&gt;&lt;br&gt;
+&lt;/center&gt;
 &lt;p&gt;Along the way, we encounter a few unforgettable scenarios. We come across the
 failing storage system in which the last remaining copy of our own brain scan
 resides. I decide to flip some buttons which delete it, prompting my character
@@ -189,7 +189,8 @@ a way out. For, of course, the ARK's launch changed nothing for us. Our
 simulations are aboard it, but we are still sitting here, in a broken robot
 corpse in a collapsing facility at the bottom of a haunted ocean on a dead
 planet. The dispatched copy will enjoy life on the ARK, but we - like the copy
-of ourselves we left behind earlier - are stuck here for good. Roll credits.&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>pc</category><category>videogame</category><guid>https://www.tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>Infra</title><link>https://www.tartley.com/posts/infra/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2024/infra.jpg"&gt;&lt;/p&gt;
+of ourselves we left behind earlier - are stuck here for good. Roll credits.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;</description><category>completed</category><category>geek</category><category>media</category><category>pc</category><category>videogame</category><guid>https://www.tartley.com/posts/soma/</guid><pubDate>Tue, 04 Oct 2022 18:51:16 GMT</pubDate></item><item><title>Infra</title><link>https://www.tartley.com/posts/infra/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;&lt;img alt="" src="https://www.tartley.com/files/2024/infra.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Released in 2016, played by me on Linux in 2022.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;So much to love about this game. My enjoyment was perhaps stoked by my initial
 expectation that such a humdrum, non-mainstream game idea - of a civil engineer
