@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about keyboard)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/keyboard.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Sun, 01 Jun 2025 01:33:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Overhauled Manual for Epomaker Galaxy80 Tri-Mode Keyboard</title><link>https://www.tartley.com/posts/overhauled-manual-for-epomaker-galaxy80-keyboard/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Loving the new keyboard, an Epomaker Galaxy80 with Feker Marble White switches.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tartley.com (Posts about keyboard)</title><link>https://www.tartley.com/</link><description></description><atom:link href="https://www.tartley.com/tags/keyboard.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2025 &lt;a href="mailto:tartley @ tartley dot com"&gt;Jonathan Hartley&lt;/a&gt; </copyright><lastBuildDate>Tue, 15 Jul 2025 15:56:51 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Overhauled Manual for Epomaker Galaxy80 Tri-Mode Keyboard</title><link>https://www.tartley.com/posts/overhauled-manual-for-epomaker-galaxy80-keyboard/</link><dc:creator>Jonathan Hartley</dc:creator><description>&lt;p&gt;Loving the new keyboard, an Epomaker Galaxy80 with Feker Marble White switches.&lt;/p&gt;
+&lt;p&gt;I compiled &lt;a href="https://www.tartley.com/files/2025/keyboard-ecomaker-galaxy80-trimode-mine.html"&gt;an improved manual for it here&lt;/a&gt;,
+which merges the English section of the official manual with other sources,
+rearranging the info in a way that makes sense to me.&lt;/p&gt;
 &lt;p&gt;My requirements are pretty much the same as last time I bough a keyboard:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Tenkeyless layout, or TKL as it's known, i.e. without a numpad. The kiddo and
@@ -11,11 +14,11 @@
   one.&lt;/li&gt;
 &lt;li&gt;At least two connections which are easy to switch between, for work and
   personal computers. This one has five, three of which are Bluetooth.&lt;/li&gt;
-&lt;li&gt;At least one of those connections should be reasonably low latency, i.e. &amp;lt;5ms,
-  which means wired or a dedicated 2.4GHz dongle, not Bluetooth. The Galaxy80
-  has both. I'm a long way away from being a pro gamer, but even down here in
-  the GamerDad leagues, I seem to be more aware of annoying latency than most
-  people are.&lt;/li&gt;
+&lt;li&gt;At least one of those connections should be reasonably low latency, i.e.
+  &amp;lt;5ms, which means wired or a dedicated 2.4GHz dongle, not Bluetooth. The
+  Galaxy80 has both. I'm a long way away from being a pro gamer, but even down
+  here in the GamerDad leagues, I seem to be more aware of annoying latency than
+  most people are.&lt;/li&gt;
 &lt;li&gt;Backlit. I don't especially care about per-key RGB, but that seems to be
   extremely common. Shine-through keycaps would be nice, but these seem to be
   increasingly rare outside of garish gamer-boi cyber-monstrosities, so not a
@@ -38,8 +41,6 @@ than I expected. Recognizably like marbles, but merged with the sound of
 pebbles, and a hint of a wooden xylophone.&lt;/p&gt;
 &lt;p&gt;I really like it! Although since pulling the trigger I've seen that Reddit
 doesn't like Epomaker. I'm just not going to read those posts for now.&lt;/p&gt;
-&lt;p&gt;As seems traditional with all keyboards, the manual is quite hard to read.
-Here's &lt;a href="https://www.tartley.com/files/2024/Keyboard-Ecomaker-Galaxy80-tri-mode-mine.pdf"&gt;my overhauled manual&lt;/a&gt;, for future reference.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: The incantations needed to get function keys working the way you
 want them to on Ubuntu :eyeroll: etc. Despite the mention of 'apple' in here,
 this still assumes you have the keyboard switched into 'Win' mode. (&lt;a href="https://www.reddit.com/r/Epomaker/comments/1bte204/galaxy80_cant_use_functionkeys_in_linux/"&gt;via
