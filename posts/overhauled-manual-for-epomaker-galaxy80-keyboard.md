@@ -7,6 +7,10 @@
 
 Loving the new keyboard, an Epomaker Galaxy80 with Feker Marble White switches.
 
+I compiled [an improved manual for it here](/files/2025/keyboard-ecomaker-galaxy80-trimode-mine.html),
+which merges the English section of the official manual with other sources,
+rearranging the info in a way that makes sense to me.
+
 My requirements are pretty much the same as last time I bough a keyboard:
 
 * Tenkeyless layout, or TKL as it's known, i.e. without a numpad. The kiddo and
@@ -18,11 +22,11 @@ My requirements are pretty much the same as last time I bough a keyboard:
   one.
 * At least two connections which are easy to switch between, for work and
   personal computers. This one has five, three of which are Bluetooth.
-* At least one of those connections should be reasonably low latency, i.e. <5ms,
-  which means wired or a dedicated 2.4GHz dongle, not Bluetooth. The Galaxy80
-  has both. I'm a long way away from being a pro gamer, but even down here in
-  the GamerDad leagues, I seem to be more aware of annoying latency than most
-  people are.
+* At least one of those connections should be reasonably low latency, i.e.
+  &lt;5ms, which means wired or a dedicated 2.4GHz dongle, not Bluetooth. The
+  Galaxy80 has both. I'm a long way away from being a pro gamer, but even down
+  here in the GamerDad leagues, I seem to be more aware of annoying latency than
+  most people are.
 * Backlit. I don't especially care about per-key RGB, but that seems to be
   extremely common. Shine-through keycaps would be nice, but these seem to be
   increasingly rare outside of garish gamer-boi cyber-monstrosities, so not a
@@ -46,9 +50,6 @@ pebbles, and a hint of a wooden xylophone.
 
 I really like it! Although since pulling the trigger I've seen that Reddit
 doesn't like Epomaker. I'm just not going to read those posts for now.
-
-As seems traditional with all keyboards, the manual is quite hard to read.
-Here's [my overhauled manual](/files/2024/Keyboard-Ecomaker-Galaxy80-tri-mode-mine.pdf), for future reference.
 
 **Update**: The incantations needed to get function keys working the way you
 want them to on Ubuntu :eyeroll: etc. Despite the mention of 'apple' in here,
