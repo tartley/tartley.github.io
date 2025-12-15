@@ -259,19 +259,24 @@ Tri-Mode</h1>
 <h2 id="document-history">Document history</h2>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>version</th>
 <th style="text-align: left;">date</th>
 <th>description</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
+<td>1.2</td>
+<td style="text-align: left;">2025-11-07</td>
+<td>Add lightbar wireless colors.</td>
+</tr>
+<tr>
 <td>1.1</td>
 <td style="text-align: left;">2025-07-15</td>
 <td>Add keycap profile and material. Drop PDF support.</td>
 </tr>
-<tr class="even">
+<tr>
 <td>1.0</td>
 <td style="text-align: left;">2024-11-03</td>
 <td>First published in HTML &amp; PDF form</td>
@@ -281,55 +286,55 @@ Tri-Mode</h1>
 <h2 id="spec">Spec</h2>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Case</td>
 <td>Aluminum alloy</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Key count</td>
 <td>88</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Switches</td>
 <td>Feker Marble White</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Structure</td>
 <td>Leaf spring gasket</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Size</td>
 <td>365.3 x 136.1 x 32.3 mm</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Weight</td>
 <td>1710g</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Battery</td>
 <td>4000mAh</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Connection</td>
 <td>Wired USB / 2.4GHz / Bluetooth</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Interface</td>
 <td>Keywire separation type C interface</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Matrix</td>
 <td>Full key no impact</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Backlight</td>
 <td>Per key RGB</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">NKRO</td>
 <td>Yes</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Keycaps</td>
 <td>MDA profile double shot PBT</td>
 </tr>
@@ -339,13 +344,14 @@ Tri-Mode</h1>
 cherry.</p>
 <h2 id="controls">Controls</h2>
 <p>Hold == Hold for 3 seconds</p>
+<h3 id="indicators">Indicators</h3>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Off</td>
 <td>Wired mode</td>
 </tr>
-<tr class="even">
+<tr>
 <td>On</td>
 <td>Wireless mode</td>
 </tr>
@@ -353,66 +359,103 @@ cherry.</p>
 </table>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Mac</td>
 <td>Backlight flashes blue</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Win</td>
 <td>Backlight flashes green</td>
 </tr>
 </tbody>
 </table>
+<h3 id="connections">Connections</h3>
+<p>When switched ‘off’ (wireless mode), lightbar color shows which
+connection type is current. Use keys to switch between them:</p>
 <table>
+<thead>
+<tr>
+<th style="text-align: left;">Key</th>
+<th style="text-align: left;">Connection</th>
+<th>Lightbar</th>
+</tr>
+</thead>
 <tbody>
-<tr class="odd">
-<td><code>Fn+Q</code></td>
-<td>BT1 connection. Hold to pair.</td>
+<tr>
+<td style="text-align: left;"><code>Fn+Q</code></td>
+<td style="text-align: left;">Bluetooth 1</td>
+<td>blue</td>
 </tr>
-<tr class="even">
-<td><code>Fn+W</code></td>
-<td>BT2 connection. Hold to pair.</td>
+<tr>
+<td style="text-align: left;"><code>Fn+W</code></td>
+<td style="text-align: left;">Bluetooth 2</td>
+<td>green</td>
 </tr>
-<tr class="odd">
-<td><code>Fn+E</code></td>
-<td>BT3 connection. Hold to pair.</td>
+<tr>
+<td style="text-align: left;"><code>Fn+E</code></td>
+<td style="text-align: left;">Bluetooth 3</td>
+<td>red</td>
 </tr>
-<tr class="even">
-<td><code>Fn+R</code></td>
-<td>2.4GHz connection. Hold to pair.</td>
+<tr>
+<td style="text-align: left;"><code>Fn+R</code></td>
+<td style="text-align: left;">2.4GHz</td>
+<td>yellow</td>
 </tr>
 </tbody>
 </table>
-<p>Backlight:</p>
+<p>Hold the above keys to begin pairing.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Lightbar</th>
+<th style="text-align: left;">Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Flashes</td>
+<td style="text-align: left;">Trying to connect</td>
+</tr>
+<tr>
+<td style="text-align: left;">Flashes quickly</td>
+<td style="text-align: left;">Trying to pair</td>
+</tr>
+<tr>
+<td style="text-align: left;">Solid for 3 secs</td>
+<td style="text-align: left;">Connected</td>
+</tr>
+</tbody>
+</table>
+<h3 id="backlight">Backlight</h3>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td><code>Fn+Enter</code></td>
 <td>Choose effect (see <a href="#Backlight%20effects">Backlight
 effects</a>)</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>Fn+\</code></td>
 <td>Color (multi, red, orange, yellow, green, cyan, blue, purple,
 white)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>Fn+Left</code></td>
 <td>Faster</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>Fn+Right</code></td>
 <td>Slower</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>Fn+Down</code></td>
 <td>Dimmer (4→0)</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>Fn+Up</code></td>
 <td>Brighter (0→4)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>Fn+T</code></td>
 <td>Off/on</td>
 </tr>
@@ -421,20 +464,20 @@ white)</td>
 <p>Others:</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td><code>Fn+Right shift</code></td>
 <td>Light bar effect (off, pulse colors, cycle colors, wave, fixed
 colors)</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>Fn+Space</code></td>
 <td>Check battery level on numbers 1 to 0. (wireless mode only).</td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>Fn+Win</code></td>
 <td>Lock Win key</td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>Fn+Backspace</code></td>
 <td>Hold to reset keyboard. Backlight flashes white.</td>
 </tr>
@@ -444,19 +487,19 @@ colors)</td>
 <p>Wireless connections:</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">2.4GHz</td>
 <td>Yellow</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">BT1</td>
 <td>Blue</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">BT2</td>
 <td>Green</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">BT3</td>
 <td>Red</td>
 </tr>
@@ -464,11 +507,11 @@ colors)</td>
 </table>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Pairing</td>
 <td>Flashing</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Connected</td>
 <td>3 second blink</td>
 </tr>
@@ -477,27 +520,27 @@ colors)</td>
 <h2 id="key-indicator-lights">Key indicator lights</h2>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td style="text-align: left;"><code>Caps</code></td>
 <td>White: Caps lock</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;"><code>Win</code></td>
 <td>White: Win key lock</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;"><code>Fn</code></td>
 <td>Red flash: Low battery charge</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;"><code>Fn</code></td>
 <td>Red: Charging</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;"><code>Fn</code></td>
 <td>Green (60 seconds): Fully charged</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;"><code>1</code>-<code>0</code></td>
 <td>Show battery level (<code>Fn-Space</code>)</td>
 </tr>
@@ -520,85 +563,85 @@ previous effect is resumed. Cycle the effect with
 <code>Fn+Enter</code>.</p>
 <table>
 <tbody>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Solid</td>
 <td>Fixed same color</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Key strike</td>
 <td>Off, but keys pulse when pressed</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Key un-strike</td>
 <td>On, but keys pulse off when pressed</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Sparkling</td>
 <td>On, with random keys fading off</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Fizzing</td>
 <td>Randomly pulse on and off</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Glowy</td>
 <td>Per-key RGB, slow changes. No specific color versions.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Breathe</td>
 <td>All one color, pulse slowly on and off. No multi-color.</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Cycle</td>
 <td>All one color, cycles slowly through the spectrum. No color
 variations.</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Jellyfish</td>
 <td>Rainbow expands from center of keyboard.</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Waterfall</td>
 <td>Rainbow falls down from top</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Spectrum</td>
 <td>Rainbow swipes across from left</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Swirl</td>
 <td>Rainbow rotates around center</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Row strike</td>
 <td>Off, but row pulses around pressed key</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Column strike</td>
 <td>Off, but vertical pulses expand sideways from pressed key</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Board strike</td>
 <td>Off, but whole keyboard pulses around pressed key</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Raster</td>
 <td>Off, but raster scans keyboard from top left to bottom right</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Expansion</td>
 <td>Off, but rows each independently pulse with expansion from
 center</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Sweep</td>
 <td>Random, pulses move left to right</td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;">Snake</td>
 <td>Rainbow slides from left and from right on alternate rows</td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;">Off</td>
 <td>All off</td>
 </tr>
