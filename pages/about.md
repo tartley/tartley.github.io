@@ -10,36 +10,21 @@ A website dedicated to oneself has been described as the greatest act of hubris.
 
 ---
 
-Made out of meat.
+Made out of meat. Class III sentience. Singular biological manifestation. Mortal. Human. He/him.
 
-Class III sentience. Singular biological manifestation. Mortal. Human. He/him.
+Computer programming sparks joy. Linux lover. Test obsessed. Mostly wrangling Python.
 
-Computer programming sparks joy. Linux lover. Test obsessed. After a decade of
-prickly devotion to static typed languages like C++, I flipped in the way that
-only a true believer can, and these days I mostly wrangle Python.
+Loving the discussions of science fiction as *symbolic* fiction, synthesizing the best parts of ancient, modern, & postmodern world-views, to create a metamodern mythology of relevant meaning for contemporary life.
 
-Loving the [discussions](https://damiengwalter.com/podcast/) of science fiction
-as *symbolic* fiction, which, at its best, combines the ancient, modern, and
-postmodern worldviews. From the modern it takes rationality and prosperity,
-while rejecting systemic exploitation and shallowness. From postmodernism it
-takes healthy skepticism and independence of thought, while rejecting its
-smothering nihilism. From the ancient, it takes the derivation of deep personal
-and social meaning, while rejecting hierarchical cruelty and injustice. These
-traits are synthesized into *metamodernism*, a worldview which addresses the
-failings of modern life without the fascist abandonment of Enlightenment values,
-generating stories which heal the culture wars by providing visions of a future
-we can *all* get behind. One example of this is the genre of solarpunk - a
-spunky, anarchist, optimistic view of the future.
-
-Fight the fash, smash the patriarchy, support all identities, never fail to be
-kind.
+Fight the fash, smash the patriarchy, support all identities, be kind.
 
 * Email tartley at tartley.com.
 * Chit-chat on [@tartley@fosstodon.org](https://fosstodon.org/@tartley).
 * Code on [github.com/tartley](https://github.com/tartley).
 * Résumé as [HTML](/files/Jonathan-Hartley-resume.html) or [PDF](/files/Jonathan-Hartley-resume.pdf).
+* Pedantry [on StackOverflow](https://stackexchange.com/users/6124).
 
-<a href="https://stackexchange.com/users/6124"><img src="https://stackexchange.com/users/flair/6124.png" width="208" height="58" alt="profile for Jonathan Hartley on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Jonathan Hartley on Stack Exchange, a network of free, community-driven Q&amp;A sites"></a>
+[Donations](https://www.paypal.com/donate/?business=2MZ9D2GMLYCUJ&no_recurring=0&item_name=Contributions+gratefully+accepted+if+you+use+something+I%27ve+created+and+made+available+for+free.+Thank+you%21&currency_code=USD) gratefully accepted if you got some value out of something I created. Thank you!
 
 ## License
 
