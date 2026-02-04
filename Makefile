@@ -9,9 +9,8 @@ clean : ## Delete generated files and virtualenv
 .PHONY: clean
 
 
-name=tartley.com
-syspython=python3.13
-ve=${HOME}/.virtualenvs/${name}
+syspython=python3.14
+ve=.venv
 
 
 ## Dependencies (apt)
@@ -21,40 +20,32 @@ setup: ## Install required system packages using 'apt install'
 	@echo "You might want 'make bootstrap' next."
 .PHONY: setup
 
-## Dependencies (pip)
-# TODO consider how to split requirements[-dev] from .in and .txt
-
-pip=${ve}/bin/pip
-
 ${ve}: ## Create a virtualenv
-	${syspython} -m venv ${ve}
-	${pip} install -U pip setuptools wheel
+	uv python pin ${syspython}
+	uv venv
 
 update: clean ${ve} ## Pip update packages, save versions to requirements.txt.
-	${pip} install -U -r requirements.in
-	${pip} freeze >requirements.txt
+	uv pip install -U -r requirements.in
+	uv pip freeze >requirements.txt
 .PHONY: update
 
 bootstrap: ${ve} ## Create venv & pip install packages from requirements.txt.
-	${pip} install -r requirements.txt
+	uv pip sync requirements.txt
 	@echo "You might want 'make serve' next."
 .PHONY: bootstrap
 
 
 ## Build
 
-nikola=${ve}/bin/nikola
-
 post: ## Create a new post, prompts for title, opens $EDITOR
-	${nikola} new_post -f markdown -e
+	uv run nikola new_post -f markdown -e
 .PHONY: post
 
 serve: ## Build site, start server, auto rebuild changes.
-	${nikola} auto
+	uv run nikola auto
 .PHONY: serve
 
 deploy: ## Deploy site to Github
-	. ${ve}/bin/activate && \
-	${nikola} github_deploy -m "Automatic commit"
+	uv run nikola github_deploy -m "Automatic commit"
 .PHONY: deploy
 
