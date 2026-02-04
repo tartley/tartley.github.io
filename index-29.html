@@ -77,7 +77,119 @@
 
     <a rel="me" href="https://fosstodon.org/@tartley"></a>
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-shell-environment-variable-tricks/" class="u-url">TIL: Shell environment variable tricks</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-constructing-a-pdf-from-jpg-image-files/" class="u-url">TIL: Constructing a PDF from .jpg image files</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Jonathan Hartley
+            </span></p>
+            <p class="dateline">
+            <a href="posts/til-constructing-a-pdf-from-jpg-image-files/" rel="bookmark">
+            <time class="published dt-published" datetime="2024-10-21T09:55:18-05:00" itemprop="datePublished" title="2024-10-21 09:55">2024-10-21 09:55</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>I have some folders of .jpg images that make up a comic. I want to convert them into a PDF to read
+on my tab and other devices, and import into my Calibre bookshelf.</p>
+<h3>1. Install some prerequisites</h3>
+<div class="code"><pre class="code literal-block">sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>imagemagick<span class="w"> </span>pdftk
+</pre></div>
+
+<h3>2. Do the conversion</h3>
+<p>The versatile ImageMagick has a 'convert' command that seems to handle it:</p>
+<div class="code"><pre class="code literal-block">convert<span class="w"> </span>*.jpg<span class="w"> </span>output.pdf
+</pre></div>
+
+<p>But this has some issues:</p>
+<h4>2.1. Failure due to security policy</h4>
+<p>'convert' currently refuses to generate PDFs: 'attempt to perform an operation not allowed by the security policy'. Apply the fix described on <a href="https://stackoverflow.com/questions/52998331/imagemagick-security-policy-pdf-blocking-conversion">StackOverflow</a>. :eyeroll:</p>
+<h4>2.2. Failure due to cache space</h4>
+<p>You might not need this fix if you generate smaller documents, or generate chapter-by-chapter as
+described below, but here it is in case.</p>
+<p>Don't close that editor! In the same policy.xml you were just editing are resource size declarations for memory and disk. If 'convert' barfs with an error about running out of cache space, then bump
+up the disk resource size. I set mine to 8GB. <a href="https://unix.stackexchange.com/questions/329530/increasing-imagemagick-memory-disk-limits">StackOverflow again</a> for details. :eyeroll: again.</p>
+<h3>3. Include a table of contents</h3>
+<p>I want to add bookmarks to the generated PDF marking each chapter.</p>
+<p>Put the .jpgs into subdirectories by chapter, eg:</p>
+<div class="code"><pre class="code literal-block">src/
+|--chapter01/
+|  |--0001.jpg
+|  |--0002.jpg
+|  |  ...
+|--chapter02/
+|  |--0001.jpg
+|  |--0002.jpg
+|  |  ...
+|
+...
+</pre></div>
+
+<p>Pad the chapter numbers with preceding zeros so that they sort into the correct order. I added
+an artificial 'chapter00' containing the front cover, separate from individual chapters.</p>
+<p>Now we need to generate individual PDFs for each chapter. We can then use 'pdftk' to
+count the number of pages in each chapter, and use those counts to place bookmarks on
+the correct pages when pfdtk combines the chapters into one final output PDF.</p>
+<p>I ended up regenerating each chapter a bunch while I tweaked the content, such as deleting adverts
+from the images. So I put these commands into a Makefile:</p>
+<div class="code"><pre class="code literal-block"><span class="nf">help</span><span class="o">:</span><span class="w"> </span><span class="c">## Show this help.</span>
+<span class="w">    </span>@grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">'^[^_][a-zA-Z_\/\.%-]+:.*?## .*$$'</span><span class="w"> </span><span class="k">$(</span>MAKEFILE_LIST<span class="k">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-12s\033[0m %s\n", $$1, $$2}'</span>
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">help</span>
+
+<span class="nv">chapter_dirs</span><span class="o">=</span><span class="k">$(</span>wildcard<span class="w"> </span>src/*<span class="k">)</span>
+<span class="nv">chapters</span><span class="o">=</span><span class="k">$(</span>chapter_dirs:src/%<span class="o">=</span>%<span class="k">)</span>
+<span class="nv">chapter_pdfs</span><span class="o">=</span><span class="k">$(</span>chapters:%<span class="o">=</span>%.pdf<span class="k">)</span>
+<span class="nv">bookmarks</span><span class="o">=</span>bookmarks.txt
+<span class="nv">output</span><span class="o">=</span>output.pdf
+
+<span class="nf">clean</span><span class="o">:</span><span class="w"> </span><span class="c">## Delete all generated PDFs</span>
+<span class="w">    </span>rm<span class="w"> </span>-f<span class="w"> </span><span class="k">$(</span>chapter_pdfs<span class="k">)</span><span class="w"> </span><span class="k">$(</span>output<span class="k">)</span>
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">clean</span>
+
+<span class="nf">chapter%.pdf</span><span class="o">:</span><span class="w"> </span><span class="n">src</span>/<span class="n">chapter</span>%/*.<span class="n">jpg</span> <span class="c">## Each individual chapter, use 2 digits</span>
+<span class="w">    </span>convert<span class="w"> </span>src/chapter<span class="nv">$*</span>/*.jpg<span class="w"> </span><span class="nv">$@</span>
+
+<span class="nf">$(bookmarks)</span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">chapter_pdfs</span><span class="k">)</span>
+<span class="w">    </span>./make-bookmarks<span class="w"> </span>&gt;<span class="k">$(</span>bookmarks<span class="k">)</span>
+
+<span class="nf">$(output)</span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">chapter_pdfs</span><span class="k">)</span> <span class="k">$(</span><span class="nv">bookmarks</span><span class="k">)</span>
+<span class="w">    </span>pdftk<span class="w"> </span><span class="k">$(</span>chapter_pdfs<span class="k">)</span><span class="w"> </span>cat<span class="w"> </span>output<span class="w"> </span>-<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>pdftk<span class="w"> </span>-<span class="w"> </span>update_info<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>bookmarks<span class="k">)</span><span class="s2">"</span><span class="w"> </span>output<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>output<span class="k">)</span><span class="s2">"</span>
+
+<span class="nf">all</span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">output</span><span class="k">)</span> <span class="c">## Build final output PDF</span>
+<span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">all</span>
+</pre></div>
+
+<p>Where 'make-bookmarks' is a bash script that generates the intermediate 'bookmarks.txt' file:</p>
+<div class="code"><pre class="code literal-block"><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="nb">set</span><span class="w"> </span>-e<span class="w"> </span><span class="c1"># exit on error</span>
+<span class="nb">set</span><span class="w"> </span>-u<span class="w"> </span><span class="c1"># treat unset vars as errors</span>
+<span class="c1"># set -x # debugging output</span>
+<span class="nb">set</span><span class="w"> </span>-o<span class="w"> </span>pipefail
+
+<span class="c1"># Generate a bookmarks file for all the matching PDF files</span>
+
+<span class="nv">fmt</span><span class="o">=</span><span class="s2">"BookmarkBegin</span>
+<span class="s2">BookmarkTitle: %s</span>
+<span class="s2">BookmarkLevel: 1</span>
+<span class="s2">BookmarkPageNumber: %d</span>
+<span class="s2">"</span>
+
+<span class="nb">declare</span><span class="w"> </span>-a<span class="w"> </span><span class="nv">files</span><span class="o">=(</span>chapter*.pdf<span class="o">)</span>
+<span class="nv">page</span><span class="o">=</span><span class="m">1</span>
+<span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">files</span><span class="p">[@]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nv">title</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">file</span><span class="p">%.*</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">    </span><span class="nb">printf</span><span class="w"> </span><span class="s2">"</span><span class="nv">$fmt</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$title</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$page</span><span class="s2">"</span>
+<span class="w">    </span><span class="nv">num_pages</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>pdftk<span class="w"> </span><span class="s2">"</span><span class="nv">$file</span><span class="s2">"</span><span class="w"> </span>dump_data<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>NumberOfPages<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">'{print $2}'</span><span class="k">)</span><span class="s2">"</span>
+<span class="w">    </span><span class="nv">page</span><span class="o">=</span><span class="k">$((</span><span class="nv">page</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">num_pages</span><span class="k">))</span>
+<span class="k">done</span>
+</pre></div>
+
+<p>Now <code>make all</code> will produce the final output.pdf. You might want to open up the generated
+bookmarks.txt and edit the placeholder "chapter01" names. Then run <code>make all</code> again to
+regenerate the final output PDF with your fixed chapter names.</p>
+<p><img alt="Rorschach II meets Adrian" src="files/2024/doomsday-clock-r2-meets-adrian.webp"></p>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/til-shell-environment-variable-tricks/" class="u-url">TIL: Shell environment variable tricks</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Jonathan Hartley
