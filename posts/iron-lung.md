@@ -7,7 +7,7 @@
 
 *Game by David Szymanski, published 2022*
 
-*Movie written, directed, and starring Mark "Markiplier" Fischbach, released 2026*
+*Movie written, directed, and starring Mark "[Markiplier](https://www.youtube.com/channel/UC7_YxT-KID8kRbqZo7MyscQ)" Fischbach, released 2026*
 
 <span style="float: left">
 ![Iron Lung](/files/2026/iron-lung.webp)
@@ -16,9 +16,11 @@
 
 New work meeting background just dropped!
 
-Invited to view the movie at Pop's with Phil and Sarah, I crammed the game from
-start to finish the night before, with Zander watching disdainfully over my
-shoulder every step of the way.
+Invited to view the movie at Pop's with Phil and Sarah, I crammed the game it
+was based on from start to finish the night before, with Zander watching
+disdainfully over my shoulder every step of the way. I gave
+[SCP-354](https://scp-wiki.wikidot.com/scp-354), which inspired the game, a wide
+berth.
 
 Both are tense and engaging, but clearly only for a particular kind of viewer.
 The game itself has a very narrow focus, as befits a single-person indie
