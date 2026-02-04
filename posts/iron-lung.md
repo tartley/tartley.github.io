@@ -2,7 +2,7 @@
 .. title: Iron Lung
 .. slug: iron-lung
 .. date: 2026-02-03 19:55:23 UTC-06:00
-.. tags: 
+.. tags: geek,media,videogame,pc,movie,completed
 -->
 
 *Game by David Szymanski, published 2022*
