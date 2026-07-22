@@ -5,14 +5,11 @@
 .. tags: geek,media,videogame,pc,movie,completed
 -->
 
-*Game by David Szymanski, published 2022*
-
 *Movie written, directed, and starring Mark "[Markiplier](https://www.youtube.com/channel/UC7_YxT-KID8kRbqZo7MyscQ)" Fischbach, released 2026*
 
-<span style="float: left">
+*Based on a game by David Szymanski, published 2022*
+
 ![Iron Lung](/files/2026/iron-lung.webp)
-</span>
-<span style="clear: both">
 
 New work meeting background just dropped!
 
